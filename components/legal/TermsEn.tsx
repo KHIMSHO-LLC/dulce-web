@@ -1,0 +1,165 @@
+{/* TODO: Legal review by a Spanish lawyer required before public launch. */}
+export function TermsEn() {
+  return (
+    <>
+      <p>
+        These Terms of Use govern access to and use of the <strong>dulceglucosa.com</strong>{" "}
+        website and the Dulce mobile application (together, the "Service"). By using the
+        Service you accept these terms. If you don't accept them, don't use the Service.
+      </p>
+
+      <blockquote>
+        <p>
+          ⚠️ Dulce <strong>is not a medical device</strong>. It does not diagnose, treat, cure
+          or prevent any disease. Treatment decisions should always be made with your
+          healthcare team.
+        </p>
+      </blockquote>
+
+      <h2 id="acceptance">1. Acceptance</h2>
+      <p>
+        By signing up to the waitlist, applying for the beta or using the Dulce app, you
+        confirm that you have read, understand and accept these terms and our{" "}
+        <a href="/en/legal/privacy">Privacy Policy</a>.
+      </p>
+
+      <h2 id="service">2. Service description</h2>
+      <p>
+        Dulce is a companion application for people with diabetes (especially type 1) and
+        their carers. The Service allows, among other things:
+      </p>
+      <ul>
+        <li>
+          Viewing glucose data coming from your CGM (LibreLinkUp, Dexcom Share, Nightscout)
+          on your own device.
+        </li>
+        <li>Keeping a manual logbook of food, insulin, exercise and notes.</li>
+        <li>Showing trends and statistics based on your own data.</li>
+        <li>
+          Optionally sharing selected information with trusted contacts (planned for future
+          versions).
+        </li>
+      </ul>
+
+      <h2 id="medical">3. Medical notice</h2>
+      <p>
+        Dulce is <strong>not</strong> a medical device or a substitute for professional
+        judgement. The Service does not recommend insulin doses, does not diagnose or treat
+        any condition, and must not be used to make clinical decisions instead of your
+        endocrinologist, primary care physician or other healthcare professionals.
+      </p>
+      <p>
+        In particular, the glucose data shown by Dulce comes from your CGM and is subject to
+        its own technical limitations, reading delays and possible errors. For critical
+        decisions (especially severe hypoglycaemia), always confirm with a fingerstick meter.
+      </p>
+
+      <h2 id="eligibility">4. Eligibility</h2>
+      <p>
+        To use the Service you must be at least 14 years old. If you are between 14 and 18,
+        you need consent from a parent or legal guardian. If you manage an account on behalf
+        of a minor, you are responsible for doing so in accordance with applicable law.
+      </p>
+
+      <h2 id="accounts">5. Accounts and credentials</h2>
+      <p>
+        You are responsible for the confidentiality of credentials used to access third-party
+        services (LibreLinkUp, Dexcom, Nightscout). Dulce encrypts them and stores them in
+        the secure keychain of your device, but we cannot recover lost credentials on behalf
+        of the original provider.
+      </p>
+
+      <h2 id="license">6. License</h2>
+      <p>
+        We grant you a limited, non-exclusive, non-transferable and revocable license to use
+        Dulce in accordance with these terms and for personal, non-commercial use.
+      </p>
+
+      <h2 id="prohibited">7. Prohibited conduct</h2>
+      <p>You may not:</p>
+      <ul>
+        <li>Use the Service for unlawful purposes or in ways that infringe third-party rights.</li>
+        <li>Attempt to access systems, data or accounts you are not authorized to access.</li>
+        <li>
+          Reverse engineer or circumvent technical protection measures, except to the extent
+          allowed by applicable law.
+        </li>
+        <li>Automate mass form submission or spam our infrastructure.</li>
+      </ul>
+
+      <h2 id="subscriptions">8. Subscriptions (future)</h2>
+      <p>
+        During the beta, the Service is free. In the future we may offer subscription plans
+        with additional features. When we do, we will publish specific terms for those plans
+        (price, period, cancellation, EU consumer right of withdrawal, etc.).
+      </p>
+
+      <h2 id="third-parties">9. Third-party services</h2>
+      <p>
+        Dulce may connect to third-party services that you choose (Abbott LibreLinkUp,
+        Dexcom, Nightscout, Apple Health). Use of those services is governed by their own
+        terms and policies. We are not responsible for their availability, accuracy or
+        changes.
+      </p>
+
+      <h2 id="ip">10. Intellectual property</h2>
+      <p>
+        The Service, including code, design, brand and content published by us, is owned by
+        Dulce and its licensors. Data you contribute (your logbook, your settings) remains
+        yours.
+      </p>
+
+      <h2 id="disclaimers">11. Disclaimer of warranties</h2>
+      <p>
+        The Service is provided "as is" and "as available". To the maximum extent permitted
+        by law, we do not warrant that it will be uninterrupted, error-free, 100% secure, or
+        that it will meet specific expectations. This is especially relevant for data from
+        third-party CGMs: any delay, error or absence of data from the original provider may
+        be reflected in Dulce.
+      </p>
+
+      <h2 id="liability">12. Limitation of liability</h2>
+      <p>
+        To the maximum extent permitted by law, Dulce shall not be liable for indirect,
+        consequential damages, loss of profits or loss of data arising from the use or
+        inability to use the Service. Nothing in these terms limits our liability for wilful
+        misconduct or gross negligence, health damages caused by negligence, or any liability
+        that cannot be excluded by law.
+      </p>
+
+      <h2 id="indemnity">13. Indemnification</h2>
+      <p>
+        You agree to indemnify Dulce against any third-party claims arising from your use of
+        the Service in breach of these terms or of the law.
+      </p>
+
+      <h2 id="changes">14. Changes to the Service or these terms</h2>
+      <p>
+        We may modify the Service and these terms to reflect new features, legal requirements
+        or security considerations. We will let you know by email or inside the Service when
+        the changes are material.
+      </p>
+
+      <h2 id="termination">15. Termination</h2>
+      <p>
+        You may stop using the Service at any time. We may suspend or terminate your access
+        if you breach these terms or if you compromise the security or lawfulness of the
+        Service.
+      </p>
+
+      <h2 id="law">16. Governing law and jurisdiction</h2>
+      <p>
+        These terms are governed by the laws of Spain and applicable European Union
+        regulations. For consumers with habitual residence in the EU, the courts of their
+        place of residence shall have jurisdiction. For others, the courts of the city of
+        the Service operator's residence in Spain.
+      </p>
+
+      <h2 id="contact">17. Contact</h2>
+      <p>
+        For any questions about these terms, write to{" "}
+        <a href="mailto:hola@dulce.app">hola@dulce.app</a>.
+      </p>
+    </>
+  );
+}

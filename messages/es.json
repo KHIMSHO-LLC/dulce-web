@@ -1,0 +1,360 @@
+{
+  "metadata": {
+    "siteName": "Dulce",
+    "defaultTitle": "Dulce — Tu glucosa, tu familia, tu endocrino",
+    "defaultDescription": "Hecho por un T1D, para T1Ds que hablan español. Conecta tu Libre, lleva tu diario y comparte con tu familia y endocrino.",
+    "keywords": "diabetes tipo 1, T1D, glucosa, Libre, FreeStyle Libre, Dexcom, Nightscout, app diabetes español, CGM"
+  },
+  "nav": {
+    "home": "Inicio",
+    "features": "Características",
+    "beta": "Beta",
+    "about": "Sobre Dulce",
+    "contact": "Contacto",
+    "joinWaitlist": "Únete a la lista",
+    "skipToContent": "Saltar al contenido",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "languageSwitcher": {
+    "label": "Idioma",
+    "es": "Español",
+    "en": "Inglés"
+  },
+  "home": {
+    "title": "Dulce — Tu glucosa, tu familia, tu endocrino",
+    "description": "La app de glucosa para T1Ds que hablan español. Conecta tu Libre, lleva tu diario y comparte con tu familia.",
+    "hero": {
+      "eyebrow": "Próximamente · Beta privada en España",
+      "headline": "Hecho por un T1D,",
+      "headlineAccent": "para T1Ds que hablan español.",
+      "subheadline": "Tu glucosa, tu familia, tu endocrino. Todo en un solo lugar.",
+      "ctaPrimary": "Únete a la lista de espera",
+      "ctaSecondary": "Quiero entrar en la beta",
+      "trustNote": "Sin spam. Te avisamos cuando esté lista. Puedes darte de baja cuando quieras."
+    },
+    "personas": {
+      "eyebrow": "¿Para quién es Dulce?",
+      "title": "Pensada para tu día a día con la diabetes",
+      "items": {
+        "adult": {
+          "title": "Si tienes diabetes tipo 1",
+          "body": "Lleva un diario sin fricción, entiende tus tendencias y mantén a tus seres queridos al tanto cuando lo necesites."
+        },
+        "parent": {
+          "title": "Si cuidas a un peque con T1D",
+          "body": "Sigue su glucosa en tiempo real, recibe avisos cuando algo no va bien y comparte con su endocrino sin papeleos."
+        },
+        "doctor": {
+          "title": "Si eres endocrino",
+          "body": "Tu paciente comparte contigo el panorama completo — tendencias, tiempo en rango y patrones por hora del día."
+        }
+      }
+    },
+    "features": {
+      "eyebrow": "Lo que hace Dulce",
+      "title": "Una compañera para tu CGM, no un sustituto",
+      "items": {
+        "connect": {
+          "title": "Conecta tu CGM",
+          "body": "FreeStyle Libre 2 y 3, Dexcom G6 y G7, Nightscout. Tus credenciales se guardan cifradas en tu dispositivo — nunca las compartimos."
+        },
+        "diary": {
+          "title": "Diario completo",
+          "body": "Anota carbohidratos, insulina, ejercicio y notas en segundos. Sin pestañas, sin pantallas que se cuelgan."
+        },
+        "trends": {
+          "title": "Tendencias claras",
+          "body": "Tiempo en rango, GMI y patrones por hora del día — para entender qué funciona y qué no."
+        },
+        "share": {
+          "title": "Familia y endocrino",
+          "body": "Comparte solo lo que tú elijas. Revoca el acceso cuando quieras. Próximamente."
+        }
+      }
+    },
+    "integrations": {
+      "eyebrow": "Integraciones",
+      "title": "Funciona con lo que ya usas",
+      "items": {
+        "libre": "FreeStyle Libre",
+        "dexcom": "Dexcom",
+        "nightscout": "Nightscout",
+        "appleHealth": "Apple Salud",
+        "appleWatch": "Apple Watch"
+      },
+      "footer": "Apple Salud y Apple Watch son marcas de Apple Inc. FreeStyle Libre y LibreLinkUp son marcas de Abbott. Dexcom es marca de Dexcom, Inc."
+    },
+    "madeBy": {
+      "eyebrow": "Hecho por un T1D",
+      "title": "Porque las apps no estaban hechas para nosotros",
+      "body": "Llevo diabetes tipo 1 desde hace años, y siempre eché de menos una app que hablara mi idioma — y que entendiera el lío de tener varias apps abiertas para ver una sola cifra. Dulce es la app que me hubiera gustado tener.",
+      "signature": "— Giorgio, fundador de Dulce",
+      "cta": "Conoce la historia"
+    },
+    "finalCta": {
+      "title": "Sé de los primeros en probar Dulce",
+      "subtitle": "Beta privada en España durante el verano de 2026. Plazas limitadas.",
+      "ctaWaitlist": "Únete a la lista",
+      "ctaBeta": "Quiero ser beta tester"
+    }
+  },
+  "features": {
+    "title": "Características",
+    "description": "Todo lo que Dulce hace por ti, sin entrar en datos médicos sensibles.",
+    "intro": {
+      "headline": "Lo justo, bien hecho.",
+      "subheadline": "Dulce no intenta sustituir a tu endocrino ni a tu CGM. Lo que hace, lo hace bien."
+    },
+    "sections": {
+      "connect": {
+        "title": "Conecta tu CGM en menos de un minuto",
+        "body": "Inicia sesión con tu cuenta de LibreLinkUp, Dexcom Share o Nightscout. Dulce sincroniza en segundo plano para que tu glucosa esté siempre al día.",
+        "bullets": [
+          "FreeStyle Libre 2 y Libre 3 (vía LibreLinkUp)",
+          "Dexcom G6 y G7 (vía Dexcom Share)",
+          "Nightscout (tu instancia personal)",
+          "Credenciales cifradas en tu dispositivo"
+        ]
+      },
+      "diary": {
+        "title": "Tu diario, en segundos",
+        "body": "Anotar lo que comes, te inyectas o ejercitas debería ser instantáneo. Por eso Dulce está diseñada para entradas rápidas — sin pestañas, sin formularios infinitos.",
+        "bullets": [
+          "Carbohidratos, insulina (bolus y basal), ejercicio, notas",
+          "Marcas de tiempo rápidas: ahora, hace 15 min, hace 1 h, personalizada",
+          "Historial filtrable: hoy, últimos 7, 14 o 30 días"
+        ]
+      },
+      "trends": {
+        "title": "Entiende tus patrones",
+        "body": "Las tendencias importan más que cualquier lectura puntual. Dulce te muestra el panorama completo de 7, 14, 30 o 90 días — incluyendo qué pasa por la mañana, por la tarde y por la noche.",
+        "bullets": [
+          "Tiempo en rango (TIR) con tu objetivo personal",
+          "GMI (A1C estimada)",
+          "Análisis por hora del día",
+          "Curvas superpuestas para comparar días"
+        ]
+      },
+      "share": {
+        "title": "Comparte solo lo que tú elijas",
+        "body": "Invita a tu pareja, a tu madre o a tu endocrino. Pueden ver tu glucosa en tiempo real, recibir avisos o ambos — tú decides. Y puedes revocar el acceso en cualquier momento.",
+        "bullets": [
+          "Permisos granulares: ver glucosa, recibir avisos, ambos",
+          "Roles predefinidos: pareja, familia, endocrino",
+          "Invita por QR o enlace",
+          "Disponible próximamente"
+        ]
+      },
+      "watch": {
+        "title": "Tu glucosa en la muñeca",
+        "body": "Dulce incluye una app para Apple Watch y complicaciones que muestran tu última lectura sin sacar el móvil. Si los datos están desactualizados, lo verás con claridad — nunca un número engañoso.",
+        "bullets": [
+          "App nativa para Apple Watch",
+          "Complicaciones para esferas",
+          "Modo seguro cuando los datos llevan más de 15 min sin actualizarse"
+        ]
+      },
+      "privacy": {
+        "title": "Tu privacidad por defecto",
+        "body": "Dulce está diseñada para procesar tus datos en tu dispositivo siempre que sea posible. Las credenciales de tu CGM se cifran en el llavero seguro del sistema. No vendemos tus datos a nadie — punto.",
+        "bullets": [
+          "Credenciales cifradas con Keychain (iOS) / Keystore (Android)",
+          "Datos de salud almacenados localmente por defecto",
+          "Sin anuncios, sin tracking de terceros",
+          "Cumplimiento RGPD"
+        ]
+      }
+    },
+    "disclaimer": {
+      "title": "Aviso importante",
+      "body": "Dulce **no es un dispositivo médico**. No diagnostica, trata, cura ni previene ninguna enfermedad. Las decisiones sobre tu tratamiento deben tomarse siempre con tu equipo médico."
+    }
+  },
+  "beta": {
+    "title": "Beta privada de Dulce",
+    "description": "Únete al grupo cerrado de testers que probarán Dulce antes de su lanzamiento.",
+    "hero": {
+      "headline": "Sé parte de la beta privada",
+      "subheadline": "Buscamos un grupo reducido de personas con T1D (o cuidadores) en España y México para probar Dulce durante el verano de 2026. Tu feedback marcará la versión que llegará a todo el mundo."
+    },
+    "what": {
+      "title": "¿Qué implica?",
+      "items": [
+        "Acceso anticipado a la app (TestFlight para iOS)",
+        "Sesiones cortas de feedback cada 2 semanas (opcional)",
+        "Canal directo con el equipo (un grupo de WhatsApp pequeño)",
+        "Tu nombre en los créditos de la primera versión, si quieres"
+      ]
+    },
+    "who": {
+      "title": "¿A quién buscamos?",
+      "items": [
+        "Tienes diabetes tipo 1 o cuidas a alguien que la tiene",
+        "Usas un CGM (Libre, Dexcom o Nightscout)",
+        "Vives en España o México",
+        "Tienes un iPhone con iOS 17 o superior"
+      ]
+    },
+    "form": {
+      "title": "Cuéntanos sobre ti",
+      "name": {
+        "label": "Nombre",
+        "placeholder": "Cómo te llamas"
+      },
+      "email": {
+        "label": "Correo electrónico",
+        "placeholder": "tu@correo.com"
+      },
+      "cgm": {
+        "label": "Tu CGM",
+        "options": {
+          "libre2": "FreeStyle Libre 2",
+          "libre3": "FreeStyle Libre 3",
+          "dexcomG6": "Dexcom G6",
+          "dexcomG7": "Dexcom G7",
+          "nightscout": "Nightscout",
+          "none": "Todavía no uso CGM"
+        }
+      },
+      "region": {
+        "label": "Dónde vives",
+        "options": {
+          "es": "España",
+          "mx": "México",
+          "other": "Otro país de habla hispana"
+        }
+      },
+      "notes": {
+        "label": "Algo más que quieras contarnos (opcional)",
+        "placeholder": "Por ejemplo: cuánto tiempo llevas con T1D, qué te gustaría que hiciera Dulce…"
+      },
+      "consent": "He leído y acepto la <privacy>Política de Privacidad</privacy>.",
+      "submit": "Enviar solicitud",
+      "submitting": "Enviando…",
+      "success": "Recibido. Te escribiremos pronto.",
+      "errors": {
+        "generic": "Algo no ha ido bien. Inténtalo de nuevo en un minuto.",
+        "rateLimit": "Has hecho demasiados envíos. Espera un poco antes de reintentar.",
+        "validation": "Revisa los campos marcados y vuelve a intentarlo."
+      }
+    }
+  },
+  "about": {
+    "title": "Sobre Dulce",
+    "description": "Una app de glucosa hecha por un T1D, para la comunidad hispanohablante.",
+    "hero": {
+      "headline": "Una historia personal, un proyecto público",
+      "subheadline": "Dulce nació de la frustración de un T1D harto de saltar entre apps mal traducidas — y harto de que las pocas que funcionaban no entendieran cómo vivimos la diabetes en español."
+    },
+    "story": {
+      "title": "La historia",
+      "body": "Me llamo Giorgio. Vivo con diabetes tipo 1 desde hace años. Como tantas otras personas, mi día a día con la diabetes pasa por mirar mi glucosa decenas de veces al día, anotar lo que como, lo que me inyecto, y compartirlo con mi pareja y con mi equipo médico.\n\nDurante años usé apps que no estaban hechas para mí: traducciones literales, copia mediocre, integraciones rotas con LibreLinkUp en España, y poca atención a cómo realmente compartimos información con la familia.\n\nDulce es la app que me hubiera gustado tener. Está hecha por un T1D, en castellano nativo, con conexión directa a LibreLinkUp en Europa, Dexcom y Nightscout. Y está hecha desde la convicción de que tus datos son tuyos — no míos, ni de nadie más."
+    },
+    "values": {
+      "title": "En qué creo",
+      "items": {
+        "privacy": {
+          "title": "Tus datos, tuyos",
+          "body": "No vendemos datos a nadie. Procesamos lo que podemos en tu dispositivo. Cumplimos RGPD por convicción, no solo por obligación."
+        },
+        "community": {
+          "title": "Comunidad primero",
+          "body": "Dulce se hace mejor cuando la comunidad T1D opina. Por eso la beta es abierta y el feedback va directo al desarrollo."
+        },
+        "honesty": {
+          "title": "Honestidad médica",
+          "body": "Dulce no es un dispositivo médico. No te va a decir cuánta insulina ponerte. Para eso está tu endocrino — Dulce solo te ayuda a entender mejor."
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "¿Tienes una pregunta, idea o feedback? Escríbenos.",
+    "headline": "Estamos aquí",
+    "subheadline": "Para preguntas sobre la beta, prensa, partnerships o cualquier otra cosa, escríbenos directamente.",
+    "email": "hola@dulce.app",
+    "responseTime": "Respondemos en menos de 48 horas laborables.",
+    "topics": {
+      "title": "Temas frecuentes",
+      "items": {
+        "beta": {
+          "title": "¿Quiero ser beta tester?",
+          "body": "Rellena el formulario de la <link>página de beta</link> y te avisamos."
+        },
+        "press": {
+          "title": "Prensa y entrevistas",
+          "body": "Encantados de hablar. Escribe a hola@dulce.app con \"Prensa\" en el asunto."
+        },
+        "doctor": {
+          "title": "Soy endocrino, ¿podemos colaborar?",
+          "body": "Sí. Buscamos profesionales que quieran probar Dulce con sus pacientes en la beta. Escríbenos."
+        }
+      }
+    }
+  },
+  "waitlist": {
+    "headline": "Únete a la lista de espera",
+    "subheadline": "Te avisamos cuando Dulce esté disponible. Sin spam, sin compartir tu correo.",
+    "email": {
+      "label": "Correo electrónico",
+      "placeholder": "tu@correo.com"
+    },
+    "consent": "Acepto que Dulce me contacte sobre el lanzamiento. Más info en la <privacy>Política de Privacidad</privacy>.",
+    "submit": "Únete",
+    "submitting": "Enviando…",
+    "success": "Listo. Te avisamos cuando esté disponible.",
+    "errors": {
+      "generic": "Algo no ha ido bien. Inténtalo de nuevo.",
+      "rateLimit": "Demasiados intentos. Espera un poco.",
+      "alreadyJoined": "Este correo ya está en la lista. ¡Gracias!",
+      "invalidEmail": "Ese correo no parece válido."
+    }
+  },
+  "footer": {
+    "tagline": "Hecho por un T1D, para T1Ds que hablan español.",
+    "sections": {
+      "product": {
+        "title": "Producto",
+        "features": "Características",
+        "beta": "Beta privada"
+      },
+      "company": {
+        "title": "Empresa",
+        "about": "Sobre Dulce",
+        "contact": "Contacto"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacy": "Privacidad",
+        "terms": "Términos",
+        "cookies": "Cookies"
+      }
+    },
+    "copyright": "© {year} Dulce. Todos los derechos reservados.",
+    "disclaimer": "Dulce no es un dispositivo médico. No sustituye al criterio de tu equipo sanitario."
+  },
+  "legal": {
+    "lastUpdated": "Última actualización: {date}",
+    "tableOfContents": "Índice",
+    "privacy": {
+      "title": "Política de Privacidad",
+      "description": "Cómo recogemos, usamos y protegemos tu información personal."
+    },
+    "terms": {
+      "title": "Términos de Uso",
+      "description": "Las normas que rigen el uso de Dulce y de este sitio web."
+    },
+    "cookies": {
+      "title": "Política de Cookies",
+      "description": "Qué cookies usamos y para qué."
+    }
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "headline": "Esta página no existe",
+    "body": "El enlace que has seguido es incorrecto o la página ha sido movida.",
+    "cta": "Volver al inicio"
+  }
+}
