@@ -158,7 +158,7 @@ export function TermsEn() {
       <h2 id="contact">17. Contact</h2>
       <p>
         For any questions about these terms, write to{" "}
-        <a href="mailto:hola@dulce.app">hola@dulce.app</a>.
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
     </>
   );

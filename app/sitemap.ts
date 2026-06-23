@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/legal/privacy",
     "/legal/terms",
+    "/legal/disclaimer",
     "/legal/cookies",
   ];
 

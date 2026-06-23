@@ -13,7 +13,7 @@ export function PrivacyEs() {
         El responsable del tratamiento es <strong>Giorgio Khimshiashvili</strong>, en calidad
         de autónomo, con domicilio profesional en España. Puedes contactarnos para cualquier
         cuestión relativa a tus datos en{" "}
-        <a href="mailto:hola@dulce.app">hola@dulce.app</a>.
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
 
       <h2 id="datos">2. Qué datos recogemos</h2>
@@ -151,7 +151,7 @@ export function PrivacyEs() {
         transferencias se realizan al amparo de las Cláusulas Contractuales Tipo de la
         Comisión Europea (SCC) o de programas equivalentes (DPF). Puedes solicitar copia de
         las garantías en{" "}
-        <a href="mailto:hola@dulce.app">hola@dulce.app</a>.
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
 
       <h2 id="derechos">9. Tus derechos</h2>
@@ -166,7 +166,7 @@ export function PrivacyEs() {
       </ul>
       <p>
         Puedes ejercer cualquiera de estos derechos escribiéndonos a{" "}
-        <a href="mailto:hola@dulce.app">hola@dulce.app</a>. Responderemos en un plazo máximo
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Responderemos en un plazo máximo
         de 30 días.
       </p>
       <p>
@@ -207,7 +207,7 @@ export function PrivacyEs() {
       <h2 id="contacto">13. Contacto</h2>
       <p>
         Para cualquier consulta relativa a esta Política de Privacidad o al tratamiento de
-        tus datos, escríbenos a <a href="mailto:hola@dulce.app">hola@dulce.app</a>.
+        tus datos, escríbenos a <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
     </>
   );

@@ -97,7 +97,7 @@ export function CookiesEs() {
       <h2 id="contacto">6. Contacto</h2>
       <p>
         Para cualquier consulta sobre cookies, escríbenos a{" "}
-        <a href="mailto:hola@dulce.app">hola@dulce.app</a>.
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
     </>
   );

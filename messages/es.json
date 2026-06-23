@@ -274,7 +274,7 @@
     "description": "¿Tienes una pregunta, idea o feedback? Escríbenos.",
     "headline": "Estamos aquí",
     "subheadline": "Para preguntas sobre la beta, prensa, partnerships o cualquier otra cosa, escríbenos directamente.",
-    "email": "hola@dulce.app",
+    "email": "hola@dulceglucosa.com",
     "responseTime": "Respondemos en menos de 48 horas laborables.",
     "topics": {
       "title": "Temas frecuentes",
@@ -285,7 +285,7 @@
         },
         "press": {
           "title": "Prensa y entrevistas",
-          "body": "Encantados de hablar. Escribe a hola@dulce.app con \"Prensa\" en el asunto."
+          "body": "Encantados de hablar. Escribe a hola@dulceglucosa.com con \"Prensa\" en el asunto."
         },
         "doctor": {
           "title": "Soy endocrino, ¿podemos colaborar?",
@@ -329,6 +329,7 @@
         "title": "Legal",
         "privacy": "Privacidad",
         "terms": "Términos",
+        "disclaimer": "Aviso médico",
         "cookies": "Cookies"
       }
     },
@@ -345,6 +346,10 @@
     "terms": {
       "title": "Términos de Uso",
       "description": "Las normas que rigen el uso de Dulce y de este sitio web."
+    },
+    "disclaimer": {
+      "title": "Aviso Médico",
+      "description": "Dulce no es un dispositivo médico. Conoce sus límites antes de confiar en ella."
     },
     "cookies": {
       "title": "Política de Cookies",

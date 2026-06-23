@@ -38,6 +38,10 @@ export const routing = defineRouting({
       es: "/legal/terminos",
       en: "/legal/terms",
     },
+    "/legal/disclaimer": {
+      es: "/legal/aviso-medico",
+      en: "/legal/disclaimer",
+    },
     "/legal/cookies": "/legal/cookies",
   },
 });

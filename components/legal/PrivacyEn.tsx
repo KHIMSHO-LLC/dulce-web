@@ -12,7 +12,7 @@ export function PrivacyEn() {
       <p>
         The data controller is <strong>Giorgio Khimshiashvili</strong>, operating as a sole
         trader, based in Spain. You can contact us about anything related to your data at{" "}
-        <a href="mailto:hola@dulce.app">hola@dulce.app</a>.
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
 
       <h2 id="data">2. What data we collect</h2>
@@ -145,7 +145,7 @@ export function PrivacyEn() {
         Some of our processors (Resend, Vercel) process data in the US. Transfers are made
         under the European Commission's Standard Contractual Clauses (SCCs) or equivalent
         frameworks (DPF). You can request a copy of these safeguards at{" "}
-        <a href="mailto:hola@dulce.app">hola@dulce.app</a>.
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
 
       <h2 id="rights">9. Your rights</h2>
@@ -160,7 +160,7 @@ export function PrivacyEn() {
       </ul>
       <p>
         You can exercise any of these rights by writing to{" "}
-        <a href="mailto:hola@dulce.app">hola@dulce.app</a>. We respond within 30 days at the
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. We respond within 30 days at the
         latest.
       </p>
       <p>
@@ -195,7 +195,7 @@ export function PrivacyEn() {
       <h2 id="contact">13. Contact</h2>
       <p>
         For any questions about this Privacy Policy or the processing of your data, write to{" "}
-        <a href="mailto:hola@dulce.app">hola@dulce.app</a>.
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
     </>
   );

@@ -26,7 +26,7 @@ Te avisaremos en cuanto la app esté lista para que la pruebes. Mientras tanto, 
 
 Gracias por confiar en nosotros.
 — El equipo de Dulce
-hola@dulce.app`,
+hola@dulceglucosa.com`,
   en: (email: string) => `Hi!
 
 You're on the Dulce waitlist (${email}).
@@ -35,7 +35,7 @@ We'll let you know as soon as the app is ready for you to try. If you want to be
 
 Thanks for trusting us.
 — The Dulce team
-hola@dulce.app`,
+hola@dulceglucosa.com`,
 } as const;
 
 export async function sendWaitlistConfirmation(

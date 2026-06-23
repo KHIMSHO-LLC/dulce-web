@@ -274,7 +274,7 @@
     "description": "Have a question, idea or feedback? Get in touch.",
     "headline": "We're here",
     "subheadline": "For beta questions, press, partnerships or anything else, write to us directly.",
-    "email": "hola@dulce.app",
+    "email": "hola@dulceglucosa.com",
     "responseTime": "We reply within 48 working hours.",
     "topics": {
       "title": "Common topics",
@@ -285,7 +285,7 @@
         },
         "press": {
           "title": "Press and interviews",
-          "body": "Happy to talk. Write to hola@dulce.app with \"Press\" in the subject."
+          "body": "Happy to talk. Write to hola@dulceglucosa.com with \"Press\" in the subject."
         },
         "doctor": {
           "title": "I'm an endocrinologist — can we collaborate?",
@@ -329,6 +329,7 @@
         "title": "Legal",
         "privacy": "Privacy",
         "terms": "Terms",
+        "disclaimer": "Medical disclaimer",
         "cookies": "Cookies"
       }
     },
@@ -345,6 +346,10 @@
     "terms": {
       "title": "Terms of Use",
       "description": "The rules that govern your use of Dulce and this website."
+    },
+    "disclaimer": {
+      "title": "Medical Disclaimer",
+      "description": "Dulce is not a medical device. Understand its limits before relying on it."
     },
     "cookies": {
       "title": "Cookie Policy",

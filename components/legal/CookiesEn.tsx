@@ -96,7 +96,7 @@ export function CookiesEn() {
       <h2 id="contact">6. Contact</h2>
       <p>
         For any questions about cookies, write to{" "}
-        <a href="mailto:hola@dulce.app">hola@dulce.app</a>.
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
     </>
   );
