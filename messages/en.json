@@ -361,5 +361,21 @@
     "headline": "This page doesn't exist",
     "body": "The link you followed is incorrect or the page has moved.",
     "cta": "Back to home"
+  },
+  "follow": {
+    "eyebrow": "Family invite",
+    "headline": "You've been invited to follow someone on Dulce",
+    "body": "Dulce lets a family member share their glucose readings with you in real time. Install the app, then enter this code to start following.",
+    "codeLabel": "Your invite code",
+    "openApp": "Open in Dulce",
+    "getApp": "Get Dulce on the App Store",
+    "steps": {
+      "title": "How it works",
+      "one": "Install Dulce from the App Store.",
+      "two": "Open the app and tap “Follow someone”.",
+      "three": "Enter the code above to connect."
+    },
+    "expiryNote": "Invite codes expire 24 hours after they're created. Ask for a fresh one if this stops working.",
+    "noCode": "No invite code found in this link. Ask for a new invite."
   }
 }

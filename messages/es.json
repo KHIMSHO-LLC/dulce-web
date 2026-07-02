@@ -361,5 +361,21 @@
     "headline": "Esta página no existe",
     "body": "El enlace que has seguido es incorrecto o la página ha sido movida.",
     "cta": "Volver al inicio"
+  },
+  "follow": {
+    "eyebrow": "Invitación familiar",
+    "headline": "Te han invitado a seguir a alguien en Dulce",
+    "body": "Dulce permite que un familiar comparta contigo sus lecturas de glucosa en tiempo real. Instala la app y luego introduce este código para empezar a seguirle.",
+    "codeLabel": "Tu código de invitación",
+    "openApp": "Abrir en Dulce",
+    "getApp": "Descargar Dulce en el App Store",
+    "steps": {
+      "title": "Cómo funciona",
+      "one": "Instala Dulce desde el App Store.",
+      "two": "Abre la app y toca «Seguir a alguien».",
+      "three": "Introduce el código de arriba para conectar."
+    },
+    "expiryNote": "Los códigos de invitación caducan 24 horas después de crearse. Pide uno nuevo si este deja de funcionar.",
+    "noCode": "No se encontró ningún código en este enlace. Pide una invitación nueva."
   }
 }
