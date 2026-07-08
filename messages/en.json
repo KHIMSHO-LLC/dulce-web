@@ -1,9 +1,9 @@
 {
   "metadata": {
     "siteName": "Dulce",
-    "defaultTitle": "Dulce — Your glucose, your family, your endo",
-    "defaultDescription": "Made by a T1D, for T1Ds who speak Spanish. Connect your Libre, keep your logbook, and share with the people who care about you.",
-    "keywords": "type 1 diabetes, T1D, glucose, Libre, FreeStyle Libre, Dexcom, Nightscout, Spanish diabetes app, CGM"
+    "defaultTitle": "Dulce — Your glucose on your Lock Screen, watch and family's phone",
+    "defaultDescription": "Dulce shows your FreeStyle Libre glucose on your iPhone Lock Screen, Apple Watch and widgets — with alerts and family sharing. Made by a T1D, in Spanish and English.",
+    "keywords": "type 1 diabetes app, glucose on Apple Watch, Live Activity glucose, LibreLinkUp app, FreeStyle Libre companion, glucose widget iPhone, CGM app Spanish, time in range, diabetes logbook"
   },
   "nav": {
     "home": "Home",
@@ -22,16 +22,17 @@
     "en": "English"
   },
   "home": {
-    "title": "Dulce — Your glucose, your family, your endo",
-    "description": "A glucose app for T1Ds who speak Spanish. Connect your Libre, keep your logbook, and share with your family.",
+    "title": "Dulce — Your glucose on your Lock Screen, watch and family's phone",
+    "description": "See your Libre glucose everywhere: Lock Screen, Apple Watch, widgets. Alerts and family sharing built in.",
     "hero": {
-      "eyebrow": "Coming soon · Private beta in Spain",
+      "eyebrow": "Launching soon on the App Store",
       "headline": "Made by a T1D,",
       "headlineAccent": "for T1Ds who speak Spanish.",
-      "subheadline": "Your glucose, your family, your endo. All in one place.",
+      "subheadline": "Your glucose on your Lock Screen, your wrist and your family's phone — live, without opening an app.",
       "ctaPrimary": "Join the waitlist",
       "ctaSecondary": "Apply for the beta",
-      "trustNote": "No spam. We'll let you know when it's ready. Unsubscribe anytime."
+      "trustNote": "No spam. We'll let you know when it's ready. Unsubscribe anytime.",
+      "screenshotAlt": "Dulce app home screen showing a glucose reading of 131 mg/dL in range, a 12-hour chart and time in range, next to an Apple Watch with the Dulce complication"
     },
     "personas": {
       "eyebrow": "Who is Dulce for?",
@@ -53,23 +54,31 @@
     },
     "features": {
       "eyebrow": "What Dulce does",
-      "title": "A companion for your CGM — not a replacement",
+      "title": "Everything a CGM companion should do",
       "items": {
         "connect": {
-          "title": "Connect your CGM",
-          "body": "FreeStyle Libre 2 and 3, Dexcom G6 and G7, Nightscout. Credentials are encrypted on your device — we never share them."
+          "title": "Connect your Libre",
+          "body": "Sign in with LibreLinkUp and your glucose flows in automatically, minute by minute. Your credentials never leave your device's secure keychain."
+        },
+        "everywhere": {
+          "title": "On every screen",
+          "body": "Live Activity on the Lock Screen and Dynamic Island, home-screen widgets, and a native Apple Watch app. The number is just there."
+        },
+        "alerts": {
+          "title": "Alerts you can trust",
+          "body": "Low and high alerts with your own thresholds, quiet hours, and a louder alarm for very low glucose — including at night."
         },
         "diary": {
           "title": "A complete logbook",
-          "body": "Log carbs, insulin, exercise and notes in seconds. No tab switching, no clunky forms."
+          "body": "Log carbs, insulin and glucose in seconds with a quick slider. Everything lands in one timeline you can actually read."
         },
         "trends": {
           "title": "Trends that make sense",
-          "body": "Time in range, GMI, and time-of-day patterns — so you understand what's working and what isn't."
+          "body": "Time in range, average and GMI over 7, 14, 30 or 90 days — so you understand what's working and what isn't."
         },
         "share": {
-          "title": "Family and endo",
-          "body": "Share only what you want. Revoke access anytime. Coming soon."
+          "title": "Family can follow",
+          "body": "Invite the people you trust with a link. They see your glucose live and can send you a nudge — and you can revoke access anytime."
         }
       }
     },
@@ -83,20 +92,38 @@
         "appleHealth": "Apple Health",
         "appleWatch": "Apple Watch"
       },
-      "footer": "Apple Health and Apple Watch are trademarks of Apple Inc. FreeStyle Libre and LibreLinkUp are trademarks of Abbott. Dexcom is a trademark of Dexcom, Inc."
+      "footer": "Apple Health and Apple Watch are trademarks of Apple Inc. FreeStyle Libre and LibreLinkUp are trademarks of Abbott. Dexcom is a trademark of Dexcom, Inc.",
+      "soonBadge": "Coming soon"
     },
     "madeBy": {
       "eyebrow": "Made by a T1D",
       "title": "Because the apps weren't built for us",
-      "body": "I've lived with type 1 diabetes for years, and I always missed an app that spoke my language — and that understood the mess of having to keep three apps open to see one number. Dulce is the app I wish I'd had.",
+      "body": "I've had type 1 diabetes for years. I got tired of unlocking my phone, opening an app and waiting on a spinner just to see one number. So I built Dulce for myself first — then my family asked for it too. Now the number is on my lock screen and my watch, and the people I love can check I'm fine without calling me.",
       "signature": "— Giorgio, founder of Dulce",
       "cta": "Read the story"
     },
     "finalCta": {
-      "title": "Be among the first to try Dulce",
-      "subtitle": "Private beta in Spain through summer 2026. Limited spots.",
+      "title": "Be first to know when Dulce lands",
+      "subtitle": "Dulce will be free to download on the App Store. Pro features come with a 14-day free trial.",
       "ctaWaitlist": "Join the waitlist",
       "ctaBeta": "Apply for the beta"
+    },
+    "showcase": {
+      "eyebrow": "The app",
+      "title": "Your number, wherever you look",
+      "subtitle": "Real screenshots from Dulce on iPhone and Apple Watch. No mock-ups.",
+      "shots": {
+        "lockScreen": "Dulce Live Activity on the iPhone Lock Screen showing 120 mg/dL, with glucose alert notifications and an Apple Watch alongside",
+        "widgets": "Dulce widgets: Dynamic Island, Lock Screen bar, home-screen chart and number widgets, and Apple Watch complications",
+        "liveActivity": "Live Activity settings in Dulce — choosing how glucose appears on the Lock Screen and Dynamic Island",
+        "followers": "Followers screen in Dulce — inviting family to see your glucose in real time, with a nudge message saying I'm OK",
+        "logbook": "Dulce logbook with time in range summary and the quick entry slider logging 5.5 units of insulin",
+        "watchFace": "Apple Watch face with the Dulce glucose complication showing 91 mg/dL and a trend chart",
+        "watchApp": "Dulce Apple Watch app showing 93 mg/dL, rising 10 mg/dL, with a one-day chart",
+        "watchChart": "Scrolling the glucose chart in the Dulce Apple Watch app at 86 mg/dL"
+      },
+      "watchTitle": "Also on your wrist",
+      "watchBody": "A native Apple Watch app with watch-face complications and alerts — glance at your glucose without reaching for your phone."
     }
   },
   "features": {
@@ -108,13 +135,13 @@
     },
     "sections": {
       "connect": {
-        "title": "Connect your CGM in under a minute",
-        "body": "Sign in with your LibreLinkUp, Dexcom Share or Nightscout account. Dulce syncs in the background so your glucose is always up to date.",
+        "title": "Connect your Libre in under a minute",
+        "body": "Sign in with your LibreLinkUp account and Dulce keeps your glucose up to date in the background — on your phone, your watch and your Lock Screen.",
         "bullets": [
           "FreeStyle Libre 2 and Libre 3 (via LibreLinkUp)",
-          "Dexcom G6 and G7 (via Dexcom Share)",
-          "Nightscout (your own instance)",
-          "Credentials encrypted on your device"
+          "Automatic minute-by-minute updates",
+          "Credentials encrypted on your device",
+          "Dexcom and Nightscout are on the roadmap"
         ]
       },
       "diary": {
@@ -140,10 +167,10 @@
         "title": "Share only what you choose",
         "body": "Invite your partner, your mother or your endocrinologist. They can see your glucose in real time, get alerts, or both — you decide. You can revoke access anytime.",
         "bullets": [
-          "Granular permissions: view glucose, receive alerts, both",
-          "Preset roles: partner, family, endo",
-          "Invite by QR or link",
-          "Coming soon"
+          "Invite by link — no accounts to create",
+          "Followers see your glucose live and get alerts",
+          "They can send you a nudge; you reply \"I'm OK\" with one tap",
+          "Revoke access anytime"
         ]
       },
       "watch": {
@@ -244,12 +271,12 @@
     "title": "About Dulce",
     "description": "A glucose app made by a T1D, for the Spanish-speaking community.",
     "hero": {
-      "headline": "A personal story, a public project",
-      "subheadline": "Dulce was born from the frustration of a T1D tired of jumping between badly translated apps — and tired of the few that worked not understanding how we live with diabetes in Spanish."
+      "headline": "Why Dulce exists",
+      "subheadline": "The short version: I have type 1 diabetes, the apps I tried made my day harder, and I could write code."
     },
     "story": {
       "title": "The story",
-      "body": "My name is Giorgio. I've lived with type 1 diabetes for years. Like many others, my daily life with diabetes involves checking my glucose dozens of times a day, logging what I eat, what I inject, and sharing it with my partner and my medical team.\n\nFor years I used apps that weren't built for me: literal translations, mediocre copy, broken LibreLinkUp integrations in Spain, and little thought put into how we actually share information with our families.\n\nDulce is the app I wish I'd had. It's made by a T1D, in native Spanish, with direct LibreLinkUp connectivity in Europe, plus Dexcom and Nightscout. And it's built from the conviction that your data is yours — not mine, not anyone else's."
+      "body": "My name is Giorgio. I've lived with type 1 diabetes for years, and Dulce started as an app I built for myself.\n\nIf you live with T1D, you know the routine. You check your glucose before coffee, before driving, before sleep — dozens of times a day. Every check meant unlocking my phone, opening an app, waiting for it to load. And when my partner wanted to know I was fine, she had to text me and wait.\n\nSo one evening I started building the thing I actually wanted: the number on my lock screen without opening anything. Then it spread — to my watch face, to a widget, to an alarm that wakes me when I'm dropping at night. When my family asked to see my readings on their own phones, that became the followers feature.\n\nI built it in Spanish first, because that's the language my diabetes lives in, and most apps treat Spanish as an afterthought.\n\nDulce will never tell you how much insulin to take — that's between you and your doctor. It just tries to make living with the numbers lighter. If that's what you've been missing too, I hope it helps."
     },
     "values": {
       "title": "What I believe",
@@ -260,7 +287,7 @@
         },
         "community": {
           "title": "Community first",
-          "body": "Dulce gets better when the T1D community has its say. That's why the beta is open and feedback goes straight to development."
+          "body": "Dulce gets better when the T1D community has its say. Feedback goes straight to me — there's no support department in between."
         },
         "honesty": {
           "title": "Medical honesty",

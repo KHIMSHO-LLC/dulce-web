@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Hero } from "@/components/sections/Hero";
+import { AppShowcase } from "@/components/sections/AppShowcase";
 import { Personas } from "@/components/sections/Personas";
 import { FeatureGrid } from "@/components/sections/FeatureGrid";
 import { IntegrationsRow } from "@/components/sections/IntegrationsRow";
@@ -33,6 +34,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   return (
     <>
       <Hero />
+      <AppShowcase />
       <Personas />
       <FeatureGrid />
       <IntegrationsRow />

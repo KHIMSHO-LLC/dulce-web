@@ -1,9 +1,9 @@
 {
   "metadata": {
     "siteName": "Dulce",
-    "defaultTitle": "Dulce — Tu glucosa, tu familia, tu endocrino",
-    "defaultDescription": "Hecho por un T1D, para T1Ds que hablan español. Conecta tu Libre, lleva tu diario y comparte con tu familia y endocrino.",
-    "keywords": "diabetes tipo 1, T1D, glucosa, Libre, FreeStyle Libre, Dexcom, Nightscout, app diabetes español, CGM"
+    "defaultTitle": "Dulce — Tu glucosa en la pantalla de bloqueo, el reloj y el móvil de tu familia",
+    "defaultDescription": "Dulce muestra tu glucosa de FreeStyle Libre en la pantalla de bloqueo del iPhone, en el Apple Watch y en widgets — con alertas y seguimiento familiar. Hecha por un T1D, en español.",
+    "keywords": "app diabetes tipo 1, glucosa Apple Watch, glucosa pantalla de bloqueo, LibreLinkUp app, FreeStyle Libre, widget glucosa iPhone, app CGM español, tiempo en rango, diario diabetes"
   },
   "nav": {
     "home": "Inicio",
@@ -22,16 +22,17 @@
     "en": "Inglés"
   },
   "home": {
-    "title": "Dulce — Tu glucosa, tu familia, tu endocrino",
-    "description": "La app de glucosa para T1Ds que hablan español. Conecta tu Libre, lleva tu diario y comparte con tu familia.",
+    "title": "Dulce — Tu glucosa en la pantalla de bloqueo, el reloj y el móvil de tu familia",
+    "description": "Tu glucosa del Libre en todas partes: pantalla de bloqueo, Apple Watch, widgets. Con alertas y seguimiento familiar.",
     "hero": {
-      "eyebrow": "Próximamente · Beta privada en España",
+      "eyebrow": "Muy pronto en el App Store",
       "headline": "Hecho por un T1D,",
       "headlineAccent": "para T1Ds que hablan español.",
-      "subheadline": "Tu glucosa, tu familia, tu endocrino. Todo en un solo lugar.",
+      "subheadline": "Tu glucosa en la pantalla de bloqueo, en la muñeca y en el móvil de tu familia — en directo, sin abrir ninguna app.",
       "ctaPrimary": "Únete a la lista de espera",
       "ctaSecondary": "Quiero entrar en la beta",
-      "trustNote": "Sin spam. Te avisamos cuando esté lista. Puedes darte de baja cuando quieras."
+      "trustNote": "Sin spam. Te avisamos cuando esté lista. Puedes darte de baja cuando quieras.",
+      "screenshotAlt": "Pantalla principal de Dulce con una glucosa de 131 mg/dL en rango, una gráfica de 12 horas y el tiempo en rango, junto a un Apple Watch con la complicación de Dulce"
     },
     "personas": {
       "eyebrow": "¿Para quién es Dulce?",
@@ -53,23 +54,31 @@
     },
     "features": {
       "eyebrow": "Lo que hace Dulce",
-      "title": "Una compañera para tu CGM, no un sustituto",
+      "title": "Todo lo que debería hacer una compañera de tu CGM",
       "items": {
         "connect": {
-          "title": "Conecta tu CGM",
-          "body": "FreeStyle Libre 2 y 3, Dexcom G6 y G7, Nightscout. Tus credenciales se guardan cifradas en tu dispositivo — nunca las compartimos."
+          "title": "Conecta tu Libre",
+          "body": "Inicia sesión con LibreLinkUp y tu glucosa llega sola, minuto a minuto. Tus credenciales no salen del llavero seguro de tu dispositivo."
+        },
+        "everywhere": {
+          "title": "En todas tus pantallas",
+          "body": "Live Activity en la pantalla de bloqueo y la Dynamic Island, widgets en la pantalla de inicio y app nativa para Apple Watch. El número simplemente está ahí."
+        },
+        "alerts": {
+          "title": "Alertas de fiar",
+          "body": "Avisos de glucosa baja y alta con tus propios umbrales, horas de silencio y una alarma más fuerte para bajadas graves — también de noche."
         },
         "diary": {
           "title": "Diario completo",
-          "body": "Anota carbohidratos, insulina, ejercicio y notas en segundos. Sin pestañas, sin pantallas que se cuelgan."
+          "body": "Registra carbohidratos, insulina y glucosa en segundos con un selector rápido. Todo queda en una sola línea de tiempo que se entiende."
         },
         "trends": {
           "title": "Tendencias claras",
-          "body": "Tiempo en rango, GMI y patrones por hora del día — para entender qué funciona y qué no."
+          "body": "Tiempo en rango, media y GMI en 7, 14, 30 o 90 días — para entender qué funciona y qué no."
         },
         "share": {
-          "title": "Familia y endocrino",
-          "body": "Comparte solo lo que tú elijas. Revoca el acceso cuando quieras. Próximamente."
+          "title": "Tu familia puede seguirte",
+          "body": "Invita a quien tú quieras con un enlace. Ven tu glucosa en directo y pueden mandarte un ánimo — y puedes revocar el acceso cuando quieras."
         }
       }
     },
@@ -83,20 +92,38 @@
         "appleHealth": "Apple Salud",
         "appleWatch": "Apple Watch"
       },
-      "footer": "Apple Salud y Apple Watch son marcas de Apple Inc. FreeStyle Libre y LibreLinkUp son marcas de Abbott. Dexcom es marca de Dexcom, Inc."
+      "footer": "Apple Salud y Apple Watch son marcas de Apple Inc. FreeStyle Libre y LibreLinkUp son marcas de Abbott. Dexcom es marca de Dexcom, Inc.",
+      "soonBadge": "Próximamente"
     },
     "madeBy": {
       "eyebrow": "Hecho por un T1D",
       "title": "Porque las apps no estaban hechas para nosotros",
-      "body": "Llevo diabetes tipo 1 desde hace años, y siempre eché de menos una app que hablara mi idioma — y que entendiera el lío de tener varias apps abiertas para ver una sola cifra. Dulce es la app que me hubiera gustado tener.",
+      "body": "Llevo años con diabetes tipo 1. Me cansé de desbloquear el móvil, abrir una app y esperar a que cargara solo para ver un número. Así que hice Dulce primero para mí — y luego mi familia también la quiso. Ahora el número está en mi pantalla de bloqueo y en mi reloj, y los míos pueden ver que estoy bien sin llamarme.",
       "signature": "— Giorgio, fundador de Dulce",
       "cta": "Conoce la historia"
     },
     "finalCta": {
-      "title": "Sé de los primeros en probar Dulce",
-      "subtitle": "Beta privada en España durante el verano de 2026. Plazas limitadas.",
+      "title": "Sé de los primeros en enterarte",
+      "subtitle": "Dulce será gratis en el App Store. Las funciones Pro incluyen 14 días de prueba gratuita.",
       "ctaWaitlist": "Únete a la lista",
       "ctaBeta": "Quiero ser beta tester"
+    },
+    "showcase": {
+      "eyebrow": "La app",
+      "title": "Tu número, mires donde mires",
+      "subtitle": "Capturas reales de Dulce en iPhone y Apple Watch. Sin maquetas.",
+      "shots": {
+        "lockScreen": "Live Activity de Dulce en la pantalla de bloqueo del iPhone mostrando 120 mg/dL, con notificaciones de alerta de glucosa y un Apple Watch al lado",
+        "widgets": "Widgets de Dulce: Dynamic Island, barra en pantalla de bloqueo, widgets de gráfica y número en la pantalla de inicio, y complicaciones del Apple Watch",
+        "liveActivity": "Ajustes de Live Activity en Dulce — eligiendo cómo se ve la glucosa en la pantalla de bloqueo y la Dynamic Island",
+        "followers": "Pantalla de seguidores en Dulce — invitando a la familia a ver tu glucosa en tiempo real, con un mensaje de ánimo y la respuesta Estoy bien",
+        "logbook": "Diario de Dulce con resumen de tiempo en rango y el selector rápido registrando 5,5 unidades de insulina",
+        "watchFace": "Esfera del Apple Watch con la complicación de Dulce mostrando 91 mg/dL y una gráfica de tendencia",
+        "watchApp": "App de Dulce para Apple Watch mostrando 93 mg/dL, subiendo 10 mg/dL, con la gráfica del día",
+        "watchChart": "Desplazando la gráfica de glucosa en la app de Dulce para Apple Watch a 86 mg/dL"
+      },
+      "watchTitle": "También en tu muñeca",
+      "watchBody": "App nativa para Apple Watch con complicaciones y alertas — mira tu glucosa de un vistazo sin sacar el móvil."
     }
   },
   "features": {
@@ -108,13 +135,13 @@
     },
     "sections": {
       "connect": {
-        "title": "Conecta tu CGM en menos de un minuto",
-        "body": "Inicia sesión con tu cuenta de LibreLinkUp, Dexcom Share o Nightscout. Dulce sincroniza en segundo plano para que tu glucosa esté siempre al día.",
+        "title": "Conecta tu Libre en menos de un minuto",
+        "body": "Inicia sesión con tu cuenta de LibreLinkUp y Dulce mantiene tu glucosa al día en segundo plano — en el móvil, en el reloj y en la pantalla de bloqueo.",
         "bullets": [
           "FreeStyle Libre 2 y Libre 3 (vía LibreLinkUp)",
-          "Dexcom G6 y G7 (vía Dexcom Share)",
-          "Nightscout (tu instancia personal)",
-          "Credenciales cifradas en tu dispositivo"
+          "Actualización automática minuto a minuto",
+          "Credenciales cifradas en tu dispositivo",
+          "Dexcom y Nightscout están en el plan"
         ]
       },
       "diary": {
@@ -140,10 +167,10 @@
         "title": "Comparte solo lo que tú elijas",
         "body": "Invita a tu pareja, a tu madre o a tu endocrino. Pueden ver tu glucosa en tiempo real, recibir avisos o ambos — tú decides. Y puedes revocar el acceso en cualquier momento.",
         "bullets": [
-          "Permisos granulares: ver glucosa, recibir avisos, ambos",
-          "Roles predefinidos: pareja, familia, endocrino",
-          "Invita por QR o enlace",
-          "Disponible próximamente"
+          "Invita por enlace — sin crear cuentas",
+          "Tus seguidores ven tu glucosa en directo y reciben avisos",
+          "Pueden mandarte un ánimo; respondes «Estoy bien» con un toque",
+          "Revoca el acceso cuando quieras"
         ]
       },
       "watch": {
@@ -244,12 +271,12 @@
     "title": "Sobre Dulce",
     "description": "Una app de glucosa hecha por un T1D, para la comunidad hispanohablante.",
     "hero": {
-      "headline": "Una historia personal, un proyecto público",
-      "subheadline": "Dulce nació de la frustración de un T1D harto de saltar entre apps mal traducidas — y harto de que las pocas que funcionaban no entendieran cómo vivimos la diabetes en español."
+      "headline": "Por qué existe Dulce",
+      "subheadline": "La versión corta: tengo diabetes tipo 1, las apps que probé me complicaban el día, y sé programar."
     },
     "story": {
       "title": "La historia",
-      "body": "Me llamo Giorgio. Vivo con diabetes tipo 1 desde hace años. Como tantas otras personas, mi día a día con la diabetes pasa por mirar mi glucosa decenas de veces al día, anotar lo que como, lo que me inyecto, y compartirlo con mi pareja y con mi equipo médico.\n\nDurante años usé apps que no estaban hechas para mí: traducciones literales, copia mediocre, integraciones rotas con LibreLinkUp en España, y poca atención a cómo realmente compartimos información con la familia.\n\nDulce es la app que me hubiera gustado tener. Está hecha por un T1D, en castellano nativo, con conexión directa a LibreLinkUp en Europa, Dexcom y Nightscout. Y está hecha desde la convicción de que tus datos son tuyos — no míos, ni de nadie más."
+      "body": "Me llamo Giorgio. Llevo años viviendo con diabetes tipo 1, y Dulce empezó siendo una app que hice para mí.\n\nSi vives con T1D, conoces la rutina. Miras tu glucosa antes del café, antes de conducir, antes de dormir — decenas de veces al día. Cada mirada era desbloquear el móvil, abrir una app, esperar a que cargara. Y cuando mi pareja quería saber si estaba bien, tenía que escribirme y esperar.\n\nAsí que una tarde empecé a construir lo que de verdad quería: el número en mi pantalla de bloqueo, sin abrir nada. Y fue creciendo — a la esfera del reloj, a un widget, a una alarma que me despierta si estoy bajando por la noche. Cuando mi familia pidió ver mis lecturas en sus propios móviles, eso se convirtió en la función de seguidores.\n\nLa hice primero en español, porque es el idioma en el que vive mi diabetes, y la mayoría de apps tratan el español como algo de segunda.\n\nDulce nunca te dirá cuánta insulina ponerte — eso es entre tú y tu médico. Solo intenta que vivir con los números pese menos. Si a ti también te faltaba algo así, espero que te sirva."
     },
     "values": {
       "title": "En qué creo",
@@ -260,7 +287,7 @@
         },
         "community": {
           "title": "Comunidad primero",
-          "body": "Dulce se hace mejor cuando la comunidad T1D opina. Por eso la beta es abierta y el feedback va directo al desarrollo."
+          "body": "Dulce mejora cuando la comunidad T1D opina. El feedback me llega directo a mí — no hay departamento de soporte de por medio."
         },
         "honesty": {
           "title": "Honestidad médica",

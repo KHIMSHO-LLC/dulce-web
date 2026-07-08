@@ -46,6 +46,14 @@ export async function generateMetadata({
     icons: {
       icon: "/favicon.ico",
     },
+    // App Store ID — enables the iOS Smart App Banner once the app is live.
+    itunes: {
+      appId: "6770694596",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
       type: "website",
       siteName: t("siteName"),
@@ -70,6 +78,46 @@ export async function generateMetadata({
   };
 }
 
+/** JSON-LD structured data for the Dulce iOS app + organization. */
+function structuredData(locale: string) {
+  const description =
+    locale === "es"
+      ? "Dulce muestra tu glucosa de FreeStyle Libre en la pantalla de bloqueo del iPhone, en el Apple Watch y en widgets — con alertas y seguimiento familiar."
+      : "Dulce shows your FreeStyle Libre glucose on your iPhone Lock Screen, Apple Watch and widgets — with alerts and family sharing.";
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MobileApplication",
+        name: "Dulce",
+        operatingSystem: "iOS",
+        applicationCategory: "HealthApplication",
+        description,
+        inLanguage: ["es", "en"],
+        url: "https://dulceglucosa.com",
+        installUrl: "https://apps.apple.com/app/id6770694596",
+        screenshot: [
+          "https://dulceglucosa.com/screenshots/home.png",
+          "https://dulceglucosa.com/screenshots/lock-screen.png",
+          "https://dulceglucosa.com/screenshots/widgets.png",
+        ],
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "EUR",
+        },
+      },
+      {
+        "@type": "Organization",
+        name: "Dulce",
+        url: "https://dulceglucosa.com",
+        email: "hola@dulceglucosa.com",
+        logo: "https://dulceglucosa.com/favicon.ico",
+      },
+    ],
+  };
+}
+
 export default async function LocaleLayout({
   children,
   params,
@@ -85,6 +133,10 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${nunito.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData(locale)) }}
+        />
         <NextIntlClientProvider>
           <Header />
           <main id="main" className="flex-1">

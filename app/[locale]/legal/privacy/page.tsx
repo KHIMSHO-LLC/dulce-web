@@ -7,7 +7,7 @@ import { LegalLayout } from "@/components/legal/LegalLayout";
 import { PrivacyEs } from "@/components/legal/PrivacyEs";
 import { PrivacyEn } from "@/components/legal/PrivacyEn";
 
-const LAST_UPDATED = "2026-05-19";
+const LAST_UPDATED = "2026-07-08";
 
 export async function generateMetadata({
   params,
