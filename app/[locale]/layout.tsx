@@ -44,7 +44,12 @@ export async function generateMetadata({
     keywords: t("keywords").split(", "),
     applicationName: t("siteName"),
     icons: {
-      icon: "/favicon.ico",
+      icon: [
+        { url: "/favicon.ico" },
+        { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+        { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+      ],
+      apple: "/apple-touch-icon.png",
     },
     // App Store ID — enables the iOS Smart App Banner once the app is live.
     itunes: {
