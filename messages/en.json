@@ -2,8 +2,8 @@
   "metadata": {
     "siteName": "Dulce",
     "defaultTitle": "Dulce — Your glucose on your Lock Screen, watch and family's phone",
-    "defaultDescription": "Dulce shows your FreeStyle Libre glucose on your iPhone Lock Screen, Apple Watch and widgets — with alerts and family sharing. Made by a T1D, in Spanish and English.",
-    "keywords": "type 1 diabetes app, glucose on Apple Watch, Live Activity glucose, LibreLinkUp app, FreeStyle Libre companion, glucose widget iPhone, CGM app Spanish, time in range, diabetes logbook"
+    "defaultDescription": "Dulce shows your CGM glucose on your iPhone Lock Screen, Apple Watch and widgets — with alerts and family sharing. Made by a T1D, in Spanish and English.",
+    "keywords": "type 1 diabetes app, glucose on Apple Watch, Live Activity glucose, CGM companion app, glucose widget iPhone, CGM app Spanish, time in range, diabetes logbook"
   },
   "nav": {
     "home": "Home",
@@ -23,7 +23,7 @@
   },
   "home": {
     "title": "Dulce — Your glucose on your Lock Screen, watch and family's phone",
-    "description": "See your Libre glucose everywhere: Lock Screen, Apple Watch, widgets. Alerts and family sharing built in.",
+    "description": "See your CGM glucose everywhere: Lock Screen, Apple Watch, widgets. Alerts and family sharing built in.",
     "hero": {
       "eyebrow": "Launching soon on the App Store",
       "headline": "Made by a T1D,",
@@ -57,8 +57,8 @@
       "title": "Everything a CGM companion should do",
       "items": {
         "connect": {
-          "title": "Connect your Libre",
-          "body": "Sign in with LibreLinkUp and your glucose flows in automatically, minute by minute. Your credentials never leave your device's secure keychain."
+          "title": "Connect your CGM",
+          "body": "Sign in with your CGM account and your glucose flows in automatically, minute by minute. Your credentials never leave your device's secure keychain."
         },
         "everywhere": {
           "title": "On every screen",
@@ -135,10 +135,10 @@
     },
     "sections": {
       "connect": {
-        "title": "Connect your Libre in under a minute",
-        "body": "Sign in with your LibreLinkUp account and Dulce keeps your glucose up to date in the background — on your phone, your watch and your Lock Screen.",
+        "title": "Connect your CGM in under a minute",
+        "body": "Sign in with your CGM account and Dulce keeps your glucose up to date in the background — on your phone, your watch and your Lock Screen.",
         "bullets": [
-          "FreeStyle Libre 2 and Libre 3 (via LibreLinkUp)",
+          "Works with scan-based and continuous CGM accounts",
           "Automatic minute-by-minute updates",
           "Credentials encrypted on your device",
           "Dexcom and Nightscout are on the roadmap"

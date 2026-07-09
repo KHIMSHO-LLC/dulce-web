@@ -87,8 +87,8 @@ export async function generateMetadata({
 function structuredData(locale: string) {
   const description =
     locale === "es"
-      ? "Dulce muestra tu glucosa de FreeStyle Libre en la pantalla de bloqueo del iPhone, en el Apple Watch y en widgets — con alertas y seguimiento familiar."
-      : "Dulce shows your FreeStyle Libre glucose on your iPhone Lock Screen, Apple Watch and widgets — with alerts and family sharing.";
+      ? "Dulce muestra tu glucosa de CGM en la pantalla de bloqueo del iPhone, en el Apple Watch y en widgets — con alertas y seguimiento familiar."
+      : "Dulce shows your CGM glucose on your iPhone Lock Screen, Apple Watch and widgets — with alerts and family sharing.";
   return {
     "@context": "https://schema.org",
     "@graph": [

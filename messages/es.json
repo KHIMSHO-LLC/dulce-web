@@ -2,8 +2,8 @@
   "metadata": {
     "siteName": "Dulce",
     "defaultTitle": "Dulce — Tu glucosa en la pantalla de bloqueo, el reloj y el móvil de tu familia",
-    "defaultDescription": "Dulce muestra tu glucosa de FreeStyle Libre en la pantalla de bloqueo del iPhone, en el Apple Watch y en widgets — con alertas y seguimiento familiar. Hecha por un T1D, en español.",
-    "keywords": "app diabetes tipo 1, glucosa Apple Watch, glucosa pantalla de bloqueo, LibreLinkUp app, FreeStyle Libre, widget glucosa iPhone, app CGM español, tiempo en rango, diario diabetes"
+    "defaultDescription": "Dulce muestra tu glucosa de CGM en la pantalla de bloqueo del iPhone, en el Apple Watch y en widgets — con alertas y seguimiento familiar. Hecha por un T1D, en español.",
+    "keywords": "app diabetes tipo 1, glucosa Apple Watch, glucosa pantalla de bloqueo, app CGM, widget glucosa iPhone, app CGM español, tiempo en rango, diario diabetes"
   },
   "nav": {
     "home": "Inicio",
@@ -23,7 +23,7 @@
   },
   "home": {
     "title": "Dulce — Tu glucosa en la pantalla de bloqueo, el reloj y el móvil de tu familia",
-    "description": "Tu glucosa del Libre en todas partes: pantalla de bloqueo, Apple Watch, widgets. Con alertas y seguimiento familiar.",
+    "description": "Tu glucosa de CGM en todas partes: pantalla de bloqueo, Apple Watch, widgets. Con alertas y seguimiento familiar.",
     "hero": {
       "eyebrow": "Muy pronto en el App Store",
       "headline": "Hecho por un T1D,",
@@ -57,8 +57,8 @@
       "title": "Todo lo que debería hacer una compañera de tu CGM",
       "items": {
         "connect": {
-          "title": "Conecta tu Libre",
-          "body": "Inicia sesión con LibreLinkUp y tu glucosa llega sola, minuto a minuto. Tus credenciales no salen del llavero seguro de tu dispositivo."
+          "title": "Conecta tu CGM",
+          "body": "Inicia sesión con tu cuenta de CGM y tu glucosa llega sola, minuto a minuto. Tus credenciales no salen del llavero seguro de tu dispositivo."
         },
         "everywhere": {
           "title": "En todas tus pantallas",
@@ -135,10 +135,10 @@
     },
     "sections": {
       "connect": {
-        "title": "Conecta tu Libre en menos de un minuto",
-        "body": "Inicia sesión con tu cuenta de LibreLinkUp y Dulce mantiene tu glucosa al día en segundo plano — en el móvil, en el reloj y en la pantalla de bloqueo.",
+        "title": "Conecta tu CGM en menos de un minuto",
+        "body": "Inicia sesión con tu cuenta de CGM y Dulce mantiene tu glucosa al día en segundo plano — en el móvil, en el reloj y en la pantalla de bloqueo.",
         "bullets": [
-          "FreeStyle Libre 2 y Libre 3 (vía LibreLinkUp)",
+          "Compatible con cuentas de CGM por escaneo y de lectura continua",
           "Actualización automática minuto a minuto",
           "Credenciales cifradas en tu dispositivo",
           "Dexcom y Nightscout están en el plan"
