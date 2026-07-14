@@ -25,6 +25,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/legal/terms",
     "/legal/disclaimer",
     "/legal/cookies",
+    "/apple-watch",
+    "/lock-screen",
+    "/android",
+    "/blog",
+    "/blog/how-to-see-cgm-glucose-on-apple-watch",
+    "/blog/time-in-range-vs-a1c",
+    "/blog/sharing-cgm-glucose-with-family",
   ];
 
   const now = new Date();

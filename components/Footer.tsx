@@ -11,13 +11,16 @@ export function Footer() {
       title: t("sections.product.title"),
       links: [
         { href: "/features" as const, label: t("sections.product.features") },
-        { href: "/beta" as const, label: t("sections.product.beta") },
+        { href: "/apple-watch" as const, label: t("sections.product.appleWatch") },
+        { href: "/lock-screen" as const, label: t("sections.product.lockScreen") },
+        { href: "/android" as const, label: t("sections.product.android") },
       ],
     },
     {
       title: t("sections.company.title"),
       links: [
         { href: "/about" as const, label: t("sections.company.about") },
+        { href: "/blog" as const, label: t("sections.company.blog") },
         { href: "/contact" as const, label: t("sections.company.contact") },
       ],
     },

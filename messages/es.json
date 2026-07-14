@@ -14,7 +14,11 @@
     "joinWaitlist": "Únete a la lista",
     "skipToContent": "Saltar al contenido",
     "openMenu": "Abrir menú",
-    "closeMenu": "Cerrar menú"
+    "closeMenu": "Cerrar menú",
+    "appleWatch": "Apple Watch",
+    "lockScreen": "Pantalla de bloqueo",
+    "blog": "Blog",
+    "android": "Android"
   },
   "languageSwitcher": {
     "label": "Idioma",
@@ -298,26 +302,58 @@
   },
   "contact": {
     "title": "Contacto",
-    "description": "¿Tienes una pregunta, idea o feedback? Escríbenos.",
+    "description": "¿Tienes una pregunta, idea o feedback? Escríbenos, leemos todos los mensajes.",
     "headline": "Estamos aquí",
-    "subheadline": "Para preguntas sobre la beta, prensa, partnerships o cualquier otra cosa, escríbenos directamente.",
+    "subheadline": "Preguntas sobre la beta, prensa, colaboraciones clínicas o simplemente un saludo, escríbenos y una persona real lo leerá.",
     "email": "hola@dulceglucosa.com",
-    "responseTime": "Respondemos en menos de 48 horas laborables.",
+    "responseTimeLabel": "Tiempo de respuesta",
+    "responseTime": "En menos de 48 horas laborables",
     "topics": {
       "title": "Temas frecuentes",
       "items": {
         "beta": {
-          "title": "¿Quiero ser beta tester?",
-          "body": "Rellena el formulario de la <link>página de beta</link> y te avisamos."
+          "title": "¿Puedo unirme a la beta?",
+          "body": "Cuéntanos qué CGM usas y vemos si hay sitio para ti."
         },
         "press": {
           "title": "Prensa y entrevistas",
-          "body": "Encantados de hablar. Escribe a hola@dulceglucosa.com con \"Prensa\" en el asunto."
+          "body": "Encantados de hablar. Solo escribe \"Prensa\" en el asunto del mensaje."
         },
         "doctor": {
-          "title": "Soy endocrino, ¿podemos colaborar?",
-          "body": "Sí. Buscamos profesionales que quieran probar Dulce con sus pacientes en la beta. Escríbenos."
+          "title": "¿Eres endocrinólogo y quieres colaborar?",
+          "body": "Nos encantaría. Cuéntanos sobre tu consulta y tus pacientes."
         }
+      }
+    },
+    "form": {
+      "title": "Envíanos un mensaje",
+      "subtitle": "Rellena el formulario y te responderemos directamente.",
+      "name": {
+        "label": "Tu nombre",
+        "placeholder": "María García"
+      },
+      "email": {
+        "label": "Tu correo",
+        "placeholder": "tu@correo.com"
+      },
+      "subject": {
+        "label": "Asunto",
+        "placeholder": "¿En qué podemos ayudarte?"
+      },
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "Cuéntanos cualquier cosa: preguntas, ideas, comentarios o simplemente un hola."
+      },
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando…",
+      "success": {
+        "title": "¡Mensaje enviado!",
+        "body": "Te responderemos en menos de 48 horas laborables."
+      },
+      "errors": {
+        "validation": "Por favor, rellena todos los campos correctamente.",
+        "rateLimit": "Demasiados mensajes enviados. Por favor, espera un momento.",
+        "generic": "Algo salió mal. También puedes escribirnos a hola@dulceglucosa.com."
       }
     }
   },
@@ -345,12 +381,15 @@
       "product": {
         "title": "Producto",
         "features": "Características",
-        "beta": "Beta privada"
+        "appleWatch": "Apple Watch",
+        "lockScreen": "Pantalla de bloqueo",
+        "android": "Android (Pronto)"
       },
       "company": {
         "title": "Empresa",
         "about": "Sobre Dulce",
-        "contact": "Contacto"
+        "contact": "Contacto",
+        "blog": "Blog"
       },
       "legal": {
         "title": "Legal",
@@ -404,5 +443,80 @@
     },
     "expiryNote": "Los códigos de invitación caducan 24 horas después de crearse. Pide uno nuevo si este deja de funcionar.",
     "noCode": "No se encontró ningún código en este enlace. Pide una invitación nueva."
+  },
+  "appleWatch": {
+    "title": "Dulce para Apple Watch",
+    "description": "Revisa tu glucosa de CGM directamente desde tu muñeca. Complicaciones independientes y app nativa para FreeStyle Libre y Dexcom.",
+    "hero": {
+      "headline": "Tu glucosa, en tu muñeca.",
+      "subheadline": "Una app nativa para Apple Watch diseñada específicamente para la diabetes. Actualiza tu glucosa en tiempo real, incluso si tu teléfono está en tu bolsillo. Porque vivir con DM1 ya es bastante difícil sin tener que sacar el teléfono 40 veces al día."
+    },
+    "features": {
+      "standalone": {
+        "title": "Directo y confiable.",
+        "body": "A diferencia de otras apps que esperan a que el teléfono se sincronice, Dulce funciona de forma nativa. Si podemos obtener una lectura fresca de la nube de tu proveedor de CGM directamente a través de Wi-Fi o datos celulares, lo haremos. Menos esperas, más seguridad."
+      },
+      "complications": {
+        "title": "Complicaciones que realmente se ven bien.",
+        "body": "Diseñamos complicaciones para cada esfera de Apple Watch. Ya sea que prefieras un número minimalista en la esquina o un gráfico completo en la esfera Modular, tu glucosa se adapta a tu estilo."
+      },
+      "alerts": {
+        "title": "Alertas hápticas que no te perderás.",
+        "body": "Cuando estés alto o bajo, sentirás una vibración distintiva en tu muñeca. Es lo suficientemente discreta para una reunión, pero lo suficientemente clara para despertarte si lo necesitas."
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "q1": "¿Funciona sin mi iPhone?",
+      "a1": "Sí, si tu Apple Watch tiene una conexión a internet activa (Wi-Fi o Celular), Dulce puede obtener lecturas de forma independiente desde la nube de tu proveedor de CGM.",
+      "q2": "¿Hay algún retraso?",
+      "a2": "Sincronizamos minuto a minuto con los servidores de LibreLinkUp y Dexcom Share. Es tan rápido como las apps oficiales, pero presentado mucho mejor."
+    },
+    "cta": {
+      "title": "¿Listo para mejorar tu reloj?",
+      "subtitle": "Únete a los miles que manejan la diabetes con Dulce."
+    }
+  },
+  "lockScreen": {
+    "title": "Widgets de glucosa para pantalla de bloqueo",
+    "description": "Mantén tu glucosa visible en todo momento con Actividades en Vivo, modo En Reposo (StandBy) y widgets de Dynamic Island.",
+    "hero": {
+      "headline": "Solo necesitas un vistazo.",
+      "subheadline": "Los días de desbloquear el teléfono, buscar una app y esperar a que cargue solo para ver tu glucosa han terminado. Dulce pone tu número directamente en tu pantalla de bloqueo, Dynamic Island y modo En Reposo."
+    },
+    "features": {
+      "liveActivity": {
+        "title": "Actividades en vivo y Dynamic Island",
+        "body": "Inicia una Actividad en Vivo de Dulce para fijar tu glucosa en la parte inferior de tu pantalla de bloqueo. Si tienes un iPhone 14 Pro o posterior, tu lectura vive permanentemente en la Dynamic Island mientras usas otras apps."
+      },
+      "standBy": {
+        "title": "Perfecto para la mesita de noche.",
+        "body": "Gira tu iPhone de lado en un cargador y se activa el modo En Reposo (StandBy) de iOS. Hemos creado widgets enormes y fáciles de leer específicamente para este modo, para que puedas ver tu glucosa a las 3 AM sin buscar tus gafas."
+      },
+      "widgets": {
+        "title": "Widgets de inicio",
+        "body": "Desde un pequeño número en la esquina hasta un gráfico de tendencias de varias horas. Coloca widgets de Dulce junto a tus otras apps para una conciencia constante."
+      }
+    }
+  },
+  "android": {
+    "title": "Dulce para Android",
+    "description": "La mejor app compañera para CGM llegará a Android y Wear OS.",
+    "hero": {
+      "headline": "Android está en camino.",
+      "subheadline": "Estamos construyendo Dulce para Android desde cero. No es una simple copia: hablamos de un diseño nativo Material You, integración con Health Connect, ricos widgets de inicio y una app dedicada para Wear OS."
+    },
+    "waitlist": {
+      "title": "Obtén acceso anticipado",
+      "subtitle": "Únete a la lista de espera específica para Android. Solo te enviaremos un correo cuando la beta de Android esté lista para probarse."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Noticias, actualizaciones y análisis sobre cómo vivir con diabetes tipo 1.",
+    "index": {
+      "headline": "Recursos y Actualizaciones",
+      "subheadline": "Reflexiones sobre el manejo de la diabetes, actualizaciones de la app y cómo aprovechar al máximo los datos de tu CGM."
+    }
   }
 }

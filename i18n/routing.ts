@@ -43,6 +43,28 @@ export const routing = defineRouting({
       en: "/legal/disclaimer",
     },
     "/legal/cookies": "/legal/cookies",
+    "/apple-watch": {
+      es: "/apple-watch",
+      en: "/apple-watch",
+    },
+    "/lock-screen": {
+      es: "/pantalla-de-bloqueo",
+      en: "/lock-screen",
+    },
+    "/android": "/android",
+    "/blog": "/blog",
+    "/blog/how-to-see-cgm-glucose-on-apple-watch": {
+      es: "/blog/como-ver-glucosa-cgm-en-apple-watch",
+      en: "/blog/how-to-see-cgm-glucose-on-apple-watch",
+    },
+    "/blog/time-in-range-vs-a1c": {
+      es: "/blog/tiempo-en-rango-vs-hba1c",
+      en: "/blog/time-in-range-vs-a1c",
+    },
+    "/blog/sharing-cgm-glucose-with-family": {
+      es: "/blog/compartir-glucosa-cgm-con-familia",
+      en: "/blog/sharing-cgm-glucose-with-family",
+    }
   },
 });
 

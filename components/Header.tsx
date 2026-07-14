@@ -14,10 +14,10 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   const navItems = [
+    { href: "/apple-watch" as const, label: t("appleWatch") },
+    { href: "/lock-screen" as const, label: t("lockScreen") },
     { href: "/features" as const, label: t("features") },
-    { href: "/beta" as const, label: t("beta") },
-    { href: "/about" as const, label: t("about") },
-    { href: "/contact" as const, label: t("contact") },
+    { href: "/blog" as const, label: t("blog") },
   ];
 
   return (
