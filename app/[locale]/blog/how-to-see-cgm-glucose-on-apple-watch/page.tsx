@@ -3,7 +3,11 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing, type AppLocale } from "@/i18n/routing";
-import { Button } from "@/components/ui/Button";
+import { ArticleSchema } from "@/components/ArticleSchema";
+import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
+import { getPost, formatBlogDate } from "@/lib/blog";
+
+const SLUG = "how-to-see-cgm-glucose-on-apple-watch" as const;
 
 export async function generateMetadata({
   params,
@@ -27,22 +31,22 @@ export default async function BlogPostPage({ params }: PageProps<"/[locale]/blog
 
 function ArticleContent({ locale }: { locale: AppLocale }) {
   const isEs = locale === "es";
+  const post = getPost(SLUG);
 
   return (
     <article className="container-page py-16 md:py-24 max-w-3xl">
+      <ArticleSchema slug={SLUG} locale={locale} />
       <header className="mb-12">
         <p className="text-caption font-semibold uppercase tracking-wider text-accent mb-4">
-          Guides · Oct 12, 2026
+          {post.tag[locale]} · {formatBlogDate(post.datePublished, locale)}
         </p>
         <h1 className="text-display md:text-display-lg tracking-tight font-bold text-foreground leading-tight mb-6">
-          {isEs 
-            ? "Cómo ver tu glucosa en el Apple Watch (y por qué la mayoría de apps fallan)" 
-            : "How to see your CGM glucose on your Apple Watch (and why most apps fail at it)"}
+          {post.title[locale]}
         </h1>
         <div className="flex items-center gap-3 text-label text-muted">
-          <span>By Giorgio</span>
+          <span>{isEs ? "Por" : "By"} Giorgio</span>
           <span>·</span>
-          <span>5 min read</span>
+          <span>{post.readingMinutes} {isEs ? "min de lectura" : "min read"}</span>
         </div>
       </header>
 
@@ -135,11 +139,11 @@ function ArticleContent({ locale }: { locale: AppLocale }) {
           {isEs ? "Experimenta Dulce en tu reloj" : "Experience Dulce on your watch"}
         </h3>
         <p className="text-body text-muted mb-8 max-w-lg mx-auto">
-          {isEs ? "Descarga la beta privada hoy y mantén tu glucosa en tu muñeca de manera confiable." : "Join the private beta today and keep your glucose on your wrist, reliably."}
+          {isEs ? "Descárgala gratis hoy y mantén tu glucosa en tu muñeca de manera confiable." : "Download it free today and keep your glucose on your wrist, reliably."}
         </p>
-        <Button as="a" href="/#waitlist" size="lg">
-          {isEs ? "Unirme a la lista de espera" : "Join the waitlist"}
-        </Button>
+        <div className="flex justify-center">
+          <AppStoreBadge campaign="web_page" locale={locale} />
+        </div>
       </div>
     </article>
   );

@@ -3,7 +3,11 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing, type AppLocale } from "@/i18n/routing";
-import { Button } from "@/components/ui/Button";
+import { ArticleSchema } from "@/components/ArticleSchema";
+import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
+import { getPost, formatBlogDate } from "@/lib/blog";
+
+const SLUG = "time-in-range-vs-a1c" as const;
 
 export async function generateMetadata({
   params,
@@ -27,22 +31,22 @@ export default async function BlogPostPage({ params }: PageProps<"/[locale]/blog
 
 function ArticleContent({ locale }: { locale: AppLocale }) {
   const isEs = locale === "es";
+  const post = getPost(SLUG);
 
   return (
     <article className="container-page py-16 md:py-24 max-w-3xl">
+      <ArticleSchema slug={SLUG} locale={locale} />
       <header className="mb-12">
         <p className="text-caption font-semibold uppercase tracking-wider text-accent mb-4">
-          Health · Oct 10, 2026
+          {post.tag[locale]} · {formatBlogDate(post.datePublished, locale)}
         </p>
         <h1 className="text-display md:text-display-lg tracking-tight font-bold text-foreground leading-tight mb-6">
-          {isEs 
-            ? "Tiempo en Rango vs. A1C: Por qué los endocrinólogos están cambiando su enfoque" 
-            : "Time in Range vs. A1C: Why endocrinologists are changing their focus"}
+          {post.title[locale]}
         </h1>
         <div className="flex items-center gap-3 text-label text-muted">
-          <span>By Giorgio</span>
+          <span>{isEs ? "Por" : "By"} Giorgio</span>
           <span>·</span>
-          <span>4 min read</span>
+          <span>{post.readingMinutes} {isEs ? "min de lectura" : "min read"}</span>
         </div>
       </header>
 
@@ -149,9 +153,9 @@ function ArticleContent({ locale }: { locale: AppLocale }) {
         <p className="text-body text-muted mb-8 max-w-lg mx-auto">
           {isEs ? "Sigue tus tendencias en tiempo real con widgets para tu pantalla de inicio." : "Track your trends in real-time with beautiful home screen widgets."}
         </p>
-        <Button as="a" href="/#waitlist" size="lg">
-          {isEs ? "Descubrir Dulce" : "Discover Dulce"}
-        </Button>
+        <div className="flex justify-center">
+          <AppStoreBadge campaign="web_page" locale={locale} />
+        </div>
       </div>
     </article>
   );

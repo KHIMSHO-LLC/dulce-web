@@ -29,14 +29,29 @@
     "title": "Dulce — Tu glucosa en la pantalla de bloqueo, el reloj y el móvil de tu familia",
     "description": "Tu glucosa de CGM en todas partes: pantalla de bloqueo, Apple Watch, widgets. Con alertas y seguimiento familiar.",
     "hero": {
-      "eyebrow": "Muy pronto en el App Store",
+      "eyebrow": "Ya disponible en el App Store",
       "headline": "Hecho por un T1D,",
       "headlineAccent": "para T1Ds que hablan español.",
+      "headlineAccentPrefix": "para T1Ds que hablan",
+      "headlineAccentSuffix": ".",
+      "languages": [
+        "español",
+        "inglés",
+        "georgiano",
+        "alemán",
+        "portugués",
+        "danés",
+        "neerlandés",
+        "francés",
+        "polaco"
+      ],
       "subheadline": "Tu glucosa en la pantalla de bloqueo, en la muñeca y en el móvil de tu familia — en directo, sin abrir ninguna app.",
       "ctaPrimary": "Únete a la lista de espera",
       "ctaSecondary": "Quiero entrar en la beta",
       "trustNote": "Sin spam. Te avisamos cuando esté lista. Puedes darte de baja cuando quieras.",
-      "screenshotAlt": "Pantalla principal de Dulce con una glucosa de 131 mg/dL en rango, una gráfica de 12 horas y el tiempo en rango, junto a un Apple Watch con la complicación de Dulce"
+      "screenshotAlt": "Pantalla principal de Dulce con una glucosa de 131 mg/dL en rango, una gráfica de 12 horas y el tiempo en rango, junto a un Apple Watch con la complicación de Dulce",
+      "freeNote": "Gratis en el App Store. Requiere iPhone con iOS 17 o superior.",
+      "waitlistLabel": "¿Android o quieres novedades? Déjanos tu correo:"
     },
     "personas": {
       "eyebrow": "¿Para quién es Dulce?",
@@ -107,8 +122,8 @@
       "cta": "Conoce la historia"
     },
     "finalCta": {
-      "title": "Sé de los primeros en enterarte",
-      "subtitle": "Dulce será gratis en el App Store. Las funciones Pro incluyen 14 días de prueba gratuita.",
+      "title": "Descarga Dulce hoy",
+      "subtitle": "Gratis en el App Store. Las funciones Pro incluyen 14 días de prueba gratuita.",
       "ctaWaitlist": "Únete a la lista",
       "ctaBeta": "Quiero ser beta tester"
     },
@@ -200,6 +215,15 @@
     "disclaimer": {
       "title": "Aviso importante",
       "body": "Dulce **no es un dispositivo médico**. No diagnostica, trata, cura ni previene ninguna enfermedad. Las decisiones sobre tu tratamiento deben tomarse siempre con tu equipo médico."
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "q1": "¿Cuánto cuesta Dulce?",
+      "a1": "Dulce es gratis de descargar e incluye lo esencial. Las funciones Pro (Apple Watch, seguimiento familiar y más) incluyen 14 días de prueba gratuita.",
+      "q2": "¿Cómo obtiene Dulce mis datos de glucosa?",
+      "a2": "Dulce se conecta de forma segura con tu cuenta de LibreLinkUp. Introduces tus credenciales una vez y Dulce sincroniza tus lecturas automáticamente, sin escanear el sensor con el teléfono.",
+      "q3": "¿Está Dulce en español?",
+      "a3": "Sí. Dulce está pensado en español primero, hecho por una persona con diabetes tipo 1. También está disponible en inglés."
     }
   },
   "beta": {
@@ -497,6 +521,13 @@
         "title": "Widgets de inicio",
         "body": "Desde un pequeño número en la esquina hasta un gráfico de tendencias de varias horas. Coloca widgets de Dulce junto a tus otras apps para una conciencia constante."
       }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "q1": "¿La Actividad en Vivo agota la batería?",
+      "a1": "No. Dulce actualiza la Actividad en Vivo con notificaciones push ligeras desde nuestro servidor, así que no mantiene el teléfono despierto ni gasta batería.",
+      "q2": "¿Necesito un iPhone 14 Pro para el Dynamic Island?",
+      "a2": "El Dynamic Island requiere iPhone 14 Pro o posterior. Las Actividades en Vivo en la pantalla de bloqueo y el modo En Reposo funcionan en cualquier iPhone con iOS 17 o superior."
     }
   },
   "android": {

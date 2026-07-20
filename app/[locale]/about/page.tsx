@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { Lock, Users, Heart } from "lucide-react";
 import { routing, type AppLocale } from "@/i18n/routing";
-import { Button } from "@/components/ui/Button";
+import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 
 export async function generateMetadata({
   params,
@@ -34,6 +34,7 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
 
 function AboutContent() {
   const t = useTranslations("about");
+  const locale = useLocale() as "es" | "en";
   const paragraphs = t("story.body").split("\n\n");
 
   return (
@@ -89,9 +90,7 @@ function AboutContent() {
       </section>
 
       <div>
-        <Button as="a" href="/#waitlist" size="lg">
-          {useTranslations("nav")("joinWaitlist")}
-        </Button>
+        <AppStoreBadge campaign="web_page" locale={locale} />
       </div>
     </div>
   );

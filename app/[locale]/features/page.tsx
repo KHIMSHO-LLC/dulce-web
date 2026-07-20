@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { Link2, NotebookPen, LineChart, Users, Watch, ShieldCheck } from "lucide-react";
 import { routing, type AppLocale } from "@/i18n/routing";
-import { Button } from "@/components/ui/Button";
+import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
+import { JsonLd } from "@/components/JsonLd";
+import { faqSchema, breadcrumbSchema } from "@/lib/schema";
+import { SITE_URL } from "@/lib/blog";
 import { Link } from "@/i18n/navigation";
 
 export async function generateMetadata({
@@ -70,11 +73,30 @@ export default async function FeaturesPage({
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
 
-  return <FeaturesContent />;
+  const t = await getTranslations({ locale: locale as AppLocale, namespace: "features" });
+  const faq = faqSchema([
+    { question: t("faq.q1"), answer: t("faq.a1") },
+    { question: t("faq.q2"), answer: t("faq.a2") },
+    { question: t("faq.q3"), answer: t("faq.a3") },
+  ]);
+  const base = locale === "es" ? SITE_URL : `${SITE_URL}/en`;
+  const breadcrumbs = breadcrumbSchema([
+    { name: locale === "es" ? "Inicio" : "Home", url: base },
+    { name: locale === "es" ? "Características" : "Features", url: `${base}/features` },
+  ]);
+
+  return (
+    <>
+      <JsonLd data={faq} />
+      <JsonLd data={breadcrumbs} />
+      <FeaturesContent />
+    </>
+  );
 }
 
 function FeaturesContent() {
   const t = useTranslations("features");
+  const locale = useLocale() as "es" | "en";
 
   return (
     <div className="container-page py-16 md:py-24">
@@ -111,10 +133,28 @@ function FeaturesContent() {
         />
       </aside>
 
+      <section className="mt-16 max-w-3xl rounded-[var(--radius-card-xl)] bg-accent-soft/50 border border-accent/10 p-8 md:p-12">
+        <h2 className="text-display tracking-tight font-bold text-foreground mb-8">
+          {t("faq.title")}
+        </h2>
+        <div className="space-y-8">
+          <div>
+            <h4 className="text-headline font-bold text-foreground mb-2">{t("faq.q1")}</h4>
+            <p className="text-body text-muted leading-relaxed">{t("faq.a1")}</p>
+          </div>
+          <div>
+            <h4 className="text-headline font-bold text-foreground mb-2">{t("faq.q2")}</h4>
+            <p className="text-body text-muted leading-relaxed">{t("faq.a2")}</p>
+          </div>
+          <div>
+            <h4 className="text-headline font-bold text-foreground mb-2">{t("faq.q3")}</h4>
+            <p className="text-body text-muted leading-relaxed">{t("faq.a3")}</p>
+          </div>
+        </div>
+      </section>
+
       <div className="mt-12 flex flex-wrap items-center gap-3">
-        <Button as="a" href="/#waitlist" size="lg">
-          {useTranslations("nav")("joinWaitlist")}
-        </Button>
+        <AppStoreBadge campaign="web_page" locale={locale} />
         <Link
           href="/beta"
           className="inline-flex items-center gap-1 px-5 py-3 text-label font-semibold text-accent hover:text-accent-hover"

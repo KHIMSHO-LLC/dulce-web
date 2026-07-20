@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { StickyDownloadBar } from "@/components/StickyDownloadBar";
 import { routing, type AppLocale } from "@/i18n/routing";
 import "../globals.css";
 
@@ -117,7 +118,8 @@ function structuredData(locale: string) {
         name: "Dulce",
         url: "https://dulceglucosa.com",
         email: "hola@dulceglucosa.com",
-        logo: "https://dulceglucosa.com/favicon.ico",
+        // schema.org logos should be a proper raster (≥112px), not the favicon.
+        logo: "https://dulceglucosa.com/dulce-logo.png",
       },
     ],
   };
@@ -136,8 +138,18 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={`${nunito.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+    // suppressHydrationWarning: browser extensions (e.g. tab managers injecting
+    // data-*-tab-id) mutate <html>/<body> before React hydrates. This silences
+    // only attribute mismatches on these two elements, not our own content.
+    <html
+      lang={locale}
+      className={`${nunito.variable} h-full antialiased`}
+      suppressHydrationWarning
+    >
+      <body
+        className="min-h-full flex flex-col bg-background text-foreground"
+        suppressHydrationWarning
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData(locale)) }}
@@ -148,6 +160,7 @@ export default async function LocaleLayout({
             {children}
           </main>
           <Footer />
+          <StickyDownloadBar locale={locale === "es" ? "es" : "en"} />
         </NextIntlClientProvider>
         <Analytics />
         <SpeedInsights />

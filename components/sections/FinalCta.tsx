@@ -1,9 +1,10 @@
-import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/Button";
+import { useLocale, useTranslations } from "next-intl";
+import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { Link } from "@/i18n/navigation";
 
 export function FinalCta() {
   const t = useTranslations("home.finalCta");
+  const locale = useLocale() as "es" | "en";
 
   return (
     <section id="beta-cta" className="container-page py-16 md:py-24">
@@ -23,10 +24,8 @@ export function FinalCta() {
           <p className="mt-4 text-headline text-background/75 max-w-2xl mx-auto leading-snug">
             {t("subtitle")}
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Button as="a" href="#waitlist" size="lg">
-              {t("ctaWaitlist")}
-            </Button>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <AppStoreBadge campaign="web_final" locale={locale} />
             <Link
               href="/beta"
               className="inline-flex items-center gap-1 px-5 py-3 text-label font-semibold text-background/90 hover:text-background transition-colors"

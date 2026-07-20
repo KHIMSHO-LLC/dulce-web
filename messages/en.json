@@ -29,14 +29,29 @@
     "title": "Dulce — Your glucose on your Lock Screen, watch and family's phone",
     "description": "See your CGM glucose everywhere: Lock Screen, Apple Watch, widgets. Alerts and family sharing built in.",
     "hero": {
-      "eyebrow": "Launching soon on the App Store",
+      "eyebrow": "Now on the App Store",
       "headline": "Made by a T1D,",
       "headlineAccent": "for T1Ds who speak Spanish.",
+      "headlineAccentPrefix": "for T1Ds who speak",
+      "headlineAccentSuffix": ".",
+      "languages": [
+        "Spanish",
+        "English",
+        "Georgian",
+        "German",
+        "Portuguese",
+        "Danish",
+        "Dutch",
+        "French",
+        "Polish"
+      ],
       "subheadline": "Your glucose on your Lock Screen, your wrist and your family's phone — live, without opening an app.",
       "ctaPrimary": "Join the waitlist",
       "ctaSecondary": "Apply for the beta",
       "trustNote": "No spam. We'll let you know when it's ready. Unsubscribe anytime.",
-      "screenshotAlt": "Dulce app home screen showing a glucose reading of 131 mg/dL in range, a 12-hour chart and time in range, next to an Apple Watch with the Dulce complication"
+      "screenshotAlt": "Dulce app home screen showing a glucose reading of 131 mg/dL in range, a 12-hour chart and time in range, next to an Apple Watch with the Dulce complication",
+      "freeNote": "Free on the App Store. Requires iPhone with iOS 17 or later.",
+      "waitlistLabel": "On Android or want updates? Leave your email:"
     },
     "personas": {
       "eyebrow": "Who is Dulce for?",
@@ -107,8 +122,8 @@
       "cta": "Read the story"
     },
     "finalCta": {
-      "title": "Be first to know when Dulce lands",
-      "subtitle": "Dulce will be free to download on the App Store. Pro features come with a 14-day free trial.",
+      "title": "Download Dulce today",
+      "subtitle": "Free on the App Store. Pro features come with a 14-day free trial.",
       "ctaWaitlist": "Join the waitlist",
       "ctaBeta": "Apply for the beta"
     },
@@ -200,6 +215,15 @@
     "disclaimer": {
       "title": "Important notice",
       "body": "Dulce **is not a medical device**. It does not diagnose, treat, cure or prevent any disease. Treatment decisions should always be made with your healthcare team."
+    },
+    "faq": {
+      "title": "Common questions",
+      "q1": "How much does Dulce cost?",
+      "a1": "Dulce is free to download and includes the essentials. Pro features (Apple Watch, family sharing and more) come with a 14-day free trial.",
+      "q2": "How does Dulce get my glucose data?",
+      "a2": "Dulce connects securely to your LibreLinkUp account. You enter your credentials once and Dulce syncs your readings automatically — no need to scan the sensor with your phone.",
+      "q3": "Is Dulce available in Spanish?",
+      "a3": "Yes. Dulce is designed Spanish-first, built by someone living with type 1 diabetes. It is also available in English."
     }
   },
   "beta": {
@@ -497,6 +521,13 @@
         "title": "Home Screen Widgets",
         "body": "From a tiny corner number to a large, multi-hour trend graph. Place Dulce widgets alongside your other apps for constant awareness."
       }
+    },
+    "faq": {
+      "title": "Common questions",
+      "q1": "Does the Live Activity drain my battery?",
+      "a1": "No. Dulce updates the Live Activity with lightweight push notifications from our server, so it never keeps your phone awake or drains the battery.",
+      "q2": "Do I need an iPhone 14 Pro for Dynamic Island?",
+      "a2": "Dynamic Island requires iPhone 14 Pro or later. Lock Screen Live Activities and StandBy mode work on any iPhone running iOS 17 or later."
     }
   },
   "android": {

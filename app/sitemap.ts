@@ -1,7 +1,13 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
+import { BLOG_POSTS } from "@/lib/blog";
 
 const SITE_URL = "https://dulceglucosa.com";
+
+/** Real per-post modified dates so Google sees accurate freshness signals. */
+const BLOG_LASTMOD = new Map(
+  BLOG_POSTS.map((p) => [`/blog/${p.slug}` as string, new Date(p.dateModified)]),
+);
 
 type InternalPath = keyof typeof routing.pathnames;
 
@@ -38,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return internalPaths.map((internal) => ({
     url: urlFor("es", internal),
-    lastModified: now,
+    lastModified: BLOG_LASTMOD.get(internal) ?? now,
     changeFrequency: internal.startsWith("/legal/") ? "yearly" : "weekly",
     priority: internal === "/" ? 1 : 0.7,
     alternates: {

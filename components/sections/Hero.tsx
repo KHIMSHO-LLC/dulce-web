@@ -1,13 +1,18 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
+import { DownloadQr } from "@/components/ui/DownloadQr";
 import { WaitlistForm } from "@/components/forms/WaitlistForm";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/Reveal";
+import { RotatingWord } from "@/components/RotatingWord";
 
 import shotHome from "@/public/screenshots/home.png";
 
 export function Hero() {
   const t = useTranslations("home.hero");
+  const locale = useLocale() as "es" | "en";
+  const languages = t.raw("languages") as string[];
 
   return (
     <section className="relative overflow-hidden">
@@ -32,7 +37,11 @@ export function Hero() {
               <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.75rem] leading-[1.05] font-bold tracking-tight text-foreground">
                 {t("headline")}
                 <br />
-                <span className="text-accent">{t("headlineAccent")}</span>
+                <span className="text-accent">
+                  {t("headlineAccentPrefix")}{" "}
+                  <RotatingWord words={languages} />
+                  {t("headlineAccentSuffix")}
+                </span>
               </h1>
             </Reveal>
             <Reveal delay={160}>
@@ -42,18 +51,22 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={240}>
-              <div id="waitlist" className="max-w-md scroll-mt-24">
+              {/* Primary CTA: install now. The app is live and free, so download
+                  is the goal — the QR handles desktop-to-phone hand-off. */}
+              <div className="flex md:hidden">
+                <AppStoreBadge campaign="web_hero" locale={locale} />
+              </div>
+              <DownloadQr locale={locale} />
+
+              <div className="mt-3 flex flex-wrap items-center gap-3 text-caption text-muted">
+                <span>{t("freeNote")}</span>
+              </div>
+
+              {/* Secondary capture: Android isn't out yet, so let those visitors
+                  leave an email. Anchor id preserved for existing #waitlist links. */}
+              <div id="waitlist" className="mt-6 max-w-md scroll-mt-24 rounded-[var(--radius-card)] border border-border-subtle bg-card/60 p-4">
+                <p className="mb-2 text-caption font-semibold text-muted">{t("waitlistLabel")}</p>
                 <WaitlistForm source="hero" />
-              </div>
-
-              <div className="mt-4 flex flex-wrap items-center gap-3 text-caption text-muted">
-                <span>{t("trustNote")}</span>
-              </div>
-
-              <div className="pt-2">
-                <Button as="a" href="#beta-cta" variant="ghost" size="sm">
-                  {t("ctaSecondary")} →
-                </Button>
               </div>
             </Reveal>
           </div>

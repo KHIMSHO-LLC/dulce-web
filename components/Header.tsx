@@ -1,16 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Menu, X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "./Logo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { Button } from "./ui/Button";
+import { AppStoreBadge } from "./ui/AppStoreBadge";
 import { cn } from "@/lib/utils/cn";
 
 export function Header() {
   const t = useTranslations("nav");
+  const locale = useLocale() as "es" | "en";
   const [open, setOpen] = useState(false);
 
   const navItems = [
@@ -43,9 +44,7 @@ export function Header() {
         </nav>
         <div className="hidden md:flex items-center gap-3">
           <LanguageSwitcher />
-          <Button as="a" href="#waitlist" size="sm">
-            {t("joinWaitlist")}
-          </Button>
+          <AppStoreBadge campaign="web_header" locale={locale} className="scale-90 origin-right" />
         </div>
         <button
           type="button"
@@ -78,9 +77,9 @@ export function Header() {
           ))}
           <div className="flex items-center justify-between gap-3 pt-3 mt-2 border-t border-border-subtle">
             <LanguageSwitcher />
-            <Button as="a" href="#waitlist" size="sm" onClick={() => setOpen(false)}>
-              {t("joinWaitlist")}
-            </Button>
+            <div onClick={() => setOpen(false)}>
+              <AppStoreBadge campaign="web_header" locale={locale} />
+            </div>
           </div>
         </div>
       </div>

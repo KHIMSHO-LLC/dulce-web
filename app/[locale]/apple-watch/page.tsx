@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { Watch, Wifi, Zap } from "lucide-react";
 import { routing, type AppLocale } from "@/i18n/routing";
-import { Button } from "@/components/ui/Button";
+import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
+import { JsonLd } from "@/components/JsonLd";
+import { faqSchema, breadcrumbSchema } from "@/lib/schema";
+import { SITE_URL } from "@/lib/blog";
 
 export async function generateMetadata({
   params,
@@ -22,11 +25,31 @@ export default async function AppleWatchPage({ params }: PageProps<"/[locale]/ap
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
-  return <AppleWatchContent />;
+
+  // FAQPage schema must mirror the visible Q&A below — read the same strings.
+  const t = await getTranslations({ locale: locale as AppLocale, namespace: "appleWatch" });
+  const faq = faqSchema([
+    { question: t("faq.q1"), answer: t("faq.a1") },
+    { question: t("faq.q2"), answer: t("faq.a2") },
+  ]);
+  const base = locale === "es" ? SITE_URL : `${SITE_URL}/en`;
+  const breadcrumbs = breadcrumbSchema([
+    { name: locale === "es" ? "Inicio" : "Home", url: base },
+    { name: "Apple Watch", url: `${base}/apple-watch` },
+  ]);
+
+  return (
+    <>
+      <JsonLd data={faq} />
+      <JsonLd data={breadcrumbs} />
+      <AppleWatchContent />
+    </>
+  );
 }
 
 function AppleWatchContent() {
   const t = useTranslations("appleWatch");
+  const locale = useLocale() as "es" | "en";
 
   return (
     <div className="container-page py-16 md:py-24 space-y-24">
@@ -42,9 +65,7 @@ function AppleWatchContent() {
           {t("hero.subheadline")}
         </p>
         <div className="pt-4 flex justify-center gap-4">
-          <Button as="a" href="/#waitlist" size="lg">
-            {useTranslations("nav")("joinWaitlist")}
-          </Button>
+          <AppStoreBadge campaign="web_page" locale={locale} />
         </div>
       </header>
 
@@ -120,9 +141,9 @@ function AppleWatchContent() {
         <p className="text-headline text-muted mb-8">
           {t("cta.subtitle")}
         </p>
-        <Button as="a" href="/#waitlist" size="lg">
-          {useTranslations("nav")("joinWaitlist")}
-        </Button>
+        <div className="flex justify-center">
+          <AppStoreBadge campaign="web_page" locale={locale} />
+        </div>
       </section>
     </div>
   );

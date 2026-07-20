@@ -3,7 +3,11 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing, type AppLocale } from "@/i18n/routing";
-import { Button } from "@/components/ui/Button";
+import { ArticleSchema } from "@/components/ArticleSchema";
+import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
+import { getPost, formatBlogDate } from "@/lib/blog";
+
+const SLUG = "sharing-cgm-glucose-with-family" as const;
 
 export async function generateMetadata({
   params,
@@ -27,22 +31,22 @@ export default async function BlogPostPage({ params }: PageProps<"/[locale]/blog
 
 function ArticleContent({ locale }: { locale: AppLocale }) {
   const isEs = locale === "es";
+  const post = getPost(SLUG);
 
   return (
     <article className="container-page py-16 md:py-24 max-w-3xl">
+      <ArticleSchema slug={SLUG} locale={locale} />
       <header className="mb-12">
         <p className="text-caption font-semibold uppercase tracking-wider text-accent mb-4">
-          Family · Oct 05, 2026
+          {post.tag[locale]} · {formatBlogDate(post.datePublished, locale)}
         </p>
         <h1 className="text-display md:text-display-lg tracking-tight font-bold text-foreground leading-tight mb-6">
-          {isEs 
-            ? "Compartir tu CGM con la familia sin la infame 'fatiga de alarmas'" 
-            : "Sharing your CGM with family without the dreaded 'alert fatigue'"}
+          {post.title[locale]}
         </h1>
         <div className="flex items-center gap-3 text-label text-muted">
-          <span>By Giorgio</span>
+          <span>{isEs ? "Por" : "By"} Giorgio</span>
           <span>·</span>
-          <span>6 min read</span>
+          <span>{post.readingMinutes} {isEs ? "min de lectura" : "min read"}</span>
         </div>
       </header>
 
@@ -157,9 +161,9 @@ function ArticleContent({ locale }: { locale: AppLocale }) {
         <p className="text-body text-muted mb-8 max-w-lg mx-auto">
           {isEs ? "Usa Dulce para mantener a tu familia informada sin la ansiedad constante." : "Use Dulce to keep your family in the loop without the constant anxiety."}
         </p>
-        <Button as="a" href="/#waitlist" size="lg">
-          {isEs ? "Únete a Dulce" : "Join Dulce"}
-        </Button>
+        <div className="flex justify-center">
+          <AppStoreBadge campaign="web_page" locale={locale} />
+        </div>
       </div>
     </article>
   );

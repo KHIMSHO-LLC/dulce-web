@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { Smartphone, Moon, LayoutTemplate } from "lucide-react";
 import { routing, type AppLocale } from "@/i18n/routing";
-import { Button } from "@/components/ui/Button";
+import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
+import { JsonLd } from "@/components/JsonLd";
+import { faqSchema, breadcrumbSchema } from "@/lib/schema";
+import { SITE_URL } from "@/lib/blog";
 
 export async function generateMetadata({
   params,
@@ -22,10 +25,29 @@ export default async function LockScreenPage({ params }: PageProps<"/[locale]/lo
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
-  return <LockScreenContent />;
+
+  const t = await getTranslations({ locale: locale as AppLocale, namespace: "lockScreen" });
+  const faq = faqSchema([
+    { question: t("faq.q1"), answer: t("faq.a1") },
+    { question: t("faq.q2"), answer: t("faq.a2") },
+  ]);
+  const base = locale === "es" ? SITE_URL : `${SITE_URL}/en`;
+  const breadcrumbs = breadcrumbSchema([
+    { name: locale === "es" ? "Inicio" : "Home", url: base },
+    { name: locale === "es" ? "Pantalla de bloqueo" : "Lock Screen", url: `${base}/lock-screen` },
+  ]);
+
+  return (
+    <>
+      <JsonLd data={faq} />
+      <JsonLd data={breadcrumbs} />
+      <LockScreenContent />
+    </>
+  );
 }
 
 function LockScreenContent() {
+  const locale = useLocale() as "es" | "en";
   const t = useTranslations("lockScreen");
 
   return (
@@ -42,9 +64,7 @@ function LockScreenContent() {
           {t("hero.subheadline")}
         </p>
         <div className="pt-4 flex justify-center gap-4">
-          <Button as="a" href="/#waitlist" size="lg">
-            {useTranslations("nav")("joinWaitlist")}
-          </Button>
+          <AppStoreBadge campaign="web_page" locale={locale} />
         </div>
       </header>
 
@@ -87,14 +107,31 @@ function LockScreenContent() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="max-w-3xl mx-auto rounded-[var(--radius-card-xl)] bg-accent-soft/50 border border-accent/10 p-8 md:p-12">
+        <h2 className="text-display tracking-tight font-bold text-foreground mb-8 text-center">
+          {t("faq.title")}
+        </h2>
+        <div className="space-y-8">
+          <div>
+            <h4 className="text-headline font-bold text-foreground mb-2">{t("faq.q1")}</h4>
+            <p className="text-body text-muted leading-relaxed">{t("faq.a1")}</p>
+          </div>
+          <div>
+            <h4 className="text-headline font-bold text-foreground mb-2">{t("faq.q2")}</h4>
+            <p className="text-body text-muted leading-relaxed">{t("faq.a2")}</p>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="text-center pb-12">
         <h2 className="text-display tracking-tight font-bold text-foreground mb-4">
-          Ready for less friction?
+          {locale === "es" ? "¿Listo para menos fricción?" : "Ready for less friction?"}
         </h2>
-        <Button as="a" href="/#waitlist" size="lg">
-          {useTranslations("nav")("joinWaitlist")}
-        </Button>
+        <div className="flex justify-center">
+          <AppStoreBadge campaign="web_page" locale={locale} />
+        </div>
       </section>
     </div>
   );
