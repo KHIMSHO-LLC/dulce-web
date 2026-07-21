@@ -570,7 +570,7 @@
       },
       "alerts": {
         "title": "Avisos que sí les llegan",
-        "body": "Tus seguidores reciben sus propias alertas de glucosa baja y alta en el móvil y en el Apple Watch, para que un padre sepa que su peque está bajando antes que el propio peque. Cada seguidor ajusta sus umbrales."
+        "body": "Tus seguidores reciben avisos de glucosa baja y alta en su móvil, para que un padre sepa que su peque está bajando antes que el propio peque. Los avisos usan tus umbrales, y cada seguidor puede desactivarlos o poner sus propias horas de silencio. Una bajada grave siempre suena."
       },
       "control": {
         "title": "Tú mandas",
