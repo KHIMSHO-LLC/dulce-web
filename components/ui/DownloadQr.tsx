@@ -11,7 +11,7 @@ type Props = {
  * Hidden on small screens where the badge alone is enough.
  */
 export function DownloadQr({ locale, className }: Props) {
-  const caption = locale === "es" ? "Escanéalo para descargar" : "Scan to download";
+  const caption = locale === "es" ? "Escanéalo para descargar en tu iPhone" : "Scan to download on your iPhone";
 
   return (
     <div className={`hidden md:flex items-center gap-4 ${className ?? ""}`}>

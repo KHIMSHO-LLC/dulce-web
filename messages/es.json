@@ -30,7 +30,7 @@
     "title": "Glucosa Libre en Apple Watch y pantalla de bloqueo",
     "description": "Dulce se conecta con LibreLinkUp y lleva tu glucosa de FreeStyle Libre 3 al Apple Watch, la pantalla de bloqueo, la Live Activity y la Dynamic Island.",
     "hero": {
-      "eyebrow": "Ya disponible en el App Store",
+      "eyebrow": "Ya disponible en iOS",
       "headline": "Hecho por un T1D,",
       "headlineAccent": "para T1Ds que hablan español.",
       "headlineAccentPrefix": "para T1Ds que hablan",
@@ -123,7 +123,7 @@
       "cta": "Conoce la historia"
     },
     "finalCta": {
-      "title": "Descarga Dulce hoy",
+      "title": "Empieza hoy en tu iPhone",
       "subtitle": "Gratis en el App Store. Las funciones Pro incluyen 14 días de prueba gratuita.",
       "ctaWaitlist": "Únete a la lista",
       "ctaBeta": "Quiero ser beta tester"
