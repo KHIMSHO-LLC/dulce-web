@@ -51,6 +51,10 @@ export const routing = defineRouting({
       es: "/pantalla-de-bloqueo",
       en: "/lock-screen",
     },
+    "/family-sharing": {
+      es: "/compartir-en-familia",
+      en: "/family-sharing",
+    },
     "/android": "/android",
     "/blog": "/blog",
     "/blog/how-to-see-cgm-glucose-on-apple-watch": {

@@ -1,9 +1,9 @@
 {
   "metadata": {
     "siteName": "Dulce",
-    "defaultTitle": "Dulce — Tu glucosa en la pantalla de bloqueo, el reloj y el móvil de tu familia",
-    "defaultDescription": "Dulce muestra tu glucosa de CGM en la pantalla de bloqueo del iPhone, en el Apple Watch y en widgets — con alertas y seguimiento familiar. Hecha por un T1D, en español.",
-    "keywords": "app diabetes tipo 1, glucosa Apple Watch, glucosa pantalla de bloqueo, app CGM, widget glucosa iPhone, app CGM español, tiempo en rango, diario diabetes"
+    "defaultTitle": "Dulce — Glucosa Libre en Apple Watch y pantalla de bloqueo",
+    "defaultDescription": "Mira tu glucosa de FreeStyle Libre en Apple Watch, pantalla de bloqueo y Dynamic Island. Dulce se conecta con LibreLinkUp: alertas y seguimiento familiar.",
+    "keywords": "ver glucosa Libre 3 en Apple Watch, app para ver LibreLinkUp en Apple Watch, widget de glucosa pantalla de bloqueo iPhone, rastreador de glucosa diabetes tipo 1, monitoreo de glucosa en tiempo real Dynamic Island, glucosa en tiempo real iPhone, app CGM español, tiempo en rango, diario diabetes"
   },
   "nav": {
     "home": "Inicio",
@@ -18,7 +18,8 @@
     "appleWatch": "Apple Watch",
     "lockScreen": "Pantalla de bloqueo",
     "blog": "Blog",
-    "android": "Android"
+    "android": "Android",
+    "familySharing": "En familia"
   },
   "languageSwitcher": {
     "label": "Idioma",
@@ -26,8 +27,8 @@
     "en": "Inglés"
   },
   "home": {
-    "title": "Dulce — Tu glucosa en la pantalla de bloqueo, el reloj y el móvil de tu familia",
-    "description": "Tu glucosa de CGM en todas partes: pantalla de bloqueo, Apple Watch, widgets. Con alertas y seguimiento familiar.",
+    "title": "Glucosa Libre en Apple Watch y pantalla de bloqueo",
+    "description": "Dulce se conecta con LibreLinkUp y lleva tu glucosa de FreeStyle Libre 3 al Apple Watch, la pantalla de bloqueo, la Live Activity y la Dynamic Island.",
     "hero": {
       "eyebrow": "Ya disponible en el App Store",
       "headline": "Hecho por un T1D,",
@@ -146,8 +147,8 @@
     }
   },
   "features": {
-    "title": "Características",
-    "description": "Todo lo que Dulce hace por ti, sin entrar en datos médicos sensibles.",
+    "title": "Características — CGM en iPhone y Apple Watch",
+    "description": "Todo lo que hace Dulce: sincronización con LibreLinkUp, Live Activity en la pantalla de bloqueo, Apple Watch, alertas, tiempo en rango y seguimiento familiar.",
     "intro": {
       "headline": "Lo justo, bien hecho.",
       "subheadline": "Dulce no intenta sustituir a tu endocrino ni a tu CGM. Lo que hace, lo hace bien."
@@ -407,7 +408,8 @@
         "features": "Características",
         "appleWatch": "Apple Watch",
         "lockScreen": "Pantalla de bloqueo",
-        "android": "Android (Pronto)"
+        "android": "Android (Pronto)",
+        "familySharing": "Seguimiento familiar"
       },
       "company": {
         "title": "Empresa",
@@ -469,11 +471,11 @@
     "noCode": "No se encontró ningún código en este enlace. Pide una invitación nueva."
   },
   "appleWatch": {
-    "title": "Dulce para Apple Watch",
-    "description": "Revisa tu glucosa de CGM directamente desde tu muñeca. Complicaciones independientes y app nativa para FreeStyle Libre y Dexcom.",
+    "title": "Ver glucosa Libre 3 en Apple Watch — app LibreLinkUp",
+    "description": "Cómo ver tu glucosa de FreeStyle Libre 3 en el Apple Watch. Dulce es una app para ver LibreLinkUp en Apple Watch: complicaciones, gráficas y alertas hápticas.",
     "hero": {
-      "headline": "Tu glucosa, en tu muñeca.",
-      "subheadline": "Una app nativa para Apple Watch diseñada específicamente para la diabetes. Actualiza tu glucosa en tiempo real, incluso si tu teléfono está en tu bolsillo. Porque vivir con DM1 ya es bastante difícil sin tener que sacar el teléfono 40 veces al día."
+      "headline": "Tu glucosa de FreeStyle Libre, en tu muñeca.",
+      "subheadline": "Una app nativa para Apple Watch pensada para la diabetes tipo 1: lee tu cuenta de LibreLinkUp y actualiza tu glucosa en tiempo real, incluso con el teléfono en el bolsillo. Porque vivir con DM1 ya es bastante difícil sin sacar el móvil 40 veces al día."
     },
     "features": {
       "standalone": {
@@ -494,7 +496,9 @@
       "q1": "¿Funciona sin mi iPhone?",
       "a1": "Sí, si tu Apple Watch tiene una conexión a internet activa (Wi-Fi o Celular), Dulce puede obtener lecturas de forma independiente desde la nube de tu proveedor de CGM.",
       "q2": "¿Hay algún retraso?",
-      "a2": "Sincronizamos minuto a minuto con los servidores de LibreLinkUp y Dexcom Share. Es tan rápido como las apps oficiales, pero presentado mucho mejor."
+      "a2": "Sincronizamos minuto a minuto con los servidores de LibreLinkUp y Dexcom Share. Es tan rápido como las apps oficiales, pero presentado mucho mejor.",
+      "q3": "¿Funciona con FreeStyle Libre 2 y Libre 3?",
+      "a3": "Sí. Inicia sesión con tu cuenta de LibreLinkUp y tus lecturas de FreeStyle Libre 2 o Libre 3 aparecen en la esfera del reloj, sin escanear el sensor con el reloj. Dulce es una app independiente y no está afiliada ni respaldada por Abbott."
     },
     "cta": {
       "title": "¿Listo para mejorar tu reloj?",
@@ -502,11 +506,11 @@
     }
   },
   "lockScreen": {
-    "title": "Widgets de glucosa para pantalla de bloqueo",
-    "description": "Mantén tu glucosa visible en todo momento con Actividades en Vivo, modo En Reposo (StandBy) y widgets de Dynamic Island.",
+    "title": "Widget de glucosa en la pantalla de bloqueo del iPhone",
+    "description": "Lleva tu glucosa de FreeStyle Libre a la pantalla de bloqueo y la Dynamic Island del iPhone. Live Activity, modo En Reposo y widgets siempre a la vista.",
     "hero": {
-      "headline": "Solo necesitas un vistazo.",
-      "subheadline": "Los días de desbloquear el teléfono, buscar una app y esperar a que cargue solo para ver tu glucosa han terminado. Dulce pone tu número directamente en tu pantalla de bloqueo, Dynamic Island y modo En Reposo."
+      "headline": "Tu glucosa en la pantalla de bloqueo.",
+      "subheadline": "Solo necesitas un vistazo. Se acabó desbloquear el teléfono, buscar una app y esperar a que cargue solo para ver tu glucosa: Dulce pone tu número en la pantalla de bloqueo, la Dynamic Island y el modo En Reposo."
     },
     "features": {
       "liveActivity": {
@@ -527,7 +531,9 @@
       "q1": "¿La Actividad en Vivo agota la batería?",
       "a1": "No. Dulce actualiza la Actividad en Vivo con notificaciones push ligeras desde nuestro servidor, así que no mantiene el teléfono despierto ni gasta batería.",
       "q2": "¿Necesito un iPhone 14 Pro para el Dynamic Island?",
-      "a2": "El Dynamic Island requiere iPhone 14 Pro o posterior. Las Actividades en Vivo en la pantalla de bloqueo y el modo En Reposo funcionan en cualquier iPhone con iOS 17 o superior."
+      "a2": "El Dynamic Island requiere iPhone 14 Pro o posterior. Las Actividades en Vivo en la pantalla de bloqueo y el modo En Reposo funcionan en cualquier iPhone con iOS 17 o superior.",
+      "q3": "¿El widget funciona con FreeStyle Libre?",
+      "a3": "Sí. Dulce lee tus datos de FreeStyle Libre 2 o Libre 3 a través de tu cuenta de LibreLinkUp y los envía cada minuto a la Live Activity de la pantalla de bloqueo, la Dynamic Island y tus widgets. Dulce es una app independiente y no está afiliada ni respaldada por Abbott."
     }
   },
   "android": {
@@ -548,6 +554,41 @@
     "index": {
       "headline": "Recursos y Actualizaciones",
       "subheadline": "Reflexiones sobre el manejo de la diabetes, actualizaciones de la app y cómo aprovechar al máximo los datos de tu CGM."
+    }
+  },
+  "familySharing": {
+    "title": "Rastreador de glucosa para diabetes tipo 1 en familia",
+    "description": "Deja que tu familia siga tu glucosa en tiempo real. Dulce comparte tus lecturas de FreeStyle Libre por enlace, con alertas de glucosa baja y alta. Revoca cuando quieras.",
+    "hero": {
+      "headline": "Deja que tu familia siga tu glucosa.",
+      "subheadline": "Dulce convierte la llamada de las 3 de la mañana en un vistazo. Invita por enlace a quien tú quieras y verán tu glucosa en directo en su móvil, su reloj y su pantalla de bloqueo, con avisos cuando algo no va bien."
+    },
+    "features": {
+      "invite": {
+        "title": "Invita con un enlace",
+        "body": "Sin crear cuentas ni pelearte con formularios. Mandas un enlace, instalan Dulce y ya están siguiendo tu glucosa en tiempo real. Vale para tu pareja, tu madre o para quien contesta a las 3 de la mañana."
+      },
+      "alerts": {
+        "title": "Avisos que sí les llegan",
+        "body": "Tus seguidores reciben sus propias alertas de glucosa baja y alta en el móvil y en el Apple Watch, para que un padre sepa que su peque está bajando antes que el propio peque. Cada seguidor ajusta sus umbrales."
+      },
+      "control": {
+        "title": "Tú mandas",
+        "body": "Tú eliges quién te sigue y puedes revocar el acceso con un toque cuando quieras. Tus seguidores pueden mandarte un ánimo y respondes «Estoy bien» sin coger el teléfono."
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "q1": "¿Cuánta gente puede seguir mi glucosa?",
+      "a1": "Invita a quien necesites: pareja, padres, hermanos o tu endocrino. Cada seguidor tiene sus propias alertas y puedes quitar a cada uno por separado.",
+      "q2": "¿Mis seguidores necesitan su propio CGM?",
+      "a2": "No. Solo necesitan un iPhone y la app gratuita de Dulce. No hace falta sensor, ni cuenta de LibreLinkUp, ni nada de Abbott: basta con abrir el enlace que les envíes.",
+      "q3": "¿Puedo dejar de compartir mi glucosa?",
+      "a3": "Sí, cuando quieras. Quitar a un seguidor es un toque y tiene efecto inmediato: dejan de recibir tus lecturas y tus avisos al instante. Nada se comparte sin una invitación tuya."
+    },
+    "cta": {
+      "title": "Deja de mandar mensajes de «estoy bien».",
+      "subtitle": "Gratis en el App Store. El seguimiento familiar incluye 14 días de prueba."
     }
   }
 }

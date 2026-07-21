@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/legal/cookies",
     "/apple-watch",
     "/lock-screen",
+    "/family-sharing",
     "/android",
     "/blog",
     "/blog/how-to-see-cgm-glucose-on-apple-watch",

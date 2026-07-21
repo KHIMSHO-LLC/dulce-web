@@ -13,6 +13,7 @@ export function Footer() {
         { href: "/features" as const, label: t("sections.product.features") },
         { href: "/apple-watch" as const, label: t("sections.product.appleWatch") },
         { href: "/lock-screen" as const, label: t("sections.product.lockScreen") },
+        { href: "/family-sharing" as const, label: t("sections.product.familySharing") },
         { href: "/android" as const, label: t("sections.product.android") },
       ],
     },

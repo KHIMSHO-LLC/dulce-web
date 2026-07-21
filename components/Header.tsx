@@ -17,6 +17,7 @@ export function Header() {
   const navItems = [
     { href: "/apple-watch" as const, label: t("appleWatch") },
     { href: "/lock-screen" as const, label: t("lockScreen") },
+    { href: "/family-sharing" as const, label: t("familySharing") },
     { href: "/features" as const, label: t("features") },
     { href: "/blog" as const, label: t("blog") },
   ];

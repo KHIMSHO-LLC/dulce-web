@@ -30,6 +30,7 @@ export default async function LockScreenPage({ params }: PageProps<"/[locale]/lo
   const faq = faqSchema([
     { question: t("faq.q1"), answer: t("faq.a1") },
     { question: t("faq.q2"), answer: t("faq.a2") },
+    { question: t("faq.q3"), answer: t("faq.a3") },
   ]);
   const base = locale === "es" ? SITE_URL : `${SITE_URL}/en`;
   const breadcrumbs = breadcrumbSchema([
@@ -120,6 +121,10 @@ function LockScreenContent() {
           <div>
             <h4 className="text-headline font-bold text-foreground mb-2">{t("faq.q2")}</h4>
             <p className="text-body text-muted leading-relaxed">{t("faq.a2")}</p>
+          </div>
+          <div>
+            <h4 className="text-headline font-bold text-foreground mb-2">{t("faq.q3")}</h4>
+            <p className="text-body text-muted leading-relaxed">{t("faq.a3")}</p>
           </div>
         </div>
       </section>
