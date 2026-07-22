@@ -58,7 +58,7 @@ export async function sendContactMessage(
   const { name, email, subject, message } = parsed.data;
 
   try {
-    // 1. Forward the message internally to hello@dulceglucosa.com
+    // 1. Forward the message internally to hola@dulceglucosa.com
     await client.emails.send({
       from: env.resend.from(),
       to: "hola@dulceglucosa.com",
