@@ -18,7 +18,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Panel de partners · Dulce",
+  title: "Partners dashboard · Dulce",
   // Internal-only page — never indexed, never followed. app/robots.ts also
   // disallows /partners explicitly as a second line of defense.
   robots: { index: false, follow: false, nocache: true },

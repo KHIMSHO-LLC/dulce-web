@@ -54,7 +54,7 @@ export default function PartnersDashboardPage() {
     setAdminKey(null);
     setCodes([]);
     setOfferings(null);
-    setLoginError("La clave ya no es válida. Vuelve a iniciar sesión.");
+    setLoginError("The key is no longer valid. Log in again.");
   }, []);
 
   const loadAll = useCallback(
@@ -73,7 +73,7 @@ export default function PartnersDashboardPage() {
           handleUnauthorized();
           return;
         }
-        setError(err instanceof Error ? err.message : "Error desconocido al cargar los datos.");
+        setError(err instanceof Error ? err.message : "Unknown error while loading data.");
       } finally {
         setLoading(false);
       }
@@ -96,7 +96,7 @@ export default function PartnersDashboardPage() {
     setLoginError(null);
     const trimmed = keyInput.trim();
     if (!trimmed) {
-      setLoginError("Introduce la clave de administrador.");
+      setLoginError("Enter the admin key.");
       return;
     }
     setLoggingIn(true);
@@ -121,7 +121,7 @@ export default function PartnersDashboardPage() {
         handleUnauthorized();
         return;
       }
-      setError(err instanceof Error ? err.message : "Error desconocido.");
+      setError(err instanceof Error ? err.message : "Unknown error.");
     }
   }
 
@@ -172,11 +172,11 @@ export default function PartnersDashboardPage() {
           onSubmit={handleLogin}
           className="w-full max-w-sm bg-card rounded-[var(--radius-card-lg)] border border-border-subtle shadow-[var(--shadow-card-rest)] p-8"
         >
-          <h1 className="text-headline font-bold text-foreground">Panel de partners</h1>
-          <p className="mt-1 text-label text-muted">Acceso interno — introduce la clave de administrador.</p>
+          <h1 className="text-headline font-bold text-foreground">Partners dashboard</h1>
+          <p className="mt-1 text-label text-muted">Internal access — enter the admin key.</p>
 
           <label htmlFor="admin-key" className="sr-only">
-            Clave de administrador
+            Admin key
           </label>
           <input
             id="admin-key"
@@ -184,7 +184,7 @@ export default function PartnersDashboardPage() {
             autoComplete="off"
             value={keyInput}
             onChange={(e) => setKeyInput(e.target.value)}
-            placeholder="Clave de administrador"
+            placeholder="Admin key"
             className="mt-6 w-full h-12 px-4 rounded-[var(--radius-button)] border border-border-subtle bg-background text-foreground"
           />
 
@@ -195,7 +195,7 @@ export default function PartnersDashboardPage() {
             disabled={loggingIn}
             className="mt-4 w-full h-12 rounded-[var(--radius-button)] bg-accent text-white font-semibold hover:bg-accent-hover disabled:opacity-50 transition-colors"
           >
-            Entrar
+            Log in
           </button>
         </form>
       </div>
@@ -207,9 +207,9 @@ export default function PartnersDashboardPage() {
       <div className="container-page py-10">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
-            <h1 className="text-display font-bold tracking-tight text-foreground">Panel de partners</h1>
+            <h1 className="text-display font-bold tracking-tight text-foreground">Partners dashboard</h1>
             <p className="mt-1 text-label text-muted">
-              Códigos de referido, claims, conversiones y pagos pendientes.
+              Referral codes, claims, conversions and pending payouts.
             </p>
           </div>
           <div className="flex items-center gap-3">
@@ -219,14 +219,14 @@ export default function PartnersDashboardPage() {
               disabled={loading}
               className="h-10 px-4 rounded-[var(--radius-button-sm)] border border-border-subtle bg-card text-foreground font-semibold hover:bg-accent-soft disabled:opacity-50 transition-colors"
             >
-              {loading ? "Actualizando…" : "Actualizar"}
+              {loading ? "Refreshing…" : "Refresh"}
             </button>
             <button
               type="button"
               onClick={handleLogout}
               className="h-10 px-4 rounded-[var(--radius-button-sm)] border border-border-subtle bg-card text-foreground font-semibold hover:bg-accent-soft transition-colors"
             >
-              Cerrar sesión
+              Log out
             </button>
           </div>
         </div>

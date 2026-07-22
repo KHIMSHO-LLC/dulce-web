@@ -12,9 +12,9 @@ type Props = {
 const CODE_PATTERN = /^[A-Z0-9]{2,20}$/;
 
 const PAYOUT_LABELS: Record<PayoutType, string> = {
-  per_paying: "Por usuario de pago (€ por conversión)",
-  per_retained: "Por usuario retenido (€ por 1er mes renovado)",
-  percent: "Porcentaje (solo nota, sin cálculo automático)",
+  per_paying: "Per paying user (€ per conversion)",
+  per_retained: "Per retained user (€ per 1st renewed month)",
+  percent: "Percent (note only, no automatic calculation)",
 };
 
 /** "Add code" form — code is uppercased as the user types it. */
@@ -34,16 +34,16 @@ export function AddCodeForm({ offerings, onCreate }: Props) {
     setFormError(null);
 
     if (!codeValid) {
-      setFormError("El código debe tener 2-20 caracteres (A-Z, 0-9).");
+      setFormError("Code must be 2-20 characters (A-Z, 0-9).");
       return;
     }
     if (!offeringId.trim()) {
-      setFormError("Indica un offering.");
+      setFormError("Enter an offering.");
       return;
     }
     const parsedAmount = Number(amount);
     if (payoutType !== "percent" && (!Number.isFinite(parsedAmount) || parsedAmount <= 0)) {
-      setFormError("Indica un importe válido.");
+      setFormError("Enter a valid amount.");
       return;
     }
 
@@ -60,7 +60,7 @@ export function AddCodeForm({ offerings, onCreate }: Props) {
       setAmount("2");
       setNote("");
     } catch (err) {
-      setFormError(err instanceof Error ? err.message : "No se pudo crear el código.");
+      setFormError(err instanceof Error ? err.message : "Could not create the code.");
     } finally {
       setSubmitting(false);
     }
@@ -73,7 +73,7 @@ export function AddCodeForm({ offerings, onCreate }: Props) {
     >
       <div className="flex flex-col gap-1 lg:col-span-1">
         <label htmlFor="new-code" className="text-caption font-semibold text-muted">
-          Código
+          Code
         </label>
         <input
           id="new-code"
@@ -116,7 +116,7 @@ export function AddCodeForm({ offerings, onCreate }: Props) {
 
       <div className="flex flex-col gap-1 lg:col-span-2">
         <label htmlFor="new-payout-type" className="text-caption font-semibold text-muted">
-          Regla de pago
+          Payout rule
         </label>
         <select
           id="new-payout-type"
@@ -134,7 +134,7 @@ export function AddCodeForm({ offerings, onCreate }: Props) {
 
       <div className="flex flex-col gap-1 lg:col-span-1">
         <label htmlFor="new-amount" className="text-caption font-semibold text-muted">
-          {payoutType === "percent" ? "% (nota)" : "€ / evento"}
+          {payoutType === "percent" ? "% (note)" : "€ / event"}
         </label>
         <input
           id="new-amount"
@@ -149,13 +149,13 @@ export function AddCodeForm({ offerings, onCreate }: Props) {
 
       <div className="flex flex-col gap-1 sm:col-span-2 lg:col-span-5">
         <label htmlFor="new-note" className="text-caption font-semibold text-muted">
-          Nota (opcional)
+          Note (optional)
         </label>
         <input
           id="new-note"
           value={note}
           onChange={(e) => setNote(e.target.value)}
-          placeholder="p. ej. 10% de por vida, acordado por email"
+          placeholder="e.g. 10% lifetime, agreed by email"
           className="h-10 px-3 rounded-[var(--radius-button-sm)] border border-border-subtle bg-background text-foreground"
         />
       </div>
@@ -166,7 +166,7 @@ export function AddCodeForm({ offerings, onCreate }: Props) {
           disabled={submitting}
           className="w-full h-10 rounded-[var(--radius-button-sm)] bg-accent text-white font-semibold hover:bg-accent-hover disabled:opacity-50 transition-colors"
         >
-          {submitting ? "Creando…" : "Añadir código"}
+          {submitting ? "Creating…" : "Add code"}
         </button>
       </div>
 

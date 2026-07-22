@@ -69,7 +69,7 @@ export type CodePatch = Partial<{
 /** Thrown for a 401 specifically, so the caller can bounce back to login. */
 export class UnauthorizedError extends Error {
   constructor() {
-    super("Clave de administrador inválida o caducada.");
+    super("Invalid or expired admin key.");
     this.name = "UnauthorizedError";
   }
 }
@@ -96,7 +96,7 @@ async function request<T>(adminKey: string, path: string, init?: RequestInit): P
       },
     });
   } catch {
-    throw new ApiError(0, "No se pudo conectar con el relay. Comprueba tu conexión.");
+    throw new ApiError(0, "Could not reach the relay. Check your connection.");
   }
 
   if (res.status === 401) {

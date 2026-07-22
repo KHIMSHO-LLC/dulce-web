@@ -27,13 +27,13 @@ function payoutLabel(payout: RefCode["payout"]): string {
     case "per_retained":
       return `${formatEur(payout.amount)} / retenido`;
     case "percent":
-      return `${payout.amount}% (nota)`;
+      return `${payout.amount}% (note)`;
   }
 }
 
 function owedLabel(owed: RefCode["owed"]): string {
   if (owed.amount === null) {
-    return `${owed.count} evento${owed.count === 1 ? "" : "s"} (ver nota)`;
+    return `${owed.count} event${owed.count === 1 ? "" : "s"} (see note)`;
   }
   return `${formatEur(owed.amount)} (${owed.count})`;
 }
@@ -101,17 +101,17 @@ export function CodesTable({ codes, busyCode, onTogglePause, onDelete, onMarkPai
       <table className="w-full min-w-[1000px] text-left text-label">
         <thead>
           <tr className="border-b border-border-subtle text-caption uppercase tracking-wider text-muted">
-            <th className="px-4 py-3 font-semibold">Código</th>
-            <th className="px-4 py-3 font-semibold">Estado</th>
+            <th className="px-4 py-3 font-semibold">Code</th>
+            <th className="px-4 py-3 font-semibold">Status</th>
             <th className="px-4 py-3 font-semibold">Offering</th>
             <th className="px-4 py-3 font-semibold text-right">Claims</th>
             <th className="px-4 py-3 font-semibold text-right">Trials</th>
-            <th className="px-4 py-3 font-semibold text-right">Pago</th>
-            <th className="px-4 py-3 font-semibold text-right">Retenido 1m</th>
-            <th className="px-4 py-3 font-semibold">Regla de pago</th>
-            <th className="px-4 py-3 font-semibold">Adeudado</th>
-            <th className="px-4 py-3 font-semibold">Pagado hasta</th>
-            <th className="px-4 py-3 font-semibold">Acciones</th>
+            <th className="px-4 py-3 font-semibold text-right">Paying</th>
+            <th className="px-4 py-3 font-semibold text-right">Retained 1m</th>
+            <th className="px-4 py-3 font-semibold">Payout rule</th>
+            <th className="px-4 py-3 font-semibold">Owed</th>
+            <th className="px-4 py-3 font-semibold">Paid through</th>
+            <th className="px-4 py-3 font-semibold">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -128,7 +128,7 @@ export function CodesTable({ codes, busyCode, onTogglePause, onDelete, onMarkPai
                         : "bg-state-slightly-low/10 text-state-slightly-low"
                     }`}
                   >
-                    {c.status === "active" ? "Activo" : "Pausado"}
+                    {c.status === "active" ? "Active" : "Paused"}
                   </span>
                 </td>
                 <td className="px-4 py-3">{c.offeringId}</td>
@@ -147,17 +147,17 @@ export function CodesTable({ codes, busyCode, onTogglePause, onDelete, onMarkPai
                       onClick={() => onTogglePause(c)}
                       className="text-caption font-semibold text-accent hover:text-accent-hover disabled:opacity-50"
                     >
-                      {c.status === "active" ? "Pausar" : "Reanudar"}
+                      {c.status === "active" ? "Pause" : "Resume"}
                     </button>
                     <ConfirmButton
-                      label="Marcar pagado"
+                      label="Mark paid"
                       confirmLabel={`Confirmar (resetea contador desde hoy)`}
                       disabled={busy}
                       className="text-caption font-semibold text-accent hover:text-accent-hover disabled:opacity-50"
                       onConfirm={() => onMarkPaid(c)}
                     />
                     <ConfirmButton
-                      label="Eliminar"
+                      label="Delete"
                       confirmLabel="Confirmar borrado"
                       disabled={busy}
                       className="text-caption font-semibold text-state-low hover:opacity-80 disabled:opacity-50"
