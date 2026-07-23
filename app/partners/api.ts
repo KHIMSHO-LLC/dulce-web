@@ -63,7 +63,10 @@ export type EventCounts = Record<LifecycleEvent, number>;
 export interface FleetLevels {
   total: number;
   free: number;
+  /** Actually paying — excludes trialists. */
   paid: number;
+  /** Inside a free trial: full Pro service, no revenue yet. */
+  trialing: number;
   ios: number;
   android: number;
   activeLast24h: number;

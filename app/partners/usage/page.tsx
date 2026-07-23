@@ -178,7 +178,7 @@ export default function UsagePage() {
         </div>
       ) : (
         <>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             <Stat
               label="Connected accounts"
               value={String(current!.total)}
@@ -188,7 +188,12 @@ export default function UsagePage() {
             <Stat
               label="Paying"
               value={String(current!.paid)}
-              hint={`${pct(current!.paid)} of connected accounts`}
+              hint={`${pct(current!.paid)} · excludes trials`}
+            />
+            <Stat
+              label="Trialing"
+              value={String(current!.trialing)}
+              hint="Full Pro access, no revenue yet"
             />
             <Stat label="Free" value={String(current!.free)} hint={pct(current!.free)} />
             <Stat
@@ -196,9 +201,6 @@ export default function UsagePage() {
               value={String(current!.activeLast24h)}
               hint={`${current!.activeLast7d} in the last 7 days`}
             />
-          </div>
-
-          <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <Stat
               label="Signed out · 30d"
               value={String(data.totals.last30d.logout)}
