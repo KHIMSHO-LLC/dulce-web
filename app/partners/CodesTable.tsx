@@ -13,19 +13,19 @@ type Props = {
 
 function formatDate(ms: number | null): string {
   if (ms === null) return "—";
-  return new Date(ms).toLocaleDateString("es-ES", { year: "numeric", month: "short", day: "numeric" });
+  return new Date(ms).toLocaleDateString("en-GB", { year: "numeric", month: "short", day: "numeric" });
 }
 
 function formatEur(amount: number): string {
-  return new Intl.NumberFormat("es-ES", { style: "currency", currency: "EUR" }).format(amount);
+  return new Intl.NumberFormat("en-GB", { style: "currency", currency: "EUR" }).format(amount);
 }
 
 function payoutLabel(payout: RefCode["payout"]): string {
   switch (payout.type) {
     case "per_paying":
-      return `${formatEur(payout.amount)} / pago`;
+      return `${formatEur(payout.amount)} / paying user`;
     case "per_retained":
-      return `${formatEur(payout.amount)} / retenido`;
+      return `${formatEur(payout.amount)} / retained user`;
     case "percent":
       return `${payout.amount}% (note)`;
   }
@@ -74,7 +74,7 @@ function ConfirmButton({
           onClick={() => setConfirming(false)}
           className="text-caption text-muted underline underline-offset-2"
         >
-          cancelar
+          cancel
         </button>
       </div>
     );
@@ -91,7 +91,7 @@ export function CodesTable({ codes, busyCode, onTogglePause, onDelete, onMarkPai
   if (codes.length === 0) {
     return (
       <div className="bg-card rounded-[var(--radius-card)] border border-border-subtle p-10 text-center text-muted">
-        Todavía no hay códigos. Añade el primero arriba.
+        No codes yet. Add the first one above.
       </div>
     );
   }

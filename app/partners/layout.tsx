@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "../globals.css";
+import { AdminGate } from "./AdminGate";
 
 /**
  * Standalone root layout for /partners. This route lives OUTSIDE
@@ -18,7 +19,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Partners dashboard · Dulce",
+  title: "Dulce admin",
   // Internal-only page — never indexed, never followed. app/robots.ts also
   // disallows /partners explicitly as a second line of defense.
   robots: { index: false, follow: false, nocache: true },
@@ -28,7 +29,8 @@ export default function PartnersLayout({ children }: { children: React.ReactNode
   return (
     <html lang="es" className={`${nunito.variable} h-full antialiased`} suppressHydrationWarning>
       <body className="min-h-full bg-background text-foreground" suppressHydrationWarning>
-        {children}
+        {/* One login + one nav shared by every tab in this route group. */}
+        <AdminGate>{children}</AdminGate>
       </body>
     </html>
   );

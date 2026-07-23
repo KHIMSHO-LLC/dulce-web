@@ -47,6 +47,61 @@ export interface RefCode {
   owed: Owed;
 }
 
+export type LifecycleEvent = "signup" | "logout" | "uninstall" | "upgrade" | "downgrade";
+
+export const LIFECYCLE_EVENTS: readonly LifecycleEvent[] = [
+  "signup",
+  "logout",
+  "uninstall",
+  "upgrade",
+  "downgrade",
+];
+
+export type EventCounts = Record<LifecycleEvent, number>;
+
+/** A point-in-time count of what exists. */
+export interface FleetLevels {
+  total: number;
+  free: number;
+  paid: number;
+  ios: number;
+  android: number;
+  activeLast24h: number;
+  activeLast7d: number;
+  failing: number;
+  paused: number;
+  neverPolled: number;
+}
+
+/** One completed day from the relay's permanent history row. */
+export interface DailyRollup {
+  date: string;
+  levels: FleetLevels;
+  events: EventCounts;
+  takenAt: number;
+}
+
+export interface FirstSeenBucket {
+  date: string;
+  count: number;
+  cumulative: number;
+}
+
+/** Everything the Usage tab renders — see relay/src/routes/analytics.ts for
+ *  how each number is derived and what it does NOT mean (device ≠ person). */
+export interface UsageResponse {
+  current: FleetLevels;
+  today: { date: string; events: EventCounts };
+  history: DailyRollup[];
+  firstSeen: FirstSeenBucket[];
+  totals: {
+    last7d: EventCounts;
+    last30d: EventCounts;
+    allTime: EventCounts;
+  };
+  generatedAt: number;
+}
+
 export interface Offering {
   id: string;
   displayName: string;
@@ -110,7 +165,7 @@ async function request<T>(adminKey: string, path: string, init?: RequestInit): P
     } catch {
       // ignore — body may be empty
     }
-    throw new ApiError(res.status, detail || `Error ${res.status} del relay.`);
+    throw new ApiError(res.status, detail || `Relay error ${res.status}.`);
   }
 
   if (res.status === 204) {
@@ -128,6 +183,10 @@ export async function fetchCodes(adminKey: string): Promise<RefCode[]> {
 export async function fetchOfferings(adminKey: string): Promise<Offering[] | null> {
   const data = await request<{ offerings: Offering[] | null }>(adminKey, "/ref/admin/offerings");
   return data.offerings;
+}
+
+export async function fetchUsage(adminKey: string): Promise<UsageResponse> {
+  return request<UsageResponse>(adminKey, "/ref/admin/usage");
 }
 
 export async function createCode(adminKey: string, input: NewCodeInput): Promise<RefCode> {
