@@ -590,5 +590,57 @@
       "title": "Stop sending “I'm fine” texts.",
       "subtitle": "Free on the App Store. Family sharing comes with a 14-day free trial."
     }
+  },
+  "setup": {
+    "title": "LibreLink vs LibreLinkUp — which account does Dulce use?",
+    "description": "Dulce signs in with your LibreLinkUp account, not LibreLink. Here's the difference, and how to turn on sharing so your readings reach Dulce.",
+    "hero": {
+      "headline": "LibreLink vs LibreLinkUp: which one does Dulce use?",
+      "subheadline": "They look almost the same, but they are two different apps with two different logins. Dulce connects to LibreLinkUp — the app that receives readings shared with you. This page shows you exactly how to set it up."
+    },
+    "compare": {
+      "title": "Two apps, two accounts",
+      "scan": {
+        "title": "LibreLink",
+        "body": "The app you install to scan your FreeStyle Libre sensor and see your own readings. Dulce cannot sign in with this account."
+      },
+      "share": {
+        "title": "LibreLinkUp",
+        "body": "The companion app that receives readings shared with you — normally used by family. This is the account Dulce needs."
+      }
+    },
+    "steps": {
+      "title": "Turn on sharing in 4 steps",
+      "step1": {
+        "title": "Install LibreLinkUp",
+        "body": "Download LibreLinkUp from the App Store or Google Play and create an account with your email. Keep this email and password — you'll use them in Dulce."
+      },
+      "step2": {
+        "title": "Open LibreLink and go to Connected Apps",
+        "body": "In the LibreLink app you scan with, open the menu and find the sharing or “Connected Apps / LinkUp” section."
+      },
+      "step3": {
+        "title": "Invite your LibreLinkUp email",
+        "body": "Add the same email address you just registered in LibreLinkUp as a connection, then accept the invitation inside LibreLinkUp."
+      },
+      "step4": {
+        "title": "Sign in to Dulce",
+        "body": "Open Dulce and enter your LibreLinkUp email and password. Your glucose appears within a few seconds."
+      }
+    },
+    "faq": {
+      "title": "Common questions",
+      "q1": "Why doesn't my LibreLink login work in Dulce?",
+      "a1": "Because LibreLink and LibreLinkUp are separate apps with separate accounts. Dulce uses LibreLinkUp. If your login is rejected, you are almost certainly typing your LibreLink details — create a LibreLinkUp account and use that instead.",
+      "q2": "I signed in but Dulce shows no data. What's wrong?",
+      "a2": "Your LibreLinkUp login worked, but nothing is being shared with it yet. Open the LibreLink app you scan with, go to Connected Apps, and invite your LibreLinkUp email. Accept the invitation, then Dulce will start receiving readings.",
+      "q3": "Is Dulce made by Abbott?",
+      "a3": "No. Dulce is an independent app and is not affiliated with, endorsed by, or sponsored by Abbott. FreeStyle Libre, LibreLink and LibreLinkUp are trademarks of Abbott, used here only to describe how to connect."
+    },
+    "cta": {
+      "title": "Ready to see your glucose in Dulce?",
+      "subtitle": "Free on the App Store. Set up your LibreLinkUp account and sign in."
+    },
+    "disclaimer": "Dulce is an independent app and is not affiliated with, endorsed by, or sponsored by Abbott. FreeStyle Libre, LibreLink and LibreLinkUp are trademarks of Abbott Diabetes Care. Dulce is not a medical device and does not replace your CGM's own alarms."
   }
 }

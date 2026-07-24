@@ -55,6 +55,10 @@ export const routing = defineRouting({
       es: "/compartir-en-familia",
       en: "/family-sharing",
     },
+    // Unlocalized on purpose: the app deep-links here with a fixed `/setup`
+    // path (see dulce-app `constants/links.ts`), so both locales must resolve
+    // the same slug.
+    "/setup": "/setup",
     "/android": "/android",
     "/blog": "/blog",
     "/blog/how-to-see-cgm-glucose-on-apple-watch": {

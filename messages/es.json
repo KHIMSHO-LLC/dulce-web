@@ -590,5 +590,57 @@
       "title": "Deja de mandar mensajes de «estoy bien».",
       "subtitle": "Gratis en el App Store. El seguimiento familiar incluye 14 días de prueba."
     }
+  },
+  "setup": {
+    "title": "LibreLink o LibreLinkUp: ¿qué cuenta usa Dulce?",
+    "description": "Dulce inicia sesión con tu cuenta de LibreLinkUp, no de LibreLink. Aquí está la diferencia y cómo activar el uso compartido para que tus lecturas lleguen a Dulce.",
+    "hero": {
+      "headline": "LibreLink o LibreLinkUp: ¿cuál usa Dulce?",
+      "subheadline": "Se parecen mucho, pero son dos apps distintas con dos inicios de sesión distintos. Dulce se conecta a LibreLinkUp, la app que recibe las lecturas que te comparten. Esta página te muestra exactamente cómo configurarlo."
+    },
+    "compare": {
+      "title": "Dos apps, dos cuentas",
+      "scan": {
+        "title": "LibreLink",
+        "body": "La app que instalas para escanear tu sensor FreeStyle Libre y ver tus propias lecturas. Dulce no puede iniciar sesión con esta cuenta."
+      },
+      "share": {
+        "title": "LibreLinkUp",
+        "body": "La app complementaria que recibe las lecturas que te comparten — normalmente la usa la familia. Esta es la cuenta que Dulce necesita."
+      }
+    },
+    "steps": {
+      "title": "Activa el uso compartido en 4 pasos",
+      "step1": {
+        "title": "Instala LibreLinkUp",
+        "body": "Descarga LibreLinkUp desde la App Store o Google Play y crea una cuenta con tu correo. Guarda este correo y contraseña: los usarás en Dulce."
+      },
+      "step2": {
+        "title": "Abre LibreLink y ve a Apps conectadas",
+        "body": "En la app LibreLink con la que escaneas, abre el menú y busca la sección de compartir o «Apps conectadas / LinkUp»."
+      },
+      "step3": {
+        "title": "Invita tu correo de LibreLinkUp",
+        "body": "Añade como conexión el mismo correo que acabas de registrar en LibreLinkUp y luego acepta la invitación dentro de LibreLinkUp."
+      },
+      "step4": {
+        "title": "Inicia sesión en Dulce",
+        "body": "Abre Dulce e introduce tu correo y contraseña de LibreLinkUp. Tu glucosa aparece en unos segundos."
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "q1": "¿Por qué no funciona mi inicio de sesión de LibreLink en Dulce?",
+      "a1": "Porque LibreLink y LibreLinkUp son apps distintas con cuentas distintas. Dulce usa LibreLinkUp. Si se rechaza tu inicio de sesión, casi seguro estás escribiendo los datos de LibreLink: crea una cuenta de LibreLinkUp y usa esa.",
+      "q2": "Inicié sesión pero Dulce no muestra datos. ¿Qué pasa?",
+      "a2": "Tu inicio de sesión en LibreLinkUp funcionó, pero aún no se comparte nada con esa cuenta. Abre la app LibreLink con la que escaneas, ve a Apps conectadas e invita tu correo de LibreLinkUp. Acepta la invitación y Dulce empezará a recibir lecturas.",
+      "q3": "¿Dulce es de Abbott?",
+      "a3": "No. Dulce es una app independiente y no está afiliada, avalada ni patrocinada por Abbott. FreeStyle Libre, LibreLink y LibreLinkUp son marcas de Abbott, usadas aquí solo para explicar cómo conectar."
+    },
+    "cta": {
+      "title": "¿Listo para ver tu glucosa en Dulce?",
+      "subtitle": "Gratis en la App Store. Configura tu cuenta de LibreLinkUp e inicia sesión."
+    },
+    "disclaimer": "Dulce es una app independiente y no está afiliada, avalada ni patrocinada por Abbott. FreeStyle Libre, LibreLink y LibreLinkUp son marcas de Abbott Diabetes Care. Dulce no es un dispositivo médico y no sustituye las alarmas de tu propio sensor."
   }
 }
