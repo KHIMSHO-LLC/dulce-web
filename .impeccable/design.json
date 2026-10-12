@@ -1,0 +1,593 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-12T15:43:18+00:00",
+  "title": "Design System: Dulce (web)",
+  "extensions": {
+    "colorMeta": {
+      "ember": {
+        "role": "primary",
+        "displayName": "Ember",
+        "canonical": "#f36638",
+        "oklch": "oklch(68.0% 0.184 38.0)",
+        "tonalRamp": [
+          "oklch(15% 0.184 38.0)",
+          "oklch(25% 0.184 38.0)",
+          "oklch(35% 0.184 38.0)",
+          "oklch(45% 0.184 38.0)",
+          "oklch(55% 0.184 38.0)",
+          "oklch(65% 0.184 38.0)",
+          "oklch(80% 0.184 38.0)",
+          "oklch(95% 0.184 38.0)"
+        ]
+      },
+      "ember-hi": {
+        "role": "primary",
+        "displayName": "Ember Hi",
+        "canonical": "#ff7d52",
+        "oklch": "oklch(73.2% 0.169 38.7)",
+        "tonalRamp": [
+          "oklch(15% 0.169 38.7)",
+          "oklch(25% 0.169 38.7)",
+          "oklch(35% 0.169 38.7)",
+          "oklch(45% 0.169 38.7)",
+          "oklch(55% 0.169 38.7)",
+          "oklch(65% 0.169 38.7)",
+          "oklch(80% 0.169 38.7)",
+          "oklch(95% 0.169 38.7)"
+        ]
+      },
+      "ember-deep": {
+        "role": "primary",
+        "displayName": "Ember Deep",
+        "canonical": "#c2410c",
+        "oklch": "oklch(55.3% 0.174 38.4)",
+        "tonalRamp": [
+          "oklch(15% 0.174 38.4)",
+          "oklch(25% 0.174 38.4)",
+          "oklch(35% 0.174 38.4)",
+          "oklch(45% 0.174 38.4)",
+          "oklch(55% 0.174 38.4)",
+          "oklch(65% 0.174 38.4)",
+          "oklch(80% 0.174 38.4)",
+          "oklch(95% 0.174 38.4)"
+        ]
+      },
+      "ember-ink": {
+        "role": "primary",
+        "displayName": "Ember Ink",
+        "canonical": "#1b0c06",
+        "oklch": "oklch(17.5% 0.029 44.2)",
+        "tonalRamp": [
+          "oklch(15% 0.029 44.2)",
+          "oklch(25% 0.029 44.2)",
+          "oklch(35% 0.029 44.2)",
+          "oklch(45% 0.029 44.2)",
+          "oklch(55% 0.029 44.2)",
+          "oklch(65% 0.029 44.2)",
+          "oklch(80% 0.029 44.2)",
+          "oklch(95% 0.029 44.2)"
+        ]
+      },
+      "range": {
+        "role": "secondary",
+        "displayName": "In Range",
+        "canonical": "#66c45b",
+        "oklch": "oklch(73.9% 0.169 141.7)",
+        "tonalRamp": [
+          "oklch(15% 0.169 141.7)",
+          "oklch(25% 0.169 141.7)",
+          "oklch(35% 0.169 141.7)",
+          "oklch(45% 0.169 141.7)",
+          "oklch(55% 0.169 141.7)",
+          "oklch(65% 0.169 141.7)",
+          "oklch(80% 0.169 141.7)",
+          "oklch(95% 0.169 141.7)"
+        ]
+      },
+      "range-text": {
+        "role": "secondary",
+        "displayName": "In Range Text",
+        "canonical": "#7fd970",
+        "oklch": "oklch(80.5% 0.166 140.9)",
+        "tonalRamp": [
+          "oklch(15% 0.166 140.9)",
+          "oklch(25% 0.166 140.9)",
+          "oklch(35% 0.166 140.9)",
+          "oklch(45% 0.166 140.9)",
+          "oklch(55% 0.166 140.9)",
+          "oklch(65% 0.166 140.9)",
+          "oklch(80% 0.166 140.9)",
+          "oklch(95% 0.166 140.9)"
+        ]
+      },
+      "high": {
+        "role": "secondary",
+        "displayName": "High",
+        "canonical": "#f5a524",
+        "oklch": "oklch(78.2% 0.158 72.3)",
+        "tonalRamp": [
+          "oklch(15% 0.158 72.3)",
+          "oklch(25% 0.158 72.3)",
+          "oklch(35% 0.158 72.3)",
+          "oklch(45% 0.158 72.3)",
+          "oklch(55% 0.158 72.3)",
+          "oklch(65% 0.158 72.3)",
+          "oklch(80% 0.158 72.3)",
+          "oklch(95% 0.158 72.3)"
+        ]
+      },
+      "high-text": {
+        "role": "secondary",
+        "displayName": "High Text",
+        "canonical": "#ffb638",
+        "oklch": "oklch(82.5% 0.156 76.1)",
+        "tonalRamp": [
+          "oklch(15% 0.156 76.1)",
+          "oklch(25% 0.156 76.1)",
+          "oklch(35% 0.156 76.1)",
+          "oklch(45% 0.156 76.1)",
+          "oklch(55% 0.156 76.1)",
+          "oklch(65% 0.156 76.1)",
+          "oklch(80% 0.156 76.1)",
+          "oklch(95% 0.156 76.1)"
+        ]
+      },
+      "low": {
+        "role": "secondary",
+        "displayName": "Low",
+        "canonical": "#e8262b",
+        "oklch": "oklch(59.9% 0.225 26.5)",
+        "tonalRamp": [
+          "oklch(15% 0.200 26.5)",
+          "oklch(25% 0.200 26.5)",
+          "oklch(35% 0.200 26.5)",
+          "oklch(45% 0.200 26.5)",
+          "oklch(55% 0.200 26.5)",
+          "oklch(65% 0.200 26.5)",
+          "oklch(80% 0.200 26.5)",
+          "oklch(95% 0.200 26.5)"
+        ]
+      },
+      "low-text": {
+        "role": "secondary",
+        "displayName": "Low Text",
+        "canonical": "#ff544c",
+        "oklch": "oklch(68.0% 0.208 26.9)",
+        "tonalRamp": [
+          "oklch(15% 0.200 26.9)",
+          "oklch(25% 0.200 26.9)",
+          "oklch(35% 0.200 26.9)",
+          "oklch(45% 0.200 26.9)",
+          "oklch(55% 0.200 26.9)",
+          "oklch(65% 0.200 26.9)",
+          "oklch(80% 0.200 26.9)",
+          "oklch(95% 0.200 26.9)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Ground",
+        "canonical": "#0d0c0b",
+        "oklch": "oklch(15.5% 0.003 67.6)",
+        "tonalRamp": [
+          "oklch(15% 0.003 67.6)",
+          "oklch(25% 0.003 67.6)",
+          "oklch(35% 0.003 67.6)",
+          "oklch(45% 0.003 67.6)",
+          "oklch(55% 0.003 67.6)",
+          "oklch(65% 0.003 67.6)",
+          "oklch(80% 0.003 67.6)",
+          "oklch(95% 0.003 67.6)"
+        ]
+      },
+      "glass": {
+        "role": "neutral",
+        "displayName": "Glass",
+        "canonical": "#1d1916",
+        "oklch": "oklch(21.7% 0.009 59.2)",
+        "tonalRamp": [
+          "oklch(15% 0.009 59.2)",
+          "oklch(25% 0.009 59.2)",
+          "oklch(35% 0.009 59.2)",
+          "oklch(45% 0.009 59.2)",
+          "oklch(55% 0.009 59.2)",
+          "oklch(65% 0.009 59.2)",
+          "oklch(80% 0.009 59.2)",
+          "oklch(95% 0.009 59.2)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "#2a2521",
+        "oklch": "oklch(26.9% 0.010 61.0)",
+        "tonalRamp": [
+          "oklch(15% 0.010 61.0)",
+          "oklch(25% 0.010 61.0)",
+          "oklch(35% 0.010 61.0)",
+          "oklch(45% 0.010 61.0)",
+          "oklch(55% 0.010 61.0)",
+          "oklch(65% 0.010 61.0)",
+          "oklch(80% 0.010 61.0)",
+          "oklch(95% 0.010 61.0)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#f6f0ea",
+        "oklch": "oklch(95.8% 0.010 67.7)",
+        "tonalRamp": [
+          "oklch(15% 0.010 67.7)",
+          "oklch(25% 0.010 67.7)",
+          "oklch(35% 0.010 67.7)",
+          "oklch(45% 0.010 67.7)",
+          "oklch(55% 0.010 67.7)",
+          "oklch(65% 0.010 67.7)",
+          "oklch(80% 0.010 67.7)",
+          "oklch(95% 0.010 67.7)"
+        ]
+      },
+      "soft": {
+        "role": "neutral",
+        "displayName": "Soft",
+        "canonical": "#cfc6bd",
+        "oklch": "oklch(83.1% 0.016 67.6)",
+        "tonalRamp": [
+          "oklch(15% 0.016 67.6)",
+          "oklch(25% 0.016 67.6)",
+          "oklch(35% 0.016 67.6)",
+          "oklch(45% 0.016 67.6)",
+          "oklch(55% 0.016 67.6)",
+          "oklch(65% 0.016 67.6)",
+          "oklch(80% 0.016 67.6)",
+          "oklch(95% 0.016 67.6)"
+        ]
+      },
+      "mute": {
+        "role": "neutral",
+        "displayName": "Mute",
+        "canonical": "#aa9f94",
+        "oklch": "oklch(70.9% 0.020 67.5)",
+        "tonalRamp": [
+          "oklch(15% 0.020 67.5)",
+          "oklch(25% 0.020 67.5)",
+          "oklch(35% 0.020 67.5)",
+          "oklch(45% 0.020 67.5)",
+          "oklch(55% 0.020 67.5)",
+          "oklch(65% 0.020 67.5)",
+          "oklch(80% 0.020 67.5)",
+          "oklch(95% 0.020 67.5)"
+        ]
+      },
+      "ember-field-core": {
+        "role": "neutral",
+        "displayName": "Ember Field Core",
+        "canonical": "#1a1310",
+        "oklch": "oklch(19.4% 0.013 44.4)",
+        "tonalRamp": [
+          "oklch(15% 0.013 44.4)",
+          "oklch(25% 0.013 44.4)",
+          "oklch(35% 0.013 44.4)",
+          "oklch(45% 0.013 44.4)",
+          "oklch(55% 0.013 44.4)",
+          "oklch(65% 0.013 44.4)",
+          "oklch(80% 0.013 44.4)",
+          "oklch(95% 0.013 44.4)"
+        ]
+      },
+      "wine-field-core": {
+        "role": "neutral",
+        "displayName": "Wine Field Core",
+        "canonical": "#140c10",
+        "oklch": "oklch(16.7% 0.016 347.5)",
+        "tonalRamp": [
+          "oklch(15% 0.016 347.5)",
+          "oklch(25% 0.016 347.5)",
+          "oklch(35% 0.016 347.5)",
+          "oklch(45% 0.016 347.5)",
+          "oklch(55% 0.016 347.5)",
+          "oklch(65% 0.016 347.5)",
+          "oklch(80% 0.016 347.5)",
+          "oklch(95% 0.016 347.5)"
+        ]
+      },
+      "promise-paper": {
+        "role": "neutral",
+        "displayName": "Promise Paper",
+        "canonical": "#f3ece4",
+        "oklch": "oklch(94.6% 0.013 71.3)",
+        "tonalRamp": [
+          "oklch(15% 0.013 71.3)",
+          "oklch(25% 0.013 71.3)",
+          "oklch(35% 0.013 71.3)",
+          "oklch(45% 0.013 71.3)",
+          "oklch(55% 0.013 71.3)",
+          "oklch(65% 0.013 71.3)",
+          "oklch(80% 0.013 71.3)",
+          "oklch(95% 0.013 71.3)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero, chapter and section titles; Archivo 300 wdth 104, two short lines, word-by-word reveal."
+      },
+      "display-mega": {
+        "displayName": "Display Mega",
+        "purpose": "Counter, marquee, closing line, Watch sentence; footer wordmark at 27vw is its extreme."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Scroll-lit paragraphs (founder quote, family lead) and functional-page h1s."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Tile, card and sub-section titles; menu and accordion items in the same voice."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "The one soft paragraph under a display line, 36 to 42ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Answers and tile copy, max 60ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Small buttons, links, footer and menu lists, notes."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Legal small print and range legend."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Figures that are data: percentages, invite codes, step numbers. Tabular."
+      },
+      "ios-ui": {
+        "displayName": "iOS UI",
+        "purpose": "Only inside canvas-drawn device screens."
+      }
+    },
+    "shadows": [
+      {
+        "name": "glass",
+        "value": "inset 0 1px 0 rgba(255,255,255,0.05), 0 30px 60px -30px rgba(0,0,0,0.85)",
+        "purpose": "Glass surfaces: pill nav, menu card, QR popover, hero card."
+      },
+      {
+        "name": "cta-rest",
+        "value": "0 18px 40px -16px rgba(243,102,56,0.65)",
+        "purpose": "Ember glow under the download pill."
+      },
+      {
+        "name": "cta-press",
+        "value": "0 6px 16px -8px rgba(243,102,56,0.6)",
+        "purpose": "Download pill while pressed."
+      }
+    ],
+    "materials": [
+      {
+        "name": "glass",
+        "value": "linear-gradient(180deg, rgba(44,37,32,0.72), rgba(26,22,19,0.72)); backdrop-filter: blur(18px) saturate(1.2); border 1px rgba(255,255,255,0.08)",
+        "purpose": "Floating chrome over the atmosphere; solid #1d1916 under reduced transparency."
+      },
+      {
+        "name": "ember-beam",
+        "value": "linear-gradient(90deg, rgba(243,102,56,0) 0%, rgba(243,102,56,0.26) 30%, rgba(255,140,90,0.46) 50%, rgba(194,65,12,0.3) 68%, rgba(243,102,56,0) 100%); rotate(-32deg); blur 56px; 28s drift",
+        "purpose": "The page's single light source, fixed behind all content."
+      },
+      {
+        "name": "vignette",
+        "value": "radial-gradient(120% 90% at 50% 40%, rgba(13,12,11,0) 55%, rgba(7,5,4,0.8) 100%)",
+        "purpose": "Warm vignette over the fixed field."
+      },
+      {
+        "name": "grain",
+        "value": "warm fractal noise SVG, opacity 0.05, mix-blend soft-light",
+        "purpose": "Grain that never cools the blacks."
+      },
+      {
+        "name": "ember-window",
+        "value": "radial-gradient(60% 70% at 50% 45%, #ff8a5c 0%, #f36638 28%, #b8361f 58%, #5a1626 85%, #2a0d16 100%)",
+        "purpose": "The full ember field behind the Watch, revealed by a growing clip-path."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Default easing for reveals, hovers, menu and disclosure transitions."
+      },
+      {
+        "name": "word-reveal",
+        "value": "yPercent 115 to 0, 1.05s expo.out, stagger 0.045s",
+        "purpose": "Display lines rising out of per-word clips."
+      },
+      {
+        "name": "fade-lift",
+        "value": "y 28px, blur 10px to 0, 0.9s expo.out, stagger 0.08s",
+        "purpose": "Supporting copy and controls after a display line."
+      },
+      {
+        "name": "scrub-words",
+        "value": "opacity 0.18 to 1 per word, scroll-scrubbed",
+        "purpose": "Long paragraphs lit as they are read."
+      },
+      {
+        "name": "rolling-digits",
+        "value": "per-digit column roll, expo.out, 0.06s per column",
+        "purpose": "Counters and the preloader."
+      },
+      {
+        "name": "preloader-exit",
+        "value": "yPercent -100, 1.05s expo.inOut",
+        "purpose": "Once per session; skipped under reduced motion."
+      },
+      {
+        "name": "marquee",
+        "value": "xPercent -50 over 38s, timeScale follows scroll velocity (clamped +/-6) and direction",
+        "purpose": "The page's one marquee."
+      },
+      {
+        "name": "beam-drift",
+        "value": "28s ease-in-out infinite, translate (-4%, 2%) and rotate -32 to -30deg",
+        "purpose": "Slow life in the atmosphere; off under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      },
+      {
+        "name": "container-max",
+        "value": "1440px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Download Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The ember install pill; the page's single action.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Descargar gratis <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></a>",
+      "css": ".ds-btn-primary { font-family: var(--font-sans, Archivo, system-ui, sans-serif); display: inline-flex; align-items: center; gap: 8px; height: 48px; padding: 0 20px 0 24px; border-radius: 999px; background: #f36638; color: #1b0c06; font-size: 1rem; font-weight: 600; text-decoration: none; box-shadow: 0 18px 40px -16px rgba(243,102,56,0.65); transition: background-color .2s cubic-bezier(0.16,1,0.3,1), transform .2s, box-shadow .2s; } .ds-btn-primary svg { transition: transform .3s cubic-bezier(0.16,1,0.3,1); } .ds-btn-primary:hover { background: #ff7d52; } .ds-btn-primary:hover svg { transform: translate(2px,-2px); } .ds-btn-primary:active { transform: translateY(1px); box-shadow: 0 6px 16px -8px rgba(243,102,56,0.6); } .ds-btn-primary:focus-visible { outline: 2px solid #f36638; outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Hairline pill for a second, quieter path (Get the app, form actions).",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">Get the app</a>",
+      "css": ".ds-btn-secondary { font-family: var(--font-sans, Archivo, system-ui, sans-serif); display: inline-flex; align-items: center; height: 48px; padding: 0 24px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.04); color: #f6f0ea; font-weight: 600; text-decoration: none; transition: background-color .2s; } .ds-btn-secondary:hover { background: rgba(255,255,255,0.10); } .ds-btn-secondary:active { transform: translateY(1px); } .ds-btn-secondary:focus-visible { outline: 2px solid #f36638; outline-offset: 3px; }"
+    },
+    {
+      "name": "Pill Nav",
+      "kind": "nav",
+      "refersTo": "pill-nav",
+      "description": "The only navigation: a floating glass pill at bottom centre with menu, mark and ink download.",
+      "html": "<nav class=\"ds-pillnav\"><button class=\"ds-pillnav-menu\" aria-label=\"Menu\"><span></span><span></span></button><span class=\"ds-pillnav-mark\" aria-hidden=\"true\"></span><a class=\"ds-pillnav-cta\" href=\"#\">Descargar</a></nav>",
+      "css": ".ds-pillnav { font-family: var(--font-sans, Archivo, system-ui, sans-serif); background: linear-gradient(180deg, rgba(44,37,32,0.72), rgba(26,22,19,0.72)); border: 1px solid rgba(255,255,255,0.08); box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 30px 60px -30px rgba(0,0,0,0.85); backdrop-filter: blur(18px) saturate(1.2); -webkit-backdrop-filter: blur(18px) saturate(1.2); display: inline-flex; align-items: center; gap: 4px; height: 56px; padding: 6px; border-radius: 999px; } .ds-pillnav-menu { position: relative; width: 44px; height: 44px; border: 0; border-radius: 999px; background: transparent; cursor: pointer; } .ds-pillnav-menu span { position: absolute; left: 12px; width: 20px; height: 1.5px; background: #f6f0ea; border-radius: 2px; } .ds-pillnav-menu span:first-child { top: 16px; } .ds-pillnav-menu span:last-child { top: 26px; } .ds-pillnav-menu:hover { background: rgba(255,255,255,0.08); } .ds-pillnav-menu:focus-visible, .ds-pillnav-cta:focus-visible { outline: 2px solid #f36638; outline-offset: 3px; } .ds-pillnav-mark { width: 18px; height: 24px; margin: 0 14px; border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; background: radial-gradient(circle at 40% 60%, #f36638, #c2410c); } .ds-pillnav-cta { display: inline-flex; align-items: center; height: 44px; margin-left: 4px; padding: 0 20px; border-radius: 999px; background: #f6f0ea; color: #0d0c0b; font-size: .875rem; font-weight: 600; text-decoration: none; transition: background-color .2s; } .ds-pillnav-cta:hover { background: #ffffff; }"
+    },
+    {
+      "name": "Glass Card",
+      "kind": "card",
+      "refersTo": "glass-card",
+      "description": "Dark glass over the atmosphere: menu card, QR popover, hero founder card.",
+      "html": "<div class=\"ds-glass\"><p>Hecho por alguien que vive con diabetes tipo 1.</p></div>",
+      "css": ".ds-glass { font-family: var(--font-sans, Archivo, system-ui, sans-serif); background: linear-gradient(180deg, rgba(44,37,32,0.72), rgba(26,22,19,0.72)); border: 1px solid rgba(255,255,255,0.08); box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 30px 60px -30px rgba(0,0,0,0.85); backdrop-filter: blur(18px) saturate(1.2); -webkit-backdrop-filter: blur(18px) saturate(1.2); width: 300px; padding: 20px; border-radius: 28px; color: #cfc6bd; font-size: .875rem; line-height: 1.6; } .ds-glass p { margin: 0; }"
+    },
+    {
+      "name": "Field Tile",
+      "kind": "card",
+      "refersTo": "field-tile",
+      "description": "28px tile on a warm dark base with a radial ember glow rising from one edge; holds a device or a statement.",
+      "html": "<article class=\"ds-field\"><h3>Tu familia, contigo</h3><p>Quien invites ve tu glucosa en directo y recibe sus propios avisos.</p><p class=\"ds-field-pro\">Con Dulce Pro, 14 días de prueba gratis.</p></article>",
+      "css": ".ds-field { font-family: var(--font-sans, Archivo, system-ui, sans-serif); width: 360px; padding: 28px; border-radius: 28px; border: 1px solid rgba(255,255,255,0.08); background: radial-gradient(80% 90% at 85% 100%, rgba(243,102,56,0.5), rgba(243,102,56,0) 65%), linear-gradient(160deg, #201713, #120e0c); color: #f6f0ea; } .ds-field h3 { margin: 0; font-size: 2rem; font-weight: 300; line-height: .96; letter-spacing: -0.035em; font-variation-settings: 'wdth' 104; } .ds-field p { margin: 16px 0 0; font-size: 1rem; line-height: 1.6; color: #cfc6bd; } .ds-field .ds-field-pro { margin-top: 12px; font-size: .875rem; font-weight: 600; color: #ff7d52; }"
+    },
+    {
+      "name": "Time in Range Tile",
+      "kind": "card",
+      "refersTo": "field-tile",
+      "description": "Data tile: a glucose numeral and a pill-segmented range bar; the only place glucose colours appear outside device screens and the counter.",
+      "html": "<article class=\"ds-tir\"><h3>Tiempo en rango</h3><p class=\"ds-tir-num\">86%</p><div class=\"ds-tir-bar\"><span style=\"width:4%;background:#e8262b\"></span><span style=\"width:86%;background:#66c45b\"></span><span style=\"width:10%;background:#f5a524\"></span></div><ul><li style=\"color:#ff544c\">Bajo 4%</li><li style=\"color:#7fd970\">En rango 86%</li><li style=\"color:#ffb638\">Alto 10%</li></ul></article>",
+      "css": ".ds-tir { font-family: var(--font-sans, Archivo, system-ui, sans-serif); width: 300px; padding: 28px; border-radius: 28px; border: 1px solid rgba(255,255,255,0.08); background: #0f1410; color: #f6f0ea; } .ds-tir h3 { margin: 0; font-size: 1.5rem; font-weight: 300; letter-spacing: -0.02em; font-variation-settings: 'wdth' 104; } .ds-tir-num { margin: 24px 0 0; font-size: 4.2rem; line-height: 1; font-weight: 600; letter-spacing: -0.015em; font-variation-settings: 'wdth' 76; font-feature-settings: 'tnum' 1; color: #7fd970; } .ds-tir-bar { display: flex; gap: 3px; height: 12px; margin-top: 20px; } .ds-tir-bar span { height: 100%; border-radius: 999px; } .ds-tir ul { display: flex; gap: 16px; margin: 16px 0 0; padding: 0; list-style: none; font-size: .75rem; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Contact and waitlist fields: hairline, faint fill, ember focus.",
+      "html": "<input class=\"ds-input\" type=\"email\" placeholder=\"tu@email.com\" />",
+      "css": ".ds-input { font-family: var(--font-sans, Archivo, system-ui, sans-serif); width: 320px; padding: 12px 16px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: #f6f0ea; font-size: 1rem; caret-color: #f36638; transition: border-color .2s, box-shadow .2s; } .ds-input::placeholder { color: #aa9f94; } .ds-input:focus, .ds-input:focus-visible { outline: none; border-color: #f36638; box-shadow: 0 0 0 2px rgba(243,102,56,0.25); }"
+    },
+    {
+      "name": "FAQ Row",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Hairline-separated disclosure; plus icon rotates and turns ember when open.",
+      "html": "<details class=\"ds-faq\" open><summary><span>¿Cuánto cuesta Dulce?</span><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"M12 5v14\"/></svg></summary><p>La descarga es gratis. Dulce Pro incluye 14 días de prueba.</p></details>",
+      "css": ".ds-faq { font-family: var(--font-sans, Archivo, system-ui, sans-serif); width: 520px; border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); } .ds-faq summary { display: flex; justify-content: space-between; gap: 24px; padding: 24px 0; cursor: pointer; list-style: none; color: #f6f0ea; font-size: 1.4rem; font-weight: 300; letter-spacing: -0.015em; font-variation-settings: 'wdth' 102; } .ds-faq summary::-webkit-details-marker { display: none; } .ds-faq summary:focus-visible { outline: 2px solid #f36638; outline-offset: 3px; } .ds-faq svg { flex-shrink: 0; margin-top: 4px; color: #aa9f94; transition: transform .5s cubic-bezier(0.16,1,0.3,1), color .5s; } .ds-faq[open] svg { transform: rotate(45deg); color: #f36638; } .ds-faq p { margin: 0; padding: 0 40px 28px 0; color: #cfc6bd; line-height: 1.6; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Phone Is the Page",
+    "overview": "**Creative North Star: \"The Phone Is the Page\"**\n\nOne live iPhone, its screen ticking real Dulce glucose, is carried down a warm-black night by scroll: it tilts in the first viewport, turns to show the Lock Screen and alerts, lies down for StandBy, hands off to a Watch seen through an opening ember window, and settles into a card for the day's logbook and trends. Everything else on the page is light, type and a few dark tiles around that one object. The world is the sibling promo film's (`/Users/levani/personal/dulce/DESIGN.md`): warm-black ground, ember for brand and action, glucose green/amber/crimson only where glucose lives, Archivo variable. The web build supersedes the film where they differ: the display voice here is Archivo light and slightly wide rather than heavy and condensed, and depicted app UI is localized Spanish/English because the app ships in both.\n\nThe page is a cinematic scroll: a counting preloader, pinned chapters whose copy sits low-left while the device turns beside it, word-by-word reveals, a scroll-lit founder quote, a rolling counter, a thrown card row, one velocity-linked marquee, and a giant cropped wordmark at the close. Density is low; each viewport holds one idea, one image and at most one action. Navigation is a single floating pill at the bottom centre.\n\nThe atmosphere is fixed and never scrolls: one diagonal ember beam (rotated -32deg, 56px blur, drifting over 28 s), a low wine counter-light bottom-right, a warm vignette, and warm-tinted grain at 5% soft-light. Without WebGL or with reduced motion, every 3D moment has a static canvas-drawn device frame in its place.",
+    "keyCharacteristics": [
+      "Warm-black ground (#0d0c0b), never neutral grey or pure black; grain and vignette are tinted warm.",
+      "Ember is the light source and the action, nothing else; glucose colours appear only on glucose data.",
+      "Archivo light (300) at width 104 with tight tracking for every display line; Archivo 600 at width 76 with tabular figures for numerals.",
+      "Dark glass and dark gradient field tiles with 1px white hairlines at 8 to 12%, 28px corners; every control is a pill.",
+      "One device, carried by scroll; static device frames stand in when 3D is unavailable."
+    ],
+    "rules": [
+      {
+        "name": "The Ember Is the Light Rule",
+        "body": "Ember is the beam, the glow in tiles and the action. It never colours a glucose value, and glucose colours never colour brand or action.",
+        "section": "colors"
+      },
+      {
+        "name": "The Data Earns Colour Rule",
+        "body": "Green, amber and crimson appear only on glucose data: depicted screens, the readings counter, the time-in-range bar and legend.",
+        "section": "colors"
+      },
+      {
+        "name": "The Warm Night Rule",
+        "body": "Every dark is warm (R > G > B), including grain, vignette and field bases. A field's glow is ember, ember-orange or wine-rose.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Archivo speaks for Dulce; the system stack speaks for the app inside a device. Never set marketing copy in the system stack or device UI in Archivo.",
+        "section": "typography"
+      },
+      {
+        "name": "The Light Display Rule",
+        "body": "Display lines are weight 300, never bold. Emphasis comes from size, an inline drop mark, or a glucose-coloured numeral, not weight.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Every number that counts or changes uses tabular figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The Soft Shadow Rule",
+        "body": "Shadows are blurred, offset only downward, and dark or ember. No hard offset shadows, no outer glows on cards.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Glass Falls Back Rule",
+        "body": "Under reduced transparency, glass becomes solid Glass (#1d1916) with no blur.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep every dark warm, starting from Ground (#0d0c0b), and let the fixed ember beam be the page's only light source.",
+      "**Do** reserve Ember for brand light and the install action, and glucose green/amber/crimson for glucose data.",
+      "**Do** set display lines in Archivo 300 at wdth 104 with -0.035em tracking, two short lines, revealed word by word.",
+      "**Do** use tabular Archivo 600 at wdth 76 for figures that are data.",
+      "**Do** make every control a pill and every tile 28px with a 1px white hairline.",
+      "**Do** depict the app with its real icon and iOS system type, in the visitor's locale (Spanish at `/`, English at `/en`).",
+      "**Do** provide a static device frame for every 3D moment, and a resting state for every scroll animation under reduced motion.",
+      "**Do** keep pinned copy clear of the bottom nav band (108px on mobile).",
+      "**Do** use the official App Store badge unaltered, and show QR codes on an Ink plate."
+    ],
+    "donts": [
+      "**Don't** colour a glucose value with ember, or a button with a glucose colour.",
+      "**Don't** set display type bold or condensed; heavy condensed Archivo belongs to the film, not the page.",
+      "**Don't** add a second navigation bar; the floating pill is the navigation.",
+      "**Don't** float flat phone mockups in a row of feature cards; screens live in the carried device or inside field tiles.",
+      "**Don't** use hard offset shadows or neutral grey surfaces.",
+      "**Don't** add a second light tile; Promise Paper is used once."
+    ]
+  }
+}

@@ -10,12 +10,12 @@ import { cn } from "@/lib/utils/cn";
 const initial: ContactState = { status: "idle" };
 
 const inputClass = cn(
-  "w-full px-4 py-3 rounded-[var(--radius-button)] bg-background border border-border-subtle",
-  "text-body text-foreground placeholder:text-muted/60",
-  "focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition-colors",
+  "w-full rounded-[16px] border border-white/12 bg-white/[0.04] px-4 py-3",
+  "text-body text-ink placeholder:text-mute",
+  "transition-colors focus:border-ember focus:outline-none focus:ring-2 focus:ring-ember/25",
 );
 
-const labelClass = "block text-label font-semibold text-foreground mb-1.5";
+const labelClass = "mb-1.5 block text-label font-semibold text-soft";
 
 export function ContactForm() {
   const t = useTranslations("contact.form");

@@ -3,6 +3,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing, type AppLocale } from "@/i18n/routing";
+import { alternatesFor } from "@/lib/seo";
 import { LegalLayout } from "@/components/legal/LegalLayout";
 import { PrivacyEs } from "@/components/legal/PrivacyEs";
 import { PrivacyEn } from "@/components/legal/PrivacyEn";
@@ -17,7 +18,7 @@ export async function generateMetadata({
     ? locale
     : routing.defaultLocale) as AppLocale;
   const t = await getTranslations({ locale: safeLocale, namespace: "legal.privacy" });
-  return { title: t("title"), description: t("description") };
+  return { title: t("title"), description: t("description"), alternates: alternatesFor(safeLocale, "/legal/privacy") };
 }
 
 export default async function PrivacyPage({

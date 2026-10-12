@@ -66,9 +66,9 @@ export function WaitlistForm({
             placeholder={t("email.placeholder")}
             aria-invalid={state.status === "error" ? true : undefined}
             className={cn(
-              "w-full h-12 px-4 rounded-[var(--radius-button)] bg-card border border-border-subtle",
-              "text-body text-foreground placeholder:text-muted/70",
-              "focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none transition-colors",
+              "h-12 w-full rounded-full border border-white/12 bg-white/[0.04] px-5",
+              "text-body text-ink placeholder:text-mute",
+              "transition-colors focus:border-ember focus:outline-none focus:ring-2 focus:ring-ember/25",
             )}
           />
         </div>
@@ -86,14 +86,14 @@ export function WaitlistForm({
 
       <label
         htmlFor={consentId}
-        className="flex items-start gap-2.5 text-caption text-muted cursor-pointer select-none"
+        className="flex cursor-pointer select-none items-start gap-2.5 text-caption text-soft"
       >
         <input
           id={consentId}
           type="checkbox"
           name="consent"
           required
-          className="mt-0.5 h-4 w-4 rounded-[4px] border border-border-subtle accent-accent flex-shrink-0"
+          className="mt-0.5 h-4 w-4 flex-shrink-0 rounded-[4px] border border-white/20 accent-[#f36638]"
         />
         <span className="leading-relaxed">
           {t.rich("consent", {

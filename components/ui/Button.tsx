@@ -19,21 +19,19 @@ type AnchorProps = CommonProps & AnchorHTMLAttributes<HTMLAnchorElement> & { as:
 type Props = ButtonProps | AnchorProps;
 
 const base =
-  "inline-flex items-center justify-center gap-2 font-semibold tracking-tight transition-all duration-150 focus-visible:outline-none disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98]";
+  "inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold transition-[background-color,color,box-shadow,transform] duration-200 disabled:pointer-events-none disabled:opacity-50 active:translate-y-px";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-accent text-white hover:bg-accent-hover shadow-[var(--shadow-cta-rest)] active:shadow-[var(--shadow-cta-press)]",
-  secondary:
-    "bg-card text-foreground border border-border-subtle hover:bg-accent-soft hover:border-accent/30",
-  ghost:
-    "bg-transparent text-foreground hover:bg-accent-soft",
+    "bg-ember text-ember-ink hover:bg-ember-hi shadow-[var(--shadow-cta-rest)] active:shadow-[var(--shadow-cta-press)]",
+  secondary: "border border-white/15 bg-white/[0.04] text-ink hover:bg-white/10",
+  ghost: "bg-transparent text-ink hover:bg-white/8",
 };
 
 const sizes: Record<Size, string> = {
-  sm: "h-10 px-4 text-label rounded-[var(--radius-button-sm)]",
-  md: "h-12 px-5 text-body rounded-[var(--radius-button)]",
-  lg: "h-14 px-7 text-body rounded-[var(--radius-button)]",
+  sm: "h-10 px-4 text-label",
+  md: "h-12 px-6 text-body",
+  lg: "h-14 px-7 text-body",
 };
 
 export const Button = forwardRef<HTMLElement, Props>(function Button(
