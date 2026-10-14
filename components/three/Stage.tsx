@@ -15,34 +15,40 @@ type Track = {
 const TAU = Math.PI * 2;
 
 /**
- * The journey, in scroll units of 1vh. The #journey wrapper is 800vh tall
- * (hero 100, lock 220, alerts 220, standby 260), so the scrubbed range is
- * 700vh and these positions line up with the chapter copy.
+ * The journey, in scroll units of 1vh. The #journey wrapper is 660vh tall
+ * (hero 100, lock 180, alerts 190, standby 190), so the scrubbed range is
+ * 560vh and these positions line up with the chapter copy. Every stretch
+ * has the phone moving; the holds are slow pushes, never dead stops.
  */
+export const JOURNEY_VH = { hero: 100, lock: 180, alerts: 190, standby: 190 } as const;
+const END = 560;
+
 const DESKTOP: Track = {
-  start: { nx: 0.1, ny: -0.14, h: 0.66, wMax: 0.9, rx: 0.1, ry: -0.42, rz: 0.08, visible: true },
+  // Hero: large, centred, leaning right and running off the bottom edge.
+  start: { nx: 0.03, ny: -0.6, h: 1.04, wMax: 0.35, rx: 0.04, ry: -0.36, rz: -0.2, visible: true },
   steps: [
-    { at: 0, dur: 90, to: { nx: 0.44, ny: 0, h: 0.86, rx: 0.04, ry: Math.PI, rz: 0.04 }, ease: "power1.inOut" },
-    { at: 90, dur: 80, to: { ry: TAU - 0.38, nx: 0.42, h: 0.8, rx: 0.06, rz: -0.02 }, ease: "power2.out" },
-    { at: 170, dur: 130, to: { ry: TAU - 0.22, ny: -0.04, nx: 0.4 } },
-    { at: 300, dur: 70, to: { ry: TAU + 0.28, rz: 0.06, nx: 0.38, rx: 0.1 }, ease: "power1.inOut" },
-    { at: 370, dur: 140, to: { ry: TAU + 0.12, ny: -0.02 } },
-    { at: 510, dur: 80, to: { rz: -Math.PI / 2, ry: TAU, rx: 0.16, nx: 0.18, ny: -0.12, h: 0.9, wMax: 0.6 }, ease: "power2.inOut" },
-    { at: 590, dur: 40, to: { h: 0.95, wMax: 0.64, ny: -0.1 } },
-    { at: 630, dur: 70, to: { ny: 1.8 } },
+    { at: 0, dur: 85, to: { nx: 0.42, ny: 0, h: 0.84, wMax: 0.9, rx: 0.04, ry: Math.PI, rz: 0.04 }, ease: "power1.inOut" },
+    { at: 85, dur: 65, to: { ry: TAU - 0.38, nx: 0.42, h: 0.8, rx: 0.06, rz: -0.02 }, ease: "power2.out" },
+    { at: 150, dur: 90, to: { ry: TAU - 0.1, ny: -0.05, nx: 0.37, h: 0.86 } },
+    { at: 240, dur: 60, to: { ry: TAU + 0.3, rz: 0.06, nx: 0.36, rx: 0.1 }, ease: "power1.inOut" },
+    { at: 300, dur: 100, to: { ry: TAU + 0.08, ny: 0, h: 0.92 } },
+    { at: 400, dur: 70, to: { rz: -Math.PI / 2, ry: TAU, rx: 0.12, nx: 0.2, ny: -0.08, h: 0.95, wMax: 0.62 }, ease: "power2.inOut" },
+    { at: 470, dur: 50, to: { h: 1.02, wMax: 0.68, ry: TAU - 0.14, rx: 0.2 } },
+    { at: 520, dur: 40, to: { ny: 1.9 } },
   ],
 };
 
 const MOBILE: Track = {
   start: { nx: 0.06, ny: 0.13, h: 0.42, wMax: 0.6, rx: 0.1, ry: -0.4, rz: 0.08, visible: true },
   steps: [
-    { at: 0, dur: 90, to: { ry: Math.PI, nx: 0, ny: 0.32, h: 0.48, rz: 0.03 }, ease: "power1.inOut" },
-    { at: 90, dur: 80, to: { ry: TAU - 0.26, ny: 0.32, h: 0.48 }, ease: "power2.out" },
-    { at: 170, dur: 130, to: { ry: TAU - 0.12 } },
-    { at: 300, dur: 70, to: { ry: TAU + 0.22, rz: 0.05 }, ease: "power1.inOut" },
-    { at: 370, dur: 140, to: { ry: TAU + 0.08 } },
-    { at: 510, dur: 80, to: { rz: -Math.PI / 2, ry: TAU, rx: 0.14, nx: 0, ny: 0.22, h: 0.9, wMax: 0.86 }, ease: "power2.inOut" },
-    { at: 630, dur: 70, to: { ny: 2.0 } },
+    { at: 0, dur: 85, to: { ry: Math.PI, nx: 0, ny: 0.32, h: 0.48, rz: 0.03 }, ease: "power1.inOut" },
+    { at: 85, dur: 65, to: { ry: TAU - 0.26, ny: 0.32, h: 0.48 }, ease: "power2.out" },
+    { at: 150, dur: 90, to: { ry: TAU - 0.1, h: 0.5 } },
+    { at: 240, dur: 60, to: { ry: TAU + 0.22, rz: 0.05 }, ease: "power1.inOut" },
+    { at: 300, dur: 100, to: { ry: TAU + 0.08, h: 0.52 } },
+    { at: 400, dur: 70, to: { rz: -Math.PI / 2, ry: TAU, rx: 0.14, nx: 0, ny: 0.22, h: 0.9, wMax: 0.78 }, ease: "power2.inOut" },
+    { at: 470, dur: 50, to: { wMax: 0.82, rx: 0.18 } },
+    { at: 520, dur: 40, to: { ny: 2.0 } },
   ],
 };
 
@@ -92,6 +98,7 @@ export function Stage({ locale }: { locale: ScreenLocale }) {
       cleanups.push(() => canvas.removeEventListener("webglcontextlost", onLost));
 
       stage.setAnchor("watch", document.querySelector<HTMLElement>('[data-anchor="watch"]'));
+      stage.setAnchor("tile", document.querySelector<HTMLElement>('[data-anchor="tile"]'));
       stage.setAnchor("day", document.querySelector<HTMLElement>('[data-anchor="day"]'));
 
       // Intro: the phone rises into the hero when the preloader lifts.
@@ -108,7 +115,6 @@ export function Stage({ locale }: { locale: ScreenLocale }) {
         Object.assign(s.phone, track.start);
         s.screen = 0;
         s.alerts = 0;
-        s.stand.rise = 0;
         const tl = gsap.timeline({
           defaults: { ease: "none" },
           scrollTrigger: {
@@ -125,12 +131,11 @@ export function Stage({ locale }: { locale: ScreenLocale }) {
         }
         // Screens: home -> lock while the back faces us, lock -> alerts as a
         // visible liquid wash, alerts -> StandBy during the turn to landscape.
-        tl.to(s, { screen: 1, duration: 16, ease: "none" }, 42);
-        tl.to(s, { screen: 2, duration: 55, ease: "power1.inOut" }, 305);
-        tl.to(s, { alerts: 1, duration: 110, ease: "none" }, 330);
-        tl.to(s, { screen: 3, duration: 45, ease: "power1.inOut" }, 522);
-        tl.to(s.stand, { rise: 1, duration: 60, ease: "power3.out" }, 540);
-        tl.set({}, {}, 700);
+        tl.to(s, { screen: 1, duration: 14, ease: "none" }, 38);
+        tl.to(s, { screen: 2, duration: 50, ease: "power1.inOut" }, 245);
+        tl.to(s, { alerts: 1, duration: 100, ease: "none" }, 270);
+        tl.to(s, { screen: 3, duration: 45, ease: "power1.inOut" }, 410);
+        tl.set({}, {}, END);
         return () => {
           stage?.setJourneyActive(true);
         };

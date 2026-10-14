@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { ChapterFx } from "@/components/motion/Parallax";
 import { Reveal } from "@/components/motion/Reveal";
 import { Split } from "@/components/motion/Split";
 import { DeviceFrame } from "@/components/screens/DeviceFrame";
@@ -9,7 +10,8 @@ import { cn } from "@/lib/utils/cn";
 /**
  * One stop on the phone's journey. The section is tall (its height is scroll
  * time for the 3D choreography in components/three/Stage.tsx); its copy is
- * sticky while the phone turns beside it.
+ * sticky while the phone turns beside it, drifting with the scroll and
+ * showing progress with an ember hairline.
  */
 export function Chapter({
   id,
@@ -18,6 +20,7 @@ export function Chapter({
   body,
   extra,
   layout = "bottom",
+  mood,
   locale,
   screen,
   screenAlt,
@@ -30,32 +33,38 @@ export function Chapter({
   extra?: ReactNode;
   /** "bottom": copy sits low-left. "split": title top-left, body low-left. */
   layout?: "bottom" | "split";
+  /** Atmosphere colour while this chapter is in view (see Atmosphere MOODS). */
+  mood: string;
   locale: ScreenLocale;
   screen: ScreenName;
   screenAlt: string;
   progress?: number;
 }) {
   return (
-    <section id={id} aria-labelledby={`${id}-title`} className={cn("relative z-10", heightClass)}>
+    <section id={id} data-mood={mood} aria-labelledby={`${id}-title`} className={cn("relative z-10", heightClass)}>
       <div className="sticky top-0 h-[100svh] overflow-hidden">
-        <Reveal
-          start="top 70%"
-          className={cn(
-            "container-page flex h-full flex-col pb-[108px] md:pb-14",
-            layout === "split" ? "justify-between pt-20 md:pt-16" : "justify-end",
-          )}
-        >
-          <Split
-            id={`${id}-title`}
-            text={title}
-            className="type-display text-[clamp(2.5rem,6.4vw,6.6rem)] text-ink"
-          />
-          <div className={cn("max-w-[34rem] space-y-5", layout === "bottom" && "mt-6 md:mt-8")}>
-            <p data-fade className="max-w-[38ch] text-[1.0625rem] leading-relaxed text-soft md:text-[1.125rem]">
-              {body}
-            </p>
-            {extra ? <div data-fade>{extra}</div> : null}
-          </div>
+        <Reveal start="top 70%" className="h-full">
+          <ChapterFx
+            className={cn(
+              "container-page flex h-full flex-col pb-[108px] md:pb-14",
+              layout === "split" ? "justify-between pt-20 md:pt-16" : "justify-end",
+            )}
+          >
+            <Split
+              id={`${id}-title`}
+              text={title}
+              className="type-display text-[clamp(2.5rem,6.8vw,7.4rem)] text-ink"
+            />
+            <div data-chapter-body className={cn("max-w-[34rem] space-y-5", layout === "bottom" && "mt-6 md:mt-8")}>
+              <p data-fade className="max-w-[38ch] text-[1.0625rem] leading-relaxed text-soft md:text-[1.125rem]">
+                {body}
+              </p>
+              {extra ? <div data-fade>{extra}</div> : null}
+              <span aria-hidden className="block h-px w-40 overflow-hidden bg-white/12">
+                <span data-chapter-fill className="block h-full origin-left scale-x-0 bg-ember" />
+              </span>
+            </div>
+          </ChapterFx>
         </Reveal>
 
         {/* Static stand-in for the 3D phone */}

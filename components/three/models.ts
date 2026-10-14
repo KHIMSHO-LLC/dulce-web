@@ -69,7 +69,7 @@ export function createPhone(): PhoneModel {
         metalness: 0,
         roughness: 0.05,
         transparent: true,
-        opacity: 0.12,
+        opacity: 0.07,
         depthWrite: false,
       }),
     ),
@@ -236,35 +236,4 @@ export function createWatch(): WatchModel {
   group.add(strap(1), strap(-1));
 
   return { group, screen, dispose: () => disposables.forEach((x) => x.dispose()) };
-}
-
-export type StandModel = { group: THREE.Group; dispose: () => void };
-
-/** A low graphite nightstand dock with a warm top and two cradle lips. */
-export function createStand(): StandModel {
-  const group = new THREE.Group();
-  const disposables: Array<{ dispose: () => void }> = [];
-  const track = <T extends { dispose: () => void }>(x: T) => (disposables.push(x), x);
-  const graphite = track(
-    new THREE.MeshPhysicalMaterial({ color: "#26221f", roughness: 0.34, metalness: 0.75, clearcoat: 0.6, clearcoatRoughness: 0.2 }),
-  );
-  const top = track(new THREE.MeshPhysicalMaterial({ color: "#4a3227", roughness: 0.8, sheen: 0.6, sheenColor: new THREE.Color("#8a5a44") }));
-  const led = track(new THREE.MeshBasicMaterial({ color: "#ff7a45", toneMapped: false }));
-
-  const base = new THREE.Mesh(track(new RoundedBoxGeometry(1.25, 0.09, 0.5, 6, 0.04)), graphite);
-  base.position.y = -0.045;
-  const pad = new THREE.Mesh(track(new RoundedBoxGeometry(1.15, 0.012, 0.42, 4, 0.006)), top);
-  pad.position.y = 0.004;
-  const back = new THREE.Mesh(track(new RoundedBoxGeometry(1.05, 0.5, 0.06, 6, 0.028)), graphite);
-  back.position.set(0, 0.22, -0.14);
-  back.rotation.x = -0.18;
-  const lipGeo = track(new RoundedBoxGeometry(0.16, 0.08, 0.06, 4, 0.025));
-  const lipL = new THREE.Mesh(lipGeo, graphite);
-  lipL.position.set(-0.42, 0.035, 0.06);
-  const lipR = lipL.clone();
-  lipR.position.x = 0.42;
-  const charge = new THREE.Mesh(track(new RoundedBoxGeometry(0.34, 0.008, 0.006, 2, 0.003)), led);
-  charge.position.set(0, -0.045, 0.252);
-  group.add(base, pad, back, lipL, lipR, charge);
-  return { group, dispose: () => disposables.forEach((x) => x.dispose()) };
 }

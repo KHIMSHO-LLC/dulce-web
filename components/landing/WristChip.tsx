@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { FluidLayer } from "@/components/fx/FluidLayer";
 import { gsap, prefersReducedMotion } from "@/components/motion/gsap";
 import { DeviceFrame } from "@/components/screens/DeviceFrame";
 import type { ScreenLocale } from "@/components/screens/strings";
@@ -125,10 +126,11 @@ export function WristChip({
     <section
       ref={sectionRef}
       id={SECTION.watch}
+      data-mood="ember"
       aria-labelledby="watch-title"
       className="relative z-10 h-[280vh] motion-reduce:h-auto"
     >
-      <div ref={stickyRef} className="sticky top-0 h-[100svh] overflow-hidden motion-reduce:relative">
+      <div ref={stickyRef} data-hover-host className="sticky top-0 h-[100svh] overflow-hidden motion-reduce:relative">
         {/* The ember field, revealed through an animated clip-path window */}
         <div
           ref={panelRef}
@@ -138,6 +140,10 @@ export function WristChip({
               "radial-gradient(60% 70% at 50% 45%, #ff8a5c 0%, #f36638 28%, #b8361f 58%, #5a1626 85%, #2a0d16 100%)",
           }}
         >
+          {/* Ink in the field: the pointer stirs it, slow plumes keep it moving. */}
+          <FluidLayer intensity={1.05} />
+          {/* A soft shade under the caption so text stays readable over the smoke. */}
+          <div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(60% 55% at 10% 100%, rgba(20,8,6,0.62), rgba(20,8,6,0) 70%)" }} />
           <div
             data-webgl-fallback
             aria-hidden

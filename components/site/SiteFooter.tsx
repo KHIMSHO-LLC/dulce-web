@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { CONTACT_EMAIL, SECTION } from "@/lib/site";
+import { WordmarkRise } from "@/components/motion/WordmarkRise";
 import { DropMark } from "./DropMark";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
@@ -26,7 +27,7 @@ export async function SiteFooter() {
   const linkClass = "text-soft transition-colors duration-200 hover:text-ink";
 
   return (
-    <footer className="relative z-10 overflow-hidden pt-24 md:pt-32">
+    <footer className="relative z-10 overflow-hidden pt-14 md:pt-20">
       <div className="container-page">
         <div className="grid gap-12 border-t border-white/10 pt-10 md:grid-cols-[1.3fr_1fr_1fr_1fr] md:gap-8">
           <div className="flex items-start gap-4">
@@ -88,12 +89,11 @@ export async function SiteFooter() {
       {/* Wordmark, cropped by the page edge. Decorative: the brand is named above. */}
       <div aria-hidden data-wordmark className="relative mt-10 flex select-none items-end gap-[3vw] px-[2vw] md:mt-16">
         <DropMark className="mb-[3.2vw] h-[17vw] shrink-0" />
-        <span
+        <WordmarkRise
+          text={t("wordmark")}
           className="block translate-y-[18%] text-[27vw] font-light leading-[0.78] tracking-[-0.06em] text-ink/90"
           style={{ fontVariationSettings: '"wdth" 108' }}
-        >
-          {t("wordmark")}
-        </span>
+        />
       </div>
     </footer>
   );

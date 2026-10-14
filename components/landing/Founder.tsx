@@ -7,7 +7,7 @@ import { SECTION } from "@/lib/site";
 export async function Founder() {
   const t = await getTranslations("home.founder");
   return (
-    <section id={SECTION.founder} aria-labelledby="founder-name" className="relative z-10 py-24 md:py-40">
+    <section id={SECTION.founder} data-mood="ember" aria-labelledby="founder-name" className="relative z-10 py-16 md:py-28">
       <div className="container-page">
         <figure className="max-w-[60rem]">
           <blockquote>

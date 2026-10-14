@@ -84,12 +84,13 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <Preloader />
       <Stage locale={loc} />
 
-      {/* The phone's journey: hero 100vh + chapters 220/220/260vh (see Stage.tsx). */}
+      {/* The phone's journey: hero 100vh + chapters 180/190/190vh (JOURNEY_VH in Stage.tsx). */}
       <div id="journey" className="relative">
         <Hero />
         <Chapter
           id={SECTION.lockScreen}
-          heightClass="h-[220vh]"
+          heightClass="h-[180vh]"
+          mood="dusk"
           title={t("lock.title")}
           body={t("lock.body")}
           locale={loc}
@@ -105,7 +106,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         />
         <Chapter
           id={SECTION.alerts}
-          heightClass="h-[220vh]"
+          heightClass="h-[190vh]"
+          mood="night"
           title={t("alerts.title")}
           body={t("alerts.body")}
           locale={loc}
@@ -116,8 +118,9 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         />
         <Chapter
           id={SECTION.standby}
-          heightClass="h-[260vh]"
+          heightClass="h-[190vh]"
           layout="split"
+          mood="deep"
           title={t("standby.title")}
           body={t("standby.body")}
           locale={loc}
@@ -139,7 +142,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <ReadingsCounter />
       <Family />
 
-      <section id={SECTION.day} aria-labelledby="day-title" className="relative z-10 py-24 md:py-36">
+      <section id={SECTION.day} data-mood="amber" aria-labelledby="day-title" className="relative z-10 py-16 md:py-24">
         <Reveal className="container-page">
           <Split id="day-title" text={t("day.title")} className="type-display text-[clamp(2.5rem,6vw,6rem)] text-ink" />
           <div data-fade className="mt-12 md:mt-16">

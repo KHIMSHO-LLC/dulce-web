@@ -3,15 +3,15 @@ import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment
 import { drawScreen, type ScreenName } from "@/components/screens/draw";
 import { LiveGlucose } from "@/components/screens/glucose";
 import type { ScreenLocale } from "@/components/screens/strings";
-import { PHONE_DIM, createPhone, createStand, createWatch } from "./models";
+import { PHONE_DIM, createPhone, createWatch } from "./models";
 
 /**
  * The page's single WebGL stage. One fixed canvas renders:
- *  - the journey phone (and its nightstand dock), positioned in viewport
- *    space from `state.phone`, which the scroll timeline tweens;
+ *  - the journey phone, positioned in viewport space from `state.phone`,
+ *    which the scroll timeline tweens;
  *  - anchored views: a model fitted into a DOM element's rect and scissored
- *    to it (the Watch chip, the "your day" phone), so 3D can live inside
- *    page layout and scroll with it.
+ *    to it (the hero Watch tile, the Watch panel, the "your day" phone), so
+ *    3D can live inside page layout, scroll with it and answer hover.
  * Rendering stops whenever nothing is on screen.
  */
 
@@ -35,15 +35,16 @@ export type StageState = {
   /** Float index into JOURNEY_SCREENS; the fraction is the dissolve. */
   screen: number;
   alerts: number;
-  stand: { rise: number };
   intro: { y: number; r: number };
   watch: { p: number };
   day: { index: number; t: number };
 };
 
+export type AnchorKey = "watch" | "tile" | "day";
+
 export type Stage = {
   state: StageState;
-  setAnchor: (key: "watch" | "day", el: HTMLElement | null) => void;
+  setAnchor: (key: AnchorKey, el: HTMLElement | null) => void;
   setJourneyActive: (on: boolean) => void;
   dispose: () => void;
 };
@@ -57,7 +58,8 @@ export function createStage(canvas: HTMLCanvasElement, locale: ScreenLocale, opt
     alpha: true,
     powerPreference: "high-performance",
   });
-  const maxDpr = opts.coarse ? 1.5 : 1.75;
+  // Full device resolution on desktop so screen text stays crisp.
+  const maxDpr = opts.coarse ? 1.75 : 2;
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, maxDpr));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -88,8 +90,6 @@ export function createStage(canvas: HTMLCanvasElement, locale: ScreenLocale, opt
   camera.position.set(0, 0, 6);
   const phone = createPhone();
   journeyScene.add(phone.group);
-  const stand = createStand();
-  journeyScene.add(stand.group);
 
   // --- Anchored: watch ---------------------------------------------------
   const watchScene = makeScene();
@@ -109,7 +109,6 @@ export function createStage(canvas: HTMLCanvasElement, locale: ScreenLocale, opt
     phone: { nx: 0.12, ny: -0.02, h: 0.78, wMax: 0.9, rx: 0.08, ry: -0.42, rz: 0.1, visible: true },
     screen: 0,
     alerts: 0,
-    stand: { rise: 0 },
     intro: { y: 0, r: 0 },
     watch: { p: 0 },
     day: { index: 0, t: 0 },
@@ -119,7 +118,8 @@ export function createStage(canvas: HTMLCanvasElement, locale: ScreenLocale, opt
   const live = new LiveGlucose();
   let now = new Date();
   const textures = new Map<string, Tex>();
-  const screenScale = opts.coarse ? 1.6 : 2;
+  // 3 px per point on desktop (1179x2556, the real iPhone resolution).
+  const screenScale = opts.coarse ? 2.2 : 3;
 
   const drawState = (progress?: number) => ({
     locale,
@@ -138,7 +138,7 @@ export function createStage(canvas: HTMLCanvasElement, locale: ScreenLocale, opt
       const c = document.createElement("canvas");
       const texture = new THREE.CanvasTexture(c);
       texture.colorSpace = THREE.SRGBColorSpace;
-      texture.anisotropy = Math.min(8, renderer.capabilities.getMaxAnisotropy());
+      texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
       texture.minFilter = THREE.LinearMipmapLinearFilter;
       t = { canvas: c, texture, drawnKey: "" };
       textures.set(key, t);
@@ -152,7 +152,7 @@ export function createStage(canvas: HTMLCanvasElement, locale: ScreenLocale, opt
     const progress = name === "alerts" ? Math.round(state.alerts * 60) / 60 : undefined;
     const key = `${live.value}|${now.getHours()}:${now.getMinutes()}|${progress ?? ""}`;
     if (t.drawnKey !== key) {
-      drawScreen(t.canvas, name, drawState(progress), name === "watch" ? screenScale * 1.1 : screenScale, () => {
+      drawScreen(t.canvas, name, drawState(progress), screenScale, () => {
         t.drawnKey = "";
         requestRender();
       });
@@ -185,24 +185,47 @@ export function createStage(canvas: HTMLCanvasElement, locale: ScreenLocale, opt
   if (!opts.coarse) window.addEventListener("pointermove", onPointer, { passive: true });
 
   // --- Anchors -----------------------------------------------------------
-  const anchors: Record<"watch" | "day", { el: HTMLElement | null; visible: boolean }> = {
-    watch: { el: null, visible: false },
-    day: { el: null, visible: false },
-  };
+  type Anchor = { el: HTMLElement | null; visible: boolean; hx: number; hy: number; hover: number; target: number };
+  const mk = (): Anchor => ({ el: null, visible: false, hx: 0, hy: 0, hover: 0, target: 0 });
+  const anchors: Record<AnchorKey, Anchor> = { watch: mk(), tile: mk(), day: mk() };
   const io = new IntersectionObserver(
     (entries) => {
       for (const e of entries) {
-        const key = (e.target as HTMLElement).dataset.anchor as "watch" | "day";
+        const key = (e.target as HTMLElement).dataset.anchor as AnchorKey;
         if (anchors[key]) anchors[key].visible = e.isIntersecting;
       }
       requestRender();
     },
     { rootMargin: "10% 0px" },
   );
-  const setAnchor = (key: "watch" | "day", el: HTMLElement | null) => {
-    if (anchors[key].el) io.unobserve(anchors[key].el!);
-    anchors[key].el = el;
-    if (el) io.observe(el);
+  // Hover is read from the anchor's own hover target (the card around it).
+  const hoverOff: Array<() => void> = [];
+  const setAnchor = (key: AnchorKey, el: HTMLElement | null) => {
+    const a = anchors[key];
+    if (a.el) io.unobserve(a.el);
+    a.el = el;
+    if (!el) return;
+    io.observe(el);
+    const host = (el.closest("[data-hover-host]") as HTMLElement | null) ?? el;
+    const move = (e: PointerEvent) => {
+      const r = host.getBoundingClientRect();
+      a.hx = ((e.clientX - r.left) / r.width) * 2 - 1;
+      a.hy = ((e.clientY - r.top) / r.height) * 2 - 1;
+      a.target = 1;
+      requestRender();
+    };
+    const leave = () => {
+      a.target = 0;
+      a.hx = 0;
+      a.hy = 0;
+      requestRender();
+    };
+    host.addEventListener("pointermove", move);
+    host.addEventListener("pointerleave", leave);
+    hoverOff.push(() => {
+      host.removeEventListener("pointermove", move);
+      host.removeEventListener("pointerleave", leave);
+    });
   };
 
   let journeyActive = true;
@@ -249,19 +272,16 @@ export function createStage(canvas: HTMLCanvasElement, locale: ScreenLocale, opt
     pointer.y += (pointer.ty - pointer.y) * 0.06;
     const floatY = Math.sin(t * 0.9) * 0.012;
 
+    // A slow breathing sway keeps the phone alive while the copy holds still.
+    const sway = Math.sin(t * 0.45) * 0.035;
+
     phone.group.scale.setScalar(scale);
     phone.group.position.set(p.nx * halfW, (p.ny + state.intro.y) * halfH + floatY * scale, 0);
-    phone.group.rotation.set(p.rx + pointer.y * 0.08 + state.intro.r * 0.6, p.ry + pointer.x * 0.12 + state.intro.r, rz);
-
-    // Dock sits under the phone's landscape bottom edge and rises into place.
-    const rise = state.stand.rise;
-    stand.group.visible = rise > 0.001;
-    if (stand.group.visible) {
-      stand.group.scale.setScalar(scale);
-      const bottom = phone.group.position.y - (PHONE_DIM.w / 2) * scale * Math.cos(p.rx) - 0.012 * scale;
-      stand.group.position.set(phone.group.position.x, bottom - (1 - rise) * 2.2 * halfH, -0.05 * scale);
-      stand.group.rotation.set(p.rx * 0.6, 0, 0);
-    }
+    phone.group.rotation.set(
+      p.rx + pointer.y * 0.08 + state.intro.r * 0.6,
+      p.ry + pointer.x * 0.14 + state.intro.r + sway,
+      rz + sway * 0.3,
+    );
 
     pickScreens(JOURNEY_SCREENS, state.screen, "", phone.screen.material);
     phone.screen.material.uniforms.time.value = t;
@@ -271,29 +291,48 @@ export function createStage(canvas: HTMLCanvasElement, locale: ScreenLocale, opt
     renderer.render(journeyScene, camera);
   }
 
-  function renderAnchored(key: "watch" | "day", t: number) {
+  const fitWatch = (rect: DOMRect, heightFrac: number, lift: number) => {
+    watchCam.aspect = rect.width / rect.height;
+    watchCam.updateProjectionMatrix();
+    const { halfH, halfW } = halfExtents(watchCam);
+    const s = Math.min((halfH * 2 * heightFrac) / 0.5, (halfW * 2 * 0.62) / 0.42);
+    watch.group.scale.setScalar(s);
+    watch.group.position.set(0, lift * halfH, 0);
+  };
+
+  function renderAnchored(key: AnchorKey, t: number) {
     const a = anchors[key];
     if (!a.el || !a.visible) return;
     const rect = a.el.getBoundingClientRect();
     if (rect.bottom < 0 || rect.top > vh || rect.width < 2 || rect.height < 2) return;
+    a.hover += (a.target - a.hover) * 0.08;
     const x = rect.left;
     const y = vh - rect.bottom; // GL origin is bottom-left
     renderer.setViewport(x, y, rect.width, rect.height);
     renderer.setScissor(x, y, rect.width, rect.height);
     renderer.setScissorTest(true);
+    const h = a.hover;
 
-    if (key === "watch") {
-      const p = state.watch.p;
-      watchCam.aspect = rect.width / rect.height;
-      watchCam.updateProjectionMatrix();
-      const { halfH, halfW } = halfExtents(watchCam);
-      // Fit by height on wide windows, by width on narrow ones, and lift it on
-      // phones so the caption below keeps its space.
-      const narrow = rect.width < 640;
-      const s = Math.min((halfH * 2 * (narrow ? 0.4 : 0.5)) / 0.5, (halfW * 2 * 0.62) / 0.42);
-      watch.group.scale.setScalar(s);
-      watch.group.position.set(0, (narrow ? 0.3 : -0.02) * halfH, 0);
-      watch.group.rotation.set(0.42 - p * 0.24, -0.8 + p * 1.3 + pointer.x * 0.1, -0.1 + p * 0.14);
+    if (key === "watch" || key === "tile") {
+      if (key === "watch") {
+        const p = state.watch.p;
+        const narrow = rect.width < 640;
+        fitWatch(rect, narrow ? 0.4 : 0.5, narrow ? 0.3 : -0.02);
+        watch.group.rotation.set(
+          0.42 - p * 0.24 + a.hy * 0.22 * h,
+          -0.8 + p * 1.3 + pointer.x * 0.1 + a.hx * 0.32 * h,
+          -0.1 + p * 0.14,
+        );
+      } else {
+        // Hero tile: idles in a slow turn; on hover it squares up to the
+        // pointer and steps forward.
+        fitWatch(rect, 0.62 + 0.1 * h, 0.04);
+        watch.group.rotation.set(
+          0.25 * (1 - h) + a.hy * 0.35 * h,
+          Math.sin(t * 0.6) * 0.5 * (1 - h) + a.hx * 0.6 * h,
+          0,
+        );
+      }
       const wm = watch.screen.material;
       wm.uniforms.mapA.value = ensureDrawn("watch");
       wm.uniforms.mapB.value = ensureDrawn("watch");
@@ -304,9 +343,15 @@ export function createStage(canvas: HTMLCanvasElement, locale: ScreenLocale, opt
       dayCam.updateProjectionMatrix();
       const { halfH, halfW } = halfExtents(dayCam);
       const s = Math.min((halfH * 2 * 0.84) / PHONE_DIM.h, (halfW * 2 * 0.7) / PHONE_DIM.w);
-      dayPhone.group.scale.setScalar(s);
+      // Scroll turns the phone as the card travels through the viewport.
+      const travel = (rect.top + rect.height / 2) / vh - 0.5;
+      dayPhone.group.scale.setScalar(s * (1 + 0.04 * h));
       dayPhone.group.position.set(0, Math.sin(t * 0.8) * 0.01, 0);
-      dayPhone.group.rotation.set(0.06 + pointer.y * 0.05, -0.32 + Math.sin(t * 0.35) * 0.08 + pointer.x * 0.1, 0.04);
+      dayPhone.group.rotation.set(
+        0.06 - travel * 0.3 + a.hy * 0.25 * h,
+        -0.32 + travel * 0.9 + a.hx * 0.45 * h,
+        0.04 + travel * 0.08,
+      );
       const m = dayPhone.screen.material;
       const from = DAY_SCREENS[Math.max(0, Math.min(DAY_SCREENS.length - 1, state.day.index))];
       const prev = (m.userData.prev as ScreenName) ?? from;
@@ -341,10 +386,11 @@ export function createStage(canvas: HTMLCanvasElement, locale: ScreenLocale, opt
     renderer.clear();
     const showJourney = journeyActive && state.phone.visible;
     if (showJourney) renderJourney(t);
+    renderAnchored("tile", t);
     renderAnchored("watch", t);
     renderAnchored("day", t);
 
-    const anyVisible = showJourney || anchors.watch.visible || anchors.day.visible;
+    const anyVisible = showJourney || anchors.watch.visible || anchors.day.visible || anchors.tile.visible;
     if (anyVisible && !document.hidden) {
       running = true;
       raf = requestAnimationFrame(frame);
@@ -375,6 +421,7 @@ export function createStage(canvas: HTMLCanvasElement, locale: ScreenLocale, opt
       disposed = true;
       cancelAnimationFrame(raf);
       io.disconnect();
+      hoverOff.forEach((fn) => fn());
       window.removeEventListener("resize", resize);
       window.removeEventListener("pointermove", onPointer);
       document.removeEventListener("visibilitychange", onVisibility);
@@ -382,7 +429,6 @@ export function createStage(canvas: HTMLCanvasElement, locale: ScreenLocale, opt
       phone.dispose();
       dayPhone.dispose();
       watch.dispose();
-      stand.dispose();
       envTex.dispose();
       pmrem.dispose();
       renderer.dispose();

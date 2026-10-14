@@ -1,4 +1,6 @@
 import { getLocale, getTranslations } from "next-intl/server";
+import { TiltCard } from "@/components/fx/TiltCard";
+import { Parallax } from "@/components/motion/Parallax";
 import { ScrubWords } from "@/components/motion/ScrubWords";
 import { DeviceFrame } from "@/components/screens/DeviceFrame";
 import type { ScreenName } from "@/components/screens/draw";
@@ -23,7 +25,7 @@ export async function Family() {
   const cards = t.raw("cards") as Card[];
 
   return (
-    <section id={SECTION.family} className="relative z-10 py-24 md:py-36">
+    <section id={SECTION.family} data-mood="rose" className="relative z-10 overflow-x-clip py-16 md:py-24">
       <div className="container-page">
         <ScrubWords
           as="h2"
@@ -31,18 +33,20 @@ export async function Family() {
           className="type-display max-w-[24ch] text-[clamp(2rem,4.6vw,4.5rem)] leading-[1.04] text-ink"
         />
       </div>
-      <div className="mt-14 pl-5 md:mt-20 md:pl-8 xl:pl-11 [@media(min-width:1440px)]:pl-[calc((100vw-90rem)/2+2.75rem)]">
+      <div className="mt-12 pl-5 md:mt-16 md:pl-8 xl:pl-[3vw]">
+        <Parallax y={0} x={-220}>
         <DragCarousel dragLabel={t("drag")} prevLabel={t("prev")} nextLabel={t("next")}>
           {cards.map((card, i) => (
             <article key={card.title} className="w-[min(78vw,22rem)] shrink-0 select-none">
-              <div
+              <TiltCard
                 className="relative aspect-[4/5] overflow-hidden rounded-[28px] border border-white/8"
-                style={{ background: FIELDS[i % FIELDS.length] }}
+                max={6}
               >
-                <div className="absolute left-1/2 top-[12%] w-[64%] -translate-x-1/2">
+                <div className="absolute inset-0 transition-transform duration-700 ease-[var(--ease-out-expo)] group-data-[hover]/tilt:scale-[1.06]" style={{ background: FIELDS[i % FIELDS.length] }} />
+                <div className="absolute left-1/2 top-[12%] w-[64%] -translate-x-1/2" data-depth="1.2">
                   <DeviceFrame name={card.screen} locale={locale} label={card.alt} />
                 </div>
-              </div>
+              </TiltCard>
               <h3 className="mt-5 text-[1.5rem] font-light tracking-[-0.02em] text-ink" style={{ fontVariationSettings: '"wdth" 104' }}>
                 {card.title}
               </h3>
@@ -50,6 +54,7 @@ export async function Family() {
             </article>
           ))}
         </DragCarousel>
+        </Parallax>
         <p className="mt-6 max-w-[60ch] pr-5 text-label text-soft">{t("pro")}</p>
       </div>
     </section>

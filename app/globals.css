@@ -105,6 +105,8 @@
   }
 
   body {
+    /* Edge-bleeding rows (the family carousel) must never widen the page. */
+    overflow-x: clip;
     background: var(--color-ground);
     color: var(--color-ink);
     font-family: var(--font-sans);
@@ -147,6 +149,29 @@
   }
 }
 
+/* Chapter moods: registered so the atmosphere can glide between colours. */
+@property --mood-a {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #ff8c5a;
+}
+@property --mood-b {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #c2410c;
+}
+@property --mood-c {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #7a1e30;
+}
+.atmosphere {
+  transition:
+    --mood-a 1.6s cubic-bezier(0.4, 0, 0.2, 1),
+    --mood-b 1.6s cubic-bezier(0.4, 0, 0.2, 1),
+    --mood-c 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* Lenis smooth scroll (https://github.com/darkroomengineering/lenis) */
 html.lenis,
 html.lenis body {
@@ -160,9 +185,10 @@ html.lenis body {
 }
 
 @layer utilities {
+  /* Full-bleed like the reference: content anchors to the viewport edges. */
   .container-page {
     width: 100%;
-    max-width: 90rem;
+    max-width: 128rem;
     margin-inline: auto;
     padding-inline: 1.25rem;
   }
@@ -173,7 +199,7 @@ html.lenis body {
   }
   @media (min-width: 1280px) {
     .container-page {
-      padding-inline: 2.75rem;
+      padding-inline: 3vw;
     }
   }
 
@@ -274,6 +300,19 @@ html.webgl-on [data-webgl-fallback] {
   animation: beam-drift 28s ease-in-out infinite;
 }
 
+@keyframes beam-drift-alt {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(22deg);
+  }
+  50% {
+    transform: translate3d(6%, -3%, 0) rotate(26deg);
+  }
+}
+.beam-drift-alt {
+  animation: beam-drift-alt 34s ease-in-out infinite;
+}
+
 @keyframes marquee {
   from {
     transform: translate3d(0, 0, 0);
@@ -298,7 +337,8 @@ details[data-faq][open]::details-content {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .beam-drift {
+  .beam-drift,
+  .beam-drift-alt {
     animation: none;
   }
   .preloader {

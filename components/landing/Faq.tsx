@@ -14,13 +14,13 @@ export async function Faq() {
   const items = t.raw("items") as FaqItem[];
 
   return (
-    <section id={SECTION.faq} aria-labelledby="faq-title" className="relative z-10 py-20 md:py-32">
+    <section id={SECTION.faq} data-mood="dusk" aria-labelledby="faq-title" className="relative z-10 py-12 md:py-20">
       <h2 id="faq-title" className="sr-only">
         {t("marquee")}
       </h2>
       <Marquee text={t("marquee")} />
 
-      <Reveal className="container-page mt-12 grid gap-12 md:mt-20 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] md:gap-20">
+      <Reveal className="container-page mt-10 grid gap-12 md:mt-14 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] md:gap-20">
         <div id={SECTION.contact} className="scroll-mt-24 space-y-6">
           <p data-fade className="max-w-[34ch] text-[1.125rem] leading-relaxed text-soft">
             {t("intro")}

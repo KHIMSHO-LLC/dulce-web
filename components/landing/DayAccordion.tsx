@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { gsap, ScrollTrigger, prefersReducedMotion } from "@/components/motion/gsap";
+import { FluidLayer } from "@/components/fx/FluidLayer";
+import { Parallax } from "@/components/motion/Parallax";
 import { DeviceFrame } from "@/components/screens/DeviceFrame";
 import type { ScreenName } from "@/components/screens/draw";
 import type { ScreenLocale } from "@/components/screens/strings";
@@ -123,13 +125,16 @@ export function DayAccordion({
         })}
       </ul>
 
+      <Parallax y={70}>
       <div
+        data-hover-host
         className="relative aspect-[5/6] overflow-hidden rounded-[28px] border border-white/8 md:aspect-[6/5]"
         style={{
           background:
             "radial-gradient(70% 80% at 70% 30%, rgba(255,138,92,0.9), rgba(243,102,56,0.55) 35%, rgba(120,30,45,0.55) 70%, #1a0d10 100%)",
         }}
       >
+        <FluidLayer intensity={1} />
         <div data-anchor="day" aria-hidden className="absolute inset-0" />
         <div data-webgl-fallback className="absolute left-1/2 top-[8%] w-[46%] -translate-x-1/2 md:w-[34%]">
           {items.map((item, i) => (
@@ -145,6 +150,7 @@ export function DayAccordion({
           ))}
         </div>
       </div>
+      </Parallax>
     </div>
   );
 }

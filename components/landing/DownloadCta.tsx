@@ -1,4 +1,5 @@
 import { getLocale, getTranslations } from "next-intl/server";
+import { Parallax } from "@/components/motion/Parallax";
 import { Reveal } from "@/components/motion/Reveal";
 import { Split } from "@/components/motion/Split";
 import { WaitlistForm } from "@/components/forms/WaitlistForm";
@@ -11,13 +12,15 @@ export async function DownloadCta() {
   const t = await getTranslations("home.download");
 
   return (
-    <section id={SECTION.download} aria-labelledby="download-title" className="relative z-10 py-24 md:py-36">
+    <section id={SECTION.download} data-mood="ember" aria-labelledby="download-title" className="relative z-10 py-16 md:py-28">
       <Reveal className="container-page text-center">
-        <Split
-          id="download-title"
-          text={t("title")}
-          className="type-display mx-auto text-[clamp(3rem,8.6vw,9rem)] text-ink"
-        />
+        <Parallax y={90} scale={[0.92, 1.04]}>
+          <Split
+            id="download-title"
+            text={t("title")}
+            className="type-display mx-auto text-[clamp(3rem,9.4vw,10rem)] text-ink"
+          />
+        </Parallax>
         <p data-fade className="mx-auto mt-8 max-w-[40ch] text-[1.125rem] leading-relaxed text-soft">
           {t("sub")}
         </p>
