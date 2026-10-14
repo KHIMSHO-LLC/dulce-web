@@ -13,28 +13,28 @@ function resendClient(): Resend | null {
 }
 
 const subjects = {
-  es: "Bienvenido a la lista de Dulce",
-  en: "Welcome to the Dulce waitlist",
+  es: "Te avisaremos cuando Dulce llegue a Android",
+  en: "We'll tell you when Dulce reaches Android",
 } as const;
 
 const bodies = {
   es: (email: string) => `¡Hola!
 
-Te hemos añadido a la lista de espera de Dulce (${email}).
+Hemos apuntado ${email} a la lista de Dulce para Android.
 
-Te avisaremos en cuanto la app esté lista para que la pruebes. Mientras tanto, si quieres ser de los primeros en probarla, échale un vistazo a la beta privada en https://dulceglucosa.com/beta.
+Te escribiremos en cuanto la versión para Android esté lista. Si tienes un iPhone, Dulce ya está disponible gratis en el App Store: https://apps.apple.com/app/id6770694596
 
-Gracias por confiar en nosotros.
-— El equipo de Dulce
+Gracias por tu interés.
+El equipo de Dulce
 hola@dulceglucosa.com`,
   en: (email: string) => `Hi!
 
-You're on the Dulce waitlist (${email}).
+We've added ${email} to the Dulce for Android list.
 
-We'll let you know as soon as the app is ready for you to try. If you want to be one of the first, check out the private beta at https://dulceglucosa.com/en/beta.
+We'll email you as soon as the Android version is ready. If you have an iPhone, Dulce is already free on the App Store: https://apps.apple.com/app/id6770694596
 
-Thanks for trusting us.
-— The Dulce team
+Thanks for your interest.
+The Dulce team
 hola@dulceglucosa.com`,
 } as const;
 

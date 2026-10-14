@@ -50,58 +50,53 @@ export default async function FollowInvitePage({ params }: FollowPageProps) {
   const clean = normalizeCode(code ?? "");
 
   return (
-    <div className="container-page py-16 md:py-24">
-      <div className="max-w-xl mx-auto text-center">
-        <p className="text-caption font-semibold uppercase tracking-wider text-accent">
-          {t("eyebrow")}
-        </p>
-        <h1 className="text-display-lg md:text-display-xl tracking-tight font-bold text-foreground mt-2">
-          {t("headline")}
-        </h1>
-        <p className="mt-4 text-headline text-muted leading-snug">{t("body")}</p>
+    <div className="container-page relative z-10 pb-16 pt-28 md:pt-36">
+      <div className="mx-auto max-w-2xl">
+        <h1 className="type-display text-[clamp(2.4rem,5.4vw,4.6rem)] text-ink">{t("headline")}</h1>
+        <p className="mt-6 max-w-[48ch] text-[1.125rem] leading-relaxed text-soft">{t("body")}</p>
 
         {clean ? (
-          <div className="mt-10 rounded-[var(--radius-card-xl)] bg-card border border-border-subtle p-6 md:p-8 shadow-[var(--shadow-card-rest)]">
-            <p className="text-caption font-semibold uppercase tracking-wider text-muted">
-              {t("codeLabel")}
-            </p>
-            <p className="mt-2 font-mono text-display-lg font-bold tracking-[0.3em] text-foreground">
-              {clean}
-            </p>
+          <div
+            className="mt-10 rounded-[28px] border border-ember/30 p-7 md:p-9"
+            style={{ background: "radial-gradient(90% 120% at 100% 100%, rgba(243,102,56,0.28), rgba(243,102,56,0) 70%), #1a1310" }}
+          >
+            <p className="text-label text-soft">{t("codeLabel")}</p>
+            <p className="type-numeral mt-3 text-[clamp(3rem,9vw,5.5rem)] leading-none tracking-[0.18em] text-ink">{clean}</p>
           </div>
         ) : (
-          <p className="mt-10 text-body text-muted">{t("noCode")}</p>
+          <p className="mt-10 text-body text-soft">{t("noCode")}</p>
         )}
 
-        <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           {clean ? (
             <a
               href={`dulce://f/${clean}`}
-              className="inline-flex items-center justify-center rounded-full bg-accent text-white font-semibold px-6 py-3 text-body"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-ember px-6 font-semibold text-ember-ink transition-colors hover:bg-ember-hi"
             >
               {t("openApp")}
             </a>
           ) : null}
           <a
             href={APP_STORE_URL}
-            className="inline-flex items-center justify-center rounded-full border border-border-subtle text-foreground font-semibold px-6 py-3 text-body"
+            className="inline-flex h-12 items-center justify-center rounded-full border border-white/15 px-6 font-semibold text-ink transition-colors hover:bg-white/8"
           >
             {t("getApp")}
           </a>
         </div>
 
-        <section className="mt-14 text-left max-w-md mx-auto">
-          <h2 className="text-headline font-bold tracking-tight text-foreground">
+        <section className="mt-16 max-w-md">
+          <h2 className="text-[1.5rem] font-light tracking-[-0.02em] text-ink" style={{ fontVariationSettings: '"wdth" 104' }}>
             {t("steps.title")}
           </h2>
-          <ol className="mt-4 space-y-3 list-decimal list-inside text-body text-foreground">
-            <li className="leading-relaxed">{t("steps.one")}</li>
-            <li className="leading-relaxed">{t("steps.two")}</li>
-            <li className="leading-relaxed">{t("steps.three")}</li>
+          <ol className="mt-5 space-y-4">
+            {(["one", "two", "three"] as const).map((k, i) => (
+              <li key={k} className="flex gap-4 text-body leading-relaxed text-soft">
+                <span className="type-numeral w-5 shrink-0 text-ember">{i + 1}</span>
+                <span>{t(`steps.${k}`)}</span>
+              </li>
+            ))}
           </ol>
-          <p className="mt-6 text-caption text-muted leading-relaxed">
-            {t("expiryNote")}
-          </p>
+          <p className="mt-6 text-label leading-relaxed text-soft">{t("expiryNote")}</p>
         </section>
       </div>
     </div>

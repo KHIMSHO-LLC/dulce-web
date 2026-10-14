@@ -1,219 +1,350 @@
 @import "tailwindcss";
 
+/*
+ * Dulce, night edition.
+ * Warm-black ground, one ember accent for brand and action, and the three
+ * glucose states (in range / high / low) reserved for glucose data only.
+ * Shared with the promo film's system in the sibling `dulce/DESIGN.md`.
+ */
 @theme inline {
-  /* Brand colors — ported from dulce-app/tailwind.config.js */
-  --color-background: #FBF7F2;
-  --color-card: #FFFFFF;
-  --color-foreground: #1A1A1A;
-  --color-muted: #595959;
-  --color-border-subtle: #EDE7E0;
-  --color-accent: #C2410C;
-  --color-accent-hover: #A8350A;
-  --color-accent-soft: #FDF1EB;
+  /* Ground and surfaces */
+  --color-ground: #0d0c0b;
+  --color-ground-2: #141210;
+  --color-glass: #1d1916;
+  --color-raise: #29241f;
+  --color-line: #2a2521;
 
-  /* State colors — kept for badges/pills; not used to render glucose */
-  --color-state-in-range: #2E7D32;
-  --color-state-slightly-high: #C77700;
-  --color-state-high: #C2410C;
-  --color-state-slightly-low: #B45309;
-  --color-state-low: #991B1B;
+  /* Text */
+  --color-ink: #f6f0ea;
+  --color-soft: #cfc6bd;
+  --color-mute: #aa9f94;
+
+  /* Brand */
+  --color-ember: #f36638;
+  --color-ember-hi: #ff7d52;
+  --color-ember-deep: #c2410c;
+  --color-ember-ink: #1b0c06;
+
+  /* Glucose states (fill / text-on-dark) */
+  --color-range: #66c45b;
+  --color-range-text: #7fd970;
+  --color-high: #f5a524;
+  --color-high-text: #ffb638;
+  --color-low: #e8262b;
+  --color-low-text: #ff544c;
+
+  /* Legacy names still read by forms, legal and setup pages */
+  --color-background: var(--color-ground);
+  --color-card: var(--color-glass);
+  --color-foreground: var(--color-ink);
+  --color-muted: var(--color-mute);
+  --color-border-subtle: var(--color-line);
+  --color-accent: var(--color-ember);
+  --color-accent-hover: var(--color-ember-hi);
+  --color-accent-soft: rgba(243, 102, 56, 0.12);
+  --color-state-in-range: var(--color-range-text);
+  --color-state-low: var(--color-low-text);
 
   /* Typography */
-  --font-sans: var(--font-nunito), system-ui, -apple-system, "SF Pro Rounded", sans-serif;
+  --font-sans: var(--font-archivo), system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --text-display-xl: 3rem;
-  --text-display-xl--line-height: 1.08;
-  --text-display-xl--letter-spacing: -0.028em;
-  --text-display-xl--font-weight: 600;
+  --text-display-xl--line-height: 1.02;
+  --text-display-xl--letter-spacing: -0.03em;
+  --text-display-xl--font-weight: 300;
 
   --text-display-lg: 2.25rem;
-  --text-display-lg--line-height: 1.1;
+  --text-display-lg--line-height: 1.06;
   --text-display-lg--letter-spacing: -0.025em;
-  --text-display-lg--font-weight: 600;
+  --text-display-lg--font-weight: 300;
 
   --text-display: 1.75rem;
-  --text-display--line-height: 1.15;
-  --text-display--letter-spacing: -0.025em;
-  --text-display--font-weight: 600;
+  --text-display--line-height: 1.12;
+  --text-display--letter-spacing: -0.02em;
+  --text-display--font-weight: 400;
 
-  --text-headline: 1.375rem;
-  --text-headline--line-height: 1.3;
-  --text-headline--font-weight: 600;
+  --text-headline: 1.25rem;
+  --text-headline--line-height: 1.35;
+  --text-headline--font-weight: 400;
 
   --text-body: 1rem;
-  --text-body--line-height: 1.5;
+  --text-body--line-height: 1.6;
 
   --text-label: 0.875rem;
-  --text-label--line-height: 1.4;
+  --text-label--line-height: 1.45;
 
   --text-caption: 0.75rem;
-  --text-caption--line-height: 1.3;
+  --text-caption--line-height: 1.4;
 
-  /* Radii */
-  --radius-card: 16px;
-  --radius-card-lg: 20px;
-  --radius-card-xl: 22px;
-  --radius-button: 16px;
-  --radius-button-sm: 12px;
+  /* One radius scale: pills for controls, 28px cards, 18px inner tiles */
   --radius-pill: 999px;
+  --radius-card: 18px;
+  --radius-card-lg: 28px;
+  --radius-card-xl: 28px;
+  --radius-button: 999px;
+  --radius-button-sm: 999px;
   --radius-badge: 8px;
 
-  /* Shadows */
-  --shadow-card-rest: 0 4px 24px rgba(255, 200, 180, 0.18), 0 1px 2px rgba(60, 50, 45, 0.04);
-  --shadow-card-elevated: 0 8px 32px rgba(255, 200, 180, 0.22), 0 1px 2px rgba(60, 50, 45, 0.05);
-  --shadow-cta-rest: 0 8px 24px rgba(194, 65, 12, 0.24), 0 1px 2px rgba(60, 50, 45, 0.06);
-  --shadow-cta-press: 0 1px 4px rgba(194, 65, 12, 0.20);
+  /* Soft, deep, downward shadows only */
+  --shadow-card-rest: 0 30px 60px -30px rgba(0, 0, 0, 0.8);
+  --shadow-card-elevated: 0 40px 80px -30px rgba(0, 0, 0, 0.9);
+  --shadow-cta-rest: 0 18px 40px -16px rgba(243, 102, 56, 0.65);
+  --shadow-cta-press: 0 6px 16px -8px rgba(243, 102, 56, 0.6);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @layer base {
   html {
-    color-scheme: light;
+    color-scheme: dark;
+    background: var(--color-ground);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scrollbar-color: #3a332d var(--color-ground);
   }
 
   body {
-    background: var(--color-background);
-    color: var(--color-foreground);
+    /* Edge-bleeding rows (the family carousel) must never widen the page. */
+    overflow-x: clip;
+    background: var(--color-ground);
+    color: var(--color-ink);
     font-family: var(--font-sans);
-    font-feature-settings: "cv11", "ss01";
+    font-variation-settings: "wdth" 100;
   }
 
   ::selection {
-    background: rgba(194, 65, 12, 0.18);
-    color: var(--color-foreground);
+    background: rgba(243, 102, 56, 0.35);
+    color: var(--color-ink);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid var(--color-ember);
     outline-offset: 3px;
-    border-radius: 4px;
+    border-radius: 6px;
+  }
+
+  input,
+  textarea,
+  select {
+    caret-color: var(--color-ember);
+  }
+
+  a {
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-ground);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3a332d;
+    border-radius: 999px;
+    border: 2px solid var(--color-ground);
   }
 }
 
+/* Chapter moods: registered so the atmosphere can glide between colours. */
+@property --mood-a {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #ff8c5a;
+}
+@property --mood-b {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #c2410c;
+}
+@property --mood-c {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #7a1e30;
+}
+.atmosphere {
+  transition:
+    --mood-a 1.6s cubic-bezier(0.4, 0, 0.2, 1),
+    --mood-b 1.6s cubic-bezier(0.4, 0, 0.2, 1),
+    --mood-c 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Lenis smooth scroll (https://github.com/darkroomengineering/lenis) */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+.lenis [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
 @layer utilities {
+  /* Full-bleed like the reference: content anchors to the viewport edges. */
   .container-page {
     width: 100%;
-    max-width: 76rem;
+    max-width: 128rem;
     margin-inline: auto;
     padding-inline: 1.25rem;
   }
-
   @media (min-width: 768px) {
     .container-page {
       padding-inline: 2rem;
     }
   }
-
-  .bg-warm-gradient {
-    background: linear-gradient(
-      180deg,
-      #FBF7F2 0%,
-      #FFF6EE 100%
-    );
+  @media (min-width: 1280px) {
+    .container-page {
+      padding-inline: 3vw;
+    }
   }
 
-  /* Scroll-reveal: elements start hidden and slide up when .is-visible
-     is added by the Reveal client component. */
-  .reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition:
-      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-    transition-delay: var(--reveal-delay, 0ms);
-    will-change: opacity, transform;
+  /* Display voice: Archivo light, a touch wide, tight tracking */
+  .type-display {
+    font-weight: 300;
+    font-variation-settings: "wdth" 104;
+    letter-spacing: -0.035em;
+    line-height: 0.96;
   }
 
-  .reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
+  /* Numeral voice: Archivo condensed, tabular */
+  .type-numeral {
+    font-weight: 600;
+    font-variation-settings: "wdth" 76;
+    font-feature-settings: "tnum" 1;
+    letter-spacing: -0.015em;
   }
 
-  .float-slow {
-    animation: float-slow 7s ease-in-out infinite;
+  .tabular {
+    font-feature-settings: "tnum" 1;
   }
 
-  .screenshot-card {
-    border-radius: 28px;
-    overflow: hidden;
+  .glass {
+    background: linear-gradient(180deg, rgba(44, 37, 32, 0.72), rgba(26, 22, 19, 0.72));
+    border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow:
-      0 24px 60px -18px rgba(40, 25, 15, 0.35),
-      0 2px 8px rgba(40, 25, 15, 0.08);
-    transition:
-      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-      box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      0 30px 60px -30px rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(18px) saturate(1.2);
+    -webkit-backdrop-filter: blur(18px) saturate(1.2);
   }
 
-  .screenshot-card:hover {
-    transform: translateY(-8px) scale(1.015);
-    box-shadow:
-      0 36px 80px -20px rgba(40, 25, 15, 0.45),
-      0 4px 12px rgba(40, 25, 15, 0.1);
+  @media (prefers-reduced-transparency: reduce) {
+    .glass {
+      background: var(--color-glass);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
   }
 
-  /* Rotating language word in the hero headline. */
-  .rotating-word {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 0.08em;
-  }
-
-  .rotating-word > span {
+  /* Split words: an outer clip and an inner word that GSAP lifts in. */
+  .split-word {
     display: inline-block;
-    animation: word-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+    overflow: clip;
+    overflow-clip-margin: 0.12em;
+    padding-bottom: 0.12em;
+    margin-bottom: -0.12em;
+    vertical-align: top;
+  }
+  .split-word > span {
+    display: inline-block;
+    will-change: transform;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }
 
-@keyframes word-in {
-  from {
-    opacity: 0;
-    transform: translateY(0.5em);
-  }
+/*
+ * Preloader: only shown to visitors with JavaScript, once per session.
+ * `data-seen` is set by an inline script before first paint, and the
+ * keyframe below is a safety net so a failed bundle can never trap the page.
+ */
+.preloader {
+  animation: preloader-failsafe 0s linear 6s forwards;
+}
+html[data-seen] .preloader {
+  display: none;
+}
+@keyframes preloader-failsafe {
   to {
-    opacity: 1;
-    transform: translateY(0);
+    visibility: hidden;
+    pointer-events: none;
   }
 }
 
-@keyframes float-slow {
+/* WebGL stage on: hide the static screen fallbacks it replaces. */
+html.webgl-on [data-webgl-fallback] {
+  visibility: hidden;
+}
+
+@keyframes beam-drift {
   0%,
   100% {
-    transform: translateY(0) rotate(var(--float-rotate, 0deg));
+    transform: translate3d(0, 0, 0) rotate(-32deg);
   }
   50% {
-    transform: translateY(-12px) rotate(var(--float-rotate, 0deg));
+    transform: translate3d(-4%, 2%, 0) rotate(-30deg);
   }
+}
+
+.beam-drift {
+  animation: beam-drift 28s ease-in-out infinite;
+}
+
+@keyframes beam-drift-alt {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(22deg);
+  }
+  50% {
+    transform: translate3d(6%, -3%, 0) rotate(26deg);
+  }
+}
+.beam-drift-alt {
+  animation: beam-drift-alt 34s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+details[data-faq] {
+  interpolate-size: allow-keywords;
+}
+details[data-faq]::details-content {
+  block-size: 0;
+  overflow: clip;
+  transition:
+    block-size 0.45s var(--ease-out-expo),
+    content-visibility 0.45s allow-discrete;
+}
+details[data-faq][open]::details-content {
+  block-size: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-
-  .float-slow {
+  .beam-drift,
+  .beam-drift-alt {
     animation: none;
   }
-
-  .rotating-word > span {
-    animation: word-fade 0.4s ease both;
+  .preloader {
+    display: none;
   }
-
-  .screenshot-card,
-  .screenshot-card:hover {
+  details[data-faq]::details-content {
     transition: none;
-    transform: none;
-  }
-}
-
-@keyframes word-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }

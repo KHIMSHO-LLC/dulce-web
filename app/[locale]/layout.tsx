@@ -1,20 +1,23 @@
 import type { Metadata, Viewport } from "next";
-import { Nunito } from "next/font/google";
+import { Archivo } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { StickyDownloadBar } from "@/components/StickyDownloadBar";
+import { Atmosphere } from "@/components/site/Atmosphere";
+import { PillNav } from "@/components/site/PillNav";
+import { SiteFooter } from "@/components/site/SiteFooter";
+import { SmoothScroll } from "@/components/motion/SmoothScroll";
 import { routing, type AppLocale } from "@/i18n/routing";
+import { APP_STORE_ID } from "@/lib/appStore";
+import { SITE_URL } from "@/lib/site";
 import "../globals.css";
 
-const nunito = Nunito({
+const archivo = Archivo({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-nunito",
-  weight: ["400", "500", "600", "700", "800"],
+  axes: ["wdth"],
+  variable: "--font-archivo",
   display: "swap",
 });
 
@@ -23,26 +26,27 @@ export function generateStaticParams() {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#FBF7F2",
+  themeColor: "#0d0c0b",
+  colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
-export async function generateMetadata({
-  params,
-}: LayoutProps<"/[locale]">): Promise<Metadata> {
+export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Promise<Metadata> {
   const { locale } = await params;
   const safeLocale = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as AppLocale;
   const t = await getTranslations({ locale: safeLocale, namespace: "metadata" });
 
+  // No `alternates` here on purpose: each page sets its own canonical
+  // (lib/seo.ts), otherwise every route inherits the home page's.
   return {
-    metadataBase: new URL("https://dulceglucosa.com"),
+    metadataBase: new URL(SITE_URL),
     title: {
       default: t("defaultTitle"),
       template: `%s · ${t("siteName")}`,
     },
     description: t("defaultDescription"),
-    keywords: t("keywords").split(", "),
     applicationName: t("siteName"),
     icons: {
       icon: [
@@ -52,14 +56,9 @@ export async function generateMetadata({
       ],
       apple: "/apple-touch-icon.png",
     },
-    // App Store ID — enables the iOS Smart App Banner once the app is live.
-    itunes: {
-      appId: "6770694596",
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
+    // App Store ID: enables the iOS Smart App Banner.
+    itunes: { appId: APP_STORE_ID },
+    robots: { index: true, follow: true },
     openGraph: {
       type: "website",
       siteName: t("siteName"),
@@ -73,94 +72,38 @@ export async function generateMetadata({
       title: t("defaultTitle"),
       description: t("defaultDescription"),
     },
-    alternates: {
-      canonical: "/",
-      languages: {
-        es: "/",
-        en: "/en",
-        "x-default": "/",
-      },
-    },
   };
 }
 
-/** JSON-LD structured data for the Dulce iOS app + organization. */
-function structuredData(locale: string) {
-  const description =
-    locale === "es"
-      ? "Dulce muestra tu glucosa de CGM en la pantalla de bloqueo del iPhone, en el Apple Watch y en widgets — con alertas y seguimiento familiar."
-      : "Dulce shows your CGM glucose on your iPhone Lock Screen, Apple Watch and widgets — with alerts and family sharing.";
-  return {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MobileApplication",
-        name: "Dulce",
-        operatingSystem: "iOS",
-        applicationCategory: "HealthApplication",
-        description,
-        inLanguage: ["es", "en"],
-        url: "https://dulceglucosa.com",
-        installUrl: "https://apps.apple.com/app/id6770694596",
-        screenshot: [
-          "https://dulceglucosa.com/screenshots/home.png",
-          "https://dulceglucosa.com/screenshots/lock-screen.png",
-          "https://dulceglucosa.com/screenshots/widgets.png",
-        ],
-        offers: {
-          "@type": "Offer",
-          price: "0",
-          priceCurrency: "EUR",
-        },
-      },
-      {
-        "@type": "Organization",
-        name: "Dulce",
-        url: "https://dulceglucosa.com",
-        email: "hola@dulceglucosa.com",
-        // schema.org logos should be a proper raster (≥112px), not the favicon.
-        logo: "https://dulceglucosa.com/dulce-logo.png",
-      },
-    ],
-  };
-}
+/** Marks a returning visitor before first paint so the preloader stays hidden. */
+const SEEN_SCRIPT = `try{if(sessionStorage.getItem("dulce:seen"))document.documentElement.setAttribute("data-seen","")}catch(e){}`;
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: LayoutProps<"/[locale]">) {
+export default async function LocaleLayout({ children, params }: LayoutProps<"/[locale]">) {
   const { locale } = await params;
-
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
-
+  if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "nav" });
 
   return (
-    // suppressHydrationWarning: browser extensions (e.g. tab managers injecting
-    // data-*-tab-id) mutate <html>/<body> before React hydrates. This silences
-    // only attribute mismatches on these two elements, not our own content.
-    <html
-      lang={locale}
-      className={`${nunito.variable} h-full antialiased`}
-      suppressHydrationWarning
-    >
-      <body
-        className="min-h-full flex flex-col bg-background text-foreground"
-        suppressHydrationWarning
-      >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData(locale)) }}
-        />
+    // suppressHydrationWarning: the inline script and browser extensions set
+    // attributes on <html> before React hydrates.
+    <html lang={locale} className={`${archivo.variable} antialiased`} suppressHydrationWarning>
+      <body className="min-h-full bg-ground text-ink" suppressHydrationWarning>
+        <script dangerouslySetInnerHTML={{ __html: SEEN_SCRIPT }} />
+        <a
+          href="#main"
+          className="sr-only z-[80] rounded-full bg-ink px-4 py-2 text-ground focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+        >
+          {t("skipToContent")}
+        </a>
         <NextIntlClientProvider>
-          <Header />
-          <main id="main" className="flex-1">
+          <Atmosphere />
+          <SmoothScroll />
+          <main id="main" className="relative">
             {children}
           </main>
-          <Footer />
-          <StickyDownloadBar locale={locale === "es" ? "es" : "en"} />
+          <SiteFooter />
+          <PillNav />
         </NextIntlClientProvider>
         <Analytics />
         <SpeedInsights />

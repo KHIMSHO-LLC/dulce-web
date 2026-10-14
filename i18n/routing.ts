@@ -7,6 +7,11 @@ export const defaultLocale: AppLocale = "es";
 /**
  * Localized path slugs.
  * Spanish (default) at `/`, English at `/en/...`.
+ *
+ * The marketing site is a single landing page. Everything else here is a
+ * functional route something outside the site depends on (the App Store links
+ * the privacy policy, the app deep-links /setup). Retired marketing routes are
+ * redirected into landing-page sections in next.config.ts.
  */
 export const routing = defineRouting({
   locales,
@@ -17,19 +22,6 @@ export const routing = defineRouting({
   localeDetection: false,
   pathnames: {
     "/": "/",
-    "/features": {
-      es: "/caracteristicas",
-      en: "/features",
-    },
-    "/beta": "/beta",
-    "/about": {
-      es: "/sobre",
-      en: "/about",
-    },
-    "/contact": {
-      es: "/contacto",
-      en: "/contact",
-    },
     "/legal/privacy": {
       es: "/legal/privacidad",
       en: "/legal/privacy",
@@ -43,36 +35,10 @@ export const routing = defineRouting({
       en: "/legal/disclaimer",
     },
     "/legal/cookies": "/legal/cookies",
-    "/apple-watch": {
-      es: "/apple-watch",
-      en: "/apple-watch",
-    },
-    "/lock-screen": {
-      es: "/pantalla-de-bloqueo",
-      en: "/lock-screen",
-    },
-    "/family-sharing": {
-      es: "/compartir-en-familia",
-      en: "/family-sharing",
-    },
     // Unlocalized on purpose: the app deep-links here with a fixed `/setup`
     // path (see dulce-app `constants/links.ts`), so both locales must resolve
     // the same slug.
     "/setup": "/setup",
-    "/android": "/android",
-    "/blog": "/blog",
-    "/blog/how-to-see-cgm-glucose-on-apple-watch": {
-      es: "/blog/como-ver-glucosa-cgm-en-apple-watch",
-      en: "/blog/how-to-see-cgm-glucose-on-apple-watch",
-    },
-    "/blog/time-in-range-vs-a1c": {
-      es: "/blog/tiempo-en-rango-vs-hba1c",
-      en: "/blog/time-in-range-vs-a1c",
-    },
-    "/blog/sharing-cgm-glucose-with-family": {
-      es: "/blog/compartir-glucosa-cgm-con-familia",
-      en: "/blog/sharing-cgm-glucose-with-family",
-    }
   },
 });
 

@@ -6,8 +6,8 @@ export default function GlobalNotFound() {
       <body
         style={{
           fontFamily: "system-ui, -apple-system, sans-serif",
-          background: "#FBF7F2",
-          color: "#1A1A1A",
+          background: "#0d0c0b",
+          color: "#f6f0ea",
           margin: 0,
           minHeight: "100vh",
           display: "flex",
@@ -20,7 +20,7 @@ export default function GlobalNotFound() {
           <h1 style={{ fontSize: "2rem", fontWeight: 700, marginBottom: "0.5rem" }}>
             Página no encontrada
           </h1>
-          <p style={{ color: "#595959", marginBottom: "1.5rem" }}>
+          <p style={{ color: "#cfc6bd", marginBottom: "1.5rem" }}>
             El enlace que has seguido es incorrecto o la página ha sido movida.
           </p>
           <Link
@@ -28,9 +28,9 @@ export default function GlobalNotFound() {
             style={{
               display: "inline-block",
               padding: "0.75rem 1.25rem",
-              background: "#C2410C",
-              color: "white",
-              borderRadius: 16,
+              background: "#f36638",
+              color: "#1b0c06",
+              borderRadius: 999,
               textDecoration: "none",
               fontWeight: 600,
             }}
