@@ -4,7 +4,8 @@ glucose (via LibreLinkUp) on the Lock Screen, Apple Watch, widgets and family me
 publish ONE excellent new article in Spanish, English and German, or improve an existing one, then deploy it.
 Quality over quantity: if you can't write something accurate and useful, publish nothing and say why.
 
-Read first: content/README.md (rules, components), content/articles.ts (what exists), seo/log.md (what past runs did).
+Read first: content/README.md (rules, components), content/articles.ts (what exists), seo/log.md (what past runs did),
+seo/keyword-volumes.md (real monthly search volumes; prefer high-volume topics nobody covers yet).
 
 ## 1. Pick the topic (data, not guesses)
 
