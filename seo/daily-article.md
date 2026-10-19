@@ -9,9 +9,10 @@ seo/keyword-volumes.md (real monthly search volumes; prefer high-volume topics n
 
 ## 1. Pick the topic (data, not guesses)
 
-a. Search Console, if `gum` is set up (`gum auth status` succeeds): pull the last 28 days of queries and pages
-   for property `sc-domain:dulceglucosa.com` (find the operation with `gum search "search console query"`, then
-   `gum describe <op>`). Best targets: queries with many impressions but position worse than 8 or CTR under 2%.
+a. Search Console (read-only, already authorized on this Mac). Last 28 days of queries per page:
+   `gum read searchconsole.searchanalytics.query --format json --log-level warn --args '{"siteUrl":"sc-domain:dulceglucosa.com","body":{"startDate":"<today-30>","endDate":"<today-2>","dimensions":["query","page"],"rowLimit":500}}'`
+   (data lags ~2 days). Best targets: queries with many impressions but position worse than 8 or CTR under 2%.
+   If gum fails (e.g. token expired), say so in seo/log.md and continue with b.
    If the query belongs to an existing article, improving that article (better title/description, a missing
    section) can beat writing a new one.
 b. Always also run `npm run seo:gaps` and read seo/gaps.json: real Google/App Store autocomplete queries that no
