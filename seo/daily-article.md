@@ -4,6 +4,9 @@ glucose (via LibreLinkUp) on the Lock Screen, Apple Watch, widgets and family me
 publish ONE excellent new article in Spanish, English and German, or improve an existing one, then deploy it.
 Quality over quantity: if you can't write something accurate and useful, publish nothing and say why.
 
+If seo/log.md already has an entry dated today (YYYY-MM-DD, Europe/Madrid), another run already published
+today: stop and do nothing.
+
 Read first: content/README.md (rules, components), content/articles.ts (what exists), seo/log.md (what past runs did),
 seo/keyword-volumes.md (real monthly search volumes; prefer high-volume topics nobody covers yet).
 
@@ -24,8 +27,9 @@ d. Write the chosen query and why into seo/log.md before writing.
 
 ## 2. Research the facts
 
-- App behaviour: read the released app at ../dulce-app on branch `main` (`git -C ../dulce-app show main:<path>`),
-  never the working tree (it may be on an unreleased branch). If ../dulce-app is missing, only describe features
+- App behaviour: read the released app (dulce-app repo, branch `main`). Locally it is ../dulce-app
+  (`git -C ../dulce-app show main:<path>`, never its working tree, which may be on an unreleased branch); in a
+  cloud run, find the dulce-app checkout next to this repo. If you can't find it, only describe features
   already described in existing articles.
 - External facts: WebSearch/WebFetch primary sources (Abbott/librelinkup.com, Apple Support, ADA, Diabetes Care
   papers). Paraphrase; quote nothing longer than a few words. Never copy competitor text.
