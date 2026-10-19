@@ -1,7 +1,9 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { CONTACT_EMAIL, SECTION } from "@/lib/site";
+import { CONTACT_EMAIL, SECTION, homeSection } from "@/lib/site";
+import type { AppLocale } from "@/i18n/routing";
 import { WordmarkRise } from "@/components/motion/WordmarkRise";
+import { TOOL_COPY } from "@/lib/tools";
 import { DropMark } from "./DropMark";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
@@ -14,7 +16,7 @@ export async function SiteFooter() {
   const t = await getTranslations("footer");
   const nav = await getTranslations("nav");
   const year = new Date().getFullYear();
-  const home = (id: string) => (locale === "es" ? `/#${id}` : `/en#${id}`);
+  const home = (id: string) => homeSection(locale as AppLocale, id);
 
   const onPage = [
     { id: SECTION.lockScreen, label: nav("sections.lockScreen") },
@@ -29,7 +31,7 @@ export async function SiteFooter() {
   return (
     <footer className="relative z-10 overflow-hidden pt-14 md:pt-20">
       <div className="container-page">
-        <div className="grid gap-12 border-t border-white/10 pt-10 md:grid-cols-[1.3fr_1fr_1fr_1fr] md:gap-8">
+        <div className="grid gap-12 border-t border-white/10 pt-10 md:grid-cols-[1.3fr_1fr_1fr_1fr_1fr] md:gap-8">
           <div className="flex items-start gap-4">
             <div className="shrink-0 rounded-[14px] bg-[#f6f0ea] p-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -45,6 +47,19 @@ export async function SiteFooter() {
                 {s.label}
               </a>
             ))}
+          </nav>
+
+          <nav aria-label={t("learn")} className="grid content-start gap-2 text-label">
+            <p className="mb-1 text-mute">{t("learn")}</p>
+            <Link href="/blog" className={linkClass}>
+              {nav("guides")}
+            </Link>
+            <Link href="/tools/glucose-converter" className={linkClass}>
+              {TOOL_COPY["/tools/glucose-converter"][locale as AppLocale].title}
+            </Link>
+            <Link href="/tools/a1c-calculator" className={linkClass}>
+              {TOOL_COPY["/tools/a1c-calculator"][locale as AppLocale].title}
+            </Link>
           </nav>
 
           <div className="grid content-start gap-2 text-label">

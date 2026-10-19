@@ -1,0 +1,70 @@
+LibreLinkUp is Abbott's app for following someone else's glucose, and also the door your data comes through into apps like Dulce. When it breaks, it's almost always one of three things: you can't log in, you log in but see no data, or the data stops updating. Let's take them one at a time.
+
+## 1. I can't log in to LibreLinkUp
+
+**Are you using the right account?** This is by far the most common mistake. **LibreLink** (the app you scan or read your sensor with) and **LibreLinkUp** (the follower app) are separate apps with separate accounts, even if you use the same email. If your password "doesn't work", you're probably typing your LibreLink one into LibreLinkUp. We explain it with screenshots in <PageLink to="/setup">LibreLink vs LibreLinkUp</PageLink>.
+
+**Have you tried many times in a row?** Abbott's servers block repeated sign-ins for a while. Wait a minute before trying again.
+
+**Has Abbott changed its terms?** From time to time LibreLinkUp asks you to accept new terms. Open the LibreLinkUp app, sign in and accept them.
+
+**Is the account from another country?** According to Abbott, LibreLinkUp connections only work between users in the same region.
+
+## 2. I log in but don't see any data
+
+Your LibreLinkUp account works, but nobody is sharing with it yet. The person wearing the sensor has to invite it:
+
+<Steps>
+<Step title="Open the sensor's Libre app">
+On the phone of the person wearing the sensor, open FreeStyle LibreLink or FreeStyle Libre 3.
+</Step>
+<Step title="Go to Connected Apps">
+From the menu, open the connected apps section and choose **LibreLinkUp**.
+</Step>
+<Step title="Add the connection">
+Type the same email the LibreLinkUp account was created with. Abbott requires an exact match.
+</Step>
+<Step title="Accept the invitation">
+Open LibreLinkUp with that account and accept the invitation. Readings start arriving from then on.
+</Step>
+</Steps>
+
+If you'd already done this and still see nothing, check these cases, which according to Abbott **are not shared**:
+
+- The sensor was **started with a reader** or another phone.
+- Readings were taken by **scanning with the reader**, not the phone.
+- You're using a **special edition** of the Libre app, which isn't compatible with LibreLinkUp.
+
+## 3. Data is delayed or frozen
+
+Readings travel like this: sensor → Libre app on the phone → Abbott's cloud → LibreLinkUp. If any step breaks, what you see stops moving.
+
+- **The sensor phone needs internet.** Without data or Wi-Fi, readings stay on that phone. When the connection returns, the chart fills in, but notifications may show only the latest reading.
+- **The sensor has to be near the phone.** With FreeStyle Libre 3, readings only arrive while the sensor is within Bluetooth range of the phone.
+- **Don't force-quit the Libre app.** If you swipe it away, iOS may stop waking it and it stops uploading readings.
+- **Low Power Mode** and turning off **Background App Refresh** for the Libre app also slow uploads.
+- **The follower needs internet too**, of course.
+
+<Callout>
+Abbott notes that signal-loss alarms aren't shared either. If the sensor stops talking to the phone, your family won't find out through LibreLinkUp; they'll just see no new readings.
+</Callout>
+
+## LibreLinkUp alarms don't go off
+
+- Alarms only exist with **FreeStyle Libre 2 and Libre 3**, and the person wearing the sensor has to have them **turned on in their Libre app**.
+- In LibreLinkUp, each connection has its own notification settings: check them.
+- If the phone is on silent, vibrate or a Focus mode, LibreLinkUp can't break through it.
+
+If you need an alert that rings even with your iPhone on silent, Dulce has a critical alert for severe lows. It's covered in the <ArticleLink to="alerts">guide to glucose alerts on iPhone</ArticleLink>.
+
+## Where Dulce fits in
+
+Dulce reads your data through LibreLinkUp, so everything above affects it too: if LibreLinkUp gets no readings, neither does Dulce. The difference is that Dulce tells you clearly: it always shows how long ago the last reading was, and when you sign in it tells you if you're using the wrong account or if nobody is sharing with your account yet.
+
+<AppCta title="Try Dulce with your LibreLinkUp account" />
+
+Once it works, you can put your glucose in an <ArticleLink to="widgets">iPhone widget</ArticleLink> or share it with up to 3 family members without them creating an Abbott account: see the <ArticleLink to="family-sharing">family sharing guide</ArticleLink>.
+
+## Source
+
+- Abbott. *LibreLinkUp FAQs*. [librelinkup.com](https://www.librelinkup.com/faqs)

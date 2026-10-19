@@ -1,0 +1,62 @@
+Wenn du einen FreeStyle Libre 2 oder Libre 3 und eine Apple Watch trägst, willst du natürlich einfach aufs Handgelenk schauen und deinen Wert sehen. In der Praxis ist das schwieriger als gedacht: Abbotts App, die den Sensor ausliest, unterstützt die Uhr nur sehr eingeschränkt, und LibreLinkUp, die App für Follower, leitet im Wesentlichen Benachrichtigungen weiter. Hier erfährst du, woher die Daten kommen, wie du sie mit Dulce aufs Zifferblatt bringst und warum Werte auf der Uhr manchmal „hängen“.
+
+<Figure src="/guides/apple-watch-1.jpg" alt="Rechteckige Dulce-Komplikation auf der Apple Watch mit 91 mg/dL, Trendpfeil und Verlauf" caption="Die rechteckige Komplikation von Dulce: Wert, Trend und die letzten Stunden." width={422} height={514} />
+
+## Woher der Wert auf deiner Uhr kommt
+
+Der Sensor schickt seine Werte per Bluetooth an die Libre-App auf deinem iPhone (FreeStyle LibreLink oder FreeStyle Libre 3, je nach Sensor und Land). Diese App lädt sie in Abbotts Cloud hoch, und von dort gelangen sie zu **LibreLinkUp**, dem Konto, mit dem Angehörige deinen Zucker verfolgen können.
+
+Dulce verbindet sich mit deinem LibreLinkUp-Konto, holt jeden neuen Wert ab und schickt ihn an dein iPhone und deine Apple Watch. Bevor du Dulce nutzt, musst du deshalb <PageLink to="/setup">das Teilen in LibreLinkUp aktivieren</PageLink>. Das sind vier Schritte und du machst es nur einmal.
+
+## So kommt dein Blutzucker aufs Zifferblatt
+
+<Steps>
+<Step title="Dulce installieren und LibreLinkUp verbinden">
+Lade Dulce auf dein iPhone und melde dich mit E-Mail und Passwort von **LibreLinkUp** an (nicht mit denen von LibreLink).
+</Step>
+<Step title="Apple Watch in Dulce aktivieren">
+Öffne in Dulce die **Einstellungen** und aktiviere **Apple Watch**. Das ist eine Funktion von Dulce Pro, die du 14 Tage kostenlos testen kannst.
+</Step>
+<Step title="Prüfen, ob die App auf der Uhr ist">
+Öffne auf dem iPhone die **Watch**-App, scrolle zu **Verfügbare Apps** und tippe neben Dulce auf **Installieren**, falls sie nicht automatisch installiert wurde.
+</Step>
+<Step title="Komplikation hinzufügen">
+Halte das Zifferblatt gedrückt, tippe auf **Bearbeiten**, wische zu den Komplikationen, wähle einen Platz und dann **Dulce**.
+</Step>
+</Steps>
+
+Dulce hat Komplikationen in allen vier watchOS-Formen: **rechteckig** (Wert, Pfeil und Verlauf), **rund**, **Ecke** und **Zeile**. Die rechteckige passt am besten zu Zifferblättern wie Modular oder Infograph Modular, die Eck-Komplikation zu Infograph.
+
+<AppCta title="Dein Zucker am Handgelenk in zwei Minuten" />
+
+## Die App auf der Uhr
+
+Ein Tippen auf die Komplikation öffnet Dulce auf der Uhr: der große Wert, der Trendpfeil, die Änderung zum vorigen Wert und ein Verlauf, den du auf den ganzen Tag erweitern kannst. Für einen frischen Wert tippst du auf Aktualisieren.
+
+<Figure src="/guides/apple-watch-2.jpg" alt="Dulce auf der Apple Watch mit 93 mg/dL, +10 mg/dL und Tagesverlauf" caption="Die App auf der Uhr: Wert, Änderung und Tagesverlauf." width={422} height={514} />
+
+## Und die Alarme auf der Uhr?
+
+Die Alarme kommen vom iPhone. Trägst du die Apple Watch und ist das iPhone gesperrt, leitet iOS die Benachrichtigung an die Uhr weiter und sie tippt dir aufs Handgelenk; benutzt du gerade das iPhone, klingelt es dort. So bekommst du einen Alarm am richtigen Ort, nicht zwei. Alle Einstellungen findest du im <ArticleLink to="alerts">Ratgeber zu Alarmen</ArticleLink>.
+
+## Warum Werte auf der Uhr manchmal hängen
+
+watchOS begrenzt, wie oft am Tag eine App ihre Komplikation aktualisieren darf, um Akku zu sparen. Apps, die darauf angewiesen sind, dass das iPhone jeden Wert an die Uhr „schiebt“, verbrauchen dieses Kontingent in wenigen Stunden, danach bleibt das Zifferblatt stehen.
+
+Dulce verlässt sich nicht nur darauf: Sein Server schickt den letzten Wert jede Minute direkt an die Uhr, auch wenn das iPhone gesperrt ist, und die Uhr speichert ihn, sobald er ankommt. Siehst du trotzdem einen Wert, der sich nicht ändert, prüfe:
+
+- **Hat das Handy mit dem Sensor Internet?** Kann die Libre-App keine Werte hochladen, bekommen weder LibreLinkUp noch Dulce etwas Neues. Der <ArticleLink to="librelinkup-not-working">Ratgeber zu LibreLinkUp ohne Daten</ArticleLink> geht alle Ursachen durch.
+- **Ist die Uhr verbunden**, per Bluetooth mit dem iPhone oder mit einem WLAN?
+- **Ist der Stromsparmodus der Uhr aus?** Er schränkt Hintergrund-Updates ein.
+
+<Callout type="warning">
+Schau vor jeder Entscheidung auf die Uhrzeit des letzten Werts. Im Zweifel prüfe mit der App deines Sensors oder mit einer blutigen Messung.
+</Callout>
+
+## Kurze Fragen
+
+**Brauche ich eine Apple Watch mit Mobilfunk?** Nein. Es funktioniert mit jeder Apple Watch, die mit deinem iPhone gekoppelt ist.
+
+**Kann ich den Zucker meines Kindes auf der Uhr sehen?** Die Uhr zeigt den Zucker des Kontos, das auf deinem iPhone verbunden ist. Wie du einem Familienmitglied folgst, steht im <ArticleLink to="family-sharing">Ratgeber zum Teilen mit der Familie</ArticleLink>.
+
+**Kann ich den Wert auch auf dem iPhone-Sperrbildschirm sehen?** Ja, mit der Live-Aktivität. Das steht im <ArticleLink to="lock-screen">Ratgeber zum Sperrbildschirm</ArticleLink>.

@@ -1,0 +1,62 @@
+If you wear a FreeStyle Libre 2 or Libre 3 and an Apple Watch, you naturally want to glance at your wrist and see your number. In practice it is harder than it should be: Abbott's app that reads the sensor has very limited watch support, and LibreLinkUp, the follower app, mostly forwards notifications. This guide explains where the data comes from, how to put it on your watch face with Dulce, and why watch readings sometimes "freeze".
+
+<Figure src="/guides/apple-watch-1.jpg" alt="Dulce rectangular complication on Apple Watch showing 91 mg/dL, a trend arrow and a chart" caption="Dulce's rectangular complication: value, trend and the last few hours." width={422} height={514} />
+
+## Where the glucose on your watch comes from
+
+The sensor sends readings over Bluetooth to the Libre app on your iPhone (FreeStyle LibreLink or FreeStyle Libre 3, depending on your sensor and country). That app uploads them to Abbott's cloud, and from there they reach **LibreLinkUp**, the account designed for family members to follow your glucose.
+
+Dulce connects to your LibreLinkUp account, picks up every new reading and sends it to your iPhone and your Apple Watch. So before using Dulce you need to <PageLink to="/setup">turn on sharing in LibreLinkUp</PageLink>. It takes four steps and you only do it once.
+
+## How to put your glucose on your watch face
+
+<Steps>
+<Step title="Install Dulce and connect LibreLinkUp">
+Download Dulce on your iPhone and sign in with your **LibreLinkUp** email and password (not your LibreLink ones).
+</Step>
+<Step title="Turn on Apple Watch in Dulce">
+Open **Settings** in Dulce and turn on **Apple Watch**. It's a Dulce Pro feature, which you can try free for 14 days.
+</Step>
+<Step title="Check the app is on your watch">
+On your iPhone, open the **Watch** app, scroll to **Available Apps** and tap **Install** next to Dulce if it didn't install by itself.
+</Step>
+<Step title="Add the complication">
+Touch and hold your watch face, tap **Edit**, swipe to the complications, pick a slot and choose **Dulce**.
+</Step>
+</Steps>
+
+Dulce has complications in all four watchOS shapes: **rectangular** (value, arrow and chart), **circular**, **corner** and **inline**. The rectangular one works best on faces like Modular or Infograph Modular; the corner one fits Infograph.
+
+<AppCta title="Your glucose on your wrist in two minutes" />
+
+## The watch app
+
+Tapping the complication opens the Dulce watch app: the big number, the trend arrow, the change since the previous reading and a chart you can widen to the whole day. To ask for a fresh reading, tap the refresh button.
+
+<Figure src="/guides/apple-watch-2.jpg" alt="Dulce app on Apple Watch showing 93 mg/dL, +10 mg/dL and a one-day chart" caption="The watch app: value, change and the day's chart." width={422} height={514} />
+
+## What about alerts on the watch?
+
+Alerts come from your iPhone. When you're wearing your Apple Watch and your iPhone is locked, iOS sends the notification to the watch and it taps your wrist; if you're using your iPhone, it rings there. You get one alert in the right place, not two. Everything you can set is in the <ArticleLink to="alerts">alerts guide</ArticleLink>.
+
+## Why watch readings sometimes freeze
+
+watchOS limits how many times a day an app can refresh its complication, to save battery. Apps that rely on the iPhone "pushing" every reading to the watch use up that budget within a few hours, and the face stops changing.
+
+Dulce doesn't rely on that alone: its server sends the latest reading straight to the watch every minute, even when your iPhone is locked, and the watch stores it as soon as it arrives. If you still see a number that doesn't change, check:
+
+- **The sensor phone has internet.** If the Libre app can't upload readings, neither LibreLinkUp nor Dulce receives anything new. The <ArticleLink to="librelinkup-not-working">LibreLinkUp no-data guide</ArticleLink> covers every cause.
+- **The watch is connected** to your iPhone over Bluetooth or to Wi-Fi.
+- **Low Power Mode on the watch is off**, because it cuts background updates.
+
+<Callout type="warning">
+Always check the time of the last reading before making a decision. If in doubt, confirm with your sensor's app or a fingerstick.
+</Callout>
+
+## Quick questions
+
+**Do I need a cellular Apple Watch?** No. It works with any Apple Watch paired with your iPhone.
+
+**Can I see my child's glucose on my watch?** The watch shows the glucose of the account connected on your iPhone. To follow a family member from your phone, read the <ArticleLink to="family-sharing">family sharing guide</ArticleLink>.
+
+**Can I also see my glucose on the iPhone Lock Screen?** Yes, with the Live Activity. It's in the <ArticleLink to="lock-screen">Lock Screen guide</ArticleLink>.

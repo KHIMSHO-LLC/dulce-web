@@ -21,7 +21,7 @@ import { Split } from "@/components/motion/Split";
 import type { ScreenName } from "@/components/screens/draw";
 import { faqSchema } from "@/lib/schema";
 import { alternatesFor } from "@/lib/seo";
-import { SECTION, SITE_URL } from "@/lib/site";
+import { SECTION, SITE_URL, localeUrl } from "@/lib/site";
 import { APP_STORE_ID } from "@/lib/appStore";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]">): Promise<Metadata> {
@@ -45,8 +45,8 @@ function appSchema(locale: AppLocale, description: string) {
         operatingSystem: "iOS",
         applicationCategory: "HealthApplication",
         description,
-        inLanguage: ["es", "en"],
-        url: locale === "es" ? SITE_URL : `${SITE_URL}/en`,
+        inLanguage: ["es", "en", "de"],
+        url: localeUrl(locale),
         installUrl: `https://apps.apple.com/app/id${APP_STORE_ID}`,
         screenshot: [
           `${SITE_URL}/screenshots/home.png`,

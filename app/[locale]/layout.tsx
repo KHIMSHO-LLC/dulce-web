@@ -12,6 +12,7 @@ import { SmoothScroll } from "@/components/motion/SmoothScroll";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { APP_STORE_ID } from "@/lib/appStore";
 import { SITE_URL } from "@/lib/site";
+import { OG_LOCALE } from "@/lib/seo";
 import "../globals.css";
 
 const archivo = Archivo({
@@ -64,8 +65,8 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
       siteName: t("siteName"),
       title: t("defaultTitle"),
       description: t("defaultDescription"),
-      locale: safeLocale === "es" ? "es_ES" : "en_US",
-      alternateLocale: safeLocale === "es" ? ["en_US"] : ["es_ES"],
+      locale: OG_LOCALE[safeLocale],
+      alternateLocale: routing.locales.filter((l) => l !== safeLocale).map((l) => OG_LOCALE[l]),
     },
     twitter: {
       card: "summary_large_image",

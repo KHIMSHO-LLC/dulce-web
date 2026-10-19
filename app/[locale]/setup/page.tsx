@@ -33,7 +33,7 @@ export default async function SetupPage({ params }: PageProps<"/[locale]/setup">
   const faq = faqSchema(["1", "2", "3"].map((n) => ({ question: t(`faq.q${n}`), answer: t(`faq.a${n}`) })));
   const home = `${SITE_URL}${localizedPath(loc, "/") === "/" ? "" : localizedPath(loc, "/")}`;
   const breadcrumbs = breadcrumbSchema([
-    { name: loc === "es" ? "Inicio" : "Home", url: home },
+    { name: t("breadcrumbHome"), url: home },
     { name: t("hero.headline"), url: `${SITE_URL}${localizedPath(loc, "/setup")}` },
   ]);
   const steps = ["step1", "step2", "step3", "step4"] as const;

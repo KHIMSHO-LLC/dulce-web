@@ -1,0 +1,62 @@
+Si llevas un FreeStyle Libre 2 o Libre 3 y un Apple Watch, lo lógico es querer mirar la muñeca y ver tu número. En la práctica cuesta más de lo que parece: la app de Abbott que escanea el sensor tiene un soporte muy limitado para el reloj, y LibreLinkUp, la app para seguidores, básicamente reenvía notificaciones. En esta guía te explico de dónde salen los datos, cómo ponerlos en la esfera con Dulce y por qué a veces el reloj se queda «congelado».
+
+<Figure src="/guides/apple-watch-1.jpg" alt="Complicación rectangular de Dulce en el Apple Watch con 91 mg/dL, flecha y gráfica" caption="Complicación rectangular de Dulce: valor, tendencia y la gráfica de las últimas horas." width={422} height={514} />
+
+## De dónde sale la glucosa que ves en el reloj
+
+El sensor envía las lecturas por Bluetooth a la app de Libre de tu iPhone (FreeStyle LibreLink o FreeStyle Libre 3, según el sensor y el país). Esa app las sube a la nube de Abbott, y desde ahí llegan a **LibreLinkUp**, la cuenta pensada para que familiares sigan tu glucosa.
+
+Dulce se conecta con tu cuenta de LibreLinkUp, recoge cada lectura nueva y la manda a tu iPhone y a tu Apple Watch. Por eso, para usar Dulce, primero tienes que <PageLink to="/setup">activar el uso compartido en LibreLinkUp</PageLink>. Son cuatro pasos y se hace una sola vez.
+
+## Cómo poner tu glucosa en la esfera
+
+<Steps>
+<Step title="Instala Dulce y conecta LibreLinkUp">
+Descarga Dulce en el iPhone e inicia sesión con tu correo y contraseña de **LibreLinkUp** (no los de LibreLink).
+</Step>
+<Step title="Activa el Apple Watch en Dulce">
+Abre **Ajustes** en Dulce y activa **Apple Watch**. Es una función de Dulce Pro, que puedes probar gratis durante 14 días.
+</Step>
+<Step title="Comprueba que la app está en el reloj">
+En el iPhone, abre la app **Watch**, baja hasta **Apps disponibles** y toca **Instalar** junto a Dulce si no se ha instalado sola.
+</Step>
+<Step title="Añade la complicación">
+Mantén pulsada la esfera, toca **Editar**, desliza hasta las complicaciones, elige un hueco y selecciona **Dulce**.
+</Step>
+</Steps>
+
+Dulce tiene complicaciones en los cuatro formatos de watchOS: **rectangular** (valor, flecha y gráfica), **circular**, **de esquina** y **en línea**. La rectangular es la más útil en esferas como Modular o Infograph Modular; la de esquina encaja en Infograph.
+
+<AppCta title="Tu glucosa en la muñeca en dos minutos" />
+
+## La app del reloj
+
+Al tocar la complicación se abre la app de Dulce en el reloj: el valor grande, la flecha de tendencia, el cambio respecto a la lectura anterior y una gráfica que puedes ampliar a todo el día. Si quieres forzar una lectura nueva, toca el botón de actualizar.
+
+<Figure src="/guides/apple-watch-2.jpg" alt="App de Dulce en el Apple Watch con 93 mg/dL, +10 mg/dL y gráfica de un día" caption="La app del reloj: valor, cambio y gráfica del día." width={422} height={514} />
+
+## ¿Y las alarmas en el reloj?
+
+Las alarmas las envía el iPhone. Cuando llevas puesto el Apple Watch y el iPhone está bloqueado, iOS pasa la notificación al reloj y vibra en la muñeca; si estás usando el iPhone, suena en el iPhone. Así recibes un solo aviso en el sitio correcto, no dos. Todo lo que puedes configurar está en la <ArticleLink to="alerts">guía de alarmas</ArticleLink>.
+
+## Por qué el reloj a veces se queda congelado
+
+watchOS limita cuántas veces al día una app puede refrescar su complicación, para ahorrar batería. Las apps que dependen de que el iPhone «empuje» cada lectura al reloj se quedan sin ese cupo en pocas horas y la esfera deja de cambiar.
+
+Dulce no depende solo de eso: su servidor manda la última lectura directamente al reloj cada minuto, también con el iPhone bloqueado, y el reloj la guarda en cuanto llega. Aun así, si ves un valor que no cambia, revisa esto:
+
+- **Que el iPhone del sensor tenga internet.** Si la app de Libre no puede subir lecturas, ni LibreLinkUp ni Dulce reciben nada nuevo. La <ArticleLink to="librelinkup-not-working">guía de LibreLinkUp sin datos</ArticleLink> repasa todas las causas.
+- **Que el reloj esté conectado** al iPhone por Bluetooth o a una red wifi.
+- **Que el Modo de bajo consumo del reloj esté desactivado**, porque reduce las actualizaciones en segundo plano.
+
+<Callout type="warning">
+Mira siempre la hora de la última lectura antes de tomar una decisión. Si dudas, confirma con la app de tu sensor o con un glucómetro.
+</Callout>
+
+## Preguntas rápidas
+
+**¿Necesito un Apple Watch con datos móviles?** No. Funciona con cualquier Apple Watch emparejado con tu iPhone.
+
+**¿Puedo ver en el reloj la glucosa de mi hijo?** El reloj muestra la glucosa de la cuenta conectada en tu iPhone. Para seguir a un familiar desde tu móvil, lee la <ArticleLink to="family-sharing">guía para compartir con la familia</ArticleLink>.
+
+**¿Puedo ver la glucosa también en la pantalla de bloqueo del iPhone?** Sí, con la Actividad en vivo. Está en la <ArticleLink to="lock-screen">guía de la pantalla de bloqueo</ArticleLink>.
