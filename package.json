@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check:content": "node --no-warnings scripts/check-content.mts",
+    "seo:gaps": "node --no-warnings scripts/seo/keyword-gaps.mts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -27,6 +29,7 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-hook-form": "^7.76.0",
+    "remark-gfm": "^4.0.1",
     "resend": "^6.12.3",
     "tailwind-merge": "^3.6.0",
     "three": "^0.186.1",

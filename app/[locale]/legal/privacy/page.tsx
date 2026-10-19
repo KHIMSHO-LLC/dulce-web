@@ -18,7 +18,13 @@ export async function generateMetadata({
     ? locale
     : routing.defaultLocale) as AppLocale;
   const t = await getTranslations({ locale: safeLocale, namespace: "legal.privacy" });
-  return { title: t("title"), description: t("description"), alternates: alternatesFor(safeLocale, "/legal/privacy") };
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: alternatesFor(safeLocale, "/legal/privacy"),
+    // German shows the English text: keep it out of the index as a duplicate.
+    robots: safeLocale === "de" ? { index: false, follow: true } : undefined,
+  };
 }
 
 export default async function PrivacyPage({
@@ -33,6 +39,7 @@ export default async function PrivacyPage({
 
   return (
     <LegalLayout title={tDoc("title")} lastUpdated={t("lastUpdated", { date: LAST_UPDATED })}>
+      {locale === "de" ? <p>{t("englishOnly")}</p> : null}
       {locale === "es" ? <PrivacyEs /> : <PrivacyEn />}
     </LegalLayout>
   );

@@ -5,7 +5,8 @@ import { useLocale, useTranslations } from "next-intl";
 import { X } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { appStoreUrl } from "@/lib/appStore";
-import { CONTACT_EMAIL, SECTION } from "@/lib/site";
+import { CONTACT_EMAIL, SECTION, homeSection } from "@/lib/site";
+import type { AppLocale } from "@/i18n/routing";
 import { cn } from "@/lib/utils/cn";
 import { gsap, prefersReducedMotion } from "@/components/motion/gsap";
 import { scrollToTarget } from "@/components/motion/SmoothScroll";
@@ -49,7 +50,7 @@ export function PillNav() {
     { id: SECTION.day, label: t("sections.day") },
     { id: SECTION.faq, label: t("sections.faq") },
   ];
-  const homeHref = (id: string) => (locale === "es" ? `/#${id}` : `/en#${id}`);
+  const homeHref = (id: string) => homeSection(locale as AppLocale, id);
 
   // Build the morph from measured sizes; rebuild when the viewport changes.
   useIsoLayoutEffect(() => {
@@ -244,6 +245,9 @@ export function PillNav() {
 
             <div data-item className="mt-4 grid grid-cols-2 gap-4 text-label">
               <div className="grid content-start gap-1.5">
+                <Link href="/blog" className={smallClass}>
+                  {t("guides")}
+                </Link>
                 <Link href="/setup" className={smallClass}>
                   {t("setup")}
                 </Link>

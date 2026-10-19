@@ -686,7 +686,8 @@ function drawFollowers(ctx: Ctx, s: DrawState, L: ScreenStrings) {
   text(ctx, L.invite, 78, 208, 16, 600, C.ember);
   text(ctx, L.inviteSub, 78, 230, 12.5, 400, C.soft);
 
-  const people = s.locale === "es" ? ["Mamá", "Álex", "Dra. Vidal"] : ["Mom", "Alex", "Dr. Vidal"];
+  const people =
+    s.locale === "es" ? ["Mamá", "Álex", "Dra. Vidal"] : s.locale === "de" ? ["Mama", "Alex", "Dr. Vogel"] : ["Mom", "Alex", "Dr. Vidal"];
   const colors = ["#F36638", "#5BA7F5", "#B58CF0"];
   people.forEach((name, i) => {
     const y = 280 + i * 92;
@@ -717,7 +718,7 @@ function drawLogbook(ctx: Ctx, s: DrawState, L: ScreenStrings) {
   const stats: Array<[string, string, string]> = [
     ["78%", L.tir, STATE_COLORS.range.text],
     ["142", `mg/dL ${L.average}`, C.text],
-    [s.locale === "es" ? "6,7%" : "6.7%", L.gmi, C.text],
+    [s.locale === "es" ? "6,7%" : s.locale === "de" ? "6,7 %" : "6.7%", L.gmi, C.text],
   ];
   stats.forEach(([v, label, color], i) => {
     const x = 12 + i * ((PHONE.w - 24) / 3 + 0);
@@ -732,7 +733,7 @@ function drawLogbook(ctx: Ctx, s: DrawState, L: ScreenStrings) {
   rr(ctx, 12, 224, PHONE.w - 24, 176, 24);
   fill(ctx, C.card);
   text(ctx, L.insulin, 30, 256, 15, 600, C.text);
-  text(ctx, s.locale === "es" ? "5,5" : "5.5", PHONE.w / 2 - 6, 318, 52, 300, C.text, "center");
+  text(ctx, s.locale === "en" ? "5.5" : "5,5", PHONE.w / 2 - 6, 318, 52, 300, C.text, "center");
   text(ctx, L.units, PHONE.w / 2 + 38, 318, 18, 500, C.soft);
   for (let i = 0; i <= 40; i++) {
     const x = 36 + i * ((PHONE.w - 72) / 40);

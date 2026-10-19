@@ -1,0 +1,52 @@
+Una alarma de glucosa tiene que hacer dos cosas a la vez: despertarte cuando de verdad importa y no molestarte cuando no. Si suena por todo, acabas silenciándola, y entonces no sirve. Esta guía explica cada aviso de Dulce, sus valores por defecto y cómo ajustarlos para que te ayuden sin agotarte.
+
+<Callout type="warning">
+Dulce no sustituye las alarmas de tu sensor. Si usas FreeStyle Libre 2 o Libre 3, mantén activadas las alarmas de la app de Libre. Dulce es una capa más, no la única.
+</Callout>
+
+## Dónde se configuran
+
+Todo está en Dulce, en **Ajustes → Alertas**. Antes, durante la configuración inicial, Dulce te pide dos permisos de iOS: **Notificaciones** y **Alertas críticas**. El segundo es el que permite que el aviso de glucosa muy baja suene con el iPhone en silencio. Si lo rechazaste, puedes activarlo en la app Ajustes del iPhone, dentro de Dulce → Notificaciones.
+
+## Los avisos, uno a uno
+
+| Aviso en Dulce | Qué hace | Por defecto |
+| --- | --- | --- |
+| Alerta de hipoglucemia | Te avisa cuando la glucosa baja de tu umbral (entre 50 y 80 mg/dL) | 70 mg/dL |
+| Alerta de hiperglucemia | Te avisa cuando la glucosa sube de tu umbral (entre 140 y 300 mg/dL) | 250 mg/dL |
+| Alertas de baja crítica | Aviso fuerte en una bajada grave (55 mg/dL o menos), incluso en silencio o en horas tranquilas | Activado |
+| Cambio rápido | Te avisa cuando la glucosa sube o baja muy deprisa | Activado |
+| Predicción de baja | Te avisa cuando vas camino de una bajada | Desactivado |
+
+### Baja crítica: la que siempre suena
+
+Es el único aviso que atraviesa el modo silencio, Concentración y las horas tranquilas. Siempre usa el sonido **Alarma** y se repite cada 5 minutos mientras sigas por debajo. Puedes desactivarlo, pero Dulce te pedirá confirmación: es el aviso que más importa de noche.
+
+### Predicción de baja
+
+Mira el ritmo al que está bajando tu glucosa en los últimos minutos y te avisa si, a ese ritmo, vas a cruzar tu umbral pronto. Para no saltar por ruido del sensor, solo avisa si hay varias lecturas seguidas bajando. No te dice qué hacer: te sugiere mirar el sensor. Está desactivado por defecto y, al activarlo, Dulce te explica esto mismo.
+
+## Que no te agoten las alarmas
+
+- **Horas tranquilas.** Elige una franja (por ejemplo, de 23:00 a 7:00) en la que se silencian los avisos que no son críticos. La baja crítica sigue sonando. Viene desactivado, para que nadie se quede sin un aviso de hiperglucemia nocturna sin haberlo decidido.
+- **Frecuencia de avisos.** Cada cuánto puede repetirse el mismo aviso si sigues fuera de rango. Por defecto, cada 15 minutos. Las bajadas graves se repiten siempre cada 5.
+- **Posponer avisos.** Si sabes que vas a estar alto un rato (después de una comida, por ejemplo), pausa los avisos unos minutos u horas. Las bajadas graves siguen llegando. También puedes posponer directamente desde la notificación.
+- **Sonidos.** Elige un sonido para la glucosa baja y otro para la alta: Predeterminado, Suave, Campanilla, Pulso, Alarma o Silencio. Tener dos distintos te dice qué pasa sin mirar el móvil.
+
+<AppCta title="Configura tus alarmas en Dulce" />
+
+## ¿Llegan con la app cerrada?
+
+Sí. No dependen de que tengas Dulce abierta: el servidor de Dulce revisa tus lecturas de LibreLinkUp y te manda el aviso. Con Dulce Pro lo hace cada minuto; con la versión gratuita, cada 5 minutos.
+
+Si llevas Apple Watch, iOS manda el aviso al reloj cuando el iPhone está bloqueado, y vibra en la muñeca. Más detalles en la <ArticleLink to="apple-watch">guía del Apple Watch</ArticleLink>.
+
+## Avisos para tu familia
+
+Tus seguidores pueden recibir sus propios avisos cuando bajas o subes, con sus propias horas tranquilas, y las bajadas muy fuertes les llegan siempre. Lo explicamos en la <ArticleLink to="family-sharing">guía para compartir con la familia</ArticleLink>.
+
+## Si un aviso no llega
+
+1. Comprueba que el interruptor **Notificaciones** de Dulce está activado y que iOS tiene permitidas las notificaciones de Dulce.
+2. Mira la hora de la última lectura en Dulce. Si es antigua, el problema es que no llegan datos a LibreLinkUp: sigue la <ArticleLink to="librelinkup-not-working">guía de LibreLinkUp sin datos</ArticleLink>.
+3. Revisa si tienes las horas tranquilas o la pausa de avisos activadas.

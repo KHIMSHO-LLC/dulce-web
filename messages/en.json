@@ -29,7 +29,9 @@
     "terms": "Terms",
     "disclaimer": "Medical disclaimer",
     "cookies": "Cookies",
-    "language": "Language"
+    "language": "Language",
+    "guides": "Guides",
+    "tools": "Calculators"
   },
   "preloader": {
     "label": "Loading Dulce"
@@ -205,8 +207,8 @@
           "a": "No. Just an iPhone and the free Dulce app. They open the link you send them and that's it."
         },
         {
-          "q": "Is it available in Spanish?",
-          "a": "Yes. The app is in Spanish and English."
+          "q": "Which languages is it in?",
+          "a": "Spanish, English and German."
         },
         {
           "q": "Is there an Android version?",
@@ -238,7 +240,8 @@
     "trademarks": "FreeStyle Libre and LibreLinkUp are trademarks of Abbott. Apple Watch and Apple Health are trademarks of Apple Inc. Dulce is an independent app.",
     "copyright": "© {year} Dulce",
     "top": "Back to top",
-    "wordmark": "dulce"
+    "wordmark": "dulce",
+    "learn": "Learn"
   },
   "waitlist": {
     "email": {
@@ -259,7 +262,8 @@
   "languageSwitcher": {
     "label": "Language",
     "es": "Spanish",
-    "en": "English"
+    "en": "English",
+    "de": "German"
   },
   "legal": {
     "lastUpdated": "Last updated: {date}",
@@ -279,7 +283,8 @@
     "cookies": {
       "title": "Cookie Policy",
       "description": "What cookies we use and why."
-    }
+    },
+    "englishOnly": ""
   },
   "notFound": {
     "title": "Page not found",
@@ -353,7 +358,8 @@
       "title": "Ready to see your glucose in Dulce?",
       "subtitle": "Free on the App Store. Set up your LibreLinkUp account and sign in."
     },
-    "disclaimer": "Dulce is an independent app and is not affiliated with, endorsed by, or sponsored by Abbott. FreeStyle Libre, LibreLink and LibreLinkUp are trademarks of Abbott Diabetes Care. Dulce is not a medical device and does not replace your CGM's own alarms."
+    "disclaimer": "Dulce is an independent app and is not affiliated with, endorsed by, or sponsored by Abbott. FreeStyle Libre, LibreLink and LibreLinkUp are trademarks of Abbott Diabetes Care. Dulce is not a medical device and does not replace your CGM's own alarms.",
+    "breadcrumbHome": "Home"
   },
   "contact": {
     "form": {
@@ -387,5 +393,24 @@
         "generic": "Something went wrong. You can also write to us at hola@dulceglucosa.com."
       }
     }
+  },
+  "blog": {
+    "title": "Guides on glucose, Libre and iPhone",
+    "description": "Practical guides to seeing your FreeStyle Libre glucose on iPhone, Apple Watch and with your family, written by people who live with diabetes.",
+    "eyebrow": "Guides",
+    "headline": "Get more out of your sensor",
+    "sub": "Practical guides written by people who live with diabetes. No filler: how it works, how to set it up and what to do when it breaks.",
+    "by": "By {name}",
+    "updated": "Updated {date}",
+    "published": "Published {date}",
+    "minutes": "{n} min read",
+    "related": "Keep reading",
+    "read": "Read",
+    "allArticles": "All guides",
+    "toolsTitle": "Calculators",
+    "home": "Home",
+    "authorArticles": "Articles by {name}",
+    "medical": "This article is for information and does not replace advice from your care team. Dulce is not a medical device and does not replace your sensor's alarms.",
+    "independent": "Dulce is an independent app, not affiliated with Abbott. FreeStyle Libre, LibreLink and LibreLinkUp are trademarks of Abbott."
   }
 }

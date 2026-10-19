@@ -19,6 +19,11 @@ const copy: Record<AppLocale, { line1: string; line2: string; sub: string }> = {
     line2: "always in sight.",
     sub: "Lock Screen, Apple Watch and your family's phone.",
   },
+  de: {
+    line1: "Dein Zucker,",
+    line2: "immer im Blick.",
+    sub: "Sperrbildschirm, Apple Watch und das Handy deiner Familie.",
+  },
 };
 
 export default async function Image({ params }: { params: Promise<{ locale: string }> }) {

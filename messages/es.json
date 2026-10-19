@@ -29,7 +29,9 @@
     "terms": "Términos",
     "disclaimer": "Aviso médico",
     "cookies": "Cookies",
-    "language": "Idioma"
+    "language": "Idioma",
+    "guides": "Guías",
+    "tools": "Calculadoras"
   },
   "preloader": {
     "label": "Cargando Dulce"
@@ -206,7 +208,7 @@
         },
         {
           "q": "¿Está en español?",
-          "a": "Sí. La app está en español y en inglés."
+          "a": "Sí. La app está en español, inglés y alemán."
         },
         {
           "q": "¿Hay versión para Android?",
@@ -238,7 +240,8 @@
     "trademarks": "FreeStyle Libre y LibreLinkUp son marcas de Abbott. Apple Watch y Apple Salud son marcas de Apple Inc. Dulce es una app independiente.",
     "copyright": "© {year} Dulce",
     "top": "Volver arriba",
-    "wordmark": "dulce"
+    "wordmark": "dulce",
+    "learn": "Aprender"
   },
   "waitlist": {
     "email": {
@@ -259,7 +262,8 @@
   "languageSwitcher": {
     "label": "Idioma",
     "es": "Español",
-    "en": "Inglés"
+    "en": "Inglés",
+    "de": "Alemán"
   },
   "legal": {
     "lastUpdated": "Última actualización: {date}",
@@ -279,7 +283,8 @@
     "cookies": {
       "title": "Política de Cookies",
       "description": "Qué cookies usamos y para qué."
-    }
+    },
+    "englishOnly": ""
   },
   "notFound": {
     "title": "Página no encontrada",
@@ -353,7 +358,8 @@
       "title": "¿Listo para ver tu glucosa en Dulce?",
       "subtitle": "Gratis en la App Store. Configura tu cuenta de LibreLinkUp e inicia sesión."
     },
-    "disclaimer": "Dulce es una app independiente y no está afiliada, avalada ni patrocinada por Abbott. FreeStyle Libre, LibreLink y LibreLinkUp son marcas de Abbott Diabetes Care. Dulce no es un dispositivo médico y no sustituye las alarmas de tu propio sensor."
+    "disclaimer": "Dulce es una app independiente y no está afiliada, avalada ni patrocinada por Abbott. FreeStyle Libre, LibreLink y LibreLinkUp son marcas de Abbott Diabetes Care. Dulce no es un dispositivo médico y no sustituye las alarmas de tu propio sensor.",
+    "breadcrumbHome": "Inicio"
   },
   "contact": {
     "form": {
@@ -387,5 +393,24 @@
         "generic": "Algo salió mal. También puedes escribirnos a hola@dulceglucosa.com."
       }
     }
+  },
+  "blog": {
+    "title": "Guías y artículos sobre glucosa, Libre e iPhone",
+    "description": "Guías prácticas para ver tu glucosa del FreeStyle Libre en el iPhone, el Apple Watch y con tu familia, escritas por personas que viven con diabetes.",
+    "eyebrow": "Guías",
+    "headline": "Aprende a sacar más de tu sensor",
+    "sub": "Guías prácticas escritas por personas que viven con diabetes. Sin relleno: cómo funciona, cómo se configura y qué hacer cuando falla.",
+    "by": "Por {name}",
+    "updated": "Actualizado el {date}",
+    "published": "Publicado el {date}",
+    "minutes": "{n} min de lectura",
+    "related": "Sigue leyendo",
+    "read": "Leer",
+    "allArticles": "Todas las guías",
+    "toolsTitle": "Calculadoras",
+    "home": "Inicio",
+    "authorArticles": "Artículos de {name}",
+    "medical": "Este artículo es informativo y no sustituye el consejo de tu equipo médico. Dulce no es un producto sanitario y no sustituye las alarmas de tu sensor.",
+    "independent": "Dulce es una app independiente, sin relación con Abbott. FreeStyle Libre, LibreLink y LibreLinkUp son marcas de Abbott."
   }
 }

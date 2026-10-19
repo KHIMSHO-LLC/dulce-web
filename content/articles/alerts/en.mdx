@@ -1,0 +1,52 @@
+A glucose alert has to do two things at once: wake you when it really matters and leave you alone when it doesn't. If it goes off for everything, you end up muting it, and then it's useless. This guide covers every alert in Dulce, its defaults, and how to tune it so it helps without wearing you out.
+
+<Callout type="warning">
+Dulce doesn't replace your sensor's alarms. If you use FreeStyle Libre 2 or Libre 3, keep the Libre app's alarms on. Dulce is an extra layer, not the only one.
+</Callout>
+
+## Where to set them
+
+Everything lives in Dulce under **Settings → Alerts**. Earlier, during setup, Dulce asks for two iOS permissions: **Notifications** and **Critical Alerts**. The second one is what lets the very-low alert ring with your iPhone on silent. If you declined it, you can turn it on in the iPhone Settings app under Dulce → Notifications.
+
+## The alerts, one by one
+
+| Alert in Dulce | What it does | Default |
+| --- | --- | --- |
+| Low glucose alert | Warns you when glucose drops below your threshold (50 to 80 mg/dL) | 70 mg/dL |
+| High glucose alert | Warns you when glucose rises above your threshold (140 to 300 mg/dL) | 250 mg/dL |
+| Critical low alerts | A loud alert on a severe low (55 mg/dL or less), even on silent or during quiet hours | On |
+| Rapid change | Warns you when glucose rises or falls very fast | On |
+| Predictive low | Warns you when you're heading for a low | Off |
+
+### Critical low: the one that always rings
+
+It's the only alert that breaks through silent mode, Focus and quiet hours. It always uses the **Alarm** sound and repeats every 5 minutes while you stay below. You can turn it off, but Dulce asks you to confirm: it's the alert that matters most at night.
+
+### Predictive low
+
+It looks at how fast your glucose has been falling over the last few minutes and warns you if, at that rate, you'll cross your threshold soon. To avoid firing on sensor noise, it only warns when several readings in a row are falling. It doesn't tell you what to do: it suggests checking your sensor. It's off by default, and when you turn it on Dulce explains exactly that.
+
+## Keep alerts from wearing you out
+
+- **Quiet hours.** Pick a window (say 11 p.m. to 7 a.m.) when non-critical alerts are muted. Critical lows still ring. It's off by default, so nobody loses a night-time high alert without deciding to.
+- **Alert frequency.** How often the same alert can repeat while you stay out of range. Every 15 minutes by default. Severe lows always repeat every 5.
+- **Snooze alerts.** If you know you'll run high for a while (after a meal, say), pause alerts for some minutes or hours. Severe lows still come through. You can also snooze straight from the notification.
+- **Sounds.** Choose one sound for low glucose and another for high: Default, Soft, Chime, Pulse, Alarm or Silent. Two different sounds tell you what's going on without looking at your phone.
+
+<AppCta title="Set up your alerts in Dulce" />
+
+## Do they arrive with the app closed?
+
+Yes. They don't depend on Dulce being open: Dulce's server checks your LibreLinkUp readings and sends you the alert. With Dulce Pro it does this every minute; with the free version, every 5 minutes.
+
+If you wear an Apple Watch, iOS sends the alert to the watch when your iPhone is locked, and it taps your wrist. More in the <ArticleLink to="apple-watch">Apple Watch guide</ArticleLink>.
+
+## Alerts for your family
+
+Your followers can get their own alerts when you go low or high, with their own quiet hours, and very low readings always reach them. See the <ArticleLink to="family-sharing">family sharing guide</ArticleLink>.
+
+## If an alert doesn't arrive
+
+1. Check that Dulce's **Notifications** switch is on and that iOS allows notifications from Dulce.
+2. Look at the time of the last reading in Dulce. If it's old, the problem is that no data is reaching LibreLinkUp: follow the <ArticleLink to="librelinkup-not-working">LibreLinkUp no-data guide</ArticleLink>.
+3. Check whether quiet hours or snooze are on.

@@ -1,10 +1,17 @@
 import { appStoreUrl, type StoreCampaign } from "@/lib/appStore";
 import { cn } from "@/lib/utils/cn";
+import type { AppLocale } from "@/i18n/routing";
+
+const ARIA: Record<AppLocale, string> = {
+  es: "Descargar Dulce en el App Store",
+  en: "Download Dulce on the App Store",
+  de: "Dulce im App Store laden",
+};
 
 type Props = {
   /** Which web placement this badge is — feeds the App Analytics `ct` token. */
   campaign: StoreCampaign;
-  locale: "es" | "en";
+  locale: AppLocale;
   className?: string;
   /** Renders full-width (useful inside stacked mobile CTAs). */
   fullWidth?: boolean;
@@ -19,8 +26,8 @@ type Props = {
  * the surrounding clear space and link behavior are ours to control.
  */
 export function AppStoreBadge({ campaign, locale, className, fullWidth }: Props) {
-  const aria = locale === "es" ? "Descargar Dulce en el App Store" : "Download Dulce on the App Store";
-  const src = locale === "es" ? "/badges/app-store-badge-es.svg" : "/badges/app-store-badge-en.svg";
+  const aria = ARIA[locale];
+  const src = `/badges/app-store-badge-${locale}.svg`;
 
   return (
     <a

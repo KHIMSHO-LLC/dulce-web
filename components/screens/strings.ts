@@ -1,8 +1,8 @@
 /**
- * UI strings for the depicted app screens. The app ships in Spanish and
- * English, so each locale shows the app in its own language.
+ * UI strings for the depicted app screens. The app ships in Spanish, English
+ * and German, so each locale shows the app in its own language.
  */
-export type ScreenLocale = "es" | "en";
+export type ScreenLocale = "es" | "en" | "de";
 
 export type ScreenStrings = {
   lastReading: string;
@@ -71,6 +71,21 @@ const esMonths = [
   "octubre",
   "noviembre",
   "diciembre",
+];
+const deDays = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
+const deMonths = [
+  "Januar",
+  "Februar",
+  "März",
+  "April",
+  "Mai",
+  "Juni",
+  "Juli",
+  "August",
+  "September",
+  "Oktober",
+  "November",
+  "Dezember",
 ];
 const enDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const enMonths = [
@@ -206,5 +221,64 @@ export const SCREEN_STRINGS: Record<ScreenLocale, ScreenStrings> = {
     parentName: "Lucy",
     followerAlert: (name) => `${name} · glucose low`,
     sample: "Sample data",
+  },
+  de: {
+    lastReading: "Letzter Wert",
+    inRange: "Im Zielbereich",
+    high: "Hoch",
+    low: "Niedrig",
+    change: "Änderung",
+    last12h: "Letzte 12 Stunden",
+    tir: "Zeit im Zielbereich",
+    carbs: "Kohlenhydrate",
+    insulin: "Insulin",
+    tabs: ["Start", "Logbuch", "Trends", "Einstellungen"],
+    now: "jetzt",
+    minAgo: (n) => `vor ${n} Min.`,
+    keepItUp: "Weiter so",
+    liveActivity: "Dulce",
+    alertVeryLow: "Glukose sehr niedrig",
+    alertLow: "Glukose niedrig",
+    alertHigh: "Glukose hoch",
+    actNow: "jetzt handeln",
+    alarm: "Alarm",
+    followers: "Deine Follower",
+    followersSub: "Wer deine Glukose in Echtzeit sehen kann.",
+    invite: "Jemanden einladen",
+    inviteSub: "Schick einen Link, dann sehen sie deine Glukose in Dulce.",
+    seesGlucose: "Sieht deine Glukose",
+    getsAlerts: "Bekommt Warnungen",
+    imOk: "Mir geht es gut",
+    nudgeFrom: (name) => `${name} hat dich angestupst`,
+    nudgeText: "Alles okay?",
+    logbook: "Logbuch",
+    last7: "Letzte 7 Tage",
+    average: "Durchschnitt",
+    gmi: "GMI",
+    entries: [
+      { time: "13:36", kind: "insulin", text: "5,5 IE · Bolus" },
+      { time: "13:30", kind: "carbs", text: "45 g · Mittagessen" },
+      { time: "12:58", kind: "glucose", text: "142 mg/dL" },
+      { time: "08:10", kind: "insulin", text: "4 IE · Bolus" },
+      { time: "08:02", kind: "carbs", text: "30 g · Frühstück" },
+      { time: "07:40", kind: "glucose", text: "104 mg/dL" },
+    ],
+    addEntry: "Eintrag hinzufügen",
+    units: "IE",
+    trends: "Trends",
+    days: "Tage",
+    tirTarget: "Ziel 70 %",
+    morning: "Morgen",
+    afternoon: "Nachmittag",
+    night: "Nacht",
+    health: "Apple Health",
+    healthSub: "Dulce liest diese Daten, damit alles beisammen ist.",
+    readOnly: "Nur lesen",
+    healthRows: ["Blutzucker", "Kohlenhydrate", "Insulin"],
+    connected: "Verbunden",
+    weekday: (d) => `${deDays[d.getDay()]}, ${d.getDate()}. ${deMonths[d.getMonth()]}`,
+    parentName: "Lena",
+    followerAlert: (name) => `${name} · Glukose niedrig`,
+    sample: "Beispieldaten",
   },
 };

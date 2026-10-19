@@ -5,10 +5,11 @@ import { Split } from "@/components/motion/Split";
 import { WaitlistForm } from "@/components/forms/WaitlistForm";
 import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { SECTION } from "@/lib/site";
+import type { AppLocale } from "@/i18n/routing";
 
 /** The real close: install on iPhone, or leave an email for Android. */
 export async function DownloadCta() {
-  const locale = (await getLocale()) as "es" | "en";
+  const locale = (await getLocale()) as AppLocale;
   const t = await getTranslations("home.download");
 
   return (
