@@ -56,6 +56,14 @@ export function ContactForm() {
     <form action={formAction} className="space-y-5" noValidate>
       <input type="hidden" name="locale" value={locale} />
 
+      {/* Honeypot for bots: off-screen and skipped by keyboard and screen readers. */}
+      <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
+        <label>
+          Website
+          <input type="text" name="website" tabIndex={-1} autoComplete="off" defaultValue="" />
+        </label>
+      </div>
+
       <div className="grid sm:grid-cols-2 gap-5">
         <div>
           <label htmlFor={nameId} className={labelClass}>

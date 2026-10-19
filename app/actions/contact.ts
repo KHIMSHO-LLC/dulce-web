@@ -9,10 +9,14 @@ import { getRequestIp } from "@/lib/utils/getRequestIp";
 
 const schema = z.object({
   name: z.string().min(2).max(100),
-  email: z.string().email(),
+  // Bots often submit our own addresses (sales@, hola@...), which only bounces the confirmation.
+  email: z
+    .string()
+    .email()
+    .refine((value) => !value.trim().toLowerCase().endsWith("@dulceglucosa.com")),
   subject: z.string().min(2).max(200),
   message: z.string().min(10).max(5000),
-  locale: z.enum(["es", "en"]),
+  locale: z.enum(["es", "en", "de"]),
 });
 
 export type ContactState =
@@ -26,6 +30,13 @@ export async function sendContactMessage(
   _prev: ContactState,
   formData: FormData,
 ): Promise<ContactState> {
+  // Honeypot: the "website" field is hidden from people, so anything in it came from a bot.
+  // Pretend it worked so the bot doesn't retry, and send nothing.
+  const honeypot = formData.get("website");
+  if (typeof honeypot === "string" && honeypot.trim() !== "") {
+    return { status: "success" };
+  }
+
   const parsed = schema.safeParse({
     name: formData.get("name"),
     email: formData.get("email"),
@@ -68,15 +79,22 @@ export async function sendContactMessage(
     });
 
     // 2. Send a confirmation to the person who reached out
-    const confirmationSubject =
-      parsed.data.locale === "es"
-        ? "Recibimos tu mensaje — Dulce"
-        : "We got your message — Dulce";
-
-    const confirmationBody =
-      parsed.data.locale === "es"
-        ? `Hola ${name},\n\nGracias por escribirnos. Hemos recibido tu mensaje y te responderemos en un plazo de 48 horas laborables.\n\nEl equipo de Dulce\nhola@dulceglucosa.com`
-        : `Hi ${name},\n\nThanks for reaching out. We received your message and will get back to you within 48 working hours.\n\nThe Dulce team\nhola@dulceglucosa.com`;
+    const confirmation = {
+      es: {
+        subject: "Recibimos tu mensaje — Dulce",
+        body: `Hola ${name},\n\nGracias por escribirnos. Hemos recibido tu mensaje y te responderemos en un plazo de 48 horas laborables.\n\nEl equipo de Dulce\nhola@dulceglucosa.com`,
+      },
+      en: {
+        subject: "We got your message — Dulce",
+        body: `Hi ${name},\n\nThanks for reaching out. We received your message and will get back to you within 48 working hours.\n\nThe Dulce team\nhola@dulceglucosa.com`,
+      },
+      de: {
+        subject: "Wir haben deine Nachricht erhalten — Dulce",
+        body: `Hallo ${name},\n\ndanke für deine Nachricht. Wir haben sie erhalten und melden uns innerhalb von 48 Arbeitsstunden.\n\nDein Dulce-Team\nhola@dulceglucosa.com`,
+      },
+    }[parsed.data.locale];
+    const confirmationSubject = confirmation.subject;
+    const confirmationBody = confirmation.body;
 
     await client.emails.send({
       from: env.resend.from(),
