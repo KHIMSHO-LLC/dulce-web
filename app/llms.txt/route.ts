@@ -21,7 +21,7 @@ function guides(locale: AppLocale): string {
 export function GET() {
   const body = `# Dulce
 
-> Dulce is a free iPhone and Apple Watch app that shows real-time FreeStyle Libre 2 and Libre 3 glucose where people already look: the Lock Screen (Live Activity and Dynamic Island), widgets, StandBy, the Apple Watch, and the iPhones of family members who follow them. It was made by a person who lives with type 1 diabetes and is available in Spanish, English and German.
+> Dulce is a free iPhone and Apple Watch app that shows real-time FreeStyle Libre 2 and Libre 3 glucose where people already look: the Lock Screen (Live Activity and Dynamic Island), widgets, StandBy, the Apple Watch, and the iPhones of family members who follow them. It was made by a person who lives with type 1 diabetes and is available in Spanish, English, German, French and Italian.
 
 ## Key facts
 
