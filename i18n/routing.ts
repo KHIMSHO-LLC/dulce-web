@@ -49,6 +49,7 @@ export const routing = defineRouting({
     // path (see dulce-app `constants/links.ts`), so both locales must resolve
     // the same slug.
     "/setup": "/setup",
+    "/pro": "/pro",
     // Live LibreLinkUp status measured by the relay (lib/lluStatus.ts).
     "/librelinkup-status": {
       es: "/estado-librelinkup",
@@ -73,6 +74,13 @@ export const routing = defineRouting({
       de: "/tools/blutzucker-umrechner-mg-dl-mmol-l",
       fr: "/outils/convertisseur-glycemie-mg-dl-mmol-l",
       it: "/strumenti/convertitore-glicemia-mg-dl-mmol-l",
+    },
+    "/tools/sensor-end-date": {
+      es: "/herramientas/calculadora-fin-sensor-libre",
+      en: "/tools/libre-sensor-end-date-calculator",
+      de: "/tools/libre-sensor-ablauf-rechner",
+      fr: "/outils/calculateur-fin-capteur-libre",
+      it: "/strumenti/calcolatore-scadenza-sensore-libre",
     },
     "/tools/a1c-calculator": {
       es: "/herramientas/calculadora-hba1c-glucosa-media",

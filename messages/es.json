@@ -501,5 +501,54 @@
       "ca": "Canadá",
       "la": "Latinoamérica"
     }
+  },
+  "pro": {
+    "nav": "Gratis o Pro",
+    "title": "Dulce Pro: qué es gratis y qué añade Pro",
+    "description": "Qué tienes gratis en Dulce y qué añade Dulce Pro: Live Activity en la pantalla de bloqueo, Apple Watch, compartir con la familia y Apple Salud. 14 días de prueba gratis.",
+    "headline": "Gratis para usar. Pro cuando quieras más.",
+    "lead": "Dulce se descarga gratis y lo esencial sigue siendo gratis. Dulce Pro añade lo que mantiene tu número a la vista y a tu familia al tanto.",
+    "freeTitle": "Gratis",
+    "proTitle": "Dulce Pro",
+    "free": [
+      "Glucosa en directo con flecha de tendencia y gráfica",
+      "Widgets para la pantalla de inicio, la pantalla de bloqueo y StandBy",
+      "Avisos de glucosa baja, alta y bajada crítica (revisados cada 5 minutos)",
+      "Diario de hidratos, insulina y glucosa",
+      "Tendencias: tiempo en rango, media y GMI",
+      "Seguir la glucosa de otra persona"
+    ],
+    "pro": [
+      "Live Activity en la pantalla de bloqueo y Dynamic Island, actualizada cada minuto",
+      "App para Apple Watch y complicaciones",
+      "Compartir con la familia, hasta 3 seguidores que no pagan nada",
+      "Datos de Apple Salud en tu Diario y Tendencias",
+      "Avisos revisados cada minuto"
+    ],
+    "trialTitle": "Cómo funciona la prueba",
+    "trial": [
+      "Los nuevos suscriptores tienen 14 días gratis.",
+      "Elige mensual o anual. La App Store te muestra el precio en tu moneda antes de confirmar.",
+      "Cancela cuando quieras en las suscripciones de tu ID de Apple; si cancelas durante la prueba, no pagas nada."
+    ],
+    "faq": [
+      {
+        "q": "¿Dulce es gratis?",
+        "a": "Sí. Dulce se descarga gratis, con glucosa en directo, widgets, avisos, el Diario y Tendencias. Dulce Pro es una suscripción opcional con 14 días de prueba gratis."
+      },
+      {
+        "q": "¿Qué añade Dulce Pro?",
+        "a": "La Live Activity en la pantalla de bloqueo y la Dynamic Island, la app del Apple Watch, compartir con hasta 3 seguidores, los datos de Apple Salud y avisos revisados cada minuto en vez de cada 5."
+      },
+      {
+        "q": "¿Mis seguidores necesitan Pro?",
+        "a": "No. Compartir con la familia forma parte de Pro para quien lleva el sensor; los seguidores instalan Dulce gratis."
+      },
+      {
+        "q": "¿Cómo cancelo?",
+        "a": "Las suscripciones las gestiona Apple. Abre Ajustes en el iPhone, toca tu nombre, luego Suscripciones, y elige Dulce."
+      }
+    ],
+    "cta": "Descargar Dulce gratis"
   }
 }

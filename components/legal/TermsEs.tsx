@@ -1,3 +1,5 @@
+import { Link } from "@/i18n/navigation";
+
 {/* TODO: Legal review by a Spanish lawyer required before public launch. */}
 export function TermsEs() {
   return (
@@ -21,7 +23,7 @@ export function TermsEs() {
       <p>
         Al descargar la app, conectar tu cuenta de CGM o usar cualquier parte del Servicio,
         confirmas que has leído, entiendes y aceptas estos términos y nuestra{" "}
-        <a href="/legal/privacidad">Política de Privacidad</a>.
+        <Link href="/legal/privacy">Política de Privacidad</Link>.
       </p>
 
       <h2 id="service">2. Descripción del Servicio</h2>

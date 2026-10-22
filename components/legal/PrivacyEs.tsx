@@ -1,3 +1,5 @@
+import { Link } from "@/i18n/navigation";
+
 {/* TODO: Legal review by a Spanish DPO / lawyer required before public launch. */}
 export function PrivacyEs() {
   return (
@@ -276,7 +278,7 @@ export function PrivacyEs() {
       <p>
         Solo usamos cookies técnicas estrictamente necesarias (preferencia de idioma, token
         CSRF en formularios). No usamos cookies de rastreo ni publicidad. Más información en
-        nuestra <a href="/legal/cookies">Política de Cookies</a>.
+        nuestra <Link href="/legal/cookies">Política de Cookies</Link>.
       </p>
 
       <h2 id="changes">12. Cambios en esta política</h2>

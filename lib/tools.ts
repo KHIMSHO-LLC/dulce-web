@@ -6,6 +6,8 @@
  *  - eAG = 28.7 × A1C − 46.7 (mg/dL). Nathan et al., Diabetes Care 2008;31:1473 (ADAG study).
  *  - GMI (%) = 3.31 + 0.02392 × mean glucose (mg/dL). Bergenstal et al., Diabetes Care 2018;41:2275.
  *  - IFCC (mmol/mol) = (NGSP % − 2.15) × 10.929. IFCC/NGSP master equation.
+ *  - Sensor life: FreeStyle Libre 2 / 3 14 days, Libre 2 Plus / 3 Plus 15 days, 60-minute warm-up
+ *    (Abbott, FreeStyle Libre CGM systems comparison guide).
  */
 import type { AppLocale } from "@/i18n/routing";
 
@@ -18,7 +20,23 @@ export const a1cFromEag = (eagMgdl: number) => (eagMgdl + 46.7) / 28.7;
 export const gmiFromMean = (meanMgdl: number) => 3.31 + 0.02392 * meanMgdl;
 export const ifccFromNgsp = (ngsp: number) => (ngsp - 2.15) * 10.929;
 
-export type ToolPath = "/tools/glucose-converter" | "/tools/a1c-calculator";
+export type SensorModel = "libre2" | "libre2plus" | "libre3" | "libre3plus";
+
+export const SENSORS: Record<SensorModel, { name: string; days: number }> = {
+  libre2: { name: "FreeStyle Libre 2", days: 14 },
+  libre2plus: { name: "FreeStyle Libre 2 Plus", days: 15 },
+  libre3: { name: "FreeStyle Libre 3", days: 14 },
+  libre3plus: { name: "FreeStyle Libre 3 Plus", days: 15 },
+};
+
+export const SENSOR_WARMUP_MIN = 60;
+
+/** Ready (end of warm-up) and end times, epoch ms, from the start time. */
+export function sensorTimes(model: SensorModel, startMs: number): { readyAt: number; endsAt: number } {
+  return { readyAt: startMs + SENSOR_WARMUP_MIN * 60_000, endsAt: startMs + SENSORS[model].days * 86_400_000 };
+}
+
+export type ToolPath = "/tools/glucose-converter" | "/tools/a1c-calculator" | "/tools/sensor-end-date";
 
 type ToolCopy = { title: string; description: string };
 
@@ -65,6 +83,28 @@ export const TOOL_COPY: Record<ToolPath, Record<AppLocale, ToolCopy>> = {
     it: {
       title: "Calcolatore HbA1c: glicemia media, eAG e GMI",
       description: "Calcola la glicemia media stimata dalla tua HbA1c, oppure una HbA1c stimata e il GMI dalla glicemia media del tuo sensore.",
+    },
+  },
+  "/tools/sensor-end-date": {
+    es: {
+      title: "Calculadora de fin del sensor FreeStyle Libre",
+      description: "Calcula cuándo termina tu sensor FreeStyle Libre 2, 3, 2 Plus o 3 Plus y cuándo tendrás lecturas tras el calentamiento, a partir del día y la hora en que lo pusiste.",
+    },
+    en: {
+      title: "FreeStyle Libre sensor end date calculator",
+      description: "Work out when your FreeStyle Libre 2, 3, 2 Plus or 3 Plus sensor ends and when readings start after warm-up, from the day and time you applied it.",
+    },
+    de: {
+      title: "FreeStyle Libre Sensor-Ablauf-Rechner",
+      description: "Berechne, wann dein FreeStyle Libre 2, 3, 2 Plus oder 3 Plus Sensor abläuft und wann nach der Aufwärmphase Werte kommen, ab dem Zeitpunkt des Setzens.",
+    },
+    fr: {
+      title: "Calculateur de fin de capteur FreeStyle Libre",
+      description: "Calcule quand ton capteur FreeStyle Libre 2, 3, 2 Plus ou 3 Plus expire et quand les mesures arrivent après le préchauffage, à partir du jour et de l'heure de pose.",
+    },
+    it: {
+      title: "Calcolatore di scadenza del sensore FreeStyle Libre",
+      description: "Calcola quando scade il tuo sensore FreeStyle Libre 2, 3, 2 Plus o 3 Plus e quando arrivano le letture dopo il riscaldamento, dal giorno e dall'ora di applicazione.",
     },
   },
 };

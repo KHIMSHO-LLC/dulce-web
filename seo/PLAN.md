@@ -73,6 +73,13 @@ questions around them. Being the best answer means the product actually does it 
 - [x] 2026-10-22: Fixed hero text never appearing on direct visits to /setup (intro animation only fired from the
       home page preloader).
 
+- [x] 2026-10-22: Free vs Pro page (`/pro`, 5 languages, no prices: they differ by country) and FreeStyle Libre
+      sensor end date calculator (`/tools/sensor-end-date`). No separate About page: `/about` intentionally
+      redirects to the founder section of the home page.
+- [x] 2026-10-22: Lint fully clean (legal pages used raw `<a>` links that jumped to English; now locale-aware).
+- [ ] Performance: the home page ships ~430 KB of compressed JS (three.js phone). Measure on PageSpeed Insights
+      (mobile) and lazy-load or trim the 3D scene if LCP/INP are poor.
+
 ## Next for Claude (in order)
 
 1. Done 2026-10-22 (ahead of the app release, at Giorgi's request): the home FAQ and `/llms.txt` say the app is

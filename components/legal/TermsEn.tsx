@@ -1,11 +1,13 @@
+import { Link } from "@/i18n/navigation";
+
 {/* TODO: Legal review by a Spanish lawyer required before public launch. */}
 export function TermsEn() {
   return (
     <>
       <p>
         These Terms of Use govern access to and use of the <strong>dulceglucosa.com</strong>{" "}
-        website and the Dulce mobile application (together, the "Service"). By using the
-        Service you accept these terms. If you don't accept them, don't use the Service.
+        website and the Dulce mobile application (together, the “Service”). By using the
+        Service you accept these terms. If you don’t accept them, don’t use the Service.
       </p>
 
       <blockquote>
@@ -20,7 +22,7 @@ export function TermsEn() {
       <p>
         By downloading the app, creating a connection to your CGM account or using any part
         of the Service, you confirm that you have read, understand and accept these terms and
-        our <a href="/en/legal/privacy">Privacy Policy</a>.
+        our <Link href="/legal/privacy">Privacy Policy</Link>.
       </p>
 
       <h2 id="service">2. Service description</h2>
@@ -124,7 +126,7 @@ export function TermsEn() {
         <li>
           If you are a consumer in the EU, you have a 14-day right of withdrawal. By starting
           the subscription (or trial) immediately, you agree that the service begins at once;
-          Apple's standard withdrawal process applies.
+          Apple’s standard withdrawal process applies.
         </li>
       </ul>
 
@@ -159,7 +161,7 @@ export function TermsEn() {
 
       <h2 id="disclaimers">12. Disclaimer of warranties</h2>
       <p>
-        The Service is provided "as is" and "as available". To the maximum extent permitted
+        The Service is provided “as is” and “as available”. To the maximum extent permitted
         by law, we do not warrant that it will be uninterrupted, error-free, 100% secure, or
         that it will meet specific expectations. This is especially relevant for data from
         third-party CGM services: any delay, error or absence of data from the original
@@ -201,7 +203,7 @@ export function TermsEn() {
         These terms are governed by the laws of Spain and applicable European Union
         regulations. For consumers with habitual residence in the EU, the courts of their
         place of residence shall have jurisdiction. For others, the courts of the city of
-        the Service operator's residence in Spain.
+        the Service operator’s residence in Spain.
       </p>
 
       <h2 id="contact">18. Contact</h2>

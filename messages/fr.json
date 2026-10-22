@@ -501,5 +501,54 @@
       "ca": "Canada",
       "la": "Amérique latine"
     }
+  },
+  "pro": {
+    "nav": "Gratuit ou Pro",
+    "title": "Dulce Pro : ce qui est gratuit et ce que Pro ajoute",
+    "description": "Ce que Dulce offre gratuitement et ce qu'ajoute Dulce Pro : Activité en direct sur l'écran verrouillé, Apple Watch, partage en famille et Apple Santé. Essai gratuit de 14 jours.",
+    "headline": "Gratuit à utiliser. Pro quand tu veux plus.",
+    "lead": "Dulce se télécharge gratuitement et l'essentiel reste gratuit. Dulce Pro ajoute ce qui garde ton chiffre sous les yeux et ta famille au courant.",
+    "freeTitle": "Gratuit",
+    "proTitle": "Dulce Pro",
+    "free": [
+      "Glycémie en direct avec flèche de tendance et courbe",
+      "Widgets pour l'écran d'accueil, l'écran verrouillé et StandBy",
+      "Alertes de glycémie basse, haute et d'hypo critique (vérifiées toutes les 5 minutes)",
+      "Journal des glucides, de l'insuline et de la glycémie",
+      "Tendances : temps dans la cible, moyenne et GMI",
+      "Suivre la glycémie de quelqu'un d'autre"
+    ],
+    "pro": [
+      "Activité en direct sur l'écran verrouillé et Dynamic Island, mise à jour chaque minute",
+      "App Apple Watch et complications",
+      "Partage en famille avec jusqu'à 3 abonnés, qui ne paient rien",
+      "Données Apple Santé dans ton Journal et tes Tendances",
+      "Alertes vérifiées chaque minute"
+    ],
+    "trialTitle": "Comment fonctionne l'essai",
+    "trial": [
+      "Les nouveaux abonnés ont 14 jours gratuits.",
+      "Choisis mensuel ou annuel. L'App Store t'affiche le prix dans ta devise avant de confirmer.",
+      "Résilie quand tu veux dans les abonnements de ton identifiant Apple ; si tu résilies pendant l'essai, tu ne paies rien."
+    ],
+    "faq": [
+      {
+        "q": "Dulce est-il gratuit ?",
+        "a": "Oui. Dulce se télécharge gratuitement, avec la glycémie en direct, les widgets, les alertes, le Journal et les Tendances. Dulce Pro est un abonnement facultatif avec 14 jours d'essai gratuit."
+      },
+      {
+        "q": "Qu'ajoute Dulce Pro ?",
+        "a": "L'Activité en direct sur l'écran verrouillé et la Dynamic Island, l'app Apple Watch, le partage avec jusqu'à 3 abonnés, les données Apple Santé et des alertes vérifiées chaque minute au lieu de toutes les 5 minutes."
+      },
+      {
+        "q": "Mes abonnés ont-ils besoin de Pro ?",
+        "a": "Non. Le partage en famille fait partie de Pro pour la personne qui porte le capteur ; les abonnés installent Dulce gratuitement."
+      },
+      {
+        "q": "Comment résilier ?",
+        "a": "Les abonnements sont gérés par Apple. Ouvre Réglages sur ton iPhone, touche ton nom, puis Abonnements, et choisis Dulce."
+      }
+    ],
+    "cta": "Télécharger Dulce gratuitement"
   }
 }

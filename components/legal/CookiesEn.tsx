@@ -51,7 +51,7 @@ export function CookiesEn() {
       <h2 id="manage">4. How to manage cookies</h2>
       <p>
         You can clear stored cookies or prevent your browser from accepting them in the
-        browser's settings:
+        browser’s settings:
       </p>
       <ul>
         <li>
