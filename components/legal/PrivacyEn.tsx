@@ -1,3 +1,5 @@
+import { Link } from "@/i18n/navigation";
+
 {/* TODO: Legal review by a Spanish DPO / lawyer required before public launch. */}
 export function PrivacyEn() {
   return (
@@ -19,7 +21,7 @@ export function PrivacyEn() {
       <h3>2.1 Website</h3>
       <ul>
         <li>
-          <strong>Waitlist:</strong> your email and your session's language.
+          <strong>Waitlist:</strong> your email and your session’s language.
         </li>
         <li>
           <strong>Beta form:</strong> name, email, CGM device, and region. Optionally, any
@@ -41,7 +43,7 @@ export function PrivacyEn() {
         <li>
           <strong>Your LibreLinkUp credentials.</strong> You sign in with the email and
           password of your LibreLinkUp account (Abbott). They are stored only in your
-          device's secure keychain and are used to fetch your glucose from Abbott's service.
+          device’s secure keychain and are used to fetch your glucose from Abbott’s service.
           They are never sent to Dulce servers.
         </li>
         <li>
@@ -64,7 +66,7 @@ export function PrivacyEn() {
       <p>
         Some features need to keep working while your phone is locked or the app is closed:
         the Lock Screen Live Activity, glucose alerts, Apple Watch updates and family
-        following. To power them, a small server operated by us (the "relay", hosted on
+        following. To power them, a small server operated by us (the “relay”, hosted on
         Cloudflare) fetches your readings from LibreLinkUp and pushes them to your devices.
         When — and only when — you turn one of these features on, the relay processes:
       </p>
@@ -75,7 +77,7 @@ export function PrivacyEn() {
         </li>
         <li>
           <strong>Anonymous push tokens</strong> for your devices, issued by Apple or Google.
-          They identify a device for notifications; they don't identify you personally.
+          They identify a device for notifications; they don’t identify you personally.
         </li>
         <li>
           <strong>Your most recent glucose readings</strong>, kept as a short rolling window
@@ -98,7 +100,7 @@ export function PrivacyEn() {
         If you invite someone to follow you, the relay delivers your recent readings and
         alerts to their device from the moment they accept — earlier history is not shared.
         Short predefined nudge messages between you and your followers also pass through the
-        relay. You can revoke a follower's access at any time, and you can turn off follower
+        relay. You can revoke a follower’s access at any time, and you can turn off follower
         messages entirely.
       </p>
 
@@ -111,7 +113,7 @@ export function PrivacyEn() {
 
       <h2 id="purpose">3. Why we use your data</h2>
       <ul>
-        <li>Show your glucose on your devices and, if you choose, your followers' devices.</li>
+        <li>Show your glucose on your devices and, if you choose, your followers’ devices.</li>
         <li>Deliver the alerts you configure.</li>
         <li>Validate your subscription and unlock Pro features.</li>
         <li>Let you know when Dulce is available (waitlist).</li>
@@ -206,8 +208,8 @@ export function PrivacyEn() {
         </li>
         <li>
           <strong>Abbott (LibreLinkUp)</strong> — your device and our relay connect to
-          Abbott's service with your credentials/session to fetch your readings. That
-          connection is governed by Abbott's own privacy policy.
+          Abbott’s service with your credentials/session to fetch your readings. That
+          connection is governed by Abbott’s own privacy policy.
         </li>
       </ul>
       <p>
@@ -219,7 +221,7 @@ export function PrivacyEn() {
       <p>
         Some of our processors (Cloudflare, RevenueCat, Resend, Vercel, Apple, Google)
         process data in the US or at global edge locations. Transfers are made under the
-        European Commission's Standard Contractual Clauses (SCCs) or equivalent frameworks
+        European Commission’s Standard Contractual Clauses (SCCs) or equivalent frameworks
         (DPF). You can request a copy of these safeguards at{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
@@ -253,7 +255,7 @@ export function PrivacyEn() {
       <h2 id="minors">10. Children</h2>
       <p>
         Dulce is not directed at children under the age of 14. A parent or legal guardian may
-        use Dulce to follow a minor's glucose under their own responsibility. If you believe a
+        use Dulce to follow a minor’s glucose under their own responsibility. If you believe a
         minor in your care has provided us with data without your consent, contact us and we
         will delete it.
       </p>
@@ -262,7 +264,7 @@ export function PrivacyEn() {
       <p>
         We only use strictly necessary technical cookies (language preference, CSRF token on
         forms). We do not use tracking or advertising cookies. More in our{" "}
-        <a href="/en/legal/cookies">Cookie Policy</a>.
+        <Link href="/legal/cookies">Cookie Policy</Link>.
       </p>
 
       <h2 id="changes">12. Changes to this policy</h2>

@@ -89,7 +89,7 @@ for (const a of ARTICLES) {
       if (!existsSync(join(root, "public", m[1]))) err(a.id, `${locale} figure ${m[1]} not found in public/`);
     }
     for (const m of body.matchAll(/<PageLink to="([^"]+)"/g)) {
-      if (!["/setup", "/tools/glucose-converter", "/tools/a1c-calculator", "/legal/disclaimer", "/librelinkup-status"].includes(m[1])) {
+      if (!["/setup", "/tools/glucose-converter", "/tools/a1c-calculator", "/legal/disclaimer", "/librelinkup-status", "/tools/sensor-end-date"].includes(m[1])) {
         err(a.id, `${locale} PageLink to unknown page "${m[1]}"`);
       }
     }

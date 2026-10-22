@@ -501,5 +501,54 @@
       "ca": "Canada",
       "la": "Latin America"
     }
+  },
+  "pro": {
+    "nav": "Free vs Pro",
+    "title": "Dulce Pro: what's free and what Pro adds",
+    "description": "What you get free in Dulce and what Dulce Pro adds: Lock Screen Live Activity, Apple Watch, family sharing and Apple Health. 14-day free trial, cancel any time.",
+    "headline": "Free to use. Pro when you want more.",
+    "lead": "Dulce is free to download and the essentials stay free. Dulce Pro adds the features that keep your number in front of you and your family in the loop.",
+    "freeTitle": "Free",
+    "proTitle": "Dulce Pro",
+    "free": [
+      "Live glucose with trend arrow and chart",
+      "Widgets for the Home Screen, Lock Screen and StandBy",
+      "Low, high and critical-low alerts (checked every 5 minutes)",
+      "Logbook for carbs, insulin and glucose",
+      "Trends: time in range, average and GMI",
+      "Following someone else's glucose"
+    ],
+    "pro": [
+      "Lock Screen Live Activity and Dynamic Island, updated every minute",
+      "Apple Watch app and complications",
+      "Family sharing with up to 3 followers, who pay nothing",
+      "Apple Health data in your Logbook and Trends",
+      "Alerts checked every minute"
+    ],
+    "trialTitle": "How the trial works",
+    "trial": [
+      "New subscribers get 14 days free.",
+      "Choose monthly or yearly. The App Store shows the price in your currency before you confirm.",
+      "Cancel any time in your Apple ID's subscription settings; if you cancel during the trial you pay nothing."
+    ],
+    "faq": [
+      {
+        "q": "Is Dulce free?",
+        "a": "Yes. Dulce is free to download, with live glucose, widgets, alerts, the Logbook and Trends. Dulce Pro is an optional subscription with a 14-day free trial."
+      },
+      {
+        "q": "What does Dulce Pro add?",
+        "a": "The Lock Screen Live Activity and Dynamic Island, the Apple Watch app, family sharing with up to 3 followers, Apple Health data, and alerts checked every minute instead of every 5 minutes."
+      },
+      {
+        "q": "Do my followers need Pro?",
+        "a": "No. Family sharing is part of Pro for the person wearing the sensor; followers install Dulce for free."
+      },
+      {
+        "q": "How do I cancel?",
+        "a": "Subscriptions are handled by Apple. Open Settings on your iPhone, tap your name, then Subscriptions, and choose Dulce."
+      }
+    ],
+    "cta": "Download Dulce free"
   }
 }

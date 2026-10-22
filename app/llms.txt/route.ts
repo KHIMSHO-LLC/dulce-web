@@ -41,6 +41,8 @@ export function GET() {
 - [LibreLink vs LibreLinkUp setup](${absoluteUrl(localizedPath("en", "/setup"))})
 - [A1C and GMI calculator](${absoluteUrl(localizedPath("en", "/tools/a1c-calculator"))})
 - [mg/dL to mmol/L converter](${absoluteUrl(localizedPath("en", "/tools/glucose-converter"))})
+- [FreeStyle Libre sensor end date calculator](${absoluteUrl(localizedPath("en", "/tools/sensor-end-date"))})
+- [Live LibreLinkUp status](${absoluteUrl(localizedPath("en", "/librelinkup-status"))})
 - [Medical disclaimer](${absoluteUrl(localizedPath("en", "/legal/disclaimer"))})
 
 ${locales

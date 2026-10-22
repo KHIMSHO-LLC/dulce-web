@@ -118,7 +118,7 @@ export function PageLink({
   children,
 }: {
   locale: AppLocale;
-  to: "/setup" | "/tools/glucose-converter" | "/tools/a1c-calculator" | "/legal/disclaimer" | "/librelinkup-status";
+  to: "/setup" | "/tools/glucose-converter" | "/tools/a1c-calculator" | "/legal/disclaimer" | "/librelinkup-status" | "/tools/sensor-end-date";
   children: ReactNode;
 }) {
   return (

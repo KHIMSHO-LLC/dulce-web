@@ -16,6 +16,7 @@ export async function SiteFooter() {
   const t = await getTranslations("footer");
   const nav = await getTranslations("nav");
   const status = await getTranslations("llustatus");
+  const pro = await getTranslations("pro");
   const year = new Date().getFullYear();
   const home = (id: string) => homeSection(locale as AppLocale, id);
 
@@ -61,6 +62,9 @@ export async function SiteFooter() {
             <Link href="/tools/a1c-calculator" className={linkClass}>
               {TOOL_COPY["/tools/a1c-calculator"][locale as AppLocale].title}
             </Link>
+            <Link href="/tools/sensor-end-date" className={linkClass}>
+              {TOOL_COPY["/tools/sensor-end-date"][locale as AppLocale].title}
+            </Link>
           </nav>
 
           <div className="grid content-start gap-2 text-label">
@@ -70,6 +74,9 @@ export async function SiteFooter() {
             </Link>
             <Link href="/librelinkup-status" className={linkClass}>
               {status("nav")}
+            </Link>
+            <Link href="/pro" className={linkClass}>
+              {pro("nav")}
             </Link>
             <a href={`mailto:${CONTACT_EMAIL}`} className={linkClass}>
               {CONTACT_EMAIL}
