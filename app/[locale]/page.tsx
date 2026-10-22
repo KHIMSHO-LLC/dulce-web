@@ -35,32 +35,89 @@ export async function generateMetadata({ params }: PageProps<"/[locale]">): Prom
   };
 }
 
+/** What the released app does, for AI and search engines. Keep in sync with PRODUCT.md and app/llms.txt. */
+const FEATURES: Record<AppLocale, string[]> = {
+  es: [
+    "Glucosa en tiempo real del FreeStyle Libre 2 y Libre 3 a través de LibreLinkUp",
+    "Live Activity en la pantalla de bloqueo y la Dynamic Island, actualizada cada minuto",
+    "Widgets para la pantalla de inicio, la pantalla de bloqueo y StandBy",
+    "App para Apple Watch con complicaciones",
+    "Avisos de glucosa baja y alta, aviso crítico de hipo grave y horas tranquilas",
+    "Seguidores familiares por enlace de invitación, con sus propios avisos y mensajes de un toque",
+    "Diario de hidratos, insulina y glucosa",
+    "Tendencias: tiempo en rango, glucosa media y GMI de 7 a 90 días",
+  ],
+  en: [
+    "Real-time FreeStyle Libre 2 and Libre 3 glucose through LibreLinkUp",
+    "Lock Screen Live Activity and Dynamic Island, updated every minute",
+    "Home Screen, Lock Screen and StandBy widgets",
+    "Apple Watch app with complications",
+    "Low and high alerts, a critical alert for severe lows, and quiet hours",
+    "Family followers by invite link, with their own alerts and one-tap check-in messages",
+    "Logbook for carbs, insulin and glucose",
+    "Trends: time in range, average glucose and GMI over 7 to 90 days",
+  ],
+  de: [
+    "Echtzeit-Glukose vom FreeStyle Libre 2 und Libre 3 über LibreLinkUp",
+    "Live-Aktivität auf dem Sperrbildschirm und in der Dynamic Island, jede Minute aktualisiert",
+    "Widgets für Home-Bildschirm, Sperrbildschirm und StandBy",
+    "Apple Watch App mit Komplikationen",
+    "Warnungen bei niedrigen und hohen Werten, kritische Warnung bei schwerem Unterzucker und Ruhezeiten",
+    "Familien-Follower per Einladungslink, mit eigenen Warnungen und Nachrichten per Tipp",
+    "Logbuch für Kohlenhydrate, Insulin und Glukose",
+    "Trends: Zeit im Zielbereich, Durchschnittsglukose und GMI über 7 bis 90 Tage",
+  ],
+};
+
+const AUDIENCE: Record<AppLocale, string> = {
+  es: "Personas con diabetes que llevan un FreeStyle Libre y sus familias: padres de niños con diabetes tipo 1, parejas y cuidadores",
+  en: "People with diabetes who wear a FreeStyle Libre, and their families: parents of children with type 1 diabetes, partners and caregivers",
+  de: "Menschen mit Diabetes, die einen FreeStyle Libre tragen, und ihre Familien: Eltern von Kindern mit Typ-1-Diabetes, Partner und Angehörige",
+};
+
 function appSchema(locale: AppLocale, description: string) {
+  const org = `${SITE_URL}/#organization`;
+  const appStoreUrl = `https://apps.apple.com/app/id${APP_STORE_ID}`;
   return {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "MobileApplication",
+        "@id": `${SITE_URL}/#app`,
         name: "Dulce",
-        operatingSystem: "iOS",
+        operatingSystem: "iOS, watchOS",
         applicationCategory: "HealthApplication",
         description,
         inLanguage: ["es", "en", "de"],
         url: localeUrl(locale),
-        installUrl: `https://apps.apple.com/app/id${APP_STORE_ID}`,
+        installUrl: appStoreUrl,
+        sameAs: [appStoreUrl],
         screenshot: [
           `${SITE_URL}/screenshots/home.png`,
           `${SITE_URL}/screenshots/lock-screen.png`,
           `${SITE_URL}/screenshots/widgets.png`,
         ],
+        featureList: FEATURES[locale],
+        audience: { "@type": "PeopleAudience", audienceType: AUDIENCE[locale] },
         offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+        publisher: { "@id": org },
       },
       {
         "@type": "Organization",
+        "@id": org,
         name: "Dulce",
         url: SITE_URL,
         email: "hola@dulceglucosa.com",
         logo: `${SITE_URL}/dulce-logo.png`,
+        sameAs: [appStoreUrl],
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: "Dulce",
+        inLanguage: ["es", "en", "de"],
+        publisher: { "@id": org },
       },
     ],
   };

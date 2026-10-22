@@ -14,7 +14,7 @@ import { ARTICLES, CATEGORY_LABEL, articleBySlug, getArticle } from "@/content/a
 import { AUTHORS } from "@/content/authors";
 import { articlePath, articleUrl, authorPath, readingMinutes } from "@/lib/articles";
 import { formatDate } from "@/lib/dates";
-import { breadcrumbSchema, articleSchema, personSchema } from "@/lib/schema";
+import { breadcrumbSchema, articleSchema, faqSchema, personSchema } from "@/lib/schema";
 import { absoluteUrl, alternatesFromPaths, localizedPath } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
@@ -85,6 +85,7 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
   const home = absoluteUrl(localizedPath(loc, "/"));
   const blog = absoluteUrl(localizedPath(loc, "/blog"));
   const related = article.related.map((id) => getArticle(id)).filter((a) => a !== undefined);
+  const faq = article.faq?.[loc] ?? [];
 
   return (
     <>
@@ -108,6 +109,7 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
           { name: article.title[loc], url },
         ])}
       />
+      {faq.length ? <JsonLd data={faqSchema(faq.map((f) => ({ question: f.q, answer: f.a })))} /> : null}
 
       <ReadingSurface>
       <article className="px-5 pb-14 pt-12 sm:px-8 md:px-14 md:pb-20 md:pt-16">
@@ -142,6 +144,31 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
 
         <div className={`${PROSE} mt-12`}>
           <Body components={components} />
+          {faq.length ? (
+            <section aria-labelledby="faq-title">
+              <h2 id="faq-title">{t("faqTitle")}</h2>
+              {faq.map((f) => {
+                const target = f.link ? getArticle(f.link) : undefined;
+                return (
+                  <div key={f.q}>
+                    <h3>{f.q}</h3>
+                    <p>
+                      {f.a}
+                      {target ? (
+                        <>
+                          {" "}
+                          {t("faqMore")}{" "}
+                          <ArticleLink locale={loc} to={target.id}>
+                            {target.title[loc]}
+                          </ArticleLink>
+                        </>
+                      ) : null}
+                    </p>
+                  </div>
+                );
+              })}
+            </section>
+          ) : null}
           <AppCta locale={loc} campaign={campaign} />
           <p className="!text-caption !text-mute">{t("medical")}</p>
           <p className="!text-caption !text-mute">{t("independent")}</p>

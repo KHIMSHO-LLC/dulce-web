@@ -41,6 +41,22 @@ for (const a of ARTICLES) {
   for (const r of a.related) if (!ids.has(r)) err(a.id, `related "${r}" is not an article`);
   if (a.related.includes(a.id)) err(a.id, "relates to itself");
 
+  if (a.faq) {
+    const n = a.faq.en.length;
+    if (n < 2) err(a.id, "faq needs at least 2 questions");
+    for (const locale of LOCALES) {
+      const items = a.faq[locale];
+      if (items.length !== n) err(a.id, `${locale} faq has ${items.length} questions, en has ${n}`);
+      items.forEach((f, i) => {
+        if (f.link !== a.faq!.en[i]?.link) err(a.id, `${locale} faq ${i + 1} links differently from en`);
+        if (f.link && (!ids.has(f.link) || f.link === a.id)) err(a.id, `${locale} faq ${i + 1} links to bad article "${f.link}"`);
+        if (/[*_`<>\[\]]/.test(f.q + f.a)) err(a.id, `${locale} faq ${i + 1} must be plain text (no Markdown or tags)`);
+        for (const re of UNRELEASED) if (re.test(f.q + " " + f.a)) err(a.id, `${locale} faq mentions an unreleased integration (${re})`);
+        if (f.link && locale === "en") inbound.set(f.link, (inbound.get(f.link) ?? 0) + 1);
+      });
+    }
+  }
+
   for (const locale of LOCALES) {
     const t = a.title[locale];
     const d = a.description[locale];
@@ -54,7 +70,9 @@ for (const a of ARTICLES) {
       continue;
     }
     const body = readFileSync(file, "utf8");
-    const words = body.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+    // The quick questions render on the page too, so they count.
+    const faqText = (a.faq?.[locale] ?? []).map((f) => `${f.q} ${f.a}`).join(" ");
+    const words = `${body.replace(/<[^>]+>/g, " ")} ${faqText}`.split(/\s+/).filter(Boolean).length;
     if (words < 400) err(a.id, `${locale} body is only ${words} words (min 400)`);
     if (!/<AppCta\b/.test(body)) err(a.id, `${locale} has no <AppCta /> in the body`);
     if (/^# /m.test(body)) err(a.id, `${locale} has an H1 (#); the page renders the title as H1, start sections at ##`);
