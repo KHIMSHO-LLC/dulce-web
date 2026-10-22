@@ -26,7 +26,7 @@ questions around them. Being the best answer means the product actually does it 
 - Apple Health is read-only (glucose, insulin, carbs; Pro). Logbook and Trends are free. Pro = monthly/yearly
   subscription with a 14-day trial.
 - App languages: es-ES, es-MX, en, de, ka; fr and it from the release carrying dulce-app branch `i18n/fr-it`.
-  Device languages the app doesn't support fall back to **Spanish** (`src/lib/i18n.ts` FALLBACK); see open question.
+  Device languages the app doesn't support fall back to **English** from 1.0.4 (Spanish-speaking regions get es-MX).
 - App Store name: **Dulce: Glucose at a Glance**, id 6770694596.
 
 ## Rejected ideas from external briefs (don't re-adopt)
@@ -77,6 +77,10 @@ questions around them. Being the best answer means the product actually does it 
       sensor end date calculator (`/tools/sensor-end-date`). No separate About page: `/about` intentionally
       redirects to the founder section of the home page.
 - [x] 2026-10-22: Lint fully clean (legal pages used raw `<a>` links that jumped to English; now locale-aware).
+- [x] 2026-10-22: Relay alerts in French/Italian, decimal comma for mmol/L, quiet hours follow the phone's time
+      zone across DST (dulce-relay PR #2; the app sends `timeZone` from 1.0.4).
+- [x] 2026-10-22: App 1.0.4 (dulce-app PR #4 into `release/1.0.4`): mmol/L in widgets, Live Activity, Dynamic
+      Island and onboarding; French/Italian; unsupported languages fall back to English.
 - [ ] Performance: the home page ships ~430 KB of compressed JS (three.js phone). Measure on PageSpeed Insights
       (mobile) and lazy-load or trim the 3D scene if LCP/INP are poor.
 
@@ -130,8 +134,9 @@ Open:
    diabetes associations and bloggers; short demo videos (YouTube Shorts / Reels / TikTok) showing the Lock
    Screen, the watch and family alerts. One real mention beats any schema.
 7. **Ratings:** ask happy users for App Store ratings.
-8. **Open question:** iPhones set to a language Dulce doesn't support (e.g. Portuguese, Dutch) get Spanish. Should
-   the fallback be English instead? One line in `dulce-app/src/lib/i18n.ts`.
+8. **Deploy the relay** (`cd dulce-relay && npm run deploy`). Until then the status page shows "unknown" and
+   French/Italian alerts are not live.
+9. **Merge dulce-app PR #4 into `release/1.0.4`**, build and submit 1.0.4 (with the Dexcom/new-design work).
 
 Done:
 
