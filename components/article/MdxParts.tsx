@@ -96,7 +96,7 @@ export function ArticleLink({ locale, to, children }: { locale: AppLocale; to: s
   const target = ARTICLES.find((a) => a.id === to);
   if (!target) throw new Error(`ArticleLink: unknown article "${to}"`);
   return (
-    <Link href={{ pathname: "/blog/[slug]", params: { slug: target.slug[locale] } }} locale={locale}>
+    <Link href={{ pathname: "/blog/[slug]", params: { slug: target.slug[locale] } }}>
       {children}
     </Link>
   );
@@ -104,7 +104,6 @@ export function ArticleLink({ locale, to, children }: { locale: AppLocale; to: s
 
 /** Link to a non-article page of the site. */
 export function PageLink({
-  locale,
   to,
   children,
 }: {
@@ -113,7 +112,7 @@ export function PageLink({
   children: ReactNode;
 }) {
   return (
-    <Link href={to} locale={locale}>
+    <Link href={to}>
       {children}
     </Link>
   );
