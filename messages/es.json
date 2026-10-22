@@ -405,6 +405,8 @@
     "published": "Publicado el {date}",
     "minutes": "{n} min de lectura",
     "related": "Sigue leyendo",
+    "faqTitle": "Preguntas rápidas",
+    "faqMore": "Más:",
     "read": "Leer",
     "allArticles": "Todas las guías",
     "toolsTitle": "Calculadoras",
