@@ -416,5 +416,90 @@
     "authorArticles": "Articoli di {name}",
     "medical": "Questo articolo ha scopo informativo e non sostituisce il parere del tuo team diabetologico. Dulce non è un dispositivo medico e non sostituisce gli allarmi del tuo sensore.",
     "independent": "Dulce è un'app indipendente, non affiliata ad Abbott. FreeStyle Libre, LibreLink e LibreLinkUp sono marchi di Abbott."
+  },
+  "llustatus": {
+    "nav": "Stato di LibreLinkUp",
+    "title": "LibreLinkUp non funziona? Stato in tempo reale",
+    "description": "Stato di LibreLinkUp in tempo reale, misurato ogni minuto: se LibreLinkUp funziona adesso, le ultime 24 ore, il tempo di risposta, le regioni colpite e cosa fare durante un disservizio.",
+    "eyebrow": "Stato in tempo reale",
+    "headline": {
+      "operational": "LibreLinkUp funziona normalmente",
+      "degraded": "LibreLinkUp ha dei problemi",
+      "down": "LibreLinkUp sembra fuori servizio",
+      "unknown": "Al momento non ci sono abbastanza dati"
+    },
+    "lead": {
+      "operational": "I nostri controlli ricevono le letture da LibreLinkUp come sempre. Se non vedi nuove letture, molto probabilmente il problema è sul telefono del sensore.",
+      "degraded": "Alcune richieste a LibreLinkUp falliscono o sono lente. Le letture potrebbero arrivare in ritardo o non arrivare per un po'.",
+      "down": "La maggior parte delle richieste a LibreLinkUp fallisce. I follower e le app che leggono LibreLinkUp, Dulce compresa, non riceveranno nuove letture finché non torna a funzionare.",
+      "unknown": "Negli ultimi minuti ci sono stati troppo pochi controlli per dirlo. Riprova tra un momento."
+    },
+    "updated": "Controllato alle {time} UTC",
+    "unavailable": "I dati di stato non sono temporaneamente disponibili.",
+    "metrics": {
+      "failure": "Richieste fallite",
+      "latency": "Tempo di risposta",
+      "calls": "Controlli (ultimi 10 min)"
+    },
+    "timeline": {
+      "title": "Ultime 24 ore",
+      "hint": "Ogni barra corrisponde a 30 minuti. Orari in UTC.",
+      "operational": "Funziona",
+      "degraded": "Problemi",
+      "down": "Fuori servizio",
+      "unknown": "Nessun dato"
+    },
+    "regions": {
+      "title": "Regioni colpite",
+      "none": "Al momento nessuna regione si distingue."
+    },
+    "lastIncident": "Ultimo problema nelle ultime 24 ore: {time} UTC",
+    "noIncident": "Nessun problema nelle ultime 24 ore.",
+    "how": {
+      "title": "Come funziona",
+      "body": "I server di Dulce leggono LibreLinkUp ogni minuto per le persone che usano Dulce. Contiamo quante di queste richieste vanno a buon fine e quanto ci mettono, in tutte le regioni. Una password sbagliata o un accesso scaduto di una persona non conta come errore; contano solo gli errori di LibreLinkUp stesso. Per questa pagina non conserviamo la glicemia di nessuno."
+    },
+    "todo": {
+      "title": "Cosa fare se LibreLinkUp non funziona",
+      "items": [
+        "Il tuo sensore continua a funzionare. Leggi la glicemia direttamente nell'app Libre sul telefono (LibreLink o Libre 3).",
+        "Tieni attivi gli allarmi dell'app Libre: non dipendono da LibreLinkUp.",
+        "Avvisa i tuoi follower: non vedranno nuove letture finché il servizio non torna.",
+        "Quando LibreLinkUp torna a funzionare, il grafico si completa con le letture mancanti."
+      ]
+    },
+    "upButNoData": {
+      "title": "LibreLinkUp funziona ma non vedi dati?",
+      "body": "Allora il problema è quasi sempre sul telefono di chi porta il sensore: niente Internet, l'app Libre chiusa dal sistema o la condivisione disattivata. La nostra guida copre tutte le cause.",
+      "link": "LibreLinkUp non funziona: passo passo"
+    },
+    "faq": [
+      {
+        "q": "LibreLinkUp è fuori servizio adesso?",
+        "a": "Questa pagina mostra lo stato di LibreLinkUp in tempo reale, misurato ogni minuto dai server di Dulce: funziona, ha problemi o è fuori servizio, con le ultime 24 ore."
+      },
+      {
+        "q": "Dulce funziona quando LibreLinkUp è fuori servizio?",
+        "a": "No. Dulce riceve le letture tramite LibreLinkUp, quindi quando LibreLinkUp non funziona nemmeno Dulce riceve nulla di nuovo. Il sensore e l'app Libre continuano a funzionare."
+      },
+      {
+        "q": "È una pagina di stato ufficiale di Abbott?",
+        "a": "No. Dulce è indipendente e non è affiliata ad Abbott. Sono misurazioni nostre; Abbott potrebbe indicare altro per la tua regione."
+      }
+    ],
+    "disclaimer": "Dulce è un'app indipendente, non affiliata ad Abbott. FreeStyle Libre, LibreLink e LibreLinkUp sono marchi di Abbott. Lo stato è misurato da Dulce e potrebbe non riflettere tutte le regioni o tutti gli account.",
+    "region": {
+      "eu": "Europa",
+      "eu2": "Europa 2",
+      "us": "Stati Uniti",
+      "de": "Germania",
+      "fr": "Francia",
+      "jp": "Giappone",
+      "ap": "Asia-Pacifico",
+      "au": "Australia",
+      "ae": "Medio Oriente",
+      "ca": "Canada",
+      "la": "America Latina"
+    }
   }
 }

@@ -49,6 +49,14 @@ export const routing = defineRouting({
     // path (see dulce-app `constants/links.ts`), so both locales must resolve
     // the same slug.
     "/setup": "/setup",
+    // Live LibreLinkUp status measured by the relay (lib/lluStatus.ts).
+    "/librelinkup-status": {
+      es: "/estado-librelinkup",
+      en: "/librelinkup-status",
+      de: "/librelinkup-status",
+      fr: "/statut-librelinkup",
+      it: "/stato-librelinkup",
+    },
     // Articles: one route, the slug is localized per article (content/articles.ts).
     "/blog": "/blog",
     "/blog/[slug]": "/blog/[slug]",

@@ -25,6 +25,13 @@ export function onIntro(cb: () => void) {
     cb();
     return () => {};
   }
+  // Only the home page has a preloader to announce the intro. Anywhere else
+  // (a guide, /setup opened from the app) play on the next frame, or the
+  // section would stay hidden.
+  if (!document.querySelector(".preloader")) {
+    const raf = requestAnimationFrame(() => cb());
+    return () => cancelAnimationFrame(raf);
+  }
   const handler = () => cb();
   window.addEventListener("dulce:intro", handler, { once: true });
   return () => window.removeEventListener("dulce:intro", handler);

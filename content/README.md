@@ -13,7 +13,8 @@ Calculators: `app/[locale]/tools/*`, formulas in `lib/tools.ts`, explanations in
 - `<AppCta />` or `<AppCta title="..." />`: install button. Its App Store link carries `pt=127601978` and
   `ct=blog_<id>`, so App Store Connect → App Analytics → Campaigns shows installs per article. One mid-article.
 - `<ArticleLink to="<article id>">text</ArticleLink>`: link to another article (slug resolved per language).
-- `<PageLink to="/setup">text</PageLink>`: also `/tools/glucose-converter`, `/tools/a1c-calculator`, `/legal/disclaimer`.
+- `<PageLink to="/setup">text</PageLink>`: also `/tools/glucose-converter`, `/tools/a1c-calculator`, `/legal/disclaimer`,
+  `/librelinkup-status`.
 - `<Figure src="/guides/x.jpg" alt="..." caption="..." />`: images in `public/guides/` (phone screenshots
   are 1400×3034; pass `width`/`height` otherwise, `narrow={false}` for wide images).
 - `<Callout>` / `<Callout type="warning">`: notes; warnings for anything safety-related.

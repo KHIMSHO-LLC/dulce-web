@@ -22,6 +22,7 @@ export type StoreCampaign =
   | "web_qr"
   | "web_page"
   | "web_tool"
+  | "web_status"
   /** One campaign per article (`blog_<article id>`), so installs can be traced to the page. */
   | `blog_${string}`;
 
