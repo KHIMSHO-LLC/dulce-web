@@ -67,6 +67,12 @@ questions around them. Being the best answer means the product actually does it 
 - [x] 2026-10-22: App in French and Italian (UI, widget/Live Activity, watch, complications) and Settings →
       Contact opens the right page. Branch `i18n/fr-it` (dulce-app). Needs a release.
 
+- [x] 2026-10-22: Live "Is LibreLinkUp down?" page (`/librelinkup-status`, es `/estado-librelinkup`, fr
+      `/statut-librelinkup`, it `/stato-librelinkup`), fed by the relay's GET /llu-status (dulce-relay
+      `src/lib/lluStatus.ts`). Re-renders every 60 s. Shows "unknown" until the relay change is deployed.
+- [x] 2026-10-22: Fixed hero text never appearing on direct visits to /setup (intro animation only fired from the
+      home page preloader).
+
 ## Next for Claude (in order)
 
 1. Done 2026-10-22 (ahead of the app release, at Giorgi's request): the home FAQ and `/llms.txt` say the app is

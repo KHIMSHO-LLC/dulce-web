@@ -15,6 +15,7 @@ export async function SiteFooter() {
   const locale = await getLocale();
   const t = await getTranslations("footer");
   const nav = await getTranslations("nav");
+  const status = await getTranslations("llustatus");
   const year = new Date().getFullYear();
   const home = (id: string) => homeSection(locale as AppLocale, id);
 
@@ -66,6 +67,9 @@ export async function SiteFooter() {
             <p className="mb-1 text-mute">{t("help")}</p>
             <Link href="/setup" className={linkClass}>
               {nav("setup")}
+            </Link>
+            <Link href="/librelinkup-status" className={linkClass}>
+              {status("nav")}
             </Link>
             <a href={`mailto:${CONTACT_EMAIL}`} className={linkClass}>
               {CONTACT_EMAIL}

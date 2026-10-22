@@ -37,7 +37,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         pathsFor(internal),
         {
           lastModified: internal === "/blog" && latestArticle ? new Date(latestArticle) : now,
-          changeFrequency: legal ? "yearly" : internal === "/blog" ? "daily" : "monthly",
+          changeFrequency: legal
+            ? "yearly"
+            : internal === "/librelinkup-status"
+              ? "hourly"
+              : internal === "/blog"
+                ? "daily"
+                : "monthly",
           priority: internal === "/" ? 1 : internal === "/blog" ? 0.8 : legal ? 0.2 : 0.6,
         },
         legal ? LEGAL_LOCALES : locales,
