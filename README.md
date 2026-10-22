@@ -2,7 +2,7 @@
 
 Marketing website for [Dulce](https://dulceglucosa.com) — the Spanish-first CGM companion app.
 
-Built with **Next.js 16** (App Router) + **next-intl** (es / en) + **Supabase** + **Tailwind 4**. Deployed to Vercel.
+Built with **Next.js 16** (App Router) + **next-intl** (es / en / de / fr / it) + **Supabase** + **Tailwind 4**. Deployed to Vercel.
 
 ## Running locally
 
@@ -12,7 +12,7 @@ cp .env.example .env.local   # fill in Supabase + (optional) Resend keys
 npm run dev
 ```
 
-Open <http://localhost:3000>. Spanish (default) at `/`, English at `/en`.
+Open <http://localhost:3000>. Spanish (default) at `/`, the other languages at `/en`, `/de`, `/fr`, `/it`.
 
 ## Scripts
 

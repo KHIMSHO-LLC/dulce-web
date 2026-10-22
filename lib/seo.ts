@@ -8,7 +8,7 @@ export function withLocalePrefix(locale: AppLocale, path: string): string {
   return path === "/" ? `/${locale}` : `/${locale}${path}`;
 }
 
-/** The public path of an internal route in a locale (es at root, en under /en, de under /de). */
+/** The public path of an internal route in a locale (es at root, other languages under /<locale>). */
 export function localizedPath(
   locale: AppLocale,
   internal: AppPathname,
@@ -59,4 +59,4 @@ export function alternatesFor(
 }
 
 /** OpenGraph locale codes. */
-export const OG_LOCALE: Record<AppLocale, string> = { es: "es_ES", en: "en_US", de: "de_DE" };
+export const OG_LOCALE: Record<AppLocale, string> = { es: "es_ES", en: "en_US", de: "de_DE", fr: "fr_FR", it: "it_IT" };

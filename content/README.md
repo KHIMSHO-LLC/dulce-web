@@ -3,7 +3,7 @@
 Every article lives in two places:
 
 - `content/articles.ts`: the registry entry (id, slugs, titles, descriptions, dates, author, keywords, image, related).
-- `content/articles/<id>/{es,en,de}.mdx`: the body in each language. The page renders the title (H1),
+- `content/articles/<id>/{es,en,de,fr,it}.mdx`: the body in each language. The page renders the title (H1),
   byline, closing CTA and disclaimers, so the body starts with an intro paragraph and uses `##` sections.
 
 Calculators: `app/[locale]/tools/*`, formulas in `lib/tools.ts`, explanations in `content/tools/<name>/<locale>.mdx`.
@@ -29,7 +29,9 @@ Calculators: `app/[locale]/tools/*`, formulas in `lib/tools.ts`, explanations in
    No invented anecdotes, quotes, user counts or statistics. Authors are real people
    (`content/authors.ts`); don't put words or experiences in their mouth beyond their bios.
 3. **Never copy competitors' text.** Use their topics, write everything from scratch.
-4. **Native in each language**, not literal translation. Spanish is Spain Spanish. German uses "du".
+4. **Native in each language**, not literal translation. Spanish is Spain Spanish. German uses "du", French "tu",
+   Italian "tu". Use the app's exact labels from `dulce-app/src/locales/{fr,it}/common.json` (Réglages, Abonnés,
+   Activité en direct / Impostazioni, Follower, Attività in tempo reale).
 5. **Safety:** never give dosing advice. Anything about lows, highs or treatment ends with "confirm with your
    sensor / care team". Dulce is not a medical device and doesn't replace the sensor's alarms.
 6. Real dates only (today or earlier). Bump `dateModified` when you change an article.

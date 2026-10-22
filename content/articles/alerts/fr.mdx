@@ -1,0 +1,52 @@
+Une alerte de glycémie doit faire deux choses à la fois : te réveiller quand ça compte vraiment et te laisser tranquille quand ce n'est pas le cas. Si elle sonne pour tout, tu finis par la couper, et elle ne sert plus à rien. Ce guide passe en revue toutes les alertes de Dulce, leurs réglages par défaut et comment les ajuster pour qu'elles aident sans t'épuiser.
+
+<Callout type="warning">
+Dulce ne remplace pas les alarmes de ton capteur. Si tu utilises un FreeStyle Libre 2 ou Libre 3, garde les alarmes de l'app Libre activées. Dulce est une couche de plus, pas la seule.
+</Callout>
+
+## Où les régler
+
+Tout se trouve dans Dulce, dans **Réglages → Alertes**. Au moment de la configuration, Dulce demande deux autorisations iOS : **Notifications** et **Alertes critiques**. La seconde est celle qui permet à l'alerte d'hypo sévère de sonner même iPhone en silencieux. Si tu l'as refusée, tu peux l'activer dans l'app Réglages de l'iPhone, sous Dulce → Notifications.
+
+## Les alertes, une par une
+
+| Alerte dans Dulce | Ce qu'elle fait | Par défaut |
+| --- | --- | --- |
+| Alerte glycémie basse | Te prévient quand la glycémie passe sous ton seuil (50 à 80 mg/dL) | 70 mg/dL |
+| Alerte glycémie haute | Te prévient quand la glycémie dépasse ton seuil (140 à 300 mg/dL) | 250 mg/dL |
+| Alertes d'hypo critique | Une alerte forte en cas d'hypo sévère (55 mg/dL ou moins), même en silencieux ou pendant les heures calmes | Activée |
+| Variation rapide | Te prévient quand la glycémie monte ou baisse très vite | Activée |
+| Hypo prédictive | Te prévient quand tu te diriges vers une hypo | Désactivée |
+
+### Hypo critique : celle qui sonne toujours
+
+C'est la seule alerte qui passe outre le mode silencieux, les modes de concentration et les heures calmes. Elle utilise toujours le son **Alarme** et se répète toutes les 5 minutes tant que tu restes en dessous. Tu peux la désactiver, mais Dulce te demande de confirmer : c'est l'alerte qui compte le plus la nuit.
+
+### Hypo prédictive
+
+Elle regarde à quelle vitesse ta glycémie a baissé ces dernières minutes et te prévient si, à ce rythme, tu vas bientôt franchir ton seuil. Pour ne pas se déclencher sur le bruit du capteur, elle ne prévient que si plusieurs mesures d'affilée sont en baisse. Elle ne te dit pas quoi faire : elle te suggère de vérifier ton capteur. Elle est désactivée par défaut, et quand tu l'actives, Dulce t'explique exactement cela.
+
+## Pour que les alertes ne t'épuisent pas
+
+- **Heures calmes.** Choisis une plage (par exemple de 23 h à 7 h) pendant laquelle les alertes non critiques sont coupées. Les hypos critiques sonnent toujours. C'est désactivé par défaut, pour que personne ne perde une alerte d'hyper nocturne sans l'avoir décidé.
+- **Fréquence des alertes.** À quelle fréquence la même alerte peut se répéter tant que tu restes hors de la cible. Toutes les 15 minutes par défaut. Les hypos sévères se répètent toujours toutes les 5 minutes.
+- **Suspendre les alertes.** Si tu sais que tu vas rester haut un moment (après un repas, par exemple), mets les alertes en pause quelques minutes ou quelques heures. Les hypos sévères passent quand même. Tu peux aussi suspendre directement depuis la notification.
+- **Sons.** Choisis un son pour la glycémie basse et un autre pour la haute : Par défaut, Doux, Carillon, Pulsation, Alarme ou Silencieux. Deux sons différents te disent ce qui se passe sans regarder ton téléphone.
+
+<AppCta title="Règle tes alertes dans Dulce" />
+
+## Arrivent-elles avec l'app fermée ?
+
+Oui. Elles ne dépendent pas de Dulce ouvert : le serveur de Dulce vérifie tes mesures LibreLinkUp et t'envoie l'alerte. Avec Dulce Pro, il le fait chaque minute ; avec la version gratuite, toutes les 5 minutes.
+
+Si tu portes une Apple Watch, iOS envoie l'alerte à la montre quand ton iPhone est verrouillé, et elle te tapote le poignet. Plus de détails dans le <ArticleLink to="apple-watch">guide Apple Watch</ArticleLink>.
+
+## Des alertes pour ta famille
+
+Tes abonnés peuvent recevoir leurs propres alertes quand tu es en hypo ou en hyper, avec leurs propres heures calmes, et les valeurs très basses leur arrivent toujours. Vois le <ArticleLink to="family-sharing">guide du partage en famille</ArticleLink>.
+
+## Si une alerte n'arrive pas
+
+1. Vérifie que l'interrupteur **Notifications** de Dulce est activé et qu'iOS autorise les notifications de Dulce.
+2. Regarde l'heure de la dernière mesure dans Dulce. Si elle est ancienne, le problème est qu'aucune donnée n'arrive à LibreLinkUp : suis le <ArticleLink to="librelinkup-not-working">guide LibreLinkUp sans données</ArticleLink>.
+3. Vérifie si les heures calmes ou la suspension sont actives.

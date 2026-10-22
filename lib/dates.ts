@@ -4,6 +4,8 @@ const MONTHS: Record<AppLocale, string[]> = {
   es: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
   en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
   de: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+  fr: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
+  it: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"],
 };
 
 /**
@@ -15,5 +17,6 @@ export function formatDate(iso: string, locale: AppLocale): string {
   const month = MONTHS[locale][m - 1];
   if (locale === "en") return `${month} ${d}, ${y}`;
   if (locale === "de") return `${d}. ${month} ${y}`;
+  if (locale === "fr" || locale === "it") return `${d} ${month} ${y}`;
   return `${d} de ${month} de ${y}`;
 }

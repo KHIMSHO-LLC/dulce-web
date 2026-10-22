@@ -1,67 +1,125 @@
-# SEO / ASO / GEO plan (started 2026-10-22)
+# Growth plan: SEO, App Store, AI answers (started 2026-10-22)
 
-Read this before any SEO, App Store metadata or content work. It records what was checked, what was done,
-what is left for Claude, and what only the owner (Giorgi) can do. Update the status boxes when something ships.
+Read this before any SEO, App Store metadata, content or localization work. It records what was checked, what was
+done, what is left for Claude, and what only the owner (Giorgi) can do. Update the boxes when something ships.
 
-Daily article runs follow `seo/daily-article.md`; content rules are in `content/README.md`; the log is `seo/log.md`.
+Daily article runs follow `seo/daily-article.md`; content rules are in `content/README.md`; the log is `seo/log.md`;
+App Store copy is in `seo/aso.md`.
 
-## Where this came from
+**If Giorgi asks "what do I have to do?", answer from the "For Giorgi" list at the bottom, open items first.**
 
-On 2026-10-22 Giorgi pasted an external "master brief" (written by a generic AI, not from this repo). Each claim
-was checked against the code. Keep these conclusions; don't re-adopt the rejected parts.
+## Goal
 
-| Brief says | Reality (checked 2026-10-22) | Decision |
+Paying Dulce Pro subscribers, internationally. The funnel: search / AI answer → dulceglucosa.com → App Store →
+install → successful LibreLinkUp connection → Pro trial → paid → retained. Dulce should be the answer, in every
+language the site and app speak (es, en, de, fr, it), to "how do I see my Libre glucose on my Apple Watch / Lock
+Screen / widget", "how do I follow my child's glucose", "LibreLinkUp not working" and the everyday diabetes
+questions around them. Being the best answer means the product actually does it and the page says so accurately.
+
+## Ground truth (checked in code 2026-10-22; re-check before claiming anything)
+
+- Released: FreeStyle Libre 2/3 via LibreLinkUp only. Dulce shows one person per LibreLinkUp account (the first
+  connection). **Dexcom and Nightscout are not released** (commented out in onboarding); Android not released.
+- Family: up to 3 followers by link/code (Pro for the wearer, free for followers); followers get their own alerts,
+  quiet hours and Live Activity; "messages" are short notifications ("Are you OK?", custom text) answered with a
+  one-tap "I'm OK". **Not a chat**, never tied to insulin dosing.
+- Apple Health is read-only (glucose, insulin, carbs; Pro). Logbook and Trends are free. Pro = monthly/yearly
+  subscription with a 14-day trial.
+- App languages: es-ES, es-MX, en, de, ka; fr and it from the release carrying dulce-app branch `i18n/fr-it`.
+  Device languages the app doesn't support fall back to **Spanish** (`src/lib/i18n.ts` FALLBACK); see open question.
+- App Store name: **Dulce: Glucose at a Glance**, id 6770694596.
+
+## Rejected ideas from external briefs (don't re-adopt)
+
+| Brief said | Reality | Decision |
 | --- | --- | --- |
-| Add hreflang | Every page already has canonical + hreflang (es/en/de + x-default) via `lib/seo.ts`; the sitemap lists alternates | Nothing to do |
-| Site is "mostly legal pages" | 10 guides × 3 languages, 2 calculators, author pages, setup page | Wrong |
-| Add JSON-LD | MobileApplication, Organization, FAQPage (home), BlogPosting, BreadcrumbList, Person already exist | Enrich, don't replace (done, see below) |
-| "Dexcom & Libre on Apple Watch" | Dexcom/Nightscout are commented out in `dulce-app` onboarding; not released | Never claim Dexcom until it ships |
-| "In-app chat to coordinate insulin boluses" | Followers send short notification messages ("Are you OK?", custom text); the wearer replies "I'm OK" with one tap. No chat thread | Describe as family messages; never tie to insulin dosing (YMYL + `content/README.md` rule 5) |
-| "Real-time CGM via Apple HealthKit" | Glucose comes from LibreLinkUp; Apple Health is read-only | Wrong mechanism |
-| `MedicalWebPage` schema on the home page | The home page is a product page, not medical content | Not used |
-| `downloadUrl: https://apple.com`, price in USD | Real App Store id is in `lib/site.ts`; offers in EUR | Use real values |
-| German copy with "Sie" | Site style is "du" (`content/README.md` rule 4) | Use "du" |
-| Medical reviewer (CDE / endocrinologist) for YMYL | Authors are Giorgi and Levan, both live with diabetes; no clinician | **Owner task** (below) |
-| Localized App Store subtitle/keywords | Can't be done from code | Corrected version in `seo/aso.md`; **owner pastes it** |
+| Add hreflang | Every page has canonical + hreflang for all 5 languages + x-default (`lib/seo.ts`), sitemap lists alternates | Done already |
+| Site is "mostly legal pages" | 11 guides × 5 languages, 2 calculators, author pages, setup page | Wrong |
+| "Dexcom & Libre on Apple Watch" | Dexcom not released | Never claim before it ships; prepare drafts unpublished |
+| "In-app chat to coordinate insulin" | Short check-in messages only | Describe accurately, never link to dosing |
+| "CGM data via HealthKit" | Data comes from LibreLinkUp | Wrong mechanism |
+| `MedicalWebPage` on the home page, fake downloadUrl, USD | Product page; real ids in code; EUR | Not used |
+| German with "Sie" | Site uses du (fr/it use tu) | Keep informal |
+| Thin pages per country/keyword | Google suppresses them, AI engines ignore them | One strong page per topic per language |
+| Invent search volumes, conversion rates, market sizes | Unknown until measured | Only use measured data (Search Console, App Store Connect, RevenueCat) |
+
+## Search Console notes
+
+- "Page with redirect" lists http://, www. and retired routes (/features, /about, /contact, /family-sharing,
+  /legal/terms on the Spanish site). **These redirects are correct and permanent**; Google will always report them
+  and a validation of that row will always "fail". It is informational, not an error: don't re-validate it.
+  What mattered was internal links pointing at redirects (fixed 2026-10-22, PR #3) and the app linking a retired
+  page (fixed in dulce-app `i18n/fr-it`).
+- Watch instead: "Crawled - currently not indexed", "Discovered - currently not indexed", 404s, and Performance
+  (queries, CTR, position) per language.
+- Cloud sessions can't reach Search Console; on the Mac, `gum` is authorized (see `seo/daily-article.md`). For cloud
+  access the owner would add a read-only service account key as env var `GSC_SA_KEY_B64`.
 
 ## Done
 
-- [x] 2026-10-22: Spanish in-article links pointed at `/es/...` and 307-redirected ("Page with redirect" in
-      Search Console). Fixed in `components/article/MdxParts.tsx`.
-- [x] 2026-10-22: Answer-first "Quick answers" block per article (`faq` field in `content/articles.ts`), rendered
-      at the end of the article and emitted as FAQPage JSON-LD. Written for the top articles.
-- [x] 2026-10-22: New article `child-glucose` (parents/caregivers following a child or an older parent).
-- [x] 2026-10-22: Home JSON-LD enriched (featureList, audience, stable @ids, WebSite) and `/llms.txt` added for
-      AI crawlers (facts only, links to the guides).
-- [x] 2026-10-22: Corrected App Store metadata drafted in `seo/aso.md`.
+- [x] 2026-10-22: Internal links on Spanish pages pointed at `/es/...` (307). Fixed (`components/article/MdxParts.tsx`).
+- [x] 2026-10-22: "Quick questions" + FAQPage JSON-LD on every article (`faq` in `content/articles.ts`).
+- [x] 2026-10-22: Article `child-glucose` (parents/caregivers).
+- [x] 2026-10-22: Home JSON-LD (featureList, audience, @ids, WebSite) and `/llms.txt` for AI assistants.
+- [x] 2026-10-22: App Store metadata for en, es-ES, es-MX, de, fr, it in `seo/aso.md` (measured, no trademarks).
+- [x] 2026-10-22: Website in French and Italian (`/fr`, `/it`): all pages, 11 guides, calculators, FAQ, schema,
+      sitemap, hreflang. Legal pages show English, noindexed, like German. Branch `i18n/fr-it` (dulce-web).
+- [x] 2026-10-22: App in French and Italian (UI, widget/Live Activity, watch, complications) and Settings →
+      Contact opens the right page. Branch `i18n/fr-it` (dulce-app). Needs a release.
 
 ## Next for Claude (in order)
 
-1. Every new article gets a `faq` block (all 11 have one as of 2026-10-22): 2-4 questions each, phrased the way
-   people search, the first sentence of each answer answers it outright, facts from the article only, plain text.
-2. When a medical reviewer exists: add a `reviewer` to `content/authors.ts`, show "Medically reviewed by" in the
-   byline, and emit `reviewedBy` in the article JSON-LD. Do not invent credentials.
-3. Article ideas with demand (seo/gaps.json + brief): "hipoglucemia nocturna" (night lows, with alarms),
-   "libre 3 signal loss", "librelinkup must accept terms of use", "blutzuckerwerte tabelle" (needs sources).
-   One per day max, per `seo/daily-article.md`.
-4. Each week: Search Console → Pages → "Why pages aren't indexed". Crawl locally (build, `next start`, follow
-   every sitemap URL and internal link) and fix any internal link that redirects or 404s.
-5. Keep `/llms.txt` (`app/llms.txt/route.ts`) in sync when features ship (Dexcom, Android, etc.).
+1. After the fr/it app release: change the home FAQ "Is the app in French/Italian?" answers (messages/fr.json,
+   it.json, and the language lists in es/en/de) and `/llms.txt` ("available in ...") to say it is.
+2. Content roadmap, one article per day max (`seo/daily-article.md`), always in all 5 languages, facts from the
+   released app or primary sources, sources section for any medical number, no dosing advice:
+   - **Our moat (product-led):** Apple Watch complication not updating; Libre 3 on Apple Watch without iPhone
+     nearby (what works, what doesn't); StandBy at night; Dynamic Island; "best way to see Libre on iPhone"
+     (honest comparison of approaches: LibreLink, LibreLinkUp, widgets apps; no competitor text copied).
+   - **LibreLinkUp help:** "must accept terms of use", signal loss, "libre 3 plus", regions/countries, two
+     followers / two patients on one account.
+   - **Caregivers:** nights with a child with T1D, school, grandparents, older parents.
+   - **Everyday T1D (YMYL, needs sources; ideally the medical reviewer first):** night lows (hipoglucemia
+     nocturna), ketones (what they are, when to check, sources: ADA/ISPAD; no treatment instructions beyond
+     "follow your care team's sick-day plan"), sport, travel and time zones, sick days, blood sugar tables
+     (blutzuckerwerte tabelle) with consensus sources.
+   - **Dexcom (prepare, don't publish):** drafts for "Dexcom on Apple Watch / Lock Screen with Dulce" kept out of
+     the registry until the integration is released and verified.
+3. When a medical reviewer exists: add a `reviewer` to `content/authors.ts`, show "Medically reviewed by" in the
+   byline, emit `reviewedBy` in the article JSON-LD. Never invent credentials.
+4. Weekly: crawl the built site (every sitemap URL + internal link must be 200, self-canonical); check Search
+   Console indexing and queries (on the Mac); improve titles/descriptions where CTR is low.
+5. Keep `/llms.txt`, the home `featureList` and `seo/aso.md` in sync with what ships.
+6. Funnel: every App Store link already carries a campaign token per placement (`ct=blog_<id>`, `web_hero`, ...).
+   Read App Store Connect → Analytics → Campaigns with Giorgi monthly; never send glucose or health data to
+   marketing analytics.
 
 ## For Giorgi (only you can do these)
 
-1. **Merge the PR** for branch `seo/geo-pass` so Vercel deploys it. Then in Search Console → Pages → "Page with
-   redirect" → **Validate fix**.
-2. **App Store Connect** → each localization (Spanish (Spain), Spanish (Mexico), English (US/UK), German):
-   paste subtitle, keywords and promotional text from `seo/aso.md`. Ship with the next app version
-   (subtitle/keywords only change with a new version; promotional text changes any time).
-3. **Medical reviewer (biggest E-E-A-T win).** Find one diabetes educator, nurse or endocrinologist willing to
-   review the guides and be named (name, credential, a profile link such as a clinic or LinkedIn page). Send
-   Claude their details; Claude adds the reviewer box and schema. Never list someone who hasn't agreed.
-4. **Search Console**: submit `https://dulceglucosa.com/sitemap.xml` again after the deploy, and request indexing
-   for the new article URLs (listed in the PR).
-5. **Off-site mentions** (AI engines cite what others say about you): answer questions on r/diabetes_t1,
-   r/Type1Diabetes, Spanish/German T1D forums and Facebook groups where Dulce genuinely helps, linking the
-   relevant guide; ask diabetes associations or bloggers for a listing. One real mention beats any schema.
-6. **App Store reviews**: ask happy users (in the app or in person) for a rating; ratings feed both ASO and AI
-   answers.
+Open:
+
+1. **Merge the two `i18n/fr-it` PRs** (website and app). Ship an app release with the app one, then add the
+   French and Italian localizations in App Store Connect using `seo/aso.md` (also paste the new es/de/en
+   subtitles and keywords there). Decide the localized names (table in `seo/aso.md`).
+2. **App Store badges for fr/it:** download Apple's official French and Italian "Download on the App Store"
+   badges (black, SVG) from tools.applemediaservices.com, save them as `public/badges/app-store-badge-fr.svg`
+   and `-it.svg`, and set `fr: "fr", it: "it"` in `components/ui/AppStoreBadge.tsx`. Until then they show the
+   English badge.
+3. **Medical reviewer (biggest trust win for Google and AI answers).** Find one diabetes educator, nurse or
+   endocrinologist willing to review the guides and be named (name, credential, profile link). Send Claude the
+   details. Never list someone who hasn't agreed. (Status 2026-10-22: Giorgi is looking.)
+4. **Search Console:** don't re-validate "Page with redirect" (see notes above). After deploys, resubmit
+   `sitemap.xml` and request indexing for new URLs (French and Italian home pages and guides first).
+5. **Share numbers so plans use real data:** App Store Connect (impressions, product page views, downloads by
+   territory, last 90 days), RevenueCat (trials, paid, monthly vs yearly, churn), Search Console exports.
+6. **Off-site mentions** (AI engines cite what others say): helpful answers on r/diabetes_t1, r/Type1Diabetes and
+   Spanish/German/French/Italian T1D forums and Facebook groups, following each community's rules; listings with
+   diabetes associations and bloggers; short demo videos (YouTube Shorts / Reels / TikTok) showing the Lock
+   Screen, the watch and family alerts. One real mention beats any schema.
+7. **Ratings:** ask happy users for App Store ratings.
+8. **Open question:** iPhones set to a language Dulce doesn't support (e.g. Portuguese, Dutch) get Spanish. Should
+   the fallback be English instead? One line in `dulce-app/src/lib/i18n.ts`.
+
+Done:
+
+- [x] Merge PR #3 (redirect fix, quick answers, caregiver guide): merged 2026-10-22.

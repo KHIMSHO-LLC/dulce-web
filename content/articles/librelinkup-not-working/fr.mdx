@@ -1,0 +1,70 @@
+LibreLinkUp est l'app d'Abbott pour suivre la glycémie de quelqu'un d'autre, et aussi la porte par laquelle tes données arrivent dans des apps comme Dulce. Quand ça coince, c'est presque toujours l'une de ces trois choses : tu ne peux pas te connecter, tu te connectes mais ne vois aucune donnée, ou les données ne se mettent plus à jour. Prenons-les une par une.
+
+## 1. Je n'arrive pas à me connecter à LibreLinkUp
+
+**Utilises-tu le bon compte ?** C'est de loin l'erreur la plus fréquente. **LibreLink** (l'app avec laquelle tu lis ton capteur) et **LibreLinkUp** (l'app des abonnés) sont deux apps distinctes avec des comptes distincts, même si tu utilises le même e-mail. Si ton mot de passe « ne marche pas », tu tapes probablement celui de LibreLink dans LibreLinkUp. On l'explique avec des captures dans <PageLink to="/setup">LibreLink ou LibreLinkUp</PageLink>.
+
+**As-tu essayé plusieurs fois de suite ?** Les serveurs d'Abbott bloquent les connexions répétées pendant un moment. Attends une minute avant de réessayer.
+
+**Abbott a-t-il changé ses conditions ?** De temps en temps, LibreLinkUp demande d'accepter de nouvelles conditions. Ouvre l'app LibreLinkUp, connecte-toi et accepte-les.
+
+**Le compte vient-il d'un autre pays ?** Selon Abbott, les connexions LibreLinkUp ne fonctionnent qu'entre utilisateurs d'une même région.
+
+## 2. Je me connecte mais je ne vois aucune donnée
+
+Ton compte LibreLinkUp fonctionne, mais personne ne partage encore avec lui. La personne qui porte le capteur doit l'inviter :
+
+<Steps>
+<Step title="Ouvre l'app Libre du capteur">
+Sur le téléphone de la personne qui porte le capteur, ouvre FreeStyle LibreLink ou FreeStyle Libre 3.
+</Step>
+<Step title="Va dans Applis connectées">
+Dans le menu, ouvre la section des applis connectées et choisis **LibreLinkUp**.
+</Step>
+<Step title="Ajoute la connexion">
+Saisis le même e-mail que celui du compte LibreLinkUp. Abbott exige une correspondance exacte.
+</Step>
+<Step title="Accepte l'invitation">
+Ouvre LibreLinkUp avec ce compte et accepte l'invitation. Les mesures arrivent à partir de là.
+</Step>
+</Steps>
+
+Si tu l'avais déjà fait et ne vois toujours rien, vérifie ces cas, qui selon Abbott **ne sont pas partagés** :
+
+- Le capteur a été **démarré avec un lecteur** ou un autre téléphone.
+- Les mesures ont été prises en **scannant avec le lecteur**, pas avec le téléphone.
+- Tu utilises une **édition spéciale** de l'app Libre, non compatible avec LibreLinkUp.
+
+## 3. Les données sont en retard ou figées
+
+Les mesures font ce chemin : capteur → app Libre sur le téléphone → cloud d'Abbott → LibreLinkUp. Si une étape casse, ce que tu vois s'arrête.
+
+- **Le téléphone du capteur a besoin d'Internet.** Sans données mobiles ni Wi-Fi, les mesures restent sur ce téléphone. Quand la connexion revient, la courbe se complète, mais les notifications peuvent n'afficher que la dernière mesure.
+- **Le capteur doit être près du téléphone.** Avec le FreeStyle Libre 3, les mesures n'arrivent que si le capteur est à portée Bluetooth du téléphone.
+- **Ne ferme pas l'app Libre de force.** Si tu la balaies vers le haut, iOS peut arrêter de la réveiller et elle n'envoie plus les mesures.
+- **Le mode Économie d'énergie** et la désactivation de l'**Actualisation en arrière-plan** pour l'app Libre ralentissent aussi les envois.
+- **L'abonné a aussi besoin d'Internet**, évidemment.
+
+<Callout>
+Abbott précise que les alarmes de perte de signal ne sont pas partagées non plus. Si le capteur ne communique plus avec le téléphone, ta famille ne l'apprendra pas par LibreLinkUp ; elle verra simplement qu'il n'y a plus de nouvelles mesures.
+</Callout>
+
+## Les alarmes de LibreLinkUp ne sonnent pas
+
+- Les alarmes n'existent qu'avec **FreeStyle Libre 2 et Libre 3**, et la personne qui porte le capteur doit les avoir **activées dans son app Libre**.
+- Dans LibreLinkUp, chaque connexion a ses propres réglages de notification : vérifie-les.
+- Si le téléphone est en silencieux, en vibreur ou en mode Concentration, LibreLinkUp ne peut pas passer outre.
+
+Si tu as besoin d'une alerte qui sonne même iPhone en silencieux, Dulce a une alerte critique pour les hypos sévères. Elle est expliquée dans le <ArticleLink to="alerts">guide des alertes de glycémie sur iPhone</ArticleLink>.
+
+## La place de Dulce là-dedans
+
+Dulce lit tes données via LibreLinkUp, donc tout ce qui précède le concerne aussi : si LibreLinkUp ne reçoit pas de mesures, Dulce non plus. La différence, c'est que Dulce te le dit clairement : il affiche toujours depuis combien de temps date la dernière mesure, et à la connexion il te signale si tu utilises le mauvais compte ou si personne ne partage encore avec le tien.
+
+<AppCta title="Essaie Dulce avec ton compte LibreLinkUp" />
+
+Une fois que tout fonctionne, tu peux mettre ta glycémie dans un <ArticleLink to="widgets">widget iPhone</ArticleLink> ou la partager avec jusqu'à 3 membres de ta famille sans qu'ils créent de compte Abbott : vois le <ArticleLink to="family-sharing">guide du partage en famille</ArticleLink>.
+
+## Source
+
+- Abbott. *LibreLinkUp FAQs*. [librelinkup.com](https://www.librelinkup.com/faqs)

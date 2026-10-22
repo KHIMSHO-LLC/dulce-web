@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
-import { routing, type AppLocale } from "@/i18n/routing";
+import { LEGAL_LOCALES, routing, type AppLocale } from "@/i18n/routing";
 import { alternatesFor } from "@/lib/seo";
 import { LegalLayout } from "@/components/legal/LegalLayout";
 import { PrivacyEs } from "@/components/legal/PrivacyEs";
@@ -22,8 +22,8 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     alternates: alternatesFor(safeLocale, "/legal/privacy"),
-    // German shows the English text: keep it out of the index as a duplicate.
-    robots: safeLocale === "de" ? { index: false, follow: true } : undefined,
+    // Languages without their own legal text show the English one: keep them out of the index as duplicates.
+    robots: !LEGAL_LOCALES.includes(safeLocale) ? { index: false, follow: true } : undefined,
   };
 }
 
@@ -39,7 +39,7 @@ export default async function PrivacyPage({
 
   return (
     <LegalLayout title={tDoc("title")} lastUpdated={t("lastUpdated", { date: LAST_UPDATED })}>
-      {locale === "de" ? <p>{t("englishOnly")}</p> : null}
+      {!LEGAL_LOCALES.includes(locale as AppLocale) ? <p>{t("englishOnly")}</p> : null}
       {locale === "es" ? <PrivacyEs /> : <PrivacyEn />}
     </LegalLayout>
   );

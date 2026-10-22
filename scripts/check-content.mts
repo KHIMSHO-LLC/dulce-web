@@ -7,7 +7,7 @@ import { ARTICLES } from "../content/articles.ts";
 import { AUTHORS } from "../content/authors.ts";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const LOCALES = ["es", "en", "de"] as const;
+const LOCALES = ["es", "en", "de", "fr", "it"] as const;
 const today = new Date().toISOString().slice(0, 10);
 const errors: string[] = [];
 const warnings: string[] = [];

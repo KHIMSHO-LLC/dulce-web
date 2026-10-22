@@ -687,7 +687,7 @@ function drawFollowers(ctx: Ctx, s: DrawState, L: ScreenStrings) {
   text(ctx, L.inviteSub, 78, 230, 12.5, 400, C.soft);
 
   const people =
-    s.locale === "es" ? ["Mamá", "Álex", "Dra. Vidal"] : s.locale === "de" ? ["Mama", "Alex", "Dr. Vogel"] : ["Mom", "Alex", "Dr. Vidal"];
+    ({ es: ["Mamá", "Álex", "Dra. Vidal"], de: ["Mama", "Alex", "Dr. Vogel"], fr: ["Maman", "Alex", "Dr Vidal"], it: ["Mamma", "Alex", "Dott.ssa Vidal"], en: ["Mom", "Alex", "Dr. Vidal"] })[s.locale];
   const colors = ["#F36638", "#5BA7F5", "#B58CF0"];
   people.forEach((name, i) => {
     const y = 280 + i * 92;
@@ -718,7 +718,7 @@ function drawLogbook(ctx: Ctx, s: DrawState, L: ScreenStrings) {
   const stats: Array<[string, string, string]> = [
     ["78%", L.tir, STATE_COLORS.range.text],
     ["142", `mg/dL ${L.average}`, C.text],
-    [s.locale === "es" ? "6,7%" : s.locale === "de" ? "6,7 %" : "6.7%", L.gmi, C.text],
+    [({ es: "6,7%", de: "6,7 %", fr: "6,7 %", it: "6,7%", en: "6.7%" })[s.locale], L.gmi, C.text],
   ];
   stats.forEach(([v, label, color], i) => {
     const x = 12 + i * ((PHONE.w - 24) / 3 + 0);

@@ -1,0 +1,52 @@
+Un avviso di glicemia deve fare due cose insieme: svegliarti quando conta davvero e lasciarti in pace quando non serve. Se suona per tutto, finisci per silenziarlo e diventa inutile. Questa guida passa in rassegna tutti gli avvisi di Dulce, le impostazioni predefinite e come regolarli perché aiutino senza sfinirti.
+
+<Callout type="warning">
+Dulce non sostituisce gli allarmi del tuo sensore. Se usi FreeStyle Libre 2 o Libre 3, tieni attivi gli allarmi dell'app Libre. Dulce è un livello in più, non l'unico.
+</Callout>
+
+## Dove impostarli
+
+Tutto si trova in Dulce, in **Impostazioni → Avvisi**. Durante la configurazione, Dulce chiede due permessi di iOS: **Notifiche** e **Avvisi critici**. Il secondo è quello che permette all'avviso di ipo grave di suonare anche con l'iPhone in silenzioso. Se l'hai rifiutato, puoi attivarlo nell'app Impostazioni dell'iPhone, in Dulce → Notifiche.
+
+## Gli avvisi, uno per uno
+
+| Avviso in Dulce | Cosa fa | Predefinito |
+| --- | --- | --- |
+| Avviso glicemia bassa | Ti avvisa quando la glicemia scende sotto la tua soglia (da 50 a 80 mg/dL) | 70 mg/dL |
+| Avviso glicemia alta | Ti avvisa quando la glicemia supera la tua soglia (da 140 a 300 mg/dL) | 250 mg/dL |
+| Avvisi di ipo critica | Un avviso forte in caso di ipo grave (55 mg/dL o meno), anche in silenzioso o durante le ore di silenzio | Attivo |
+| Variazione rapida | Ti avvisa quando la glicemia sale o scende molto in fretta | Attivo |
+| Ipo predittiva | Ti avvisa quando stai andando verso un'ipo | Disattivato |
+
+### Ipo critica: quello che suona sempre
+
+È l'unico avviso che supera il silenzioso, le modalità Full immersion e le ore di silenzio. Usa sempre il suono **Allarme** e si ripete ogni 5 minuti finché resti sotto. Puoi disattivarlo, ma Dulce ti chiede di confermare: è l'avviso che conta di più di notte.
+
+### Ipo predittiva
+
+Guarda quanto velocemente è scesa la glicemia negli ultimi minuti e ti avvisa se, a quel ritmo, supererai presto la soglia. Per non scattare con il rumore del sensore, avvisa solo quando diverse letture di fila sono in discesa. Non ti dice cosa fare: ti suggerisce di controllare il sensore. È disattivato di default e, quando lo attivi, Dulce ti spiega proprio questo.
+
+## Perché gli avvisi non ti sfiniscano
+
+- **Ore di silenzio.** Scegli una fascia (ad esempio dalle 23 alle 7) in cui gli avvisi non critici sono silenziati. Le ipo critiche suonano sempre. È disattivato di default, così nessuno perde un avviso di iper notturno senza averlo deciso.
+- **Frequenza avvisi.** Ogni quanto lo stesso avviso può ripetersi mentre resti fuori range. Ogni 15 minuti di default. Le ipo gravi si ripetono sempre ogni 5.
+- **Posticipa avvisi.** Se sai che resterai alto per un po' (dopo un pasto, per esempio), metti in pausa gli avvisi per qualche minuto o qualche ora. Le ipo gravi arrivano comunque. Puoi posticipare anche direttamente dalla notifica.
+- **Suoni.** Scegli un suono per la glicemia bassa e uno per quella alta: Predefinito, Delicato, Rintocco, Impulso, Allarme o Silenzioso. Due suoni diversi ti dicono cosa succede senza guardare il telefono.
+
+<AppCta title="Imposta i tuoi avvisi in Dulce" />
+
+## Arrivano anche con l'app chiusa?
+
+Sì. Non dipendono da Dulce aperta: il server di Dulce controlla le tue letture di LibreLinkUp e ti manda l'avviso. Con Dulce Pro lo fa ogni minuto; con la versione gratuita, ogni 5 minuti.
+
+Se indossi un Apple Watch, iOS manda l'avviso all'orologio quando l'iPhone è bloccato e ti dà un tocco sul polso. Maggiori dettagli nella <ArticleLink to="apple-watch">guida Apple Watch</ArticleLink>.
+
+## Avvisi per la tua famiglia
+
+I tuoi follower possono ricevere i propri avvisi quando sei basso o alto, con le proprie ore di silenzio, e i valori molto bassi arrivano sempre. Vedi la <ArticleLink to="family-sharing">guida alla condivisione in famiglia</ArticleLink>.
+
+## Se un avviso non arriva
+
+1. Controlla che l'interruttore **Notifiche** di Dulce sia attivo e che iOS consenta le notifiche di Dulce.
+2. Guarda l'ora dell'ultima lettura in Dulce. Se è vecchia, il problema è che non arrivano dati a LibreLinkUp: segui la <ArticleLink to="librelinkup-not-working">guida LibreLinkUp senza dati</ArticleLink>.
+3. Controlla se sono attive le ore di silenzio o il posticipo.

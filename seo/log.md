@@ -22,3 +22,7 @@ Each daily run appends one entry: date, what was published or improved, target q
 - Added "Quick questions" with FAQPage JSON-LD to all 11 articles, home JSON-LD featureList/audience, /llms.txt.
 - Reviewed an external SEO/ASO brief: kept what's true, rejected Dexcom/chat claims. Plan in seo/PLAN.md,
   App Store metadata draft in seo/aso.md.
+- Later the same day: French and Italian site (/fr, /it) with all 11 guides, calculators and FAQ; App Store copy for
+  fr/it in seo/aso.md; app translated to fr/it (dulce-app branch i18n/fr-it). Search Console "Page with redirect"
+  validation failed on 2026-10-17 because those URLs (http, www, retired routes) are correct permanent redirects;
+  documented in seo/PLAN.md, nothing to fix there.

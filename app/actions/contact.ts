@@ -16,7 +16,7 @@ const schema = z.object({
     .refine((value) => !value.trim().toLowerCase().endsWith("@dulceglucosa.com")),
   subject: z.string().min(2).max(200),
   message: z.string().min(10).max(5000),
-  locale: z.enum(["es", "en", "de"]),
+  locale: z.enum(["es", "en", "de", "fr", "it"]),
 });
 
 export type ContactState =
@@ -91,6 +91,14 @@ export async function sendContactMessage(
       de: {
         subject: "Wir haben deine Nachricht erhalten — Dulce",
         body: `Hallo ${name},\n\ndanke für deine Nachricht. Wir haben sie erhalten und melden uns innerhalb von 48 Arbeitsstunden.\n\nDein Dulce-Team\nhola@dulceglucosa.com`,
+      },
+      fr: {
+        subject: "Nous avons bien reçu ton message — Dulce",
+        body: `Bonjour ${name},\n\nmerci de nous avoir écrit. Nous avons bien reçu ton message et nous te répondrons sous 48 heures ouvrées.\n\nL'équipe Dulce\nhola@dulceglucosa.com`,
+      },
+      it: {
+        subject: "Abbiamo ricevuto il tuo messaggio — Dulce",
+        body: `Ciao ${name},\n\ngrazie per averci scritto. Abbiamo ricevuto il tuo messaggio e ti risponderemo entro 48 ore lavorative.\n\nIl team di Dulce\nhola@dulceglucosa.com`,
       },
     }[parsed.data.locale];
     const confirmationSubject = confirmation.subject;
