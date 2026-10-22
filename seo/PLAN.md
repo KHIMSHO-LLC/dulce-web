@@ -69,8 +69,8 @@ questions around them. Being the best answer means the product actually does it 
 
 ## Next for Claude (in order)
 
-1. After the fr/it app release: change the home FAQ "Is the app in French/Italian?" answers (messages/fr.json,
-   it.json, and the language lists in es/en/de) and `/llms.txt` ("available in ...") to say it is.
+1. Done 2026-10-22 (ahead of the app release, at Giorgi's request): the home FAQ and `/llms.txt` say the app is
+   in French and Italian. If the fr/it app release slips by more than a few days, revert that wording.
 2. Content roadmap, one article per day max (`seo/daily-article.md`), always in all 5 languages, facts from the
    released app or primary sources, sources section for any medical number, no dosing advice:
    - **Our moat (product-led):** Apple Watch complication not updating; Libre 3 on Apple Watch without iPhone
