@@ -67,12 +67,34 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Logbuch für Kohlenhydrate, Insulin und Glukose",
     "Trends: Zeit im Zielbereich, Durchschnittsglukose und GMI über 7 bis 90 Tage",
   ],
+  fr: [
+    "Glycémie en temps réel du FreeStyle Libre 2 et Libre 3 via LibreLinkUp",
+    "Activité en direct sur l'écran verrouillé et la Dynamic Island, mise à jour chaque minute",
+    "Widgets pour l'écran d'accueil, l'écran verrouillé et StandBy",
+    "App Apple Watch avec complications",
+    "Alertes de glycémie basse et haute, alerte critique d'hypoglycémie sévère et heures calmes",
+    "Abonnés de la famille par lien d'invitation, avec leurs propres alertes et des messages en un geste",
+    "Journal des glucides, de l'insuline et de la glycémie",
+    "Tendances : temps dans la cible, glycémie moyenne et GMI sur 7 à 90 jours",
+  ],
+  it: [
+    "Glicemia in tempo reale da FreeStyle Libre 2 e Libre 3 tramite LibreLinkUp",
+    "Attività in tempo reale sulla schermata di blocco e nella Dynamic Island, aggiornata ogni minuto",
+    "Widget per la schermata Home, la schermata di blocco e StandBy",
+    "App per Apple Watch con complicazioni",
+    "Avvisi di glicemia bassa e alta, avviso critico per ipoglicemia grave e ore di silenzio",
+    "Follower di famiglia tramite link di invito, con i propri avvisi e messaggi con un tocco",
+    "Diario di carboidrati, insulina e glicemia",
+    "Andamento: tempo nel range, glicemia media e GMI da 7 a 90 giorni",
+  ],
 };
 
 const AUDIENCE: Record<AppLocale, string> = {
   es: "Personas con diabetes que llevan un FreeStyle Libre y sus familias: padres de niños con diabetes tipo 1, parejas y cuidadores",
   en: "People with diabetes who wear a FreeStyle Libre, and their families: parents of children with type 1 diabetes, partners and caregivers",
   de: "Menschen mit Diabetes, die einen FreeStyle Libre tragen, und ihre Familien: Eltern von Kindern mit Typ-1-Diabetes, Partner und Angehörige",
+  fr: "Personnes diabétiques qui portent un FreeStyle Libre, et leurs familles : parents d'enfants atteints de diabète de type 1, conjoints et aidants",
+  it: "Persone con diabete che usano un FreeStyle Libre e le loro famiglie: genitori di bambini con diabete di tipo 1, partner e caregiver",
 };
 
 function appSchema(locale: AppLocale, description: string) {
@@ -88,7 +110,7 @@ function appSchema(locale: AppLocale, description: string) {
         operatingSystem: "iOS, watchOS",
         applicationCategory: "HealthApplication",
         description,
-        inLanguage: ["es", "en", "de"],
+        inLanguage: [...routing.locales],
         url: localeUrl(locale),
         installUrl: appStoreUrl,
         sameAs: [appStoreUrl],
@@ -116,7 +138,7 @@ function appSchema(locale: AppLocale, description: string) {
         "@id": `${SITE_URL}/#website`,
         url: SITE_URL,
         name: "Dulce",
-        inLanguage: ["es", "en", "de"],
+        inLanguage: [...routing.locales],
         publisher: { "@id": org },
       },
     ],

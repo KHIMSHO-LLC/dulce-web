@@ -1,0 +1,54 @@
+Se porti un FreeStyle Libre 2 o Libre 3 e un Apple Watch, è naturale voler alzare il polso e vedere il tuo valore. In pratica è più complicato del dovuto: l'app di Abbott che legge il sensore supporta pochissimo l'orologio, e LibreLinkUp, l'app per i follower, si limita soprattutto a inoltrare notifiche. Questa guida spiega da dove arrivano i dati, come metterli sul quadrante con Dulce e perché a volte i valori sull'orologio si «bloccano».
+
+<Figure src="/guides/apple-watch-1.jpg" alt="Complicazione rettangolare di Dulce su Apple Watch con 91 mg/dL, freccia di tendenza e grafico" caption="La complicazione rettangolare di Dulce: valore, tendenza e le ultime ore." width={422} height={514} />
+
+## Da dove arriva la glicemia sull'orologio
+
+Il sensore invia le letture via Bluetooth all'app Libre sul tuo iPhone (FreeStyle LibreLink o FreeStyle Libre 3, a seconda del sensore e del paese). L'app le carica nel cloud di Abbott e da lì arrivano a **LibreLinkUp**, l'account pensato perché i familiari seguano la tua glicemia.
+
+Dulce si collega al tuo account LibreLinkUp, prende ogni nuova lettura e la invia al tuo iPhone e al tuo Apple Watch. Quindi, prima di usare Dulce, devi <PageLink to="/setup">attivare la condivisione in LibreLinkUp</PageLink>. Sono quattro passaggi e si fanno una volta sola.
+
+## Come mettere la glicemia sul quadrante
+
+<Steps>
+<Step title="Installa Dulce e collega LibreLinkUp">
+Scarica Dulce sull'iPhone e accedi con email e password di **LibreLinkUp** (non quelle di LibreLink).
+</Step>
+<Step title="Attiva Apple Watch in Dulce">
+Apri **Impostazioni** in Dulce e attiva **Apple Watch**. È una funzione di Dulce Pro, che puoi provare gratis per 14 giorni.
+</Step>
+<Step title="Controlla che l'app sia sull'orologio">
+Sull'iPhone apri l'app **Watch**, scorri fino ad **App disponibili** e tocca **Installa** accanto a Dulce se non si è installata da sola.
+</Step>
+<Step title="Aggiungi la complicazione">
+Tieni premuto sul quadrante, tocca **Modifica**, scorri fino alle complicazioni, scegli una posizione e seleziona **Dulce**.
+</Step>
+</Steps>
+
+Dulce ha complicazioni in tutti e quattro i formati di watchOS: **rettangolare** (valore, freccia e grafico), **circolare**, **angolo** e **in linea**. La rettangolare rende al meglio su quadranti come Modulare o Infografico modulare; quella d'angolo si abbina a Infografico.
+
+<AppCta title="La glicemia al polso in due minuti" />
+
+## L'app sull'orologio
+
+Toccando la complicazione si apre l'app Dulce sull'orologio: il numero grande, la freccia di tendenza, la variazione rispetto alla lettura precedente e un grafico che puoi allargare a tutta la giornata. Per chiedere una lettura aggiornata, tocca il pulsante di aggiornamento.
+
+<Figure src="/guides/apple-watch-2.jpg" alt="App Dulce su Apple Watch con 93 mg/dL, +10 mg/dL e grafico di un giorno" caption="L'app sull'orologio: valore, variazione e grafico della giornata." width={422} height={514} />
+
+## E gli avvisi sull'orologio?
+
+Gli avvisi arrivano dall'iPhone. Quando indossi l'Apple Watch e l'iPhone è bloccato, iOS manda la notifica all'orologio, che ti dà un tocco sul polso; se stai usando l'iPhone, suona lì. Ricevi un solo avviso, nel posto giusto, non due. Tutto ciò che puoi impostare è nella <ArticleLink to="alerts">guida agli avvisi</ArticleLink>.
+
+## Perché a volte i valori sull'orologio si bloccano
+
+watchOS limita quante volte al giorno un'app può aggiornare la sua complicazione, per risparmiare batteria. Le app che contano sull'iPhone per «spingere» ogni lettura all'orologio esauriscono questo margine in poche ore e il quadrante smette di cambiare.
+
+Dulce non dipende solo da questo: il suo server manda l'ultima lettura direttamente all'orologio ogni minuto, anche con l'iPhone bloccato, e l'orologio la salva appena arriva. Se vedi comunque un numero che non cambia, controlla:
+
+- **Che il telefono del sensore abbia Internet.** Se l'app Libre non riesce a caricare le letture, né LibreLinkUp né Dulce ricevono nulla di nuovo. La <ArticleLink to="librelinkup-not-working">guida LibreLinkUp senza dati</ArticleLink> copre tutte le cause.
+- **Che l'orologio sia collegato** all'iPhone via Bluetooth o al Wi-Fi.
+- **Che il Risparmio energetico dell'orologio sia disattivato**, perché blocca gli aggiornamenti in background.
+
+<Callout type="warning">
+Guarda sempre l'ora dell'ultima lettura prima di prendere una decisione. Nel dubbio, conferma con l'app del sensore o con una glicemia capillare.
+</Callout>

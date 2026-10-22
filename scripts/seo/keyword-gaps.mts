@@ -13,9 +13,11 @@ const MARKETS = {
   es: { hl: "es", gl: "es", front: "143454-8,29", seeds: ["libre", "librelinkup", "freestyle libre", "libre 3", "libre 2", "glucosa", "sensor glucosa", "diabetes tipo 1", "hipoglucemia"] },
   en: { hl: "en", gl: "us", front: "143441-1,29", seeds: ["libre", "librelinkup", "freestyle libre", "libre 3", "libre 2", "cgm", "glucose", "type 1 diabetes", "low blood sugar"] },
   de: { hl: "de", gl: "de", front: "143443-4,29", seeds: ["libre", "librelinkup", "freestyle libre", "libre 3", "libre 2", "blutzucker", "glukose", "typ 1 diabetes", "unterzuckerung"] },
+  fr: { hl: "fr", gl: "fr", front: "143442-3,29", seeds: ["libre", "librelinkup", "freestyle libre", "libre 3", "libre 2", "glycémie", "capteur glycémie", "diabète type 1", "hypoglycémie"] },
+  it: { hl: "it", gl: "it", front: "143450-7,29", seeds: ["libre", "librelinkup", "freestyle libre", "libre 3", "libre 2", "glicemia", "sensore glicemia", "diabete tipo 1", "ipoglicemia"] },
 } as const;
 
-const RELEVANT = /libre ?link|libre ?view|freestyle|libre [23]|libre (widget|app|alarm|apple|watch|lock|pantalla|sperr|iphone|sensor|plus|teilen|famil|compart|alarma)|gluc|glukos|blutzucker|zucker|cgm|diabet|hba1c|a1c|hipogluc|hypogly|unterzucker|tiempo en rango|time in range|zielbereich|mg\/dl|mmol|insulin/i;
+const RELEVANT = /libre ?link|libre ?view|freestyle|libre [23]|libre (widget|app|alarm|apple|watch|lock|pantalla|sperr|iphone|sensor|plus|teilen|famil|compart|alarma|partag|condivid|verrouill|blocco)|gluc|glukos|glyc|glic|blutzucker|zucker|cgm|diabet|hba1c|a1c|hipogluc|hypogly|ipoglic|unterzucker|tiempo en rango|time in range|zielbereich|temps dans la cible|tempo nel range|mg\/dl|mmol|insulin/i;
 const NOISE = /glucosamin|glucosan|glucozen|sirup|edeka|pferd|chemische|ariana|ottai|office|hardware monitor|calibre|cuba libre|mercado libre|lyrics|precio|price|preis|comprar|buy|kaufen|amazon|costco|farmacia|apotheke|rezept|receta|seguro|insurance|krankenkasse|perro|gato|dog|cat|hund|katze/i;
 
 async function get(url: string, headers: Record<string, string> = {}): Promise<string> {

@@ -263,7 +263,9 @@
     "label": "Idioma",
     "es": "Español",
     "en": "Inglés",
-    "de": "Alemán"
+    "de": "Alemán",
+    "fr": "Francés",
+    "it": "Italiano"
   },
   "legal": {
     "lastUpdated": "Última actualización: {date}",

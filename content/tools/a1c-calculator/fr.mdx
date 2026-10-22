@@ -1,0 +1,36 @@
+## Ce que fait ce calculateur
+
+Il a deux modes :
+
+- **Je connais mon HbA1c.** Il calcule la **glycémie moyenne estimée (eAG)** qui correspond à cette HbA1c, avec la formule de l'étude ADAG : eAG (mg/dL) = 28,7 × HbA1c − 46,7. Il te donne aussi ton HbA1c en mmol/mol, l'unité IFCC qu'utilisent de nombreux laboratoires européens.
+- **Je connais la glycémie moyenne de mon capteur.** Il calcule le **GMI** (indicateur de gestion du glucose), le chiffre des rapports de capteur : GMI (%) = 3,31 + 0,02392 × glycémie moyenne en mg/dL. À côté, tu vois l'HbA1c estimée avec la formule ADAG, pour constater qu'elles ne coïncident pas toujours.
+
+## GMI et HbA1c, ce n'est pas la même chose
+
+L'HbA1c est une analyse de sang : elle mesure la part d'hémoglobine liée au glucose sur environ trois mois. Le GMI est un calcul fait à partir des mesures de ton capteur. Il a d'ailleurs été renommé (on l'appelait « HbA1c estimée ») justement parce que beaucoup de personnes trouvaient que leur résultat de laboratoire ne correspondait pas au chiffre de leur app.
+
+Il est normal qu'ils diffèrent. La durée de vie des globules rouges, une anémie, une grossesse ou certains variants de l'hémoglobine font bouger l'HbA1c sans que ta glycémie moyenne change. C'est pour cela qu'on lit les deux chiffres ensemble, et pas l'un à la place de l'autre.
+
+## Tableau rapide
+
+| HbA1c | mmol/mol | Glycémie moyenne estimée |
+| --- | --- | --- |
+| 6 % | 42 | 126 mg/dL · 7,0 mmol/L |
+| 7 % | 53 | 154 mg/dL · 8,6 mmol/L |
+| 8 % | 64 | 183 mg/dL · 10,2 mmol/L |
+| 9 % | 75 | 212 mg/dL · 11,8 mmol/L |
+
+<Callout>
+Au quotidien, le <ArticleLink to="time-in-range">temps dans la cible</ArticleLink> en dit plus que tous ces chiffres : deux personnes avec la même HbA1c peuvent avoir des journées très différentes.
+</Callout>
+
+## Où voir ta glycémie moyenne et ton GMI
+
+L'onglet Tendances de Dulce calcule ta glycémie moyenne, ton GMI et ton temps dans la cible à partir des mesures de ton FreeStyle Libre sur 7, 14, 30 ou 90 jours. Nous l'expliquons dans le <ArticleLink to="trends">guide des Tendances</ArticleLink>.
+
+<AppCta />
+
+## Sources
+
+- Nathan D. M. et al. *Translating the A1C Assay Into Estimated Average Glucose Values*. Diabetes Care 2008;31:1473-1478. [doi.org/10.2337/dc08-0545](https://doi.org/10.2337/dc08-0545)
+- Bergenstal R. M. et al. *Glucose Management Indicator (GMI)*. Diabetes Care 2018;41:2275-2280. [doi.org/10.2337/dc18-1581](https://doi.org/10.2337/dc18-1581)

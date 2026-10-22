@@ -36,6 +36,14 @@ export const TOOL_COPY: Record<ToolPath, Record<AppLocale, ToolCopy>> = {
       title: "Blutzucker-Umrechner: mg/dL in mmol/L",
       description: "Rechne deinen Blutzucker sofort von mg/dL in mmol/L um und zurück, mit einer Tabelle üblicher Werte und den Zielbereichen.",
     },
+    fr: {
+      title: "Convertisseur de glycémie : mg/dL en mmol/L",
+      description: "Convertis ta glycémie de mg/dL en mmol/L et inversement en un instant, avec un tableau des valeurs courantes et les plages cibles.",
+    },
+    it: {
+      title: "Convertitore di glicemia: da mg/dL a mmol/L",
+      description: "Converti la tua glicemia da mg/dL a mmol/L e viceversa all'istante, con una tabella dei valori più comuni e gli intervalli target.",
+    },
   },
   "/tools/a1c-calculator": {
     es: {
@@ -49,6 +57,14 @@ export const TOOL_COPY: Record<ToolPath, Record<AppLocale, ToolCopy>> = {
     de: {
       title: "HbA1c-Rechner: durchschnittlicher Blutzucker, eAG und GMI",
       description: "Berechne aus deinem HbA1c den geschätzten durchschnittlichen Blutzucker oder aus dem Mittelwert deines Sensors einen geschätzten HbA1c und den GMI.",
+    },
+    fr: {
+      title: "Calculateur HbA1c : glycémie moyenne, eAG et GMI",
+      description: "Calcule ta glycémie moyenne estimée à partir de ton HbA1c, ou une HbA1c estimée et le GMI à partir de la glycémie moyenne de ton capteur.",
+    },
+    it: {
+      title: "Calcolatore HbA1c: glicemia media, eAG e GMI",
+      description: "Calcola la glicemia media stimata dalla tua HbA1c, oppure una HbA1c stimata e il GMI dalla glicemia media del tuo sensore.",
     },
   },
 };

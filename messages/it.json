@@ -1,0 +1,420 @@
+{
+  "metadata": {
+    "siteName": "Dulce",
+    "defaultTitle": "Dulce: la glicemia del FreeStyle Libre su Apple Watch e sulla schermata di blocco",
+    "defaultDescription": "Vedi la glicemia del tuo FreeStyle Libre sulla schermata di blocco, nella Dynamic Island, in StandBy e su Apple Watch. Avvisi, diario e condivisione in famiglia. Creata da chi vive con il diabete di tipo 1.",
+    "keywords": "FreeStyle Libre Apple Watch, app LibreLinkUp Apple Watch, widget glicemia schermata di blocco, glicemia Attività in tempo reale, glicemia Dynamic Island, condividere la glicemia con la famiglia, app diabete tipo 1, widget CGM iPhone, tempo nel range, diario diabete"
+  },
+  "nav": {
+    "menu": "Menu",
+    "openMenu": "Apri il menu",
+    "closeMenu": "Chiudi il menu",
+    "download": "Scarica",
+    "home": "Home",
+    "skipToContent": "Vai al contenuto",
+    "sections": {
+      "lockScreen": "Schermata di blocco",
+      "alerts": "Avvisi",
+      "standby": "Comodino",
+      "watch": "Apple Watch",
+      "family": "Famiglia",
+      "day": "La tua giornata",
+      "faq": "Domande"
+    },
+    "help": "Aiuto",
+    "setup": "Configura LibreLinkUp",
+    "contact": "Scrivici",
+    "legal": "Note legali",
+    "privacy": "Privacy",
+    "terms": "Termini",
+    "disclaimer": "Avvertenza medica",
+    "cookies": "Cookie",
+    "language": "Lingua",
+    "guides": "Guide",
+    "tools": "Calcolatori"
+  },
+  "preloader": {
+    "label": "Caricamento di Dulce"
+  },
+  "home": {
+    "title": "La glicemia del FreeStyle Libre su Apple Watch e sulla schermata di blocco",
+    "description": "Dulce porta la glicemia del tuo FreeStyle Libre sulla schermata di blocco, nella Dynamic Island, in StandBy, su Apple Watch e sul telefono della tua famiglia. Gratis sull'App Store.",
+    "hero": {
+      "line1": "La tua glicemia,",
+      "line2": "sempre sotto gli occhi.",
+      "glyphAfter": 2,
+      "sub": "Il tuo valore sulla schermata di blocco, al polso e sul telefono della tua famiglia. Senza aprire nessuna app.",
+      "cta": "Scarica gratis",
+      "qrOpen": "Mostra il codice QR per scaricare",
+      "qrCaption": "Inquadralo con il tuo iPhone per scaricare Dulce.",
+      "made": "Creata da chi vive con il diabete di tipo 1, per tutte le persone che lo vivono ogni giorno.",
+      "watchTile": "Guarda Dulce su Apple Watch",
+      "phoneAlt": "Schermata Home di Dulce con la glicemia nel range e il grafico delle ultime 12 ore"
+    },
+    "lock": {
+      "title": "Il tuo valore,\nsenza sbloccare.",
+      "body": "Un'Attività in tempo reale sulla schermata di blocco e nella Dynamic Island, aggiornata ogni minuto. La guardi come guardi l'ora.",
+      "tags": [
+        "Attività in tempo reale",
+        "Dynamic Island",
+        "Widget"
+      ],
+      "alt": "Schermata di blocco con l'Attività in tempo reale di Dulce che mostra la glicemia nel range"
+    },
+    "alerts": {
+      "title": "Avvisi\na modo tuo.",
+      "body": "Ipo e iper alle tue soglie, ore di silenzio e un allarme più forte per la glicemia molto bassa, anche di notte.",
+      "note": "Dulce non sostituisce gli allarmi del tuo sensore.",
+      "alt": "Schermata di blocco nel cuore della notte con avvisi di glicemia alta, bassa e molto bassa"
+    },
+    "standby": {
+      "title": "Alle 3 di notte,\ncon un'occhiata.",
+      "body": "Metti l'iPhone di lato mentre si ricarica e StandBy trasforma Dulce in un orologio da comodino: il valore in grande, il grafico accanto.",
+      "alt": "iPhone in StandBy che mostra la glicemia in grande con il grafico delle ultime ore"
+    },
+    "watch": {
+      "before": "Dulce",
+      "after": "al tuo polso",
+      "title": "Una vera app per Apple Watch.",
+      "body": "Complicazioni per il quadrante e avvisi aptici. Se il dato ha più di 15 minuti lo vedi chiaramente, mai un valore ingannevole.",
+      "alt": "Apple Watch che mostra la glicemia di Dulce sul quadrante",
+      "pro": "Con Dulce Pro, prova gratuita di 14 giorni."
+    },
+    "counter": {
+      "prefix": "Fino a",
+      "value": "1.440",
+      "spoken": "millequattrocentoquaranta",
+      "unit": "letture al giorno",
+      "body": "Dulce sincronizza la tua glicemia ogni minuto, giorno e notte. Tu devi solo guardare.",
+      "note": "Con FreeStyle Libre 2 e 3 tramite LibreLinkUp."
+    },
+    "family": {
+      "lead": "Che tu viva con il diabete di tipo 1, ti prenda cura di qualcuno che ce l'ha o voglia semplicemente stargli vicino: ognuno vede ciò che gli serve, e sei tu a decidere chi.",
+      "drag": "Trascina",
+      "prev": "Precedente",
+      "next": "Successivo",
+      "cards": [
+        {
+          "title": "Vivo con il DT1",
+          "body": "Il tuo valore, l'andamento e il diario, con un'occhiata.",
+          "screen": "home",
+          "alt": "Schermata Home di Dulce"
+        },
+        {
+          "title": "Mi prendo cura di mio figlio",
+          "body": "I suoi avvisi arrivano sul tuo telefono, anche di notte.",
+          "screen": "parentAlert",
+          "alt": "Avviso di glicemia bassa di un familiare sulla schermata di blocco"
+        },
+        {
+          "title": "È il mio partner",
+          "body": "Un tocco per chiedere. Un tocco per rispondere «Sto bene».",
+          "screen": "nudge",
+          "alt": "Un messaggio ricevuto con il pulsante Sto bene"
+        },
+        {
+          "title": "I miei genitori, lontani",
+          "body": "Invita con un link e togli l'accesso quando vuoi.",
+          "screen": "followers",
+          "alt": "Elenco dei follower in Dulce"
+        }
+      ],
+      "pro": "La condivisione in famiglia fa parte di Dulce Pro, con una prova gratuita di 14 giorni."
+    },
+    "day": {
+      "title": "La tua giornata,\ncon un'occhiata.",
+      "items": [
+        {
+          "key": "logbook",
+          "title": "Diario",
+          "body": "Carboidrati, insulina e glicemia in pochi secondi con un cursore rapido. Una cronologia che si legge davvero."
+        },
+        {
+          "key": "trends",
+          "title": "Andamento",
+          "body": "Tempo nel range, media e GMI su 7, 14, 30 o 90 giorni, anche per mattina, pomeriggio e notte."
+        },
+        {
+          "key": "health",
+          "title": "Salute di Apple",
+          "body": "Dulce legge i tuoi dati dell'app Salute per avere tutto in un unico posto. Sola lettura."
+        }
+      ],
+      "alt": "Schermata di Dulce: {name}"
+    },
+    "more": {
+      "title": "Il resto,\nsemplice.",
+      "family": {
+        "title": "La tua famiglia, con te",
+        "body": "Chi inviti vede la tua glicemia in tempo reale e riceve i propri avvisi. Ti manda un messaggio e tu rispondi senza prendere in mano il telefono.",
+        "from": "Mamma",
+        "incoming": "Mamma ti ha scritto",
+        "question": "Tutto bene?",
+        "reply": "Sto bene",
+        "sent": "Inviato. Mamma è tranquilla.",
+        "again": "Rivedi",
+        "pro": "Con Dulce Pro, prova gratuita di 14 giorni."
+      },
+      "widgets": {
+        "title": "Widget",
+        "body": "Il valore o il grafico, sulla schermata Home."
+      },
+      "tir": {
+        "title": "Tempo nel range",
+        "body": "Il tuo obiettivo, in verde.",
+        "low": "Bassa",
+        "range": "Nel range",
+        "high": "Alta",
+        "sample": "Dati di esempio"
+      },
+      "sensors": {
+        "title": "FreeStyle Libre 2 e 3",
+        "body": "Collega il tuo account LibreLinkUp. Dexcom e Nightscout sono in arrivo.",
+        "link": "Come configurarlo"
+      },
+      "privacy": {
+        "title": "I tuoi dati sono tuoi",
+        "body": "Non vendiamo i tuoi dati e Dulce non ha pubblicità. Conforme al GDPR."
+      }
+    },
+    "founder": {
+      "quote": "Ho il diabete di tipo 1. Ero stanco di sbloccare il telefono, aprire un'app e aspettare che caricasse solo per vedere un numero. Così ho creato Dulce per me. Poi l'ha voluta anche la mia famiglia.",
+      "name": "Giorgio",
+      "role": "Fondatore di Dulce"
+    },
+    "faq": {
+      "marquee": "Domande?",
+      "intro": "Le domande più comuni, con le risposte. Ne manca una? Scrivici e ti risponderà una persona.",
+      "contact": "Scrivici",
+      "contactClose": "Chiudi il modulo",
+      "emailLabel": "Oppure via email:",
+      "items": [
+        {
+          "q": "Quanto costa Dulce?",
+          "a": "Il download è gratis e include l'essenziale. Le funzioni Pro (Apple Watch, condivisione in famiglia e altro) hanno una prova gratuita di 14 giorni."
+        },
+        {
+          "q": "Con quali sensori funziona?",
+          "a": "FreeStyle Libre 2 e Libre 3, tramite il tuo account LibreLinkUp. Dexcom e Nightscout sono in arrivo."
+        },
+        {
+          "q": "Perché il mio accesso LibreLink non funziona?",
+          "a": "Dulce usa LibreLinkUp, non LibreLink: sono due app con account separati. La guida alla configurazione ti accompagna in quattro passaggi.",
+          "link": "Leggi la guida"
+        },
+        {
+          "q": "I miei follower hanno bisogno di un sensore?",
+          "a": "No. Basta un iPhone e l'app Dulce gratuita. Aprono il link che gli mandi e il gioco è fatto."
+        },
+        {
+          "q": "L'app è in italiano?",
+          "a": "Non ancora: la versione italiana arriva presto. Nel frattempo Dulce è disponibile in spagnolo, inglese e tedesco."
+        },
+        {
+          "q": "Esiste una versione Android?",
+          "a": "Ci stiamo lavorando. Lascia la tua email in fondo a questa pagina e ti avviseremo quando sarà pronta."
+        },
+        {
+          "q": "Dulce è un dispositivo medico?",
+          "a": "No. Dulce non diagnostica né cura alcuna malattia, e non sostituisce gli allarmi del tuo sensore né il giudizio del tuo team diabetologico."
+        },
+        {
+          "q": "Serve un iPhone particolare?",
+          "a": "Qualsiasi iPhone con iOS 17 o successivo. La Dynamic Island richiede un iPhone 14 Pro o successivo."
+        }
+      ]
+    },
+    "download": {
+      "title": "Il tuo valore,\novunque guardi.",
+      "sub": "Gratis sull'App Store. Dulce Pro include una prova di 14 giorni.",
+      "qr": "Inquadra con il tuo iPhone",
+      "android": "Hai Android? Ti scriveremo quando sarà pronta."
+    }
+  },
+  "footer": {
+    "scan": "Inquadra il codice per scaricare Dulce sul tuo iPhone.",
+    "onPage": "In questa pagina",
+    "help": "Aiuto",
+    "legal": "Note legali",
+    "disclaimer": "Dulce non è un dispositivo medico. Non sostituisce gli allarmi del tuo sensore né il giudizio del tuo team diabetologico. Le schermate di questa pagina mostrano dati di esempio.",
+    "trademarks": "FreeStyle Libre e LibreLinkUp sono marchi di Abbott. Apple Watch e Salute sono marchi di Apple Inc. Dulce è un'app indipendente.",
+    "copyright": "© {year} Dulce",
+    "top": "Torna su",
+    "wordmark": "dulce",
+    "learn": "Impara"
+  },
+  "waitlist": {
+    "email": {
+      "label": "Email",
+      "placeholder": "tu@email.com"
+    },
+    "consent": "Accetto di ricevere un'email quando uscirà la versione Android. Maggiori informazioni nell'<privacy>Informativa sulla privacy</privacy>.",
+    "submit": "Avvisami",
+    "submitting": "Invio…",
+    "success": "Fatto. Ti scriveremo quando Dulce arriverà su Android.",
+    "errors": {
+      "generic": "Qualcosa è andato storto. Riprova.",
+      "rateLimit": "Troppi tentativi. Aspetta un momento.",
+      "alreadyJoined": "Questa email è già nella lista. Grazie!",
+      "invalidEmail": "Questa email non sembra valida."
+    }
+  },
+  "languageSwitcher": {
+    "label": "Lingua",
+    "es": "Spagnolo",
+    "en": "Inglese",
+    "de": "Tedesco",
+    "fr": "Francese",
+    "it": "Italiano"
+  },
+  "legal": {
+    "lastUpdated": "Ultimo aggiornamento: {date}",
+    "tableOfContents": "Indice",
+    "privacy": {
+      "title": "Informativa sulla privacy",
+      "description": "Come raccogliamo, usiamo e proteggiamo le tue informazioni personali."
+    },
+    "terms": {
+      "title": "Termini di utilizzo",
+      "description": "Le regole che disciplinano l'uso di Dulce e di questo sito."
+    },
+    "disclaimer": {
+      "title": "Avvertenza medica",
+      "description": "Dulce non è un dispositivo medico. Conosci i suoi limiti prima di farci affidamento."
+    },
+    "cookies": {
+      "title": "Cookie policy",
+      "description": "Quali cookie usiamo e perché."
+    },
+    "englishOnly": "Questo documento è disponibile per ora solo in inglese. Fa fede la versione inglese."
+  },
+  "notFound": {
+    "title": "Pagina non trovata",
+    "headline": "Questa pagina non esiste",
+    "body": "Il link che hai seguito non è corretto o la pagina è stata spostata.",
+    "cta": "Torna alla home"
+  },
+  "follow": {
+    "eyebrow": "Invito di famiglia",
+    "headline": "Sei stato invitato a seguire qualcuno su Dulce",
+    "body": "Dulce permette a un familiare di condividere con te la sua glicemia in tempo reale. Installa l'app e inserisci questo codice per iniziare a seguirlo.",
+    "codeLabel": "Il tuo codice di invito",
+    "openApp": "Apri in Dulce",
+    "getApp": "Scarica Dulce dall'App Store",
+    "steps": {
+      "title": "Come funziona",
+      "one": "Installa Dulce dall'App Store.",
+      "two": "Apri l'app e tocca «Segui qualcuno».",
+      "three": "Inserisci il codice qui sopra per collegarti."
+    },
+    "expiryNote": "I codici di invito scadono 24 ore dopo la creazione. Chiedine uno nuovo se questo non funziona più.",
+    "noCode": "Nessun codice di invito in questo link. Chiedi un nuovo invito."
+  },
+  "setup": {
+    "title": "LibreLink o LibreLinkUp: quale account usa Dulce?",
+    "description": "Dulce accede con il tuo account LibreLinkUp, non LibreLink. Ecco la differenza e come attivare la condivisione perché le tue letture arrivino a Dulce.",
+    "hero": {
+      "headline": "LibreLink o LibreLinkUp: quale usa Dulce?",
+      "subheadline": "Si somigliano molto, ma sono due app diverse con due accessi diversi. Dulce si collega a LibreLinkUp, l'app che riceve le letture condivise con te. Questa pagina ti mostra esattamente come configurarla."
+    },
+    "compare": {
+      "title": "Due app, due account",
+      "scan": {
+        "title": "LibreLink",
+        "body": "L'app che installi per leggere il sensore FreeStyle Libre e vedere le tue letture. Dulce non può accedere con questo account."
+      },
+      "share": {
+        "title": "LibreLinkUp",
+        "body": "L'app compagna che riceve le letture condivise con te, di solito usata dalla famiglia. È l'account di cui Dulce ha bisogno."
+      }
+    },
+    "steps": {
+      "title": "Attiva la condivisione in 4 passaggi",
+      "step1": {
+        "title": "Installa LibreLinkUp",
+        "body": "Scarica LibreLinkUp dall'App Store o da Google Play e crea un account con la tua email. Tieni da parte email e password, le userai in Dulce."
+      },
+      "step2": {
+        "title": "Apri LibreLink e vai su App collegate",
+        "body": "Nell'app LibreLink con cui leggi il sensore, apri il menu e cerca la sezione di condivisione o «App collegate / LinkUp»."
+      },
+      "step3": {
+        "title": "Invita la tua email di LibreLinkUp",
+        "body": "Aggiungi come connessione la stessa email che hai appena registrato in LibreLinkUp, poi accetta l'invito dentro LibreLinkUp."
+      },
+      "step4": {
+        "title": "Accedi a Dulce",
+        "body": "Apri Dulce e inserisci email e password di LibreLinkUp. La tua glicemia compare in pochi secondi."
+      }
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "q1": "Perché il mio accesso LibreLink non funziona in Dulce?",
+      "a1": "Perché LibreLink e LibreLinkUp sono app separate con account separati. Dulce usa LibreLinkUp. Se l'accesso viene rifiutato, quasi sicuramente stai inserendo i dati di LibreLink: crea un account LibreLinkUp e usa quello.",
+      "q2": "Ho fatto l'accesso ma Dulce non mostra dati. Cosa succede?",
+      "a2": "L'accesso a LibreLinkUp funziona, ma con quell'account non è ancora condiviso nulla. Apri l'app LibreLink con cui leggi il sensore, vai su App collegate e invita la tua email di LibreLinkUp. Accetta l'invito e Dulce inizierà a ricevere le letture.",
+      "q3": "Dulce è prodotta da Abbott?",
+      "a3": "No. Dulce è un'app indipendente, non affiliata, approvata o sponsorizzata da Abbott. FreeStyle Libre, LibreLink e LibreLinkUp sono marchi di Abbott, citati qui solo per spiegare come collegarsi."
+    },
+    "cta": {
+      "title": "Pronto a vedere la tua glicemia in Dulce?",
+      "subtitle": "Gratis sull'App Store. Configura il tuo account LibreLinkUp e accedi."
+    },
+    "disclaimer": "Dulce è un'app indipendente, non affiliata, approvata o sponsorizzata da Abbott. FreeStyle Libre, LibreLink e LibreLinkUp sono marchi di Abbott Diabetes Care. Dulce non è un dispositivo medico e non sostituisce gli allarmi del tuo sensore.",
+    "breadcrumbHome": "Home"
+  },
+  "contact": {
+    "form": {
+      "title": "Mandaci un messaggio",
+      "subtitle": "Compila il modulo qui sotto e ti risponderemo direttamente.",
+      "name": {
+        "label": "Il tuo nome",
+        "placeholder": "Giulia Rossi"
+      },
+      "email": {
+        "label": "La tua email",
+        "placeholder": "tu@email.com"
+      },
+      "subject": {
+        "label": "Oggetto",
+        "placeholder": "Di cosa vuoi parlarci?"
+      },
+      "message": {
+        "label": "Messaggio",
+        "placeholder": "Raccontaci tutto: domande, idee, opinioni o anche solo un saluto."
+      },
+      "submit": "Invia messaggio",
+      "submitting": "Invio…",
+      "success": {
+        "title": "Messaggio inviato!",
+        "body": "Ti risponderemo entro 48 ore lavorative."
+      },
+      "errors": {
+        "validation": "Compila correttamente tutti i campi.",
+        "rateLimit": "Troppi messaggi inviati. Aspetta un momento.",
+        "generic": "Qualcosa è andato storto. Puoi anche scriverci a hola@dulceglucosa.com."
+      }
+    }
+  },
+  "blog": {
+    "title": "Guide su glicemia, Libre e iPhone",
+    "description": "Guide pratiche per vedere la glicemia del tuo FreeStyle Libre su iPhone, Apple Watch e con la tua famiglia, scritte da persone che vivono con il diabete.",
+    "eyebrow": "Guide",
+    "headline": "Ottieni di più dal tuo sensore",
+    "sub": "Guide pratiche scritte da persone che vivono con il diabete. Niente riempitivi: come funziona, come configurarlo e cosa fare quando si blocca.",
+    "by": "Di {name}",
+    "updated": "Aggiornato il {date}",
+    "published": "Pubblicato il {date}",
+    "minutes": "{n} min di lettura",
+    "related": "Continua a leggere",
+    "faqTitle": "Domande rapide",
+    "faqMore": "Approfondisci:",
+    "read": "Leggi",
+    "allArticles": "Tutte le guide",
+    "toolsTitle": "Calcolatori",
+    "home": "Home",
+    "authorArticles": "Articoli di {name}",
+    "medical": "Questo articolo ha scopo informativo e non sostituisce il parere del tuo team diabetologico. Dulce non è un dispositivo medico e non sostituisce gli allarmi del tuo sensore.",
+    "independent": "Dulce è un'app indipendente, non affiliata ad Abbott. FreeStyle Libre, LibreLink e LibreLinkUp sono marchi di Abbott."
+  }
+}

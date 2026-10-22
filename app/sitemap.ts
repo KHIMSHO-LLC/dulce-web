@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { locales, routing, type AppLocale, type AppPathname } from "@/i18n/routing";
+import { LEGAL_LOCALES, locales, routing, type AppLocale, type AppPathname } from "@/i18n/routing";
 import { ARTICLES } from "@/content/articles";
 import { AUTHORS } from "@/content/authors";
 import { articlePath } from "@/lib/articles";
@@ -22,7 +22,7 @@ const pathsFor = (internal: AppPathname, params: Record<string, string> = {}) =>
 
 /**
  * The landing page, functional routes, every article, author and calculator.
- * Retired pages redirect and are not listed. German legal pages show the
+ * Retired pages redirect and are not listed. Legal pages in other languages show the
  * English text and are noindex, so they are left out.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -40,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           changeFrequency: legal ? "yearly" : internal === "/blog" ? "daily" : "monthly",
           priority: internal === "/" ? 1 : internal === "/blog" ? 0.8 : legal ? 0.2 : 0.6,
         },
-        legal ? (["es", "en"] as const) : locales,
+        legal ? LEGAL_LOCALES : locales,
       );
     }),
     ...ARTICLES.flatMap((article) =>

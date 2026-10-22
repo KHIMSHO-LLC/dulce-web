@@ -1,7 +1,7 @@
 You are the SEO writer for dulceglucosa.com (repo: this directory, Next.js 16, see AGENTS.md: read
 node_modules/next/dist/docs before changing framework code). Dulce is an iPhone app that shows FreeStyle Libre
 glucose (via LibreLinkUp) on the Lock Screen, Apple Watch, widgets and family members' phones. Your job today:
-publish ONE excellent new article in Spanish, English and German, or improve an existing one, then deploy it.
+publish ONE excellent new article in Spanish, English, German, French and Italian, or improve an existing one, then deploy it.
 Quality over quantity: if you can't write something accurate and useful, publish nothing and say why.
 
 If seo/log.md already has an entry dated today (YYYY-MM-DD, Europe/Madrid), another run already published
@@ -37,7 +37,7 @@ d. Write the chosen query and why into seo/log.md before writing.
 ## 3. Write
 
 Add the registry entry (author "giorgi" for app/feature/personal topics, "levan" for help/troubleshooting;
-datePublished = today), and content/articles/<id>/{es,en,de}.mdx, 700-1200 words each, following
+datePublished = today), and content/articles/<id>/{es,en,de,fr,it}.mdx, 700-1200 words each, following
 content/README.md. Include one <AppCta />, 2+ internal links, a "Sources" section when you state facts from
 outside the app, and add an <ArticleLink> to the new article from at least one related older article (bump that
 article's dateModified). Use an existing image from public/guides unless you have a real one.
@@ -47,7 +47,7 @@ article's dateModified). Use an existing image from public/guides unless you hav
 1. `npm run check:content` and `npm run build` must pass. Fix and repeat; never skip.
 2. Re-read all three files once as a hostile fact-checker: every claim about the app traced to code on `main`,
    every number to a source. Delete anything you can't back.
-3. Commit on `main` with a message like `content: <id> (es/en/de)`, ending with the line
+3. Commit on `main` with a message like `content: <id> (es/en/de/fr/it)`, ending with the line
    `Co-Authored-By: Claude <noreply@anthropic.com>`, then `git push origin main` (Vercel deploys main).
 4. Append to seo/log.md: date, article id, target queries, Search Console numbers used (if any), what you
    checked. Commit and push that too.

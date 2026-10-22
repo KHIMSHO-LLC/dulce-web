@@ -71,6 +71,16 @@ const CTA_COPY: Record<AppLocale, { title: string; body: string; button: string 
     body: "Dulce ist kostenlos im App Store. Pro-Funktionen kannst du 14 Tage kostenlos testen.",
     button: "Dulce kostenlos laden",
   },
+  fr: {
+    title: "Essaie-le sur ton iPhone",
+    body: "Dulce est gratuit sur l'App Store. Les fonctions Pro ont un essai gratuit de 14 jours.",
+    button: "Télécharger Dulce gratuitement",
+  },
+  it: {
+    title: "Provalo sul tuo iPhone",
+    body: "Dulce è gratis sull'App Store. Le funzioni Pro hanno una prova gratuita di 14 giorni.",
+    button: "Scarica Dulce gratis",
+  },
 };
 
 /** The install call to action. Placed mid-article and at the end. */

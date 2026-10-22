@@ -1,0 +1,54 @@
+Si tu portes un FreeStyle Libre 2 ou Libre 3 et une Apple Watch, tu as forcément envie de lever le poignet et de voir ton chiffre. En pratique, c'est plus compliqué que ça devrait l'être : l'app d'Abbott qui lit le capteur gère très peu la montre, et LibreLinkUp, l'app des abonnés, se contente surtout de transférer des notifications. Ce guide explique d'où viennent les données, comment les afficher sur ton cadran avec Dulce et pourquoi les valeurs de la montre se « figent » parfois.
+
+<Figure src="/guides/apple-watch-1.jpg" alt="Complication rectangulaire de Dulce sur Apple Watch affichant 91 mg/dL, une flèche de tendance et une courbe" caption="La complication rectangulaire de Dulce : valeur, tendance et les dernières heures." width={422} height={514} />
+
+## D'où vient la glycémie affichée sur ta montre
+
+Le capteur envoie ses mesures en Bluetooth à l'app Libre de ton iPhone (FreeStyle LibreLink ou FreeStyle Libre 3, selon ton capteur et ton pays). Cette app les envoie dans le cloud d'Abbott, et de là elles arrivent dans **LibreLinkUp**, le compte prévu pour que ta famille suive ta glycémie.
+
+Dulce se connecte à ton compte LibreLinkUp, récupère chaque nouvelle mesure et l'envoie à ton iPhone et à ton Apple Watch. Avant d'utiliser Dulce, il faut donc <PageLink to="/setup">activer le partage dans LibreLinkUp</PageLink>. Cela prend quatre étapes et ne se fait qu'une fois.
+
+## Comment afficher ta glycémie sur ton cadran
+
+<Steps>
+<Step title="Installe Dulce et connecte LibreLinkUp">
+Télécharge Dulce sur ton iPhone et connecte-toi avec l'e-mail et le mot de passe de **LibreLinkUp** (pas ceux de LibreLink).
+</Step>
+<Step title="Active Apple Watch dans Dulce">
+Ouvre les **Réglages** de Dulce et active **Apple Watch**. C'est une fonction de Dulce Pro, que tu peux essayer gratuitement pendant 14 jours.
+</Step>
+<Step title="Vérifie que l'app est sur ta montre">
+Sur ton iPhone, ouvre l'app **Watch**, descends jusqu'à **Apps disponibles** et touche **Installer** à côté de Dulce si elle ne s'est pas installée toute seule.
+</Step>
+<Step title="Ajoute la complication">
+Maintiens le doigt sur ton cadran, touche **Modifier**, fais glisser jusqu'aux complications, choisis un emplacement et sélectionne **Dulce**.
+</Step>
+</Steps>
+
+Dulce propose des complications dans les quatre formats de watchOS : **rectangulaire** (valeur, flèche et courbe), **circulaire**, **coin** et **en ligne**. La rectangulaire fonctionne le mieux sur des cadrans comme Modulaire ou Infographe modulaire ; celle du coin va bien avec Infographe.
+
+<AppCta title="Ta glycémie au poignet en deux minutes" />
+
+## L'app de la montre
+
+Toucher la complication ouvre l'app Dulce sur la montre : le grand chiffre, la flèche de tendance, la variation depuis la mesure précédente et une courbe que tu peux élargir à toute la journée. Pour demander une nouvelle mesure, touche le bouton d'actualisation.
+
+<Figure src="/guides/apple-watch-2.jpg" alt="App Dulce sur Apple Watch affichant 93 mg/dL, +10 mg/dL et une courbe sur une journée" caption="L'app de la montre : valeur, variation et courbe de la journée." width={422} height={514} />
+
+## Et les alertes sur la montre ?
+
+Les alertes viennent de ton iPhone. Quand tu portes ton Apple Watch et que ton iPhone est verrouillé, iOS envoie la notification à la montre, qui te tapote le poignet ; si tu utilises ton iPhone, c'est lui qui sonne. Tu reçois une seule alerte, au bon endroit, pas deux. Tout ce que tu peux régler est dans le <ArticleLink to="alerts">guide des alertes</ArticleLink>.
+
+## Pourquoi les valeurs de la montre se figent parfois
+
+watchOS limite le nombre de fois par jour où une app peut actualiser sa complication, pour économiser la batterie. Les apps qui comptent sur l'iPhone pour « pousser » chaque mesure vers la montre épuisent ce quota en quelques heures, et le cadran ne bouge plus.
+
+Dulce ne dépend pas uniquement de cela : son serveur envoie la dernière mesure directement à la montre chaque minute, même quand ton iPhone est verrouillé, et la montre l'enregistre dès qu'elle arrive. Si tu vois quand même un chiffre qui ne change pas, vérifie :
+
+- **Que le téléphone du capteur a Internet.** Si l'app Libre ne peut pas envoyer les mesures, ni LibreLinkUp ni Dulce ne reçoivent rien de nouveau. Le <ArticleLink to="librelinkup-not-working">guide LibreLinkUp sans données</ArticleLink> passe en revue toutes les causes.
+- **Que la montre est connectée** à ton iPhone en Bluetooth ou au Wi-Fi.
+- **Que le mode Économie d'énergie de la montre est désactivé**, car il coupe les mises à jour en arrière-plan.
+
+<Callout type="warning">
+Regarde toujours l'heure de la dernière mesure avant de prendre une décision. En cas de doute, confirme avec l'app de ton capteur ou une glycémie capillaire.
+</Callout>

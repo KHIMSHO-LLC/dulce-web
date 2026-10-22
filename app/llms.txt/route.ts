@@ -12,7 +12,7 @@ import { absoluteUrl, localizedPath } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
-const LANGUAGE: Record<AppLocale, string> = { es: "Spanish", en: "English", de: "German" };
+const LANGUAGE: Record<AppLocale, string> = { es: "Spanish", en: "English", de: "German", fr: "French", it: "Italian" };
 
 function guides(locale: AppLocale): string {
   return ARTICLES.map((a) => `- [${a.title[locale]}](${articleUrl(a, locale)}): ${a.description[locale]}`).join("\n");

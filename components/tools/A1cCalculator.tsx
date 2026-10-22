@@ -51,6 +51,28 @@ const L: Record<
     gmi: "GMI (Glukose-Management-Indikator)",
     ifcc: "In mmol/mol (IFCC)",
   },
+  fr: {
+    fromA1c: "Je connais mon HbA1c",
+    fromMean: "Je connais la glycémie moyenne de mon capteur",
+    a1c: "HbA1c (%)",
+    mean: "Glycémie moyenne",
+    unit: "Unité",
+    eag: "Glycémie moyenne estimée (eAG)",
+    estA1c: "HbA1c estimée (formule ADAG)",
+    gmi: "GMI (indicateur de gestion du glucose)",
+    ifcc: "En mmol/mol (IFCC)",
+  },
+  it: {
+    fromA1c: "Conosco la mia HbA1c",
+    fromMean: "Conosco la glicemia media del mio sensore",
+    a1c: "HbA1c (%)",
+    mean: "Glicemia media",
+    unit: "Unità",
+    eag: "Glicemia media stimata (eAG)",
+    estA1c: "HbA1c stimata (formula ADAG)",
+    gmi: "GMI (indicatore di gestione del glucosio)",
+    ifcc: "In mmol/mol (IFCC)",
+  },
 };
 
 function Result({ label, value }: { label: string; value: string }) {
