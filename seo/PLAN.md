@@ -81,6 +81,7 @@ questions around them. Being the best answer means the product actually does it 
       zone across DST (dulce-relay PR #2; the app sends `timeZone` from 1.0.4).
 - [x] 2026-10-22: App 1.0.4 (dulce-app PR #4 into `release/1.0.4`): mmol/L in widgets, Live Activity, Dynamic
       Island and onboarding; French/Italian; unsupported languages fall back to English.
+- [x] 2026-10-23: Article `night-lows` (hipoglucemia nocturna / nächtliche Unterzuckerung), 5 languages, sources.
 - [ ] Performance: the home page ships ~430 KB of compressed JS (three.js phone). Measure on PageSpeed Insights
       (mobile) and lazy-load or trim the 3D scene if LCP/INP are poor.
 
@@ -137,6 +138,13 @@ Open:
 8. **Deploy the relay** (`cd dulce-relay && npm run deploy`). Until then the status page shows "unknown" and
    French/Italian alerts are not live.
 9. **Merge dulce-app PR #4 into `release/1.0.4`**, build and submit 1.0.4 (with the Dexcom/new-design work).
+
+10. **Fix the "rings on silent" claim (found 2026-10-23).** The released app can't ring through silent mode:
+    `CRITICAL_ALERTS_ENTITLEMENT_APPROVED = false` in dulce-app `src/hooks/usePermissions.ts` (main and
+    release/1.0.4), no critical-alert or time-sensitive entitlement in app.json, critical-low sent as `timeSensitive`.
+    Still claimed in: `alerts` (title, description, body, FAQ, keyword "glucose alarm silent mode iphone"),
+    `child-glucose` "At night", `librelinkup-not-working`, `app/llms.txt/route.ts`. Either get the entitlement from
+    Apple and ship it, or let Claude rewrite those pages. `night-lows` already describes the real behaviour.
 
 Done:
 

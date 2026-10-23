@@ -26,3 +26,32 @@ Each daily run appends one entry: date, what was published or improved, target q
   fr/it in seo/aso.md; app translated to fr/it (dulce-app branch i18n/fr-it). Search Console "Page with redirect"
   validation failed on 2026-10-17 because those URLs (http, www, retired routes) are correct permanent redirects;
   documented in seo/PLAN.md, nothing to fix there.
+
+## 2026-10-23 (daily run, cloud)
+
+- Search Console (step 1a) skipped: not reachable from the cloud environment. `npm run seo:gaps` returned 0 queries
+  because the cloud network policy blocks Google/App Store suggest endpoints (403), so gaps.json is empty today.
+- `npm ci` fails with npm 10 (lock file missing `@swc/helpers@0.5.23`); `npx npm@11 ci` installs cleanly.
+  Worth regenerating package-lock.json on the Mac.
+- Topic from seo/keyword-volumes.md: night lows. "hipoglucemia nocturna" (ES 100-1K), "unterzuckerung nachts" and
+  "nächtliche unterzuckerung" (DE 100-1K each), no article covers them, listed as a strong candidate in PLAN.md and
+  the 2026-10-19 entry. Dulce genuinely helps here (critical low through silent/quiet hours, followers' alerts,
+  Lock Screen at a glance).
+- Published `night-lows` (es/en/de/fr/it, category health, author giorgi). Slugs: hipoglucemia-nocturna,
+  nocturnal-hypoglycemia, naechtliche-unterzuckerung, hypoglycemie-nocturne, ipoglicemia-notturna. Target queries:
+  "hipoglucemia nocturna", "unterzuckerung nachts", "nächtliche unterzuckerung", "nocturnal hypoglycemia",
+  "hypoglycémie nocturne", "ipoglicemia notturna", plus "compression low libre". Linked from `trends` (Time of day
+  bullet, 5 languages, dateModified bumped).
+- Checked against dulce-app main: alertRules.ts (critical low <=55 ignores quiet hours, quiet hours mute the low
+  alert and predictive low, predictive = 3 consecutive drops + >=2 mg/dL/min + 15 min horizon), alertEngine.ts
+  (global snooze never blocks critical low, critical repeats every 5 min), locales for labels.
+- **Found a wrong claim on the site:** the released app can't ring through silent mode
+  (`CRITICAL_ALERTS_ENTITLEMENT_APPROVED = false`, no critical/time-sensitive entitlement in app.json; same on
+  release/1.0.4). `alerts`, `child-glucose`, `librelinkup-not-working` and /llms.txt still say it does. Not changed
+  today (title/keyword decision for Giorgi, added to PLAN.md "For Giorgi" #10); the new article states the real
+  behaviour (keep silent mode off at night, allow Dulce in the Sleep Focus). Owner notified.
+- Sources (via web search; primary sites like doi.org/pubmed/nhs.uk are blocked by the cloud network, so citations
+  were verified from search snippets of the publisher/PubMed records): ADA Standards of Care 2026 section 6
+  (dc26-S006), Battelino 2019 TIR consensus, Banarer & Cryer 2003 (Diabetes), Schultes 2007 (PLoS Med),
+  Mensh 2013 (JDST, sleeping position), Riddell 2017 (exercise consensus).
+- `npm run check:content` (12 articles, 0 errors, 0 warnings) and `npm run build` passed.
