@@ -1,0 +1,80 @@
+Si tu portes un FreeStyle Libre, tu as sûrement déjà croisé le nom LibreView : dans un e-mail d'Abbott, dans un courrier de ton diabétologue ou dans le menu de ton app Libre. Ce n'est pas une app de plus à installer. LibreView est le site d'Abbott où arrivent les mesures de ton capteur, surtout pour que toi et ton équipe soignante puissiez les consulter sous forme de rapports. Ce guide t'explique ce que c'est, avec quel compte on s'y connecte, comment le partager avec ton centre et pourquoi le même mot de passe ne t'ouvre pas LibreLinkUp.
+
+## C'est quoi, LibreView
+
+Abbott présente LibreView comme un système sécurisé de gestion du diabète dans le cloud, conçu pour que patients et professionnels de santé analysent l'historique glycémique. Concrètement, c'est un site (libreview.com) où tes mesures sont stockées et transformées en rapports.
+
+Deux choses que ce **n'est pas** :
+
+- Ce n'est pas une vue en direct. LibreView sert à regarder en arrière sur des jours et des semaines, pas à voir ta glycémie en ce moment.
+- Il ne prend aucune décision de traitement. Abbott précise que le logiciel ne remplace pas l'avis d'un professionnel. Les rapports servent de base à une discussion avec ton équipe.
+
+## Quel compte utilise LibreView
+
+C'est de là que vient presque toute la confusion. Abbott a trois noms qui se ressemblent beaucoup :
+
+| Nom | Ce que c'est | Quel compte |
+| --- | --- | --- |
+| **FreeStyle LibreLink** / **FreeStyle Libre 3** | L'app avec laquelle tu lis ton capteur | Ton compte |
+| **LibreView** | Le site avec ton historique et tes rapports | **Le même compte** que cette app |
+| **LibreLinkUp** | L'app pour suivre la glycémie de quelqu'un d'autre | **Un compte à part** |
+
+Si tu utilises l'app LibreLink ou Libre 3, tu as déjà un compte LibreView : tu te connectes sur libreview.com avec le même e-mail et le même mot de passe. Pas besoin de t'inscrire à nouveau.
+
+LibreLinkUp fait bande à part. C'est un compte d'abonné, créé séparément, qui ne voit des données qu'une fois invité par la personne qui porte le capteur. Voilà pourquoi ton mot de passe LibreLink ou LibreView « ne marche pas » dans LibreLinkUp : c'est un autre compte, même avec le même e-mail. Si c'est ton souci en ce moment, on passe chaque cas en revue dans <ArticleLink to="librelinkup-not-working">LibreLinkUp ne fonctionne pas</ArticleLink>.
+
+## Comment tes mesures arrivent sur LibreView
+
+**Avec l'app sur le téléphone**, les mesures sont envoyées automatiquement tant que le téléphone a du Wi-Fi ou des données mobiles. Tu n'as rien à faire.
+
+**Avec un lecteur Libre**, l'envoi est manuel. Les étapes d'Abbott : connecte-toi à libreview.com sur un ordinateur, branche le lecteur avec son câble USB et lance l'envoi depuis le site. La première fois, le site te demande d'installer ses pilotes.
+
+<Callout>
+Si ton centre te dit que ton LibreView est vide, vérifie comment le capteur a été démarré. Les mesures faites avec un lecteur n'arrivent sur LibreView que lorsque tu les envoies depuis un ordinateur.
+</Callout>
+
+## Partager LibreView avec ton centre
+
+Les centres qui utilisent LibreView ont un **ID de cabinet** (en anglais *practice ID*), un code propre à ce centre. Demande-le-leur ; n'utilise pas un code trouvé en ligne, tu relierais tes données au centre de quelqu'un d'autre.
+
+<Steps>
+<Step title="Demande l'ID de ton centre">
+Demande à ton équipe diabète son ID LibreView. Si tu as reçu une invitation par e-mail et que tu l'as acceptée, tu es déjà relié.
+</Step>
+<Step title="Relie-le depuis l'app ou le site">
+Dans l'app Libre, ouvre **Applis connectées**, choisis **LibreView** et connecte-toi à un cabinet avec l'ID. Sur libreview.com, tu peux faire pareil depuis les réglages de ton compte, dans la partie consacrée aux cabinets.
+</Step>
+<Step title="Vérifie que ça a marché">
+Le centre doit maintenant apparaître dans ton compte. Sur libreview.com, tu peux le retirer quand tu veux arrêter de partager.
+</Step>
+</Steps>
+
+## Les rapports que regarde ton équipe
+
+D'après Abbott, LibreView produit plusieurs rapports. Ceux que tu verras le plus souvent en consultation :
+
+- **Rapport AGP** (profil glycémique ambulatoire) : tous tes jours superposés en une seule journée type, avec la médiane et la dispersion, plus ton **temps dans la cible** et d'autres statistiques. Ce format suit le consensus international sur le temps dans la cible.
+- **Tendances quotidiennes** : des moyennes par moment de la journée, avec glucides et insuline s'ils ont été saisis.
+- **Glucose Pattern Insights** : une synthèse guidée des tendances, avec une HbA1c estimée.
+
+Si « temps dans la cible » ou « GMI » ne te disent rien, notre guide <ArticleLink to="time-in-range">temps dans la cible ou HbA1c</ArticleLink> explique ce que mesure chacun et les objectifs habituels.
+
+## Et Dulce dans tout ça
+
+Dulce ne remplace pas LibreView et n'a pas besoin de ton compte LibreView. Il se connecte avec un compte **LibreLinkUp** avec lequel tu partages tes mesures, puis affiche ta glycémie sur l'écran verrouillé, dans des widgets et sur ton Apple Watch. Si la connexion échoue, Dulce t'indique que la cause la plus fréquente, ce sont des identifiants LibreLink (donc LibreView), et t'explique quel compte il lui faut. Dulce ne fait que lire tes mesures ; il n'envoie rien à LibreView ni à ton centre.
+
+<AppCta title="Ta glycémie d'un coup d'œil avec Dulce" />
+
+Ce que LibreView fait pour tes consultations, l'onglet **Tendances** de Dulce le fait sur ton téléphone entre deux rendez-vous : temps dans la cible, glycémie moyenne et HbA1c estimée sur 7, 14, 30 ou 90 jours, et le moment de la journée qui coince le plus. Tout est dans le <ArticleLink to="trends">guide des tendances</ArticleLink>. Et si un rapport affiche d'autres unités, utilise le <PageLink to="/tools/glucose-converter">convertisseur mg/dL en mmol/L</PageLink>.
+
+<Callout type="warning">
+Les rapports et les apps t'aident à repérer des tendances, mais les changements de traitement se décident avec ton équipe soignante. Dulce n'est pas un dispositif médical et ne remplace pas les alarmes de ton capteur.
+</Callout>
+
+## Sources
+
+- Abbott. *LibreView for healthcare providers*. [freestyleprovider.abbott](https://freestyleprovider.abbott/us-en/libreview.html)
+- Abbott. *Uploading FreeStyle Libre 3 reader data to LibreView*. [freestyle.abbott](https://www.freestyle.abbott/en-us/support/faq/reader/uploading-freestyle-libre-3-reader-data-to-libreview.html)
+- West Hertfordshire Teaching Hospitals NHS Trust. *Libre apps* (fiche patient : même compte, relier un cabinet). [westhertshospitals.nhs.uk](https://westhertshospitals.nhs.uk/patients-and-visitors/patient-information-leaflets/libre-apps)
+- Abbott. *LibreLinkUp FAQs*. [librelinkup.com](https://www.librelinkup.com/faqs)
+- Battelino T, et al. *Clinical Targets for Continuous Glucose Monitoring Data Interpretation: Recommendations From the International Consensus on Time in Range*. Diabetes Care. 2019;42(8):1593-1603.

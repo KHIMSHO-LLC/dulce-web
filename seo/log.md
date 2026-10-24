@@ -55,3 +55,25 @@ Each daily run appends one entry: date, what was published or improved, target q
   (dc26-S006), Battelino 2019 TIR consensus, Banarer & Cryer 2003 (Diabetes), Schultes 2007 (PLoS Med),
   Mensh 2013 (JDST, sleeping position), Riddell 2017 (exercise consensus).
 - `npm run check:content` (12 articles, 0 errors, 0 warnings) and `npm run build` passed.
+
+## 2026-10-24 (daily run, cloud)
+
+- Search Console (step 1a) skipped: not available in the cloud environment. `npm run seo:gaps` returned 0 queries
+  again (suggest endpoints blocked by the cloud network). `npm ci` still fails with npm 10; `npx npm@11 ci` works.
+- Topic from seo/keyword-volumes.md: **"libreview"** (ES 10K-100K, DE 1K-10K, the highest-volume keyword no article
+  covers). People who search it are confused about which Abbott account is which; Dulce's own sign-in rejects
+  LibreLink/LibreView credentials, so explaining the three accounts helps both readers and Dulce setup.
+- Published `libreview` (es/en/de/fr/it, category help, author levan). Slug `libreview` in every language. Target
+  queries: "libreview", "libreview login", "what is libreview / qué es libreview", "libreview practice id / Praxis-ID",
+  "libreview vs librelinkup". Linked from `librelinkup-not-working` ("right account" paragraph, 5 languages,
+  dateModified bumped).
+- Checked against dulce-app main: onboarding locales (sign-in failure says the most common reason is LibreLink
+  details; Dulce needs the LibreLinkUp follower account), libre/client.ts (only login/terms POSTs and reads; nothing
+  sent to LibreView), Trends labels (Time in range, Est. A1C from GMI). fr/it tab labels follow the existing `trends`
+  article (fr/it locales are not on dulce-app main yet).
+- Sources (abbott/libreview sites are not reachable from the cloud, verified via search snippets): Abbott LibreView
+  provider page (AGP, Daily Patterns, Glucose Pattern Insights, not for treatment decisions), Abbott FAQ on uploading
+  Libre 3 reader data (manual USB upload, drivers), West Herts NHS "Libre apps" leaflet (same login as LibreLink,
+  practice ID via Connected Apps → LibreView), LibreLinkUp FAQs, Battelino 2019. Left out claims I couldn't confirm
+  (exact Abbott menu labels per language, whether LibreView is free, removing a practice from the app).
+- `npm run check:content` (13 articles, 0 errors, 0 warnings) and `npm run build` passed.

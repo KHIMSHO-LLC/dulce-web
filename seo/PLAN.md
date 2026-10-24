@@ -82,6 +82,7 @@ questions around them. Being the best answer means the product actually does it 
 - [x] 2026-10-22: App 1.0.4 (dulce-app PR #4 into `release/1.0.4`): mmol/L in widgets, Live Activity, Dynamic
       Island and onboarding; French/Italian; unsupported languages fall back to English.
 - [x] 2026-10-23: Article `night-lows` (hipoglucemia nocturna / nächtliche Unterzuckerung), 5 languages, sources.
+- [x] 2026-10-24: Article `libreview` (what LibreView is, login, practice ID, vs LibreLinkUp), 5 languages, sources.
 - [ ] Performance: the home page ships ~430 KB of compressed JS (three.js phone). Measure on PageSpeed Insights
       (mobile) and lazy-load or trim the 3D scene if LCP/INP are poor.
 

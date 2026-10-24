@@ -8,7 +8,7 @@ Avg. monthly Google searches, Oct 2025 - Sep 2026. Ranges only (the Ads account 
 | Keyword | Searches/month | Covered by |
 | --- | --- | --- |
 | hemoglobina glicosilada | 10K-100K | time-in-range, tools/a1c-calculator (no dedicated article yet) |
-| libreview | 10K-100K | none yet |
+| libreview | 10K-100K | libreview |
 | hipoglucemia nocturna | 100-1K | none yet |
 | freestyle libre 3 plus | 100-1K (high competition) | none yet |
 | librelinkup | 100-1K | librelinkup-not-working, /setup |
@@ -28,7 +28,7 @@ Avg. monthly Google searches, Oct 2025 - Sep 2026. Ranges only (the Ads account 
 | hba1c | 10K-100K | time-in-range, tools/a1c-calculator (no dedicated article yet) |
 | blutzuckerwerte tabelle | 1K-10K | none yet (strong candidate) |
 | mg dl in mmol l | 1K-10K | tools/glucose-converter |
-| libreview | 1K-10K | none yet |
+| libreview | 1K-10K | libreview |
 | freestyle libre 3 plus | 1K-10K (high competition) | none yet |
 | blutzucker apple watch, freestyle libre apple watch | 100-1K | apple-watch |
 | unterzuckerung nachts, nächtliche unterzuckerung | 100-1K each | none yet (strong candidate) |
