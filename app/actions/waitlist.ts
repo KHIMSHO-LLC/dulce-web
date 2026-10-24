@@ -9,7 +9,7 @@ import { getRequestIp } from "@/lib/utils/getRequestIp";
 
 const schema = z.object({
   email: z.string().email(),
-  locale: z.enum(["es", "en"]),
+  locale: z.enum(["es", "en", "de", "fr", "it"]),
   source: z.string().max(40).optional(),
   consent: z.literal("on"),
 });
@@ -46,10 +46,16 @@ export async function joinWaitlist(
 
   try {
     const supabase = supabaseAdmin();
+    // The table's locale check only allows es/en until migration 0002 is
+    // applied; store those there and keep the visitor's real language in
+    // `source` (e.g. "android:de") so the launch email can use it.
+    const { locale } = parsed.data;
+    const dbLocale = locale === "es" ? "es" : "en";
+    const source = parsed.data.source ?? null;
     const { error } = await supabase.from("waitlist").insert({
       email: parsed.data.email.toLowerCase(),
-      locale: parsed.data.locale,
-      source: parsed.data.source ?? null,
+      locale: dbLocale,
+      source: locale === dbLocale ? source : `${source ?? "web"}:${locale}`,
       ip_hash,
     });
 
