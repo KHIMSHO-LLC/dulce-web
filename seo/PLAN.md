@@ -89,8 +89,14 @@ questions around them. Being the best answer means the product actually does it 
 - [x] 2026-10-24: Official French and Italian App Store badges (`public/badges/app-store-badge-{fr,it}.svg`).
 - [x] 2026-10-24: Relay deployed (LibreLinkUp status live, fr/it alerts, DST-safe quiet hours, Dexcom support
       for 1.0.4). App PR #4 merged into `release/1.0.4` together with the redesign + Dexcom work.
-- [ ] Performance: the home page ships ~430 KB of compressed JS (three.js phone). Measure on PageSpeed Insights
-      (mobile) and lazy-load or trim the 3D scene if LCP/INP are poor.
+- [ ] Performance (measured 2026-10-24 with Lighthouse 12, mobile, live site; the PSI API was over its daily
+      quota). Home `/en`: score 77-79, FCP 1.3 s, LCP 3.6 s, TBT 260-350 ms, CLS 0. The LCP element is the hero
+      paragraph and its delay is the first-visit **preloader** (counter + curtain, ~2.6 s): Chrome counts the hero
+      only once it is uncovered. three.js is not the bottleneck (JS boot ~2.5 s at 4x CPU, TBT fine). Guide
+      `/en/blog/how-to-see-cgm-glucose-on-apple-watch`: score 81-92, LCP 3.3-4.3 s (text paragraph, render
+      delay in Lighthouse's simulated throttling), TBT 0, CLS 0. Options for Giorgi: shorten the preloader
+      (minTime 900 ms, lift 1.05 s) or skip it on mobile; check real-user field data in PSI / Search Console Core
+      Web Vitals before changing the guides.
 
 ## Next for Claude (in order)
 
