@@ -2,7 +2,7 @@
   "metadata": {
     "siteName": "Dulce",
     "defaultTitle": "Dulce: la glicemia del FreeStyle Libre su Apple Watch e sulla schermata di blocco",
-    "defaultDescription": "Vedi la glicemia del tuo FreeStyle Libre sulla schermata di blocco, nella Dynamic Island, in StandBy e su Apple Watch. Avvisi, diario e condivisione in famiglia. Creata da chi vive con il diabete di tipo 1.",
+    "defaultDescription": "La glicemia del FreeStyle Libre sulla schermata di blocco, nella Dynamic Island e su Apple Watch. Avvisi, diario, famiglia. Creata da chi ha il diabete tipo 1.",
     "keywords": "FreeStyle Libre Apple Watch, app LibreLinkUp Apple Watch, widget glicemia schermata di blocco, glicemia Attività in tempo reale, glicemia Dynamic Island, condividere la glicemia con la famiglia, app diabete tipo 1, widget CGM iPhone, tempo nel range, diario diabete"
   },
   "nav": {
@@ -37,8 +37,8 @@
     "label": "Caricamento di Dulce"
   },
   "home": {
-    "title": "La glicemia del FreeStyle Libre su Apple Watch e sulla schermata di blocco",
-    "description": "Dulce porta la glicemia del tuo FreeStyle Libre sulla schermata di blocco, nella Dynamic Island, in StandBy, su Apple Watch e sul telefono della tua famiglia. Gratis sull'App Store.",
+    "title": "glicemia FreeStyle Libre su Apple Watch e schermata di blocco",
+    "description": "Dulce porta la glicemia del FreeStyle Libre sulla schermata di blocco, nella Dynamic Island, su Apple Watch e sul telefono di chi ami. Gratis sull'App Store.",
     "hero": {
       "line1": "La tua glicemia,",
       "line2": "sempre sotto gli occhi.",
@@ -420,7 +420,7 @@
   "llustatus": {
     "nav": "Stato di LibreLinkUp",
     "title": "LibreLinkUp non funziona? Stato in tempo reale",
-    "description": "Stato di LibreLinkUp in tempo reale, misurato ogni minuto: se LibreLinkUp funziona adesso, le ultime 24 ore, il tempo di risposta, le regioni colpite e cosa fare durante un disservizio.",
+    "description": "LibreLinkUp non funziona? Stato in tempo reale misurato ogni minuto: ultime 24 ore, tempo di risposta, regioni colpite e cosa fare durante un guasto.",
     "eyebrow": "Stato in tempo reale",
     "headline": {
       "operational": "LibreLinkUp funziona normalmente",
@@ -505,7 +505,7 @@
   "pro": {
     "nav": "Gratis o Pro",
     "title": "Dulce Pro: cosa è gratis e cosa aggiunge Pro",
-    "description": "Cosa offre gratis Dulce e cosa aggiunge Dulce Pro: Attività in tempo reale sulla schermata di blocco, Apple Watch, condivisione in famiglia e Salute di Apple. 14 giorni gratis.",
+    "description": "Cosa è gratis in Dulce e cosa aggiunge Dulce Pro: schermata di blocco, Apple Watch, famiglia e Salute di Apple. 14 giorni gratis.",
     "headline": "Gratis da usare. Pro quando vuoi di più.",
     "lead": "Dulce si scarica gratis e l'essenziale resta gratis. Dulce Pro aggiunge ciò che tiene il tuo valore sotto gli occhi e la tua famiglia aggiornata.",
     "freeTitle": "Gratis",

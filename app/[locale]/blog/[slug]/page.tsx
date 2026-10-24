@@ -38,8 +38,11 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/blog/[sl
   const { article } = found;
   const loc = found.locale;
   const paths = Object.fromEntries(routing.locales.map((l) => [l, articlePath(article, l)]));
+  // Google shows the site name on its own; drop the " · Dulce" suffix when it
+  // would push the title past what search results display (~60 characters).
+  const headline = article.title[loc];
   return {
-    title: article.title[loc],
+    title: headline.length > 52 ? { absolute: headline } : headline,
     description: article.description[loc],
     alternates: {
       ...alternatesFromPaths(loc, paths),

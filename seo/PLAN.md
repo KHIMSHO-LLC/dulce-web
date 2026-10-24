@@ -91,6 +91,10 @@ questions around them. Being the best answer means the product actually does it 
       type="text/markdown"` and from /llms.txt), HowTo JSON-LD on the 50 guide pages with numbered steps, and
       IndexNow (`npm run indexnow`, key file in public/) so Bing, which feeds ChatGPT search and Copilot, hears
       about new and changed URLs the same day.
+- [x] 2026-10-24: Snippet hygiene (crawl of all 123 sitemap URLs): every meta description ≤160 characters (home,
+      Pro, status, setup, 5 guides), shorter home titles in es/de/fr/it, guide titles over 52 characters drop the
+      " · Dulce" suffix (Google shows the site name anyway), author pages get distinct titles (name + role) and a
+      one-sentence description. No duplicate titles left.
 - [x] 2026-10-24: Official French and Italian App Store badges (`public/badges/app-store-badge-{fr,it}.svg`).
 - [x] 2026-10-24: Relay deployed (LibreLinkUp status live, fr/it alerts, DST-safe quiet hours, Dexcom support
       for 1.0.4). App PR #4 merged into `release/1.0.4` together with the redesign + Dexcom work.

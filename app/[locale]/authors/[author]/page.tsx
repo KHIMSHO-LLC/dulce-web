@@ -21,9 +21,11 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/authors/
   const { locale, author: slug } = await params;
   const author = authorBySlug(slug);
   if (!author || !hasLocale(routing.locales, locale)) return {};
+  // The role makes each language's title distinct (the name alone repeats).
   return {
-    title: author.name,
-    description: author.bio[locale],
+    title: `${author.name}: ${author.role[locale].split(",")[0]}`,
+    // First sentence of the bio: the whole bio runs past what search shows.
+    description: author.bio[locale].split(/(?<=\.)\s/)[0],
     alternates: alternatesFor(locale, "/authors/[author]", { author: author.slug }),
     openGraph: { type: "profile", title: author.name, description: author.bio[locale] },
   };

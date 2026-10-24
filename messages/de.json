@@ -2,7 +2,7 @@
   "metadata": {
     "siteName": "Dulce",
     "defaultTitle": "Dulce: FreeStyle Libre Glukose auf der Apple Watch und dem Sperrbildschirm",
-    "defaultDescription": "Sieh deine FreeStyle Libre Glukose auf dem Sperrbildschirm, in der Dynamic Island, im StandBy-Modus und auf der Apple Watch. Warnungen, Tagebuch und Teilen mit der Familie. Gemacht von jemandem mit Typ-1-Diabetes.",
+    "defaultDescription": "Deine FreeStyle Libre Glukose auf Sperrbildschirm, Dynamic Island und Apple Watch. Warnungen, Tagebuch, Familie. Von jemandem mit Typ-1-Diabetes.",
     "keywords": "FreeStyle Libre Apple Watch, LibreLinkUp Apple Watch App, Blutzucker Sperrbildschirm Widget, Glukose Live-Aktivität, Dynamic Island Blutzucker, Blutzucker mit Familie teilen, Typ-1-Diabetes App, CGM Widget iPhone, Zeit im Zielbereich, Diabetes Tagebuch"
   },
   "nav": {
@@ -37,8 +37,8 @@
     "label": "Dulce wird geladen"
   },
   "home": {
-    "title": "FreeStyle Libre Glukose auf der Apple Watch und dem Sperrbildschirm",
-    "description": "Dulce bringt deine FreeStyle Libre Glukose auf den Sperrbildschirm, in die Dynamic Island, in den StandBy-Modus, auf die Apple Watch und auf das Handy deiner Familie. Kostenlos im App Store.",
+    "title": "FreeStyle Libre Glukose auf Apple Watch und Sperrbildschirm",
+    "description": "Dulce bringt deine FreeStyle Libre Glukose auf den Sperrbildschirm, die Dynamic Island, die Apple Watch und das Handy deiner Familie. Kostenlos im App Store.",
     "hero": {
       "line1": "Dein Zucker,",
       "line2": "immer im Blick.",
@@ -312,7 +312,7 @@
   },
   "setup": {
     "title": "LibreLink oder LibreLinkUp: Welches Konto nutzt Dulce?",
-    "description": "Dulce meldet sich mit deinem LibreLinkUp-Konto an, nicht mit LibreLink. Hier ist der Unterschied und wie du das Teilen aktivierst, damit deine Werte in Dulce ankommen.",
+    "description": "Dulce nutzt dein LibreLinkUp-Konto, nicht LibreLink. Der Unterschied und wie du das Teilen aktivierst, damit deine Werte in Dulce ankommen.",
     "breadcrumbHome": "Start",
     "hero": {
       "headline": "LibreLink oder LibreLinkUp: Welche nutzt Dulce?",
@@ -420,7 +420,7 @@
   "llustatus": {
     "nav": "LibreLinkUp-Status",
     "title": "Ist LibreLinkUp down? Live-Status",
-    "description": "Live-Status von LibreLinkUp, jede Minute gemessen: ob LibreLinkUp gerade funktioniert, die letzten 24 Stunden, Antwortzeit, betroffene Regionen und was du bei einem Ausfall tun kannst.",
+    "description": "Ist LibreLinkUp gerade down? Live-Status, jede Minute gemessen: letzte 24 Stunden, Antwortzeit, betroffene Regionen und was du bei einem Ausfall tust.",
     "eyebrow": "Live-Status",
     "headline": {
       "operational": "LibreLinkUp funktioniert normal",
@@ -505,7 +505,7 @@
   "pro": {
     "nav": "Kostenlos oder Pro",
     "title": "Dulce Pro: was kostenlos ist und was Pro bietet",
-    "description": "Was Dulce kostenlos bietet und was Dulce Pro hinzufügt: Live-Aktivität auf dem Sperrbildschirm, Apple Watch, Teilen mit der Familie und Apple Health. 14 Tage gratis testen.",
+    "description": "Was in Dulce kostenlos ist und was Dulce Pro dazu bringt: Sperrbildschirm, Apple Watch, Familie und Apple Health. 14 Tage gratis testen.",
     "headline": "Kostenlos nutzen. Pro, wenn du mehr willst.",
     "lead": "Dulce ist kostenlos und das Wichtigste bleibt kostenlos. Dulce Pro bringt alles, was deinen Wert im Blick und deine Familie auf dem Laufenden hält.",
     "freeTitle": "Kostenlos",

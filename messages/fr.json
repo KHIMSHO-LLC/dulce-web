@@ -2,7 +2,7 @@
   "metadata": {
     "siteName": "Dulce",
     "defaultTitle": "Dulce : la glycémie FreeStyle Libre sur l'Apple Watch et l'écran verrouillé",
-    "defaultDescription": "Vois ta glycémie FreeStyle Libre sur l'écran verrouillé, la Dynamic Island, StandBy et l'Apple Watch. Alertes, journal et partage en famille. Créé par une personne atteinte de diabète de type 1.",
+    "defaultDescription": "Ta glycémie FreeStyle Libre sur l'écran verrouillé, la Dynamic Island et l'Apple Watch. Alertes, journal, famille. Créé par une personne diabétique de type 1.",
     "keywords": "FreeStyle Libre Apple Watch, app LibreLinkUp Apple Watch, widget glycémie écran verrouillé, glycémie Activité en direct, glycémie Dynamic Island, partager sa glycémie en famille, app diabète type 1, widget CGM iPhone, temps dans la cible, carnet diabète"
   },
   "nav": {
@@ -37,8 +37,8 @@
     "label": "Chargement de Dulce"
   },
   "home": {
-    "title": "La glycémie FreeStyle Libre sur l'Apple Watch et l'écran verrouillé",
-    "description": "Dulce affiche ta glycémie FreeStyle Libre sur l'écran verrouillé, la Dynamic Island, StandBy, l'Apple Watch et le téléphone de ta famille. Gratuit sur l'App Store.",
+    "title": "glycémie FreeStyle Libre sur Apple Watch et écran verrouillé",
+    "description": "Dulce affiche ta glycémie FreeStyle Libre sur l'écran verrouillé, la Dynamic Island, l'Apple Watch et le téléphone de ta famille. Gratuit sur l'App Store.",
     "hero": {
       "line1": "Ta glycémie,",
       "line2": "toujours sous les yeux.",
@@ -420,7 +420,7 @@
   "llustatus": {
     "nav": "Statut de LibreLinkUp",
     "title": "LibreLinkUp en panne ? Statut en direct",
-    "description": "Statut de LibreLinkUp en direct, mesuré chaque minute : LibreLinkUp fonctionne-t-il en ce moment, les dernières 24 heures, le temps de réponse, les régions touchées et quoi faire pendant une panne.",
+    "description": "LibreLinkUp est-il en panne ? Statut en direct mesuré chaque minute : dernières 24 heures, temps de réponse, régions touchées et quoi faire.",
     "eyebrow": "Statut en direct",
     "headline": {
       "operational": "LibreLinkUp fonctionne normalement",
@@ -505,7 +505,7 @@
   "pro": {
     "nav": "Gratuit ou Pro",
     "title": "Dulce Pro : ce qui est gratuit et ce que Pro ajoute",
-    "description": "Ce que Dulce offre gratuitement et ce qu'ajoute Dulce Pro : Activité en direct sur l'écran verrouillé, Apple Watch, partage en famille et Apple Santé. Essai gratuit de 14 jours.",
+    "description": "Ce qui est gratuit dans Dulce et ce qu'ajoute Dulce Pro : écran verrouillé, Apple Watch, famille et Apple Santé. Essai gratuit de 14 jours.",
     "headline": "Gratuit à utiliser. Pro quand tu veux plus.",
     "lead": "Dulce se télécharge gratuitement et l'essentiel reste gratuit. Dulce Pro ajoute ce qui garde ton chiffre sous les yeux et ta famille au courant.",
     "freeTitle": "Gratuit",

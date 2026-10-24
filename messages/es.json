@@ -2,7 +2,7 @@
   "metadata": {
     "siteName": "Dulce",
     "defaultTitle": "Dulce: tu glucosa FreeStyle Libre en el Apple Watch y la pantalla de bloqueo",
-    "defaultDescription": "Mira tu glucosa del FreeStyle Libre en la pantalla de bloqueo, la Dynamic Island, StandBy y el Apple Watch. Avisos, diario y seguimiento familiar. Hecho por alguien con diabetes tipo 1.",
+    "defaultDescription": "Tu glucosa del FreeStyle Libre en la pantalla de bloqueo, la Dynamic Island y el Apple Watch. Avisos, diario y familia. Hecho por alguien con diabetes tipo 1.",
     "keywords": "FreeStyle Libre Apple Watch, LibreLinkUp Apple Watch, glucosa pantalla de bloqueo, Live Activity glucosa, Dynamic Island glucosa, compartir glucosa familia, diabetes tipo 1 app, widget glucosa iPhone, tiempo en rango, diario diabetes"
   },
   "nav": {
@@ -37,8 +37,8 @@
     "label": "Cargando Dulce"
   },
   "home": {
-    "title": "Tu glucosa FreeStyle Libre en el Apple Watch y la pantalla de bloqueo",
-    "description": "Dulce lleva tu glucosa del FreeStyle Libre a la pantalla de bloqueo, la Dynamic Island, StandBy, el Apple Watch y el móvil de tu familia. Gratis en el App Store.",
+    "title": "glucosa del FreeStyle Libre en Apple Watch y bloqueo",
+    "description": "Dulce lleva tu glucosa del FreeStyle Libre a la pantalla de bloqueo, la Dynamic Island, el Apple Watch y el móvil de tu familia. Gratis en el App Store.",
     "hero": {
       "line1": "Tu glucosa,",
       "line2": "siempre a la vista.",
@@ -312,7 +312,7 @@
   },
   "setup": {
     "title": "LibreLink o LibreLinkUp: ¿qué cuenta usa Dulce?",
-    "description": "Dulce inicia sesión con tu cuenta de LibreLinkUp, no de LibreLink. Aquí está la diferencia y cómo activar el uso compartido para que tus lecturas lleguen a Dulce.",
+    "description": "Dulce usa tu cuenta de LibreLinkUp, no la de LibreLink. La diferencia y cómo activar el uso compartido para que tus lecturas lleguen a Dulce.",
     "hero": {
       "headline": "LibreLink o LibreLinkUp: ¿cuál usa Dulce?",
       "subheadline": "Se parecen mucho, pero son dos apps distintas con dos inicios de sesión distintos. Dulce se conecta a LibreLinkUp, la app que recibe las lecturas que te comparten. Esta página te muestra exactamente cómo configurarlo."
@@ -420,7 +420,7 @@
   "llustatus": {
     "nav": "Estado de LibreLinkUp",
     "title": "¿LibreLinkUp no funciona? Estado en directo",
-    "description": "Estado de LibreLinkUp en directo, medido cada minuto: si funciona ahora mismo, las últimas 24 horas, el tiempo de respuesta, las regiones afectadas y qué hacer durante una caída.",
+    "description": "¿Funciona LibreLinkUp ahora? Estado en directo medido cada minuto: últimas 24 horas, tiempo de respuesta, regiones afectadas y qué hacer si falla.",
     "eyebrow": "Estado en directo",
     "headline": {
       "operational": "LibreLinkUp funciona con normalidad",
@@ -505,7 +505,7 @@
   "pro": {
     "nav": "Gratis o Pro",
     "title": "Dulce Pro: qué es gratis y qué añade Pro",
-    "description": "Qué tienes gratis en Dulce y qué añade Dulce Pro: Live Activity en la pantalla de bloqueo, Apple Watch, compartir con la familia y Apple Salud. 14 días de prueba gratis.",
+    "description": "Qué es gratis en Dulce y qué añade Dulce Pro: pantalla de bloqueo, Apple Watch, familia y Apple Salud. 14 días de prueba gratis.",
     "headline": "Gratis para usar. Pro cuando quieras más.",
     "lead": "Dulce se descarga gratis y lo esencial sigue siendo gratis. Dulce Pro añade lo que mantiene tu número a la vista y a tu familia al tanto.",
     "freeTitle": "Gratis",

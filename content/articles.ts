@@ -209,7 +209,7 @@ export const ARTICLES: readonly Article[] = [
     category: "guide",
     author: "levan",
     datePublished: "2026-07-16",
-    dateModified: "2026-10-22",
+    dateModified: "2026-10-24",
     slug: {
       es: "compartir-glucosa-cgm-con-familia",
       en: "sharing-cgm-glucose-with-family",
@@ -227,7 +227,7 @@ export const ARTICLES: readonly Article[] = [
     description: {
       es: "Comparte tus lecturas del FreeStyle Libre en tiempo real con hasta 3 familiares en Dulce: invitación por enlace, avisos para ellos y el botón «Estoy bien».",
       en: "Share your FreeStyle Libre readings in real time with up to 3 family members in Dulce: invite by link, alerts for them, and the one-tap “I'm OK” reply.",
-      de: "Teile deine FreeStyle Libre Werte in Echtzeit mit bis zu 3 Familienmitgliedern in Dulce: Einladung per Link, Warnungen für sie und die schnelle Antwort „Mir geht es gut“.",
+      de: "Teile deine FreeStyle Libre Werte live mit bis zu 3 Familienmitgliedern in Dulce: Einladung per Link, eigene Warnungen und die Antwort „Mir geht es gut“.",
       fr: "Partage tes mesures FreeStyle Libre en temps réel avec jusqu'à 3 proches dans Dulce : invitation par lien, alertes pour eux et réponse « Ça va » en un geste.",
       it: "Condividi le letture del FreeStyle Libre in tempo reale con fino a 3 familiari in Dulce: invito con link, avvisi per loro e risposta «Sto bene» con un tocco.",
     },
@@ -432,7 +432,7 @@ export const ARTICLES: readonly Article[] = [
     category: "guide",
     author: "giorgi",
     datePublished: "2026-10-19",
-    dateModified: "2026-10-22",
+    dateModified: "2026-10-24",
     slug: {
       es: "alarmas-de-glucosa-en-el-iphone",
       en: "glucose-alerts-on-iphone",
@@ -448,10 +448,10 @@ export const ARTICLES: readonly Article[] = [
       it: "Avvisi di glicemia su iPhone: ipo, iper e come sentirli di notte",
     },
     description: {
-      es: "Cómo configurar avisos de glucosa baja y alta en Dulce, la alerta de baja crítica, las horas tranquilas, el aviso predictivo y cómo oírlos con el iPhone de noche.",
+      es: "Avisos de glucosa baja y alta en Dulce: la alerta de baja crítica, las horas tranquilas, el aviso predictivo y cómo oírlos con el iPhone de noche.",
       en: "How to set low and high glucose alerts in Dulce, the critical low alert, quiet hours, the predictive low alert, and how to hear them on your iPhone at night.",
-      de: "So stellst du Warnungen für niedrige und hohe Glukose in Dulce ein: die kritische Warnung, Ruhezeiten, die vorausschauende Tief-Warnung und wie du sie nachts hörst.",
-      fr: "Comment régler les alertes de glycémie basse et haute dans Dulce, l'alerte d'hypo critique, les heures calmes, l'alerte prédictive et comment les entendre la nuit.",
+      de: "Warnungen für niedrige und hohe Glukose in Dulce: die kritische Warnung, Ruhezeiten, die vorausschauende Tief-Warnung und wie du sie nachts hörst.",
+      fr: "Alertes de glycémie basse et haute dans Dulce : l'alerte d'hypo critique, les heures calmes, l'alerte prédictive et comment les entendre la nuit.",
       it: "Come impostare gli avvisi di glicemia bassa e alta in Dulce, l'avviso di ipo critica, le ore di silenzio, l'avviso predittivo e come sentirli di notte.",
     },
     keywords: {
@@ -797,7 +797,7 @@ export const ARTICLES: readonly Article[] = [
     category: "guide",
     author: "giorgi",
     datePublished: "2026-10-22",
-    dateModified: "2026-10-22",
+    dateModified: "2026-10-24",
     slug: {
       es: "ver-glucosa-de-mi-hijo-en-el-iphone",
       en: "monitor-child-glucose-on-iphone",
@@ -873,7 +873,7 @@ export const ARTICLES: readonly Article[] = [
     category: "health",
     author: "giorgi",
     datePublished: "2026-10-23",
-    dateModified: "2026-10-23",
+    dateModified: "2026-10-24",
     slug: {
       es: "hipoglucemia-nocturna",
       en: "nocturnal-hypoglycemia",
@@ -889,7 +889,7 @@ export const ARTICLES: readonly Article[] = [
       it: "Ipoglicemia notturna: perché sfugge e come non dormirci sopra",
     },
     description: {
-      es: "Por qué las bajadas de noche cuestan más de notar, cómo distinguir un falso bajo por compresión y cómo preparar el iPhone y el sensor para que un aviso te despierte.",
+      es: "Por qué cuesta notar las bajadas de noche, cómo distinguir un falso bajo por compresión y cómo preparar iPhone y sensor para que un aviso te despierte.",
       en: "Why lows at night are easy to sleep through, how to spot a compression low, and how to set up your iPhone and sensor so an alert can actually wake you.",
       de: "Warum man Unterzuckerungen nachts verschläft, wie du ein Kompressionstief erkennst und wie du iPhone und Sensor einstellst, damit dich eine Warnung weckt.",
       fr: "Pourquoi on dort pendant une hypo nocturne, comment repérer une hypo de compression et comment régler iPhone et capteur pour qu'une alerte te réveille.",

@@ -2,7 +2,7 @@
   "metadata": {
     "siteName": "Dulce",
     "defaultTitle": "Dulce: FreeStyle Libre glucose on Apple Watch and the Lock Screen",
-    "defaultDescription": "See your FreeStyle Libre glucose on the Lock Screen, Dynamic Island, StandBy and Apple Watch. Alerts, logbook and family sharing. Made by someone with type 1 diabetes.",
+    "defaultDescription": "Your FreeStyle Libre glucose on the Lock Screen, Dynamic Island and Apple Watch. Alerts, logbook and family sharing. Made by someone with type 1 diabetes.",
     "keywords": "FreeStyle Libre Apple Watch, LibreLinkUp Apple Watch app, glucose Lock Screen widget, glucose Live Activity, Dynamic Island glucose, share glucose with family, type 1 diabetes app, CGM widget iPhone, time in range, diabetes logbook"
   },
   "nav": {
@@ -420,7 +420,7 @@
   "llustatus": {
     "nav": "LibreLinkUp status",
     "title": "Is LibreLinkUp down? Live status",
-    "description": "Live LibreLinkUp status measured every minute: is LibreLinkUp working right now, the last 24 hours, response time, affected regions and what to do during an outage.",
+    "description": "Is LibreLinkUp down? Live status measured every minute: the last 24 hours, response time, affected regions and what to do during an outage.",
     "eyebrow": "Live status",
     "headline": {
       "operational": "LibreLinkUp is working normally",
