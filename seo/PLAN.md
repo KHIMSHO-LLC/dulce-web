@@ -142,6 +142,25 @@ questions around them. Being the best answer means the product actually does it 
    Read App Store Connect → Analytics → Campaigns with Giorgi monthly; never send glucose or health data to
    marketing analytics.
 
+## Winning users from other apps (2026-10-24)
+
+People who already use Sweet Dreams, Gluroo or any LibreLinkUp-based app can switch in a minute: Dulce uses the
+same LibreLinkUp login, nothing changes on the sensor phone. Where Dulce is genuinely different today: the whole
+app in Spanish, German, French and Italian (Sweet Dreams and Gluroo list English only), a free carbs/insulin
+logbook, free followers. Where they are ahead: Sweet Dreams supports many more sensors, CarPlay and alarms that
+ring on silent (critical-alerts entitlement).
+
+- [x] Comparison + switching guide `glucose-apps-compared` in 5 languages (Sweet Dreams alternative).
+- [ ] Re-check competitor App Store listings every 3 months; update the table and dateModified.
+- [ ] After Dexcom ships (1.0.4): add Dexcom to the guide and a "Dexcom Follow / Sugarmate alternative" angle.
+- [ ] Giorgi: **Apple Search Ads** campaign on competitor and category keywords ("sweet dreams diabetes",
+      "librelinkup", "libre apple watch") in Spain, Germany, France, Italy, Mexico; bidding on competitor names
+      is allowed in Search Ads, but App Store **metadata must never name competitors** (guideline 2.3.7).
+- [ ] Giorgi: answer "which app for Libre on Apple Watch / Lock Screen" threads honestly (Reddit, Facebook groups,
+      forums), disclosing you make Dulce, linking the comparison guide in the reader's language.
+- [ ] Close the gaps that cost switchers: apply for Apple's critical-alerts entitlement (ring on silent); CarPlay
+      is a later candidate.
+
 ## For Giorgi (only you can do these)
 
 Open:
