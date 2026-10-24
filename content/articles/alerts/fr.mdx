@@ -6,7 +6,7 @@ Dulce ne remplace pas les alarmes de ton capteur. Si tu utilises un FreeStyle Li
 
 ## Où les régler
 
-Tout se trouve dans Dulce, dans **Réglages → Alertes**. Au moment de la configuration, Dulce demande deux autorisations iOS : **Notifications** et **Alertes critiques**. La seconde est celle qui permet à l'alerte d'hypo sévère de sonner même iPhone en silencieux. Si tu l'as refusée, tu peux l'activer dans l'app Réglages de l'iPhone, sous Dulce → Notifications.
+Tout se trouve dans Dulce, dans **Réglages → Alertes**. Au moment de la configuration, Dulce te demande l'autorisation d'envoyer des notifications. Si tu l'as refusée, active-la dans l'app Réglages de l'iPhone, sous Dulce → Notifications.
 
 ## Les alertes, une par une
 
@@ -14,13 +14,21 @@ Tout se trouve dans Dulce, dans **Réglages → Alertes**. Au moment de la confi
 | --- | --- | --- |
 | Alerte glycémie basse | Te prévient quand la glycémie passe sous ton seuil (50 à 80 mg/dL) | 70 mg/dL |
 | Alerte glycémie haute | Te prévient quand la glycémie dépasse ton seuil (140 à 300 mg/dL) | 250 mg/dL |
-| Alertes d'hypo critique | Une alerte forte en cas d'hypo sévère (55 mg/dL ou moins), même en silencieux ou pendant les heures calmes | Activée |
+| Alertes d'hypo critique | Une alerte en cas d'hypo sévère (55 mg/dL ou moins) qui ignore les heures calmes et les pauses | Activée |
 | Variation rapide | Te prévient quand la glycémie monte ou baisse très vite | Activée |
 | Hypo prédictive | Te prévient quand tu te diriges vers une hypo | Désactivée |
 
-### Hypo critique : celle qui sonne toujours
+### Hypo critique : celle que Dulce ne retient jamais
 
-C'est la seule alerte qui passe outre le mode silencieux, les modes de concentration et les heures calmes. Elle utilise toujours le son **Alarme** et se répète toutes les 5 minutes tant que tu restes en dessous. Tu peux la désactiver, mais Dulce te demande de confirmer : c'est l'alerte qui compte le plus la nuit.
+C'est la seule alerte qui passe outre les heures calmes et les pauses de Dulce. Elle utilise toujours le son **Alarme** et se répète toutes les 5 minutes tant que tu restes en dessous. Tu peux la désactiver, mais Dulce te demande de confirmer : c'est l'alerte qui compte le plus la nuit.
+
+### Entendre les alertes la nuit
+
+Les alertes de Dulce sont des notifications iPhone normales : c'est ton iPhone qui décide si elles sonnent. Avec le bouton sonnerie/silence en silencieux, ou un mode de concentration comme Sommeil qui n'autorise pas Dulce, l'alerte arrive sans son. Pour entendre une hypo la nuit :
+
+- Laisse le mode silencieux désactivé et le volume de la sonnerie élevé.
+- Si tu utilises Sommeil ou Ne pas déranger, ajoute Dulce aux apps autorisées (Réglages → Concentration).
+- Garde aussi les alarmes de l'app de ton capteur activées.
 
 ### Hypo prédictive
 
@@ -28,7 +36,7 @@ Elle regarde à quelle vitesse ta glycémie a baissé ces dernières minutes et 
 
 ## Pour que les alertes ne t'épuisent pas
 
-- **Heures calmes.** Choisis une plage (par exemple de 23 h à 7 h) pendant laquelle les alertes non critiques sont coupées. Les hypos critiques sonnent toujours. C'est désactivé par défaut, pour que personne ne perde une alerte d'hyper nocturne sans l'avoir décidé.
+- **Heures calmes.** Choisis une plage (par exemple de 23 h à 7 h) pendant laquelle les alertes non critiques sont coupées. Les hypos critiques arrivent toujours. C'est désactivé par défaut, pour que personne ne perde une alerte d'hyper nocturne sans l'avoir décidé.
 - **Fréquence des alertes.** À quelle fréquence la même alerte peut se répéter tant que tu restes hors de la cible. Toutes les 15 minutes par défaut. Les hypos sévères se répètent toujours toutes les 5 minutes.
 - **Suspendre les alertes.** Si tu sais que tu vas rester haut un moment (après un repas, par exemple), mets les alertes en pause quelques minutes ou quelques heures. Les hypos sévères passent quand même. Tu peux aussi suspendre directement depuis la notification.
 - **Sons.** Choisis un son pour la glycémie basse et un autre pour la haute : Par défaut, Doux, Carillon, Pulsation, Alarme ou Silencieux. Deux sons différents te disent ce qui se passe sans regarder ton téléphone.

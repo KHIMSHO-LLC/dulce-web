@@ -6,7 +6,7 @@ Dulce doesn't replace your sensor's alarms. If you use FreeStyle Libre 2 or Libr
 
 ## Where to set them
 
-Everything lives in Dulce under **Settings → Alerts**. Earlier, during setup, Dulce asks for two iOS permissions: **Notifications** and **Critical Alerts**. The second one is what lets the very-low alert ring with your iPhone on silent. If you declined it, you can turn it on in the iPhone Settings app under Dulce → Notifications.
+Everything lives in Dulce under **Settings → Alerts**. During setup Dulce asks for permission to send notifications. If you declined it, turn it on in the iPhone Settings app under Dulce → Notifications.
 
 ## The alerts, one by one
 
@@ -14,13 +14,21 @@ Everything lives in Dulce under **Settings → Alerts**. Earlier, during setup, 
 | --- | --- | --- |
 | Low glucose alert | Warns you when glucose drops below your threshold (50 to 80 mg/dL) | 70 mg/dL |
 | High glucose alert | Warns you when glucose rises above your threshold (140 to 300 mg/dL) | 250 mg/dL |
-| Critical low alerts | A loud alert on a severe low (55 mg/dL or less), even on silent or during quiet hours | On |
+| Critical low alerts | An alert on a severe low (55 mg/dL or less) that ignores quiet hours and snoozes | On |
 | Rapid change | Warns you when glucose rises or falls very fast | On |
 | Predictive low | Warns you when you're heading for a low | Off |
 
-### Critical low: the one that always rings
+### Critical low: the one Dulce never holds back
 
-It's the only alert that breaks through silent mode, Focus and quiet hours. It always uses the **Alarm** sound and repeats every 5 minutes while you stay below. You can turn it off, but Dulce asks you to confirm: it's the alert that matters most at night.
+It's the only alert that comes through Dulce's quiet hours and snoozes. It always uses the **Alarm** sound and repeats every 5 minutes while you stay below. You can turn it off, but Dulce asks you to confirm: it's the alert that matters most at night.
+
+### Hearing alerts at night
+
+Dulce's alerts are regular iPhone notifications, so your iPhone decides whether they make a sound. With the ring/silent switch on silent, or a Focus such as Sleep that doesn't allow Dulce, an alert arrives without sound. To hear a low at night:
+
+- Keep silent mode off and the ringer volume up.
+- If you use the Sleep Focus or Do Not Disturb, add Dulce to its allowed apps (Settings → Focus).
+- Keep your sensor app's own alarms on too.
 
 ### Predictive low
 
@@ -28,7 +36,7 @@ It looks at how fast your glucose has been falling over the last few minutes and
 
 ## Keep alerts from wearing you out
 
-- **Quiet hours.** Pick a window (say 11 p.m. to 7 a.m.) when non-critical alerts are muted. Critical lows still ring. It's off by default, so nobody loses a night-time high alert without deciding to.
+- **Quiet hours.** Pick a window (say 11 p.m. to 7 a.m.) when non-critical alerts are muted. Critical lows still come through. It's off by default, so nobody loses a night-time high alert without deciding to.
 - **Alert frequency.** How often the same alert can repeat while you stay out of range. Every 15 minutes by default. Severe lows always repeat every 5.
 - **Snooze alerts.** If you know you'll run high for a while (after a meal, say), pause alerts for some minutes or hours. Severe lows still come through. You can also snooze straight from the notification.
 - **Sounds.** Choose one sound for low glucose and another for high: Default, Soft, Chime, Pulse, Alarm or Silent. Two different sounds tell you what's going on without looking at your phone.

@@ -83,6 +83,12 @@ questions around them. Being the best answer means the product actually does it 
       Island and onboarding; French/Italian; unsupported languages fall back to English.
 - [x] 2026-10-23: Article `night-lows` (hipoglucemia nocturna / nächtliche Unterzuckerung), 5 languages, sources.
 - [x] 2026-10-24: Article `libreview` (what LibreView is, login, practice ID, vs LibreLinkUp), 5 languages, sources.
+- [x] 2026-10-24: Removed the false "rings on silent" claim (no critical-alerts entitlement): `alerts` (title,
+      description, body, FAQ, new "Hearing alerts at night" section), `child-glucose`, `librelinkup-not-working`,
+      `/llms.txt`, 5 languages. The app's own copy was fixed in 1.0.4 the same way.
+- [x] 2026-10-24: Official French and Italian App Store badges (`public/badges/app-store-badge-{fr,it}.svg`).
+- [x] 2026-10-24: Relay deployed (LibreLinkUp status live, fr/it alerts, DST-safe quiet hours, Dexcom support
+      for 1.0.4). App PR #4 merged into `release/1.0.4` together with the redesign + Dexcom work.
 - [ ] Performance: the home page ships ~430 KB of compressed JS (three.js phone). Measure on PageSpeed Insights
       (mobile) and lazy-load or trim the 3D scene if LCP/INP are poor.
 
@@ -120,7 +126,7 @@ Open:
 1. **Merge the two `i18n/fr-it` PRs** (website and app). Ship an app release with the app one, then add the
    French and Italian localizations in App Store Connect using `seo/aso.md` (also paste the new es/de/en
    subtitles and keywords there). Decide the localized names (table in `seo/aso.md`).
-2. **App Store badges for fr/it:** download Apple's official French and Italian "Download on the App Store"
+2. ~~**App Store badges for fr/it:**~~ Done 2026-10-24. Was: download Apple's official French and Italian "Download on the App Store"
    badges (black, SVG) from tools.applemediaservices.com, save them as `public/badges/app-store-badge-fr.svg`
    and `-it.svg`, and set `fr: "fr", it: "it"` in `components/ui/AppStoreBadge.tsx`. Until then they show the
    English badge.
@@ -136,11 +142,12 @@ Open:
    diabetes associations and bloggers; short demo videos (YouTube Shorts / Reels / TikTok) showing the Lock
    Screen, the watch and family alerts. One real mention beats any schema.
 7. **Ratings:** ask happy users for App Store ratings.
-8. **Deploy the relay** (`cd dulce-relay && npm run deploy`). Until then the status page shows "unknown" and
+8. ~~**Deploy the relay**~~ Done 2026-10-24 (`cd dulce-relay && npm run deploy`). Until then the status page shows "unknown" and
    French/Italian alerts are not live.
-9. **Merge dulce-app PR #4 into `release/1.0.4`**, build and submit 1.0.4 (with the Dexcom/new-design work).
+9. ~~Merge dulce-app PR #4~~ (done 2026-10-24, with the Dexcom/new-design work). **Build and submit 1.0.4.**
 
-10. **Fix the "rings on silent" claim (found 2026-10-23).** The released app can't ring through silent mode:
+10. ~~Fix the "rings on silent" claim~~ Done 2026-10-24: pages rewritten to the real behaviour. If Apple ever
+    grants the critical-alerts entitlement, the claim can come back. Was: **Fix the "rings on silent" claim (found 2026-10-23).** The released app can't ring through silent mode:
     `CRITICAL_ALERTS_ENTITLEMENT_APPROVED = false` in dulce-app `src/hooks/usePermissions.ts` (main and
     release/1.0.4), no critical-alert or time-sensitive entitlement in app.json, critical-low sent as `timeSensitive`.
     Still claimed in: `alerts` (title, description, body, FAQ, keyword "glucose alarm silent mode iphone"),

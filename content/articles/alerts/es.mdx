@@ -6,7 +6,7 @@ Dulce no sustituye las alarmas de tu sensor. Si usas FreeStyle Libre 2 o Libre 3
 
 ## Dónde se configuran
 
-Todo está en Dulce, en **Ajustes → Alertas**. Antes, durante la configuración inicial, Dulce te pide dos permisos de iOS: **Notificaciones** y **Alertas críticas**. El segundo es el que permite que el aviso de glucosa muy baja suene con el iPhone en silencio. Si lo rechazaste, puedes activarlo en la app Ajustes del iPhone, dentro de Dulce → Notificaciones.
+Todo está en Dulce, en **Ajustes → Alertas**. Durante la configuración inicial, Dulce te pide permiso para enviarte notificaciones. Si lo rechazaste, actívalo en la app Ajustes del iPhone, dentro de Dulce → Notificaciones.
 
 ## Los avisos, uno a uno
 
@@ -14,13 +14,21 @@ Todo está en Dulce, en **Ajustes → Alertas**. Antes, durante la configuració
 | --- | --- | --- |
 | Alerta de hipoglucemia | Te avisa cuando la glucosa baja de tu umbral (entre 50 y 80 mg/dL) | 70 mg/dL |
 | Alerta de hiperglucemia | Te avisa cuando la glucosa sube de tu umbral (entre 140 y 300 mg/dL) | 250 mg/dL |
-| Alertas de baja crítica | Aviso fuerte en una bajada grave (55 mg/dL o menos), incluso en silencio o en horas tranquilas | Activado |
+| Alertas de baja crítica | Aviso ante una bajada grave (55 mg/dL o menos) que ignora las horas tranquilas y las pausas | Activado |
 | Cambio rápido | Te avisa cuando la glucosa sube o baja muy deprisa | Activado |
 | Predicción de baja | Te avisa cuando vas camino de una bajada | Desactivado |
 
-### Baja crítica: la que siempre suena
+### Baja crítica: la que Dulce nunca retiene
 
-Es el único aviso que atraviesa el modo silencio, Concentración y las horas tranquilas. Siempre usa el sonido **Alarma** y se repite cada 5 minutos mientras sigas por debajo. Puedes desactivarlo, pero Dulce te pedirá confirmación: es el aviso que más importa de noche.
+Es el único aviso que atraviesa las horas tranquilas y las pausas de Dulce. Siempre usa el sonido **Alarma** y se repite cada 5 minutos mientras sigas por debajo. Puedes desactivarlo, pero Dulce te pedirá confirmación: es el aviso que más importa de noche.
+
+### Oír los avisos de noche
+
+Los avisos de Dulce son notificaciones normales del iPhone, así que es el iPhone el que decide si suenan. Con el interruptor en silencio, o con un modo de Concentración como Dormir que no permite Dulce, el aviso llega sin sonido. Para oír una bajada de noche:
+
+- Deja el modo silencio desactivado y el volumen del timbre alto.
+- Si usas Dormir o No molestar, añade Dulce a sus apps permitidas (Ajustes → Concentración).
+- Mantén también activadas las alarmas de la app de tu sensor.
 
 ### Predicción de baja
 
@@ -28,7 +36,7 @@ Mira el ritmo al que está bajando tu glucosa en los últimos minutos y te avisa
 
 ## Que no te agoten las alarmas
 
-- **Horas tranquilas.** Elige una franja (por ejemplo, de 23:00 a 7:00) en la que se silencian los avisos que no son críticos. La baja crítica sigue sonando. Viene desactivado, para que nadie se quede sin un aviso de hiperglucemia nocturna sin haberlo decidido.
+- **Horas tranquilas.** Elige una franja (por ejemplo, de 23:00 a 7:00) en la que se silencian los avisos que no son críticos. La baja crítica sigue llegando. Viene desactivado, para que nadie se quede sin un aviso de hiperglucemia nocturna sin haberlo decidido.
 - **Frecuencia de avisos.** Cada cuánto puede repetirse el mismo aviso si sigues fuera de rango. Por defecto, cada 15 minutos. Las bajadas graves se repiten siempre cada 5.
 - **Posponer avisos.** Si sabes que vas a estar alto un rato (después de una comida, por ejemplo), pausa los avisos unos minutos u horas. Las bajadas graves siguen llegando. También puedes posponer directamente desde la notificación.
 - **Sonidos.** Elige un sonido para la glucosa baja y otro para la alta: Predeterminado, Suave, Campanilla, Pulso, Alarma o Silencio. Tener dos distintos te dice qué pasa sin mirar el móvil.

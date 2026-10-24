@@ -28,7 +28,7 @@ export function GET() {
 - Data source: the user's LibreLinkUp account (Abbott's follower service), not LibreLink. Sensors supported today: FreeStyle Libre 2 and Libre 3. Dexcom, Nightscout and Android are not available yet.
 - Lock Screen Live Activity and Dynamic Island, updated every minute by Dulce's server with Dulce Pro, even with the app closed.
 - Home Screen, Lock Screen and StandBy widgets (free). Apple Watch app with complications in every shape (Pro).
-- Alerts: low and high with custom thresholds, rapid change, predictive low, quiet hours, and a critical alert for severe lows (55 mg/dL or less) that rings on silent.
+- Alerts: low and high with custom thresholds, rapid change, predictive low, quiet hours, and a critical alert for severe lows (55 mg/dL or less) that comes through quiet hours and snoozes. Alerts are regular notifications and follow the iPhone's silent switch and Focus settings.
 - Family following: the person wearing the sensor invites up to 3 followers by link or code (Pro, 14-day free trial; free for followers). Followers see glucose in real time with their own alerts and quiet hours, can show it on their Lock Screen, and can send short notification messages that the wearer answers with a one-tap "I'm OK". Access can be revoked at any time.
 - Logbook (carbs, insulin bolus/basal, glucose) and Trends (time in range, average glucose and GMI over 7, 14, 30 or 90 days) are free. Apple Health is read-only and optional.
 - Price: free download; Dulce Pro is a subscription with a 14-day free trial.

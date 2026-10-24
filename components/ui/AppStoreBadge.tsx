@@ -19,12 +19,8 @@ type Props = {
   fullWidth?: boolean;
 };
 
-/**
- * Which official badge file each language uses. fr and it show the English
- * badge until Apple's localized artwork is added to public/badges (download it
- * from tools.applemediaservices.com; never redraw it).
- */
-const BADGE_FILE: Record<AppLocale, string> = { es: "es", en: "en", de: "de", fr: "en", it: "en" };
+/** Official badge file per language (Apple's artwork from tools.applemediaservices.com; never redraw it). */
+const BADGE_FILE: Record<AppLocale, string> = { es: "es", en: "en", de: "de", fr: "fr", it: "it" };
 
 /**
  * Official "Download on the App Store" badge artwork (from Apple's badge

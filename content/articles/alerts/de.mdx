@@ -6,7 +6,7 @@ Dulce ersetzt nicht die Alarme deines Sensors. Nutzt du FreeStyle Libre 2 oder L
 
 ## Wo du sie einstellst
 
-Alles liegt in Dulce unter **Einstellungen → Benachrichtigungen**. Schon bei der Einrichtung fragt Dulce nach zwei iOS-Berechtigungen: **Mitteilungen** und **Kritische Benachrichtigungen**. Die zweite sorgt dafür, dass die Warnung bei sehr niedrigem Zucker auch bei stummgeschaltetem iPhone klingelt. Hast du sie abgelehnt, kannst du sie in der iPhone-App Einstellungen unter Dulce → Mitteilungen einschalten.
+Alles liegt in Dulce unter **Einstellungen → Benachrichtigungen**. Bei der Einrichtung fragt Dulce, ob es dir Mitteilungen schicken darf. Hast du abgelehnt, schalte sie in der iPhone-App Einstellungen unter Dulce → Mitteilungen ein.
 
 ## Die Warnungen im Einzelnen
 
@@ -14,13 +14,21 @@ Alles liegt in Dulce unter **Einstellungen → Benachrichtigungen**. Schon bei d
 | --- | --- | --- |
 | Niedrig-Warnung | Warnt, wenn der Zucker unter deine Grenze fällt (50 bis 80 mg/dL) | 70 mg/dL |
 | Hoch-Warnung | Warnt, wenn der Zucker über deine Grenze steigt (140 bis 300 mg/dL) | 250 mg/dL |
-| Kritische Warnung | Laute Warnung bei schwerer Unterzuckerung (55 mg/dL oder weniger), auch stumm oder in Ruhezeiten | An |
+| Kritische Warnung | Warnung bei schwerer Unterzuckerung (55 mg/dL oder weniger), die Ruhezeiten und Pausen ignoriert | An |
 | Schnelle Änderung | Warnt, wenn der Zucker sehr schnell steigt oder fällt | An |
 | Vorausschauend niedrig | Warnt, wenn ein Tief bevorsteht | Aus |
 
-### Kritische Warnung: die, die immer klingelt
+### Kritische Warnung: die, die Dulce nie zurückhält
 
-Sie ist die einzige Warnung, die Stummschaltung, Fokus und Ruhezeiten durchbricht. Sie nutzt immer den Ton **Alarm** und wiederholt sich alle 5 Minuten, solange du darunter bleibst. Du kannst sie ausschalten, aber Dulce fragt nach: Nachts ist sie die wichtigste Warnung.
+Sie ist die einzige Warnung, die Dulces Ruhezeiten und Pausen durchbricht. Sie nutzt immer den Ton **Alarm** und wiederholt sich alle 5 Minuten, solange du darunter bleibst. Du kannst sie ausschalten, aber Dulce fragt nach: Nachts ist sie die wichtigste Warnung.
+
+### Warnungen nachts hören
+
+Die Warnungen von Dulce sind normale iPhone-Mitteilungen, also entscheidet dein iPhone, ob sie einen Ton machen. Ist der Klingel-/Stummschalter auf stumm oder ein Fokus wie Schlafen aktiv, der Dulce nicht erlaubt, kommt die Warnung ohne Ton an. Damit du eine Unterzuckerung nachts hörst:
+
+- Lass den Stummmodus aus und die Klingellautstärke hoch.
+- Nutzt du Schlafen oder Nicht stören, füge Dulce zu den erlaubten Apps hinzu (Einstellungen → Fokus).
+- Lass auch die Alarme der App deines Sensors eingeschaltet.
 
 ### Vorausschauend niedrig
 
@@ -28,7 +36,7 @@ Sie schaut, wie schnell dein Zucker in den letzten Minuten gefallen ist, und war
 
 ## Damit dich die Alarme nicht zermürben
 
-- **Ruhezeiten.** Wähle ein Zeitfenster (etwa 23 bis 7 Uhr), in dem nicht kritische Warnungen stumm sind. Die kritische Warnung klingelt weiter. Standardmäßig ist das aus, damit niemand ohne eigene Entscheidung eine nächtliche Hoch-Warnung verpasst.
+- **Ruhezeiten.** Wähle ein Zeitfenster (etwa 23 bis 7 Uhr), in dem nicht kritische Warnungen stumm sind. Die kritische Warnung kommt weiter durch. Standardmäßig ist das aus, damit niemand ohne eigene Entscheidung eine nächtliche Hoch-Warnung verpasst.
 - **Häufigkeit.** Wie oft sich dieselbe Warnung wiederholen darf, solange du außerhalb des Bereichs bist. Standard: alle 15 Minuten. Schwere Unterzuckerungen wiederholen sich immer alle 5.
 - **Stummschalten.** Weißt du, dass du eine Weile hoch sein wirst (etwa nach dem Essen), pausierst du die Warnungen für ein paar Minuten oder Stunden. Schwere Unterzuckerungen kommen weiter durch. Du kannst auch direkt aus der Benachrichtigung stummschalten.
 - **Töne.** Wähle einen Ton für niedrig und einen für hoch: Standard, Sanft, Glockenspiel, Puls, Alarm oder Lautlos. Zwei verschiedene Töne sagen dir, was los ist, ohne aufs Handy zu schauen.
