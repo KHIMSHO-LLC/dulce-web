@@ -49,7 +49,9 @@ article's dateModified). Use an existing image from public/guides unless you hav
    every number to a source. Delete anything you can't back.
 3. Commit on `main` with a message like `content: <id> (es/en/de/fr/it)`, ending with the line
    `Co-Authored-By: Claude <noreply@anthropic.com>`, then `git push origin main` (Vercel deploys main).
-4. Append to seo/log.md: date, article id, target queries, Search Console numbers used (if any), what you
+4. After Vercel has deployed (a minute or two), run `npm run indexnow` so Bing (ChatGPT search, Copilot) picks
+   up the new URLs.
+5. Append to seo/log.md: date, article id, target queries, Search Console numbers used (if any), what you
    checked. Commit and push that too.
 
 Never: touch files outside content/, public/guides/, seo/ unless the build requires it; force-push; change

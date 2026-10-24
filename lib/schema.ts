@@ -69,3 +69,29 @@ export function articleSchema(input: {
     },
   };
 }
+
+/** HowTo for guides with numbered <Step> blocks (setup and troubleshooting). */
+export function howToSchema(input: {
+  url: string;
+  name: string;
+  description: string;
+  locale: string;
+  image: string;
+  steps: { name: string; text: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "@id": `${input.url}#howto`,
+    name: input.name,
+    description: input.description,
+    inLanguage: input.locale,
+    image: input.image,
+    step: input.steps.map((st, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: st.name,
+      text: st.text,
+    })),
+  };
+}

@@ -23,6 +23,8 @@ export type StoreCampaign =
   | "web_page"
   | "web_tool"
   | "web_status"
+  /** Markdown copies for AI assistants (/llms-full.txt, /md/...). */
+  | "web_llms"
   /** One campaign per article (`blog_<article id>`), so installs can be traced to the page. */
   | `blog_${string}`;
 

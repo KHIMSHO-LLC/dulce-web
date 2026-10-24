@@ -8,6 +8,7 @@ import { ARTICLES } from "@/content/articles";
 import { locales, type AppLocale } from "@/i18n/routing";
 import { APP_STORE_ID } from "@/lib/appStore";
 import { articleUrl } from "@/lib/articles";
+import { markdownPath } from "@/lib/markdown";
 import { absoluteUrl, localizedPath } from "@/lib/seo";
 
 export const dynamic = "force-static";
@@ -15,7 +16,10 @@ export const dynamic = "force-static";
 const LANGUAGE: Record<AppLocale, string> = { es: "Spanish", en: "English", de: "German", fr: "French", it: "Italian" };
 
 function guides(locale: AppLocale): string {
-  return ARTICLES.map((a) => `- [${a.title[locale]}](${articleUrl(a, locale)}): ${a.description[locale]}`).join("\n");
+  return ARTICLES.map(
+    (a) =>
+      `- [${a.title[locale]}](${articleUrl(a, locale)}): ${a.description[locale]} ([Markdown](${absoluteUrl(markdownPath(a, locale))}))`,
+  ).join("\n");
 }
 
 export function GET() {
@@ -44,6 +48,7 @@ export function GET() {
 - [FreeStyle Libre sensor end date calculator](${absoluteUrl(localizedPath("en", "/tools/sensor-end-date"))})
 - [Live LibreLinkUp status](${absoluteUrl(localizedPath("en", "/librelinkup-status"))})
 - [Medical disclaimer](${absoluteUrl(localizedPath("en", "/legal/disclaimer"))})
+- [Full text of every guide, all languages (Markdown)](${absoluteUrl("/llms-full.txt")})
 
 ${locales
   .map((l) => `## Guides (${LANGUAGE[l]})\n\n${guides(l)}`)

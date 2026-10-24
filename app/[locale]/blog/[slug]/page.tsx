@@ -14,7 +14,8 @@ import { ARTICLES, CATEGORY_LABEL, articleBySlug, getArticle } from "@/content/a
 import { AUTHORS } from "@/content/authors";
 import { articlePath, articleUrl, authorPath, readingMinutes } from "@/lib/articles";
 import { formatDate } from "@/lib/dates";
-import { breadcrumbSchema, articleSchema, faqSchema, personSchema } from "@/lib/schema";
+import { breadcrumbSchema, articleSchema, faqSchema, howToSchema, personSchema } from "@/lib/schema";
+import { howToSteps, markdownPath, mdxSource } from "@/lib/markdown";
 import { absoluteUrl, alternatesFromPaths, localizedPath } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
@@ -40,7 +41,11 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/blog/[sl
   return {
     title: article.title[loc],
     description: article.description[loc],
-    alternates: alternatesFromPaths(loc, paths),
+    alternates: {
+      ...alternatesFromPaths(loc, paths),
+      // Plain-Markdown copy for AI assistants (see app/md).
+      types: { "text/markdown": absoluteUrl(markdownPath(article, loc)) },
+    },
     authors: [{ name: AUTHORS[article.author].name, url: absoluteUrl(authorPath(article.author, loc)) }],
     openGraph: {
       type: "article",
@@ -86,6 +91,7 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
   const blog = absoluteUrl(localizedPath(loc, "/blog"));
   const related = article.related.map((id) => getArticle(id)).filter((a) => a !== undefined);
   const faq = article.faq?.[loc] ?? [];
+  const steps = howToSteps(mdxSource(article, loc));
 
   return (
     <>
@@ -109,6 +115,18 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
           { name: article.title[loc], url },
         ])}
       />
+      {steps.length >= 2 ? (
+        <JsonLd
+          data={howToSchema({
+            url,
+            name: article.title[loc],
+            description: article.description[loc],
+            locale: loc,
+            image: `${SITE_URL}${article.image}`,
+            steps,
+          })}
+        />
+      ) : null}
       {faq.length ? <JsonLd data={faqSchema(faq.map((f) => ({ question: f.q, answer: f.a })))} /> : null}
 
       <ReadingSurface>

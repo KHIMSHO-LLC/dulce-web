@@ -86,6 +86,11 @@ questions around them. Being the best answer means the product actually does it 
 - [x] 2026-10-24: Removed the false "rings on silent" claim (no critical-alerts entitlement): `alerts` (title,
       description, body, FAQ, new "Hearing alerts at night" section), `child-glucose`, `librelinkup-not-working`,
       `/llms.txt`, 5 languages. The app's own copy was fixed in 1.0.4 the same way.
+- [x] 2026-10-24: AI search / answer engines: `/llms-full.txt` (every guide, 5 languages, Markdown), a Markdown
+      copy of each guide at `/md/<locale>/<slug>.md` (linked from the page as `rel="alternate"
+      type="text/markdown"` and from /llms.txt), HowTo JSON-LD on the 50 guide pages with numbered steps, and
+      IndexNow (`npm run indexnow`, key file in public/) so Bing, which feeds ChatGPT search and Copilot, hears
+      about new and changed URLs the same day.
 - [x] 2026-10-24: Official French and Italian App Store badges (`public/badges/app-store-badge-{fr,it}.svg`).
 - [x] 2026-10-24: Relay deployed (LibreLinkUp status live, fr/it alerts, DST-safe quiet hours, Dexcom support
       for 1.0.4). App PR #4 merged into `release/1.0.4` together with the redesign + Dexcom work.
