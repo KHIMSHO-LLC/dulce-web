@@ -4,6 +4,8 @@ import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { JsonLd } from "@/components/JsonLd";
+import { AUTHORS } from "@/content/authors";
+import { authorPath } from "@/lib/articles";
 import { Preloader } from "@/components/site/Preloader";
 import { Stage } from "@/components/three/Stage";
 import { Hero } from "@/components/landing/Hero";
@@ -20,7 +22,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { Split } from "@/components/motion/Split";
 import type { ScreenName } from "@/components/screens/draw";
 import { faqSchema } from "@/lib/schema";
-import { alternatesFor } from "@/lib/seo";
+import { absoluteUrl, alternatesFor } from "@/lib/seo";
 import { SECTION, SITE_URL, localeUrl } from "@/lib/site";
 import { APP_STORE_ID } from "@/lib/appStore";
 
@@ -132,6 +134,12 @@ function appSchema(locale: AppLocale, description: string) {
         email: "hola@dulceglucosa.com",
         logo: `${SITE_URL}/dulce-logo.png`,
         sameAs: [appStoreUrl],
+        // Ties the brand to the founder's author page (who stands behind the guides).
+        founder: {
+          "@type": "Person",
+          name: AUTHORS.giorgi.name,
+          url: absoluteUrl(authorPath("giorgi", locale)),
+        },
       },
       {
         "@type": "WebSite",
