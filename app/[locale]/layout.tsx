@@ -5,6 +5,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ConsentBanner } from "@/components/analytics/ConsentBanner";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { Atmosphere } from "@/components/site/Atmosphere";
 import { PillNav } from "@/components/site/PillNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
@@ -105,7 +107,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
           </main>
           <SiteFooter />
           <PillNav />
+          <ConsentBanner />
         </NextIntlClientProvider>
+        <GoogleAnalytics />
         <Analytics />
         <SpeedInsights />
       </body>

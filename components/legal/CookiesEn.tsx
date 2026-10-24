@@ -1,3 +1,5 @@
+import { GA_ID } from "@/lib/consent";
+
 {/* TODO: Legal review by a Spanish DPO / lawyer required before public launch. */}
 export function CookiesEn() {
   return (
@@ -16,10 +18,18 @@ export function CookiesEn() {
       </p>
 
       <h2 id="ours">2. Cookies we use</h2>
-      <p>
-        Dulce uses <strong>only strictly necessary technical cookies</strong>. We do not use
-        advertising tracking cookies or third-party analytics cookies.
-      </p>
+      {GA_ID ? (
+        <p>
+          Dulce uses <strong>strictly necessary technical cookies</strong> and, only if you
+          accept them, <strong>Google Analytics</strong> cookies. We do not use advertising
+          tracking cookies.
+        </p>
+      ) : (
+        <p>
+          Dulce uses <strong>only strictly necessary technical cookies</strong>. We do not use
+          advertising tracking cookies or third-party analytics cookies.
+        </p>
+      )}
 
       <h3>2.1 Session / technical cookies</h3>
       <ul>
@@ -41,11 +51,26 @@ export function CookiesEn() {
         cookie consent is required under the ePrivacy directive.
       </p>
 
+      {GA_ID ? (
+        <>
+          <h3>2.3 Google Analytics (only with your consent)</h3>
+          <p>
+            If you accept analytics cookies, we use <strong>Google Analytics 4</strong> (Google
+            Ireland Ltd.) to count visits and see which pages lead people to the App Store. It
+            sets <strong>_ga</strong> and <strong>_ga_*</strong> cookies (duration: up to 2
+            years). Google may process this data in the United States under the EU-US Data
+            Privacy Framework. If you decline, Google Analytics is not loaded at all.
+          </p>
+        </>
+      ) : null}
+
       <h2 id="consent">3. Consent</h2>
       <p>
         Strictly necessary cookies do not require your consent — they are exempt under the
-        Spanish cookie regulation (Art. 22 LSSI) and the GDPR. If we ever introduced
-        non-technical cookies, we would request your prior consent through a proper banner.
+        Spanish cookie regulation (Art. 22 LSSI) and the GDPR.{" "}
+        {GA_ID
+          ? "Google Analytics cookies are only set after you accept them in our banner. You can change your choice at any time with “Cookie settings” at the bottom of every page."
+          : "If we ever introduced non-technical cookies, we would request your prior consent through a proper banner."}
       </p>
 
       <h2 id="manage">4. How to manage cookies</h2>

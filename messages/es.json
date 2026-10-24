@@ -550,5 +550,13 @@
       }
     ],
     "cta": "Descargar Dulce gratis"
+  },
+  "consent": {
+    "title": "Cookies de análisis",
+    "text": "Nos gustaría usar cookies de Google Analytics para saber qué páginas te ayudan. Solo si aceptas.",
+    "policy": "Política de cookies",
+    "accept": "Aceptar",
+    "decline": "Rechazar",
+    "settings": "Ajustes de cookies"
   }
 }

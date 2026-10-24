@@ -95,6 +95,14 @@ questions around them. Being the best answer means the product actually does it 
       Pro, status, setup, 5 guides), shorter home titles in es/de/fr/it, guide titles over 52 characters drop the
       " · Dulce" suffix (Google shows the site name anyway), author pages get distinct titles (name + role) and a
       one-sentence description. No duplicate titles left.
+- [x] 2026-10-24: Article `glucose-apps-compared` ("Sweet Dreams alternative", 5 languages): honest comparison
+      of Dulce, Sweet Dreams, Gluroo and LibreLinkUp from their App Store listings (checked 2026-10-24, sources
+      listed) and a "switch in a minute" how-to (same LibreLinkUp account). Linked from `lock-screen`. Re-check
+      competitor facts every few months; never claim Dexcom for Dulce until it ships.
+- [x] 2026-10-24: Google Analytics 4 behind a consent banner (5 languages), inactive until `NEXT_PUBLIC_GA_ID`
+      is set in Vercel. GA loads only after "Accept"; App Store taps are sent as `app_store_click` with the link's
+      `ct` campaign. Cookie Policy (es/en) shows the GA section only when GA is on. "Cookie settings" in the footer
+      reopens the banner.
 - [x] 2026-10-24: Official French and Italian App Store badges (`public/badges/app-store-badge-{fr,it}.svg`).
 - [x] 2026-10-24: Relay deployed (LibreLinkUp status live, fr/it alerts, DST-safe quiet hours, Dexcom support
       for 1.0.4). App PR #4 merged into `release/1.0.4` together with the redesign + Dexcom work.
@@ -137,6 +145,13 @@ questions around them. Being the best answer means the product actually does it 
 ## For Giorgi (only you can do these)
 
 Open:
+
+0. **Google Analytics (5 minutes):** create a GA4 property at analytics.google.com (Admin → Create → Property,
+   time zone Spain, currency EUR) → Data streams → Web → `https://dulceglucosa.com`, keep Enhanced measurement on →
+   copy the Measurement ID (`G-…`). In Vercel: dulce-web → Settings → Environment Variables → add
+   `NEXT_PUBLIC_GA_ID` = that ID (Production + Preview) → redeploy. Then in GA: Admin → Product links → Search
+   Console links → link `dulceglucosa.com`; Admin → Events → mark `app_store_click` as a key event. Have the
+   Cookie Policy wording checked by whoever reviews the legal pages.
 
 1. **Merge the two `i18n/fr-it` PRs** (website and app). Ship an app release with the app one, then add the
    French and Italian localizations in App Store Connect using `seo/aso.md` (also paste the new es/de/en

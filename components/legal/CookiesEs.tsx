@@ -1,3 +1,5 @@
+import { GA_ID } from "@/lib/consent";
+
 {/* TODO: Legal review by a Spanish DPO / lawyer required before public launch. */}
 export function CookiesEs() {
   return (
@@ -16,10 +18,18 @@ export function CookiesEs() {
       </p>
 
       <h2 id="cuales-usamos">2. Cookies que usamos</h2>
-      <p>
-        En Dulce usamos <strong>únicamente cookies técnicas estrictamente necesarias</strong>.
-        No usamos cookies de seguimiento publicitario ni cookies de terceros para analítica.
-      </p>
+      {GA_ID ? (
+        <p>
+          En Dulce usamos <strong>cookies técnicas estrictamente necesarias</strong> y, solo si
+          las aceptas, cookies de <strong>Google Analytics</strong>. No usamos cookies de
+          seguimiento publicitario.
+        </p>
+      ) : (
+        <p>
+          En Dulce usamos <strong>únicamente cookies técnicas estrictamente necesarias</strong>.
+          No usamos cookies de seguimiento publicitario ni cookies de terceros para analítica.
+        </p>
+      )}
 
       <h3>2.1 Cookies de sesión / técnicas</h3>
       <ul>
@@ -41,12 +51,26 @@ export function CookiesEs() {
         la directiva ePrivacy.
       </p>
 
+      {GA_ID ? (
+        <>
+          <h3>2.3 Google Analytics (solo con tu consentimiento)</h3>
+          <p>
+            Si aceptas las cookies de análisis, usamos <strong>Google Analytics 4</strong>{" "}
+            (Google Ireland Ltd.) para contar visitas y ver qué páginas llevan a la gente al App
+            Store. Instala las cookies <strong>_ga</strong> y <strong>_ga_*</strong> (duración:
+            hasta 2 años). Google puede tratar estos datos en Estados Unidos al amparo del Marco
+            de Privacidad de Datos UE-EE. UU. Si las rechazas, Google Analytics no se carga.
+          </p>
+        </>
+      ) : null}
+
       <h2 id="consentimiento">3. Consentimiento</h2>
       <p>
         Las cookies estrictamente necesarias no requieren tu consentimiento — están exentas
-        bajo la normativa española de cookies (art. 22 LSSI) y el RGPD. Si en el futuro
-        introdujéramos cookies no técnicas, te pediríamos consentimiento previo mediante un
-        banner adecuado.
+        bajo la normativa española de cookies (art. 22 LSSI) y el RGPD.{" "}
+        {GA_ID
+          ? "Las cookies de Google Analytics solo se instalan después de que las aceptes en nuestro banner. Puedes cambiar tu elección cuando quieras en «Ajustes de cookies», al pie de cada página."
+          : "Si en el futuro introdujéramos cookies no técnicas, te pediríamos consentimiento previo mediante un banner adecuado."}
       </p>
 
       <h2 id="gestionar">4. Cómo gestionar las cookies</h2>

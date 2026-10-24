@@ -6,6 +6,7 @@ import { WordmarkRise } from "@/components/motion/WordmarkRise";
 import { TOOL_COPY } from "@/lib/tools";
 import { DropMark } from "./DropMark";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { CookieSettingsLink } from "@/components/analytics/ConsentBanner";
 
 /**
  * The close: QR hand-off, every section, help and legal, the honest small
@@ -100,6 +101,7 @@ export async function SiteFooter() {
             <Link href="/legal/cookies" className={linkClass}>
               {nav("cookies")}
             </Link>
+            <CookieSettingsLink className={`${linkClass} text-left`} />
           </div>
         </div>
 

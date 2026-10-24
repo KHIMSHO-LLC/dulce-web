@@ -550,5 +550,13 @@
       }
     ],
     "cta": "Download Dulce free"
+  },
+  "consent": {
+    "title": "Analytics cookies",
+    "text": "We'd like to use Google Analytics cookies to learn which pages help people. Only if you accept.",
+    "policy": "Cookie Policy",
+    "accept": "Accept",
+    "decline": "Decline",
+    "settings": "Cookie settings"
   }
 }

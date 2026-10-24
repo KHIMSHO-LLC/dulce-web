@@ -550,5 +550,13 @@
       }
     ],
     "cta": "Dulce kostenlos laden"
+  },
+  "consent": {
+    "title": "Analyse-Cookies",
+    "text": "Wir würden gern Google-Analytics-Cookies nutzen, um zu sehen, welche Seiten helfen. Nur wenn du zustimmst.",
+    "policy": "Cookie-Richtlinie",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen",
+    "settings": "Cookie-Einstellungen"
   }
 }
