@@ -20,8 +20,9 @@ export function CookiesEs() {
       <h2 id="cuales-usamos">2. Cookies que usamos</h2>
       {GA_ID ? (
         <p>
-          En Dulce usamos <strong>cookies técnicas estrictamente necesarias</strong> y, solo si
-          las aceptas, cookies de <strong>Google Analytics</strong>. No usamos cookies de
+          En Dulce usamos <strong>cookies técnicas estrictamente necesarias</strong> y cookies de{" "}
+          <strong>Google Analytics</strong>, que en el EEE, el Reino Unido y Suiza solo se usan
+          si las aceptas. No usamos cookies de
           seguimiento publicitario.
         </p>
       ) : (
@@ -36,6 +37,11 @@ export function CookiesEs() {
         <li>
           <strong>NEXT_LOCALE</strong> — recuerda tu preferencia de idioma entre páginas.
           Tipo: técnica. Duración: hasta 1 año.
+        </li>
+        <li>
+          <strong>dulce-region</strong> — el código de tu país (deducido de tu IP, que no
+          guardamos), usado solo para saber si debemos pedirte consentimiento para la
+          analítica. Tipo: técnica. Duración: hasta que cierres el navegador.
         </li>
         <li>
           <strong>Tokens de envío de formularios</strong> — usados por Next.js Server Actions
@@ -53,13 +59,16 @@ export function CookiesEs() {
 
       {GA_ID ? (
         <>
-          <h3>2.3 Google Analytics (solo con tu consentimiento)</h3>
+          <h3>2.3 Google Analytics</h3>
           <p>
-            Si aceptas las cookies de análisis, usamos <strong>Google Analytics 4</strong>{" "}
+            En el EEE, el Reino Unido y Suiza solo si aceptas las cookies de análisis, y en el
+            resto del mundo salvo que lo desactives, usamos <strong>Google Analytics 4</strong>{" "}
             (Google Ireland Ltd.) para contar visitas y ver qué páginas llevan a la gente al App
             Store. Instala las cookies <strong>_ga</strong> y <strong>_ga_*</strong> (duración:
             hasta 2 años). Google puede tratar estos datos en Estados Unidos al amparo del Marco
-            de Privacidad de Datos UE-EE. UU. Si las rechazas, Google Analytics no se carga.
+            de Privacidad de Datos UE-EE. UU. Las funciones publicitarias, Google Signals y la
+            personalización de anuncios están desactivadas. Si las rechazas, Google Analytics
+            no se carga.
           </p>
         </>
       ) : null}
@@ -69,7 +78,7 @@ export function CookiesEs() {
         Las cookies estrictamente necesarias no requieren tu consentimiento — están exentas
         bajo la normativa española de cookies (art. 22 LSSI) y el RGPD.{" "}
         {GA_ID
-          ? "Las cookies de Google Analytics solo se instalan después de que las aceptes en nuestro banner. Puedes cambiar tu elección cuando quieras en «Ajustes de cookies», al pie de cada página."
+          ? "En el EEE, el Reino Unido y Suiza, las cookies de Google Analytics solo se instalan después de que las aceptes en nuestro banner. En cualquier país puedes cambiar tu elección cuando quieras en «Ajustes de cookies», al pie de cada página."
           : "Si en el futuro introdujéramos cookies no técnicas, te pediríamos consentimiento previo mediante un banner adecuado."}
       </p>
 

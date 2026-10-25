@@ -99,8 +99,11 @@ questions around them. Being the best answer means the product actually does it 
       of Dulce, Sweet Dreams, Gluroo and LibreLinkUp from their App Store listings (checked 2026-10-24, sources
       listed) and a "switch in a minute" how-to (same LibreLinkUp account). Linked from `lock-screen`. Re-check
       competitor facts every few months; never claim Dexcom for Dulce until it ships.
-- [x] 2026-10-24: Google Analytics 4 behind a consent banner (5 languages), inactive until `NEXT_PUBLIC_GA_ID`
-      is set in Vercel. GA loads only after "Accept"; App Store taps are sent as `app_store_click` with the link's
+- [x] 2026-10-24: Google Analytics 4 behind a consent banner (5 languages). Live since 2026-10-25
+      (`G-5XLM2DQ2XQ`, set in Vercel Production + Preview). The banner shows only in the EEA, UK and Switzerland
+      (or an unknown country): `proxy.ts` puts Vercel's `x-vercel-ip-country` in the `dulce-region` session cookie.
+      Elsewhere GA loads by default and "Cookie settings" still turns it off. Ads storage, Google signals and ad
+      personalization are off everywhere. In opt-in countries GA loads only after "Accept"; App Store taps are sent as `app_store_click` with the link's
       `ct` campaign. Cookie Policy (es/en) shows the GA section only when GA is on. "Cookie settings" in the footer
       reopens the banner.
 - [x] 2026-10-24: Official French and Italian App Store badges (`public/badges/app-store-badge-{fr,it}.svg`).
@@ -165,10 +168,7 @@ ring on silent (critical-alerts entitlement).
 
 Open:
 
-0. **Google Analytics (5 minutes):** create a GA4 property at analytics.google.com (Admin → Create → Property,
-   time zone Spain, currency EUR) → Data streams → Web → `https://dulceglucosa.com`, keep Enhanced measurement on →
-   copy the Measurement ID (`G-…`). In Vercel: dulce-web → Settings → Environment Variables → add
-   `NEXT_PUBLIC_GA_ID` = that ID (Production + Preview) → redeploy. Then in GA: Admin → Product links → Search
+0. **Google Analytics:** property and ID done (2026-10-25). Still to do in GA: Admin → Product links → Search
    Console links → link `dulceglucosa.com`; Admin → Events → mark `app_store_click` as a key event. Have the
    Cookie Policy wording checked by whoever reviews the legal pages.
 

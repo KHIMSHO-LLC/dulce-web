@@ -20,9 +20,9 @@ export function CookiesEn() {
       <h2 id="ours">2. Cookies we use</h2>
       {GA_ID ? (
         <p>
-          Dulce uses <strong>strictly necessary technical cookies</strong> and, only if you
-          accept them, <strong>Google Analytics</strong> cookies. We do not use advertising
-          tracking cookies.
+          Dulce uses <strong>strictly necessary technical cookies</strong> and{" "}
+          <strong>Google Analytics</strong> cookies. In the EEA, the UK and Switzerland, Google
+          Analytics only runs if you accept it. We do not use advertising tracking cookies.
         </p>
       ) : (
         <p>
@@ -36,6 +36,11 @@ export function CookiesEn() {
         <li>
           <strong>NEXT_LOCALE</strong> — remembers your language preference between pages.
           Type: technical. Duration: up to 1 year.
+        </li>
+        <li>
+          <strong>dulce-region</strong> — your country code (from your IP address, not stored
+          by us), used only to decide whether to ask for analytics consent. Type: technical.
+          Duration: until you close the browser.
         </li>
         <li>
           <strong>Form submission tokens</strong> — used by Next.js Server Actions to prevent
@@ -53,13 +58,15 @@ export function CookiesEn() {
 
       {GA_ID ? (
         <>
-          <h3>2.3 Google Analytics (only with your consent)</h3>
+          <h3>2.3 Google Analytics</h3>
           <p>
-            If you accept analytics cookies, we use <strong>Google Analytics 4</strong> (Google
+            In the EEA, the UK and Switzerland only if you accept analytics cookies, and
+            elsewhere unless you turn it off, we use <strong>Google Analytics 4</strong> (Google
             Ireland Ltd.) to count visits and see which pages lead people to the App Store. It
             sets <strong>_ga</strong> and <strong>_ga_*</strong> cookies (duration: up to 2
             years). Google may process this data in the United States under the EU-US Data
-            Privacy Framework. If you decline, Google Analytics is not loaded at all.
+            Privacy Framework. Advertising features, Google signals and ad personalization are
+            off. If you decline, Google Analytics is not loaded at all.
           </p>
         </>
       ) : null}
@@ -69,7 +76,7 @@ export function CookiesEn() {
         Strictly necessary cookies do not require your consent — they are exempt under the
         Spanish cookie regulation (Art. 22 LSSI) and the GDPR.{" "}
         {GA_ID
-          ? "Google Analytics cookies are only set after you accept them in our banner. You can change your choice at any time with “Cookie settings” at the bottom of every page."
+          ? "In the EEA, the UK and Switzerland, Google Analytics cookies are only set after you accept them in our banner. Everywhere, you can change your choice at any time with “Cookie settings” at the bottom of every page."
           : "If we ever introduced non-technical cookies, we would request your prior consent through a proper banner."}
       </p>
 
