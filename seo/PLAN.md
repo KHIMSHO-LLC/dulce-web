@@ -27,7 +27,13 @@ questions around them. Being the best answer means the product actually does it 
   subscription with a 14-day trial.
 - App languages: es-ES, es-MX, en, de, ka; fr and it from the release carrying dulce-app branch `i18n/fr-it`.
   Device languages the app doesn't support fall back to **English** from 1.0.4 (Spanish-speaking regions get es-MX).
-- App Store name: **Dulce: Glucose at a Glance**, id 6770694596.
+- App Store name: **Dulce: Glucose at a Glance**, id 6770694596. From 1.0.4 the de/fr/it listings have localized
+  names (Dulce: Blutzucker im Blick / Dulce : Glycémie en direct / Dulce: Glicemia sott'occhio).
+- CarPlay: there is no CarPlay app, but on iOS 26 the Live Activity (Pro) shows on the CarPlay dashboard. True
+  since 1.0.3; 1.0.4 has a bigger, glanceable layout there.
+- **1.0.4 is in App Review (submitted 2026-10-25, build 69).** It adds Dexcom (Dexcom Share / Follow, a reading
+  every 5 minutes), the app in French and Italian, mmol/L everywhere, the new design. Until Apple approves it and
+  it is on the App Store, everything above about "not released" still holds: no Dexcom claims anywhere.
 
 ## Rejected ideas from external briefs (don't re-adopt)
 
@@ -125,6 +131,22 @@ questions around them. Being the best answer means the product actually does it 
 
 ## Next for Claude (in order)
 
+0. **Release day for 1.0.4** (only after it shows on the App Store: check the version history on
+   apps.apple.com/app/id6770694596 first; never on "approved" alone, the owner may release manually):
+   - [ ] Update "Ground truth": Dexcom released, fr/it app released, 1.0.4 features.
+   - [ ] `scripts/check-content.mts`: drop `dexcom` from `UNRELEASED` (keep the Nightscout and Android guards).
+   - [ ] Comparison guide `glucose-apps-compared` (5 languages): Dulce "Other sensors" = Dexcom; rewrite the
+         "Sweet Dreams is stronger for Dexcom" lines; bump dateModified.
+   - [ ] New article in 5 languages: Dexcom on Apple Watch / Lock Screen / CarPlay with Dulce (Dexcom Share must be
+         on; same follower login idea as LibreLinkUp; 5-minute cadence; what the Dexcom app keeps: sensor
+         reminders). Then the "Dexcom Follow / Sugarmate alternative" angle.
+   - [ ] Home FAQ + `FEATURES` (featureList), `/llms.txt`, `/llms-full.txt`, `seo/aso.md` ground truth: Dexcom,
+         mmol/L, fr/it app. Store listing texts stay brand-free (owner rule).
+   - [ ] `npm run indexnow`; Search Console: resubmit sitemap, request indexing for the new article and the fr/it
+         home pages.
+   - [ ] Log it in `seo/log.md`. If 1.0.4 is rejected or slips more than a few days, revert the fr/it wording
+         (item 1).
+
 1. Done 2026-10-22 (ahead of the app release, at Giorgi's request): the home FAQ and `/llms.txt` say the app is
    in French and Italian. If the fr/it app release slips by more than a few days, revert that wording.
 2. Content roadmap, one article per day max (`seo/daily-article.md`), always in all 5 languages, facts from the
@@ -155,8 +177,9 @@ questions around them. Being the best answer means the product actually does it 
 People who already use Sweet Dreams, Gluroo or any LibreLinkUp-based app can switch in a minute: Dulce uses the
 same LibreLinkUp login, nothing changes on the sensor phone. Where Dulce is genuinely different today: the whole
 app in Spanish, German, French and Italian (Sweet Dreams and Gluroo list English only), a free carbs/insulin
-logbook, free followers. Where they are ahead: Sweet Dreams supports many more sensors, CarPlay and alarms that
-ring on silent (critical-alerts entitlement).
+logbook, free followers. Where they are ahead: Sweet Dreams supports many more sensors and alarms that ring on
+silent (critical-alerts entitlement). CarPlay is even: Dulce's Live Activity shows there on iOS 26 (guide updated
+2026-10-25).
 
 - [x] Comparison + switching guide `glucose-apps-compared` in 5 languages (Sweet Dreams alternative).
 - [ ] Re-check competitor App Store listings every 3 months; update the table and dateModified.
@@ -166,8 +189,8 @@ ring on silent (critical-alerts entitlement).
       is allowed in Search Ads, but App Store **metadata must never name competitors** (guideline 2.3.7).
 - [ ] Giorgi: answer "which app for Libre on Apple Watch / Lock Screen" threads honestly (Reddit, Facebook groups,
       forums), disclosing you make Dulce, linking the comparison guide in the reader's language.
-- [ ] Close the gaps that cost switchers: apply for Apple's critical-alerts entitlement (ring on silent); CarPlay
-      is a later candidate.
+- [ ] Close the gaps that cost switchers: apply for Apple's critical-alerts entitlement (ring on silent).
+- [x] CarPlay: the Live Activity already shows there (iOS 26); 1.0.4 makes that layout glanceable.
 
 ## For Giorgi (only you can do these)
 
@@ -198,7 +221,9 @@ Open:
 7. **Ratings:** ask happy users for App Store ratings.
 8. ~~**Deploy the relay**~~ Done 2026-10-24 (`cd dulce-relay && npm run deploy`). Until then the status page shows "unknown" and
    French/Italian alerts are not live.
-9. ~~Merge dulce-app PR #4~~ (done 2026-10-24, with the Dexcom/new-design work). **Build and submit 1.0.4.**
+9. ~~Merge dulce-app PR #4~~ (done 2026-10-24). ~~Build and submit 1.0.4~~ (submitted 2026-10-25, build 69, Expo
+   SDK 58). **When Apple approves it: release it, then tell Claude** so the release-day list ("Next for Claude",
+   item 0) runs. Add French and Italian screenshots in App Store Connect when you can (they show English now).
 
 10. ~~Fix the "rings on silent" claim~~ Done 2026-10-24: pages rewritten to the real behaviour. If Apple ever
     grants the critical-alerts entitlement, the claim can come back. Was: **Fix the "rings on silent" claim (found 2026-10-23).** The released app can't ring through silent mode:
