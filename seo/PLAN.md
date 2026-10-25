@@ -138,7 +138,8 @@ questions around them. Being the best answer means the product actually does it 
    - [x] Comparison guide (5 languages): Dulce reads Dexcom, Sweet Dreams no longer "the choice for Dexcom".
    - [x] New guide `dexcom` in 5 languages (Dexcom Share, setup, Lock Screen / Watch / CarPlay, troubleshooting).
    - [x] Home sensors card + FAQ + featureList + audience, `/llms.txt`. IndexNow pinged (133 URLs).
-   - [ ] Search Console: resubmit sitemap, request indexing for the Dexcom guide (en first) and fr/it home pages.
+   - [x] Search Console 2026-10-25: sitemap resubmitted, indexing requested for the English Dexcom guide. Request the
+         other languages over the next days (Google limits requests per day).
    - [ ] Next Dexcom content: "Dexcom Follow / Sugarmate alternative"; Dexcom in the alerts and family guides.
    - If 1.0.4 is rejected or slips more than a few days: revert the Dexcom and fr/it claims.
 
