@@ -20,7 +20,7 @@ if (ids.size !== ARTICLES.length) errors.push("duplicate article ids");
 const inbound = new Map<string, number>([...ids].map((id) => [id, 0]));
 
 // Phrases that would describe features the released app doesn't have.
-const UNRELEASED = [/dexcom[^.\n]*(funciona|compatible|works|support|unterstützt|connect)/i, /nightscout[^.\n]*(funciona|works|support|unterstützt)/i, /android app/i];
+const UNRELEASED = [/nightscout[^.\n]*(funciona|works|support|unterstützt)/i, /android app/i];
 
 for (const locale of LOCALES) {
   const slugs = new Set<string>();

@@ -168,8 +168,8 @@
         "sample": "Dati di esempio"
       },
       "sensors": {
-        "title": "FreeStyle Libre 2 e 3",
-        "body": "Collega il tuo account LibreLinkUp. Dexcom e Nightscout sono in arrivo.",
+        "title": "FreeStyle Libre e Dexcom",
+        "body": "Collega il tuo account LibreLinkUp, oppure il tuo account Dexcom con la condivisione (Share) attiva.",
         "link": "Come configurarlo"
       },
       "privacy": {
@@ -195,7 +195,7 @@
         },
         {
           "q": "Con quali sensori funziona?",
-          "a": "FreeStyle Libre 2 e Libre 3, tramite il tuo account LibreLinkUp. Dexcom e Nightscout sono in arrivo."
+          "a": "FreeStyle Libre 2 e Libre 3 tramite il tuo account LibreLinkUp, e Dexcom G6, G7 e ONE+ tramite Dexcom Share (il tuo account Dexcom con la condivisione attiva)."
         },
         {
           "q": "Perché il mio accesso LibreLink non funziona?",

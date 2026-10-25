@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]">): Prom
 /** What the released app does, for AI and search engines. Keep in sync with PRODUCT.md and app/llms.txt. */
 const FEATURES: Record<AppLocale, string[]> = {
   es: [
-    "Glucosa en tiempo real del FreeStyle Libre 2 y Libre 3 a través de LibreLinkUp",
+    "Glucosa en tiempo real del FreeStyle Libre 2 y Libre 3 (LibreLinkUp) y del Dexcom G6, G7 y ONE+ (Dexcom Share)",
     "Live Activity en la pantalla de bloqueo y la Dynamic Island, actualizada cada minuto",
     "Widgets para la pantalla de inicio, la pantalla de bloqueo y StandBy",
     "App para Apple Watch con complicaciones",
@@ -50,7 +50,7 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Tendencias: tiempo en rango, glucosa media y GMI de 7 a 90 días",
   ],
   en: [
-    "Real-time FreeStyle Libre 2 and Libre 3 glucose through LibreLinkUp",
+    "Real-time glucose from FreeStyle Libre 2 and Libre 3 (LibreLinkUp) and Dexcom G6, G7 and ONE+ (Dexcom Share)",
     "Lock Screen Live Activity and Dynamic Island, updated every minute",
     "Home Screen, Lock Screen and StandBy widgets",
     "Apple Watch app with complications",
@@ -60,7 +60,7 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Trends: time in range, average glucose and GMI over 7 to 90 days",
   ],
   de: [
-    "Echtzeit-Glukose vom FreeStyle Libre 2 und Libre 3 über LibreLinkUp",
+    "Echtzeit-Glukose vom FreeStyle Libre 2 und Libre 3 (LibreLinkUp) und vom Dexcom G6, G7 und ONE+ (Dexcom Share)",
     "Live-Aktivität auf dem Sperrbildschirm und in der Dynamic Island, jede Minute aktualisiert",
     "Widgets für Home-Bildschirm, Sperrbildschirm und StandBy",
     "Apple Watch App mit Komplikationen",
@@ -70,7 +70,7 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Trends: Zeit im Zielbereich, Durchschnittsglukose und GMI über 7 bis 90 Tage",
   ],
   fr: [
-    "Glycémie en temps réel du FreeStyle Libre 2 et Libre 3 via LibreLinkUp",
+    "Glycémie en temps réel des FreeStyle Libre 2 et Libre 3 (LibreLinkUp) et des Dexcom G6, G7 et ONE+ (Dexcom Share)",
     "Activité en direct sur l'écran verrouillé et la Dynamic Island, mise à jour chaque minute",
     "Widgets pour l'écran d'accueil, l'écran verrouillé et StandBy",
     "App Apple Watch avec complications",
@@ -80,7 +80,7 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Tendances : temps dans la cible, glycémie moyenne et GMI sur 7 à 90 jours",
   ],
   it: [
-    "Glicemia in tempo reale da FreeStyle Libre 2 e Libre 3 tramite LibreLinkUp",
+    "Glicemia in tempo reale da FreeStyle Libre 2 e Libre 3 (LibreLinkUp) e da Dexcom G6, G7 e ONE+ (Dexcom Share)",
     "Attività in tempo reale sulla schermata di blocco e nella Dynamic Island, aggiornata ogni minuto",
     "Widget per la schermata Home, la schermata di blocco e StandBy",
     "App per Apple Watch con complicazioni",
@@ -92,11 +92,11 @@ const FEATURES: Record<AppLocale, string[]> = {
 };
 
 const AUDIENCE: Record<AppLocale, string> = {
-  es: "Personas con diabetes que llevan un FreeStyle Libre y sus familias: padres de niños con diabetes tipo 1, parejas y cuidadores",
-  en: "People with diabetes who wear a FreeStyle Libre, and their families: parents of children with type 1 diabetes, partners and caregivers",
-  de: "Menschen mit Diabetes, die einen FreeStyle Libre tragen, und ihre Familien: Eltern von Kindern mit Typ-1-Diabetes, Partner und Angehörige",
-  fr: "Personnes diabétiques qui portent un FreeStyle Libre, et leurs familles : parents d'enfants atteints de diabète de type 1, conjoints et aidants",
-  it: "Persone con diabete che usano un FreeStyle Libre e le loro famiglie: genitori di bambini con diabete di tipo 1, partner e caregiver",
+  es: "Personas con diabetes que llevan un FreeStyle Libre o un Dexcom y sus familias: padres de niños con diabetes tipo 1, parejas y cuidadores",
+  en: "People with diabetes who wear a FreeStyle Libre or a Dexcom, and their families: parents of children with type 1 diabetes, partners and caregivers",
+  de: "Menschen mit Diabetes, die einen FreeStyle Libre oder einen Dexcom tragen, und ihre Familien: Eltern von Kindern mit Typ-1-Diabetes, Partner und Angehörige",
+  fr: "Personnes diabétiques qui portent un FreeStyle Libre ou un Dexcom, et leurs familles : parents d'enfants atteints de diabète de type 1, conjoints et aidants",
+  it: "Persone con diabete che usano un FreeStyle Libre o un Dexcom e le loro famiglie: genitori di bambini con diabete di tipo 1, partner e caregiver",
 };
 
 function appSchema(locale: AppLocale, description: string) {
