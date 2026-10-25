@@ -168,8 +168,8 @@ ring on silent (critical-alerts entitlement).
 
 Open:
 
-0. **Google Analytics:** property and ID done (2026-10-25). Still to do in GA: Admin → Product links → Search
-   Console links → link `dulceglucosa.com`; Admin → Events → mark `app_store_click` as a key event. Have the
+0. **Google Analytics:** property, ID and Search Console link (Domain property) done 2026-10-25. Still to do in GA:
+   Reports → Library → publish the Search Console collection; Admin → Events → mark `app_store_click` as a key event. Have the
    Cookie Policy wording checked by whoever reviews the legal pages.
 
 1. **Merge the two `i18n/fr-it` PRs** (website and app). Ship an app release with the app one, then add the
