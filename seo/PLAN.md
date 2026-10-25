@@ -99,6 +99,11 @@ questions around them. Being the best answer means the product actually does it 
       of Dulce, Sweet Dreams, Gluroo and LibreLinkUp from their App Store listings (checked 2026-10-24, sources
       listed) and a "switch in a minute" how-to (same LibreLinkUp account). Linked from `lock-screen`. Re-check
       competitor facts every few months; never claim Dexcom for Dulce until it ships.
+- [x] 2026-10-25: App Store Connect 1.0.4 filled for de/fr/it (fr and it added): localized names from `aso.md`
+      (Blutzucker im Blick, Glycémie en direct, Glicemia sott'occhio), subtitles, keywords, promotional text,
+      What's New, fr/it descriptions translated from the English one, localized privacy URLs. No CGM brand names
+      in any listing text (owner rule), so the `aso.md` promo/description lines were made generic ("CGM"). en and
+      es got What's New + promo too. Screenshots for fr/it still English (owner).
 - [x] 2026-10-24: Google Analytics 4 behind a consent banner (5 languages). Live since 2026-10-25
       (`G-5XLM2DQ2XQ`, set in Vercel Production + Preview). The banner shows only in the EEA, UK and Switzerland
       (or an unknown country): `proxy.ts` puts Vercel's `x-vercel-ip-country` in the `dulce-region` session cookie.
