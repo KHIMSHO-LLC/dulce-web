@@ -77,3 +77,11 @@ Each daily run appends one entry: date, what was published or improved, target q
   practice ID via Connected Apps → LibreView), LibreLinkUp FAQs, Battelino 2019. Left out claims I couldn't confirm
   (exact Abbott menu labels per language, whether LibreView is free, removing a practice from the app).
 - `npm run check:content` (13 articles, 0 errors, 0 warnings) and `npm run build` passed.
+
+## 2026-10-25 (1.0.4 on the site, by hand)
+
+- Owner decision: present 1.0.4 as live before App Review finishes. New guide `dexcom` in es/en/de/fr/it (Dexcom on
+  Apple Watch, Lock Screen and CarPlay; target queries "dexcom apple watch", "dexcom lock screen", "dexcom carplay",
+  "dexcom follow alternative"). Home sensors card, FAQ, featureList and `/llms.txt` now list Dexcom G6/G7/ONE+;
+  "Nightscout on the way" removed. Comparison guide updated in 5 languages. IndexNow: 133 URLs.
+- App Store Connect 1.0.4: de/fr/it localized (names, subtitles, keywords, promo, What's New; fr/it new).

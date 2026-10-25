@@ -10,7 +10,7 @@ localizations in App Store Connect with that release, not before (the listing mu
 
 ## Rules this follows (why it differs from the external briefs)
 
-- **Only released features.** No Dexcom until it ships (guideline 2.3.1, and it misleads users). No "chat" or
+- **Only released features.** Dexcom ships in 1.0.4, but the store listing stays brand-free (owner rule, see below) (guideline 2.3.1, and it misleads users). No "chat" or
   "coordinate insulin": followers send short messages and the wearer replies "I'm OK".
 - **No trademarks in keywords** (guideline 2.3.7): no "apple", "dexcom", "libre", "freestyle". Saying the app
   works with FreeStyle Libre in the description and promotional text is fine.

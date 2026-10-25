@@ -18,8 +18,11 @@ questions around them. Being the best answer means the product actually does it 
 
 ## Ground truth (checked in code 2026-10-22; re-check before claiming anything)
 
-- Released: FreeStyle Libre 2/3 via LibreLinkUp only. Dulce shows one person per LibreLinkUp account (the first
-  connection). **Dexcom and Nightscout are not released** (commented out in onboarding); Android not released.
+- Released (treated as live from 2026-10-25 by owner decision, 1.0.4): FreeStyle Libre 2/3 via LibreLinkUp, and
+  Dexcom G6/G7/ONE+ via Dexcom Share (the wearer's own Dexcom account, Share on, at least one follower; region
+  US / Japan / outside the US; a reading every 5 minutes; sensor expiry reminders stay in the Dexcom app).
+  Dulce shows one person per LibreLinkUp account (the first connection). **Nightscout is not released**; Android
+  not released. If 1.0.4 is rejected or slips, revert the Dexcom and fr/it claims.
 - Family: up to 3 followers by link/code (Pro for the wearer, free for followers); followers get their own alerts,
   quiet hours and Live Activity; "messages" are short notifications ("Are you OK?", custom text) answered with a
   one-tap "I'm OK". **Not a chat**, never tied to insulin dosing.
@@ -31,9 +34,8 @@ questions around them. Being the best answer means the product actually does it 
   names (Dulce: Blutzucker im Blick / Dulce : Glycémie en direct / Dulce: Glicemia sott'occhio).
 - CarPlay: there is no CarPlay app, but on iOS 26 the Live Activity (Pro) shows on the CarPlay dashboard. True
   since 1.0.3; 1.0.4 has a bigger, glanceable layout there.
-- **1.0.4 is in App Review (submitted 2026-10-25, build 69).** It adds Dexcom (Dexcom Share / Follow, a reading
-  every 5 minutes), the app in French and Italian, mmol/L everywhere, the new design. Until Apple approves it and
-  it is on the App Store, everything above about "not released" still holds: no Dexcom claims anywhere.
+- 1.0.4 (submitted 2026-10-25, build 69): Dexcom, the app in French and Italian, mmol/L everywhere, the new
+  design. The owner decided on 2026-10-25 to present it as live on the website ahead of approval.
 
 ## Rejected ideas from external briefs (don't re-adopt)
 
@@ -131,21 +133,14 @@ questions around them. Being the best answer means the product actually does it 
 
 ## Next for Claude (in order)
 
-0. **Release day for 1.0.4** (only after it shows on the App Store: check the version history on
-   apps.apple.com/app/id6770694596 first; never on "approved" alone, the owner may release manually):
-   - [ ] Update "Ground truth": Dexcom released, fr/it app released, 1.0.4 features.
-   - [ ] `scripts/check-content.mts`: drop `dexcom` from `UNRELEASED` (keep the Nightscout and Android guards).
-   - [ ] Comparison guide `glucose-apps-compared` (5 languages): Dulce "Other sensors" = Dexcom; rewrite the
-         "Sweet Dreams is stronger for Dexcom" lines; bump dateModified.
-   - [ ] New article in 5 languages: Dexcom on Apple Watch / Lock Screen / CarPlay with Dulce (Dexcom Share must be
-         on; same follower login idea as LibreLinkUp; 5-minute cadence; what the Dexcom app keeps: sensor
-         reminders). Then the "Dexcom Follow / Sugarmate alternative" angle.
-   - [ ] Home FAQ + `FEATURES` (featureList), `/llms.txt`, `/llms-full.txt`, `seo/aso.md` ground truth: Dexcom,
-         mmol/L, fr/it app. Store listing texts stay brand-free (owner rule).
-   - [ ] `npm run indexnow`; Search Console: resubmit sitemap, request indexing for the new article and the fr/it
-         home pages.
-   - [ ] Log it in `seo/log.md`. If 1.0.4 is rejected or slips more than a few days, revert the fr/it wording
-         (item 1).
+0. **1.0.4 on the website** (done 2026-10-25, owner decision to publish before approval):
+   - [x] "Ground truth" updated; `scripts/check-content.mts` no longer blocks Dexcom (Nightscout/Android still do).
+   - [x] Comparison guide (5 languages): Dulce reads Dexcom, Sweet Dreams no longer "the choice for Dexcom".
+   - [x] New guide `dexcom` in 5 languages (Dexcom Share, setup, Lock Screen / Watch / CarPlay, troubleshooting).
+   - [x] Home sensors card + FAQ + featureList + audience, `/llms.txt`. IndexNow pinged (133 URLs).
+   - [ ] Search Console: resubmit sitemap, request indexing for the Dexcom guide (en first) and fr/it home pages.
+   - [ ] Next Dexcom content: "Dexcom Follow / Sugarmate alternative"; Dexcom in the alerts and family guides.
+   - If 1.0.4 is rejected or slips more than a few days: revert the Dexcom and fr/it claims.
 
 1. Done 2026-10-22 (ahead of the app release, at Giorgi's request): the home FAQ and `/llms.txt` say the app is
    in French and Italian. If the fr/it app release slips by more than a few days, revert that wording.
@@ -183,7 +178,7 @@ silent (critical-alerts entitlement). CarPlay is even: Dulce's Live Activity sho
 
 - [x] Comparison + switching guide `glucose-apps-compared` in 5 languages (Sweet Dreams alternative).
 - [ ] Re-check competitor App Store listings every 3 months; update the table and dateModified.
-- [ ] After Dexcom ships (1.0.4): add Dexcom to the guide and a "Dexcom Follow / Sugarmate alternative" angle.
+- [x] Dexcom added to the comparison guide (2026-10-25). Still to write: "Dexcom Follow / Sugarmate alternative".
 - [ ] Giorgi: **Apple Search Ads** campaign on competitor and category keywords ("sweet dreams diabetes",
       "librelinkup", "libre apple watch") in Spain, Germany, France, Italy, Mexico; bidding on competitor names
       is allowed in Search Ads, but App Store **metadata must never name competitors** (guideline 2.3.7).

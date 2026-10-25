@@ -23,8 +23,8 @@ Calculators: `app/[locale]/tools/*`, formulas in `lib/tools.ts`, explanations in
 
 ## Rules (non-negotiable)
 
-1. **Only what the released app does.** Check `dulce-app` on `main` (the released branch), never a feature
-   branch. Dexcom and Nightscout are NOT released; Android is NOT released. Use the app's exact UI labels from
+1. **Only what the released app does.** From 1.0.4 (live on the site since 2026-10-25) the released line is
+   `dulce-app` `release/1.0.4`. Dexcom (G6/G7/ONE+ via Dexcom Share) is released; Nightscout and Android are NOT. Use the app's exact UI labels from
    `dulce-app/src/locales/{en,es-ES,de}/common.json` on `main` when naming buttons or settings.
 2. **No invented facts.** Medical numbers need a source listed at the end (consensus papers, ADA, Abbott docs).
    No invented anecdotes, quotes, user counts or statistics. Authors are real people
