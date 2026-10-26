@@ -143,7 +143,7 @@ questions around them. Being the best answer means the product actually does it 
    - [x] 2026-10-26: `dexcom-follow-alternative` (Dexcom Follow / Sugarmate alternative) in 5 languages; Dexcom
          added to the alerts and family-sharing guides; the Dexcom guide links to the new article.
    - [ ] Search Console: request indexing for the es/de/fr/it Dexcom guides and the 5 `dexcom-follow-alternative`
-         URLs, a few per day (started 2026-10-26).
+         URLs, a few per day. Done: en `dexcom-follow-alternative` (2026-10-26).
    - If 1.0.4 is rejected or slips more than a few days: revert the Dexcom and fr/it claims.
 
 1. Done 2026-10-22 (ahead of the app release, at Giorgi's request): the home FAQ and `/llms.txt` say the app is
