@@ -42,6 +42,26 @@ export interface RefCode {
   stats: CodeStats;
   paidThrough: number | null;
   owed: Owed;
+  /** Token behind the partner's read-only stats link; absent until created. */
+  viewToken?: string;
+}
+
+/** What /ref/partner returns: one code's numbers, as its partner sees them. */
+export interface PartnerStats {
+  code: string;
+  status: RefCode["status"];
+  payout: Payout;
+  createdAt: number;
+  stats: CodeStats;
+  owed: Owed;
+  earned: Owed;
+  paidThrough: number | null;
+}
+
+/** The partner's stats page; the code and token ride in the URL fragment so
+ *  they never reach a server log. */
+export function partnerStatsUrl(origin: string, code: string, viewToken: string): string {
+  return `${origin}/partners/stats#${code}.${viewToken}`;
 }
 
 export type LifecycleEvent = "signup" | "logout" | "uninstall" | "upgrade" | "downgrade";
@@ -207,6 +227,21 @@ export async function deleteCode(adminKey: string, code: string): Promise<void> 
   await request<void>(adminKey, `/ref/admin/codes/${encodeURIComponent(code)}`, {
     method: "DELETE",
   });
+}
+
+/** Creates the code's partner link, or replaces it (the old link stops working). */
+export async function createPartnerLink(adminKey: string, code: string): Promise<string> {
+  const data = await request<{ viewToken: string }>(
+    adminKey,
+    `/ref/admin/codes/${encodeURIComponent(code)}/partner-link`,
+    { method: "POST", body: JSON.stringify({}) },
+  );
+  return data.viewToken;
+}
+
+/** Read-only stats for one code, authorised by its view token (not the admin key). */
+export async function fetchPartnerStats(code: string, viewToken: string): Promise<PartnerStats> {
+  return request<PartnerStats>(viewToken, `/ref/partner?code=${encodeURIComponent(code)}`);
 }
 
 export async function markPaid(adminKey: string, code: string): Promise<RefCode> {

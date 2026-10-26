@@ -9,6 +9,7 @@ type Props = {
   onTogglePause: (code: RefCode) => Promise<void>;
   onDelete: (code: RefCode) => Promise<void>;
   onMarkPaid: (code: RefCode) => Promise<void>;
+  onPartnerLink: (code: RefCode, renew: boolean) => Promise<void>;
 };
 
 function formatDate(ms: number | null): string {
@@ -87,7 +88,7 @@ function ConfirmButton({
   );
 }
 
-export function CodesTable({ codes, busyCode, onTogglePause, onDelete, onMarkPaid }: Props) {
+export function CodesTable({ codes, busyCode, onTogglePause, onDelete, onMarkPaid, onPartnerLink }: Props) {
   if (codes.length === 0) {
     return (
       <div className="bg-card rounded-[var(--radius-card)] border border-border-subtle p-10 text-center text-muted">
@@ -149,16 +150,33 @@ export function CodesTable({ codes, busyCode, onTogglePause, onDelete, onMarkPai
                     >
                       {c.status === "active" ? "Pause" : "Resume"}
                     </button>
+                    <button
+                      type="button"
+                      disabled={busy}
+                      onClick={() => onPartnerLink(c, false)}
+                      className="text-caption font-semibold text-accent hover:text-accent-hover disabled:opacity-50"
+                    >
+                      {c.viewToken ? "Copy partner link" : "Create partner link"}
+                    </button>
+                    {c.viewToken ? (
+                      <ConfirmButton
+                        label="New link"
+                        confirmLabel="Confirm (old link stops working)"
+                        disabled={busy}
+                        className="text-caption font-semibold text-accent hover:text-accent-hover disabled:opacity-50"
+                        onConfirm={() => onPartnerLink(c, true)}
+                      />
+                    ) : null}
                     <ConfirmButton
                       label="Mark paid"
-                      confirmLabel={`Confirmar (resetea contador desde hoy)`}
+                      confirmLabel="Confirm (owed resets from today)"
                       disabled={busy}
                       className="text-caption font-semibold text-accent hover:text-accent-hover disabled:opacity-50"
                       onConfirm={() => onMarkPaid(c)}
                     />
                     <ConfirmButton
                       label="Delete"
-                      confirmLabel="Confirmar borrado"
+                      confirmLabel="Confirm delete"
                       disabled={busy}
                       className="text-caption font-semibold text-state-low hover:opacity-80 disabled:opacity-50"
                       onConfirm={() => onDelete(c)}

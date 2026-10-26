@@ -13,19 +13,21 @@ import { useCallback, useEffect, useState } from "react";
 import {
   UnauthorizedError,
   createCode,
+  createPartnerLink,
   deleteCode,
   fetchCodes,
   fetchOfferings,
   markPaid,
+  partnerStatsUrl,
   patchCode,
   RELAY_URL,
   type NewCodeInput,
   type Offering,
   type RefCode,
-} from "./api";
-import { AddCodeForm } from "./AddCodeForm";
-import { CodesTable } from "./CodesTable";
-import { useAdmin } from "./AdminGate";
+} from "../api";
+import { AddCodeForm } from "../AddCodeForm";
+import { CodesTable } from "../CodesTable";
+import { useAdmin } from "../AdminGate";
 
 export default function ReferralsPage() {
   const { adminKey, onUnauthorized } = useAdmin();
@@ -35,6 +37,7 @@ export default function ReferralsPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [busyCode, setBusyCode] = useState<string | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
 
   const loadAll = useCallback(
     async (key: string) => {
@@ -116,6 +119,28 @@ export default function ReferralsPage() {
     setBusyCode(null);
   }
 
+  /** Copies the code's partner link, creating it first if needed. `renew`
+   *  replaces the token, so the previously shared link stops working. */
+  async function handlePartnerLink(code: RefCode, renew: boolean): Promise<void> {
+    setBusyCode(code.code);
+    await withActionErrorHandling(async () => {
+      let token = code.viewToken;
+      if (!token || renew) {
+        token = await createPartnerLink(adminKey, code.code);
+        const viewToken = token;
+        setCodes((prev) => prev.map((c) => (c.code === code.code ? { ...c, viewToken } : c)));
+      }
+      const url = partnerStatsUrl(window.location.origin, code.code, token);
+      try {
+        await navigator.clipboard.writeText(url);
+        setNotice(`Partner link for ${code.code} copied. Send it only to that partner.`);
+      } catch {
+        setNotice(`Partner link for ${code.code}: ${url}`);
+      }
+    });
+    setBusyCode(null);
+  }
+
   return (
     <div className="container-page py-10">
       <div className="flex flex-wrap items-start justify-between gap-4">
@@ -141,6 +166,12 @@ export default function ReferralsPage() {
         </div>
       ) : null}
 
+      {notice ? (
+        <div className="mt-6 rounded-[var(--radius-card)] border border-state-in-range/30 bg-state-in-range/10 p-4 text-label text-foreground break-all">
+          {notice}
+        </div>
+      ) : null}
+
       <div className="mt-8">
         <AddCodeForm offerings={offerings} onCreate={handleCreate} />
       </div>
@@ -157,6 +188,7 @@ export default function ReferralsPage() {
             onTogglePause={handleTogglePause}
             onDelete={handleDelete}
             onMarkPaid={handleMarkPaid}
+            onPartnerLink={handlePartnerLink}
           />
         )}
       </div>

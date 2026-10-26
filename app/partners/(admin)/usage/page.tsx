@@ -16,9 +16,9 @@ import {
   fetchUsage,
   type LifecycleEvent,
   type UsageResponse,
-} from "../api";
-import { useAdmin } from "../AdminGate";
-import { BarChart, LineChart } from "../charts";
+} from "../../api";
+import { useAdmin } from "../../AdminGate";
+import { BarChart, LineChart } from "../../charts";
 
 /** Status colours, deliberately NOT the categorical series palette: these
  *  encode good/bad state, and each ships with its own title so the colour is

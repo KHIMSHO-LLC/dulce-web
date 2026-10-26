@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "../globals.css";
-import { AdminGate } from "./AdminGate";
 
 /**
  * Standalone root layout for /partners. This route lives OUTSIDE
@@ -29,8 +28,9 @@ export default function PartnersLayout({ children }: { children: React.ReactNode
   return (
     <html lang="es" className={`${nunito.variable} h-full antialiased`} suppressHydrationWarning>
       <body className="min-h-full bg-background text-foreground" suppressHydrationWarning>
-        {/* One login + one nav shared by every tab in this route group. */}
-        <AdminGate>{children}</AdminGate>
+        {/* The admin login lives in (admin)/layout.tsx; /partners/stats is the
+            partners' own read-only page and has no admin login. */}
+        {children}
       </body>
     </html>
   );
