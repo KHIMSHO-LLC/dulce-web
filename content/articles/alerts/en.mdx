@@ -1,7 +1,7 @@
 A glucose alert has to do two things at once: wake you when it really matters and leave you alone when it doesn't. If it goes off for everything, you end up muting it, and then it's useless. This guide covers every alert in Dulce, its defaults, and how to tune it so it helps without wearing you out.
 
 <Callout type="warning">
-Dulce doesn't replace your sensor's alarms. If you use FreeStyle Libre 2 or Libre 3, keep the Libre app's alarms on. Dulce is an extra layer, not the only one.
+Dulce doesn't replace your sensor's alarms. If you use FreeStyle Libre 2 or Libre 3, keep the Libre app's alarms on; with a Dexcom, keep the Dexcom app's alarms on. Dulce is an extra layer, not the only one.
 </Callout>
 
 ## Where to set them
@@ -45,7 +45,7 @@ It looks at how fast your glucose has been falling over the last few minutes and
 
 ## Do they arrive with the app closed?
 
-Yes. They don't depend on Dulce being open: Dulce's server checks your LibreLinkUp readings and sends you the alert. With Dulce Pro it does this every minute; with the free version, every 5 minutes.
+Yes. They don't depend on Dulce being open: Dulce's server checks your readings (from LibreLinkUp or Dexcom Share) and sends you the alert. With Dulce Pro it does this every minute; with the free version, every 5 minutes. A Dexcom shares a new reading every 5 minutes, so with a Dexcom alerts follow that rhythm; see the <ArticleLink to="dexcom">Dexcom guide</ArticleLink>.
 
 If you wear an Apple Watch, iOS sends the alert to the watch when your iPhone is locked, and it taps your wrist. More in the <ArticleLink to="apple-watch">Apple Watch guide</ArticleLink>.
 
@@ -56,5 +56,5 @@ Your followers can get their own alerts when you go low or high, with their own 
 ## If an alert doesn't arrive
 
 1. Check that Dulce's **Notifications** switch is on and that iOS allows notifications from Dulce.
-2. Look at the time of the last reading in Dulce. If it's old, the problem is that no data is reaching LibreLinkUp: follow the <ArticleLink to="librelinkup-not-working">LibreLinkUp no-data guide</ArticleLink>.
+2. Look at the time of the last reading in Dulce. If it's old, the problem is that no data is reaching LibreLinkUp: follow the <ArticleLink to="librelinkup-not-working">LibreLinkUp no-data guide</ArticleLink>. With a Dexcom, check that Share is still on in the Dexcom app.
 3. Check whether quiet hours or snooze are on.

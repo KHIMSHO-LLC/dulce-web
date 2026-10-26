@@ -1,7 +1,7 @@
 Une alerte de glycémie doit faire deux choses à la fois : te réveiller quand ça compte vraiment et te laisser tranquille quand ce n'est pas le cas. Si elle sonne pour tout, tu finis par la couper, et elle ne sert plus à rien. Ce guide passe en revue toutes les alertes de Dulce, leurs réglages par défaut et comment les ajuster pour qu'elles aident sans t'épuiser.
 
 <Callout type="warning">
-Dulce ne remplace pas les alarmes de ton capteur. Si tu utilises un FreeStyle Libre 2 ou Libre 3, garde les alarmes de l'app Libre activées. Dulce est une couche de plus, pas la seule.
+Dulce ne remplace pas les alarmes de ton capteur. Si tu utilises un FreeStyle Libre 2 ou Libre 3, garde les alarmes de l'app Libre activées ; avec un Dexcom, celles de l'app Dexcom. Dulce est une couche de plus, pas la seule.
 </Callout>
 
 ## Où les régler
@@ -45,7 +45,7 @@ Elle regarde à quelle vitesse ta glycémie a baissé ces dernières minutes et 
 
 ## Arrivent-elles avec l'app fermée ?
 
-Oui. Elles ne dépendent pas de Dulce ouvert : le serveur de Dulce vérifie tes mesures LibreLinkUp et t'envoie l'alerte. Avec Dulce Pro, il le fait chaque minute ; avec la version gratuite, toutes les 5 minutes.
+Oui. Elles ne dépendent pas de Dulce ouvert : le serveur de Dulce vérifie tes mesures (de LibreLinkUp ou de Dexcom Share) et t'envoie l'alerte. Avec Dulce Pro, il le fait chaque minute ; avec la version gratuite, toutes les 5 minutes. Dexcom partage une nouvelle mesure toutes les 5 minutes, donc avec un Dexcom les alertes suivent ce rythme ; voir le <ArticleLink to="dexcom">guide Dexcom</ArticleLink>.
 
 Si tu portes une Apple Watch, iOS envoie l'alerte à la montre quand ton iPhone est verrouillé, et elle te tapote le poignet. Plus de détails dans le <ArticleLink to="apple-watch">guide Apple Watch</ArticleLink>.
 
@@ -56,5 +56,5 @@ Tes abonnés peuvent recevoir leurs propres alertes quand tu es en hypo ou en hy
 ## Si une alerte n'arrive pas
 
 1. Vérifie que l'interrupteur **Notifications** de Dulce est activé et qu'iOS autorise les notifications de Dulce.
-2. Regarde l'heure de la dernière mesure dans Dulce. Si elle est ancienne, le problème est qu'aucune donnée n'arrive à LibreLinkUp : suis le <ArticleLink to="librelinkup-not-working">guide LibreLinkUp sans données</ArticleLink>.
+2. Regarde l'heure de la dernière mesure dans Dulce. Si elle est ancienne, le problème est qu'aucune donnée n'arrive à LibreLinkUp : suis le <ArticleLink to="librelinkup-not-working">guide LibreLinkUp sans données</ArticleLink>. Avec un Dexcom, vérifie que le partage est toujours activé dans l'app Dexcom.
 3. Vérifie si les heures calmes ou la suspension sont actives.

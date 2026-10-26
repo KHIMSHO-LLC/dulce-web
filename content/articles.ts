@@ -209,7 +209,7 @@ export const ARTICLES: readonly Article[] = [
     category: "guide",
     author: "levan",
     datePublished: "2026-07-16",
-    dateModified: "2026-10-24",
+    dateModified: "2026-10-26",
     slug: {
       es: "compartir-glucosa-cgm-con-familia",
       en: "sharing-cgm-glucose-with-family",
@@ -432,7 +432,7 @@ export const ARTICLES: readonly Article[] = [
     category: "guide",
     author: "giorgi",
     datePublished: "2026-10-19",
-    dateModified: "2026-10-24",
+    dateModified: "2026-10-26",
     slug: {
       es: "alarmas-de-glucosa-en-el-iphone",
       en: "glucose-alerts-on-iphone",
@@ -1101,7 +1101,7 @@ export const ARTICLES: readonly Article[] = [
     category: "guide",
     author: "giorgi",
     datePublished: "2026-10-25",
-    dateModified: "2026-10-25",
+    dateModified: "2026-10-26",
     slug: {
       es: "dexcom-en-apple-watch-y-pantalla-de-bloqueo",
       en: "dexcom-on-apple-watch-and-lock-screen",
@@ -1138,7 +1138,7 @@ export const ARTICLES: readonly Article[] = [
       fr: "La glycémie sur l'écran verrouillé et l'Apple Watch avec Dulce",
       it: "La glicemia sulla schermata di blocco e su Apple Watch con Dulce",
     },
-    related: ["lock-screen", "apple-watch", "glucose-apps-compared"],
+    related: ["lock-screen", "apple-watch", "dexcom-follow-alternative"],
     faq: {
       es: [
         { q: "¿Qué Dexcom funciona con Dulce?", a: "Dexcom G6, G7 y ONE+, a través de Dexcom Share. Compartir tiene que estar activado en la app de Dexcom, con al menos un seguidor invitado." },
@@ -1164,6 +1164,77 @@ export const ARTICLES: readonly Article[] = [
         { q: "Quali Dexcom funzionano con Dulce?", a: "Dexcom G6, G7 e ONE+, tramite Dexcom Share. La condivisione deve essere attiva nell'app Dexcom, con almeno un follower invitato." },
         { q: "Con quale account accedo?", a: "Con il tuo account Dexcom, quello dell'app Dexcom, non con quello di un follower. Scegli anche la regione in cui l'hai creato: Stati Uniti, Giappone o Fuori dagli Stati Uniti." },
         { q: "Ogni quanto si aggiorna?", a: "Dexcom condivide una nuova lettura ogni 5 minuti e Dulce si aggiorna con ognuna, anche sulla schermata di blocco e sull'orologio." },
+      ],
+    },
+  },
+  {
+    id: "dexcom-follow-alternative",
+    category: "guide",
+    author: "giorgi",
+    datePublished: "2026-10-26",
+    dateModified: "2026-10-26",
+    slug: {
+      es: "alternativa-dexcom-follow-sugarmate",
+      en: "dexcom-follow-sugarmate-alternative",
+      de: "dexcom-follow-sugarmate-alternative",
+      fr: "alternative-dexcom-follow-sugarmate",
+      it: "alternativa-dexcom-follow-sugarmate",
+    },
+    title: {
+      es: "Alternativa a Dexcom Follow y Sugarmate en el iPhone",
+      en: "A Dexcom Follow and Sugarmate alternative for iPhone",
+      de: "Alternative zu Dexcom Follow und Sugarmate fürs iPhone",
+      fr: "Une alternative à Dexcom Follow et Sugarmate sur iPhone",
+      it: "Un'alternativa a Dexcom Follow e Sugarmate su iPhone",
+    },
+    description: {
+      es: "Dexcom Follow, Sugarmate y Dulce comparadas con honestidad: pantalla de bloqueo, Apple Watch, CarPlay, avisos, familia y precio, y cuándo conviene cada una.",
+      en: "Dexcom Follow, Sugarmate and Dulce compared honestly: Lock Screen, Apple Watch, CarPlay, alerts, family and price, and when each one is the better pick.",
+      de: "Dexcom Follow, Sugarmate und Dulce ehrlich verglichen: Sperrbildschirm, Apple Watch, CarPlay, Alarme, Familie und Preis, und wann welche App besser passt.",
+      fr: "Dexcom Follow, Sugarmate et Dulce comparées honnêtement : écran verrouillé, Apple Watch, CarPlay, alertes, famille et prix, et quand choisir chacune.",
+      it: "Dexcom Follow, Sugarmate e Dulce a confronto onesto: schermata di blocco, Apple Watch, CarPlay, avvisi, famiglia e prezzo, e quando conviene ciascuna.",
+    },
+    keywords: {
+      es: ["alternativa dexcom follow", "alternativa sugarmate", "dexcom follow iphone", "sugarmate dexcom", "dexcom follow widget"],
+      en: ["dexcom follow alternative", "sugarmate alternative", "dexcom follow widget", "sugarmate vs dexcom follow", "dexcom follow apple watch"],
+      de: ["dexcom follow alternative", "sugarmate alternative", "dexcom follow widget", "dexcom follow apple watch", "sugarmate deutsch"],
+      fr: ["alternative dexcom follow", "alternative sugarmate", "dexcom follow widget", "dexcom follow apple watch", "sugarmate français"],
+      it: ["alternativa dexcom follow", "alternativa sugarmate", "dexcom follow widget", "dexcom follow apple watch", "sugarmate italiano"],
+    },
+    image: "/guides/family-followers.jpg",
+    imageAlt: {
+      es: "Pantalla de seguidores de Dulce con un mensaje de la familia",
+      en: "Dulce followers screen with a family message",
+      de: "Follower-Bildschirm von Dulce mit einer Nachricht aus der Familie",
+      fr: "Écran des abonnés de Dulce avec un message de la famille",
+      it: "Schermata dei follower di Dulce con un messaggio della famiglia",
+    },
+    related: ["dexcom", "family-sharing", "glucose-apps-compared"],
+    faq: {
+      es: [
+        { q: "¿Puedo usar Dulce y Dexcom Follow a la vez?", a: "Sí. Las dos leen de Dexcom Share y no cambian nada en el sensor ni en la app de Dexcom. Un seguidor de Dexcom Follow ya cuenta como el seguidor que Dexcom exige para compartir." },
+        { q: "¿Puedo entrar en Dulce con mi cuenta de seguidor de Dexcom Follow?", a: "No. Dulce necesita la cuenta de Dexcom de quien lleva el sensor. Para seguir a alguien, que te invite desde Dulce o entra con su cuenta si la gestionas tú.", link: "child-glucose" },
+        { q: "¿Los avisos de Dulce suenan con el iPhone en silencio?", a: "No. Son notificaciones normales y siguen los ajustes de sonido del iPhone. Si necesitas avisos que suenen en silencio, mantén las alarmas de Dexcom o usa una app que las ofrezca.", link: "alerts" },
+      ],
+      en: [
+        { q: "Can I use Dulce and Dexcom Follow at the same time?", a: "Yes. Both read from Dexcom Share and change nothing on the sensor or in the Dexcom app. A Dexcom Follow follower already counts as the follower Dexcom needs before it shares." },
+        { q: "Can I sign in to Dulce with my Dexcom Follow follower account?", a: "No. Dulce needs the Dexcom account of the person wearing the sensor. To follow someone, have them invite you from Dulce, or sign in with their account if you look after it.", link: "child-glucose" },
+        { q: "Do Dulce's alerts ring when the iPhone is on silent?", a: "No. They are regular notifications and follow the iPhone's sound settings. If you need alerts that ring on silent, keep the Dexcom alarms on or use an app that offers them.", link: "alerts" },
+      ],
+      de: [
+        { q: "Kann ich Dulce und Dexcom Follow gleichzeitig nutzen?", a: "Ja. Beide lesen über Dexcom Share und ändern nichts am Sensor oder in der Dexcom-App. Ein Follower in Dexcom Follow zählt bereits als der Follower, den Dexcom zum Teilen verlangt." },
+        { q: "Kann ich mich mit meinem Follower-Konto von Dexcom Follow bei Dulce anmelden?", a: "Nein. Dulce braucht das Dexcom-Konto der Person, die den Sensor trägt. Um jemandem zu folgen, lass dich aus Dulce einladen oder melde dich mit ihrem Konto an, wenn du es verwaltest.", link: "child-glucose" },
+        { q: "Klingeln die Alarme von Dulce, wenn das iPhone stumm ist?", a: "Nein. Es sind normale Mitteilungen, die den Toneinstellungen des iPhones folgen. Brauchst du Alarme, die auch stumm klingeln, lass die Dexcom-Alarme an oder nutze eine App, die das bietet.", link: "alerts" },
+      ],
+      fr: [
+        { q: "Puis-je utiliser Dulce et Dexcom Follow en même temps ?", a: "Oui. Les deux lisent via Dexcom Share et ne changent rien au capteur ni à l'app Dexcom. Un abonné Dexcom Follow compte déjà comme l'abonné que Dexcom exige pour partager." },
+        { q: "Puis-je me connecter à Dulce avec mon compte d'abonné Dexcom Follow ?", a: "Non. Dulce a besoin du compte Dexcom de la personne qui porte le capteur. Pour suivre quelqu'un, fais-toi inviter depuis Dulce ou connecte-toi avec son compte si c'est toi qui le gères.", link: "child-glucose" },
+        { q: "Les alertes de Dulce sonnent-elles iPhone en silencieux ?", a: "Non. Ce sont des notifications normales qui suivent les réglages de son de l'iPhone. S'il te faut des alertes qui sonnent en silencieux, garde les alarmes Dexcom ou utilise une app qui les propose.", link: "alerts" },
+      ],
+      it: [
+        { q: "Posso usare Dulce e Dexcom Follow insieme?", a: "Sì. Entrambe leggono da Dexcom Share e non cambiano nulla sul sensore né nell'app Dexcom. Un follower di Dexcom Follow conta già come il follower che Dexcom richiede per condividere." },
+        { q: "Posso accedere a Dulce con il mio account da follower di Dexcom Follow?", a: "No. Dulce ha bisogno dell'account Dexcom di chi porta il sensore. Per seguire qualcuno, fatti invitare da Dulce oppure accedi con il suo account se lo gestisci tu.", link: "child-glucose" },
+        { q: "Gli avvisi di Dulce suonano con l'iPhone in silenzioso?", a: "No. Sono notifiche normali e seguono le impostazioni audio dell'iPhone. Se ti servono avvisi che suonino in silenzioso, tieni attivi gli allarmi Dexcom o usa un'app che li offre.", link: "alerts" },
       ],
     },
   },

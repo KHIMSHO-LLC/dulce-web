@@ -85,3 +85,11 @@ Each daily run appends one entry: date, what was published or improved, target q
   "dexcom follow alternative"). Home sensors card, FAQ, featureList and `/llms.txt` now list Dexcom G6/G7/ONE+;
   "Nightscout on the way" removed. Comparison guide updated in 5 languages. IndexNow: 133 URLs.
 - App Store Connect 1.0.4: de/fr/it localized (names, subtitles, keywords, promo, What's New; fr/it new).
+
+## 2026-10-26 (by hand)
+
+- Published `dexcom-follow-alternative` in es/en/de/fr/it: Dexcom Follow, Sugarmate and Dulce compared from their
+  App Store listings and Dexcom's Sugarmate page (checked 2026-10-26), with where the others are the better pick
+  (25 sharers, alerts on silent, statistics). Target queries: "dexcom follow alternative", "sugarmate alternative",
+  "dexcom follow widget", "alternativa dexcom follow".
+- Alerts and family-sharing guides now cover Dexcom (alarms, 5-minute rhythm, Share troubleshooting).

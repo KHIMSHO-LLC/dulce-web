@@ -140,7 +140,10 @@ questions around them. Being the best answer means the product actually does it 
    - [x] Home sensors card + FAQ + featureList + audience, `/llms.txt`. IndexNow pinged (133 URLs).
    - [x] Search Console 2026-10-25: sitemap resubmitted, indexing requested for the English Dexcom guide. Request the
          other languages over the next days (Google limits requests per day).
-   - [ ] Next Dexcom content: "Dexcom Follow / Sugarmate alternative"; Dexcom in the alerts and family guides.
+   - [x] 2026-10-26: `dexcom-follow-alternative` (Dexcom Follow / Sugarmate alternative) in 5 languages; Dexcom
+         added to the alerts and family-sharing guides; the Dexcom guide links to the new article.
+   - [ ] Search Console: request indexing for the es/de/fr/it Dexcom guides and the 5 `dexcom-follow-alternative`
+         URLs, a few per day (started 2026-10-26).
    - If 1.0.4 is rejected or slips more than a few days: revert the Dexcom and fr/it claims.
 
 1. Done 2026-10-22 (ahead of the app release, at Giorgi's request): the home FAQ and `/llms.txt` say the app is
@@ -179,7 +182,7 @@ silent (critical-alerts entitlement). CarPlay is even: Dulce's Live Activity sho
 
 - [x] Comparison + switching guide `glucose-apps-compared` in 5 languages (Sweet Dreams alternative).
 - [ ] Re-check competitor App Store listings every 3 months; update the table and dateModified.
-- [x] Dexcom added to the comparison guide (2026-10-25). Still to write: "Dexcom Follow / Sugarmate alternative".
+- [x] Dexcom added to the comparison guide (2026-10-25). "Dexcom Follow / Sugarmate alternative" published 2026-10-26.
 - [ ] Giorgi: **Apple Search Ads** campaign on competitor and category keywords ("sweet dreams diabetes",
       "librelinkup", "libre apple watch") in Spain, Germany, France, Italy, Mexico; bidding on competitor names
       is allowed in Search Ads, but App Store **metadata must never name competitors** (guideline 2.3.7).
