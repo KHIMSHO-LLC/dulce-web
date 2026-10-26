@@ -49,7 +49,15 @@ Numbers change when Apple/RevenueCat report it. A trial turns into "Paying" abou
 
 ## Usage tab
 
-Installs, active devices, free vs paying vs trial, per day. Devices, not people.
+Devices, not people. What to look at:
+
+- **Getting readings · 24h**: the real number of active users (the relay got a new sensor reading).
+- **Paying / Trialing / Free**: what each app last reported. Your own phone is in "Paying". Check money in RevenueCat.
+- **Devices on the relay**: everything still registered, including people who stopped wearing a sensor.
+- **Onboarding**: how many people get from opening the app to connecting a sensor to starting a trial.
+- **Events**: new devices, started Pro, trial → paid, back to free, sign-outs, app deleted. Counts before
+  26 Oct 2026 are rougher: signing in again counted as a new device, trial → paid counted under "Started Pro",
+  and deleted free apps weren't counted.
 
 ## Lost the admin key?
 

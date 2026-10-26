@@ -64,17 +64,31 @@ export function partnerStatsUrl(origin: string, code: string, viewToken: string)
   return `${origin}/partners/stats#${code}.${viewToken}`;
 }
 
-export type LifecycleEvent = "signup" | "logout" | "uninstall" | "upgrade" | "downgrade";
+export type LifecycleEvent = "signup" | "logout" | "uninstall" | "upgrade" | "convert" | "downgrade";
 
 export const LIFECYCLE_EVENTS: readonly LifecycleEvent[] = [
   "signup",
+  "upgrade",
+  "convert",
+  "downgrade",
   "logout",
   "uninstall",
-  "upgrade",
-  "downgrade",
 ];
 
-export type EventCounts = Record<LifecycleEvent, number>;
+/** Days rolled up before 2026-10-26 have no `convert` (it was counted as an
+ *  upgrade), so a kind can be missing. */
+export type EventCounts = Partial<Record<LifecycleEvent, number>>;
+
+export type FunnelStep =
+  | "ob_welcome"
+  | "ob_goals"
+  | "ob_login"
+  | "ob_connected"
+  | "ob_offer"
+  | "ob_offer_declined"
+  | "ob_purchase";
+
+export type FunnelCounts = Record<FunnelStep, number>;
 
 /** A point-in-time count of what exists. */
 export interface FleetLevels {
@@ -86,8 +100,13 @@ export interface FleetLevels {
   trialing: number;
   ios: number;
   android: number;
+  /** Relay polled the session (with or without new data). */
   activeLast24h: number;
   activeLast7d: number;
+  /** Got a new sensor reading. Missing in rollups before 2026-10-26. */
+  readingLast24h?: number;
+  readingLast7d?: number;
+  unknownPlatform?: number;
   failing: number;
   paused: number;
   neverPolled: number;
@@ -114,6 +133,8 @@ export interface UsageResponse {
   today: { date: string; events: EventCounts };
   history: DailyRollup[];
   firstSeen: FirstSeenBucket[];
+  /** Distinct devices that reached each onboarding step. */
+  funnel?: { last7d: FunnelCounts; last30d: FunnelCounts };
   totals: {
     last7d: EventCounts;
     last30d: EventCounts;

@@ -14,6 +14,7 @@ import {
   LIFECYCLE_EVENTS,
   UnauthorizedError,
   fetchUsage,
+  type FunnelStep,
   type LifecycleEvent,
   type UsageResponse,
 } from "../../api";
@@ -28,18 +29,23 @@ const EVENT_META: Record<
   { title: string; blurb: string; color: string }
 > = {
   signup: {
-    title: "New connections",
-    blurb: "Connected a LibreLinkUp account for the first time",
+    title: "New devices",
+    blurb: "Connected LibreLinkUp or Dexcom for the first time (signing in again doesn't count since 26 Oct)",
     color: "#2E7D32",
   },
   upgrade: {
-    title: "Upgrades",
-    blurb: "Went from free to paid",
+    title: "Started Pro",
+    blurb: "Free → trial or paid. Mostly trial starts",
     color: "#C2410C",
   },
+  convert: {
+    title: "Trial → paid",
+    blurb: "First payment after the trial. Tracked from 26 Oct; before that it counted under Started Pro",
+    color: "#9A3412",
+  },
   downgrade: {
-    title: "Downgrades",
-    blurb: "Subscription lapsed back to free",
+    title: "Back to free",
+    blurb: "Trial ended or subscription lapsed",
     color: "#C77700",
   },
   logout: {
@@ -94,6 +100,15 @@ function Card({
   );
 }
 
+const FUNNEL_STEPS: { step: FunnelStep; label: string }[] = [
+  { step: "ob_welcome", label: "Opened the app (welcome)" },
+  { step: "ob_goals", label: "Picked goals" },
+  { step: "ob_login", label: "Reached sensor sign-in" },
+  { step: "ob_connected", label: "Connected a sensor" },
+  { step: "ob_offer", label: "Saw the Pro offer" },
+  { step: "ob_purchase", label: "Started trial / bought" },
+];
+
 export default function UsagePage() {
   const { adminKey, onUnauthorized } = useAdmin();
   const [data, setData] = useState<UsageResponse | null>(null);
@@ -128,6 +143,7 @@ export default function UsagePage() {
   const current = data?.current;
   const pct = (n: number) =>
     !current || current.total === 0 ? "0%" : `${Math.round((n / current.total) * 100)}%`;
+  const funnel = data?.funnel?.last30d;
 
   // The API returns 90 completed days plus today's partial counts. The event
   // small multiples chart the last 30: at 90 the bars collapse to one-pixel
@@ -153,7 +169,7 @@ export default function UsagePage() {
         <div>
           <h1 className="text-display font-bold tracking-tight text-foreground">Usage</h1>
           <p className="mt-1 text-label text-muted">
-            Everyone who has connected a LibreLinkUp account — free users included.
+            Every device that has connected LibreLinkUp or Dexcom, free users included.
           </p>
         </div>
         <button
@@ -180,15 +196,15 @@ export default function UsagePage() {
         <>
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             <Stat
-              label="Connected accounts"
-              value={String(current!.total)}
-              hint={`${data.totals.last7d.signup} new in the last 7 days`}
+              label="Getting readings · 24h"
+              value={String(current!.readingLast24h ?? current!.activeLast24h)}
+              hint={`${current!.readingLast7d ?? current!.activeLast7d} in the last 7 days · the real active count`}
               tone="accent"
             />
             <Stat
               label="Paying"
               value={String(current!.paid)}
-              hint={`${pct(current!.paid)} · excludes trials`}
+              hint={`${pct(current!.paid)} · as reported by the app, includes your own phone`}
             />
             <Stat
               label="Trialing"
@@ -197,38 +213,43 @@ export default function UsagePage() {
             />
             <Stat label="Free" value={String(current!.free)} hint={pct(current!.free)} />
             <Stat
-              label="Active · 24h"
-              value={String(current!.activeLast24h)}
-              hint={`${current!.activeLast7d} in the last 7 days`}
+              label="Devices on the relay"
+              value={String(current!.total)}
+              hint={`${data.totals.last7d.signup ?? 0} new in the last 7 days · includes dormant ones`}
             />
             <Stat
               label="Signed out · 30d"
-              value={String(data.totals.last30d.logout)}
-              hint={`${data.totals.last7d.logout} in the last 7 days`}
+              value={String(data.totals.last30d.logout ?? 0)}
+              hint={`${data.totals.last7d.logout ?? 0} in the last 7 days`}
             />
             <Stat
               label="App deleted · 30d"
-              value={String(data.totals.last30d.uninstall)}
-              hint={`${data.totals.last7d.uninstall} in the last 7 days`}
-              tone={data.totals.last30d.uninstall > 0 ? "warn" : "default"}
+              value={String(data.totals.last30d.uninstall ?? 0)}
+              hint={`${data.totals.last7d.uninstall ?? 0} in the last 7 days · free users counted from 26 Oct`}
+              tone={(data.totals.last30d.uninstall ?? 0) > 0 ? "warn" : "default"}
             />
             <Stat
               label="Failing sessions"
               value={String(current!.failing)}
-              hint="LibreLinkUp login expired or sharing revoked"
+              hint={`Sensor login expired or sharing off · ${current!.paused} paused`}
               tone={current!.failing > 0 ? "warn" : "default"}
+            />
+            <Stat
+              label="Not polled"
+              value={String(current!.neverPolled)}
+              hint="Free users with alerts off: the relay has nothing to do for them"
             />
             <Stat
               label="Platform"
               value={`${current!.ios} / ${current!.android}`}
-              hint={`iOS / Android · ${current!.neverPolled} never polled`}
+              hint={`iOS / Android${current!.unknownPlatform ? ` · ${current!.unknownPlatform} unknown (old rows)` : ""}`}
             />
           </div>
 
           <div className="mt-6 grid gap-3 lg:grid-cols-2">
             <Card
-              title="Connected accounts over time"
-              subtitle="Cumulative, from each device's registration date — reaches back before event tracking existed."
+              title="Devices on the relay over time"
+              subtitle="Running total of devices still registered today, by first-seen date. Deleted devices drop out of every day, so past days read low."
             >
               <LineChart
                 dates={data.firstSeen.map((b) => b.date)}
@@ -248,11 +269,48 @@ export default function UsagePage() {
                 series={[
                   { label: "Total", values: data.history.map((d) => d.levels.total) },
                   { label: "Paying", values: data.history.map((d) => d.levels.paid) },
-                  { label: "Active 7d", values: data.history.map((d) => d.levels.activeLast7d) },
+                  { label: "Polled 7d", values: data.history.map((d) => d.levels.activeLast7d) },
                 ]}
               />
             </Card>
           </div>
+
+          {funnel ? (
+            <>
+              <h2 className="mt-10 text-headline font-bold text-foreground">Onboarding · last 30 days</h2>
+              <p className="mt-1 text-label text-muted">
+                Distinct devices that reached each step. A big drop shows where people give up.
+              </p>
+              <div className="mt-4 rounded-[var(--radius-card)] border border-border-subtle bg-card p-5">
+                {FUNNEL_STEPS.map(({ step, label }) => {
+                  const n = funnel[step];
+                  const share = Math.round((n / (funnel.ob_welcome || 1)) * 100);
+                  return (
+                    <div
+                      key={step}
+                      className="grid grid-cols-[minmax(0,11rem)_1fr_auto] items-center gap-3 py-1.5"
+                    >
+                      <span className="text-label text-foreground">{label}</span>
+                      <div className="h-2 rounded-full bg-accent-soft">
+                        <div
+                          className="h-2 rounded-full bg-accent"
+                          style={{ width: `${Math.min(100, share)}%` }}
+                        />
+                      </div>
+                      <span className="w-20 text-right text-label tabular-nums text-foreground">
+                        {n} <span className="text-caption text-muted">{share}%</span>
+                      </span>
+                    </div>
+                  );
+                })}
+                <p className="mt-3 text-caption text-muted">
+                  {funnel.ob_offer_declined} closed the offer without buying. Last 7 days:{" "}
+                  {data.funnel!.last7d.ob_welcome} opened, {data.funnel!.last7d.ob_connected}{" "}
+                  connected, {data.funnel!.last7d.ob_purchase} started a trial or bought.
+                </p>
+              </div>
+            </>
+          ) : null}
 
           <h2 className="mt-10 text-headline font-bold text-foreground">Lifecycle events</h2>
           <p className="mt-1 text-label text-muted">
@@ -266,12 +324,12 @@ export default function UsagePage() {
               return (
                 <Card key={kind} title={meta.title} subtitle={meta.blurb}>
                   <p className="-mt-1 mb-3 text-display font-bold tabular-nums text-foreground">
-                    {data.totals.last30d[kind]}
+                    {data.totals.last30d[kind] ?? 0}
                     <span className="ml-2 text-caption font-normal text-muted">last 30 days</span>
                   </p>
                   <BarChart
                     dates={eventDates}
-                    values={eventDays.map((e) => e.events[kind])}
+                    values={eventDays.map((e) => e.events[kind] ?? 0)}
                     color={meta.color}
                     label={meta.title}
                   />
@@ -305,10 +363,16 @@ export default function UsagePage() {
                 anything financial.
               </li>
               <li>
-                <strong className="text-foreground">Active</strong>{" "}
-                means the relay successfully
-                polled the device&apos;s LibreLinkUp session, which needs no app launch — read it as
-                &ldquo;still installed and connected&rdquo;, not &ldquo;opened the app&rdquo;.
+                <strong className="text-foreground">Getting readings</strong>{" "}
+                means the relay received a new sensor reading for the device, which needs no app
+                launch: read it as &ldquo;still connected and wearing a sensor&rdquo;, not
+                &ldquo;opened the app&rdquo;. Devices the relay doesn&apos;t poll (free with alerts
+                off) never count here.
+              </li>
+              <li>
+                <strong className="text-foreground">Same-day flips</strong>{" "}
+                (Pro → free → Pro on one day) are left out of the event counts from 26 Oct: that is
+                the app reporting free for a moment before RevenueCat answers.
               </li>
             </ul>
             <p className="mt-3 text-caption text-muted">
