@@ -133,7 +133,7 @@ questions around them. Being the best answer means the product actually does it 
 
 ## Next for Claude (in order)
 
-0. **1.0.4 on the website** (done 2026-10-25, owner decision to publish before approval):
+0. **1.0.4 on the website** (done 2026-10-25, owner decision to publish before approval; app live 2026-10-27):
    - [x] "Ground truth" updated; `scripts/check-content.mts` no longer blocks Dexcom (Nightscout/Android still do).
    - [x] Comparison guide (5 languages): Dulce reads Dexcom, Sweet Dreams no longer "the choice for Dexcom".
    - [x] New guide `dexcom` in 5 languages (Dexcom Share, setup, Lock Screen / Watch / CarPlay, troubleshooting).
@@ -144,7 +144,6 @@ questions around them. Being the best answer means the product actually does it 
          added to the alerts and family-sharing guides; the Dexcom guide links to the new article.
    - [ ] Search Console: request indexing for the es/de/fr/it Dexcom guides and the 5 `dexcom-follow-alternative`
          URLs, a few per day. Done: en `dexcom-follow-alternative` (2026-10-26).
-   - If 1.0.4 is rejected or slips more than a few days: revert the Dexcom and fr/it claims.
 
 1. Done 2026-10-22 (ahead of the app release, at Giorgi's request): the home FAQ and `/llms.txt` say the app is
    in French and Italian. If the fr/it app release slips by more than a few days, revert that wording.
@@ -221,8 +220,13 @@ Open:
 8. ~~**Deploy the relay**~~ Done 2026-10-24 (`cd dulce-relay && npm run deploy`). Until then the status page shows "unknown" and
    French/Italian alerts are not live.
 9. ~~Merge dulce-app PR #4~~ (done 2026-10-24). ~~Build and submit 1.0.4~~ (submitted 2026-10-25, build 69, Expo
-   SDK 58). **When Apple approves it: release it, then tell Claude** so the release-day list ("Next for Claude",
-   item 0) runs. Add French and Italian screenshots in App Store Connect when you can (they show English now).
+   SDK 58). **1.0.4 is live on the App Store (2026-10-27).** The website already says so (item 0). Add French and
+   Italian screenshots in App Store Connect when you can (they show English now).
+10a. **App Store creative assets (iOS 27 product page header + search results), made 2026-10-27.** Files and upload
+   steps in `DULCE/app-store-assets/README.md` (outside the repos). Themes: default (Lock Screen + Watch), family
+   (custom product page for parent/caregiver keywords), World Diabetes Day (14 Nov, switch off after). Review the
+   search-results tap-through rate in App Analytics after 2 weeks and test header variants with product page
+   optimization.
 
 10. ~~Fix the "rings on silent" claim~~ Done 2026-10-24: pages rewritten to the real behaviour. If Apple ever
     grants the critical-alerts entitlement, the claim can come back. Was: **Fix the "rings on silent" claim (found 2026-10-23).** The released app can't ring through silent mode:
