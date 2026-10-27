@@ -341,7 +341,7 @@ export default function OverviewPage() {
           {charts.revenue && charts.revenue.dates.length ? (
             <BarChart
               dates={charts.revenue.dates}
-              values={pickSeries(charts.revenue, /revenue/i)!.values}
+              values={pickSeries(charts.revenue, /^revenue$/i)!.values}
               label="Revenue"
               color={SERIES_COLORS[2]}
               height={160}
@@ -371,11 +371,26 @@ export default function OverviewPage() {
             <Empty>{rcMissingKey ? "Needs the RevenueCat key." : "No data yet."}</Empty>
           )}
         </Card>
-        <Card title="Trial → paid" subtitle="Share of trials that turned into a payment, by trial start date (RevenueCat).">
+        <Card
+          title="Trial → paid"
+          subtitle="Share of trials that turned into a payment, by trial start date (RevenueCat). Recent trials are still pending."
+          right={(() => {
+            const t = charts.trial_conversion_rate?.summary?.total;
+            if (!t) return null;
+            return (
+              <div className="text-right">
+                <p className="text-headline font-bold tabular-nums text-foreground">{t["Conversion Rate"] ?? 0}%</p>
+                <p className="text-caption text-muted">
+                  {t["Conversions"] ?? 0} of {t["Trial Starts"] ?? 0} · {t["Pending"] ?? 0} pending
+                </p>
+              </div>
+            );
+          })()}
+        >
           {charts.trial_conversion_rate && charts.trial_conversion_rate.dates.length > 1 ? (
             <LineChart
               dates={charts.trial_conversion_rate.dates}
-              series={[{ label: "Converted", values: pickSeries(charts.trial_conversion_rate, /conversion|rate/i)!.values }]}
+              series={[{ label: "Converted", values: pickSeries(charts.trial_conversion_rate, /rate/i)!.values }]}
               format={(n) => `${n}%`}
               height={160}
             />
@@ -383,11 +398,24 @@ export default function OverviewPage() {
             <Empty>{rcMissingKey ? "Needs the RevenueCat key." : "No data yet."}</Empty>
           )}
         </Card>
-        <Card title="Churn" subtitle="Share of paying subscriptions lost per period (RevenueCat).">
+        <Card
+          title="Churn"
+          subtitle="Share of paying subscriptions lost per period (RevenueCat)."
+          right={(() => {
+            const avg = charts.churn?.summary?.average;
+            if (!avg) return null;
+            return (
+              <div className="text-right">
+                <p className="text-headline font-bold tabular-nums text-foreground">{avg["Churn Rate"] ?? 0}%</p>
+                <p className="text-caption text-muted">average per {days > 120 ? "week" : "day"}</p>
+              </div>
+            );
+          })()}
+        >
           {charts.churn && charts.churn.dates.length > 1 ? (
             <LineChart
               dates={charts.churn.dates}
-              series={[{ label: "Churn", values: pickSeries(charts.churn, /churn/i)!.values }]}
+              series={[{ label: "Churn", values: pickSeries(charts.churn, /rate/i)!.values }]}
               format={(n) => `${n}%`}
               height={160}
             />

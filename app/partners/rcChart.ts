@@ -17,6 +17,8 @@ export interface NormalizedChart {
   /** "$", "€", "%", "#" … from RC's y-axis. */
   unit: string | null;
   displayName: string | null;
+  /** RC's own totals / averages over the whole range, by measure name. */
+  summary: { total?: Record<string, number>; average?: Record<string, number> } | null;
 }
 
 type Named = { display_name?: string; name?: string; id?: string };
@@ -83,7 +85,11 @@ export function normalizeChart(raw: unknown): NormalizedChart | null {
     label,
     values: dates.map((d) => Math.round((m.get(d) ?? 0) * 100) / 100),
   }));
-  return { dates, series, unit, displayName };
+  const summary =
+    body.summary && typeof body.summary === "object"
+      ? (body.summary as NormalizedChart["summary"])
+      : null;
+  return { dates, series, unit, displayName, summary };
 }
 
 /** The series whose name matches (case-insensitive), else the first one. */
