@@ -12,11 +12,41 @@ import { RELAY_URL } from "@/lib/relay";
 
 export { RELAY_URL };
 
-export type PayoutType = "per_paying" | "per_retained" | "percent";
+export type PayoutType = "revshare" | "per_paying" | "per_retained" | "percent";
 
+/** `amount` is € per person, or % for revshare / percent. revshare pays that % of
+ *  Dulce's net on each person's first `monthlyPayments` monthly and first
+ *  `yearlyPayments` yearly payments. */
 export interface Payout {
   type: PayoutType;
   amount: number;
+  monthlyPayments?: number;
+  yearlyPayments?: number;
+}
+
+export interface PartnerProfile {
+  name?: string;
+  email?: string;
+  tiktok?: string;
+  instagram?: string;
+  facebook?: string;
+  youtube?: string;
+  country?: string;
+  payoutMethod?: string;
+}
+
+export interface RefMonth {
+  month: string;
+  payments: number;
+  netEur?: number;
+  share: number;
+}
+
+export interface RefRevenue {
+  grossEur: number;
+  netEur: number;
+  payments: number;
+  refunds: number;
 }
 
 export interface CodeStats {
@@ -44,11 +74,18 @@ export interface RefCode {
   owed: Owed;
   /** Token behind the partner's read-only stats link; absent until created. */
   viewToken?: string;
+  partner?: PartnerProfile;
+  appleOfferCodes?: string[];
+  earned?: Owed;
+  revenue?: RefRevenue;
+  months?: RefMonth[];
 }
 
 /** What /ref/partner returns: one code's numbers, as its partner sees them. */
 export interface PartnerStats {
   code: string;
+  name?: string | null;
+  months?: RefMonth[];
   status: RefCode["status"];
   payout: Payout;
   createdAt: number;
@@ -153,6 +190,8 @@ export interface NewCodeInput {
   offeringId: string;
   payout: Payout;
   note: string;
+  partner?: PartnerProfile;
+  appleOfferCodes?: string[];
 }
 
 export type CodePatch = Partial<{
@@ -160,7 +199,49 @@ export type CodePatch = Partial<{
   offeringId: string;
   payout: Payout;
   note: string;
+  partner: PartnerProfile;
+  appleOfferCodes: string[];
 }>;
+
+/** A RevenueCat event as the relay's ledger keeps it (from 27 Oct 2026). */
+export interface LedgerRow {
+  id: string;
+  /** event time, ms */
+  t: number;
+  /** INITIAL_PURCHASE, RENEWAL, CANCELLATION, EXPIRATION, BILLING_ISSUE, … */
+  ty: string;
+  p?: string;
+  /** TRIAL / INTRO / NORMAL / PROMOTIONAL */
+  pt?: string;
+  per?: "monthly" | "yearly" | "other";
+  c?: string;
+  st?: string;
+  sb?: 1;
+  u?: string;
+  /** customer price, EUR */
+  g?: number;
+  /** Dulce's net, EUR */
+  n?: number;
+  r?: string;
+  why?: string;
+  oc?: string;
+  tc?: 1;
+  rn?: number;
+}
+
+/** A relay-proxied RevenueCat answer: the RC body as-is, or why it failed. */
+export type RcResult<T = unknown> =
+  | { ok: true; data: T; fetchedAt: number }
+  | { ok: false; status: number; error: unknown };
+
+export interface RcOverviewMetric {
+  id: string;
+  name: string;
+  description?: string;
+  unit?: string;
+  period?: string;
+  value: number;
+}
 
 /** Thrown for a 401 specifically, so the caller can bounce back to login. */
 export class UnauthorizedError extends Error {
@@ -228,6 +309,26 @@ export async function fetchOfferings(adminKey: string): Promise<Offering[] | nul
 
 export async function fetchUsage(adminKey: string): Promise<UsageResponse> {
   return request<UsageResponse>(adminKey, "/ref/admin/usage");
+}
+
+export async function fetchLedger(adminKey: string, days: number): Promise<LedgerRow[]> {
+  const data = await request<{ rows: LedgerRow[] }>(adminKey, `/ref/admin/ledger?days=${days}`);
+  return data.rows;
+}
+
+export async function fetchRcOverview(
+  adminKey: string,
+): Promise<RcResult<{ metrics: RcOverviewMetric[]; currency: string }>> {
+  return request(adminKey, "/ref/admin/rc/overview");
+}
+
+export async function fetchRcChart(
+  adminKey: string,
+  name: string,
+  params: Record<string, string>,
+): Promise<RcResult> {
+  const q = new URLSearchParams({ name, ...params });
+  return request(adminKey, `/ref/admin/rc/chart?${q.toString()}`);
 }
 
 export async function createCode(adminKey: string, input: NewCodeInput): Promise<RefCode> {

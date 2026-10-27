@@ -40,9 +40,17 @@ const TEXT = {
     perPaying: (a: string) => `${a} por cada persona que se suscribe`,
     perRetained: (a: string) => `${a} por cada persona que sigue suscrita el segundo mes`,
     percent: (p: number) => `${p} % de los ingresos`,
+    revshare: (p: number, m: number, y: number) =>
+      `${p} % de lo que Dulce recibe de cada persona (tras la comisión de Apple y los impuestos): sus primeros ${m} pagos mensuales${y ? ` y ${y === 1 ? "su primer pago anual" : `sus primeros ${y} pagos anuales`}` : ""}`,
+    hello: (n: string) => `Hola, ${n}`,
+    monthsTitle: "Por mes",
+    month: "Mes",
+    payments: "Pagos",
+    net: "Dulce recibe",
+    share: "Tu parte",
     since: (d: string) => `Código activo desde el ${d}.`,
     howItWorks:
-      "Las cifras se actualizan cuando Apple confirma un cambio en la suscripción. La prueba gratis dura 14 días, así que una persona aparece como suscrita unas dos semanas después de empezar la prueba. Cada persona cuenta una sola vez.",
+      "Las cifras se actualizan cuando Apple confirma un cambio en la suscripción. Si alguien empieza con la prueba gratis de 14 días, aparece como suscrito unas dos semanas después. Los reembolsos de Apple se descuentan.",
   },
   en: {
     title: "Your Dulce code",
@@ -68,9 +76,17 @@ const TEXT = {
     perPaying: (a: string) => `${a} for every person who subscribes`,
     perRetained: (a: string) => `${a} for every person still subscribed in their second month`,
     percent: (p: number) => `${p}% of revenue`,
+    revshare: (p: number, m: number, y: number) =>
+      `${p}% of what Dulce receives from each person (after Apple's fee and taxes): their first ${m} monthly payments${y ? ` and ${y === 1 ? "their first yearly payment" : `their first ${y} yearly payments`}` : ""}`,
+    hello: (n: string) => `Hi ${n}`,
+    monthsTitle: "By month",
+    month: "Month",
+    payments: "Payments",
+    net: "Dulce receives",
+    share: "Your share",
     since: (d: string) => `Code active since ${d}.`,
     howItWorks:
-      "Numbers update when Apple confirms a subscription change. The free trial lasts 14 days, so a person shows as subscribed about two weeks after starting the trial. Each person counts once.",
+      "Numbers update when Apple confirms a subscription change. If someone starts with the 14-day free trial, they show as subscribed about two weeks later. Apple refunds are taken off.",
   },
 } as const;
 
@@ -142,6 +158,8 @@ export default function PartnerStatsPage() {
   if (data) {
     if (data.payout.type === "per_paying") rule = t.perPaying(eur(data.payout.amount));
     else if (data.payout.type === "per_retained") rule = t.perRetained(eur(data.payout.amount));
+    else if (data.payout.type === "revshare")
+      rule = t.revshare(data.payout.amount, data.payout.monthlyPayments ?? 6, data.payout.yearlyPayments ?? 1);
     else rule = t.percent(data.payout.amount);
   }
   const isPercent = data?.payout.type === "percent";
@@ -153,7 +171,7 @@ export default function PartnerStatsPage() {
       <div className="mx-auto w-full max-w-lg">
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="text-label font-semibold text-muted">{t.title}</p>
+            <p className="text-label font-semibold text-muted">{data?.name ? t.hello(data.name) : t.title}</p>
             <h1 className="mt-1 font-mono text-display font-bold tracking-wider text-foreground">
               {data?.code ?? link?.code ?? "—"}
             </h1>
@@ -210,6 +228,38 @@ export default function PartnerStatsPage() {
                 <Stat label={t.cancelled} value={String(data.stats.cancelled)} />
               </div>
             </section>
+
+            {data.months && data.months.length ? (
+              <section className="mt-4 bg-card rounded-[var(--radius-card-lg)] border border-border-subtle p-6">
+                <h2 className="text-label font-bold uppercase tracking-wider text-muted">{t.monthsTitle}</h2>
+                <table className="mt-2 w-full text-left text-label">
+                  <thead>
+                    <tr className="text-caption text-muted">
+                      <th className="py-1.5 font-semibold">{t.month}</th>
+                      <th className="py-1.5 text-right font-semibold">{t.payments}</th>
+                      {data.payout.type === "revshare" ? (
+                        <th className="py-1.5 text-right font-semibold">{t.net}</th>
+                      ) : null}
+                      <th className="py-1.5 text-right font-semibold">{t.share}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[...data.months].reverse().map((m) => (
+                      <tr key={m.month} className="border-t border-border-subtle">
+                        <td className="py-2 text-foreground">
+                          {new Date(`${m.month}-01T00:00:00Z`).toLocaleDateString(locale, { month: "long", year: "numeric", timeZone: "UTC" })}
+                        </td>
+                        <td className="py-2 text-right tabular-nums text-foreground">{m.payments}</td>
+                        {data.payout.type === "revshare" ? (
+                          <td className="py-2 text-right tabular-nums text-muted">{eur(m.netEur ?? 0)}</td>
+                        ) : null}
+                        <td className="py-2 text-right font-semibold tabular-nums text-foreground">{eur(m.share)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </section>
+            ) : null}
 
             <section className="mt-4 bg-card rounded-[var(--radius-card-lg)] border border-border-subtle p-6">
               <h2 className="text-label font-bold uppercase tracking-wider text-muted">{t.rule}</h2>

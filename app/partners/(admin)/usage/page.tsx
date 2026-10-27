@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * Usage tab — who is actually using Dulce.
+ * Devices tab (route /partners/usage) — every phone the relay knows.
  *
  * Everything here comes from one relay call (GET /ref/admin/usage). Read
  * relay/src/routes/analytics.ts for how each number is derived; the caveats
@@ -167,7 +167,7 @@ export default function UsagePage() {
     <div className="container-page py-10">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <h1 className="text-display font-bold tracking-tight text-foreground">Usage</h1>
+          <h1 className="text-display font-bold tracking-tight text-foreground">Devices</h1>
           <p className="mt-1 text-label text-muted">
             Every device that has connected LibreLinkUp or Dexcom, free users included.
           </p>

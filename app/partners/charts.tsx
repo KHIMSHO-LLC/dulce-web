@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * Chart primitives for the Usage tab. Hand-rolled SVG rather than a charting
+ * Chart primitives for the admin dashboard (Overview, Usage). Hand-rolled SVG rather than a charting
  * dependency: two forms cover everything here, and they inherit the site's
  * tokens directly instead of fighting a library's theme layer.
  *
@@ -32,8 +32,8 @@ function niceMax(value: number): number {
   const magnitude = 10 ** Math.floor(Math.log10(value));
   const normalized = value / magnitude;
   const step = [1, 1.25, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10].find((s) => normalized <= s) ?? 10;
-  // Every series here is a device count, so the axis top must be a whole
-  // number — `max 12.5` would be nonsense on a people-counting chart.
+  // Counts need a whole-number axis top (`max 12.5` people is nonsense); money
+  // and rates are fine rounded the same way.
   return Math.ceil(step * magnitude);
 }
 
@@ -89,11 +89,14 @@ export function LineChart({
   series,
   height = 200,
   emptyMessage = "No data yet.",
+  format = String,
 }: {
   dates: string[];
   series: Series[];
   height?: number;
   emptyMessage?: string;
+  /** Formats values in the tooltip, legend and axis label (e.g. currency). */
+  format?: (n: number) => string;
 }) {
   const hover = useHoverIndex(dates.length);
 
@@ -200,7 +203,7 @@ export function LineChart({
                 />
                 {s.label}
                 <span className="ml-auto font-semibold tabular-nums text-foreground">
-                  {s.values[hover.index!]}
+                  {format(s.values[hover.index!] ?? 0)}
                 </span>
               </p>
             ))}
@@ -210,7 +213,7 @@ export function LineChart({
 
       <div className="mt-1 flex justify-between text-caption text-muted">
         <span>{shortDate(dates[0]!)}</span>
-        <span>max {max}</span>
+        <span>max {format(max)}</span>
         <span>{shortDate(dates[dates.length - 1]!)}</span>
       </div>
 
@@ -225,7 +228,7 @@ export function LineChart({
             />
             {s.label}
             <span className="font-semibold tabular-nums text-foreground">
-              {s.values[s.values.length - 1]}
+              {format(s.values[s.values.length - 1] ?? 0)}
             </span>
           </span>
         ))}
@@ -240,6 +243,7 @@ export function BarChart({
   color = SERIES_COLORS[0],
   height = 96,
   label,
+  format = String,
 }: {
   dates: string[];
   values: number[];
@@ -247,6 +251,7 @@ export function BarChart({
   height?: number;
   /** Series name, used in the tooltip and the accessible description. */
   label: string;
+  format?: (n: number) => string;
 }) {
   const hover = useHoverIndex(dates.length);
   const max = niceMax(Math.max(1, ...values));
@@ -280,7 +285,7 @@ export function BarChart({
           ))}
         </div>
         <p className="sr-only">
-          {label}: {total} over {dates.length} days.
+          {label}: {format(total)} over {dates.length} days.
         </p>
 
         {hover.index !== null ? (
@@ -291,7 +296,7 @@ export function BarChart({
             <p className="text-caption text-muted">
               {label}{" "}
               <span className="font-semibold tabular-nums text-foreground">
-                {values[hover.index]}
+                {format(values[hover.index] ?? 0)}
               </span>
             </p>
           </Tooltip>

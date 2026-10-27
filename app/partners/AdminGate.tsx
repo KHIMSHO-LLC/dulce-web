@@ -35,8 +35,9 @@ export function useAdmin(): AdminSession {
 }
 
 const TABS = [
-  { href: "/partners", label: "Referrals" },
-  { href: "/partners/usage", label: "Usage" },
+  { href: "/partners", label: "Overview" },
+  { href: "/partners/referrals", label: "Partners" },
+  { href: "/partners/usage", label: "Devices" },
 ] as const;
 
 function Nav({ onLogout }: { onLogout: () => void }) {
