@@ -19,8 +19,7 @@ export function DisclaimerEn() {
       <h2 id="what-it-is">1. What Dulce is — and isn&apos;t</h2>
       <p>
         Dulce is a companion app that <strong>displays</strong> the glucose readings your
-        monitoring system already produces (Abbott&apos;s LibreLinkUp, Dexcom, or your personal
-        Nightscout instance). Its job is to present that information in a convenient, readable
+        monitoring system already produces (Abbott&apos;s LibreLinkUp or Dexcom Share). Its job is to present that information in a convenient, readable
         way. Dulce does not measure glucose, does not make sensors, and does not control any
         medical device.
       </p>
@@ -63,12 +62,12 @@ export function DisclaimerEn() {
         not a real-time clinical measurement.
       </p>
 
-      <h2 id="no-predictions">6. No predictions, no dose calculations</h2>
+      <h2 id="no-predictions">6. Indicative forecasts, no dose calculations</h2>
       <p>
-        Dulce displays data passively. It does not predict where your glucose is heading, does
-        not calculate insulin or carbohydrate doses, and does not offer clinical advice. If we
-        add features like these in the future, they will come with the appropriate information
-        and warnings.
+        Dulce does not calculate insulin or carbohydrate doses and does not offer clinical
+        advice. The optional predictive low alert only extrapolates how fast your latest readings
+        are changing: it is indicative, can be wrong, and does not replace your CGM
+        system&apos;s alarms or a fingerstick check.
       </p>
 
       <h2 id="emergencies">7. Emergencies</h2>
@@ -88,7 +87,7 @@ export function DisclaimerEn() {
 
       <h2 id="third-parties">9. Third-party data</h2>
       <p>
-        Dulce depends on third-party services (Abbott / LibreLinkUp, Dexcom, Nightscout, Apple
+        Dulce depends on third-party services (Abbott / LibreLinkUp, Dexcom Share, Apple
         Health) to obtain your data. We do not control the availability, accuracy, or continuity
         of those services, and we are not responsible for outages or errors originating in them.
       </p>

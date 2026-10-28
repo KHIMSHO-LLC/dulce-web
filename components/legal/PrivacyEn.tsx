@@ -262,8 +262,9 @@ export function PrivacyEn() {
 
       <h2 id="cookies">11. Cookies</h2>
       <p>
-        We only use strictly necessary technical cookies (language preference, CSRF token on
-        forms). We do not use tracking or advertising cookies. More in our{" "}
+        We use strictly necessary technical cookies and, with your consent where the law
+        requires it, Google Analytics cookies. We do not use advertising cookies. Which cookies
+        they are and how to change your choice is in our{" "}
         <Link href="/legal/cookies">Cookie Policy</Link>.
       </p>
 

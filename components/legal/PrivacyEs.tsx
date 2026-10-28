@@ -276,9 +276,10 @@ export function PrivacyEs() {
 
       <h2 id="cookies">11. Cookies</h2>
       <p>
-        Solo usamos cookies técnicas estrictamente necesarias (preferencia de idioma, token
-        CSRF en formularios). No usamos cookies de rastreo ni publicidad. Más información en
-        nuestra <Link href="/legal/cookies">Política de Cookies</Link>.
+        Usamos cookies técnicas estrictamente necesarias y, con tu consentimiento donde la ley
+        lo exige, cookies de Google Analytics. No usamos cookies de publicidad. Qué cookies son y
+        cómo cambiar tu elección está en nuestra{" "}
+        <Link href="/legal/cookies">Política de Cookies</Link>.
       </p>
 
       <h2 id="changes">12. Cambios en esta política</h2>

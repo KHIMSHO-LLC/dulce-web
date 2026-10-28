@@ -19,8 +19,8 @@ export function DisclaimerEs() {
       <h2 id="que-es">1. Qué es Dulce y qué no es</h2>
       <p>
         Dulce es una aplicación complementaria que <strong>muestra</strong> las lecturas de
-        glucosa que ya genera tu sistema de monitorización (LibreLinkUp de Abbott, Dexcom o
-        tu instancia personal de Nightscout). Su función es presentar esa información de forma
+        glucosa que ya genera tu sistema de monitorización (LibreLinkUp de Abbott o Dexcom
+        Share). Su función es presentar esa información de forma
         cómoda y legible. Dulce no mide la glucosa, no fabrica sensores y no controla ningún
         dispositivo médico.
       </p>
@@ -65,12 +65,12 @@ export function DisclaimerEs() {
         como una medición clínica en tiempo real.
       </p>
 
-      <h2 id="sin-predicciones">6. Sin predicciones ni cálculo de dosis</h2>
+      <h2 id="sin-predicciones">6. Previsiones orientativas, sin cálculo de dosis</h2>
       <p>
-        Dulce muestra datos de forma pasiva. No predice hacia dónde irá tu glucosa, no calcula
-        dosis de insulina ni de carbohidratos, y no ofrece consejos clínicos. Si en el futuro
-        añadimos funciones de este tipo, irán acompañadas de la información y las advertencias
-        que correspondan.
+        Dulce no calcula dosis de insulina ni de carbohidratos y no ofrece consejos clínicos. El
+        aviso opcional de previsión de bajada solo extrapola la velocidad de cambio de las
+        últimas lecturas: es orientativo, puede fallar y no sustituye a las alarmas de tu sistema
+        de MCG ni a una comprobación por punción capilar.
       </p>
 
       <h2 id="emergencias">7. Emergencias</h2>
@@ -89,7 +89,7 @@ export function DisclaimerEs() {
 
       <h2 id="terceros">9. Datos de proveedores externos</h2>
       <p>
-        Dulce depende de servicios de terceros (Abbott / LibreLinkUp, Dexcom, Nightscout, Apple
+        Dulce depende de servicios de terceros (Abbott / LibreLinkUp, Dexcom Share, Apple
         Salud) para obtener tus datos. No controlamos la disponibilidad, la exactitud ni la
         continuidad de esos servicios, y no nos hacemos responsables de las interrupciones o
         errores que se originen en ellos.
