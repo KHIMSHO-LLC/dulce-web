@@ -15,7 +15,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { APP_STORE_ID } from "@/lib/appStore";
 import { SITE_URL } from "@/lib/site";
-import { OG_LOCALE } from "@/lib/seo";
+import { OG_LOCALE, ogImage } from "@/lib/seo";
 import { siteSchema } from "@/lib/schema";
 import "../globals.css";
 
@@ -71,11 +71,13 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
       description: t("defaultDescription"),
       locale: OG_LOCALE[safeLocale],
       alternateLocale: routing.locales.filter((l) => l !== safeLocale).map((l) => OG_LOCALE[l]),
+      images: [ogImage(safeLocale)],
     },
     twitter: {
       card: "summary_large_image",
       title: t("defaultTitle"),
       description: t("defaultDescription"),
+      images: [ogImage(safeLocale).url],
     },
   };
 }

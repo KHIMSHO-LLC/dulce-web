@@ -51,7 +51,13 @@ const nextConfig: NextConfig = {
       destination,
       permanent: true,
     }));
-    return [...sections, ...articles];
+    // The share image moved from the opengraph-image file convention to /og/<locale>.png;
+    // link previews scraped before 2026-10-28 still hold the old URLs.
+    const ogImages = [
+      { source: "/opengraph-image", destination: "/og/es.png", permanent: true },
+      { source: "/:locale(es|en|de|fr|it)/opengraph-image", destination: "/og/:locale.png", permanent: true },
+    ];
+    return [...sections, ...articles, ...ogImages];
   },
 };
 

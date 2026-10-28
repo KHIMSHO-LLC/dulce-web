@@ -1,12 +1,24 @@
+/**
+ * The share image, one per language: /og/<locale>.png. Not the
+ * opengraph-image file convention: under [locale] that produced
+ * /es/opengraph-image for Spanish, which the locale proxy redirects. The dot in
+ * the path keeps this route outside the proxy (proxy.ts matcher). Pages point
+ * at it through ogImage() in lib/seo.ts.
+ */
 import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
+import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { routing, type AppLocale } from "@/i18n/routing";
+import { OG_IMAGE_SIZE } from "@/lib/seo";
 
-export const alt = "Dulce";
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ file: `${locale}.png` }));
+}
 
 const copy: Record<AppLocale, { line1: string; line2: string; sub: string }> = {
   es: {
@@ -36,10 +48,11 @@ const copy: Record<AppLocale, { line1: string; line2: string; sub: string }> = {
   },
 };
 
-export default async function Image({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-  const safe = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as AppLocale;
-  const c = copy[safe];
+export async function GET(_request: Request, { params }: RouteContext<"/og/[file]">) {
+  const { file } = await params;
+  const locale = file.replace(/\.png$/, "");
+  if (!file.endsWith(".png") || !hasLocale(routing.locales, locale)) notFound();
+  const c = copy[locale as AppLocale];
   const drop = await readFile(join(process.cwd(), "public/brand/dulce-drop.png"));
   const dropSrc = `data:image/png;base64,${drop.toString("base64")}`;
 
@@ -60,6 +73,7 @@ export default async function Image({ params }: { params: Promise<{ locale: stri
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+          {/* eslint-disable-next-line @next/next/no-img-element -- rendered by ImageResponse, not the browser */}
           <img src={dropSrc} width={42} height={56} alt="" />
           <div style={{ fontSize: 40, letterSpacing: -1 }}>dulce</div>
         </div>
@@ -70,6 +84,6 @@ export default async function Image({ params }: { params: Promise<{ locale: stri
         </div>
       </div>
     ),
-    { ...size },
+    { ...OG_IMAGE_SIZE },
   );
 }

@@ -61,6 +61,13 @@ export function alternatesFor(
 /** OpenGraph locale codes. */
 export const OG_LOCALE: Record<AppLocale, string> = { es: "es_ES", en: "en_US", de: "de_DE", fr: "fr_FR", it: "it_IT" };
 
+export const OG_IMAGE_SIZE = { width: 1200, height: 630 };
+
+/** The language's share image (app/og/[file]/route.tsx), absolute so no redirect sits in front of it. */
+export function ogImage(locale: AppLocale) {
+  return { url: `${SITE_URL}/og/${locale}.png`, ...OG_IMAGE_SIZE, alt: "Dulce", type: "image/png" };
+}
+
 type OpenGraph = NonNullable<Metadata["openGraph"]>;
 type OgFields = { title: string; description: string } & Record<string, unknown>;
 
@@ -76,6 +83,7 @@ export function openGraphFor(locale: AppLocale, url: string, fields: OgFields): 
     locale: OG_LOCALE[locale],
     alternateLocale: locales.filter((l) => l !== locale).map((l) => OG_LOCALE[l]),
     url,
+    images: [ogImage(locale)],
     ...fields,
   } as OpenGraph;
 }
