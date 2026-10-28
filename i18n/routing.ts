@@ -94,5 +94,7 @@ export const routing = defineRouting({
 
 export type AppPathname = keyof typeof routing.pathnames;
 
-/** Languages with their own legal texts. The others show English, noindexed. */
-export const LEGAL_LOCALES: readonly AppLocale[] = ["es", "en"];
+/** Every language has its legal texts (components/legal). */
+export const LEGAL_LOCALES: readonly AppLocale[] = locales;
+/** Legal texts translated from the Spanish one, which prevails (they show a notice saying so). */
+export const TRANSLATED_LEGAL_LOCALES: readonly AppLocale[] = ["de", "fr", "it"];

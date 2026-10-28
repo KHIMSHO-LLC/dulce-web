@@ -271,7 +271,7 @@
   "legal": {
     "lastUpdated": "Zuletzt aktualisiert: {date}",
     "tableOfContents": "Inhalt",
-    "englishOnly": "Dieses Dokument ist derzeit nur auf Englisch verfügbar. Die englische Fassung ist maßgeblich.",
+    "translationNotice": "Dies ist eine Übersetzung zu deiner Information. Bei Abweichungen gilt die spanische Fassung.",
     "privacy": {
       "title": "Datenschutzerklärung",
       "description": "Wie wir deine personenbezogenen Daten erheben, nutzen und schützen."
