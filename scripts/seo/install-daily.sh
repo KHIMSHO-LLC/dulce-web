@@ -1,7 +1,10 @@
 #!/bin/zsh
-# Installs the daily SEO writer as a launchd job (macOS): every day at 08:00
-# local time, if the Mac is awake (launchd runs it on wake if it was asleep).
+# Installs the SEO writer as a launchd job (macOS): Friday 10:00, Sunday 03:00
+# and Tuesday 23:00 local time (launchd runs a missed slot on wake if the Mac
+# was asleep).
 # Usage: scripts/seo/install-daily.sh /path/to/dedicated/clone/of/dulce-web
+# The clone and a clone of dulce-app next to it must live outside ~/Desktop,
+# ~/Documents and ~/Downloads: macOS privacy blocks launchd jobs from reading there.
 set -euo pipefail
 CLONE="${1:?path to a dedicated clone of dulce-web}"
 LABEL="com.dulceglucosa.seo-daily"
@@ -15,7 +18,11 @@ cat > "$PLIST" <<PL
   <key>ProgramArguments</key>
   <array><string>/bin/zsh</string><string>$CLONE/scripts/seo/run-daily.sh</string></array>
   <key>StartCalendarInterval</key>
-  <dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>0</integer></dict>
+  <array>
+    <dict><key>Weekday</key><integer>5</integer><key>Hour</key><integer>10</integer><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Weekday</key><integer>0</integer><key>Hour</key><integer>3</integer><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Weekday</key><integer>2</integer><key>Hour</key><integer>23</integer><key>Minute</key><integer>0</integer></dict>
+  </array>
   <key>StandardOutPath</key><string>$CLONE/seo/runs/launchd.out</string>
   <key>StandardErrorPath</key><string>$CLONE/seo/runs/launchd.err</string>
 </dict>
@@ -24,5 +31,5 @@ PL
 mkdir -p "$CLONE/seo/runs"
 launchctl bootout "gui/$(id -u)/$LABEL" 2>/dev/null || true
 launchctl bootstrap "gui/$(id -u)" "$PLIST"
-echo "installed $PLIST (daily 08:00). Run now: launchctl kickstart gui/$(id -u)/$LABEL"
+echo "installed $PLIST (Fri 10:00, Sun 03:00, Tue 23:00). Run now: launchctl kickstart gui/$(id -u)/$LABEL"
 echo "Remove: launchctl bootout gui/$(id -u)/$LABEL && rm $PLIST"

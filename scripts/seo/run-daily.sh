@@ -1,5 +1,5 @@
 #!/bin/zsh
-# Daily SEO writer. Runs Claude Code headless against a dedicated clean clone
+# SEO writer (Fri/Sun/Tue, see install-daily.sh). Runs Claude Code headless against a dedicated clean clone
 # of this repo (never a working checkout): syncs main, then follows
 # seo/daily-article.md, which publishes by pushing to main.
 # Installed as a launchd job by scripts/seo/install-daily.sh.
@@ -21,6 +21,9 @@ LOG="$LOG_DIR/$(date +%Y-%m-%d).log"
   git fetch -q origin
   git reset -q --hard origin/main
   npm ci --silent --no-audit --no-fund
+  # Released app source for fact checks: a dedicated dulce-app clone next to this one.
+  git -C ../dulce-app fetch -q origin
+  git -C ../dulce-app checkout -q -B main origin/main
 
   claude -p "$(cat seo/daily-article.md)" \
     --model claude-opus-5-5 \
