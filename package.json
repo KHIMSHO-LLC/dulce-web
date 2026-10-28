@@ -11,7 +11,8 @@
     "check:content": "node --no-warnings scripts/check-content.mts",
     "seo:gaps": "node --no-warnings scripts/seo/keyword-gaps.mts",
     "indexnow": "node scripts/indexnow.mjs",
-    "check:jsonld": "node --no-warnings scripts/check-jsonld.mts"
+    "check:jsonld": "node --no-warnings scripts/check-jsonld.mts",
+    "check:crawl": "node --no-warnings scripts/crawl.mts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
