@@ -3,6 +3,12 @@ import type { AppLocale } from "@/i18n/routing";
 export const SITE_URL = "https://dulceglucosa.com";
 export const CONTACT_EMAIL = "hola@dulceglucosa.com";
 
+/** The brand's own social profiles (footer, Organization sameAs). */
+export const SOCIAL = [
+  { name: "Instagram", url: "https://www.instagram.com/dulce_glucosa" },
+  { name: "TikTok", url: "https://www.tiktok.com/@dulce.glucose.tra" },
+] as const;
+
 /**
  * Section anchors on the landing page. Language-neutral on purpose: the
  * redirects from the retired marketing routes (next.config.ts) point at these,

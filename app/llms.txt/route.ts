@@ -12,7 +12,7 @@ import { articleUrl } from "@/lib/articles";
 import { markdownPath } from "@/lib/markdown";
 import { APP_STORE_URL } from "@/lib/schema";
 import { absoluteUrl, localizedPath } from "@/lib/seo";
-import { CONTACT_EMAIL } from "@/lib/site";
+import { CONTACT_EMAIL, SOCIAL } from "@/lib/site";
 import { TOOLS, TOOL_COPY } from "@/lib/tools";
 
 export const dynamic = "force-static";
@@ -38,7 +38,7 @@ export function GET() {
   const others = locales.filter((l) => l !== "en");
   const body = `# Dulce
 
-> Dulce is an iPhone and Apple Watch app that shows real-time glucose from FreeStyle Libre 2 and Libre 3 (via LibreLinkUp) and Dexcom G6, G7 and ONE+ (via Dexcom Share) where people already look: the Lock Screen (Live Activity), Dynamic Island, widgets, StandBy and a native Apple Watch app, with custom low/high alerts and real-time family sharing. Made by a founder who lives with type 1 diabetes, built Spanish-first. Available in Spanish, English, German, French and Italian. Free download; Dulce Pro adds the Live Activity updated every minute, the Apple Watch app, family sharing and more, with a 14-day free trial. Not a medical device.
+> Dulce is an iPhone and Apple Watch app that shows real-time glucose from FreeStyle Libre 2 and Libre 3 (via LibreLinkUp) and Dexcom G6, G7 and ONE+ (via Dexcom Share) where people already look: the Lock Screen (Live Activity), Dynamic Island, widgets, StandBy and a native Apple Watch app, with custom low/high alerts and real-time family sharing. Made in Spain by a founder who lives with type 1 diabetes, built Spanish-first. Available in Spanish, English, German, French and Italian. Free download; Dulce Pro adds the Live Activity updated every minute, the Apple Watch app, family sharing and more, with a 14-day free trial. Not a medical device.
 
 Also known as: "Dulce glucosa", "Dulce: Glucosa de un vistazo" (Spanish App Store name), "Dulce: Glucose at a Glance" (English), "Dulce: Blutzucker im Blick" (German), "Dulce : Glycémie en direct" (French), "Dulce: Glicemia sott'occhio" (Italian). Website: dulceglucosa.com.
 
@@ -56,6 +56,7 @@ Also known as: "Dulce glucosa", "Dulce: Glucosa de un vistazo" (Spanish App Stor
 - Dulce is not a medical device, does not give dosing advice and does not replace the sensor's own alarms. It is independent and not affiliated with Abbott or Dexcom.
 - App Store: ${APP_STORE_URL}
 - Contact: ${CONTACT_EMAIL}
+${SOCIAL.map((s) => `- ${s.name}: ${s.url}`).join("\n")}
 
 ## Help
 

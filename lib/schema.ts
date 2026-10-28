@@ -9,7 +9,7 @@ import { AUTHORS, type AuthorId } from "@/content/authors";
 import { APP_STORE_ID } from "./appStore";
 import { authorPath } from "./articles";
 import { absoluteUrl } from "./seo";
-import { CONTACT_EMAIL, SITE_URL } from "./site";
+import { CONTACT_EMAIL, SITE_URL, SOCIAL } from "./site";
 
 export const ORG_ID = `${SITE_URL}/#organization`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
@@ -50,8 +50,8 @@ export function siteSchema(locale: AppLocale, description: string) {
         email: CONTACT_EMAIL,
         // Square PNG, 2731 px (Google needs ≥112 px).
         logo: { "@type": "ImageObject", url: `${SITE_URL}/dulce-logo.png`, width: 2731, height: 2731 },
-        // TODO(Giorgi): add the brand's social profiles here once they exist (none are linked anywhere on the site).
-        sameAs: [APP_STORE_URL],
+        sameAs: [APP_STORE_URL, ...SOCIAL.map((s) => s.url)],
+        foundingLocation: { "@type": "Place", address: { "@type": "PostalAddress", addressCountry: "ES" } },
         founder: authorPerson("giorgi", locale),
       },
       {

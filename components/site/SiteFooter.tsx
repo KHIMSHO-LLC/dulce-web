@@ -1,6 +1,6 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { CONTACT_EMAIL, SECTION, homeSection } from "@/lib/site";
+import { CONTACT_EMAIL, SECTION, SOCIAL, homeSection } from "@/lib/site";
 import type { AppLocale } from "@/i18n/routing";
 import { WordmarkRise } from "@/components/motion/WordmarkRise";
 import { TOOL_COPY } from "@/lib/tools";
@@ -82,6 +82,11 @@ export async function SiteFooter() {
             <a href={`mailto:${CONTACT_EMAIL}`} className={linkClass}>
               {CONTACT_EMAIL}
             </a>
+            {SOCIAL.map((s) => (
+              <a key={s.name} href={s.url} target="_blank" rel="me noopener noreferrer" className={linkClass}>
+                {s.name}
+              </a>
+            ))}
             <div className="-ml-2.5 mt-2">
               <LanguageSwitcher />
             </div>
@@ -110,7 +115,9 @@ export async function SiteFooter() {
             <p>{t("disclaimer")}</p>
             <p>{t("trademarks")}</p>
           </div>
-          <p className="md:text-right">{t("copyright", { year })}</p>
+          <p className="md:text-right">
+            {t("copyright", { year })} · {t("madeIn")}
+          </p>
         </div>
       </div>
 
