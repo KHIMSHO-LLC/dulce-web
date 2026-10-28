@@ -3,7 +3,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { LEGAL_LOCALES, routing, type AppLocale } from "@/i18n/routing";
-import { alternatesFor } from "@/lib/seo";
+import { seoFor } from "@/lib/seo";
 import { LegalLayout } from "@/components/legal/LegalLayout";
 import { CookiesEs } from "@/components/legal/CookiesEs";
 import { CookiesEn } from "@/components/legal/CookiesEn";
@@ -21,7 +21,7 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
-    alternates: alternatesFor(safeLocale, "/legal/cookies"),
+    ...seoFor(safeLocale, "/legal/cookies", { title: t("title"), description: t("description") }),
     // Languages without their own legal text show the English one: keep them out of the index as duplicates.
     robots: !LEGAL_LOCALES.includes(safeLocale) ? { index: false, follow: true } : undefined,
   };

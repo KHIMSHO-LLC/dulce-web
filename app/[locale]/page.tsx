@@ -22,7 +22,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { Split } from "@/components/motion/Split";
 import type { ScreenName } from "@/components/screens/draw";
 import { faqSchema } from "@/lib/schema";
-import { absoluteUrl, alternatesFor } from "@/lib/seo";
+import { absoluteUrl, seoFor } from "@/lib/seo";
 import { SECTION, SITE_URL, localeUrl } from "@/lib/site";
 import { APP_STORE_ID } from "@/lib/appStore";
 
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]">): Prom
   return {
     title: { absolute: `Dulce: ${t("title")}` },
     description: t("description"),
-    alternates: alternatesFor(safeLocale, "/"),
+    ...seoFor(safeLocale, "/", { title: `Dulce: ${t("title")}`, description: t("description") }),
   };
 }
 

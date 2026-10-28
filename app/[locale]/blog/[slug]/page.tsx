@@ -16,7 +16,7 @@ import { articlePath, articleUrl, authorPath, readingMinutes } from "@/lib/artic
 import { formatDate } from "@/lib/dates";
 import { breadcrumbSchema, articleSchema, faqSchema, howToSchema, personSchema } from "@/lib/schema";
 import { howToSteps, markdownPath, mdxSource } from "@/lib/markdown";
-import { absoluteUrl, alternatesFromPaths, localizedPath } from "@/lib/seo";
+import { absoluteUrl, seoFromPaths, localizedPath } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -41,24 +41,24 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/blog/[sl
   // Google shows the site name on its own; drop the " · Dulce" suffix when it
   // would push the title past what search results display (~60 characters).
   const headline = article.title[loc];
+  const seo = seoFromPaths(loc, paths, {
+    type: "article",
+    title: article.title[loc],
+    description: article.description[loc],
+    publishedTime: article.datePublished,
+    modifiedTime: article.dateModified,
+    images: [{ url: article.image, alt: article.imageAlt[loc] }],
+  });
   return {
     title: headline.length > 52 ? { absolute: headline } : headline,
     description: article.description[loc],
+    openGraph: seo.openGraph,
     alternates: {
-      ...alternatesFromPaths(loc, paths),
+      ...seo.alternates,
       // Plain-Markdown copy for AI assistants (see app/md).
       types: { "text/markdown": absoluteUrl(markdownPath(article, loc)) },
     },
     authors: [{ name: AUTHORS[article.author].name, url: absoluteUrl(authorPath(article.author, loc)) }],
-    openGraph: {
-      type: "article",
-      title: article.title[loc],
-      description: article.description[loc],
-      url: articleUrl(article, loc),
-      publishedTime: article.datePublished,
-      modifiedTime: article.dateModified,
-      images: [{ url: article.image, alt: article.imageAlt[loc] }],
-    },
   };
 }
 

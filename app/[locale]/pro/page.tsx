@@ -8,14 +8,15 @@ import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/motion/Reveal";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
-import { alternatesFor, localizedPath } from "@/lib/seo";
+import { seoFor, localizedPath } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/pro">): Promise<Metadata> {
   const { locale } = await params;
   const safeLocale = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as AppLocale;
   const t = await getTranslations({ locale: safeLocale, namespace: "pro" });
-  return { title: t("title"), description: t("description"), alternates: alternatesFor(safeLocale, "/pro") };
+  const og = { title: t("title"), description: t("description") };
+  return { ...og, ...seoFor(safeLocale, "/pro", og) };
 }
 
 type Faq = { q: string; a: string };

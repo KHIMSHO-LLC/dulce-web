@@ -10,7 +10,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { getArticle } from "@/content/articles";
 import { fetchLluStatus, utcTime, type LluState } from "@/lib/lluStatus";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
-import { alternatesFor, localizedPath } from "@/lib/seo";
+import { seoFor, localizedPath } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
 /** Re-render at most once a minute; the relay updates once a minute too. */
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/librelin
   return {
     title: t("title"),
     description: t("description"),
-    alternates: alternatesFor(safeLocale, "/librelinkup-status"),
+    ...seoFor(safeLocale, "/librelinkup-status", { title: t("title"), description: t("description") }),
   };
 }
 

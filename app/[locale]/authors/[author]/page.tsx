@@ -9,7 +9,7 @@ import { ArticleCard } from "@/components/article/ArticleCard";
 import { articlesNewestFirst } from "@/content/articles";
 import { AUTHORS, authorBySlug } from "@/content/authors";
 import { articleUrl } from "@/lib/articles";
-import { absoluteUrl, alternatesFor, localizedPath } from "@/lib/seo";
+import { absoluteUrl, seoFor, localizedPath } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -26,8 +26,12 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/authors/
     title: `${author.name}: ${author.role[locale].split(",")[0]}`,
     // First sentence of the bio: the whole bio runs past what search shows.
     description: author.bio[locale].split(/(?<=\.)\s/)[0],
-    alternates: alternatesFor(locale, "/authors/[author]", { author: author.slug }),
-    openGraph: { type: "profile", title: author.name, description: author.bio[locale] },
+    ...seoFor(
+      locale,
+      "/authors/[author]",
+      { type: "profile", title: author.name, description: author.bio[locale] },
+      { author: author.slug },
+    ),
   };
 }
 
