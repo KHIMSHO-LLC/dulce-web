@@ -93,3 +93,33 @@ Each daily run appends one entry: date, what was published or improved, target q
   (25 sharers, alerts on silent, statistics). Target queries: "dexcom follow alternative", "sugarmate alternative",
   "dexcom follow widget", "alternativa dexcom follow".
 - Alerts and family-sharing guides now cover Dexcom (alarms, 5-minute rhythm, Share troubleshooting).
+
+## 2026-10-28 (daily run, Mac)
+
+- Search Console (gum, 2026-09-28 to 2026-10-26): 225 query/page rows, 385 impressions. Most impressions go to the
+  tools (glucose converter 81 en + 36 es, A1C calculator 57); top article queries ("libre widget iphone",
+  "librelinkup no funciona", "librelinkup keine aktuellen daten") already rank 5-8 on their own guides. No single
+  query has enough impressions to justify a rewrite.
+- `npm run seo:gaps`: ~1,500-1,750 uncovered queries per language. Recurring health cluster with no article:
+  "blutzuckerwerte tabelle", "blutzucker tabelle nach alter", "diabetes typ 1 werte tabelle", "glucosa valores
+  normales (en sangre / en mujeres / en hombres)", "glucosa glicosilada valores normales", "valori glicemia".
+- Topic: **blood sugar levels table** (keyword-volumes: "blutzuckerwerte tabelle" DE 1K-10K, marked strong
+  candidate; "hba1c"/"hemoglobina glicosilada" 10K-100K with no dedicated article; listed in PLAN.md roadmap
+  "blood sugar tables with consensus sources"). One page with normal / prediabetes / diabetes thresholds,
+  treatment targets and HbA1c, in mg/dL and mmol/L, linked to the converter, A1C calculator and time in range.
+- Published `blood-sugar-levels` (es/en/de/fr/it, category health, author giorgi). Slugs: es
+  `valores-normales-glucosa-tabla`, en `blood-sugar-levels-chart`, de `blutzuckerwerte-tabelle`, fr
+  `glycemie-normale-tableau`, it `valori-glicemia-tabella`. Target queries: "blutzuckerwerte tabelle", "normale
+  blutzuckerwerte", "glucosa valores normales", "hemoglobina glicosilada valores normales", "blood sugar levels
+  chart", "glycémie normale", "valori glicemia". Linked from `time-in-range` (A1C paragraph, 5 languages,
+  dateModified bumped, `related`) and from both calculators' `guides` in lib/tools.ts (required by check:content).
+- Checked against dulce-app main (693a2f8): Settings rows Target range / Units open settings/glucose.tsx; target low
+  50-150, high 120-300, step 5, default 70-180; TIR goal 50-95, step 5, default 70; unit note (app, Lock Screen,
+  widgets); Trends ranges 7/14/30/90 d; "Est. A1C from GMI" labels in all 5 locales.
+- Sources: ADA Standards 2026 sections 2 (DOI and pages confirmed via Europe PMC; cut-offs via guideline summaries,
+  unchanged for years) and 6; WHO/IDF 2006 (IFG from 110 mg/dL); Shah 2019 JCEM (healthy CGM: mean 98-99, median
+  96% in 70-140, ~30 min >140, ~15 min <70); Battelino 2019; Hoelzel 2004 (IFCC/NGSP, conversions computed with the
+  lib/tools.ts equation). Left out unverified 2026 numbers for older adults and children (only "individualized").
+  Removed a claim about which countries' labs use the WHO line (couldn't back it).
+- `npm run check:content` (17 articles, 0 errors; 17 warnings = missing summaries, left for Giorgi) and
+  `npm run build` passed. Deployed (d5304d5, page live), `npm run indexnow`: 143 URLs → 200.

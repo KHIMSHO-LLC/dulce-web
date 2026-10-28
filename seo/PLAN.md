@@ -91,6 +91,8 @@ questions around them. Being the best answer means the product actually does it 
       Island and onboarding; French/Italian; unsupported languages fall back to English.
 - [x] 2026-10-23: Article `night-lows` (hipoglucemia nocturna / nächtliche Unterzuckerung), 5 languages, sources.
 - [x] 2026-10-24: Article `libreview` (what LibreView is, login, practice ID, vs LibreLinkUp), 5 languages, sources.
+- [x] 2026-10-28: Article `blood-sugar-levels` (blutzuckerwerte tabelle / valores normales de glucosa), 5 languages,
+      ADA 2026 + WHO sources.
 - [x] 2026-10-24: Removed the false "rings on silent" claim (no critical-alerts entitlement): `alerts` (title,
       description, body, FAQ, new "Hearing alerts at night" section), `child-glucose`, `librelinkup-not-working`,
       `/llms.txt`, 5 languages. The app's own copy was fixed in 1.0.4 the same way.
@@ -169,7 +171,7 @@ questions around them. Being the best answer means the product actually does it 
    - **Everyday T1D (YMYL, needs sources; ideally the medical reviewer first):** night lows (hipoglucemia
      nocturna), ketones (what they are, when to check, sources: ADA/ISPAD; no treatment instructions beyond
      "follow your care team's sick-day plan"), sport, travel and time zones, sick days, blood sugar tables
-     (blutzuckerwerte tabelle) with consensus sources.
+     (blutzuckerwerte tabelle) with consensus sources (done 2026-10-28: `blood-sugar-levels`).
    - **Dexcom (prepare, don't publish):** drafts for "Dexcom on Apple Watch / Lock Screen with Dulce" kept out of
      the registry until the integration is released and verified.
 3. When a medical reviewer exists: add a `reviewer` to `content/authors.ts`, show "Medically reviewed by" in the
