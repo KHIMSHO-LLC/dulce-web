@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
+import { Byline } from "@/components/article/Byline";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/motion/Reveal";
 import { Split } from "@/components/motion/Split";
@@ -41,12 +42,15 @@ export default async function SetupPage({ params }: PageProps<"/[locale]/setup">
     { name: t("hero.headline"), url: `${SITE_URL}${localizedPath(loc, "/setup")}` },
   ]);
   const steps = ["step1", "step2", "step3", "step4"] as const;
+  // Last change to the setup copy in any language (messages/*.json `setup`). Bump with the copy.
+  const dateModified = "2026-10-24";
   // Built from the same messages the numbered list renders.
   const howTo = howToSchema({
     url: `${SITE_URL}${localizedPath(loc, "/setup")}`,
     name: t("steps.title"),
     description: t("description"),
     locale: loc,
+    dateModified,
     steps: steps.map((key) => ({ name: t(`steps.${key}.title`), text: t(`steps.${key}.body`) })),
   });
 
@@ -61,6 +65,9 @@ export default async function SetupPage({ params }: PageProps<"/[locale]/setup">
           <p data-fade className="mt-8 max-w-[52ch] text-[1.125rem] leading-relaxed text-soft">
             {t("hero.subheadline")}
           </p>
+          <div data-fade>
+            <Byline locale={loc} author="giorgi" dateModified={dateModified} />
+          </div>
         </Reveal>
 
         <Reveal className="container-page mt-20 md:mt-28">

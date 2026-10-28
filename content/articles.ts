@@ -40,6 +40,12 @@ export type Article = {
   title: Localized;
   /** Meta description and card text. 120-160 characters. */
   description: Localized;
+  /**
+   * The direct answer, 2-3 sentences, shown right under the H1 (what AI answers
+   * quote). Plain text. Until written, the page shows `description` there and a
+   * TODO marker in development (components/article/Byline.tsx).
+   */
+  summary?: Localized;
   /** The search queries this article is written to answer (from Search Console / autocomplete). */
   keywords: Localized<string[]>;
   /** Image under /public, used for the card, OpenGraph and the article schema. */

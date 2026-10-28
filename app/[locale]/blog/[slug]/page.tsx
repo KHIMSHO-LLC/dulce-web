@@ -13,7 +13,9 @@ import { AppCta, ArticleLink, Callout, Figure, PageLink, Step, Steps } from "@/c
 import { ARTICLES, CATEGORY_LABEL, articleBySlug, getArticle } from "@/content/articles";
 import { AUTHORS } from "@/content/authors";
 import { articlePath, articleUrl, authorPath, readingMinutes } from "@/lib/articles";
-import { formatDate } from "@/lib/dates";
+import { Calculator, Link2 } from "lucide-react";
+import { AnswerFirst, Byline } from "@/components/article/Byline";
+import { TOOL_COPY, toolsForArticle } from "@/lib/tools";
 import { breadcrumbSchema, articleSchema, authorPerson, faqSchema, howToSchema } from "@/lib/schema";
 import { howToSteps, markdownPath, mdxSource } from "@/lib/markdown";
 import { absoluteUrl, seoFromPaths, localizedPath } from "@/lib/seo";
@@ -94,6 +96,9 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
   const related = article.related.map((id) => getArticle(id)).filter((a) => a !== undefined);
   const faq = article.faq?.[loc] ?? [];
   const steps = howToSteps(mdxSource(article, loc));
+  // Every guide links to the calculators that list it (lib/tools.ts); /setup is the LibreLinkUp guide.
+  const tools = toolsForArticle(article.id);
+  const linksSetup = article.category !== "health" && !article.id.startsWith("dexcom");
 
   return (
     <>
@@ -142,24 +147,13 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
             <span className="text-soft">{CATEGORY_LABEL[article.category][loc]}</span>
           </nav>
           <h1 className="type-display mt-5 text-[clamp(2.2rem,4.8vw,4rem)] text-ink">{article.title[loc]}</h1>
-          <p className="mt-5 text-[1.125rem] leading-relaxed text-soft">{article.description[loc]}</p>
-          <div className="mt-8 flex items-center gap-3 text-label text-mute">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-ember/15 text-label font-semibold text-ember">
-              {author.initials}
-            </span>
-            <div>
-              <Link
-                href={{ pathname: "/authors/[author]", params: { author: author.slug } }}
-                className="font-medium text-ink transition-colors hover:text-ember"
-              >
-                {t("by", { name: author.name })}
-              </Link>
-              <p>
-                {t("updated", { date: formatDate(article.dateModified, loc) })} ·{" "}
-                {t("minutes", { n: readingMinutes(article, loc) })}
-              </p>
-            </div>
-          </div>
+          <AnswerFirst summary={article.summary?.[loc]} fallback={article.description[loc]} />
+          <Byline
+            locale={loc}
+            author={article.author}
+            dateModified={article.dateModified}
+            extra={t("minutes", { n: readingMinutes(article, loc) })}
+          />
         </header>
 
         <div className={`${PROSE} mt-12`}>
@@ -210,6 +204,30 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
             </div>
           </div>
           <p className="mt-4 text-label leading-relaxed text-soft">{author.bio[loc]}</p>
+        </section>
+
+        <section className="mt-14 max-w-[68ch]" aria-labelledby="links-title">
+          <h2 id="links-title" className="text-[1.6rem] font-light tracking-[-0.02em] text-ink">
+            {t("usefulLinks")}
+          </h2>
+          <ul className="mt-5 space-y-3">
+            {tools.map((tool) => (
+              <li key={tool.path}>
+                <Link href={tool.path} className="flex items-start gap-3 text-body text-soft transition-colors hover:text-ink">
+                  <Calculator className="mt-1 h-4 w-4 shrink-0 text-ember" aria-hidden />
+                  {TOOL_COPY[tool.path][loc].title}
+                </Link>
+              </li>
+            ))}
+            {linksSetup ? (
+              <li>
+                <Link href="/setup" className="flex items-start gap-3 text-body text-soft transition-colors hover:text-ink">
+                  <Link2 className="mt-1 h-4 w-4 shrink-0 text-ember" aria-hidden />
+                  {t("setupLink")}
+                </Link>
+              </li>
+            ) : null}
+          </ul>
         </section>
 
         {related.length ? (

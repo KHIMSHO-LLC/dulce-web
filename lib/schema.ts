@@ -122,7 +122,7 @@ export function articleSchema(input: {
 }
 
 /** A free calculator page. */
-export function toolSchema(input: { url: string; name: string; description: string; locale: AppLocale }) {
+export function toolSchema(input: { url: string; name: string; description: string; locale: AppLocale; dateModified: string }) {
   return {
     "@context": "https://schema.org",
     "@type": "WebApplication",
@@ -134,6 +134,8 @@ export function toolSchema(input: { url: string; name: string; description: stri
     operatingSystem: "Any",
     inLanguage: input.locale,
     isAccessibleForFree: true,
+    dateModified: input.dateModified,
+    author: { "@id": `${SITE_URL}/#person-${AUTHORS.giorgi.slug}` },
     offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
     publisher,
   };
@@ -146,6 +148,7 @@ export function howToSchema(input: {
   description: string;
   locale: string;
   image?: string;
+  dateModified?: string;
   steps: { name: string; text: string }[];
 }) {
   return {
@@ -156,6 +159,7 @@ export function howToSchema(input: {
     description: input.description,
     inLanguage: input.locale,
     ...(input.image ? { image: input.image } : {}),
+    ...(input.dateModified ? { dateModified: input.dateModified } : {}),
     step: input.steps.map((st, i) => ({
       "@type": "HowToStep",
       position: i + 1,

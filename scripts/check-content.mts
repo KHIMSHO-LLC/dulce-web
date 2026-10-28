@@ -5,6 +5,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { ARTICLES } from "../content/articles.ts";
 import { AUTHORS } from "../content/authors.ts";
+import { TOOLS } from "../lib/tools.ts";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const LOCALES = ["es", "en", "de", "fr", "it"] as const;
@@ -97,6 +98,14 @@ for (const a of ARTICLES) {
 }
 
 for (const [id, n] of inbound) if (n === 0) err(id, "no other article links to it (add an <ArticleLink> from a related article)");
+
+// Answer-first summary under the H1 and a link to at least one calculator (lib/tools.ts `guides`).
+const toolGuides = new Set(TOOLS.flatMap((t) => t.guides));
+for (const id of toolGuides) if (!ids.has(id)) err(id, "listed in lib/tools.ts guides but no such article");
+for (const a of ARTICLES) {
+  if (!a.summary) warn(a.id, "no answer-first `summary` yet (TODO: 2-3 sentences, all languages)");
+  if (!toolGuides.has(a.id)) err(a.id, "not in any calculator's `guides` list (lib/tools.ts), so it links to no tool");
+}
 
 for (const w of warnings) console.warn(`warn  ${w}`);
 for (const e of errors) console.error(`error ${e}`);

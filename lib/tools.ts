@@ -122,9 +122,39 @@ export function parseNum(input: string): number {
   return input.trim() === "" ? NaN : n;
 }
 
-/** Every calculator: route and content folder (content/tools/<name>). */
-export const TOOLS: readonly { path: ToolPath; name: string }[] = [
-  { path: "/tools/glucose-converter", name: "glucose-converter" },
-  { path: "/tools/a1c-calculator", name: "a1c-calculator" },
-  { path: "/tools/sensor-end-date", name: "sensor-end-date" },
+export type Tool = {
+  path: ToolPath;
+  /** Content folder (content/tools/<name>). */
+  name: string;
+  /** When the explanation (content/tools/<name>) last changed. Shown on the page and in its JSON-LD. */
+  dateModified: string;
+  /** Guides this calculator links to; each guide links back to the calculators that list it. */
+  guides: string[];
+};
+
+/** Every calculator. Every article id should appear in at least one `guides` list. */
+export const TOOLS: readonly Tool[] = [
+  {
+    path: "/tools/glucose-converter",
+    name: "glucose-converter",
+    dateModified: "2026-10-22",
+    guides: ["alerts", "night-lows", "child-glucose", "family-sharing", "dexcom", "dexcom-follow-alternative", "glucose-apps-compared"],
+  },
+  {
+    path: "/tools/a1c-calculator",
+    name: "a1c-calculator",
+    dateModified: "2026-10-22",
+    guides: ["time-in-range", "trends", "logbook", "apple-health", "libreview"],
+  },
+  {
+    path: "/tools/sensor-end-date",
+    name: "sensor-end-date",
+    dateModified: "2026-10-23",
+    guides: ["librelinkup-not-working", "apple-watch", "lock-screen", "widgets"],
+  },
 ];
+
+export const toolByPath = (path: ToolPath) => TOOLS.find((t) => t.path === path)!;
+
+/** Calculators that list an article as related. */
+export const toolsForArticle = (articleId: string) => TOOLS.filter((t) => t.guides.includes(articleId));

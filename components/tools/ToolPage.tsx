@@ -7,7 +7,10 @@ import { PROSE } from "@/components/article/prose";
 import { AppCta, ArticleLink, Callout, PageLink } from "@/components/article/MdxParts";
 import { breadcrumbSchema, toolSchema } from "@/lib/schema";
 import { absoluteUrl, localizedPath } from "@/lib/seo";
-import { TOOL_COPY, type ToolPath } from "@/lib/tools";
+import { TOOL_COPY, toolByPath, type ToolPath } from "@/lib/tools";
+import { getArticle } from "@/content/articles";
+import { ArticleCard } from "@/components/article/ArticleCard";
+import { Byline } from "@/components/article/Byline";
 
 /**
  * Shared shell of a calculator page: title, the calculator, then the
@@ -26,6 +29,8 @@ export async function ToolPage({
 }) {
   const t = await getTranslations({ locale, namespace: "blog" });
   const copy = TOOL_COPY[path][locale];
+  const tool = toolByPath(path);
+  const guides = tool.guides.map((id) => getArticle(id)).filter((a) => a !== undefined);
   const { default: Body } = (await import(`@/content/tools/${name}/${locale}.mdx`)) as {
     default: (props: { components: Record<string, unknown> }) => ReactNode;
   };
@@ -44,6 +49,7 @@ export async function ToolPage({
           name: copy.title,
           description: copy.description,
           locale,
+          dateModified: tool.dateModified,
         })}
       />
       <JsonLd
@@ -58,12 +64,28 @@ export async function ToolPage({
           <p className="text-label uppercase tracking-wide text-ember">{t("toolsTitle")}</p>
           <h1 className="type-display mt-4 text-[clamp(2.2rem,4.8vw,4rem)] text-ink">{copy.title}</h1>
           <p className="mt-5 max-w-[60ch] text-[1.125rem] leading-relaxed text-soft">{copy.description}</p>
+          {/* The calculators are the founder's (formulas and sources in lib/tools.ts). */}
+          <Byline locale={locale} author="giorgi" dateModified={tool.dateModified} />
         </header>
         <div className="mt-10 max-w-3xl">{calculator}</div>
         <div className={`${PROSE} mt-14`}>
           <Body components={components} />
           <p className="!text-caption !text-mute">{t("medical")}</p>
         </div>
+        {guides.length ? (
+          <section className="mt-16" aria-labelledby="guides-title">
+            <h2 id="guides-title" className="text-[1.6rem] font-light tracking-[-0.02em] text-ink">
+              {t("relatedGuides")}
+            </h2>
+            <ul className="mt-6 grid gap-4 md:grid-cols-3">
+              {guides.map((a) => (
+                <li key={a.id}>
+                  <ArticleCard article={a} locale={locale} readLabel={t("read")} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
       </div>
       </ReadingSurface>
     </>
