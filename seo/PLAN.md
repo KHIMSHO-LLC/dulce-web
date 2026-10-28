@@ -133,9 +133,13 @@ questions around them. Being the best answer means the product actually does it 
       deploy (`.github/workflows/indexnow.yml`); bylines + dates on calculators and /setup; guide <-> calculator
       links from `TOOLS.guides`; drop logo served at 128/256w. Lighthouse mobile (local build): SEO 92 and
       Accessibility 96-100 on home, a calculator, a guide and /setup.
-- [ ] Giorgi: write the answer-first `summary` (2-3 sentences, 5 languages) for each guide in
-      `content/articles.ts`; `npm run check:content` lists the missing ones.
-- [ ] Performance (measured 2026-10-24 with Lighthouse 12, mobile, live site; the PSI API was over its daily
+- [x] 2026-10-28 (later): answer-first `summary` on all 17 guides in 5 languages (from each guide's own text);
+      Instagram/TikTok in the footer and Organization sameAs, "Made in Spain"; weekly live crawl + JSON-LD check
+      (`.github/workflows/weekly-seo-check.yml`); legal pages in de/fr/it (Spanish prevails, now indexed); disclaimer
+      and privacy corrected to the released app (no Nightscout, predictive low exists, GA behind consent); cn() bug
+      that dropped text colours (hero button contrast) fixed.
+- [x] Performance: 2026-10-28 the preloader is skipped on phones and shorter on desktop. Live home, Lighthouse
+      mobile: 89, LCP 1.1 s (was 77-79, LCP 3.6 s). Earlier notes: (measured 2026-10-24 with Lighthouse 12, mobile, live site; the PSI API was over its daily
       quota). Home `/en`: score 77-79, FCP 1.3 s, LCP 3.6 s, TBT 260-350 ms, CLS 0. The LCP element is the hero
       paragraph and its delay is the first-visit **preloader** (counter + curtain, ~2.6 s): Chrome counts the hero
       only once it is uncovered. three.js is not the bottleneck (JS boot ~2.5 s at 4x CPU, TBT fine). Guide
