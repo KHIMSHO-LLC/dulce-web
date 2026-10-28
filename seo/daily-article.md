@@ -40,7 +40,9 @@ Add the registry entry (author "giorgi" for app/feature/personal topics, "levan"
 datePublished = today), and content/articles/<id>/{es,en,de,fr,it}.mdx, 700-1200 words each, following
 content/README.md. Include one <AppCta />, 2+ internal links, a "Sources" section when you state facts from
 outside the app, and add an <ArticleLink> to the new article from at least one related older article (bump that
-article's dateModified). Use an existing image from public/guides unless you have a real one.
+article's dateModified). Use an existing image from public/guides unless you have a real one. Fill `summary` in all five
+languages (2-3 sentences answering the title, facts from the article) and add the id to a calculator's `guides` in
+lib/tools.ts; `npm run check:content` fails or warns without them.
 
 ## 4. Check, then publish
 

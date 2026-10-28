@@ -106,7 +106,7 @@ export function articleMarkdown(article: Article, locale: AppLocale): string {
   const faq = article.faq?.[locale] ?? [];
   const parts = [
     `# ${article.title[locale]}`,
-    `> ${article.description[locale]}`,
+    `> ${article.summary?.[locale] ?? article.description[locale]}`,
     `URL: ${articleUrl(article, locale)}  \nAuthor: ${author.name}  \nPublished: ${article.datePublished}  \nUpdated: ${article.dateModified}`,
     mdxToMarkdown(mdxSource(article, locale), locale, `blog_${article.id}`),
   ];

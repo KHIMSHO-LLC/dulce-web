@@ -2,7 +2,10 @@
 
 Every article lives in two places:
 
-- `content/articles.ts`: the registry entry (id, slugs, titles, descriptions, dates, author, keywords, image, related).
+- `content/articles.ts`: the registry entry (id, slugs, titles, descriptions, `summary`, dates, author, keywords, image,
+  related). `summary` is the 2-3 sentence direct answer shown under the H1 (what AI answers quote): plain text, the
+  title's question answered in the first sentence, facts from the article only. Also add the article id to at least
+  one calculator's `guides` list in `lib/tools.ts`.
 - `content/articles/<id>/{es,en,de,fr,it}.mdx`: the body in each language. The page renders the title (H1),
   byline, closing CTA and disclaimers, so the body starts with an intro paragraph and uses `##` sections.
 
