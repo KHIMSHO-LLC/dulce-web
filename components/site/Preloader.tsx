@@ -10,8 +10,9 @@ const COL = Array.from({ length: 11 }, (_, i) => i % 10);
 
 /**
  * First-visit curtain: a rolling counter climbs to 100 while fonts settle,
- * then the panel lifts and announces the intro. Shown once per session; never
- * shown without JavaScript or under reduced motion (see globals.css).
+ * then the panel lifts and announces the intro. Shown once per session, on
+ * screens 768px and wider; never shown on phones (it held back the mobile LCP
+ * by ~2.5 s), without JavaScript or under reduced motion (see globals.css).
  */
 export function Preloader() {
   const t = useTranslations("preloader");
@@ -20,7 +21,8 @@ export function Preloader() {
   useEffect(() => {
     const el = ref.current;
     const root = document.documentElement;
-    if (!el || root.dataset.seen !== undefined || prefersReducedMotion()) {
+    const phone = window.matchMedia("(max-width: 767px)").matches;
+    if (!el || root.dataset.seen !== undefined || phone || prefersReducedMotion()) {
       announceIntro();
       return;
     }
@@ -40,11 +42,11 @@ export function Preloader() {
 
     let done = false;
     let cancelled = false;
-    const minTime = new Promise((r) => setTimeout(r, 900));
+    const minTime = new Promise((r) => setTimeout(r, 600));
     const fonts = document.fonts?.ready ?? Promise.resolve();
-    const cap = new Promise((r) => setTimeout(r, 2200));
+    const cap = new Promise((r) => setTimeout(r, 1600));
 
-    const climb = gsap.to(progress, { p: 86, duration: 1.2, ease: "power2.out", onUpdate: render });
+    const climb = gsap.to(progress, { p: 86, duration: 0.9, ease: "power2.out", onUpdate: render });
 
     const finish = () => {
       if (done || cancelled) return;
@@ -61,7 +63,7 @@ export function Preloader() {
       tl.to(progress, { p: 100, duration: 0.45, ease: "power2.inOut", onUpdate: render })
         .to(el.querySelector("[data-mark]"), { scale: 0.6, autoAlpha: 0, duration: 0.4, ease: "power2.in" }, "-=0.1")
         .add(() => announceIntro(), "+=0.05")
-        .to(el, { yPercent: -100, duration: 1.05, ease: "expo.inOut" }, "<")
+        .to(el, { yPercent: -100, duration: 0.85, ease: "expo.inOut" }, "<")
         .to(el.querySelector("[data-count]"), { yPercent: 40, autoAlpha: 0, duration: 0.8, ease: "expo.in" }, "<");
     };
 

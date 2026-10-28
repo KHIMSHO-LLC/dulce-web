@@ -274,6 +274,12 @@ html.lenis body {
 html[data-seen] .preloader {
   display: none;
 }
+/* Phones skip the curtain (Preloader.tsx): hidden before any script runs. */
+@media (max-width: 767px) {
+  .preloader {
+    display: none;
+  }
+}
 @keyframes preloader-failsafe {
   to {
     visibility: hidden;
