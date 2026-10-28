@@ -4,6 +4,7 @@ import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { JsonLd } from "@/components/JsonLd";
+import { ORG_ID } from "@/lib/schema";
 import { ReadingSurface } from "@/components/article/ReadingSurface";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { articlesNewestFirst } from "@/content/articles";
@@ -57,7 +58,7 @@ export default async function AuthorPage({ params }: PageProps<"/[locale]/author
             url,
             description: author.bio[loc],
             jobTitle: author.role[loc],
-            worksFor: { "@type": "Organization", name: "Dulce", url: "https://dulceglucosa.com" },
+            worksFor: { "@id": ORG_ID },
           },
           hasPart: articles.map((a) => ({ "@type": "Article", url: articleUrl(a, loc), headline: a.title[loc] })),
         }}

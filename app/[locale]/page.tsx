@@ -4,8 +4,6 @@ import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { JsonLd } from "@/components/JsonLd";
-import { AUTHORS } from "@/content/authors";
-import { authorPath } from "@/lib/articles";
 import { Preloader } from "@/components/site/Preloader";
 import { Stage } from "@/components/three/Stage";
 import { Hero } from "@/components/landing/Hero";
@@ -21,10 +19,9 @@ import { DownloadCta } from "@/components/landing/DownloadCta";
 import { Reveal } from "@/components/motion/Reveal";
 import { Split } from "@/components/motion/Split";
 import type { ScreenName } from "@/components/screens/draw";
-import { faqSchema } from "@/lib/schema";
-import { absoluteUrl, seoFor } from "@/lib/seo";
+import { APP_ID, APP_STORE_URL, ORG_ID, faqSchema } from "@/lib/schema";
+import { seoFor } from "@/lib/seo";
 import { SECTION, SITE_URL, localeUrl } from "@/lib/site";
-import { APP_STORE_ID } from "@/lib/appStore";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]">): Promise<Metadata> {
   const { locale } = await params;
@@ -100,56 +97,32 @@ const AUDIENCE: Record<AppLocale, string> = {
 };
 
 function appSchema(locale: AppLocale, description: string) {
-  const org = `${SITE_URL}/#organization`;
-  const appStoreUrl = `https://apps.apple.com/app/id${APP_STORE_ID}`;
   return {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MobileApplication",
-        "@id": `${SITE_URL}/#app`,
-        name: "Dulce",
-        operatingSystem: "iOS, watchOS",
-        applicationCategory: "HealthApplication",
-        description,
-        inLanguage: [...routing.locales],
-        url: localeUrl(locale),
-        installUrl: appStoreUrl,
-        sameAs: [appStoreUrl],
-        screenshot: [
-          `${SITE_URL}/screenshots/home.png`,
-          `${SITE_URL}/screenshots/lock-screen.png`,
-          `${SITE_URL}/screenshots/widgets.png`,
-        ],
-        featureList: FEATURES[locale],
-        audience: { "@type": "PeopleAudience", audienceType: AUDIENCE[locale] },
-        offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
-        publisher: { "@id": org },
-      },
-      {
-        "@type": "Organization",
-        "@id": org,
-        name: "Dulce",
-        url: SITE_URL,
-        email: "hola@dulceglucosa.com",
-        logo: `${SITE_URL}/dulce-logo.png`,
-        sameAs: [appStoreUrl],
-        // Ties the brand to the founder's author page (who stands behind the guides).
-        founder: {
-          "@type": "Person",
-          name: AUTHORS.giorgi.name,
-          url: absoluteUrl(authorPath("giorgi", locale)),
-        },
-      },
-      {
-        "@type": "WebSite",
-        "@id": `${SITE_URL}/#website`,
-        url: SITE_URL,
-        name: "Dulce",
-        inLanguage: [...routing.locales],
-        publisher: { "@id": org },
-      },
+    "@type": "MobileApplication",
+    "@id": APP_ID,
+    name: "Dulce",
+    // dulce-app app.json: ios.deploymentTarget 17.0. The watch app ships inside it.
+    operatingSystem: "iOS 17 or later",
+    applicationCategory: "HealthApplication",
+    description,
+    inLanguage: [...routing.locales],
+    url: localeUrl(locale),
+    downloadUrl: APP_STORE_URL,
+    installUrl: APP_STORE_URL,
+    sameAs: [APP_STORE_URL],
+    screenshot: [
+      `${SITE_URL}/screenshots/home.png`,
+      `${SITE_URL}/screenshots/lock-screen.png`,
+      `${SITE_URL}/screenshots/widgets.png`,
     ],
+    featureList: FEATURES[locale],
+    audience: { "@type": "PeopleAudience", audienceType: AUDIENCE[locale] },
+    // Free download. Dulce Pro is not listed as an Offer: its price differs by App Store country and
+    // the site has no price to quote. TODO(Giorgi): add a second Offer if a single public price is decided.
+    offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+    // TODO(Giorgi): no aggregateRating until there is a real rating source (App Store rating + count) to read.
+    publisher: { "@id": ORG_ID },
   };
 }
 
@@ -167,7 +140,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   return (
     <>
       <JsonLd data={appSchema(loc, t("description"))} />
-      <JsonLd data={faqSchema(faqItems.map((i) => ({ question: i.q, answer: i.a })))} />
+      {/* Same items the FAQ section renders (home.faq.items), so markup and visible text match. */}
+      <JsonLd data={faqSchema(faqItems.map((i) => ({ question: i.q, answer: i.a })), loc)} />
       <Preloader />
       <Stage locale={loc} />
 

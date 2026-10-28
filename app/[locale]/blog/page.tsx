@@ -10,7 +10,8 @@ import { ArticleCard } from "@/components/article/ArticleCard";
 import { articlesNewestFirst, type ArticleCategory } from "@/content/articles";
 import { articleUrl } from "@/lib/articles";
 import { TOOL_COPY } from "@/lib/tools";
-import { seoFor } from "@/lib/seo";
+import { absoluteUrl, localizedPath, seoFor } from "@/lib/seo";
+import { ORG_ID, WEBSITE_ID, breadcrumbSchema } from "@/lib/schema";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/blog">): Promise<Metadata> {
   const { locale } = await params;
@@ -28,6 +29,7 @@ export default async function BlogIndex({ params }: PageProps<"/[locale]/blog">)
   setRequestLocale(locale);
   const loc = locale as AppLocale;
   const t = await getTranslations({ locale: loc, namespace: "blog" });
+  const url = absoluteUrl(localizedPath(loc, "/blog"));
   const articles = articlesNewestFirst().sort((a, b) => ORDER.indexOf(a.category) - ORDER.indexOf(b.category));
 
   return (
@@ -35,9 +37,25 @@ export default async function BlogIndex({ params }: PageProps<"/[locale]/blog">)
       <JsonLd
         data={{
           "@context": "https://schema.org",
-          "@type": "ItemList",
-          itemListElement: articles.map((a, i) => ({ "@type": "ListItem", position: i + 1, url: articleUrl(a, loc) })),
+          "@type": "CollectionPage",
+          "@id": url,
+          url,
+          name: t("title"),
+          description: t("description"),
+          inLanguage: loc,
+          isPartOf: { "@id": WEBSITE_ID },
+          publisher: { "@id": ORG_ID },
+          mainEntity: {
+            "@type": "ItemList",
+            itemListElement: articles.map((a, i) => ({ "@type": "ListItem", position: i + 1, url: articleUrl(a, loc) })),
+          },
         }}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: t("home"), url: absoluteUrl(localizedPath(loc, "/")) },
+          { name: t("eyebrow"), url },
+        ])}
       />
       <div className="container-page relative z-10 pb-16 pt-28 md:pt-36">
         <header className="max-w-3xl">

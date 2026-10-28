@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { ReadingSurface } from "@/components/article/ReadingSurface";
 import { PROSE } from "@/components/article/prose";
 import { AppCta, ArticleLink, Callout, PageLink } from "@/components/article/MdxParts";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, toolSchema } from "@/lib/schema";
 import { absoluteUrl, localizedPath } from "@/lib/seo";
 import { TOOL_COPY, type ToolPath } from "@/lib/tools";
 
@@ -39,17 +39,12 @@ export async function ToolPage({
   return (
     <>
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "WebApplication",
+        data={toolSchema({
+          url: absoluteUrl(localizedPath(locale, path)),
           name: copy.title,
           description: copy.description,
-          url: absoluteUrl(localizedPath(locale, path)),
-          applicationCategory: "HealthApplication",
-          operatingSystem: "Any",
-          inLanguage: locale,
-          offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
-        }}
+          locale,
+        })}
       />
       <JsonLd
         data={breadcrumbSchema([

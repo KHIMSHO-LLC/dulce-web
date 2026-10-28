@@ -11,10 +11,12 @@ import { Atmosphere } from "@/components/site/Atmosphere";
 import { PillNav } from "@/components/site/PillNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SmoothScroll } from "@/components/motion/SmoothScroll";
+import { JsonLd } from "@/components/JsonLd";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { APP_STORE_ID } from "@/lib/appStore";
 import { SITE_URL } from "@/lib/site";
 import { OG_LOCALE } from "@/lib/seo";
+import { siteSchema } from "@/lib/schema";
 import "../globals.css";
 
 const archivo = Archivo({
@@ -86,6 +88,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "nav" });
+  const meta = await getTranslations({ locale, namespace: "metadata" });
 
   return (
     // suppressHydrationWarning: the inline script and browser extensions set
@@ -93,6 +96,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
     <html lang={locale} className={`${archivo.variable} antialiased`} suppressHydrationWarning>
       <body className="min-h-full bg-ground text-ink" suppressHydrationWarning>
         <script dangerouslySetInnerHTML={{ __html: SEEN_SCRIPT }} />
+        <JsonLd data={siteSchema(locale, meta("defaultDescription"))} />
         <a
           href="#main"
           className="sr-only z-[80] rounded-full bg-ink px-4 py-2 text-ground focus:not-sr-only focus:fixed focus:left-4 focus:top-4"

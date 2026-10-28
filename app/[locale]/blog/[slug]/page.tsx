@@ -14,7 +14,7 @@ import { ARTICLES, CATEGORY_LABEL, articleBySlug, getArticle } from "@/content/a
 import { AUTHORS } from "@/content/authors";
 import { articlePath, articleUrl, authorPath, readingMinutes } from "@/lib/articles";
 import { formatDate } from "@/lib/dates";
-import { breadcrumbSchema, articleSchema, faqSchema, howToSchema, personSchema } from "@/lib/schema";
+import { breadcrumbSchema, articleSchema, authorPerson, faqSchema, howToSchema } from "@/lib/schema";
 import { howToSteps, markdownPath, mdxSource } from "@/lib/markdown";
 import { absoluteUrl, seoFromPaths, localizedPath } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
@@ -89,7 +89,6 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
   };
 
   const url = articleUrl(article, loc);
-  const authorUrl = absoluteUrl(authorPath(article.author, loc));
   const home = absoluteUrl(localizedPath(loc, "/"));
   const blog = absoluteUrl(localizedPath(loc, "/blog"));
   const related = article.related.map((id) => getArticle(id)).filter((a) => a !== undefined);
@@ -107,7 +106,7 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
           locale: loc,
           datePublished: article.datePublished,
           dateModified: article.dateModified,
-          author: personSchema(author, authorUrl, author.role[loc]),
+          author: authorPerson(article.author, loc),
           keywords: article.keywords[loc],
         })}
       />
@@ -130,7 +129,7 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
           })}
         />
       ) : null}
-      {faq.length ? <JsonLd data={faqSchema(faq.map((f) => ({ question: f.q, answer: f.a })))} /> : null}
+      {faq.length ? <JsonLd data={faqSchema(faq.map((f) => ({ question: f.q, answer: f.a })), loc)} /> : null}
 
       <ReadingSurface>
       <article className="px-5 pb-14 pt-12 sm:px-8 md:px-14 md:pb-20 md:pt-16">

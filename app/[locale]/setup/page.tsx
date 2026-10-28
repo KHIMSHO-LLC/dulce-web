@@ -8,7 +8,7 @@ import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/motion/Reveal";
 import { Split } from "@/components/motion/Split";
-import { faqSchema, breadcrumbSchema } from "@/lib/schema";
+import { faqSchema, breadcrumbSchema, howToSchema } from "@/lib/schema";
 import { seoFor, localizedPath } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
@@ -31,18 +31,30 @@ export default async function SetupPage({ params }: PageProps<"/[locale]/setup">
   const loc = locale as AppLocale;
   const t = await getTranslations({ locale: loc, namespace: "setup" });
 
-  const faq = faqSchema(["1", "2", "3"].map((n) => ({ question: t(`faq.q${n}`), answer: t(`faq.a${n}`) })));
+  const faq = faqSchema(
+    ["1", "2", "3"].map((n) => ({ question: t(`faq.q${n}`), answer: t(`faq.a${n}`) })),
+    loc,
+  );
   const home = `${SITE_URL}${localizedPath(loc, "/") === "/" ? "" : localizedPath(loc, "/")}`;
   const breadcrumbs = breadcrumbSchema([
     { name: t("breadcrumbHome"), url: home },
     { name: t("hero.headline"), url: `${SITE_URL}${localizedPath(loc, "/setup")}` },
   ]);
   const steps = ["step1", "step2", "step3", "step4"] as const;
+  // Built from the same messages the numbered list renders.
+  const howTo = howToSchema({
+    url: `${SITE_URL}${localizedPath(loc, "/setup")}`,
+    name: t("steps.title"),
+    description: t("description"),
+    locale: loc,
+    steps: steps.map((key) => ({ name: t(`steps.${key}.title`), text: t(`steps.${key}.body`) })),
+  });
 
   return (
     <>
       <JsonLd data={faq} />
       <JsonLd data={breadcrumbs} />
+      <JsonLd data={howTo} />
       <div className="relative z-10 pb-12 pt-28 md:pt-36">
         <Reveal className="container-page" on="intro">
           <Split as="h1" text={t("hero.headline")} className="type-display max-w-[18ch] text-[clamp(2.6rem,6vw,5.8rem)] text-ink" />

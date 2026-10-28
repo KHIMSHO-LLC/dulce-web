@@ -1,7 +1,66 @@
 /**
  * Structured-data (schema.org) builders. Keeping them here means every page
- * emits consistent, valid JSON-LD.
+ * emits consistent, valid JSON-LD. Entities link by `@id`: the Organization and
+ * WebSite are emitted once per page by the locale layout, everything else
+ * points at them.
  */
+import type { AppLocale } from "@/i18n/routing";
+import { AUTHORS, type AuthorId } from "@/content/authors";
+import { APP_STORE_ID } from "./appStore";
+import { authorPath } from "./articles";
+import { absoluteUrl } from "./seo";
+import { CONTACT_EMAIL, SITE_URL } from "./site";
+
+export const ORG_ID = `${SITE_URL}/#organization`;
+export const WEBSITE_ID = `${SITE_URL}/#website`;
+export const APP_ID = `${SITE_URL}/#app`;
+export const APP_STORE_URL = `https://apps.apple.com/app/id${APP_STORE_ID}`;
+
+const publisher = { "@id": ORG_ID };
+
+/** Author of a page as a Person, linked to their author page in this locale. */
+export function authorPerson(id: AuthorId, locale: AppLocale) {
+  const author = AUTHORS[id];
+  return {
+    "@type": "Person",
+    "@id": `${SITE_URL}/#person-${author.slug}`,
+    name: author.name,
+    url: absoluteUrl(authorPath(id, locale)),
+    jobTitle: author.role[locale],
+    description: author.role[locale],
+  };
+}
+
+/** Site-wide Organization + WebSite graph (locale layout). */
+export function siteSchema(locale: AppLocale, description: string) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": ORG_ID,
+        name: "Dulce",
+        url: SITE_URL,
+        email: CONTACT_EMAIL,
+        // Square PNG, 2731 px (Google needs ≥112 px).
+        logo: { "@type": "ImageObject", url: `${SITE_URL}/dulce-logo.png`, width: 2731, height: 2731 },
+        // TODO(Giorgi): add the brand's social profiles here once they exist (none are linked anywhere on the site).
+        sameAs: [APP_STORE_URL],
+        founder: authorPerson("giorgi", locale),
+      },
+      {
+        "@type": "WebSite",
+        "@id": WEBSITE_ID,
+        url: SITE_URL,
+        name: "Dulce",
+        description,
+        inLanguage: locale,
+        publisher,
+      },
+    ],
+  };
+}
+
 export type Crumb = { name: string; url: string };
 
 export function breadcrumbSchema(crumbs: Crumb[]) {
@@ -19,21 +78,17 @@ export function breadcrumbSchema(crumbs: Crumb[]) {
 
 export type FaqItem = { question: string; answer: string };
 
-export function faqSchema(items: FaqItem[]) {
+export function faqSchema(items: FaqItem[], locale?: AppLocale) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    ...(locale ? { inLanguage: locale } : {}),
     mainEntity: items.map((it) => ({
       "@type": "Question",
       name: it.question,
       acceptedAnswer: { "@type": "Answer", text: it.answer },
     })),
   };
-}
-
-/** schema.org Person for an article author, pointing at their author page. */
-export function personSchema(author: { name: string; slug: string }, url: string, jobTitle?: string) {
-  return { "@type": "Person", name: author.name, url, ...(jobTitle ? { jobTitle } : {}) };
 }
 
 export function articleSchema(input: {
@@ -44,12 +99,12 @@ export function articleSchema(input: {
   locale: string;
   datePublished: string;
   dateModified: string;
-  author: ReturnType<typeof personSchema>;
+  author: ReturnType<typeof authorPerson>;
   keywords: string[];
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     "@id": input.url,
     mainEntityOfPage: { "@type": "WebPage", "@id": input.url },
     url: input.url,
@@ -61,12 +116,26 @@ export function articleSchema(input: {
     dateModified: input.dateModified,
     author: input.author,
     keywords: input.keywords.join(", "),
-    publisher: {
-      "@type": "Organization",
-      name: "Dulce",
-      url: "https://dulceglucosa.com",
-      logo: { "@type": "ImageObject", url: "https://dulceglucosa.com/dulce-logo.png" },
-    },
+    isPartOf: { "@id": WEBSITE_ID },
+    publisher,
+  };
+}
+
+/** A free calculator page. */
+export function toolSchema(input: { url: string; name: string; description: string; locale: AppLocale }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "@id": `${input.url}#tool`,
+    name: input.name,
+    description: input.description,
+    url: input.url,
+    applicationCategory: "HealthApplication",
+    operatingSystem: "Any",
+    inLanguage: input.locale,
+    isAccessibleForFree: true,
+    offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+    publisher,
   };
 }
 
@@ -76,7 +145,7 @@ export function howToSchema(input: {
   name: string;
   description: string;
   locale: string;
-  image: string;
+  image?: string;
   steps: { name: string; text: string }[];
 }) {
   return {
@@ -86,7 +155,7 @@ export function howToSchema(input: {
     name: input.name,
     description: input.description,
     inLanguage: input.locale,
-    image: input.image,
+    ...(input.image ? { image: input.image } : {}),
     step: input.steps.map((st, i) => ({
       "@type": "HowToStep",
       position: i + 1,

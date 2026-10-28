@@ -24,6 +24,7 @@ type Faq = { q: string; a: string };
 /**
  * Free vs Dulce Pro. Features only from the released app; no prices, which
  * differ by country (the App Store shows them in the visitor's currency).
+ * TODO(Giorgi): no Product/Offer JSON-LD until there is a public price to quote.
  */
 export default async function ProPage({ params }: PageProps<"/[locale]/pro">) {
   const { locale } = await params;
