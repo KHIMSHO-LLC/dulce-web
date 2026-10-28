@@ -7,6 +7,8 @@ import { DropMark } from "@/components/site/DropMark";
 /**
  * The page's one marquee. Drifts on its own and leans into the scroll:
  * scrolling down speeds it forward, scrolling up runs it backward.
+ * Purely decorative: the section's real heading is a separate sr-only <h2>, and
+ * the repeated words are CSS-generated (`data-glyph`) so they are not page text.
  */
 export function Marquee({ text }: { text: string }) {
   const track = useRef<HTMLDivElement>(null);
@@ -40,7 +42,7 @@ export function Marquee({ text }: { text: string }) {
 
   const unit = (
     <span className="flex shrink-0 items-center gap-[0.35em] pr-[0.35em]">
-      <span>{text}</span>
+      <span data-glyph={text} />
       <DropMark className="h-[0.62em] opacity-80" />
     </span>
   );

@@ -10,6 +10,10 @@ const DIGITS = Array.from({ length: 20 }, (_, i) => i % 10);
  * Odometer: each digit is a clipped column of 0-9 twice over that rolls to its
  * value, the higher places travelling further, when the number scrolls in.
  * Without script (or with reduced motion) the final value simply shows.
+ *
+ * The HTML text is only the clean value (screen-reader span): the visible
+ * digits are CSS-generated (`data-glyph`, globals.css), so crawlers and
+ * "copy text" never see the 0-9 strips.
  */
 export function RollingNumber({
   value,
@@ -63,11 +67,7 @@ export function RollingNumber({
       <span className="sr-only">{label ?? value}</span>
       {value.split("").map((ch, i) => {
         if (!/\d/.test(ch)) {
-          return (
-            <span key={i} aria-hidden>
-              {ch}
-            </span>
-          );
+          return <span key={i} aria-hidden data-glyph={ch} />;
         }
         const d = Number(ch);
         return (
@@ -79,9 +79,7 @@ export function RollingNumber({
               style={{ transform: `translateY(-${((d + 10) / 20) * 100}%)` }}
             >
               {DIGITS.map((n, k) => (
-                <span key={k} className="block h-[1em]">
-                  {n}
-                </span>
+                <span key={k} className="block h-[1em]" data-glyph={n} />
               ))}
             </span>
           </span>

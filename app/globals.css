@@ -281,6 +281,15 @@ html[data-seen] .preloader {
   }
 }
 
+/*
+ * Decorative text drawn from an attribute: odometer digit strips and marquee
+ * copies. Generated content is not part of the document text, so crawlers and
+ * text extraction read only the real value next to it.
+ */
+[data-glyph]::before {
+  content: attr(data-glyph);
+}
+
 /* WebGL stage on: hide the static screen fallbacks it replaces. */
 html.webgl-on [data-webgl-fallback] {
   visibility: hidden;

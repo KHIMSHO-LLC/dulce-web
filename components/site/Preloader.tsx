@@ -92,9 +92,8 @@ export function Preloader() {
           <span key={place} className="relative inline-block h-[0.82em] overflow-hidden">
             <span data-place={place} className="flex flex-col">
               {COL.map((n, i) => (
-                <span key={i} className="block h-[0.82em] leading-[0.82]">
-                  {place === 100 && n === 0 ? "0" : n}
-                </span>
+                // CSS-generated digits (globals.css): no digit soup in the page text.
+                <span key={i} className="block h-[0.82em] leading-[0.82]" data-glyph={n} />
               ))}
             </span>
           </span>
