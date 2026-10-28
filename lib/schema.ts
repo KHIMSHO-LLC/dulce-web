@@ -18,6 +18,12 @@ export const APP_STORE_URL = `https://apps.apple.com/app/id${APP_STORE_ID}`;
 
 const publisher = { "@id": ORG_ID };
 
+/**
+ * Content dates are calendar days (YYYY-MM-DD). Google's Article check wants a
+ * full datetime with a timezone, so emit midnight UTC of that day.
+ */
+const dateTime = (day: string) => (/^\d{4}-\d{2}-\d{2}$/.test(day) ? `${day}T00:00:00Z` : day);
+
 /** Author of a page as a Person, linked to their author page in this locale. */
 export function authorPerson(id: AuthorId, locale: AppLocale) {
   const author = AUTHORS[id];
@@ -112,8 +118,8 @@ export function articleSchema(input: {
     description: input.description,
     image: input.image,
     inLanguage: input.locale,
-    datePublished: input.datePublished,
-    dateModified: input.dateModified,
+    datePublished: dateTime(input.datePublished),
+    dateModified: dateTime(input.dateModified),
     author: input.author,
     keywords: input.keywords.join(", "),
     isPartOf: { "@id": WEBSITE_ID },
@@ -134,7 +140,7 @@ export function toolSchema(input: { url: string; name: string; description: stri
     operatingSystem: "Any",
     inLanguage: input.locale,
     isAccessibleForFree: true,
-    dateModified: input.dateModified,
+    dateModified: dateTime(input.dateModified),
     author: { "@id": `${SITE_URL}/#person-${AUTHORS.giorgi.slug}` },
     offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
     publisher,
@@ -159,7 +165,7 @@ export function howToSchema(input: {
     description: input.description,
     inLanguage: input.locale,
     ...(input.image ? { image: input.image } : {}),
-    ...(input.dateModified ? { dateModified: input.dateModified } : {}),
+    ...(input.dateModified ? { dateModified: dateTime(input.dateModified) } : {}),
     step: input.steps.map((st, i) => ({
       "@type": "HowToStep",
       position: i + 1,
