@@ -121,3 +121,10 @@ export function parseNum(input: string): number {
   const n = Number(input.trim().replace(",", "."));
   return input.trim() === "" ? NaN : n;
 }
+
+/** Every calculator: route and content folder (content/tools/<name>). */
+export const TOOLS: readonly { path: ToolPath; name: string }[] = [
+  { path: "/tools/glucose-converter", name: "glucose-converter" },
+  { path: "/tools/a1c-calculator", name: "a1c-calculator" },
+  { path: "/tools/sensor-end-date", name: "sensor-end-date" },
+];

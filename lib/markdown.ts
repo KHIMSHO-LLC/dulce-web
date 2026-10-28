@@ -6,6 +6,7 @@ import { AUTHORS } from "@/content/authors";
 import { appStoreUrl, type StoreCampaign } from "./appStore";
 import { articleUrl } from "./articles";
 import { absoluteUrl, localizedPath } from "./seo";
+import { TOOL_COPY, type ToolPath } from "./tools";
 
 /**
  * Plain-Markdown versions of the guides for AI assistants and answer engines
@@ -123,4 +124,62 @@ export function markdownPath(article: Article, locale: AppLocale): string {
 
 export function articleBySlugAnyLocale(locale: AppLocale, slug: string): Article | undefined {
   return ARTICLES.find((a) => a.slug[locale] === slug);
+}
+
+type Messages = typeof import("@/messages/en.json");
+
+const MESSAGES: Record<AppLocale, () => Promise<Messages>> = {
+  es: () => import("@/messages/es.json").then((m) => m.default as Messages),
+  en: () => import("@/messages/en.json").then((m) => m.default as Messages),
+  de: () => import("@/messages/de.json").then((m) => m.default as Messages),
+  fr: () => import("@/messages/fr.json").then((m) => m.default as Messages),
+  it: () => import("@/messages/it.json").then((m) => m.default as Messages),
+};
+
+const qa = (items: { q: string; a: string }[]) => items.map((f) => `**${f.q}**\n\n${f.a}`).join("\n\n");
+
+/**
+ * The setup guide, the home FAQ and the Free vs Pro page as Markdown, from the
+ * same messages the pages render (so /llms-full.txt can't drift from the site).
+ */
+export async function sitePagesMarkdown(locale: AppLocale): Promise<string> {
+  const m = await MESSAGES[locale]();
+  const s = m.setup;
+  const steps = (["step1", "step2", "step3", "step4"] as const).map((k, i) => `${i + 1}. **${s.steps[k].title}.** ${s.steps[k].body}`);
+  const setup = [
+    `## ${s.hero.headline}`,
+    `URL: ${absoluteUrl(localizedPath(locale, "/setup"))}`,
+    s.hero.subheadline,
+    `### ${s.compare.title}`,
+    `- **${s.compare.scan.title}:** ${s.compare.scan.body}\n- **${s.compare.share.title}:** ${s.compare.share.body}`,
+    `### ${s.steps.title}`,
+    steps.join("\n"),
+    `### ${s.faq.title}`,
+    qa([1, 2, 3].map((n) => ({ q: s.faq[`q${n}` as "q1"], a: s.faq[`a${n}` as "a1"] }))),
+    s.disclaimer,
+  ];
+  const faq = [`## ${m.home.faq.marquee}`, `URL: ${absoluteUrl(localizedPath(locale, "/"))}#faq`, qa(m.home.faq.items)];
+  const p = m.pro;
+  const pro = [
+    `## ${p.title}`,
+    `URL: ${absoluteUrl(localizedPath(locale, "/pro"))}`,
+    p.lead,
+    `### ${p.freeTitle}\n\n${p.free.map((x) => `- ${x}`).join("\n")}`,
+    `### ${p.proTitle}\n\n${p.pro.map((x) => `- ${x}`).join("\n")}`,
+    `### ${p.trialTitle}\n\n${p.trial.map((x) => `- ${x}`).join("\n")}`,
+    qa(p.faq),
+  ];
+  return [setup, faq, pro].map((part) => part.join("\n\n")).join("\n\n");
+}
+
+/** One calculator page (title, description, explanation) as Markdown. */
+export function toolMarkdown(path: ToolPath, name: string, locale: AppLocale): string {
+  const copy = TOOL_COPY[path][locale];
+  const source = readFileSync(join(process.cwd(), "content/tools", name, `${locale}.mdx`), "utf8");
+  return [
+    `## ${copy.title}`,
+    `URL: ${absoluteUrl(localizedPath(locale, path))}`,
+    `> ${copy.description}`,
+    mdxToMarkdown(source, locale, "web_llms").replace(/^## /gm, "### "),
+  ].join("\n\n");
 }
