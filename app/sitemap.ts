@@ -3,6 +3,7 @@ import { LEGAL_LOCALES, locales, routing, type AppLocale, type AppPathname } fro
 import { ARTICLES } from "@/content/articles";
 import { AUTHORS } from "@/content/authors";
 import { articlePath } from "@/lib/articles";
+import { lastModified } from "@/lib/lastModified";
 import { absoluteUrl, localizedPath } from "@/lib/seo";
 
 type Entry = MetadataRoute.Sitemap[number];
@@ -13,12 +14,51 @@ function entries(
   rest: Omit<Entry, "url" | "alternates">,
   only: readonly AppLocale[] = locales,
 ): Entry[] {
-  const languages = Object.fromEntries(only.map((l) => [l, absoluteUrl(paths[l])]));
+  const languages: Record<string, string> = Object.fromEntries(only.map((l) => [l, absoluteUrl(paths[l])]));
+  languages["x-default"] = absoluteUrl(paths[routing.defaultLocale]);
   return only.map((l) => ({ url: absoluteUrl(paths[l]), alternates: { languages }, ...rest }));
 }
 
 const pathsFor = (internal: AppPathname, params: Record<string, string> = {}) =>
   Object.fromEntries(locales.map((l) => [l, localizedPath(l, internal, params)])) as Record<AppLocale, string>;
+
+const MESSAGES = "messages";
+
+/** Source files behind each static route, for a real lastmod (lib/lastModified.ts). */
+const SOURCES: Partial<Record<AppPathname, string[]>> = {
+  "/": ["app/[locale]/page.tsx", "components/landing", MESSAGES],
+  "/setup": ["app/[locale]/setup", MESSAGES],
+  "/pro": ["app/[locale]/pro", MESSAGES],
+  "/legal/privacy": ["app/[locale]/legal/privacy", "components/legal/PrivacyEs.tsx", "components/legal/PrivacyEn.tsx"],
+  "/legal/terms": ["app/[locale]/legal/terms", "components/legal/TermsEs.tsx", "components/legal/TermsEn.tsx"],
+  "/legal/disclaimer": [
+    "app/[locale]/legal/disclaimer",
+    "components/legal/DisclaimerEs.tsx",
+    "components/legal/DisclaimerEn.tsx",
+  ],
+  "/legal/cookies": ["app/[locale]/legal/cookies", "components/legal/CookiesEs.tsx", "components/legal/CookiesEn.tsx"],
+  "/tools/glucose-converter": [
+    "app/[locale]/tools/glucose-converter",
+    "content/tools/glucose-converter",
+    "components/tools/GlucoseConverter.tsx",
+    "components/tools/ToolPage.tsx",
+    "lib/tools.ts",
+  ],
+  "/tools/a1c-calculator": [
+    "app/[locale]/tools/a1c-calculator",
+    "content/tools/a1c-calculator",
+    "components/tools/A1cCalculator.tsx",
+    "components/tools/ToolPage.tsx",
+    "lib/tools.ts",
+  ],
+  "/tools/sensor-end-date": [
+    "app/[locale]/tools/sensor-end-date",
+    "content/tools/sensor-end-date",
+    "components/tools/SensorEndCalculator.tsx",
+    "components/tools/ToolPage.tsx",
+    "lib/tools.ts",
+  ],
+};
 
 /**
  * The landing page, functional routes, every article, author and calculator.
@@ -36,7 +76,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       return entries(
         pathsFor(internal),
         {
-          lastModified: internal === "/blog" && latestArticle ? new Date(latestArticle) : now,
+          // The status page is live data (refreshed hourly), the blog index changes with its newest article.
+          lastModified:
+            internal === "/librelinkup-status"
+              ? now
+              : internal === "/blog" && latestArticle
+                ? new Date(latestArticle)
+                : SOURCES[internal]
+                  ? lastModified(...SOURCES[internal])
+                  : undefined,
           changeFrequency: legal
             ? "yearly"
             : internal === "/librelinkup-status"
@@ -57,7 +105,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
     ...Object.values(AUTHORS).flatMap((author) =>
       entries(pathsFor("/authors/[author]", { author: author.slug }), {
-        lastModified: now,
+        lastModified: lastModified("content/authors.ts", "app/[locale]/authors"),
         changeFrequency: "monthly",
         priority: 0.3,
       }),
