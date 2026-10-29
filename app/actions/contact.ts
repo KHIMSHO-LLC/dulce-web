@@ -60,8 +60,8 @@ export async function sendContactMessage(
 
   const apiKey = env.resend.apiKey();
   if (!apiKey) {
-    // In dev without Resend configured, just log and succeed
-    console.log("[contact] Resend not configured. Message would have been sent:", parsed.data);
+    // Do not write contact form contents to logs, even in development.
+    console.info("[contact] Resend is not configured; message was not sent.");
     return { status: "success" };
   }
 
@@ -113,7 +113,10 @@ export async function sendContactMessage(
 
     return { status: "success" };
   } catch (error) {
-    console.error("[contact] failed to send email:", error);
+    console.error(
+      "[contact] failed to send email:",
+      error instanceof Error ? error.name : "unknown error",
+    );
     return { status: "error", code: "generic" };
   }
 }

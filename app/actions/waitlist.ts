@@ -63,11 +63,14 @@ export async function joinWaitlist(
       if (error.code === "23505") {
         return { status: "error", code: "already-joined" };
       }
-      console.error("[waitlist] supabase insert failed:", error);
+      console.error("[waitlist] supabase insert failed:", error.code || "unknown database error");
       return { status: "error", code: "generic" };
     }
   } catch (error) {
-    console.error("[waitlist] unexpected:", error);
+    console.error(
+      "[waitlist] unexpected:",
+      error instanceof Error ? error.name : "unknown error",
+    );
     return { status: "error", code: "generic" };
   }
 
