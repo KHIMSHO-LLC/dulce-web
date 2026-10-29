@@ -28,7 +28,19 @@ export function GoogleAnalytics() {
       try {
         campaign = new URL((a as HTMLAnchorElement).href).searchParams.get("ct") ?? "";
       } catch {}
-      gtag("event", "app_store_click", { campaign, page_path: window.location.pathname });
+      const segments = window.location.pathname.split("/").filter(Boolean);
+      const supportedLocales = new Set(["es", "en", "de", "fr", "it"]);
+      const pageLanguage = supportedLocales.has(segments[0] ?? "") ? segments[0] : "es";
+      const ctaLocation = campaign.startsWith("blog_")
+        ? "blog"
+        : campaign.replace(/^web_/, "") || "unknown";
+      gtag("event", "app_store_click", {
+        campaign,
+        source_campaign: campaign,
+        cta_location: ctaLocation,
+        page_path: window.location.pathname,
+        page_language: pageLanguage,
+      });
     };
     document.addEventListener("click", onClick, { capture: true });
     return () => document.removeEventListener("click", onClick, { capture: true });

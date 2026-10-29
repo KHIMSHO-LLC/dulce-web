@@ -34,8 +34,8 @@ export function TermsDe() {
       </p>
       <ul>
         <li>
-          Glukosedaten deines FreeStyle Libre Sensors über dein LibreLinkUp-Konto (Abbott)
-          anzuzeigen.
+          Glukosedaten von FreeStyle Libre über LibreLinkUp (Abbott) oder von Dexcom G6, G7
+          und ONE+ über Dexcom Share anzuzeigen.
         </li>
         <li>
           Deine Glukose auf dem Sperrbildschirm des iPhone (Live-Aktivität), in der Dynamic
@@ -86,7 +86,8 @@ export function TermsDe() {
 
       <h2 id="accounts">5. Konten und Zugangsdaten</h2>
       <p>
-        Dulce verbindet sich über dein <strong>LibreLinkUp</strong>-Konto mit deinen CGM-Daten.
+        Dulce verbindet sich mit FreeStyle-Libre-Daten über <strong>LibreLinkUp</strong> und
+        mit Dexcom-Daten über <strong>Dexcom Share</strong>.
         Du bist für die Vertraulichkeit dieser Zugangsdaten verantwortlich. Dulce speichert sie im
         sicheren Schlüsselbund deines Geräts; verlorene Zugangsdaten können wir nicht anstelle von
         Abbott wiederherstellen. Du musst berechtigt sein, das verbundene Konto zu nutzen.

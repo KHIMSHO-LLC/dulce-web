@@ -33,8 +33,8 @@ export function TermsFr() {
       </p>
       <ul>
         <li>
-          d&apos;afficher les données de glycémie de ton capteur FreeStyle Libre via ton compte
-          LibreLinkUp (Abbott) ;
+          d&apos;afficher les données de glycémie de FreeStyle Libre via LibreLinkUp (Abbott),
+          ou de Dexcom G6, G7 et ONE+ via Dexcom Share ;
         </li>
         <li>
           d&apos;afficher ta glycémie sur l&apos;écran verrouillé de l&apos;iPhone (Activité en
@@ -85,7 +85,8 @@ export function TermsFr() {
 
       <h2 id="accounts">5. Comptes et identifiants</h2>
       <p>
-        Dulce se connecte à tes données CGM via ton compte <strong>LibreLinkUp</strong>. Tu es
+        Dulce accède aux données FreeStyle Libre via <strong>LibreLinkUp</strong> et aux données
+        Dexcom via <strong>Dexcom Share</strong>. Tu es
         responsable de la confidentialité de ces identifiants. Dulce les stocke dans le trousseau
         sécurisé de ton appareil ; nous ne pouvons pas récupérer des identifiants perdus à la
         place d&apos;Abbott. Tu dois avoir le droit d&apos;utiliser le compte que tu connectes.
