@@ -212,12 +212,16 @@ silent (critical-alerts entitlement). CarPlay is even: Dulce's Live Activity sho
 Open:
 
 0. **Google Analytics:** property, ID and Search Console link (Domain property) done 2026-10-25. Still to do in GA:
-   Reports → Library → publish the Search Console collection; Admin → Events → mark `app_store_click` as a key event. Have the
-   Cookie Policy wording checked by whoever reviews the legal pages.
+   Reports → Library → publish the Search Console collection; register `page_language`, `cta_location` and
+   `source_campaign` as event-scoped dimensions; decide whether `app_store_click` and the Android waitlist
+   `sign_up` event should be key events; verify them in DebugView with consent enabled. They are web actions, not
+   install or subscription counts. Have the revised five-language Cookie Policy and other legal pages checked by
+   Spanish privacy counsel.
 
-1. **Merge the two `i18n/fr-it` PRs** (website and app). Ship an app release with the app one, then add the
-   French and Italian localizations in App Store Connect using `seo/aso.md` (also paste the new es/de/en
-   subtitles and keywords there). Decide the localized names (table in `seo/aso.md`).
+1. **App Store listing follow-up:** the de/fr/it localization work was completed for 1.0.4 (2026-10-25), but
+   verify the public storefront still exposes the expected language metadata and localized screenshots. The
+   indexed Apple listing inspected 2026-10-29 showed English under Languages; it may be stale. Check App Store
+   Connect's listing and privacy label against the current app and site data flows before changing either.
 2. ~~**App Store badges for fr/it:**~~ Done 2026-10-24. Was: download Apple's official French and Italian "Download on the App Store"
    badges (black, SVG) from tools.applemediaservices.com, save them as `public/badges/app-store-badge-fr.svg`
    and `-it.svg`, and set `fr: "fr", it: "it"` in `components/ui/AppStoreBadge.tsx`. Until then they show the
@@ -256,3 +260,12 @@ Open:
 Done:
 
 - [x] Merge PR #3 (redirect fix, quick answers, caregiver guide): merged 2026-10-22.
+- [x] 2026-10-29: completed a code/content audit against the supplied 28-day GSC and October GA4 snapshots. Kept
+      the strongest widget guide URL and body; shortened its English/German titles, refreshed `dateModified`, and
+      documented the five-language query map and 30-day acquisition plan in `seo/growth-audit-2026-10-29.md`.
+- [x] 2026-10-29: App Store campaign tokens now enforce Apple's 30-character limit without silent truncation;
+      `app_store_click` includes campaign, CTA placement, page path and language, and a successful Android
+      waitlist submission sends a PII-free GA4 `sign_up` event.
+- [x] 2026-10-29: factual/legal accuracy pass across Privacy, Terms, Cookies and Medical Disclaimer in es/en/de/fr/it;
+      detailed fixes and unresolved product, retention and counsel follow-ups are in the growth audit. This is not
+      a legal compliance sign-off.

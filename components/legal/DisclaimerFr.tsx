@@ -1,11 +1,10 @@
-{/* Translation of DisclaimerEs/DisclaimerEn; the Spanish version prevails. TODO: legal review. */}
+{/* Safety wording checked against Abbott and Dexcom guidance on 2026-10-29; legal review remains outstanding. */}
 export function DisclaimerFr() {
   return (
     <>
       <p>
         Cet avertissement médical explique les limites de ce que Dulce peut faire pour toi. Lis-le
-        attentivement : utiliser l&apos;app signifie que tu comprends et acceptes tout ce qui est
-        décrit ici.
+        avec les consignes de ton système CGM et les recommandations de ton équipe soignante.
       </p>
 
       <blockquote>
@@ -38,13 +37,13 @@ export function DisclaimerFr() {
         qui t&apos;ont été prescrits.
       </p>
 
-      <h2 id="confirm">3. Confirme toujours par une glycémie capillaire</h2>
+      <h2 id="confirm">3. Quand utiliser un lecteur de glycémie</h2>
       <p>
-        Avant d&apos;agir sur une valeur haute ou basse, et surtout quand ce que tu vois ne
-        correspond pas à ce que tu ressens, vérifie ta glycémie au <strong>bout du doigt</strong>{" "}
-        (lecteur de glycémie). Les valeurs affichées dans Dulce viennent d&apos;un capteur
-        interstitiel et peuvent différer de ta glycémie sanguine réelle, en particulier quand elle
-        change vite.
+        Suis les consignes de ton système CGM. Utilise un lecteur de glycémie lorsque le fabricant
+        le recommande, notamment si une mesure ne correspond pas à tes symptômes ou à ce que tu
+        attends, ou si le chiffre actuel ou la flèche de tendance manque. Dulce affiche des données
+        d&apos;un capteur interstitiel, qui peuvent différer de la glycémie sanguine, surtout lorsqu&apos;elle
+        change rapidement.
       </p>
 
       <h2 id="alerts">4. Les alertes ne sont pas garanties</h2>
@@ -72,7 +71,8 @@ export function DisclaimerFr() {
         Dulce ne calcule pas de doses d&apos;insuline ou de glucides et ne donne pas de conseils
         cliniques. L&apos;alerte facultative d&apos;hypo prévue se contente d&apos;extrapoler la
         vitesse de variation de tes dernières mesures : elle est indicative, peut se tromper et ne
-        remplace ni les alarmes de ton système CGM ni une glycémie capillaire.
+        ne remplace ni les alarmes de ton système CGM ni ses consignes sur le moment d&apos;utiliser
+        un lecteur de glycémie.
       </p>
 
       <h2 id="emergencies">7. Urgences</h2>
@@ -99,12 +99,7 @@ export function DisclaimerFr() {
         proviennent.
       </p>
 
-      <h2 id="acceptance">10. Acceptation</h2>
-      <p>
-        En utilisant Dulce, tu confirmes avoir lu et compris cet avertissement médical et assumer
-        la responsabilité de gérer ton diabète avec des outils autorisés et l&apos;aide de ton
-        équipe soignante. Si tu n&apos;es pas d&apos;accord, n&apos;utilise pas l&apos;app.
-      </p>
+      <h2 id="acceptance">10. Questions</h2>
       <p>
         Pour toute question sur cet avertissement, écris-nous à{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.

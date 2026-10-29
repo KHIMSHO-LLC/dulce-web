@@ -1,6 +1,6 @@
 import { GA_ID } from "@/lib/consent";
 
-{/* TODO: Legal review by a Spanish DPO / lawyer required before public launch. */}
+{/* Legal review remains outstanding: confirm the consent regions, cookie inventory and analytics settings with Spanish counsel. */}
 export function CookiesEn() {
   return (
     <>
@@ -21,8 +21,9 @@ export function CookiesEn() {
       {GA_ID ? (
         <p>
           Dulce uses <strong>strictly necessary technical cookies</strong> and{" "}
-          <strong>Google Analytics</strong> cookies. In the EEA, the UK and Switzerland, Google
-          Analytics only runs if you accept it. We do not use advertising tracking cookies.
+          <strong>Google Analytics</strong> cookies. In the EEA, the UK and Switzerland, and
+          when we cannot determine your location, it runs only after you accept analytics. We do
+          not use advertising tracking cookies.
         </p>
       ) : (
         <p>
@@ -38,31 +39,37 @@ export function CookiesEn() {
           Type: technical. Duration: up to 1 year.
         </li>
         <li>
-          <strong>dulce-region</strong> — your country code (from your IP address, not stored
-          by us), used only to decide whether to ask for analytics consent. Type: technical.
-          Duration: until you close the browser.
+          <strong>dulce-region</strong> — your country code, provided by our hosting platform
+          from the request and stored in a session cookie to decide whether to ask for analytics
+          consent. We do not store the raw IP for this purpose. Type: technical. Duration: until
+          you close the browser.
         </li>
         <li>
-          <strong>Form submission tokens</strong> — used by Next.js Server Actions to prevent
-          CSRF. Type: technical. Duration: only while submitting the form.
+          <strong>dulce:analytics-consent</strong> — a browser localStorage entry, not a cookie,
+          that remembers whether you accepted or declined Google Analytics. It remains until
+          you clear this site&apos;s browser storage.
         </li>
       </ul>
 
-      <h3>2.2 Cookieless anonymous analytics</h3>
+      <h3>2.2 Aggregated analytics without cookies</h3>
       <p>
-        We use <strong>Vercel Analytics</strong>, which measures page views and web
-        performance <strong>without cookies</strong> or personal identifiers. Data is
-        aggregated and anonymized; you cannot be identified from it. For this reason, no
-        cookie consent is required under the ePrivacy directive.
+        We use <strong>Vercel Analytics</strong> to measure page views and web performance
+        <strong> without cookies</strong>. Vercel says its visitor metric uses a hash derived
+        from the request that expires after 24 hours; reports can include page URL, referrer,
+        general location, browser and operating system. We use aggregated reports. Vercel does
+        not set cookies for this analytics service; this does not exempt the data from applicable
+        privacy laws.
       </p>
 
       {GA_ID ? (
         <>
           <h3>2.3 Google Analytics</h3>
           <p>
-            In the EEA, the UK and Switzerland only if you accept analytics cookies, and
-            elsewhere unless you turn it off, we use <strong>Google Analytics 4</strong> (Google
-            Ireland Ltd.) to count visits and see which pages lead people to the App Store. It
+            In the EEA, the UK and Switzerland (or if we cannot determine your location) only if
+            you accept analytics cookies, and elsewhere unless you turn it off, we use{" "}
+            <strong>Google Analytics 4</strong> (Google Ireland Ltd.) to count visits and measure
+            page views, App Store link clicks and their campaign placement, and successful
+            waitlist sign-ups. It
             sets <strong>_ga</strong> and <strong>_ga_*</strong> cookies (duration: up to 2
             years). Google may process this data in the United States under the EU-US Data
             Privacy Framework. Advertising features, Google signals and ad personalization are
@@ -73,10 +80,11 @@ export function CookiesEn() {
 
       <h2 id="consent">3. Consent</h2>
       <p>
-        Strictly necessary cookies do not require your consent — they are exempt under the
-        Spanish cookie regulation (Art. 22 LSSI) and the GDPR.{" "}
+        Strictly necessary cookies may be used without consent when they meet the applicable
+        exception under Spanish cookie law (Art. 22 LSSI). Personal data associated with them
+        remains subject to data-protection law.{" "}
         {GA_ID
-          ? "In the EEA, the UK and Switzerland, Google Analytics cookies are only set after you accept them in our banner. Everywhere, you can change your choice at any time with “Cookie settings” at the bottom of every page."
+          ? "In the EEA, the UK and Switzerland, or when we cannot determine your location, Google Analytics cookies are only set after you accept them in our banner. Everywhere, you can change your choice at any time with “Cookie settings” at the bottom of every page."
           : "If we ever introduced non-technical cookies, we would request your prior consent through a proper banner."}
       </p>
 

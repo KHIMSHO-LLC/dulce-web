@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* TODO: Legal review by a Spanish lawyer required before public launch. */}
+{/* Legal review remains outstanding: have Spanish counsel verify consumer, subscription and withdrawal wording. */}
 export function TermsEn() {
   return (
     <>
@@ -59,16 +59,16 @@ export function TermsEn() {
       </p>
       <p>
         The glucose data shown by Dulce comes from your CGM through third-party services and
-        is subject to their technical limitations, reading delays and possible errors. For
-        critical decisions (especially severe hypoglycaemia), always confirm with a
-        fingerstick meter.
+        is subject to their technical limitations, reading delays and possible errors. Follow
+        your CGM manufacturer&apos;s instructions about when to confirm a reading with a blood
+        glucose meter, including when it does not match your symptoms or expectations.
       </p>
       <p>
         <strong>Do not rely on Dulce as your only alarm system.</strong> Delivery of
-        notifications, Live Activities and watch updates depends on Apple, Abbott, your
+        notifications, Live Activities and watch updates depends on Apple, your CGM provider,
         network and your device settings, and cannot be guaranteed. Keep the alarm features
-        of your official CGM app active. Dulce is a companion to the official Abbott app, not
-        a replacement for it.
+        of your official CGM app active. Dulce is a companion app and does not replace the
+        official app from your CGM manufacturer.
       </p>
 
       <h2 id="eligibility">4. Eligibility</h2>
@@ -84,7 +84,7 @@ export function TermsEn() {
         Dexcom data through <strong>Dexcom Share</strong>.
         You are responsible for the confidentiality of those credentials. Dulce stores them
         in the secure keychain of your device; we cannot recover lost credentials on behalf
-        of Abbott. You must have the right to use the account you connect.
+        of your CGM provider. You must have the right to use the account you connect.
       </p>
 
       <h2 id="sharing">6. Family following</h2>
@@ -125,9 +125,9 @@ export function TermsEn() {
         </li>
         <li>Refunds are handled by Apple under their terms.</li>
         <li>
-          If you are a consumer in the EU, you have a 14-day right of withdrawal. By starting
-          the subscription (or trial) immediately, you agree that the service begins at once;
-          Apple’s standard withdrawal process applies.
+          Nothing in these terms limits any mandatory consumer rights that apply to you. For
+          trial dates, cancellation, renewal and refund options, follow the purchase screen and
+          Apple&apos;s current subscription terms and account tools.
         </li>
       </ul>
 
@@ -146,11 +146,11 @@ export function TermsEn() {
       <h2 id="third-parties">10. Third-party services</h2>
       <p>
         Dulce connects to third-party services that you choose or that are required to
-        operate (Abbott LibreLinkUp, Apple — including Apple Health, notifications and
+        operate (Abbott LibreLinkUp, Dexcom Share, Apple — including Apple Health, notifications and
         payments — and RevenueCat for subscription validation). Use of those services is
         governed by their own terms and policies. We are not responsible for their
         availability, accuracy or changes. Dulce is an independent product and is not
-        affiliated with, endorsed by or sponsored by Abbott or Apple.
+        affiliated with, endorsed by or sponsored by Abbott, Dexcom or Apple.
       </p>
 
       <h2 id="ip">11. Intellectual property</h2>

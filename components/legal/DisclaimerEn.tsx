@@ -1,10 +1,10 @@
-{/* TODO: Legal review by a healthcare attorney required before public launch. */}
+{/* Factual safety wording reviewed against Abbott and Dexcom guidance on 2026-10-29; legal review remains outstanding. */}
 export function DisclaimerEn() {
   return (
     <>
       <p>
-        This Medical Disclaimer explains the limits of what Dulce can do for you. Please read
-        it carefully: using the app means you understand and accept everything described here.
+        This Medical Disclaimer explains the limits of what Dulce can do for you. Read it
+        alongside the instructions for your CGM system and the guidance of your healthcare team.
       </p>
 
       <blockquote>
@@ -36,12 +36,13 @@ export function DisclaimerEn() {
         doctor or healthcare team and use the tools they have prescribed for you.
       </p>
 
-      <h2 id="confirm">3. Always confirm with a fingerstick</h2>
+      <h2 id="confirm">3. When to use a blood glucose meter</h2>
       <p>
-        Before acting on a high or low reading — and especially when what you see doesn&apos;t
-        match how you feel — confirm your glucose with a <strong>fingerstick</strong> (blood
-        glucose meter). The values shown in Dulce come from an interstitial sensor and can
-        differ from your actual blood glucose, particularly when it is changing quickly.
+        Follow the instructions for your own CGM system. Use a blood glucose meter when its
+        manufacturer advises you to, including when a reading does not match your symptoms or
+        expectations, or when a current number or trend is missing. Dulce displays data from an
+        interstitial sensor, which can differ from blood glucose, especially when glucose is
+        changing quickly.
       </p>
 
       <h2 id="alerts">4. Alerts are not guaranteed</h2>
@@ -67,7 +68,7 @@ export function DisclaimerEn() {
         Dulce does not calculate insulin or carbohydrate doses and does not offer clinical
         advice. The optional predictive low alert only extrapolates how fast your latest readings
         are changing: it is indicative, can be wrong, and does not replace your CGM
-        system&apos;s alarms or a fingerstick check.
+        system&apos;s alarms or its instructions about when to use a blood glucose meter.
       </p>
 
       <h2 id="emergencies">7. Emergencies</h2>
@@ -92,12 +93,7 @@ export function DisclaimerEn() {
         of those services, and we are not responsible for outages or errors originating in them.
       </p>
 
-      <h2 id="acceptance">10. Acceptance</h2>
-      <p>
-        By using Dulce you confirm that you have read and understood this Medical Disclaimer and
-        that you take responsibility for managing your diabetes with authorized tools and the
-        support of your healthcare team. If you do not agree, please do not use the app.
-      </p>
+      <h2 id="acceptance">10. Questions</h2>
       <p>
         For any questions about this disclaimer, email us at{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.

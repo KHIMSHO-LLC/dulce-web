@@ -395,7 +395,7 @@ export const ARTICLES: readonly Article[] = [
     category: "guide",
     author: "levan",
     datePublished: "2026-10-19",
-    dateModified: "2026-10-22",
+    dateModified: "2026-10-29",
     slug: {
       es: "widget-libre-para-iphone",
       en: "libre-widget-for-iphone",
@@ -405,8 +405,8 @@ export const ARTICLES: readonly Article[] = [
     },
     title: {
       es: "Widget del FreeStyle Libre para iPhone: inicio, bloqueo y StandBy",
-      en: "FreeStyle Libre widget for iPhone: Home Screen, Lock Screen, StandBy",
-      de: "FreeStyle Libre Widget fürs iPhone: Home, Sperrbildschirm, StandBy",
+      en: "FreeStyle Libre iPhone Widget: Home, Lock Screen, StandBy",
+      de: "FreeStyle Libre iPhone-Widget: Home, Sperrbildschirm, StandBy",
       fr: "Widget FreeStyle Libre pour iPhone : accueil, verrouillage, StandBy",
       it: "Widget FreeStyle Libre per iPhone: Home, blocco e StandBy",
     },

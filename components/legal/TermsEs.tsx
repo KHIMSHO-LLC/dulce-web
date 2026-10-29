@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* TODO: Legal review by a Spanish lawyer required before public launch. */}
+{/* Sigue pendiente la revisión legal: pedir a asesoría española que valide consumo, suscripciones y desistimiento. */}
 export function TermsEs() {
   return (
     <>
@@ -63,15 +63,15 @@ export function TermsEs() {
       <p>
         Los datos de glucosa que muestra Dulce provienen de tu CGM a través de servicios de
         terceros y están sujetos a sus limitaciones técnicas, retrasos de lectura y posibles
-        errores. Para decisiones críticas (especialmente hipoglucemias graves), confirma
-        siempre con una medición capilar.
+        errores. Sigue las instrucciones del fabricante de tu CGM sobre cuándo confirmar una
+        lectura con un medidor de glucosa, también si no coincide con tus síntomas o expectativas.
       </p>
       <p>
         <strong>No dependas de Dulce como tu único sistema de alarma.</strong> La entrega de
-        notificaciones, Live Activities y actualizaciones del reloj depende de Apple, de
-        Abbott, de tu red y de los ajustes de tu dispositivo, y no puede garantizarse.
-        Mantén activas las alarmas de tu app oficial de CGM. Dulce es una compañera de la app
-        oficial de Abbott, no un sustituto.
+        notificaciones, Live Activities y actualizaciones del reloj depende de Apple, del
+        fabricante de tu CGM, de tu red y de los ajustes de tu dispositivo, y no puede
+        garantizarse. Mantén activas las alarmas de la app oficial de tu sistema CGM. Dulce
+        es una app complementaria y no sustituye la app oficial del fabricante.
       </p>
 
       <h2 id="eligibility">4. Requisitos</h2>
@@ -87,7 +87,7 @@ export function TermsEs() {
         <strong>LibreLinkUp</strong> para FreeStyle Libre o <strong>Dexcom Share</strong> para
         Dexcom. Eres responsable de la confidencialidad de esas
         credenciales. Dulce las guarda en el llavero seguro de tu dispositivo; no podemos
-        recuperar credenciales perdidas en nombre de Abbott. Debes tener derecho a usar la
+        recuperar credenciales perdidas en nombre del proveedor de tu CGM. Debes tener derecho a usar la
         cuenta que conectas.
       </p>
 
@@ -131,9 +131,10 @@ export function TermsEs() {
         </li>
         <li>Los reembolsos los gestiona Apple según sus condiciones.</li>
         <li>
-          Si eres consumidor en la UE, tienes derecho de desistimiento de 14 días. Al iniciar
-          la suscripción (o la prueba) de inmediato, aceptas que el servicio comience en ese
-          momento; se aplica el proceso estándar de desistimiento de Apple.
+          Nada de estos términos limita los derechos imperativos de consumidor que te
+          correspondan. Para consultar las fechas de prueba y las opciones de cancelación,
+          renovación y reembolso, sigue la pantalla de compra y las condiciones y herramientas
+          de suscripción vigentes de Apple.
         </li>
       </ul>
 
@@ -152,11 +153,11 @@ export function TermsEs() {
       <h2 id="third-parties">10. Servicios de terceros</h2>
       <p>
         Dulce se conecta a servicios de terceros que tú eliges o que son necesarios para
-        funcionar (Abbott LibreLinkUp; Apple — incluidos Apple Salud, notificaciones y pagos
+        funcionar (Abbott LibreLinkUp, Dexcom Share; Apple — incluidos Apple Salud, notificaciones y pagos
         — y RevenueCat para la validación de suscripciones). El uso de esos servicios se rige
         por sus propios términos y políticas. No somos responsables de su disponibilidad,
         exactitud o cambios. Dulce es un producto independiente y no está afiliado, avalado
-        ni patrocinado por Abbott ni por Apple.
+        ni patrocinado por Abbott, Dexcom ni Apple.
       </p>
 
       <h2 id="ip">11. Propiedad intelectual</h2>

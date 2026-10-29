@@ -1,6 +1,6 @@
 import { GA_ID } from "@/lib/consent";
 
-{/* Translation of CookiesEs/CookiesEn; the Spanish version prevails. TODO: legal review. */}
+{/* Translation of the Spanish/English policy. TODO: review local legal terminology; Spanish counsel review remains outstanding. */}
 export function CookiesIt() {
   return (
     <>
@@ -21,8 +21,9 @@ export function CookiesIt() {
       {GA_ID ? (
         <p>
           Dulce usa <strong>cookie tecnici strettamente necessari</strong> e cookie di{" "}
-          <strong>Google Analytics</strong>. Nello SEE, nel Regno Unito e in Svizzera Google
-          Analytics funziona solo se lo accetti. Non usiamo cookie di tracciamento pubblicitario.
+          <strong>Google Analytics</strong>. Nello SEE, nel Regno Unito e in Svizzera, e quando
+          non riusciamo a determinare la tua posizione, viene caricato solo dopo che accetti le
+          statistiche. Non usiamo cookie di tracciamento pubblicitario.
         </p>
       ) : (
         <p>
@@ -38,32 +39,37 @@ export function CookiesIt() {
           tecnico. Durata: fino a 1 anno.
         </li>
         <li>
-          <strong>dulce-region</strong>: il codice del tuo Paese (ricavato dall&apos;indirizzo IP,
-          che non conserviamo), usato solo per decidere se chiedere il consenso alle statistiche.
-          Tipo: tecnico. Durata: fino alla chiusura del browser.
+          <strong>dulce-region</strong>: il codice del tuo Paese, fornito dal nostro hosting a
+          partire dalla richiesta e conservato in un cookie di sessione per decidere se chiedere
+          il consenso alle statistiche. Non conserviamo l&apos;IP in chiaro per questo scopo. Tipo:
+          tecnico. Durata: fino alla chiusura del browser.
         </li>
         <li>
-          <strong>Token di invio dei moduli</strong>: usati dalle Server Actions di Next.js contro
-          il CSRF. Tipo: tecnico. Durata: solo durante l&apos;invio.
+          <strong>dulce:analytics-consent</strong>: un valore nel localStorage del browser, non
+          un cookie, che ricorda se hai accettato o rifiutato Google Analytics. Rimane finché non
+          cancelli i dati di navigazione di questo sito.
         </li>
       </ul>
 
-      <h3>2.2 Statistiche anonime senza cookie</h3>
+      <h3>2.2 Statistiche aggregate senza cookie</h3>
       <p>
-        Usiamo <strong>Vercel Analytics</strong>, che misura visualizzazioni di pagina e prestazioni{" "}
-        <strong>senza cookie</strong> né identificativi personali. I dati sono aggregati e anonimi;
-        non permettono di identificarti. Per questo non serve il consenso ai sensi della direttiva
-        ePrivacy.
+        Usiamo <strong>Vercel Analytics</strong> per misurare visualizzazioni di pagina e prestazioni{" "}
+        <strong>senza cookie</strong>. Vercel dichiara che la metrica dei visitatori usa un hash
+        derivato dalla richiesta, che scade dopo 24 ore; i report possono includere URL, sito di
+        provenienza, località generale, browser e sistema operativo. Usiamo report aggregati.
+        Questo servizio non imposta cookie, ma i dati restano soggetti alle norme sulla privacy
+        applicabili.
       </p>
 
       {GA_ID ? (
         <>
           <h3>2.3 Google Analytics</h3>
           <p>
-            Nello SEE, nel Regno Unito e in Svizzera solo se accetti i cookie statistici, e
-            altrove finché non lo disattivi, usiamo <strong>Google Analytics 4</strong> (Google
-            Ireland Ltd.) per contare le visite e vedere quali pagine portano le persone
-            all&apos;App Store. Imposta i cookie <strong>_ga</strong> e <strong>_ga_*</strong>{" "}
+            Nello SEE, nel Regno Unito e in Svizzera (o se non riusciamo a determinare la tua
+            posizione) solo se accetti i cookie statistici, e altrove finché non lo disattivi,
+            usiamo <strong>Google Analytics 4</strong> (Google Ireland Ltd.) per misurare visite,
+            pagine viste, clic sui link all&apos;App Store e la relativa campagna, e iscrizioni
+            completate alla lista d&apos;attesa. Imposta i cookie <strong>_ga</strong> e <strong>_ga_*</strong>{" "}
             (durata: fino a 2 anni). Google può trattare questi dati negli Stati Uniti nell&apos;ambito
             del Data Privacy Framework UE-USA. Funzioni pubblicitarie, Google Signals e
             personalizzazione degli annunci sono disattivati. Se rifiuti, Google Analytics non
@@ -74,10 +80,11 @@ export function CookiesIt() {
 
       <h2 id="consent">3. Consenso</h2>
       <p>
-        I cookie strettamente necessari non richiedono il tuo consenso: ne sono esentati dalla
-        normativa spagnola sui cookie (art. 22 LSSI) e dal GDPR.{" "}
+        I cookie strettamente necessari possono essere usati senza consenso quando rientrano
+        nell&apos;eccezione prevista dalla normativa spagnola sui cookie (art. 22 LSSI). I dati
+        personali associati restano soggetti alla normativa sulla protezione dei dati.{" "}
         {GA_ID
-          ? "Nello SEE, nel Regno Unito e in Svizzera i cookie di Google Analytics vengono impostati solo dopo che li hai accettati nel nostro banner. Ovunque puoi cambiare la tua scelta in qualsiasi momento con «Impostazioni cookie» in fondo a ogni pagina."
+          ? "Nello SEE, nel Regno Unito e in Svizzera, o se non riusciamo a determinare la tua posizione, i cookie di Google Analytics vengono impostati solo dopo che li hai accettati nel nostro banner. Ovunque puoi cambiare la tua scelta in qualsiasi momento con «Impostazioni cookie» in fondo a ogni pagina."
           : "Se un giorno introducessimo cookie non tecnici, chiederemmo prima il tuo consenso con un banner adeguato."}
       </p>
 

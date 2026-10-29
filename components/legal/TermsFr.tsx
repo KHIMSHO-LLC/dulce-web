@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* Translation of TermsEs/TermsEn; the Spanish version prevails. TODO: legal review. */}
+{/* Translation of the Spanish/English terms. TODO: review local legal terminology; Spanish counsel review remains outstanding. */}
 export function TermsFr() {
   return (
     <>
@@ -65,15 +65,16 @@ export function TermsFr() {
       <p>
         Les données de glycémie affichées par Dulce proviennent de ton CGM via des services tiers
         et sont soumises à leurs limites techniques, à des délais et à d&apos;éventuelles
-        erreurs. Pour toute décision critique (en particulier une hypoglycémie sévère), vérifie
-        toujours avec un lecteur de glycémie capillaire.
+        erreurs. Suis les consignes du fabricant de ton CGM sur le moment où confirmer une
+        mesure avec un lecteur de glycémie, notamment si elle ne correspond pas à tes symptômes
+        ou à ce que tu attends.
       </p>
       <p>
         <strong>Ne compte pas sur Dulce comme seul système d&apos;alarme.</strong> La réception
         des notifications, des Activités en direct et des mises à jour de la montre dépend
-        d&apos;Apple, d&apos;Abbott, de ton réseau et des réglages de ton appareil, et ne peut pas
-        être garantie. Garde actives les alarmes de ton app CGM officielle. Dulce accompagne
-        l&apos;app officielle d&apos;Abbott, il ne la remplace pas.
+        d&apos;Apple, de ton fournisseur CGM, de ton réseau et des réglages de ton appareil, et ne peut pas
+        être garantie. Garde actives les alarmes de l&apos;app officielle de ton système CGM.
+        Dulce est une app complémentaire et ne remplace pas l&apos;app officielle du fabricant.
       </p>
 
       <h2 id="eligibility">4. Conditions d&apos;accès</h2>
@@ -89,7 +90,7 @@ export function TermsFr() {
         Dexcom via <strong>Dexcom Share</strong>. Tu es
         responsable de la confidentialité de ces identifiants. Dulce les stocke dans le trousseau
         sécurisé de ton appareil ; nous ne pouvons pas récupérer des identifiants perdus à la
-        place d&apos;Abbott. Tu dois avoir le droit d&apos;utiliser le compte que tu connectes.
+        place de ton fournisseur CGM. Tu dois avoir le droit d&apos;utiliser le compte que tu connectes.
       </p>
 
       <h2 id="sharing">6. Suivi par la famille</h2>
@@ -133,10 +134,10 @@ export function TermsFr() {
         </li>
         <li>Les remboursements sont gérés par Apple selon ses conditions.</li>
         <li>
-          Si tu es un consommateur dans l&apos;UE, tu disposes d&apos;un droit de rétractation de
-          14 jours. En démarrant l&apos;abonnement (ou l&apos;essai) immédiatement, tu acceptes
-          que le service commence tout de suite ; la procédure de rétractation standard
-          d&apos;Apple s&apos;applique.
+          Ces conditions ne limitent aucun droit impératif du consommateur qui pourrait
+          s&apos;appliquer. Pour les dates d&apos;essai et les options de résiliation, renouvellement
+          et remboursement, consulte l&apos;écran d&apos;achat et les conditions et outils
+          d&apos;abonnement en vigueur d&apos;Apple.
         </li>
       </ul>
 
@@ -155,11 +156,11 @@ export function TermsFr() {
       <h2 id="third-parties">10. Services tiers</h2>
       <p>
         Dulce se connecte à des services tiers que tu choisis ou qui sont nécessaires à son
-        fonctionnement (Abbott LibreLinkUp, Apple, y compris Apple Santé, les notifications et les
+        fonctionnement (Abbott LibreLinkUp, Dexcom Share, Apple, y compris Apple Santé, les notifications et les
         paiements, et RevenueCat pour la validation des abonnements). Leur utilisation est régie
         par leurs propres conditions et politiques. Nous ne sommes pas responsables de leur
         disponibilité, de leur exactitude ni de leurs changements. Dulce est un produit
-        indépendant, sans lien avec Abbott ni Apple, qui ne le soutiennent ni ne le sponsorisent.
+        indépendant, sans lien avec Abbott, Dexcom ni Apple, qui ne le soutiennent ni ne le sponsorisent.
       </p>
 
       <h2 id="ip">11. Propriété intellectuelle</h2>

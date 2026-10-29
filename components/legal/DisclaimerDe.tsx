@@ -1,10 +1,10 @@
-{/* Translation of DisclaimerEs/DisclaimerEn; the Spanish version prevails. TODO: legal review. */}
+{/* Safety wording checked against Abbott and Dexcom guidance on 2026-10-29; legal review remains outstanding. */}
 export function DisclaimerDe() {
   return (
     <>
       <p>
-        Dieser medizinische Hinweis erklärt, was Dulce für dich leisten kann und was nicht. Bitte
-        lies ihn sorgfältig: Wer die App nutzt, versteht und akzeptiert alles, was hier steht.
+        Dieser medizinische Hinweis erklärt, was Dulce für dich leisten kann und was nicht. Lies
+        ihn zusammen mit den Anweisungen deines CGM-Systems und den Empfehlungen deines Diabetes-Teams.
       </p>
 
       <blockquote>
@@ -37,12 +37,12 @@ export function DisclaimerDe() {
         wurden.
       </p>
 
-      <h2 id="confirm">3. Immer mit einer Blutzuckermessung bestätigen</h2>
+      <h2 id="confirm">3. Wann du ein Blutzuckermessgerät verwenden solltest</h2>
       <p>
-        Bevor du auf einen hohen oder niedrigen Wert reagierst, und besonders wenn das Angezeigte
-        nicht zu deinem Befinden passt, miss deinen Blutzucker <strong>aus dem Finger</strong>{" "}
-        (Blutzuckermessgerät). Die Werte in Dulce stammen von einem Sensor im Gewebe und können
-        vom tatsächlichen Blutzucker abweichen, vor allem wenn er sich schnell ändert.
+        Folge den Anweisungen deines CGM-Systems. Verwende ein Blutzuckermessgerät, wenn der
+        Hersteller es empfiehlt, etwa wenn ein Wert nicht zu deinen Symptomen oder Erwartungen
+        passt oder ein aktueller Wert beziehungsweise Trendpfeil fehlt. Dulce zeigt Daten eines
+        Gewebesensors an, die besonders bei schnellen Veränderungen vom Blutzucker abweichen können.
       </p>
 
       <h2 id="alerts">4. Warnungen sind nicht garantiert</h2>
@@ -69,7 +69,7 @@ export function DisclaimerDe() {
         Dulce berechnet keine Insulin- oder Kohlenhydratdosen und gibt keine klinischen Ratschläge.
         Die optionale vorausschauende Unterzucker-Warnung rechnet nur hoch, wie schnell sich deine
         letzten Werte ändern: Sie ist eine Orientierung, kann falsch liegen und ersetzt weder die
-        Alarme deines CGM-Systems noch eine Messung aus dem Finger.
+        Alarme deines CGM-Systems noch dessen Hinweise, wann du ein Blutzuckermessgerät verwenden sollst.
       </p>
 
       <h2 id="emergencies">7. Notfälle</h2>
@@ -96,13 +96,7 @@ export function DisclaimerDe() {
         Fehler, die dort entstehen.
       </p>
 
-      <h2 id="acceptance">10. Annahme</h2>
-      <p>
-        Mit der Nutzung von Dulce bestätigst du, dass du diesen medizinischen Hinweis gelesen und
-        verstanden hast und dass du die Verantwortung dafür übernimmst, deinen Diabetes mit
-        zugelassenen Hilfsmitteln und der Unterstützung deines Diabetes-Teams zu behandeln. Wenn du
-        nicht einverstanden bist, nutze die App bitte nicht.
-      </p>
+      <h2 id="acceptance">10. Fragen</h2>
       <p>
         Bei Fragen zu diesem Hinweis schreib uns an{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.

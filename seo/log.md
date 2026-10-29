@@ -123,3 +123,23 @@ Each daily run appends one entry: date, what was published or improved, target q
   Removed a claim about which countries' labs use the WHO line (couldn't back it).
 - `npm run check:content` (17 articles, 0 errors; 17 warnings = missing summaries, left for Giorgi) and
   `npm run build` passed. Deployed (d5304d5, page live), `npm run indexnow`: 143 URLs → 200.
+
+## 2026-10-29 (SEO, conversion and legal accuracy pass)
+
+- Used the supplied early GSC/GA4 snapshot as directional evidence: the English widget guide remains the strongest
+  organic landing page (14 clicks / 355 impressions in the 28-day sample). Preserved its URL/body and refined the
+  English/German titles to bring the iPhone widget intent forward; no extra near-duplicate page was created.
+- Tightened App Store campaign attribution to Apple's 30-character `ct` limit; outbound store clicks include
+  campaign, CTA placement and locale, and successful Android waitlist submissions now send a PII-free `sign_up`
+  event. GA4 remains a web-click/signup measure; App Store Connect is still required for download/subscription
+  attribution.
+- Audited Privacy, Terms, Cookies and Medical Disclaimer against actual site/app/relay data flows in all five
+  locales. Improved provider, form, analytics, consent, deletion/retention, consumer-rights and medical-safety
+  wording; documented unresolved counsel and engineering follow-ups in `seo/growth-audit-2026-10-29.md`.
+- No Search Console URL list or live GA4/App Store Connect export was available, so no indexing actions, traffic
+  claims or conversion lift are reported.
+- Verification: `npm run check:content` (17 articles, 0 errors/warnings), `npm run lint`, `npm run typecheck`,
+  `npm run build -- --webpack`, `check:jsonld` (155 sitemap pages, 575 JSON-LD blocks, all references resolve), and
+  `check:crawl` (155 pages, 172 internal links/images; all 200, self-canonical, one H1, no linked redirects) passed.
+  The default Turbopack build stalled in this environment; webpack completed successfully. The localhost preview
+  required binding to `localhost` for default-locale rewrites.

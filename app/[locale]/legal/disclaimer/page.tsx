@@ -14,7 +14,7 @@ import { DisclaimerIt } from "@/components/legal/DisclaimerIt";
 /** The Spanish text prevails; the others are translations of it. */
 const DOC: Record<AppLocale, () => React.JSX.Element> = { es: DisclaimerEs, en: DisclaimerEn, de: DisclaimerDe, fr: DisclaimerFr, it: DisclaimerIt };
 
-const LAST_UPDATED = "2026-10-28";
+const LAST_UPDATED = "2026-10-29";
 
 export async function generateMetadata({
   params,

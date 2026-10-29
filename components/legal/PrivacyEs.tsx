@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* TODO: Legal review by a Spanish DPO / lawyer required before public launch. */}
+{/* Sigue pendiente la revisión legal: validar con asesoría española la base jurídica, el consentimiento en la app, la conservación y las transferencias. */}
 export function PrivacyEs() {
   return (
     <>
@@ -21,34 +21,50 @@ export function PrivacyEs() {
       <h3>2.1 Sitio web</h3>
       <ul>
         <li>
-          <strong>Lista de espera:</strong> tu correo y el idioma de tu sesión.
+          <strong>Lista de espera para Android:</strong> tu correo, el idioma elegido, la
+          página o ubicación donde te apuntaste y un hash seudónimo de tu IP para prevenir abusos.
         </li>
         <li>
-          <strong>Formulario de beta:</strong> nombre, correo, dispositivo CGM y región.
-          Opcionalmente, las notas que quieras compartir.
+          <strong>Formulario de interés en la beta, si lo enviaste:</strong> nombre, correo,
+          dispositivo CGM, región y las notas opcionales que compartieras.
         </li>
         <li>
-          <strong>Datos técnicos mínimos:</strong> un hash anónimo (SHA-256) de tu IP
-          combinado con una sal que rota a diario, usado solo para frenar el abuso de los
-          formularios. Nunca guardamos la IP en claro.
+          <strong>Formulario de contacto:</strong> nombre, correo, asunto y mensaje. Resend
+          reenvía el mensaje a nuestro buzón de soporte y te envía una confirmación.
         </li>
         <li>
-          <strong>Analítica anónima:</strong> usamos Vercel Analytics, que no instala cookies
-          ni recoge identificadores personales. Solo mide visitas y rendimiento.
+          <strong>Datos técnicos mínimos:</strong> un hash seudonimizado (SHA-256) de tu IP
+          combinado con una sal que rota a diario, usado para limitar el abuso de formularios.
+          Los registros de la lista de espera y beta incluyen este hash hasta que se elimina el
+          registro asociado. Los contadores para limitar peticiones son temporales. No guardamos
+          directamente la IP en claro.
+        </li>
+        <li>
+          <strong>Analítica web:</strong> Vercel Analytics mide páginas vistas y rendimiento sin
+          cookies. Vercel indica que su métrica de visitantes usa un hash derivado de la solicitud
+          que caduca tras 24 horas; los informes pueden incluir URL, referente, ubicación general,
+          navegador y sistema operativo, que vemos en forma agregada. Google Analytics 4 mide
+          visitas, ruta e idioma de la página, clics en enlaces a App
+          Store y campañas, y altas completadas en la lista de espera. En el EEE, Reino Unido y
+          Suiza, o si no podemos determinar tu ubicación, solo se carga si aceptas las cookies de
+          analítica; en otros lugares sigue la configuración regional descrita en la Política de
+          Cookies. No enviamos lecturas de
+          glucosa, otros datos de salud ni tu correo a ninguno de estos servicios.
         </li>
       </ul>
 
       <h3>2.2 En la app, en tu dispositivo</h3>
       <ul>
         <li>
-          <strong>Tus credenciales de LibreLinkUp.</strong> Inicias sesión con el correo y la
-          contraseña de tu cuenta de LibreLinkUp (Abbott). Se guardan únicamente en el
-          llavero seguro de tu dispositivo y se usan para obtener tu glucosa del servicio de
-          Abbott. Nunca se envían a los servidores de Dulce.
+          <strong>Tus credenciales del sistema CGM.</strong> Inicias sesión con tu cuenta de
+          LibreLinkUp (Abbott) o Dexcom Share. La contraseña se guarda en el llavero seguro de
+          tu dispositivo y no se envía a Dulce. La app la usa para conectarse al proveedor;
+          cuando conectas tu CGM, se envía al relay un token de sesión del proveedor
+          (no tu contraseña), como se explica a continuación.
         </li>
         <li>
-          <strong>Lecturas de glucosa</strong> obtenidas de LibreLinkUp, guardadas en una
-          base de datos local en tu dispositivo.
+          <strong>Lecturas de glucosa</strong> obtenidas de LibreLinkUp o Dexcom Share,
+          guardadas en una base de datos local en tu dispositivo.
         </li>
         <li>
           <strong>Tu diario</strong>: carbohidratos, insulina, entradas manuales de glucosa y
@@ -65,47 +81,63 @@ export function PrivacyEs() {
 
       <h3>2.3 El relay de Dulce (funciones en tiempo real)</h3>
       <p>
-        Algunas funciones tienen que seguir funcionando con el móvil bloqueado o la app
-        cerrada: la Live Activity de la pantalla de bloqueo, las alertas de glucosa, las
-        actualizaciones del Apple Watch y el seguimiento familiar. Para eso, un pequeño
-        servidor operado por nosotros (el «relay», alojado en Cloudflare) obtiene tus
-        lecturas de LibreLinkUp y las envía a tus dispositivos. Cuando — y solo cuando —
-        activas una de estas funciones, el relay procesa:
+        Cuando conectas tu CGM, la app registra esta instalación en nuestro relay para poder
+        ofrecer actualizaciones en segundo plano, alertas, funciones de Apple Watch y
+        seguimiento familiar cuando las uses. El relay es un pequeño servidor que operamos y
+        alojamos en Cloudflare. Obtiene lecturas de LibreLinkUp o Dexcom Share y envía
+        actualizaciones a tus dispositivos. El relay procesa:
       </p>
       <ul>
         <li>
-          <strong>Un token de sesión de LibreLinkUp</strong> (no tu contraseña), para poder
-          obtener lecturas en tu nombre.
+          <strong>Un token de sesión del proveedor</strong> (no tu contraseña): un token de
+          LibreLinkUp o un ID de sesión de Dexcom Share, para obtener lecturas en tu nombre.
         </li>
         <li>
-          <strong>Tokens de notificación anónimos</strong> de tus dispositivos, emitidos por
-          Apple o Google. Identifican un dispositivo para notificaciones; no te identifican a
-          ti personalmente.
+          <strong>Un ID aleatorio de instalación y un identificador de tu cuenta CGM</strong>
+          para asociar el registro, las lecturas y los ajustes al dispositivo y conexión CGM correctos.
         </li>
         <li>
-          <strong>Tus lecturas de glucosa más recientes</strong>, guardadas como una ventana
-          corta y rotativa, la necesaria para mostrar la Live Activity, el reloj y las vistas
-          de tus seguidores. El relay no es un archivo histórico de tu salud — eso se queda
-          en tu dispositivo.
+          <strong>Tokens de notificación</strong> emitidos por Apple o Google para enviar
+          notificaciones y actualizaciones de Live Activity.
         </li>
         <li>
-          <strong>Los ajustes mínimos</strong> para formatear lo que ves (unidades, rango
-          objetivo, umbrales de alerta, idioma).
+          <strong>Tus lecturas de glucosa más recientes</strong>, incluidos el valor y la hora,
+          guardadas como una ventana corta y rotativa para mostrar la Live Activity, el reloj y
+          las vistas de tus seguidores. El relay no es un archivo histórico de tu salud — eso
+          se queda en tu dispositivo.
+        </li>
+        <li>
+          <strong>Ajustes y datos técnicos del dispositivo y la app</strong> necesarios para el
+          servicio (unidades, rango objetivo, umbrales de alerta, idioma, zona horaria,
+          plataforma y versión de la app).
+        </li>
+        <li>
+          <strong>Eventos de uso:</strong> eventos básicos de configuración, conexión y
+          suscripción asociados al ID aleatorio de instalación para medir y mejorar el servicio.
+        </li>
+        <li>
+          <strong>Registros operativos:</strong> algunos registros de diagnóstico enviados a
+          Cloudflare Workers Logs incluyen tu ID de instalación, proveedor, último valor de
+          glucosa y hora, y detalles de errores. Cloudflare los conserva hasta 7 días, según el
+          plan y la configuración.
         </li>
       </ul>
       <p>
-        Si nunca activas estas funciones, no se envía nada a los servidores de Dulce. Si las
-        desactivas, cierras sesión o eliminas tu cuenta en Ajustes, los datos asociados del
-        relay se eliminan.
+        Puedes detener este tratamiento desconectando tu CGM o usando «Eliminar cuenta» en
+        Ajustes. La app solicita al relay que elimine los registros activos del dispositivo,
+        tokens y datos de seguimiento. Después se conserva un ID mínimo de instalación y la
+        fecha del primer registro para reconocer una instalación que vuelve y no contarla como
+        nueva en las métricas internas. Este marcador no tiene caducidad automática. Escríbenos
+        si también quieres que lo borremos.
       </p>
 
       <h3>2.4 Seguimiento familiar</h3>
       <p>
         Si invitas a alguien a seguirte, el relay entrega tus lecturas recientes y tus
         alertas a su dispositivo desde el momento en que acepta — el historial anterior no se
-        comparte. Los mensajes cortos predefinidos entre tú y tus seguidores también pasan
-        por el relay. Puedes revocar el acceso de un seguidor en cualquier momento, y puedes
-        desactivar por completo los mensajes de seguidores.
+        comparte. Los mensajes breves para comprobar cómo estás, incluido el texto que elijas,
+        también pasan por el relay; no es un servicio de chat. Puedes revocar el acceso de un
+        seguidor en cualquier momento y desactivar por completo esos mensajes.
       </p>
 
       <h3>2.5 Compras</h3>
@@ -125,8 +157,9 @@ export function PrivacyEs() {
         <li>Entregarte las alertas que configuras.</li>
         <li>Validar tu suscripción y desbloquear las funciones Pro.</li>
         <li>Avisarte cuando Dulce esté disponible (lista de espera).</li>
+        <li>Responder a las consultas enviadas mediante el formulario de contacto.</li>
         <li>Proteger el sitio del abuso (hash de IP, límite de peticiones).</li>
-        <li>Entender qué páginas funcionan mejor (analítica anónima).</li>
+        <li>Entender las visitas al sitio, las derivaciones a App Store y el uso del servicio y su configuración.</li>
         <li>Cumplir obligaciones legales y responder a tus solicitudes de derechos.</li>
       </ul>
 
@@ -134,8 +167,12 @@ export function PrivacyEs() {
       <ul>
         <li>
           <strong>Consentimiento explícito</strong> (art. 9.2.a RGPD): el tratamiento de tus
-          datos de glucosa a través del relay cuando activas funciones en tiempo real o el
-          seguimiento familiar.
+          datos de salud cuando decides conectar tu CGM y usar las funciones relacionadas.
+          Desconectar tu CGM detiene el tratamiento en el relay; también puedes retirar el
+          consentimiento escribiéndonos. Durante el onboarding, la app enlaza esta política,
+          pero actualmente no muestra una casilla separada para consentir el tratamiento de datos
+          de salud. Estamos pidiendo a asesoría española que confirme si el aviso y el flujo de
+          conexión actuales cumplen el estándar de consentimiento explícito.
         </li>
         <li>
           <strong>Contrato</strong> (art. 6.1.b RGPD): prestarte la app y las funciones a las
@@ -147,7 +184,9 @@ export function PrivacyEs() {
         </li>
         <li>
           <strong>Interés legítimo</strong> (art. 6.1.f RGPD): seguridad básica del sitio y
-          analítica anónima.
+          respuesta a las consultas que envías mediante el formulario de contacto. La base
+          jurídica de la analítica depende del servicio y de las normas regionales descritas en
+          la Política de Cookies; debe confirmarse con asesoría de privacidad.
         </li>
       </ul>
 
@@ -157,10 +196,15 @@ export function PrivacyEs() {
         de datos personales. Nuestro enfoque:
       </p>
       <ul>
-        <li>Por defecto, se procesan y almacenan solo en tu dispositivo.</li>
         <li>
-          Solo llegan a nuestro relay cuando activas expresamente una función que lo
-          requiere, y solo como una ventana reciente de corta duración.
+          Tu historial de glucosa a largo plazo, tu diario y los datos de Apple Salud se procesan
+          y almacenan en tu dispositivo. El relay también procesa las lecturas recientes como se
+          explica arriba.
+        </li>
+        <li>
+          Cuando conectas tu CGM, el relay procesa las lecturas recientes necesarias para las
+          funciones en segundo plano y de seguimiento que uses; conserva una ventana breve,
+          no tu historial de glucosa a largo plazo.
         </li>
         <li>Siempre van cifrados en tránsito (TLS).</li>
         <li>
@@ -172,31 +216,54 @@ export function PrivacyEs() {
       <h2 id="retention">6. Cuánto tiempo conservamos tus datos</h2>
       <ul>
         <li>
-          <strong>Datos del relay:</strong> las lecturas recientes se sobrescriben
-          continuamente; los tokens de sesión y de notificación se conservan mientras la
-          función está activa y se eliminan cuando la desactivas, cierras sesión o eliminas
-          tu cuenta (Ajustes → Eliminar cuenta).
+          <strong>Datos activos del relay:</strong> las lecturas recientes se sustituyen
+          continuamente en una ventana corta. Los tokens de sesión del proveedor y de
+          notificación se conservan mientras los necesite el dispositivo conectado y se
+          eliminan al desconectarlo o darlo de baja, cerrar sesión o usar Ajustes → Eliminar cuenta.
         </li>
         <li>
           <strong>Datos de la app en tu dispositivo:</strong> hasta que los borres o
           desinstales la app.
         </li>
         <li>
-          <strong>Lista de espera:</strong> hasta el lanzamiento + 6 meses, o hasta que pidas
-          que te eliminemos.
+          <strong>Lista de espera para Android:</strong> hasta seis meses después del lanzamiento
+          de Android o hasta que pidas que te eliminemos. El almacenamiento actual no caduca
+          automáticamente; la eliminación requiere una tarea manual o tu solicitud. El hash de
+          IP asociado se conserva con el registro durante el mismo periodo.
         </li>
         <li>
-          <strong>Formulario de beta:</strong> durante la beta + 12 meses.
+          <strong>Formulario de interés en la beta:</strong> durante la beta y 12 meses más.
+          Estos registros también se eliminan manualmente o a petición; el hash de IP asociado
+          se conserva con el registro.
         </li>
         <li>
-          <strong>Hash de IP:</strong> 30 días.
+          <strong>Mensajes de contacto:</strong> mientras atendemos tu consulta y cualquier
+          seguimiento necesario. Las copias de correo pueden permanecer en nuestro buzón y en
+          los sistemas de Resend según su configuración de conservación; puedes pedirnos que las
+          borremos cuando no exista una obligación legal de conservarlas.
+        </li>
+        <li>
+          <strong>Eventos de uso del relay:</strong> los registros asociados a un ID aleatorio
+          de instalación se conservan hasta 45 días; las estadísticas diarias agregadas del
+          servicio, hasta 400 días.
+        </li>
+        <li>
+          <strong>Registros operativos:</strong> Cloudflare Workers Logs se conservan hasta 7
+          días, según el plan y la configuración de Cloudflare.
+        </li>
+        <li>
+          <strong>Marcador de instalación:</strong> el ID aleatorio y la fecha del primer
+          registro se conservan tras borrar los datos del relay para reconocer instalaciones
+          que vuelven. No tiene caducidad automática; puedes pedirnos que borremos también este
+          marcador.
         </li>
       </ul>
 
       <h2 id="recipients">7. Con quién compartimos tus datos</h2>
       <p>
-        Compartimos datos únicamente con los proveedores estrictamente necesarios para operar
-        el servicio. Todos actúan como encargados del tratamiento bajo contrato:
+        Usamos los proveedores que se indican a continuación. Algunos tratan datos por nuestra
+        cuenta bajo contrato; Abbott, Dexcom, Apple y Google también prestan servicios sujetos
+        a sus propias condiciones y políticas de privacidad:
       </p>
       <ul>
         <li>
@@ -210,6 +277,10 @@ export function PrivacyEs() {
           <strong>Google Firebase</strong> — notificaciones push en Android.
         </li>
         <li>
+          <strong>Google Analytics 4 (Google Ireland Ltd.)</strong> — analítica web según la
+          configuración regional de consentimiento descrita en la Política de Cookies.
+        </li>
+        <li>
           <strong>RevenueCat</strong> — validación de suscripciones (solo ID seudónimo).
         </li>
         <li>
@@ -217,13 +288,19 @@ export function PrivacyEs() {
           la UE (eu-west-3).
         </li>
         <li>
-          <strong>Resend</strong> (correo de confirmación de la lista) y{" "}
-          <strong>Vercel</strong> (alojamiento web y analítica anónima).
+          <strong>Resend</strong> (entrega del formulario de contacto y correo de confirmación
+          de la lista) y{" "}
+          <strong>Vercel</strong> (alojamiento web y analítica web agregada).
         </li>
         <li>
           <strong>Abbott (LibreLinkUp)</strong> — tu dispositivo y nuestro relay se conectan
           al servicio de Abbott con tus credenciales/sesión para obtener tus lecturas. Esa
           conexión se rige por la política de privacidad de Abbott.
+        </li>
+        <li>
+          <strong>Dexcom (Share)</strong> — tu dispositivo y, mientras tu CGM está conectado,
+          nuestro relay se conecta a Dexcom Share mediante un ID de sesión para obtener
+          lecturas. Se aplican las condiciones de privacidad de Dexcom.
         </li>
       </ul>
       <p>
@@ -233,15 +310,18 @@ export function PrivacyEs() {
 
       <h2 id="transfers">8. Transferencias internacionales</h2>
       <p>
-        Algunos de nuestros encargados (Cloudflare, RevenueCat, Resend, Vercel, Apple,
-        Google) procesan datos en EE. UU. o en ubicaciones edge globales. Las transferencias
-        se realizan bajo las Cláusulas Contractuales Tipo (SCC) de la Comisión Europea o
-        marcos equivalentes (DPF). Puedes pedir copia de estas garantías en{" "}
+        Algunos proveedores y servicios que usamos (Cloudflare, RevenueCat, Resend, Vercel,
+        Apple y Google) pueden tratar datos en EE. UU. u otros países. Cuando el RGPD exige
+        garantías para una transferencia, el mecanismo aplicable depende del proveedor y del
+        servicio, y puede incluir una decisión de adecuación o las Cláusulas Contractuales Tipo
+        (SCC) de la Comisión Europea. Google LLC figura como participante activo del Marco de
+        Privacidad de Datos UE-EE. UU., dentro del alcance de su certificación. Escríbenos para
+        consultar los detalles y obtener copia de las garantías aplicables en{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
 
       <h2 id="rights">9. Tus derechos</h2>
-      <p>Como titular de los datos, tienes derecho a:</p>
+      <p>Según el RGPD y sujeto a sus condiciones, tienes derecho a:</p>
       <ul>
         <li>Acceder a tus datos personales.</li>
         <li>Rectificarlos si son inexactos.</li>
@@ -251,11 +331,14 @@ export function PrivacyEs() {
         <li>Retirar tu consentimiento en cualquier momento.</li>
       </ul>
       <p>
-        La forma más rápida de borrar todo lo que Dulce guarda sobre ti es{" "}
-        <strong>Ajustes → Eliminar cuenta</strong> dentro de la app. También puedes ejercer
-        cualquiera de estos derechos escribiendo a{" "}
-        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Respondemos en un
-        máximo de 30 días.
+        Usa <strong>Ajustes → Eliminar cuenta</strong> en la app para borrar los datos locales y
+        los registros activos del relay. El marcador mínimo de instalación descrito arriba
+        permanece hasta que solicites su borrado. Puedes ejercer cualquiera de estos derechos
+        escribiendo a{" "}
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Respondemos en el
+        plazo de un mes. Si la solicitud es compleja o recibimos muchas solicitudes, el RGPD
+        permite ampliarlo hasta dos meses más; te explicaremos cualquier ampliación durante el
+        primer mes.
       </p>
       <p>
         Si crees que nuestro tratamiento no cumple la ley, tienes derecho a presentar una

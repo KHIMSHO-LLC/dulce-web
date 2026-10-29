@@ -1,11 +1,10 @@
-{/* Translation of DisclaimerEs/DisclaimerEn; the Spanish version prevails. TODO: legal review. */}
+{/* Safety wording checked against Abbott and Dexcom guidance on 2026-10-29; legal review remains outstanding. */}
 export function DisclaimerIt() {
   return (
     <>
       <p>
-        Questa avvertenza medica spiega i limiti di ciò che Dulce può fare per te. Leggila con
-        attenzione: usare l&apos;app significa che comprendi e accetti tutto ciò che è descritto
-        qui.
+        Questa avvertenza medica spiega i limiti di ciò che Dulce può fare per te. Leggila insieme
+        alle istruzioni del tuo sistema CGM e alle indicazioni del tuo team diabetologico.
       </p>
 
       <blockquote>
@@ -37,12 +36,13 @@ export function DisclaimerIt() {
         tuo team diabetologico e usare gli strumenti che ti sono stati prescritti.
       </p>
 
-      <h2 id="confirm">3. Conferma sempre con il polpastrello</h2>
+      <h2 id="confirm">3. Quando usare un glucometro</h2>
       <p>
-        Prima di agire su un valore alto o basso, e soprattutto quando ciò che vedi non corrisponde
-        a come ti senti, controlla la glicemia dal <strong>polpastrello</strong> (glucometro). I
-        valori mostrati in Dulce provengono da un sensore interstiziale e possono differire dalla
-        glicemia reale nel sangue, in particolare quando cambia rapidamente.
+        Segui le istruzioni del tuo sistema CGM. Usa un glucometro quando lo consiglia il
+        produttore, anche se una lettura non corrisponde ai sintomi o alle aspettative, oppure se
+        mancano un valore attuale o una freccia di tendenza. Dulce mostra dati di un sensore
+        interstiziale, che possono differire dalla glicemia nel sangue, soprattutto quando cambia
+        rapidamente.
       </p>
 
       <h2 id="alerts">4. Gli avvisi non sono garantiti</h2>
@@ -67,8 +67,8 @@ export function DisclaimerIt() {
       <p>
         Dulce non calcola dosi di insulina o di carboidrati e non dà consigli clinici. L&apos;avviso
         facoltativo di ipo prevista si limita a proiettare la velocità con cui cambiano le tue ultime
-        letture: è indicativo, può sbagliare e non sostituisce gli allarmi del tuo sistema CGM né un
-        controllo dal polpastrello.
+        letture: è indicativo, può sbagliare e non sostituisce gli allarmi del tuo sistema CGM né
+        le sue istruzioni su quando usare un glucometro.
       </p>
 
       <h2 id="emergencies">7. Emergenze</h2>
@@ -92,12 +92,7 @@ export function DisclaimerIt() {
         di questi servizi e non siamo responsabili di interruzioni o errori che nascono da essi.
       </p>
 
-      <h2 id="acceptance">10. Accettazione</h2>
-      <p>
-        Usando Dulce confermi di aver letto e compreso questa avvertenza medica e di assumerti la
-        responsabilità di gestire il tuo diabete con strumenti autorizzati e con il supporto del tuo
-        team diabetologico. Se non sei d&apos;accordo, non usare l&apos;app.
-      </p>
+      <h2 id="acceptance">10. Domande</h2>
       <p>
         Per qualsiasi domanda su questa avvertenza scrivici a{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.

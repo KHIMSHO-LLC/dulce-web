@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* Translation of TermsEs/TermsEn; the Spanish version prevails. TODO: legal review. */}
+{/* Translation of the Spanish/English terms. TODO: review local legal terminology; Spanish counsel review remains outstanding. */}
 export function TermsDe() {
   return (
     <>
@@ -64,16 +64,17 @@ export function TermsDe() {
       </p>
       <p>
         Die von Dulce angezeigten Glukosedaten stammen über Dienste Dritter aus deinem CGM und
-        unterliegen deren technischen Grenzen, Verzögerungen und möglichen Fehlern. Bei
-        kritischen Entscheidungen (vor allem bei schwerem Unterzucker) prüf den Wert immer mit
-        einem Blutzuckermessgerät.
+        unterliegen deren technischen Grenzen, Verzögerungen und möglichen Fehlern. Folge den
+        Anweisungen deines CGM-Herstellers dazu, wann du einen Wert mit einem
+        Blutzuckermessgerät bestätigen sollst, auch wenn er nicht zu deinen Symptomen oder
+        Erwartungen passt.
       </p>
       <p>
         <strong>Verlass dich nicht auf Dulce als einziges Alarmsystem.</strong> Die Zustellung von
-        Mitteilungen, Live-Aktivitäten und Updates auf der Uhr hängt von Apple, Abbott, deinem
+        Mitteilungen, Live-Aktivitäten und Updates auf der Uhr hängt von Apple, deinem CGM-Anbieter,
         Netz und deinen Geräteeinstellungen ab und kann nicht garantiert werden. Lass die
         Alarmfunktionen deiner offiziellen CGM-App eingeschaltet. Dulce ergänzt die offizielle
-        App von Abbott, ersetzt sie aber nicht.
+        App deines CGM-Herstellers.
       </p>
 
       <h2 id="eligibility">4. Voraussetzungen</h2>
@@ -89,8 +90,8 @@ export function TermsDe() {
         Dulce verbindet sich mit FreeStyle-Libre-Daten über <strong>LibreLinkUp</strong> und
         mit Dexcom-Daten über <strong>Dexcom Share</strong>.
         Du bist für die Vertraulichkeit dieser Zugangsdaten verantwortlich. Dulce speichert sie im
-        sicheren Schlüsselbund deines Geräts; verlorene Zugangsdaten können wir nicht anstelle von
-        Abbott wiederherstellen. Du musst berechtigt sein, das verbundene Konto zu nutzen.
+        sicheren Schlüsselbund deines Geräts; verlorene Zugangsdaten können wir nicht für deinen
+        CGM-Anbieter wiederherstellen. Du musst berechtigt sein, das verbundene Konto zu nutzen.
       </p>
 
       <h2 id="sharing">6. Folgen durch die Familie</h2>
@@ -133,9 +134,9 @@ export function TermsDe() {
         </li>
         <li>Erstattungen wickelt Apple nach seinen Bedingungen ab.</li>
         <li>
-          Als Verbraucher in der EU hast du ein 14-tägiges Widerrufsrecht. Wenn du das Abo (oder
-          den Test) sofort startest, stimmst du zu, dass der Dienst sofort beginnt; es gilt das
-          Standard-Widerrufsverfahren von Apple.
+          Diese Bedingungen schränken keine zwingenden Verbraucherrechte ein, die für dich
+          gelten. Informationen zu Testzeitraum, Kündigung, Verlängerung und Erstattung findest
+          du im Kaufdialog sowie in den aktuellen Abo-Bedingungen und Kontofunktionen von Apple.
         </li>
       </ul>
 
@@ -154,11 +155,11 @@ export function TermsDe() {
       <h2 id="third-parties">10. Dienste Dritter</h2>
       <p>
         Dulce verbindet sich mit Diensten Dritter, die du wählst oder die für den Betrieb nötig
-        sind (Abbott LibreLinkUp, Apple, einschließlich Apple Health, Mitteilungen und Zahlungen,
+        sind (Abbott LibreLinkUp, Dexcom Share, Apple, einschließlich Apple Health, Mitteilungen und Zahlungen,
         sowie RevenueCat zur Prüfung von Abonnements). Für deren Nutzung gelten ihre eigenen
         Bedingungen und Richtlinien. Für ihre Verfügbarkeit, Richtigkeit oder Änderungen sind wir
         nicht verantwortlich. Dulce ist ein unabhängiges Produkt und steht in keiner Verbindung zu
-        Abbott oder Apple, die es weder unterstützen noch sponsern.
+        Abbott, Dexcom oder Apple, die es weder unterstützen noch sponsern.
       </p>
 
       <h2 id="ip">11. Geistiges Eigentum</h2>

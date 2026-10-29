@@ -14,7 +14,7 @@ import { CookiesIt } from "@/components/legal/CookiesIt";
 /** The Spanish text prevails; the others are translations of it. */
 const DOC: Record<AppLocale, () => React.JSX.Element> = { es: CookiesEs, en: CookiesEn, de: CookiesDe, fr: CookiesFr, it: CookiesIt };
 
-const LAST_UPDATED = "2026-05-19";
+const LAST_UPDATED = "2026-10-29";
 
 export async function generateMetadata({
   params,

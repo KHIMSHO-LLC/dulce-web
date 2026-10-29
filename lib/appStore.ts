@@ -31,8 +31,12 @@ export type StoreCampaign =
 export function appStoreUrl(campaign?: StoreCampaign): string {
   const url = new URL(APP_STORE_BASE);
   url.searchParams.set("pt", APP_STORE_PROVIDER_TOKEN);
-  // Apple caps campaign tokens at 40 characters.
-  if (campaign) url.searchParams.set("ct", campaign.slice(0, 40));
+  // Apple accepts campaign tokens up to 30 characters. Article campaign IDs are
+  // validated against this limit so the stable token is never silently changed.
+  if (campaign) {
+    if (campaign.length > 30) throw new Error(`App Store campaign token exceeds 30 characters: ${campaign}`);
+    url.searchParams.set("ct", campaign);
+  }
   url.searchParams.set("mt", "8");
   return url.toString();
 }

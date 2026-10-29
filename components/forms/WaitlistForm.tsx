@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useId } from "react";
+import { useActionState, useEffect, useId, useRef } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import { joinWaitlist, type WaitlistState } from "@/app/actions/waitlist";
@@ -23,6 +23,19 @@ export function WaitlistForm({
   const consentId = useId();
 
   const [state, formAction, pending] = useActionState(joinWaitlist, initial);
+  const sentSignupEvent = useRef(false);
+
+  useEffect(() => {
+    if (state.status !== "success" || sentSignupEvent.current) return;
+    const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag;
+    if (!gtag) return; // Analytics is optional and only loaded after consent where required.
+    sentSignupEvent.current = true;
+    gtag("event", "sign_up", {
+      method: "android_waitlist",
+      source_campaign: source,
+      page_language: locale,
+    });
+  }, [locale, source, state.status]);
 
   if (state.status === "success") {
     return (

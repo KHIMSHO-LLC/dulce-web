@@ -1,10 +1,10 @@
-{/* TODO: Revisión legal por un abogado sanitario antes del lanzamiento público. */}
+{/* Seguridad factual contrastada con Abbott y Dexcom el 2026-10-29; queda pendiente la revisión legal. */}
 export function DisclaimerEs() {
   return (
     <>
       <p>
-        Este Aviso Médico explica los límites de lo que Dulce puede hacer por ti. Léelo con
-        atención: usar la aplicación implica que entiendes y aceptas lo que se describe aquí.
+        Este Aviso Médico explica los límites de lo que Dulce puede hacer por ti. Léelo junto
+        con las instrucciones de tu sistema CGM y las indicaciones de tu equipo sanitario.
       </p>
 
       <blockquote>
@@ -38,12 +38,12 @@ export function DisclaimerEs() {
         herramientas que ellos te hayan indicado.
       </p>
 
-      <h2 id="confirma">3. Confirma siempre con una punción capilar</h2>
+      <h2 id="confirma">3. Cuándo usar un medidor de glucosa</h2>
       <p>
-        Antes de actuar ante una lectura alta o baja —y especialmente si lo que ves no encaja
-        con cómo te sientes— confirma tu glucosa con una <strong>punción capilar</strong>{" "}
-        (medidor de sangre). Los valores que muestra Dulce proceden de un sensor intersticial y
-        pueden diferir de tu glucosa en sangre real, sobre todo cuando cambia rápidamente.
+        Sigue las instrucciones de tu sistema CGM. Usa un medidor de glucosa cuando lo indique
+        el fabricante, también si una lectura no coincide con tus síntomas o expectativas, o si
+        falta un valor actual o una flecha de tendencia. Dulce muestra datos de un sensor
+        intersticial, que pueden diferir de la glucosa en sangre, sobre todo cuando cambia rápido.
       </p>
 
       <h2 id="alertas">4. Las alertas no están garantizadas</h2>
@@ -70,7 +70,7 @@ export function DisclaimerEs() {
         Dulce no calcula dosis de insulina ni de carbohidratos y no ofrece consejos clínicos. El
         aviso opcional de previsión de bajada solo extrapola la velocidad de cambio de las
         últimas lecturas: es orientativo, puede fallar y no sustituye a las alarmas de tu sistema
-        de MCG ni a una comprobación por punción capilar.
+        CGM ni a sus instrucciones sobre cuándo usar un medidor de glucosa.
       </p>
 
       <h2 id="emergencias">7. Emergencias</h2>
@@ -95,12 +95,7 @@ export function DisclaimerEs() {
         errores que se originen en ellos.
       </p>
 
-      <h2 id="aceptacion">10. Aceptación</h2>
-      <p>
-        Al usar Dulce confirmas que has leído y comprendido este Aviso Médico y que asumes la
-        responsabilidad de gestionar tu diabetes con las herramientas autorizadas y el apoyo de
-        tu equipo sanitario. Si no estás de acuerdo, por favor no utilices la aplicación.
-      </p>
+      <h2 id="aceptacion">10. Dudas</h2>
       <p>
         Para cualquier duda sobre este aviso, escríbenos a{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.

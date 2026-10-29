@@ -1,6 +1,6 @@
 import { GA_ID } from "@/lib/consent";
 
-{/* Translation of CookiesEs/CookiesEn; the Spanish version prevails. TODO: legal review. */}
+{/* Translation of the Spanish/English policy. TODO: review local legal terminology; Spanish counsel review remains outstanding. */}
 export function CookiesDe() {
   return (
     <>
@@ -22,7 +22,8 @@ export function CookiesDe() {
         <p>
           Dulce verwendet <strong>technisch notwendige Cookies</strong> und Cookies von{" "}
           <strong>Google Analytics</strong>. Im EWR, im Vereinigten Königreich und in der Schweiz
-          läuft Google Analytics nur, wenn du zustimmst. Werbe-Tracking-Cookies verwenden wir nicht.
+          sowie wenn wir deinen Standort nicht bestimmen können, wird es erst nach deiner
+          Zustimmung zur Statistik geladen. Werbe-Tracking-Cookies verwenden wir nicht.
         </p>
       ) : (
         <p>
@@ -38,32 +39,38 @@ export function CookiesDe() {
           technisch. Dauer: bis zu 1 Jahr.
         </li>
         <li>
-          <strong>dulce-region</strong>: dein Ländercode (aus deiner IP-Adresse, von uns nicht
-          gespeichert), nur um zu entscheiden, ob wir um Zustimmung zur Statistik fragen. Typ:
-          technisch. Dauer: bis du den Browser schließt.
+          <strong>dulce-region</strong>: dein Ländercode, den unsere Hosting-Plattform aus der
+          Anfrage ableitet und in einem Sitzungscookie speichert, um zu entscheiden, ob wir um
+          Zustimmung zur Statistik fragen. Für diesen Zweck speichern wir nicht die rohe IP-
+          Adresse. Typ: technisch. Dauer: bis du den Browser schließt.
         </li>
         <li>
-          <strong>Formular-Tokens</strong>: von Next.js Server Actions zum Schutz vor CSRF
-          verwendet. Typ: technisch. Dauer: nur während des Absendens.
+          <strong>dulce:analytics-consent</strong>: ein localStorage-Eintrag im Browser, kein
+          Cookie. Er merkt sich, ob du Google Analytics zugestimmt oder es abgelehnt hast, bis
+          du die Browserdaten dieser Website löschst.
         </li>
       </ul>
 
-      <h3>2.2 Anonyme Statistik ohne Cookies</h3>
+      <h3>2.2 Zusammengefasste Statistik ohne Cookies</h3>
       <p>
-        Wir nutzen <strong>Vercel Analytics</strong>, das Seitenaufrufe und Ladeleistung{" "}
-        <strong>ohne Cookies</strong> und ohne persönliche Kennungen misst. Die Daten sind
-        zusammengefasst und anonym; du kannst darüber nicht identifiziert werden. Deshalb ist nach
-        der ePrivacy-Richtlinie keine Einwilligung nötig.
+        Wir nutzen <strong>Vercel Analytics</strong> für Seitenaufrufe und Ladeleistung{" "}
+        <strong>ohne Cookies</strong>. Laut Vercel verwendet die Besucherstatistik einen aus der
+        Anfrage abgeleiteten Hash, der nach 24 Stunden abläuft; Berichte können URL, Verweis,
+        ungefähren Standort, Browser und Betriebssystem enthalten. Wir nutzen zusammengefasste
+        Berichte. Dieser Dienst setzt keine Cookies; die Daten unterliegen dennoch dem geltenden
+        Datenschutzrecht.
       </p>
 
       {GA_ID ? (
         <>
           <h3>2.3 Google Analytics</h3>
           <p>
-            Im EWR, im Vereinigten Königreich und in der Schweiz nur, wenn du Statistik-Cookies
-            zustimmst, und anderswo, solange du es nicht ausschaltest, nutzen wir{" "}
+            Im EWR, im Vereinigten Königreich und in der Schweiz (oder wenn wir deinen Standort
+            nicht bestimmen können) nur, wenn du Statistik-Cookies zustimmst, und anderswo,
+            solange du es nicht ausschaltest, nutzen wir{" "}
             <strong>Google Analytics 4</strong> (Google Ireland Ltd.), um Besuche zu zählen und zu
-            sehen, welche Seiten Menschen in den App Store führen. Es setzt die Cookies{" "}
+            erfassen, welche Seiten besucht werden, welche App-Store-Links mit welcher Kampagne
+            geklickt werden und wie viele Wartelisten-Anmeldungen erfolgreich sind. Es setzt die Cookies{" "}
             <strong>_ga</strong> und <strong>_ga_*</strong> (Dauer: bis zu 2 Jahre). Google kann
             diese Daten im Rahmen des EU-US Data Privacy Framework in den USA verarbeiten.
             Werbefunktionen, Google Signals und personalisierte Werbung sind ausgeschaltet. Wenn
@@ -74,10 +81,11 @@ export function CookiesDe() {
 
       <h2 id="consent">3. Einwilligung</h2>
       <p>
-        Technisch notwendige Cookies brauchen keine Einwilligung; sie sind nach spanischem
-        Cookie-Recht (Art. 22 LSSI) und der DSGVO ausgenommen.{" "}
+        Technisch notwendige Cookies können ohne Einwilligung verwendet werden, wenn sie die
+        geltende Ausnahme nach spanischem Cookie-Recht (Art. 22 LSSI) erfüllen. Zugehörige
+        personenbezogene Daten unterliegen weiterhin dem Datenschutzrecht.{" "}
         {GA_ID
-          ? "Im EWR, im Vereinigten Königreich und in der Schweiz werden Google-Analytics-Cookies erst gesetzt, nachdem du sie in unserem Banner akzeptiert hast. Überall kannst du deine Wahl jederzeit über „Cookie-Einstellungen“ unten auf jeder Seite ändern."
+          ? "Im EWR, im Vereinigten Königreich und in der Schweiz sowie wenn wir deinen Standort nicht bestimmen können, werden Google-Analytics-Cookies erst gesetzt, nachdem du sie in unserem Banner akzeptiert hast. Überall kannst du deine Wahl jederzeit über „Cookie-Einstellungen“ unten auf jeder Seite ändern."
           : "Sollten wir je nicht technische Cookies einführen, würden wir vorher über ein passendes Banner um deine Einwilligung bitten."}
       </p>
 
