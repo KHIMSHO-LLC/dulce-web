@@ -153,6 +153,13 @@ Missbrauch.
         Abonnements mit einer zufälligen, von der App erzeugten Kennung zu prüfen, nicht mit
         deiner E-Mail oder Identität.
       </p>
+      <p>
+        Unser Server speichert diese RevenueCat-Kennung zusammen mit der Installationskennung,
+        um Pro-Funktionen zu entfernen, sobald ein Kauf erstattet wird. Wenn du bei Apple oder
+        Google eine Erstattung beantragst, können wir ihnen über RevenueCat mitteilen, ob der
+        Kauf bereitgestellt wurde und welche Entscheidung wir bevorzugen. Glukose- oder
+        Gesundheitsdaten geben wir nie weiter; die Entscheidung trifft immer Apple oder Google.
+      </p>
 
       <h2 id="purpose">3. Wofür wir deine Daten verwenden</h2>
       <ul>

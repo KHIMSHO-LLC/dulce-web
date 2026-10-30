@@ -155,6 +155,14 @@ export function PrivacyFr() {
         valider les abonnements à l&apos;aide d&apos;un identifiant aléatoire généré par
         l&apos;app, et non de ton e-mail ou de ton identité.
       </p>
+      <p>
+        Notre serveur conserve cet identifiant RevenueCat avec l&apos;identifiant
+        d&apos;installation afin de retirer les fonctions Pro dès qu&apos;un achat est remboursé.
+        Si tu demandes un remboursement à Apple ou Google, nous pouvons leur indiquer, via
+        RevenueCat, si l&apos;achat a été fourni et notre préférence concernant le remboursement.
+        Nous ne partageons jamais de données de glycémie ni de santé ; la décision revient
+        toujours à Apple ou Google.
+      </p>
 
       <h2 id="purpose">3. Pourquoi nous utilisons tes données</h2>
       <ul>

@@ -149,6 +149,13 @@ export function PrivacyEs() {
         suscripciones con un identificador aleatorio generado por la app — no con tu correo
         ni tu identidad.
       </p>
+      <p>
+        Nuestro servidor guarda ese identificador de RevenueCat junto al identificador de
+        instalación para retirar las funciones Pro en cuanto se reembolsa una compra. Si pides
+        un reembolso a Apple o Google, podemos indicarles, a través de RevenueCat, si la compra
+        se entregó y nuestra preferencia sobre el reembolso. No compartimos datos de glucosa ni
+        de salud; la decisión la toma siempre Apple o Google.
+      </p>
 
       <h2 id="purpose">3. Para qué usamos tus datos</h2>
       <ul>

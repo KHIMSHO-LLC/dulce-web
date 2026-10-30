@@ -151,6 +151,13 @@ export function PrivacyIt() {
         abbonamenti tramite un identificativo casuale generato dall&apos;app, non la tua email o
         la tua identità.
       </p>
+      <p>
+        Il nostro server conserva questo identificativo RevenueCat insieme all&apos;identificativo
+        di installazione per rimuovere le funzioni Pro non appena un acquisto viene rimborsato.
+        Se chiedi un rimborso ad Apple o Google, possiamo comunicare loro, tramite RevenueCat, se
+        l&apos;acquisto è stato fornito e la nostra preferenza sul rimborso. Non condividiamo mai
+        dati di glicemia o di salute; la decisione spetta sempre ad Apple o Google.
+      </p>
 
       <h2 id="purpose">3. Perché usiamo i tuoi dati</h2>
       <ul>
