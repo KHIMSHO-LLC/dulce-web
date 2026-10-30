@@ -118,10 +118,12 @@ export function PrivacyIt() {
           misurare e migliorare il servizio.
         </li>
         <li>
-          <strong>Log operativi:</strong> alcuni log diagnostici inviati a Cloudflare Workers
-          Logs includono l&apos;ID dell&apos;installazione, il fornitore, l&apos;ultimo valore glicemico e
-          il relativo orario, oltre a dettagli sugli errori. In base al piano e alle
-          impostazioni, Cloudflare li conserva fino a 7 giorni.
+          <strong>Log operativi:</strong> i log diagnostici inviati a Cloudflare Workers Logs
+          contengono un codice pseudonimo del dispositivo (un hash non reversibile dell&apos;ID
+          dell&apos;installazione, non l&apos;ID stesso), il tuo fornitore di CGM, se ogni
+          aggiornamento o avviso è stato consegnato, il tipo di avviso quando ne viene inviato uno,
+          gli eventi di stato dell&apos;Attività Live segnalati dall&apos;app e i dettagli sugli
+          errori. Non contengono valori glicemici. Cloudflare elimina questi log dopo 7 giorni.
         </li>
       </ul>
       <p>
@@ -248,8 +250,7 @@ export function PrivacyIt() {
           giornaliere aggregate del servizio fino a 400 giorni.
         </li>
         <li>
-          <strong>Log operativi:</strong> Cloudflare Workers Logs è conservato fino a 7 giorni,
-          in base al piano e alle impostazioni di Cloudflare.
+          <strong>Log operativi:</strong> i Cloudflare Workers Logs vengono eliminati dopo 7 giorni.
         </li>
         <li>
           <strong>Indicatore dell&apos;installazione:</strong> l&apos;ID casuale e la data della

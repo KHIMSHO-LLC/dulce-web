@@ -113,10 +113,12 @@ export function PrivacyEn() {
           to the random installation ID, used to measure and improve the service.
         </li>
         <li>
-          <strong>Operational logs:</strong> some troubleshooting logs sent to Cloudflare
-          Workers Logs include your installation ID, provider, latest glucose value and time,
-          and error details. Cloudflare retains these logs for up to 7 days, depending on its
-          plan and settings.
+          <strong>Operational logs:</strong> troubleshooting logs sent to Cloudflare Workers
+          Logs contain a pseudonymous device code (a one-way hash of your installation ID, not the
+          ID itself), your CGM provider, whether each update or alert was delivered, the alert
+          type when one is sent, Live Activity status events reported by the app, and error
+          details. They do not contain glucose values. Cloudflare deletes these logs after 7
+          days.
         </li>
       </ul>
       <p>
@@ -235,8 +237,7 @@ export function PrivacyEn() {
           days.
         </li>
         <li>
-          <strong>Operational logs:</strong> Cloudflare Workers Logs are retained for up to 7
-          days, depending on Cloudflare&apos;s plan and settings.
+          <strong>Operational logs:</strong> Cloudflare Workers Logs are deleted after 7 days.
         </li>
         <li>
           <strong>Installation marker:</strong> a random installation ID and first-registration

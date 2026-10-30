@@ -120,10 +120,12 @@ Missbrauch.
           den Dienst zu messen und zu verbessern.
         </li>
         <li>
-          <strong>Betriebsprotokolle:</strong> Einige Diagnoseprotokolle in Cloudflare Workers
-          Logs enthalten deine Installations-ID, den Anbieter, den letzten Glukosewert und
-          Zeitpunkt sowie Fehlerdetails. Cloudflare speichert diese Protokolle je nach Tarif
-          und Einstellung bis zu 7 Tage.
+          <strong>Betriebsprotokolle:</strong> Diagnoseprotokolle in Cloudflare Workers Logs
+          enthalten einen pseudonymen Gerätecode (einen nicht umkehrbaren Hash deiner
+          Installations-ID, nicht die ID selbst), deinen CGM-Anbieter, ob jedes Update und jeder
+          Alarm zugestellt wurde, die Alarmart, wenn ein Alarm gesendet wird, von der App
+          gemeldete Statusereignisse der Live-Aktivität sowie Fehlerdetails. Sie enthalten keine
+          Glukosewerte. Cloudflare löscht diese Protokolle nach 7 Tagen.
         </li>
       </ul>
       <p>
@@ -250,8 +252,7 @@ Missbrauch.
           Nutzungsstatistiken bis zu 400 Tage.
         </li>
         <li>
-          <strong>Betriebsprotokolle:</strong> Cloudflare Workers Logs werden je nach Cloudflare-
-          Tarif und Einstellung bis zu 7 Tage aufbewahrt.
+          <strong>Betriebsprotokolle:</strong> Cloudflare Workers Logs werden nach 7 Tagen gelöscht.
         </li>
         <li>
           <strong>Installationsmarker:</strong> Die zufällige ID und der Zeitpunkt der ersten

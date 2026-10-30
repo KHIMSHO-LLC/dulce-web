@@ -14,7 +14,7 @@ import { PrivacyIt } from "@/components/legal/PrivacyIt";
 /** The Spanish text prevails; the others are translations of it. */
 const DOC: Record<AppLocale, () => React.JSX.Element> = { es: PrivacyEs, en: PrivacyEn, de: PrivacyDe, fr: PrivacyFr, it: PrivacyIt };
 
-const LAST_UPDATED = "2026-10-29";
+const LAST_UPDATED = "2026-10-30";
 
 export async function generateMetadata({
   params,

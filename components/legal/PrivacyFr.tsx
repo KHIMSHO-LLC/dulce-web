@@ -121,10 +121,13 @@ export function PrivacyFr() {
           d&apos;installation pour mesurer et améliorer le service.
         </li>
         <li>
-          <strong>Journaux opérationnels :</strong> certains journaux de diagnostic envoyés à
-          Cloudflare Workers Logs contiennent ton identifiant d&apos;installation, le fournisseur,
-          la dernière valeur de glycémie et son heure, ainsi que des détails d&apos;erreur. Selon son
-          offre et ses réglages, Cloudflare les conserve jusqu&apos;à 7 jours.
+          <strong>Journaux opérationnels :</strong> les journaux de diagnostic envoyés à
+          Cloudflare Workers Logs contiennent un code d&apos;appareil pseudonyme (un hachage
+          irréversible de ton identifiant d&apos;installation, pas l&apos;identifiant lui-même), ton
+          fournisseur de CGM, l&apos;indication que chaque mise à jour ou alerte a été remise ou non,
+          le type d&apos;alerte lorsqu&apos;une alerte est envoyée, les événements d&apos;état de
+          l&apos;Activité en direct signalés par l&apos;app et des détails d&apos;erreur. Ils ne
+          contiennent aucune valeur de glycémie. Cloudflare supprime ces journaux au bout de 7 jours.
         </li>
       </ul>
       <p>
@@ -253,8 +256,7 @@ export function PrivacyFr() {
           statistiques quotidiennes agrégées du service jusqu&apos;à 400 jours.
         </li>
         <li>
-          <strong>Journaux opérationnels :</strong> Cloudflare Workers Logs sont conservés
-          jusqu&apos;à 7 jours, selon l&apos;offre et les réglages de Cloudflare.
+          <strong>Journaux opérationnels :</strong> Cloudflare Workers Logs sont supprimés au bout de 7 jours.
         </li>
         <li>
           <strong>Marqueur d&apos;installation :</strong> l&apos;identifiant aléatoire et la date

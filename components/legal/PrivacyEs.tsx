@@ -116,10 +116,12 @@ export function PrivacyEs() {
           suscripción asociados al ID aleatorio de instalación para medir y mejorar el servicio.
         </li>
         <li>
-          <strong>Registros operativos:</strong> algunos registros de diagnóstico enviados a
-          Cloudflare Workers Logs incluyen tu ID de instalación, proveedor, último valor de
-          glucosa y hora, y detalles de errores. Cloudflare los conserva hasta 7 días, según el
-          plan y la configuración.
+          <strong>Registros operativos:</strong> los registros de diagnóstico enviados a
+          Cloudflare Workers Logs contienen un código seudónimo del dispositivo (un hash
+          irreversible de tu ID de instalación, no el ID en sí), tu proveedor de CGM, si cada
+          actualización o alerta se entregó, el tipo de alerta cuando se envía una, eventos de
+          estado de la Actividad en Vivo que comunica la app y detalles de errores. No contienen
+          valores de glucosa. Cloudflare borra estos registros a los 7 días.
         </li>
       </ul>
       <p>
@@ -248,8 +250,7 @@ export function PrivacyEs() {
           servicio, hasta 400 días.
         </li>
         <li>
-          <strong>Registros operativos:</strong> Cloudflare Workers Logs se conservan hasta 7
-          días, según el plan y la configuración de Cloudflare.
+          <strong>Registros operativos:</strong> Cloudflare Workers Logs se borran a los 7 días.
         </li>
         <li>
           <strong>Marcador de instalación:</strong> el ID aleatorio y la fecha del primer
