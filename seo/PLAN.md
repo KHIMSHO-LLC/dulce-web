@@ -91,6 +91,8 @@ questions around them. Being the best answer means the product actually does it 
       Island and onboarding; French/Italian; unsupported languages fall back to English.
 - [x] 2026-10-23: Article `night-lows` (hipoglucemia nocturna / nächtliche Unterzuckerung), 5 languages, sources.
 - [x] 2026-10-24: Article `libreview` (what LibreView is, login, practice ID, vs LibreLinkUp), 5 languages, sources.
+- [x] 2026-10-30: `libreview` reworked for login intent (609 impressions, 0 clicks in GSC): login-first titles,
+  descriptions and intro, "can't log in" and "is there an app" sections, 2 more FAQs.
 - [x] 2026-10-28: Article `blood-sugar-levels` (blutzuckerwerte tabelle / valores normales de glucosa), 5 languages,
       ADA 2026 + WHO sources.
 - [x] 2026-10-24: Removed the false "rings on silent" claim (no critical-alerts entitlement): `alerts` (title,

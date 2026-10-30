@@ -143,3 +143,14 @@ Each daily run appends one entry: date, what was published or improved, target q
   `check:crawl` (155 pages, 172 internal links/images; all 200, self-canonical, one H1, no linked redirects) passed.
   The default Turbopack build stalled in this environment; webpack completed successfully. The localhost preview
   required binding to `localhost` for default-locale rewrites.
+
+## 2026-10-30 (daily run, Mac)
+
+- Search Console (gum, 2026-09-30 to 2026-10-28): 1,054 impressions over 500 query/page rows. The `libreview`
+  article takes 609 of them (58%) with **0 clicks**: it 372 impr at avg position 7.2 ("libreview", "libre view",
+  "libreview accedi", misspellings), es 105 (pos 8.9), fr 64 (pos 12.4, "libreview se connecter / connexion / mon
+  compte"), en 50 (pos 9, "libreview login"), de 18. Searchers want to log in; the snippet answers "what it is".
+- `npm run seo:gaps`: ~1,500-1,750 uncovered queries per language; LibreView leftovers are "libreview app",
+  "libreview download". No new topic beats a page that already ranks top-10 for a 10K-100K keyword with 0% CTR.
+- Decision: **improve `libreview`** instead of a new article: login-first titles/descriptions, a "can't log in"
+  section and a short "is there a LibreView app / how to download reports" answer, only with facts I can source.
