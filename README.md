@@ -1,6 +1,6 @@
 # dulce-web
 
-Marketing website for [Dulce](https://dulceglucosa.com) — the Spanish-first CGM companion app.
+Marketing website for [Dulce](https://dulceglucosa.com) — the CGM companion app.
 
 Built with **Next.js 16** (App Router) + **next-intl** (es / en / de / fr / it) + **Supabase** + **Tailwind 4**. Deployed to Vercel.
 

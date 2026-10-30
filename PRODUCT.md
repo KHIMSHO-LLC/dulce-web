@@ -8,7 +8,7 @@ web
 
 ## Users
 
-Spanish-speaking people living with type 1 diabetes who wear a continuous glucose monitor (FreeStyle Libre today) and want to see their glucose without opening an app. Also the people around them: parents of children with T1D, partners and family who follow someone's glucose from their own iPhone. Visitors arrive on a laptop or phone, often from search or a shared invite link, and leave by installing the iPhone app.
+People anywhere in the world living with type 1 diabetes who wear a continuous glucose monitor (FreeStyle Libre or Dexcom) and want to see their glucose without opening an app. Dulce is not limited to any country or language group. Also the people around them: parents of children with T1D, partners and family who follow someone's glucose from their own iPhone. Visitors arrive on a laptop or phone, often from search or a shared invite link, and leave by installing the iPhone app.
 
 ## Product Purpose
 
@@ -16,7 +16,7 @@ dulceglucosa.com is the single landing page for Dulce, a free iOS app (iPhone + 
 
 ## Positioning
 
-Made by someone who lives with T1D, built Spanish-first for the Spanish-speaking T1D community. The app began as the founder's personal fix (the number on the lock screen instead of unlocking and waiting on a spinner) and grew into family following. The mechanism: glucose is pushed to every Apple surface live, so nobody has to open an app to know the number.
+Made in Spain by someone who lives with T1D, for people with T1D wherever they live. Spanish is the site's default language, not the target audience: never describe Dulce as being for Spanish speakers, Spain or any one region. The app began as the founder's personal fix (the number on the lock screen instead of unlocking and waiting on a spinner) and grew into family following. The mechanism: glucose is pushed to every Apple surface live, so nobody has to open an app to know the number.
 
 ## Operating Context
 
@@ -28,8 +28,9 @@ Made by someone who lives with T1D, built Spanish-first for the Spanish-speaking
 ## Capabilities and Constraints
 
 - Live today: FreeStyle Libre 2 and 3 via LibreLinkUp, Apple Health (read-only), Apple Watch app with complications, Lock Screen Live Activity and Dynamic Island, home-screen widgets, low/high alerts with custom thresholds, quiet hours and a stronger alarm for very low glucose, logbook (carbs, insulin, glucose, quick slider), trends over 7/14/30/90 days (time in range, average, GMI), followers by invite link with nudges and a one-tap "I'm OK" reply, revocable anytime.
-- Coming, not live: Dexcom, Nightscout, Android (waitlist only).
-- The app UI is available in Spanish and English (confirmed by the user, 2026-10-12). The site is Spanish at `/` and English at `/en`.
+- Live since 1.0.4 (2026-10-27): Dexcom G6, G7 and ONE+ via Dexcom Share.
+- Coming, not live: Nightscout, Android (waitlist only).
+- The app UI is available in Spanish, English, German, French and Italian. The site is Spanish at `/` and English, German, French and Italian at `/en`, `/de`, `/fr`, `/it`.
 - Pricing: free download; Dulce Pro (Apple Watch, family sharing and more) with a 14-day free trial. Do not state Pro prices on the site.
 - Requires iPhone with iOS 17 or later; Dynamic Island needs iPhone 14 Pro or later.
 - Not a medical device. It does not diagnose, treat or replace the CGM's own alarms or the care team's judgment.
@@ -54,7 +55,7 @@ Made by someone who lives with T1D, built Spanish-first for the Spanish-speaking
 
 1. Glanceable first: the value is knowing the number without opening anything.
 2. Health data is serious: calm and exact, no hype about lows or highs, no claims the product cannot back.
-3. Spanish-first and peer-built: speak as someone who lives with T1D, not as a clinic.
+3. For everyone, peer-built: speak as someone who lives with T1D, not as a clinic, to readers in any country.
 4. Family is a user too: followers and caregivers get first-class space.
 5. Honest about what Dulce is: a companion display and logging tool, not a medical device.
 
