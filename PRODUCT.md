@@ -16,7 +16,7 @@ dulceglucosa.com is the single landing page for Dulce, a free iOS app (iPhone + 
 
 ## Positioning
 
-Made in Spain by someone who lives with T1D, for people with T1D wherever they live. Spanish is the site's default language, not the target audience: never describe Dulce as being for Spanish speakers, Spain or any one region. The app began as the founder's personal fix (the number on the lock screen instead of unlocking and waiting on a spinner) and grew into family following. The mechanism: glucose is pushed to every Apple surface live, so nobody has to open an app to know the number.
+Made by someone who lives with T1D, for people with T1D wherever they live. Never state where the business or founder is based (no "Made in Spain", no country in legal or marketing copy). Spanish is the site's default language, not the target audience: never describe Dulce as being for Spanish speakers, Spain or any one region. The app began as the founder's personal fix (the number on the lock screen instead of unlocking and waiting on a spinner) and grew into family following. The mechanism: glucose is pushed to every Apple surface live, so nobody has to open an app to know the number.
 
 ## Operating Context
 

@@ -38,7 +38,7 @@ export function GET() {
   const others = locales.filter((l) => l !== "en");
   const body = `# Dulce
 
-> Dulce is an iPhone and Apple Watch app that shows real-time glucose from FreeStyle Libre 2 and Libre 3 (via LibreLinkUp) and Dexcom G6, G7 and ONE+ (via Dexcom Share) where people already look: the Lock Screen (Live Activity), Dynamic Island, widgets, StandBy and a native Apple Watch app, with custom low/high alerts and real-time family sharing. Made in Spain by a founder who lives with type 1 diabetes, for people with diabetes anywhere in the world. Available in Spanish, English, German, French and Italian. Free download; Dulce Pro adds the Live Activity updated every minute, the Apple Watch app, family sharing and more, with a 14-day free trial. Not a medical device.
+> Dulce is an iPhone and Apple Watch app that shows real-time glucose from FreeStyle Libre 2 and Libre 3 (via LibreLinkUp) and Dexcom G6, G7 and ONE+ (via Dexcom Share) where people already look: the Lock Screen (Live Activity), Dynamic Island, widgets, StandBy and a native Apple Watch app, with custom low/high alerts and real-time family sharing. Made by a founder who lives with type 1 diabetes, for people with diabetes anywhere in the world. Available in Spanish, English, German, French and Italian. Free download; Dulce Pro adds the Live Activity updated every minute, the Apple Watch app, family sharing and more, with a 14-day free trial. Not a medical device.
 
 Also known as: "Dulce glucosa", "Dulce: Glucosa de un vistazo" (Spanish App Store name), "Dulce: Glucose at a Glance" (English), "Dulce: Blutzucker im Blick" (German), "Dulce : Glycémie en direct" (French), "Dulce: Glicemia sott'occhio" (Italian). Website: dulceglucosa.com.
 

@@ -207,10 +207,10 @@ export function TermsEs() {
 
       <h2 id="law">17. Ley aplicable y jurisdicción</h2>
       <p>
-        Estos términos se rigen por la legislación española y la normativa de la Unión
-        Europea aplicable. Para consumidores con residencia habitual en la UE, serán
-        competentes los tribunales de su lugar de residencia. Para el resto, los de la ciudad
-        de residencia del operador del Servicio en España.
+        Estos términos se rigen por la legislación del país en el que está establecido el
+        operador del Servicio. Si eres consumidor, esto no te priva de la protección de las
+        normas imperativas del país en el que resides habitualmente, y puedes acudir a los
+        tribunales de tu lugar de residencia.
       </p>
 
       <h2 id="contact">18. Contacto</h2>

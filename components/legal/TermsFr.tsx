@@ -212,10 +212,10 @@ export function TermsFr() {
 
       <h2 id="law">17. Droit applicable et juridiction</h2>
       <p>
-        Ces conditions sont régies par le droit espagnol et la réglementation applicable de
-        l&apos;Union européenne. Pour les consommateurs ayant leur résidence habituelle dans
-        l&apos;UE, les tribunaux de leur lieu de résidence sont compétents. Pour les autres, ceux
-        de la ville de résidence de l&apos;exploitant du Service en Espagne.
+        Ces conditions sont régies par le droit du pays où l&apos;exploitant du Service est
+        établi. Si tu es consommateur, cela ne te prive pas de la protection des règles
+        impératives du pays où tu as ta résidence habituelle, et tu peux saisir les tribunaux
+        de ton lieu de résidence.
       </p>
 
       <h2 id="contact">18. Contact</h2>

@@ -204,10 +204,10 @@ export function TermsIt() {
 
       <h2 id="law">17. Legge applicabile e foro competente</h2>
       <p>
-        Questi termini sono regolati dalla legge spagnola e dalla normativa applicabile
-        dell&apos;Unione europea. Per i consumatori con residenza abituale nell&apos;UE è
-        competente il foro del loro luogo di residenza. Per gli altri, i tribunali della città di
-        residenza del gestore del Servizio in Spagna.
+        Questi termini sono regolati dalla legge del paese in cui è stabilito il gestore del
+        Servizio. Se sei un consumatore, ciò non ti priva della tutela delle norme imperative
+        del paese in cui risiedi abitualmente e puoi rivolgerti ai tribunali del tuo luogo di
+        residenza.
       </p>
 
       <h2 id="contact">18. Contatti</h2>

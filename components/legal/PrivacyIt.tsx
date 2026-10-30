@@ -12,8 +12,8 @@ export function PrivacyIt() {
 
       <h2 id="controller">1. Titolare del trattamento</h2>
       <p>
-        Il titolare del trattamento è <strong>Giorgio Khimshiashvili</strong>, ditta individuale
-        con sede in Spagna. Per qualsiasi domanda sui tuoi dati scrivici a{" "}
+        Il titolare del trattamento è <strong>Giorgio Khimshiashvili</strong>, ditta
+        individuale. Per qualsiasi domanda sui tuoi dati scrivici a{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
 

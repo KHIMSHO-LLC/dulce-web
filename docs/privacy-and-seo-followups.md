@@ -6,10 +6,11 @@ Prepared 2026-10-29 after the localized legal-page review.
 
 Please confirm these facts and decisions before treating the legal pages as final:
 
-1. **Controller identity and address.** The website describes Dulce as Spain-based. The public
-   App Store listing has shown a Georgia trader address; confirm the legal operator, registered
-   address, and whether the listing is current in App Store Connect. Update both surfaces from
-   the verified record. [Public App Store listing](https://apps.apple.com/us/app/dulce-glucose-at-a-glance/id6770694596)
+1. **Controller identity and address.** Since 2026-10-30 the legal pages name the controller
+   (Giorgio Khimshiashvili, sole trader) without a country, and the terms use the law of the
+   operator's place of establishment. Confirm this satisfies GDPR Art. 13 (identity and contact
+   details) and whether an EU representative under Art. 27 is needed for a controller
+   established outside the EU. [Public App Store listing](https://apps.apple.com/us/app/dulce-glucose-at-a-glance/id6770694596)
 2. **Health-data consent.** The app links to the Privacy Policy during onboarding, but the
    current flow has no separate health-data consent checkbox. Confirm the applicable legal basis
    for each health-data operation and whether the interface needs a distinct, explicit,

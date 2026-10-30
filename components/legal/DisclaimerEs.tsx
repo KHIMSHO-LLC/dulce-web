@@ -77,7 +77,7 @@ export function DisclaimerEs() {
       <p>
         Dulce no atiende emergencias. Si sospechas una hipoglucemia o hiperglucemia grave, o
         ante cualquier urgencia médica, sigue tu plan de tratamiento y contacta con los
-        servicios de emergencia (<strong>112</strong> en España) o con tu profesional sanitario.
+        servicios de emergencia (<strong>112</strong> en la UE, <strong>911</strong> en EE. UU.) o con tu profesional sanitario.
       </p>
 
       <h2 id="equipo-sanitario">8. Consulta a tu equipo sanitario</h2>

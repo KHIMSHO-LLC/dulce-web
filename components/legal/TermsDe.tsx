@@ -210,10 +210,10 @@ export function TermsDe() {
 
       <h2 id="law">17. Anwendbares Recht und Gerichtsstand</h2>
       <p>
-        Für diese Bedingungen gelten spanisches Recht und die anwendbaren Vorschriften der
-        Europäischen Union. Für Verbraucher mit gewöhnlichem Aufenthalt in der EU sind die
-        Gerichte ihres Wohnorts zuständig. Für alle anderen die Gerichte am Wohnsitz des Betreibers
-        des Dienstes in Spanien.
+        Für diese Bedingungen gilt das Recht des Landes, in dem der Betreiber des Dienstes
+        niedergelassen ist. Als Verbraucher behältst du den Schutz der zwingenden Vorschriften
+        des Landes, in dem du deinen gewöhnlichen Aufenthalt hast, und kannst die Gerichte an
+        deinem Wohnort anrufen.
       </p>
 
       <h2 id="contact">18. Kontakt</h2>

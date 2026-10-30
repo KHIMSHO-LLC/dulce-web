@@ -13,7 +13,7 @@ export function PrivacyFr() {
       <h2 id="controller">1. Responsable du traitement</h2>
       <p>
         Le responsable du traitement est <strong>Giorgio Khimshiashvili</strong>, entrepreneur
-        individuel établi en Espagne. Pour toute question sur tes données, écris-nous à{" "}
+        individuel. Pour toute question sur tes données, écris-nous à{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
 

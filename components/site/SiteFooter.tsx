@@ -116,7 +116,7 @@ export async function SiteFooter() {
             <p>{t("trademarks")}</p>
           </div>
           <p className="md:text-right">
-            {t("copyright", { year })} · {t("madeIn")}
+            {t("copyright", { year })}
           </p>
         </div>
       </div>

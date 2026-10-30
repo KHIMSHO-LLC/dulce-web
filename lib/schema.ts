@@ -51,7 +51,6 @@ export function siteSchema(locale: AppLocale, description: string) {
         // Square PNG, 2731 px (Google needs ≥112 px).
         logo: { "@type": "ImageObject", url: `${SITE_URL}/dulce-logo.png`, width: 2731, height: 2731 },
         sameAs: [APP_STORE_URL, ...SOCIAL.map((s) => s.url)],
-        foundingLocation: { "@type": "Place", address: { "@type": "PostalAddress", addressCountry: "ES" } },
         founder: authorPerson("giorgi", locale),
       },
       {

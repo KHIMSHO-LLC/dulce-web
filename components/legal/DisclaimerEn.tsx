@@ -75,7 +75,7 @@ export function DisclaimerEn() {
       <p>
         Dulce does not handle emergencies. If you suspect a severe low or high, or face any
         medical emergency, follow your treatment plan and contact emergency services
-        (<strong>112</strong> in Spain, <strong>911</strong> in the U.S.) or your healthcare
+        (<strong>112</strong> in the EU, <strong>911</strong> in the U.S.) or your healthcare
         professional.
       </p>
 

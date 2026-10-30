@@ -13,7 +13,7 @@ export function PrivacyEn() {
       <h2 id="controller">1. Data controller</h2>
       <p>
         The data controller is <strong>Giorgio Khimshiashvili</strong>, operating as a sole
-        trader, based in Spain. You can contact us about anything related to your data at{" "}
+        trader. You can contact us about anything related to your data at{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
 

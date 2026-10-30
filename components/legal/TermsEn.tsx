@@ -201,10 +201,10 @@ export function TermsEn() {
 
       <h2 id="law">17. Governing law and jurisdiction</h2>
       <p>
-        These terms are governed by the laws of Spain and applicable European Union
-        regulations. For consumers with habitual residence in the EU, the courts of their
-        place of residence shall have jurisdiction. For others, the courts of the city of
-        the Service operator’s residence in Spain.
+        These terms are governed by the laws of the country where the Service operator is
+        established. If you are a consumer, this does not take away the protection of the
+        mandatory rules of the country where you habitually live, and you may bring
+        proceedings in the courts of your place of residence.
       </p>
 
       <h2 id="contact">18. Contact</h2>
