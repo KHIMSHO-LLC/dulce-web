@@ -70,12 +70,38 @@ export function PrivacyEn() {
           notes. Stored locally.
         </li>
         <li>
-          <strong>Apple Health data</strong> in read-only mode, if you grant permission.
+          <strong>Apple Health data</strong> (iPhone) or <strong>Health Connect data</strong>{" "}
+          (Android) in read-only mode, if you grant permission. See 2.2.1.
         </li>
         <li>
           <strong>Preferences</strong>: units, target range, language, theme, alert settings.
         </li>
       </ul>
+
+      <h3>2.2.1 Apple Health and Health Connect</h3>
+      <p>
+        If you turn it on in Settings, Dulce reads blood glucose and carbohydrate records (on
+        iPhone also insulin) from Apple Health or, on Android, from Health Connect. You choose
+        each type, and you can turn access off at any time in Dulce&apos;s settings or in the
+        system&apos;s health settings. Dulce only reads: it never writes to Apple Health or
+        Health Connect.
+      </p>
+      <p>
+        We use this data only to show it in your chart and logbook. It is stored on your device,
+        it is not sent to the Dulce relay or to us, and we never sell it, share it, or use it for
+        advertising.
+      </p>
+      <p>
+        Dulce&apos;s use of information received from Health Connect will adhere to the{" "}
+        <a
+          href="https://support.google.com/googleplay/android-developer/answer/12991134"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Health Connect Permissions policy
+        </a>
+        , including the Limited Use requirements.
+      </p>
 
       <h3>2.3 The Dulce relay (real-time features)</h3>
       <p>
@@ -196,8 +222,8 @@ export function PrivacyEn() {
       </p>
       <ul>
         <li>
-          Your long-term glucose history, logbook and Apple Health data are processed and stored
-          on your device. Recent readings are also processed by the relay as described above.
+          Your long-term glucose history, logbook and Apple Health or Health Connect data are
+          processed and stored on your device. Recent readings are also processed by the relay as described above.
         </li>
         <li>
           When your CGM is connected, the relay processes recent readings needed for the
@@ -269,6 +295,10 @@ export function PrivacyEn() {
         </li>
         <li>
           <strong>Google Firebase</strong> — push notifications on Android.
+        </li>
+        <li>
+          <strong>Google Health Connect</strong> — the health data store on Android, read by Dulce
+          on your device only.
         </li>
         <li>
           <strong>Google Analytics 4 (Google Ireland Ltd.)</strong> — website analytics when
