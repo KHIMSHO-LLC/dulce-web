@@ -10,6 +10,12 @@ today: stop and do nothing.
 Read first: content/README.md (rules, components), content/articles.ts (what exists), seo/log.md (what past runs did),
 seo/keyword-volumes.md (real monthly search volumes; prefer high-volume topics nobody covers yet).
 
+## 0. Queued work first
+
+Open seo/queue.md. If it has an unchecked item (`- [ ]`), today's run does the TOP unchecked item instead of
+picking a topic in step 1 (steps 2 and 4 still apply: research, check, build, publish, indexnow, log). When it is
+live, tick it (`- [x] ... (done YYYY-MM-DD, <commit>)`) in the same commit as the log entry. One item per run.
+
 ## 1. Pick the topic (data, not guesses)
 
 a. Search Console (read-only, already authorized on this Mac). Last 28 days of queries per page:
@@ -56,5 +62,5 @@ lib/tools.ts; `npm run check:content` fails or warns without them.
 5. Append to seo/log.md: date, article id, target queries, Search Console numbers used (if any), what you
    checked. Commit and push that too.
 
-Never: touch files outside content/, public/guides/, seo/ unless the build requires it; force-push; change
+Never: touch files outside content/, public/guides/, seo/ unless the build requires it or a queue item names them; force-push; change
 published slugs; publish without a passing build.
