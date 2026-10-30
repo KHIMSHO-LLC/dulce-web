@@ -229,6 +229,23 @@ export interface LedgerRow {
   rn?: number;
 }
 
+/** One "why did you cancel?" answer (relay routes/cancelFeedback.ts), one per device. */
+export interface CancelAnswer {
+  /** App reason id, or a RevenueCat Customer Center survey option id. */
+  reason: string;
+  /** 'app' = Dulce's own sheet; 'customer_center' = RevenueCat's cancel survey. */
+  source: "app" | "customer_center";
+  note: string | null;
+  /** TRIAL / NORMAL / INTRO / PREPAID */
+  period: string | null;
+  product: string | null;
+  store: string | null;
+  locale: string | null;
+  at: number;
+  /** First 8 chars of the device id. */
+  device: string;
+}
+
 /** A relay-proxied RevenueCat answer: the RC body as-is, or why it failed. */
 export type RcResult<T = unknown> =
   | { ok: true; data: T; fetchedAt: number }
@@ -314,6 +331,11 @@ export async function fetchUsage(adminKey: string): Promise<UsageResponse> {
 export async function fetchLedger(adminKey: string, days: number): Promise<LedgerRow[]> {
   const data = await request<{ rows: LedgerRow[] }>(adminKey, `/ref/admin/ledger?days=${days}`);
   return data.rows;
+}
+
+export async function fetchCancelFeedback(adminKey: string): Promise<CancelAnswer[]> {
+  const data = await request<{ answers: CancelAnswer[] }>(adminKey, "/ref/admin/cancel-feedback");
+  return data.answers;
 }
 
 export async function fetchRcOverview(
