@@ -37,8 +37,8 @@
     "label": "Dulce wird geladen"
   },
   "home": {
-    "title": "FreeStyle Libre Glukose auf Apple Watch und Sperrbildschirm",
-    "description": "Dulce bringt deine FreeStyle Libre Glukose auf den Sperrbildschirm, die Dynamic Island, die Apple Watch und das Handy deiner Familie. Kostenlos im App Store.",
+    "title": "Libre und Dexcom Glukose auf Apple Watch und Sperrbildschirm",
+    "description": "Dulce bringt deine FreeStyle Libre oder Dexcom Glukose auf Sperrbildschirm, Dynamic Island, Apple Watch und das Handy deiner Familie. Kostenlos im App Store.",
     "hero": {
       "line1": "Dein Zucker,",
       "line2": "immer im Blick.",
@@ -311,7 +311,7 @@
     "noCode": "In diesem Link wurde kein Einladungscode gefunden. Bitte um eine neue Einladung."
   },
   "setup": {
-    "title": "LibreLink oder LibreLinkUp: Welches Konto nutzt Dulce?",
+    "title": "LibreLinkUp Login oder LibreLink: Welches Konto nutzt Dulce?",
     "description": "Dulce nutzt dein LibreLinkUp-Konto, nicht LibreLink. Der Unterschied und wie du das Teilen aktivierst, damit deine Werte in Dulce ankommen.",
     "breadcrumbHome": "Start",
     "hero": {

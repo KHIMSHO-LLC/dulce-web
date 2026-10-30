@@ -171,3 +171,22 @@ Each daily run appends one entry: date, what was published or improved, target q
   and localized Abbott labels (couldn't read the JS sign-in page), whether a clinic can reset the account.
 - `npm run check:content` (17 articles, 0 errors, 0 warnings) and `npm run build` passed. Deployed (522f65a, it page
   verified live), `npm run indexnow`: 155 URLs → 200. Next run: compare libreview CTR from ~2026-11-10.
+
+## 2026-10-30 (owner-requested SEO/AEO hour, Mac)
+
+- Search Console (gum, 2026-10-01 to 10-28, page level): 124 pages, 55 clicks, 4,214 impressions. LibreView pages
+  1,760 impr / 0 clicks (reworked earlier today, compare from ~11-10). Converter en 191 impr pos 33.8, es 174 pos 30.4;
+  A1C calculator en 78 impr pos 45.7 ("a1c calculator" 55, "gmi calculator" 57). /en/setup: "librelinkup login" pos 9.2,
+  "librelink vs librelinkup" 8.3. Brand: "dulci app" home pos 11; "dulce app" lands on /android and /legal/terminos.
+- Keyword discovery (Google autocomplete, en/es/de/fr/it): chart intent is big ("a1c chart", "a1c to average glucose
+  chart", "mg/dl to mmol/l chart", "tabla hemoglobina glicosilada", "hba1c-wert tabelle", "emoglobina glicata
+  conversione"); product-fit questions: "is there a libre 3 apple watch app", "libre 3 plus apple watch", "librelinkup
+  apple watch / smartwatch / auf apple watch", "librelinkup alternative", "librelinkup no recent data / keine aktuellen
+  daten", Dexcom Apple Watch complication/widget family. Not product fit (skipped): librelinkup pc/web, sensor prices,
+  "alarms unavailable".
+- Shipped: see PLAN.md 2026-10-30 calculators entry. Queue: converter job done; two new jobs (Dexcom watch/widget guide,
+  Libre 3 Plus) added with evidence.
+- Baseline to compare ~2026-11-20: converter head terms pos 30-75, A1C calculator pos 45-57, /en/setup "librelinkup
+  login" 9.2, apple-watch en 34 impr pos 8.0.
+- Checks: check:content (17 articles, 0/0), tsc, build (webpack), check:jsonld and check:crawl (155 pages) on a local
+  production server, 390 px screenshots of the converter and the German HbA1c page.

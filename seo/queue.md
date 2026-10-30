@@ -2,7 +2,7 @@
 
 Owner-requested jobs. The daily run does the top unchecked item, one per run, then ticks it here.
 
-- [ ] **Glucose converter: full conversion table + cholesterol note** (requested by Giorgi 2026-10-30)
+- [x] **Glucose converter: full conversion table + cholesterol note** (requested by Giorgi 2026-10-30; done 2026-10-30, see log)
   - Why (Search Console, Oct 2026): the converter ranks top 10 for exact-value queries ("160 mg/dl to mmol/l" 5,
     "192 mg dl to mmol l" 2, "245 mg/dl to mmol/l" 2, "6 mmol/l to mg/dl" 4.7, "13 mmol/l to mg/dl" 4) but 50-75 for
     the head terms ("mg/dl to mmol/l"). A complete table lets one page answer every value. People also land on it
@@ -25,3 +25,12 @@ Owner-requested jobs. The daily run does the top unchecked item, one per run, th
   - Checks: `npm run check:content`, `npm run build`, `npm run check:jsonld`; view the en page at phone width.
   - After deploy: `npm run indexnow`; log in seo/log.md with the GSC numbers above as the baseline
     (compare head-term position and exact-value clicks ~3 weeks later).
+
+- [ ] **Dexcom on Apple Watch / Dexcom widget article** (found 2026-10-30, Google autocomplete): "dexcom apple watch
+  complication / widget / without phone", "dexcom follow apple watch complication", "is there a dexcom widget", "how to
+  add dexcom widget", "dexcom g7 apple watch app not working". The `dexcom` guide covers it in one FAQ only. A focused
+  guide (5 languages) on Dexcom complications + iPhone widgets with Dulce, honest about what needs Pro and the 5-minute
+  cadence. Check what Dexcom's own apps offer on the watch from Dexcom's docs before comparing.
+- [ ] **"Libre 3 Plus app for iPhone" section or article** (autocomplete es/de/fr/it/en): "libre 3 plus app for iphone",
+  "libre 3 plus apple watch", "libre 3 plus compatible phones". Start by adding a 3 Plus section to `lock-screen` and
+  `widgets`; only a new article if Search Console shows impressions for these queries.

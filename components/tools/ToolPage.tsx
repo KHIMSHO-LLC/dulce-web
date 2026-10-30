@@ -11,6 +11,7 @@ import { TOOL_COPY, toolByPath, type ToolPath } from "@/lib/tools";
 import { getArticle } from "@/content/articles";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { Byline } from "@/components/article/Byline";
+import { A1cTable, GlucoseTable } from "@/components/tools/ConversionTables";
 
 /**
  * Shared shell of a calculator page: title, the calculator, then the
@@ -39,6 +40,8 @@ export async function ToolPage({
     ArticleLink: (p: { to: string; children: ReactNode }) => <ArticleLink locale={locale} {...p} />,
     PageLink: (p: Parameters<typeof PageLink>[0]) => <PageLink {...p} locale={locale} />,
     Callout,
+    GlucoseTable: (p: { from: "mgdl" | "mmol" }) => <GlucoseTable locale={locale} {...p} />,
+    A1cTable: () => <A1cTable locale={locale} />,
   };
 
   return (

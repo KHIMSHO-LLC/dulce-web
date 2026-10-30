@@ -43,46 +43,46 @@ type ToolCopy = { title: string; description: string };
 export const TOOL_COPY: Record<ToolPath, Record<AppLocale, ToolCopy>> = {
   "/tools/glucose-converter": {
     es: {
-      title: "Conversor de glucosa: mg/dL a mmol/L",
-      description: "Convierte tu glucosa de mg/dL a mmol/L y al revés al instante, con una tabla de valores habituales y los rangos objetivo.",
+      title: "Conversor de glucosa mg/dL a mmol/L, con tabla",
+      description: "Convierte la glucosa de mg/dL a mmol/L y al revés al instante. Tabla completa de 40 a 400 mg/dL y de 2 a 25 mmol/L, con los rangos objetivo.",
     },
     en: {
-      title: "Blood sugar converter: mg/dL to mmol/L",
-      description: "Convert your glucose from mg/dL to mmol/L and back instantly, with a table of common values and the target ranges.",
+      title: "mg/dL to mmol/L converter and chart for blood sugar",
+      description: "Convert blood sugar from mg/dL to mmol/L and back instantly. Full chart from 40 to 400 mg/dL and 2 to 25 mmol/L, with the target ranges.",
     },
     de: {
-      title: "Blutzucker-Umrechner: mg/dL in mmol/L",
-      description: "Rechne deinen Blutzucker sofort von mg/dL in mmol/L um und zurück, mit einer Tabelle üblicher Werte und den Zielbereichen.",
+      title: "Blutzucker umrechnen: mg/dL in mmol/L, mit Tabelle",
+      description: "Rechne Blutzucker sofort von mg/dL in mmol/L um und zurück. Komplette Tabelle von 40 bis 400 mg/dL und 2 bis 25 mmol/L, mit Zielbereichen.",
     },
     fr: {
-      title: "Convertisseur de glycémie : mg/dL en mmol/L",
-      description: "Convertis ta glycémie de mg/dL en mmol/L et inversement en un instant, avec un tableau des valeurs courantes et les plages cibles.",
+      title: "Convertisseur glycémie mg/dL en mmol/L, avec tableau",
+      description: "Convertis ta glycémie de mg/dL en mmol/L et inversement. Tableau complet de 40 à 400 mg/dL et de 2 à 25 mmol/L, avec les plages cibles.",
     },
     it: {
-      title: "Convertitore di glicemia: da mg/dL a mmol/L",
-      description: "Converti la tua glicemia da mg/dL a mmol/L e viceversa all'istante, con una tabella dei valori più comuni e gli intervalli target.",
+      title: "Convertitore glicemia da mg/dL a mmol/L, con tabella",
+      description: "Converti la glicemia da mg/dL a mmol/L e viceversa all'istante. Tabella completa da 40 a 400 mg/dL e da 2 a 25 mmol/L, con gli intervalli target.",
     },
   },
   "/tools/a1c-calculator": {
     es: {
-      title: "Calculadora de HbA1c y glucosa media (eAG y GMI)",
-      description: "Calcula la glucosa media estimada a partir de tu HbA1c, o una HbA1c estimada y el GMI a partir de la glucosa media de tu sensor.",
+      title: "Calculadora y tabla de hemoglobina glicosilada (HbA1c)",
+      description: "Pasa tu HbA1c a glucosa media estimada y a mmol/mol, o calcula el GMI con la media de tu sensor. Tabla completa de HbA1c del 4 % al 14 %.",
     },
     en: {
-      title: "A1C calculator: average glucose, eAG and GMI",
-      description: "Work out your estimated average glucose from your A1C, or an estimated A1C and GMI from your sensor's average glucose.",
+      title: "A1C calculator and chart: A1C to average glucose, GMI",
+      description: "Convert A1C to estimated average glucose and mmol/mol, or get GMI from your sensor average. Full A1C chart from 4% to 14%.",
     },
     de: {
-      title: "HbA1c-Rechner: durchschnittlicher Blutzucker, eAG und GMI",
-      description: "Berechne aus deinem HbA1c den geschätzten durchschnittlichen Blutzucker oder aus dem Mittelwert deines Sensors einen geschätzten HbA1c und den GMI.",
+      title: "HbA1c-Rechner und HbA1c-Tabelle: Ø Blutzucker und GMI",
+      description: "Rechne HbA1c in durchschnittlichen Blutzucker und mmol/mol um oder den GMI aus deinem Sensor-Mittelwert. HbA1c-Tabelle von 4 bis 14 %.",
     },
     fr: {
-      title: "Calculateur HbA1c : glycémie moyenne, eAG et GMI",
-      description: "Calcule ta glycémie moyenne estimée à partir de ton HbA1c, ou une HbA1c estimée et le GMI à partir de la glycémie moyenne de ton capteur.",
+      title: "Calculateur et tableau HbA1c : glycémie moyenne, GMI",
+      description: "Convertis ton HbA1c en glycémie moyenne estimée et en mmol/mol, ou calcule le GMI avec la moyenne de ton capteur. Tableau HbA1c de 4 à 14 %.",
     },
     it: {
-      title: "Calcolatore HbA1c: glicemia media, eAG e GMI",
-      description: "Calcola la glicemia media stimata dalla tua HbA1c, oppure una HbA1c stimata e il GMI dalla glicemia media del tuo sensore.",
+      title: "Calcolatore e tabella emoglobina glicata (HbA1c)",
+      description: "Converti la HbA1c in glicemia media stimata e in mmol/mol, o calcola il GMI dalla media del sensore. Tabella HbA1c completa dal 4% al 14%.",
     },
   },
   "/tools/sensor-end-date": {
@@ -112,9 +112,42 @@ export const TOOL_COPY: Record<ToolPath, Record<AppLocale, ToolCopy>> = {
 /** Locale-aware number formatting with a fixed number of decimals. */
 export function fmt(value: number, decimals: number, locale: AppLocale): string {
   if (!Number.isFinite(value)) return "–";
-  const s = value.toFixed(decimals);
+  // Round half up on the decimal value: 125.5 is stored as 125.4999…, and toFixed alone gives 125.
+  const f = 10 ** decimals;
+  const s = (Math.round(value * f + 1e-9) / f).toFixed(decimals);
   return locale === "en" ? s : s.replace(".", ",");
 }
+
+/** Ascending, de-duplicated range (in tenths, so no float drift) plus extra values. */
+function chartRange(from: number, to: number, step: number, extra: number[] = []): number[] {
+  const out = new Set<number>();
+  for (let v = Math.round(from * 10); v <= Math.round(to * 10); v += Math.round(step * 10)) out.add(v / 10);
+  extra.forEach((v) => out.add(v));
+  return [...out].sort((a, b) => a - b);
+}
+
+/** Full glucose chart rows, formatted like the converter: mg/dL 40-400 (every 5) or mmol/L 2-25 (every 0.5). */
+export function glucoseChartRows(from: "mgdl" | "mmol", locale: AppLocale): [string, string][] {
+  return from === "mgdl"
+    ? chartRange(40, 400, 5, [54, 63, 126, 144, 162, 198]).map((v) => [fmt(v, 0, locale), fmt(toMmol(v), 1, locale)])
+    : chartRange(2, 25, 0.5, [3.9, 5.6, 7.8, 13.9]).map((v) => [fmt(v, 1, locale), fmt(toMgdl(v), 0, locale)]);
+}
+
+/** A1C chart rows (4-14 %, every 0.1 between 5 and 9): A1C %, IFCC mmol/mol, eAG mg/dL, eAG mmol/L. */
+export function a1cChartRows(locale: AppLocale): [string, string, string, string][] {
+  return chartRange(4, 14, 0.5, chartRange(5, 9, 0.1)).map((v) => {
+    const eag = eagFromA1c(v);
+    return [fmt(v, 1, locale), fmt(ifccFromNgsp(v), 0, locale), fmt(eag, 0, locale), fmt(toMmol(eag), 1, locale)];
+  });
+}
+
+export const A1C_CHART_HEAD: Record<AppLocale, [string, string, string, string]> = {
+  es: ["HbA1c (%)", "IFCC (mmol/mol)", "Glucosa media (mg/dL)", "Glucosa media (mmol/L)"],
+  en: ["A1C (%)", "IFCC (mmol/mol)", "Average glucose (mg/dL)", "Average glucose (mmol/L)"],
+  de: ["HbA1c (%)", "IFCC (mmol/mol)", "Ø Blutzucker (mg/dL)", "Ø Blutzucker (mmol/L)"],
+  fr: ["HbA1c (%)", "IFCC (mmol/mol)", "Glycémie moyenne (mg/dL)", "Glycémie moyenne (mmol/L)"],
+  it: ["HbA1c (%)", "IFCC (mmol/mol)", "Glicemia media (mg/dL)", "Glicemia media (mmol/L)"],
+};
 
 /** Parses "5,5" or "5.5". */
 export function parseNum(input: string): number {
@@ -137,13 +170,13 @@ export const TOOLS: readonly Tool[] = [
   {
     path: "/tools/glucose-converter",
     name: "glucose-converter",
-    dateModified: "2026-10-28",
+    dateModified: "2026-10-30",
     guides: ["blood-sugar-levels", "alerts", "night-lows", "child-glucose", "family-sharing", "dexcom", "dexcom-follow-alternative", "glucose-apps-compared"],
   },
   {
     path: "/tools/a1c-calculator",
     name: "a1c-calculator",
-    dateModified: "2026-10-28",
+    dateModified: "2026-10-30",
     guides: ["blood-sugar-levels", "time-in-range", "trends", "logbook", "apple-health", "libreview"],
   },
   {

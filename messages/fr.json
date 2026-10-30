@@ -37,8 +37,8 @@
     "label": "Chargement de Dulce"
   },
   "home": {
-    "title": "glycémie FreeStyle Libre sur Apple Watch et écran verrouillé",
-    "description": "Dulce affiche ta glycémie FreeStyle Libre sur l'écran verrouillé, la Dynamic Island, l'Apple Watch et le téléphone de ta famille. Gratuit sur l'App Store.",
+    "title": "glycémie Libre et Dexcom sur Apple Watch et écran verrouillé",
+    "description": "Dulce affiche ta glycémie FreeStyle Libre ou Dexcom sur l'écran verrouillé, la Dynamic Island, l'Apple Watch et chez tes proches. Gratuit sur l'App Store.",
     "hero": {
       "line1": "Ta glycémie,",
       "line2": "toujours sous les yeux.",
@@ -311,7 +311,7 @@
     "noCode": "Aucun code d'invitation dans ce lien. Demande une nouvelle invitation."
   },
   "setup": {
-    "title": "LibreLink ou LibreLinkUp : quel compte Dulce utilise-t-il ?",
+    "title": "Connexion LibreLinkUp ou LibreLink : quel compte utilise Dulce ?",
     "description": "Dulce se connecte avec ton compte LibreLinkUp, pas LibreLink. Voici la différence, et comment activer le partage pour que tes mesures arrivent dans Dulce.",
     "hero": {
       "headline": "LibreLink ou LibreLinkUp : lequel utilise Dulce ?",

@@ -7,6 +7,10 @@ Divide the mg/dL value by **18**. To go the other way, multiply mmol/L by 18.
 
 The exact factor is 18.016, which comes from the molar mass of glucose (180.16 g/mol). Meters, sensors and the Dulce app round it to 18, so this converter uses 18 too and the numbers match what you see every day. At normal glucose levels the difference is never more than 0.1 mmol/L.
 
+<Callout type="warning">
+This converter is for **glucose only**. Cholesterol (total, LDL, HDL) and triglycerides use different factors: cholesterol mg/dL ÷ 38.67 = mmol/L, triglycerides mg/dL ÷ 88.57 = mmol/L. Using the glucose factor on a cholesterol result gives a wrong number.
+</Callout>
+
 ## Why there are two units
 
 It depends on where you live. The United States, Spain, most of Latin America, Germany, France and Italy use **mg/dL**. The UK, Ireland, Canada, Australia and the Nordic countries use **mmol/L**. If you read a British forum or study, you will almost certainly see mmol/L.
@@ -25,6 +29,18 @@ It depends on where you live. The United States, Spain, most of Latin America, G
 
 The 70 and 180 mg/dL (3.9 and 10.0 mmol/L) limits come from the <ArticleLink to="time-in-range">international consensus on time in range</ArticleLink>. Your care team may set different targets for you.
 
+## Full chart: mg/dL to mmol/L
+
+Every value from 40 to 400 mg/dL in steps of 5, rounded to one decimal, the same way the converter above and the Dulce app round.
+
+<GlucoseTable from="mgdl" />
+
+## Full chart: mmol/L to mg/dL
+
+From 2.0 to 25.0 mmol/L in steps of 0.5, rounded to whole mg/dL.
+
+<GlucoseTable from="mmol" />
+
 ## In Dulce you don't need to convert
 
 In **Settings → Glucose unit** you can choose mg/dL or mmol/L. The home screen, Lock Screen, Apple Watch and alerts all switch together.
@@ -35,3 +51,4 @@ In **Settings → Glucose unit** you can choose mg/dL or mmol/L. The home screen
 
 - Battelino T. et al. *Clinical Targets for Continuous Glucose Monitoring Data Interpretation*. Diabetes Care 2019;42:1593-1603. [doi.org/10.2337/dci19-0028](https://doi.org/10.2337/dci19-0028)
 - American Diabetes Association. *Standards of Care in Diabetes*. [professional.diabetes.org/standards-of-care](https://professional.diabetes.org/standards-of-care)
+- PubChem. *Cholesterol* (molar mass 386.7 g/mol, hence ÷ 38.67) and *Triolein* (885.4 g/mol, the reference triglyceride, hence ≈ ÷ 88.57). [pubchem.ncbi.nlm.nih.gov/compound/Cholesterol](https://pubchem.ncbi.nlm.nih.gov/compound/Cholesterol), [pubchem.ncbi.nlm.nih.gov/compound/Triolein](https://pubchem.ncbi.nlm.nih.gov/compound/Triolein)

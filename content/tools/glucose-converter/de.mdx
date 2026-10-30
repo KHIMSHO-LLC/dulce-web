@@ -7,6 +7,10 @@ Teile den Wert in mg/dL durch **18**. In die andere Richtung multiplizierst du m
 
 Der genaue Faktor ist 18,016, er ergibt sich aus der molaren Masse von Glukose (180,16 g/mol). Messgeräte, Sensoren und die Dulce-App runden auf 18, deshalb rechnet auch dieser Umrechner mit 18, damit die Zahlen zu dem passen, was du jeden Tag siehst. Bei üblichen Werten beträgt der Unterschied nie mehr als 0,1 mmol/L.
 
+<Callout type="warning">
+Dieser Umrechner gilt **nur für Glukose**. Cholesterin (gesamt, LDL, HDL) und Triglyceride haben andere Faktoren: Cholesterin mg/dL ÷ 38,67 = mmol/L, Triglyceride mg/dL ÷ 88,57 = mmol/L. Mit dem Glukose-Faktor kommt bei Cholesterin ein falscher Wert heraus.
+</Callout>
+
 ## Warum es zwei Einheiten gibt
 
 Das hängt vom Land ab. In Deutschland sind beide Einheiten verbreitet: Viele Praxen und Labore in den alten Bundesländern nutzen **mg/dL**, in den neuen Bundesländern ist **mmol/L** häufiger. Österreich und die Schweiz nutzen meist mg/dL bzw. mmol/L, Großbritannien und Skandinavien mmol/L. Dein Messgerät oder Sensor zeigt die Einheit, die bei der Einrichtung gewählt wurde.
@@ -25,6 +29,18 @@ Das hängt vom Land ab. In Deutschland sind beide Einheiten verbreitet: Viele Pr
 
 Die Grenzen von 70 und 180 mg/dL (3,9 und 10,0 mmol/L) stammen aus dem <ArticleLink to="time-in-range">internationalen Konsens zur Zeit im Zielbereich</ArticleLink>. Dein Behandlungsteam kann für dich andere Ziele festlegen.
 
+## Umrechnungstabelle: mg/dL in mmol/L
+
+Alle Werte von 40 bis 400 mg/dL in 5er-Schritten, auf eine Nachkommastelle gerundet, genau wie der Umrechner oben und die Dulce-App.
+
+<GlucoseTable from="mgdl" />
+
+## Umrechnungstabelle: mmol/L in mg/dL
+
+Von 2,0 bis 25,0 mmol/L in 0,5er-Schritten, auf ganze mg/dL gerundet.
+
+<GlucoseTable from="mmol" />
+
 ## In Dulce musst du nicht umrechnen
 
 Unter **Einstellungen → Glukose-Einheit** wählst du mg/dL oder mmol/L. Startbildschirm, Sperrbildschirm, Apple Watch und Warnungen wechseln gemeinsam.
@@ -35,3 +51,4 @@ Unter **Einstellungen → Glukose-Einheit** wählst du mg/dL oder mmol/L. Startb
 
 - Battelino T. et al. *Clinical Targets for Continuous Glucose Monitoring Data Interpretation*. Diabetes Care 2019;42:1593-1603. [doi.org/10.2337/dci19-0028](https://doi.org/10.2337/dci19-0028)
 - American Diabetes Association. *Standards of Care in Diabetes*. [professional.diabetes.org/standards-of-care](https://professional.diabetes.org/standards-of-care)
+- PubChem. *Cholesterol* (molare Masse 386,7 g/mol, daher ÷ 38,67) und *Triolein* (885,4 g/mol, das Referenz-Triglycerid, daher ≈ ÷ 88,57). [pubchem.ncbi.nlm.nih.gov/compound/Cholesterol](https://pubchem.ncbi.nlm.nih.gov/compound/Cholesterol), [pubchem.ncbi.nlm.nih.gov/compound/Triolein](https://pubchem.ncbi.nlm.nih.gov/compound/Triolein)

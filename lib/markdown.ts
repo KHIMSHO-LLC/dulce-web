@@ -6,7 +6,7 @@ import { AUTHORS } from "@/content/authors";
 import { appStoreUrl, type StoreCampaign } from "./appStore";
 import { articleUrl } from "./articles";
 import { absoluteUrl, localizedPath } from "./seo";
-import { TOOL_COPY, type ToolPath } from "./tools";
+import { A1C_CHART_HEAD, TOOL_COPY, a1cChartRows, glucoseChartRows, type ToolPath } from "./tools";
 
 /**
  * Plain-Markdown versions of the guides for AI assistants and answer engines
@@ -59,6 +59,13 @@ export function mdxToMarkdown(source: string, locale: AppLocale, campaign: Store
     if (!src) return "";
     return `![${alt}](${absoluteUrl(src)})${caption ? `\n\n*${caption}*` : ""}`;
   });
+  // Conversion charts (calculator pages) → Markdown tables.
+  const table = (head: string[], rows: string[][]) =>
+    [`| ${head.join(" | ")} |`, `| ${head.map(() => "---").join(" | ")} |`, ...rows.map((r) => `| ${r.join(" | ")} |`)].join("\n");
+  s = s.replace(/<GlucoseTable\s+from="(mgdl|mmol)"\s*\/>/g, (_, from: "mgdl" | "mmol") =>
+    table(from === "mgdl" ? ["mg/dL", "mmol/L"] : ["mmol/L", "mg/dL"], glucoseChartRows(from, locale)),
+  );
+  s = s.replace(/<A1cTable\s*\/>/g, () => table(A1C_CHART_HEAD[locale], a1cChartRows(locale)));
   // Callouts → blockquotes.
   s = s.replace(/<Callout\b[^>]*>([\s\S]*?)<\/Callout>/g, (_, body: string) =>
     body

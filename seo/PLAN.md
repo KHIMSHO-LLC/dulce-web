@@ -150,6 +150,14 @@ questions around them. Being the best answer means the product actually does it 
       (minTime 900 ms, lift 1.05 s) or skip it on mobile; check real-user field data in PSI / Search Console Core
       Web Vitals before changing the guides.
 
+- [x] 2026-10-30: Calculators: full mg/dL <-> mmol/L charts (40-400 / 2-25) and an A1C chart (4-14 %, IFCC + eAG)
+      generated from `lib/tools.ts` (`GlucoseTable`, `A1cTable`; also rendered as Markdown tables in llms-full.txt and
+      /md), cholesterol/triglyceride factor warning on the converter, "chart / tabla / Tabelle" titles. `fmt` now
+      rounds half up (A1C 6 % = 126 mg/dL, as in ADAG). Titles: apple-watch leads with Libre 3 / 3 Plus,
+      librelinkup-not-working with "no recent data", comparison with "LibreLinkUp alternative", /setup with
+      "LibreLinkUp login", home with "Libre and Dexcom". New FAQs (5 languages): Libre 3/3 Plus to Apple Watch, LibreLinkUp
+      alternative, Dexcom widget/complication.
+
 ## Next for Claude (in order)
 
 0. **1.0.4 on the website** (done 2026-10-25, owner decision to publish before approval; app live 2026-10-27):

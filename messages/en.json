@@ -37,8 +37,8 @@
     "label": "Loading Dulce"
   },
   "home": {
-    "title": "FreeStyle Libre glucose on Apple Watch and the Lock Screen",
-    "description": "Dulce brings your FreeStyle Libre glucose to the Lock Screen, Dynamic Island, StandBy, Apple Watch and your family's phone. Free on the App Store.",
+    "title": "Libre and Dexcom glucose on Apple Watch and the Lock Screen",
+    "description": "Dulce brings your FreeStyle Libre or Dexcom glucose to the Lock Screen, Dynamic Island, StandBy, Apple Watch and your family's phone. Free on the App Store.",
     "hero": {
       "line1": "Your glucose,",
       "line2": "always in sight.",
@@ -311,7 +311,7 @@
     "noCode": "No invite code found in this link. Ask for a new invite."
   },
   "setup": {
-    "title": "LibreLink vs LibreLinkUp, which account does Dulce use?",
+    "title": "LibreLinkUp login vs LibreLink: which account Dulce uses",
     "description": "Dulce signs in with your LibreLinkUp account, not LibreLink. Here's the difference, and how to turn on sharing so your readings reach Dulce.",
     "hero": {
       "headline": "LibreLink vs LibreLinkUp: which one does Dulce use?",
