@@ -154,3 +154,20 @@ Each daily run appends one entry: date, what was published or improved, target q
   "libreview download". No new topic beats a page that already ranks top-10 for a 10K-100K keyword with 0% CTR.
 - Decision: **improve `libreview`** instead of a new article: login-first titles/descriptions, a "can't log in"
   section and a short "is there a LibreView app / how to download reports" answer, only with facts I can source.
+- Updated `libreview` (es/en/de/fr/it, dateModified 2026-10-30, slugs unchanged). Titles and descriptions now lead
+  with the login answer ("LibreView accedi: come fare il login…", "LibreView login: how to sign in…", etc.); a short
+  login answer opens each body; new sections "Can't log in to LibreView?" (LibreLinkUp details, no account /
+  reader only, password reset, inactive-account deletion, contact Abbott; warning not to sign out of the sensor
+  app) and "Is there a LibreView app?"; Abbott's newer **Libre** app added next to LibreLink / Libre 3; 2 new FAQs
+  per language; summary rewritten; keywords add "libreview accedi / se connecter / mon compte / forgot password / app".
+  Target queries: "libreview", "libre view", "libreview accedi", "libreview login", "libreview se connecter",
+  "libreview connexion", "libreview mon compte", "libreview app".
+- Facts checked: Abbott FAQs (LibreLink requires a LibreView login at setup; same credentials on libreview.com;
+  reader users set up at libreview.com; LibreLink Forgot Password → emailed reset link; inactive accounts: no login
+  or upload in 6 months → notice at least 28 days before deletion, Gulf-region Abbott pages; US "Libre app" uses the
+  same credentials). App Store search API for "libreview" in es/it/de on 2026-10-30: no app named LibreView (only
+  Abbott's Libre apps, incl. "Libre von Abbott - DE", and LibreLinkUp). Dulce's sign-in hint re-checked on dulce-app
+  main (e53186d, en common.json: "these are your LibreLink details…"). Left out: exact libreview.com button labels
+  and localized Abbott labels (couldn't read the JS sign-in page), whether a clinic can reset the account.
+- `npm run check:content` (17 articles, 0 errors, 0 warnings) and `npm run build` passed. Deployed (522f65a, it page
+  verified live), `npm run indexnow`: 155 URLs → 200. Next run: compare libreview CTR from ~2026-11-10.
