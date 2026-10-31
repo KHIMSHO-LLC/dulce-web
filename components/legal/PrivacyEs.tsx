@@ -71,13 +71,39 @@ export function PrivacyEs() {
           notas. Almacenado localmente.
         </li>
         <li>
-          <strong>Datos de Apple Salud</strong> en modo solo lectura, si das permiso.
+          <strong>Datos de Apple Salud</strong> (iPhone) o de <strong>Health Connect</strong>{" "}
+          (Android) en modo solo lectura, si das permiso. Consulta el apartado 2.2.1.
         </li>
         <li>
           <strong>Preferencias</strong>: unidades, rango objetivo, idioma, tema, ajustes de
           alertas.
         </li>
       </ul>
+
+      <h3>2.2.1 Apple Salud y Health Connect</h3>
+      <p>
+        Si lo activas en Ajustes, Dulce lee registros de glucosa en sangre y de carbohidratos
+        (en iPhone también de insulina) de Apple Salud o, en Android, de Health Connect. Tú
+        eliges cada tipo y puedes retirar el acceso cuando quieras en los ajustes de Dulce o en
+        los ajustes de salud del sistema. Dulce solo lee: nunca escribe en Apple Salud ni en
+        Health Connect.
+      </p>
+      <p>
+        Usamos estos datos solo para mostrarlos en tu gráfica y en tu diario. Se guardan en tu
+        dispositivo, no se envían al relay de Dulce ni a nosotros, y nunca los vendemos, los
+        compartimos ni los usamos para publicidad.
+      </p>
+      <p>
+        El uso que hace Dulce de la información recibida de Health Connect cumplirá la{" "}
+        <a
+          href="https://support.google.com/googleplay/android-developer/answer/12991134"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          política de permisos de Health Connect
+        </a>
+        , incluidos los requisitos de uso limitado.
+      </p>
 
       <h3>2.3 El relay de Dulce (funciones en tiempo real)</h3>
       <p>
@@ -206,8 +232,8 @@ export function PrivacyEs() {
       </p>
       <ul>
         <li>
-          Tu historial de glucosa a largo plazo, tu diario y los datos de Apple Salud se procesan
-          y almacenan en tu dispositivo. El relay también procesa las lecturas recientes como se
+          Tu historial de glucosa a largo plazo, tu diario y los datos de Apple Salud o Health
+          Connect se procesan y almacenan en tu dispositivo. El relay también procesa las lecturas recientes como se
           explica arriba.
         </li>
         <li>
@@ -283,6 +309,10 @@ export function PrivacyEs() {
         </li>
         <li>
           <strong>Google Firebase</strong> — notificaciones push en Android.
+        </li>
+        <li>
+          <strong>Google Health Connect</strong> — el almacén de datos de salud de Android; Dulce
+          lo lee solo en tu dispositivo.
         </li>
         <li>
           <strong>Google Analytics 4 (Google Ireland Ltd.)</strong> — analítica web según la
