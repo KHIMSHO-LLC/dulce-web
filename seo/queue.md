@@ -26,7 +26,7 @@ Owner-requested jobs. The daily run does the top unchecked item, one per run, th
   - After deploy: `npm run indexnow`; log in seo/log.md with the GSC numbers above as the baseline
     (compare head-term position and exact-value clicks ~3 weeks later).
 
-- [ ] **"Can Apple Watch measure blood sugar?" article** (requested by Giorgi 2026-10-31, from the keyword review in
+- [x] **"Can Apple Watch measure blood sugar?" article** (done 2026-10-31, `apple-watch-glucose`, author Giorgi) (requested by Giorgi 2026-10-31, from the keyword review in
   `seo/keyword-research-2026-10-31.md`). Highest-demand gap in every market: "blood sugar apple watch 11 / ultra 3",
   "blutzucker messen apple watch", "glicemia apple watch", "glycémie apple watch", "bloedsuiker meten apple watch".
   Answer first: no Apple Watch measures glucose (check Apple's own pages for the current models before writing; cite

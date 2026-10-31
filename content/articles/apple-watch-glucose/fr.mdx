@@ -1,0 +1,58 @@
+Réponse courte : non. Aucune Apple Watch ne peut mesurer ta glycémie, y compris la Series 12 sortie en septembre 2026. Apple y travaille depuis des années et, d'après les dernières informations, il faudra encore attendre des années. Si tu veux voir ta glycémie au poignet aujourd'hui, il te faut un capteur de glucose (un CGM) et une app qui affiche ses mesures sur la montre. Voici ce que mesure l'Apple Watch, ce qu'Apple préparerait, les « montres glycémie » à éviter et ce qui marche dès maintenant.
+
+## Ce que mesure l'Apple Watch aujourd'hui
+
+L'Apple Watch mesure ta fréquence cardiaque et peut faire un ECG, mesurer l'oxygène dans le sang et, sur les modèles récents, te prévenir d'une possible apnée du sommeil ou de signes d'hypertension. Ce sont tous des signaux optiques ou électriques captés sur la peau. Le glucose n'en fait pas partie : ni la Series 12, ni l'Ultra, ni la SE ne le mesurent, et Apple ne prétend pas le contraire.
+
+Ce que l'Apple Watch *peut* faire, c'est **afficher** une glycémie mesurée par autre chose. L'app Santé enregistre la glycémie des capteurs et des lecteurs, et les apps des capteurs de glucose en continu mettent la valeur sur le cadran.
+
+## Apple travaille-t-il sur la mesure de la glycémie ?
+
+Oui, selon Mark Gurman de Bloomberg, et depuis longtemps : le projet tournerait depuis plus de 15 ans. Ce qui a été rapporté :
+
+- **Le principe** : un laser envoie une lumière de longueurs d'onde précises sous la peau, dans le liquide interstitiel autour des cellules, et un capteur mesure la lumière qui revient. Un algorithme en tire une estimation du glucose. (Gurman, 2023.)
+- **Premier usage** : les articles parlent d'alerter les personnes qui pourraient être prédiabétiques, pas de valeurs précises.
+- **Dernière nouvelle (mai 2026)** : Apple a confié le projet à un nouveau responsable, Zongjian Chen, ce que certains voient comme un signe de progrès. Malgré tout, la fonction n'arriverait pas avant plusieurs années, si elle arrive un jour.
+
+Apple n'a rien annoncé. Prends toute date que tu lis pour une rumeur.
+
+## Pourquoi c'est si difficile
+
+Le glucose est un signal minuscule. Sous la peau, il côtoie l'eau, la graisse, les protéines et le flux sanguin, et la mesure varie aussi avec la température, la transpiration, la couleur de peau et le serrage du bracelet. Obtenir une valeur fiable avec de la lumière seule, à travers la peau, toute la journée : beaucoup d'entreprises ont essayé, aucune n'a atteint la précision dont ont besoin les personnes diabétiques.
+
+Et si tu fais de l'insuline, « à peu près » ne suffit pas. Une mesure fausse peut mener à une mauvaise dose. C'est pour ça qu'un capteur au poignet devrait égaler les capteurs actuels et être autorisé par les autorités de santé avant qu'on puisse s'en servir pour se traiter.
+
+## Méfie-toi des montres et bagues qui « mesurent la glycémie »
+
+Des boutiques en ligne vendent des montres et des bagues bon marché qui prétendent afficher la glycémie sans aiguille. En février 2024, la FDA, l'agence américaine du médicament, a demandé de ne pas les acheter ni les utiliser : aucune n'est autorisée, elles ne mesurent pas vraiment la glycémie, et une mesure fausse peut entraîner de dangereuses erreurs de dose.
+
+<Callout type="warning">
+Si une montre ou une bague prétend mesurer la glycémie sans rien sous la peau, ne t'en sers pas pour prendre des décisions. Utilise le capteur ou le lecteur recommandé par ton équipe soignante.
+</Callout>
+
+## Voir ta glycémie sur l'Apple Watch aujourd'hui
+
+La solution fiable, c'est un **capteur de glucose en continu (CGM)**, comme un FreeStyle Libre ou un Dexcom. Un fin filament juste sous la peau mesure le glucose du liquide interstitiel toutes les quelques minutes et l'envoie à ton téléphone. De là, une app peut mettre la valeur sur ta montre.
+
+C'est ce que fait Dulce. Il lit ton FreeStyle Libre via LibreLinkUp ou ton Dexcom via Dexcom Share et l'affiche sur ton Apple Watch :
+
+- **Des complications** pour tous les cadrans : rectangulaire (valeur, flèche et courbe), circulaire, coin et en ligne.
+- **Une app pour la montre** avec la valeur en grand, la tendance et la courbe de la journée.
+- **Des mises à jour même sans ton iPhone à côté** : le serveur de Dulce envoie chaque nouvelle mesure directement à la montre en Wi-Fi ou en cellulaire.
+- Fonctionne sur toute Apple Watch sous watchOS 11 ou plus récent, y compris la SE (2e génération et suivantes) et l'Ultra. La montre fait partie de Dulce Pro, avec 14 jours d'essai gratuit.
+
+<Figure src="/guides/apple-watch-3.jpg" alt="App Dulce sur l'Apple Watch affichant 86, une flèche stable et la courbe du jour, iPhone déconnecté" caption="Dulce sur l'Apple Watch : la mesure continue d'arriver avec l'iPhone déconnecté (icône rouge à côté de l'heure)." width={422} height={514} />
+
+Pas à pas selon ton capteur : le <ArticleLink to="apple-watch">guide FreeStyle Libre sur l'Apple Watch</ArticleLink> et le <ArticleLink to="dexcom">guide Dexcom</ArticleLink>.
+
+<AppCta title="Ta glycémie sur l'Apple Watch, dès aujourd'hui" />
+
+## Si Apple la lance un jour
+
+Quand une fonction glycémie arrivera, vérifie deux choses avant de t'y fier : si elle donne des valeurs ou seulement une alerte du genre « tu pourrais être prédiabétique », et si elle est autorisée pour le traitement du diabète là où tu vis. D'ici là, avec un diabète, c'est un capteur qui te permet de voir ta glycémie au poignet. Et pour savoir ce que veulent dire tes valeurs, regarde le <ArticleLink to="blood-sugar-levels">tableau des valeurs de glycémie</ArticleLink>.
+
+## Sources
+
+- U.S. Food and Drug Administration. *Do Not Use Smartwatches or Smart Rings to Measure Blood Glucose Levels: FDA Safety Communication*. 21 février 2024. [fda.gov](https://www.fda.gov/medical-devices/safety-communications/do-not-use-smartwatches-or-smart-rings-measure-blood-glucose-levels-fda-safety-communication)
+- Rossignol J. *Apple Watch for Diabetes: The Latest on Apple's Plans for Non-Invasive Blood Sugar Monitoring*. MacRumors, mai 2026 (informations de Mark Gurman, Bloomberg). [macrumors.com](https://www.macrumors.com/2026/05/26/apple-watch-non-invasive-blood-sugar-plans/)
+- MacRumors. *Apple Watch Series 12* (fonctions des modèles de septembre 2026). [macrumors.com](https://www.macrumors.com/roundup/apple-watch/)

@@ -190,3 +190,15 @@ Each daily run appends one entry: date, what was published or improved, target q
   login" 9.2, apple-watch en 34 impr pos 8.0.
 - Checks: check:content (17 articles, 0/0), tsc, build (webpack), check:jsonld and check:crawl (155 pages) on a local
   production server, 390 px screenshots of the converter and the German HbA1c page.
+
+## 2026-10-31 (owner-requested, interactive session)
+
+- Keyword-list review (PR #10, merged): see `seo/keyword-research-2026-10-31.md`. Dexcom widget/watch sections,
+  Libre 3 Plus / Dexcom widget FAQ, Canada vs US units, brand alternateName schema.
+- New article `apple-watch-glucose` ("Can Apple Watch measure blood sugar?"), 5 languages, author Giorgi (his request).
+  Evidence: autocomplete in every market ("blood sugar apple watch 11 / ultra 3", "blutzucker messen apple watch",
+  "glicemia apple watch", "glycémie apple watch", "bloedsuiker meten apple watch", "medir glicemia apple watch").
+  Facts: FDA safety communication 2024-02-21 (page still current), Gurman/Bloomberg via MacRumors (May 2026 leadership
+  change, still years away), MacRumors Series 12 roundup (Sept 2026, no glucose sensor). Linked from `apple-watch`
+  (intro, 5 languages) and the sensor end date calculator.
+- Checks: check:content (18 articles, 0/0), tsc, lint, build, check:jsonld (160 pages); the 5 new URLs return 200.

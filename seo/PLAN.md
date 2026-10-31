@@ -162,6 +162,8 @@ questions around them. Being the best answer means the product actually does it 
 - [x] 2026-10-31: Reviewed Giorgi's ~1,000-keyword list against autocomplete in each market (US/CA included); kept
       only measured clusters. Dexcom widget/watch sections, Libre 3 Plus/Dexcom widget FAQ, Canada vs US units, brand
       alternateName schema. Findings, rejected phrases and the open new-language decision: `seo/keyword-research-2026-10-31.md`.
+- [x] 2026-10-31: Article `apple-watch-glucose` (can Apple Watch measure blood sugar; Apple's reported plans, FDA warning on
+      "glucose" watches/rings, how to see a CGM on the watch today), 5 languages, author Giorgi.
 
 ## Next for Claude (in order)
 
