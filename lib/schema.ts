@@ -46,6 +46,8 @@ export function siteSchema(locale: AppLocale, description: string) {
         "@type": "Organization",
         "@id": ORG_ID,
         name: "Dulce",
+        // Names people actually search for the brand (the domain is dulceglucosa.com).
+        alternateName: ["Dulce Glucosa", "Dulce Glucose"],
         url: SITE_URL,
         email: CONTACT_EMAIL,
         // Square PNG, 2731 px (Google needs ≥112 px).
@@ -58,6 +60,8 @@ export function siteSchema(locale: AppLocale, description: string) {
         "@id": WEBSITE_ID,
         url: SITE_URL,
         name: "Dulce",
+        // Google's site-name fallbacks.
+        alternateName: ["Dulce Glucosa", "dulceglucosa.com"],
         description,
         inLanguage: locale,
         publisher,

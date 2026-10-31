@@ -26,7 +26,13 @@ Owner-requested jobs. The daily run does the top unchecked item, one per run, th
   - After deploy: `npm run indexnow`; log in seo/log.md with the GSC numbers above as the baseline
     (compare head-term position and exact-value clicks ~3 weeks later).
 
-- [ ] **Dexcom on Apple Watch / Dexcom widget article** (found 2026-10-30, Google autocomplete): "dexcom apple watch
+- [ ] **"Can Apple Watch measure blood sugar?" article** (requested by Giorgi 2026-10-31, from the keyword review in
+  `seo/keyword-research-2026-10-31.md`). Highest-demand gap in every market: "blood sugar apple watch 11 / ultra 3",
+  "blutzucker messen apple watch", "glicemia apple watch", "glycémie apple watch", "bloedsuiker meten apple watch".
+  Answer first: no Apple Watch measures glucose (check Apple's own pages for the current models before writing; cite
+  them), what a CGM is, and how a CGM reading gets onto the watch (link `apple-watch`, `dexcom`). Warn about watches
+  and bands sold as "non-invasive glucose" (cite the FDA safety communication, check it is still current). 5 languages.
+- [x] ~~Dexcom on Apple Watch / Dexcom widget article~~ (done 2026-10-31 as new sections + FAQs in the existing `dexcom` guide, to avoid two pages competing for the same query; found 2026-10-30, Google autocomplete): "dexcom apple watch
   complication / widget / without phone", "dexcom follow apple watch complication", "is there a dexcom widget", "how to
   add dexcom widget", "dexcom g7 apple watch app not working". The `dexcom` guide covers it in one FAQ only. A focused
   guide (5 languages) on Dexcom complications + iPhone widgets with Dulce, honest about what needs Pro and the 5-minute
