@@ -14,17 +14,19 @@ Everything lives in Dulce under **Settings → Alerts**. During setup Dulce asks
 | --- | --- | --- |
 | Low glucose alert | Warns you when glucose drops below your threshold (50 to 80 mg/dL) | 70 mg/dL |
 | High glucose alert | Warns you when glucose rises above your threshold (140 to 300 mg/dL) | 250 mg/dL |
-| Critical low alerts | An alert on a severe low (55 mg/dL or less) that ignores quiet hours and snoozes | On |
+| Critical low alerts | An alert on a severe low (55 mg/dL or less) that ignores quiet hours, snoozes and silent mode | On |
 | Rapid change | Warns you when glucose rises or falls very fast | On |
 | Predictive low | Warns you when you're heading for a low | Off |
 
 ### Critical low: the one Dulce never holds back
 
-It's the only alert that comes through Dulce's quiet hours and snoozes. It always uses the **Alarm** sound and repeats every 5 minutes while you stay below. You can turn it off, but Dulce asks you to confirm: it's the alert that matters most at night.
+It's the only alert that comes through Dulce's quiet hours and snoozes, and the only one that rings with your iPhone on silent or in Do Not Disturb. It always uses the **Alarm** sound and repeats every 5 minutes while you stay below. You can turn it off, but Dulce asks you to confirm: it's the alert that matters most at night.
 
 ### Hearing alerts at night
 
-Dulce's alerts are regular iPhone notifications, so your iPhone decides whether they make a sound. With the ring/silent switch on silent, or a Focus such as Sleep that doesn't allow Dulce, an alert arrives without sound. To hear a low at night:
+The critical low alert is an iOS **critical alert**: it plays a sound even when your iPhone is on silent, in Do Not Disturb or in a Focus such as Sleep. The first time, iOS asks whether Dulce may send critical alerts. If you said no, turn on **Critical Alerts** in the iPhone Settings app → Notifications → Dulce. If you'd rather it followed your silent switch, turn off **Ring on silent and Do Not Disturb** in Dulce under Settings → Alerts.
+
+The other alerts (low, high, rapid change and predictive low) are regular iPhone notifications, so your iPhone decides whether they make a sound. With the ring/silent switch on silent, or a Focus such as Sleep that doesn't allow Dulce, they arrive without sound. To hear a low above 55 at night:
 
 - Keep silent mode off and the ringer volume up.
 - If you use the Sleep Focus or Do Not Disturb, add Dulce to its allowed apps (Settings → Focus).

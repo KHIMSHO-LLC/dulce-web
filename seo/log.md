@@ -202,3 +202,7 @@ Each daily run appends one entry: date, what was published or improved, target q
   change, still years away), MacRumors Series 12 roundup (Sept 2026, no glucose sensor). Linked from `apple-watch`
   (intro, 5 languages) and the sensor end date calculator.
 - Checks: check:content (18 articles, 0/0), tsc, lint, build, check:jsonld (160 pages); the 5 new URLs return 200.
+
+## 2026-10-31: critical alerts
+
+Apple granted the critical-alert entitlement. Site copy now says the critical low alert (55 mg/dL or less) rings on silent and in Do Not Disturb once the user allows critical alerts; other alerts still follow the silent switch. Updated: alerts, night-lows, child-glucose, librelinkup-not-working, dexcom-follow-alternative, glucose-apps-compared (5 languages), homepage alerts copy. The app build with the entitlement ships after this.

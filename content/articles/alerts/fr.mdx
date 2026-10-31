@@ -14,17 +14,19 @@ Tout se trouve dans Dulce, dans **Réglages → Alertes**. Au moment de la confi
 | --- | --- | --- |
 | Alerte glycémie basse | Te prévient quand la glycémie passe sous ton seuil (50 à 80 mg/dL) | 70 mg/dL |
 | Alerte glycémie haute | Te prévient quand la glycémie dépasse ton seuil (140 à 300 mg/dL) | 250 mg/dL |
-| Alertes d'hypo critique | Une alerte en cas d'hypo sévère (55 mg/dL ou moins) qui ignore les heures calmes et les pauses | Activée |
+| Alertes d'hypo critique | Une alerte en cas d'hypo sévère (55 mg/dL ou moins) qui ignore les heures calmes, les pauses et le mode silencieux | Activée |
 | Variation rapide | Te prévient quand la glycémie monte ou baisse très vite | Activée |
 | Hypo prédictive | Te prévient quand tu te diriges vers une hypo | Désactivée |
 
 ### Hypo critique : celle que Dulce ne retient jamais
 
-C'est la seule alerte qui passe outre les heures calmes et les pauses de Dulce. Elle utilise toujours le son **Alarme** et se répète toutes les 5 minutes tant que tu restes en dessous. Tu peux la désactiver, mais Dulce te demande de confirmer : c'est l'alerte qui compte le plus la nuit.
+C'est la seule alerte qui passe outre les heures calmes et les pauses de Dulce, et la seule qui sonne iPhone en silencieux ou en Ne pas déranger. Elle utilise toujours le son **Alarme** et se répète toutes les 5 minutes tant que tu restes en dessous. Tu peux la désactiver, mais Dulce te demande de confirmer : c'est l'alerte qui compte le plus la nuit.
 
 ### Entendre les alertes la nuit
 
-Les alertes de Dulce sont des notifications iPhone normales : c'est ton iPhone qui décide si elles sonnent. Avec le bouton sonnerie/silence en silencieux, ou un mode de concentration comme Sommeil qui n'autorise pas Dulce, l'alerte arrive sans son. Pour entendre une hypo la nuit :
+L'alerte d'hypo critique est une **alerte critique** d'iOS : elle sonne même si ton iPhone est en silencieux, en Ne pas déranger ou dans un mode de concentration comme Sommeil. La première fois, iOS te demande si Dulce peut envoyer des alertes critiques. Si tu as refusé, active **Alertes critiques** dans l'app Réglages de l'iPhone → Notifications → Dulce. Si tu préfères qu'elle suive le mode silencieux, désactive **Sonner en silencieux et en Ne pas déranger** dans Dulce, sous Réglages → Alertes.
+
+Les autres alertes (hypo, hyper, variation rapide et hypo prédictive) sont des notifications iPhone normales : c'est ton iPhone qui décide si elles sonnent. Avec le bouton sonnerie/silence en silencieux, ou un mode de concentration comme Sommeil qui n'autorise pas Dulce, elles arrivent sans son. Pour entendre la nuit une hypo au-dessus de 55 :
 
 - Laisse le mode silencieux désactivé et le volume de la sonnerie élevé.
 - Si tu utilises Sommeil ou Ne pas déranger, ajoute Dulce aux apps autorisées (Réglages → Concentration).

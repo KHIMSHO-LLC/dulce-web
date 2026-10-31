@@ -63,7 +63,7 @@
     },
     "alerts": {
       "title": "Warnungen,\nwie du sie willst.",
-      "body": "Tief- und Hochwerte mit deinen eigenen Grenzen, Ruhezeiten und ein lauterer Alarm bei sehr niedriger Glukose, auch nachts.",
+      "body": "Tief- und Hochwerte mit deinen eigenen Grenzen, Ruhezeiten und ein lauterer Alarm bei sehr niedriger Glukose, der auch stumm klingelt.",
       "note": "Dulce ersetzt nicht die Alarme deines Sensors.",
       "alt": "Sperrbildschirm mitten in der Nacht mit Warnungen für hohe, niedrige und sehr niedrige Glukose"
     },

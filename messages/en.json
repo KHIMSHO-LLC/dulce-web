@@ -63,7 +63,7 @@
     },
     "alerts": {
       "title": "Alerts on\nyour terms.",
-      "body": "Lows and highs at your own thresholds, quiet hours, and a louder alarm for very low glucose, at night too.",
+      "body": "Lows and highs at your own thresholds, quiet hours, and a louder alarm for very low glucose that rings even on silent.",
       "note": "Dulce doesn't replace your sensor's own alarms.",
       "alt": "Lock Screen in the small hours with high, low and very low glucose alerts"
     },

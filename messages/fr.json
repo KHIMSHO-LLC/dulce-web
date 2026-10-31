@@ -63,7 +63,7 @@
     },
     "alerts": {
       "title": "Des alertes\nà ta façon.",
-      "body": "Hypos et hypers à tes propres seuils, heures calmes, et une alarme plus forte pour la glycémie très basse, la nuit aussi.",
+      "body": "Hypos et hypers à tes propres seuils, heures calmes, et une alarme plus forte pour la glycémie très basse, qui sonne même en silencieux.",
       "note": "Dulce ne remplace pas les alarmes de ton capteur.",
       "alt": "Écran verrouillé en pleine nuit avec des alertes de glycémie haute, basse et très basse"
     },

@@ -63,7 +63,7 @@
     },
     "alerts": {
       "title": "Avvisi\na modo tuo.",
-      "body": "Ipo e iper alle tue soglie, ore di silenzio e un allarme più forte per la glicemia molto bassa, anche di notte.",
+      "body": "Ipo e iper alle tue soglie, ore di silenzio e un allarme più forte per la glicemia molto bassa che suona anche in silenzioso.",
       "note": "Dulce non sostituisce gli allarmi del tuo sensore.",
       "alt": "Schermata di blocco nel cuore della notte con avvisi di glicemia alta, bassa e molto bassa"
     },

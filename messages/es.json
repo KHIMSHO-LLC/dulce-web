@@ -63,7 +63,7 @@
     },
     "alerts": {
       "title": "Avisos a\ntu medida.",
-      "body": "Bajadas y subidas con tus propios umbrales, horas de silencio y una alarma más fuerte para la hipoglucemia grave, también de noche.",
+      "body": "Bajadas y subidas con tus propios umbrales, horas de silencio y una alarma más fuerte para la hipoglucemia grave que suena incluso en silencio.",
       "note": "Dulce no sustituye las alarmas de tu sensor.",
       "alt": "Pantalla de bloqueo de madrugada con avisos de glucosa alta, baja y muy baja"
     },
