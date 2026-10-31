@@ -221,7 +221,7 @@ silent (critical-alerts entitlement). CarPlay is even: Dulce's Live Activity sho
       is allowed in Search Ads, but App Store **metadata must never name competitors** (guideline 2.3.7).
 - [ ] Giorgi: answer "which app for Libre on Apple Watch / Lock Screen" threads honestly (Reddit, Facebook groups,
       forums), disclosing you make Dulce, linking the comparison guide in the reader's language.
-- [ ] Close the gaps that cost switchers: apply for Apple's critical-alerts entitlement (ring on silent).
+- [x] Close the gaps that cost switchers: critical-alerts entitlement granted 2026-10-31; critical lows ring on silent from the next build (site updated).
 - [x] CarPlay: the Live Activity already shows there (iOS 26); 1.0.4 makes that layout glanceable.
 
 ## For Giorgi (only you can do these)
