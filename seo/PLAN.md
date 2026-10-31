@@ -49,6 +49,7 @@ questions around them. Being the best answer means the product actually does it 
 | `MedicalWebPage` on the home page, fake downloadUrl, USD | Product page; real ids in code; EUR | Not used |
 | German with "Sie" | Site uses du (fr/it use tu) | Keep informal |
 | Thin pages per country/keyword | Google suppresses them, AI engines ignore them | One strong page per topic per language |
+| Pages or keyword lists per generated phrase (typos, "no ads", "battery", "lock screen follower") | No autocomplete demand (checked 2026-10-31) | Cover the feature in plain words on the existing page |
 | Invent search volumes, conversion rates, market sizes | Unknown until measured | Only use measured data (Search Console, App Store Connect, RevenueCat) |
 
 ## Search Console notes
@@ -157,6 +158,10 @@ questions around them. Being the best answer means the product actually does it 
       librelinkup-not-working with "no recent data", comparison with "LibreLinkUp alternative", /setup with
       "LibreLinkUp login", home with "Libre and Dexcom". New FAQs (5 languages): Libre 3/3 Plus to Apple Watch, LibreLinkUp
       alternative, Dexcom widget/complication.
+
+- [x] 2026-10-31: Reviewed Giorgi's ~1,000-keyword list against autocomplete in each market (US/CA included); kept
+      only measured clusters. Dexcom widget/watch sections, Libre 3 Plus/Dexcom widget FAQ, Canada vs US units, brand
+      alternateName schema. Findings, rejected phrases and the open new-language decision: `seo/keyword-research-2026-10-31.md`.
 
 ## Next for Claude (in order)
 
