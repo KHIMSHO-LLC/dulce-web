@@ -48,6 +48,16 @@ Les styles graphiques aident quand tu veux voir où tu vas ; Grand et Compact qu
 
 Avec Dulce Pro, le serveur de Dulce met à jour l'Activité en direct chaque minute, même iPhone verrouillé et app fermée. La fraîcheur du chiffre dépend de l'envoi de la mesure par l'app Libre du téléphone du capteur : si ce téléphone perd Internet, tu verras l'heure de la dernière mesure prendre du retard.
 
+## Est-ce que ça marche avec le FreeStyle Libre 3 Plus ?
+
+Oui, exactement comme avec les Libre 2, 2 Plus et 3. Dulce ne se connecte jamais au capteur : il lit ta glycémie depuis **LibreLinkUp**, le service de partage d'Abbott. Le modèle de capteur importe peu ; ce qui compte, c'est que l'app qui le lit partage vers LibreLinkUp.
+
+- **Quelle app lit le 3 Plus.** Sur iPhone, c'est l'app d'Abbott : FreeStyle Libre 3 ou, dans certains pays, la nouvelle app **Libre**, qu'Abbott présente comme une seule app pour tous les capteurs Libre. Les deux partagent via LibreView et LibreLinkUp. Active le partage dans cette app, puis connecte-toi à Dulce avec ce compte LibreLinkUp (toutes les étapes sont dans le <PageLink to="/setup">guide de configuration</PageLink>).
+- **Téléphones compatibles.** Le téléphone qui lit le capteur doit figurer sur la liste de compatibilité d'Abbott pour ton pays, disponible sur le site FreeStyle Libre de ton pays. Abbott la met à jour à chaque nouvel iPhone et nouvelle version d'iOS, alors vérifie-la avant une grosse mise à jour d'iOS. Dulce a sa propre condition, indépendante : iOS 17 ou plus récent.
+- **Le même iPhone ou un autre.** Comme Dulce lit LibreLinkUp et pas le capteur, il peut tourner sur l'iPhone qui lit ton 3 Plus ou sur celui de quelqu'un d'autre, un parent par exemple. On l'explique dans <ArticleLink to="family-sharing">partager sa glycémie avec sa famille</ArticleLink>.
+
+D'après Abbott, le 3 Plus dure **15 jours** (un de plus que le Libre 3) et envoie une mesure **chaque minute**. Ça colle bien avec l'Activité en direct, que Dulce Pro met à jour chaque minute. Pour connaître le jour et l'heure exacts du changement, utilise le <PageLink to="/tools/sensor-end-date">calculateur de fin de capteur</PageLink>.
+
 ## Les limites d'iOS à connaître
 
 - **iOS limite la durée d'une Activité en direct.** Apple fixe un nombre maximal d'heures, puis le système la retire. Si elle disparaît, ouvre Dulce et elle revient. Si Dulce ne peut pas mettre à jour ton écran verrouillé pendant un moment, il t'envoie une notification discrète pour ouvrir l'app.
@@ -63,3 +73,8 @@ L'Activité en direct est une aide d'un coup d'œil. Regarde toujours l'heure de
 Si tu ne veux pas d'Activité en direct ou n'as pas Pro, tu peux mettre un widget de glycémie sur ton écran verrouillé, ton écran d'accueil ou en StandBy. On l'explique dans le <ArticleLink to="widgets">guide du widget Libre pour iPhone</ArticleLink>. Pour l'avoir au poignet, vois le <ArticleLink to="apple-watch">guide Apple Watch</ArticleLink>.
 
 Tu viens d'une autre app comme Sweet Dreams ou Gluroo ? On les compare et on explique comment changer en une minute dans <ArticleLink to="glucose-apps-compared">les apps de glycémie Libre comparées</ArticleLink>.
+
+## Sources
+
+- Abbott. *Meet the FreeStyle Libre 3 Plus sensor* (15 jours de port, une mesure chaque minute). [pro.freestyle.abbott](https://pro.freestyle.abbott/ie-en/home/freestyle-portfolio/freestyle-libre-systems/freestyle-libre-3-plus-sensor.html)
+- Abbott. *Libre by Abbott* sur l'App Store (une app pour les capteurs Libre, partage via LibreView et LibreLinkUp). [apps.apple.com](https://apps.apple.com/us/app/libre-by-abbott/id6670330506)

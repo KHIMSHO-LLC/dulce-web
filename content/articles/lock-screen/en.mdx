@@ -48,6 +48,16 @@ The graph styles help when you want to see where you're heading; Large and Compa
 
 With Dulce Pro, Dulce's server updates the Live Activity every minute, even with the iPhone locked and the app closed. How fresh the number is depends on the Libre app on the sensor phone having uploaded the reading: if that phone loses internet, you'll see the time of the last reading fall behind.
 
+## Does it work with the FreeStyle Libre 3 Plus?
+
+Yes, the same way it works with the Libre 2, 2 Plus and 3. Dulce never talks to the sensor itself: it reads your glucose from **LibreLinkUp**, Abbott's sharing service. The sensor model doesn't matter, only that the app reading it shares to LibreLinkUp.
+
+- **Which app reads the 3 Plus.** On iPhone that's Abbott's own app: FreeStyle Libre 3, or in some countries the newer **Libre** app, which Abbott sells as one app for any Libre sensor. Both share through LibreView and LibreLinkUp. Turn sharing on there, then sign in to Dulce with that LibreLinkUp account (the <PageLink to="/setup">setup guide</PageLink> has every step).
+- **Compatible phones.** The phone that reads the sensor must be on Abbott's compatibility list for your country, which you'll find on your country's FreeStyle Libre website. Abbott updates that list as new iPhones and iOS versions come out, so check it before a big iOS update. Dulce has its own, separate requirement: iOS 17 or later.
+- **Same iPhone or another one.** Because Dulce reads from LibreLinkUp and not from the sensor, it can run on the iPhone that reads your 3 Plus or on someone else's, like a parent's. See <ArticleLink to="family-sharing">sharing your glucose with family</ArticleLink>.
+
+According to Abbott, the 3 Plus lasts **15 days** (one more than the Libre 3) and sends a reading **every minute**. That pairs well with the Live Activity, which Dulce Pro updates every minute. To know the exact day and time to change it, use the <PageLink to="/tools/sensor-end-date">sensor end date calculator</PageLink>.
+
 ## iOS limits worth knowing
 
 - **iOS limits how long a Live Activity can run.** Apple sets a maximum number of active hours, then the system removes it. If it disappears, open Dulce and it comes back. If Dulce can't update your Lock Screen for a while, it sends you a quiet notification to open the app.
@@ -63,3 +73,8 @@ The Live Activity is a glance aid. Always look at the time of the reading, and c
 If you don't want the Live Activity or don't have Pro, you can put a glucose widget on your Lock Screen, Home Screen or StandBy. We explain it in the <ArticleLink to="widgets">Libre widget for iPhone guide</ArticleLink>. To wear it on your wrist, see the <ArticleLink to="apple-watch">Apple Watch guide</ArticleLink>.
 
 Coming from another app such as Sweet Dreams or Gluroo? We compare them and show how to switch in a minute in <ArticleLink to="glucose-apps-compared">Libre glucose apps for iPhone compared</ArticleLink>.
+
+## Sources
+
+- Abbott. *Meet the FreeStyle Libre 3 Plus sensor* (15-day wear, a reading every minute). [pro.freestyle.abbott](https://pro.freestyle.abbott/ie-en/home/freestyle-portfolio/freestyle-libre-systems/freestyle-libre-3-plus-sensor.html)
+- Abbott. *Libre by Abbott* on the App Store (one app for Libre sensors, sharing through LibreView and LibreLinkUp). [apps.apple.com](https://apps.apple.com/us/app/libre-by-abbott/id6670330506)
