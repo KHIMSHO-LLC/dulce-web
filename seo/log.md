@@ -206,3 +206,22 @@ Each daily run appends one entry: date, what was published or improved, target q
 ## 2026-10-31: critical alerts
 
 Apple granted the critical-alert entitlement. Site copy now says the critical low alert (55 mg/dL or less) rings on silent and in Do Not Disturb once the user allows critical alerts; other alerts still follow the silent switch. Updated: alerts, night-lows, child-glucose, librelinkup-not-working, dexcom-follow-alternative, glucose-apps-compared (5 languages), homepage alerts copy. The app build with the entitlement ships after this.
+
+## 2026-11-01 (daily run, queue item: Libre 3 Plus)
+
+- Queue top item done: "Libre 3 Plus app for iPhone" (targets "libre 3 plus app for iphone", "libre 3 plus compatible
+  phones", "libre 3 plus apple watch"; keyword-volumes lists "freestyle libre 3 plus" as uncovered).
+- Search Console (gum OK, 2026-10-02 to 10-30, query×page, 436 rows): zero impressions for any "3 plus" query, so per
+  the queue no new article. Widget cluster for comparison: /en widgets "libre widget iphone" 13 impr pos 6.5,
+  "freestyle libre widget iphone" 10 impr pos 6.0, "librelink widget iphone" 8 impr pos 5.0.
+- Shipped (42f7a75): `lock-screen` new section "Does it work with the FreeStyle Libre 3 Plus?" (which Abbott app reads
+  it, compatible phones = Abbott's list for the sensor phone, Dulce iOS 17+, same or other iPhone, 15 days / every
+  minute) + Sources + FAQ + 3 Plus keywords; `widgets` new section "A widget for the FreeStyle Libre 3 Plus" (refresh
+  cadence vs every-minute sensor, compatibility) + Sources. 5 languages, dateModified 2026-11-01 on both.
+- Checked: dulce-app main (63c3eea) app.json deploymentTarget 17.0; src/lib/sensor.ts knows Libre 3 Plus (15 days),
+  not claimed on the site because model detection is still partly unconfirmed (comment in code). Abbott pro IE page
+  (15-day wear, readings every minute); Libre by Abbott App Store listing ("one app, any Libre sensor", shares via
+  LibreView/LibreLinkUp; no widget/Live Activity mentioned, so no claim about it). Abbott compatibility pages vary per
+  country (IE URL 404s), so the site points to "your country's FreeStyle Libre website" without a link or model list.
+- check:content (18 articles, 0/0) and build passed. Deployed (en lock-screen verified live, dated 1 Nov),
+  `npm run indexnow`: 160 URLs → 200. Compare: "3 plus" impressions on lock-screen/widgets ~2026-11-20.

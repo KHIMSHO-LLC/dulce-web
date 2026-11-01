@@ -37,6 +37,6 @@ Owner-requested jobs. The daily run does the top unchecked item, one per run, th
   add dexcom widget", "dexcom g7 apple watch app not working". The `dexcom` guide covers it in one FAQ only. A focused
   guide (5 languages) on Dexcom complications + iPhone widgets with Dulce, honest about what needs Pro and the 5-minute
   cadence. Check what Dexcom's own apps offer on the watch from Dexcom's docs before comparing.
-- [ ] **"Libre 3 Plus app for iPhone" section or article** (autocomplete es/de/fr/it/en): "libre 3 plus app for iphone",
+- [x] **"Libre 3 Plus app for iPhone" section or article** (done 2026-11-01, 42f7a75: sections in `lock-screen` and `widgets`, no new article) (autocomplete es/de/fr/it/en): "libre 3 plus app for iphone",
   "libre 3 plus apple watch", "libre 3 plus compatible phones". Start by adding a 3 Plus section to `lock-screen` and
   `widgets`; only a new article if Search Console shows impressions for these queries.
