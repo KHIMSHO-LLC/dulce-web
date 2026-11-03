@@ -225,3 +225,43 @@ Apple granted the critical-alert entitlement. Site copy now says the critical lo
   country (IE URL 404s), so the site points to "your country's FreeStyle Libre website" without a link or model list.
 - check:content (18 articles, 0/0) and build passed. Deployed (en lock-screen verified live, dated 1 Nov),
   `npm run indexnow`: 160 URLs → 200. Compare: "3 plus" impressions on lock-screen/widgets ~2026-11-20.
+
+## 2026-11-03 (daily run, Mac)
+
+- Queue: every item ticked, so topic picked from data.
+- Search Console (gum OK, 2026-10-04 to 11-01, query×page, 500 rows): 4,338 impressions, 16 clicks. LibreView is
+  still ~80% of impressions ("libreview login" en 810 impr pos 8.9, it "libreview" 785 pos 7.7, es 748 pos 9.2,
+  "libreview se connecter" 133, Dutch "libreview inloggen" 122 on /en) with ~0 clicks, but the login-first rework
+  only shipped 2026-10-30, so it's too early to judge or rework again (compare from ~11-10). A1C calculator still
+  pos 55-57 ("a1c calculator", "gmi calculator"); "hba1c rechner" pos 67.
+- `npm run seo:gaps`: an uncovered HbA1c/GMI cluster in every language: "libre gmi vs a1c", "libre 3 gmi vs a1c",
+  "librelink hba1c", "libre 2 estimated a1c", "glucose high but a1c normal", "low blood sugar but high a1c",
+  "glycémie hba1c c est quoi", "glycémie glyquée normal", "glucosa glicosilada alta", "typ 1 diabetes hba1c
+  zielwert", "glicemia hba1c". keyword-volumes: "hba1c" DE 10K-100K and "hemoglobina glicosilada" ES 10K-100K,
+  both "no dedicated article yet".
+- Decision: new health article `hba1c`: what HbA1c is, normal/diagnostic values and the usual target, how often
+  and no fasting, what skews it, and why the sensor's GMI (Dulce's "Est. A1C") differs from the lab. The calculator
+  page keeps the formulas and chart; this article links to it instead of repeating them.
+- Published `hba1c` (acbbea9; category health, author giorgi). Slugs: es `hemoglobina-glicosilada-hba1c`, en
+  `hba1c-a1c-test-vs-gmi`, de `hba1c-wert-normalwerte-gmi`, fr `hemoglobine-glyquee-hba1c`, it
+  `emoglobina-glicata-hba1c`. Target queries: the cluster above plus "hba1c", "hemoglobina glicosilada (valores
+  normales)", "hba1c wert / normalwerte", "hémoglobine glyquée", "emoglobina glicata", "a1c test", "do I need to
+  fast for a1c". Backlink: `trends` Est. A1C callout (5 languages, dateModified 2026-11-03, `related`); added to
+  the A1C calculator's `guides`.
+- App facts checked on dulce-app main (3a97f04): `gmiFromMean` = 3.31 + 0.02392 × mean mg/dL (glucose-stats.ts);
+  Trends cards "Est. A1C" / "from GMI" (es "HbA1c est." / "según GMI", de "Geschätzter HbA1c" / "aus GMI", fr
+  "HbA1c est." / "d'après le GMI", it "HbA1c stimata" / "dal GMI"); deltas vs previous period only when it holds
+  ≥50% of expected readings (trends-stats.ts); Trends reads readings cached in SQLite since connection
+  (trends.tsx `getReadingsSince`), hence "a 90-day view needs 90 days of use". The PDF report export was left out
+  (not described in any article yet).
+- External facts: Bergenstal 2018 (PMC6196826: n=528; GMI-lab gap <0.1 in 19%, ≥0.3 in 51%, ≥0.5 in 28%, ≥1.0 in
+  3%; ≥10 days, ideally 14+; renamed at FDA/CDRH's request). NIDDK "The A1C Test & Diabetes" (≈3 months; at least
+  twice a year; no fasting; interferences: blood loss, transfusion, iron-deficiency anemia (falsely high), sickle
+  cell/variants and ancestries, kidney failure, dialysis, EPO, liver disease; early pregnancy; goal <7%, 7-8%+ for
+  some). ADA 2026 sections 2 and 6 (cut-offs, <7%; S132-S149 confirmed via Europe PMC), ADAG (7% ≈ 154 mg/dL),
+  Battelino 2019, Shah 2019 (~30 min/day >140 mg/dL), all already cited elsewhere on the site. Left out: the
+  "50% of HbA1c from the last 30 days" weighting (couldn't open Tahara & Shima 1995) and country claims about
+  which unit labs print.
+- check:content (19 articles, 0/0) and build passed. Deployed (en and de pages verified live, dated 3 Nov),
+  `npm run indexnow`: 165 URLs → 200. Compare from ~2026-11-24: impressions for "hba1c"/"hemoglobina glicosilada"/
+  "gmi vs a1c" on the new pages, and whether the A1C calculator (pos 55-57) moves.
