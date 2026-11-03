@@ -83,3 +83,8 @@ Giorgi Khimshiashvili
 ## Tracking
 
 Log each placement here (date, URL, link target). Check Search Console > Links monthly and the `/en` index status.
+
+- 2026-11-04: AlternativeTo listing "Dulce" submitted (free queue, $19 priority review declined; can take months).
+  Alternatives suggested: Shuggah, LibreLinkUp, Juggluco, xDrip+, FreeStyle LibreLink, GlucoDataHandler. Sweet Dreams
+  and Gluroo are not on AlternativeTo. Country of origin left empty on purpose. Link target: `/`.
+- 2026-11-04: Zuckerschmuck email drafted in Gmail (info@zuckerschmuck.com), not sent yet.
