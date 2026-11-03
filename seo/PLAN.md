@@ -165,6 +165,21 @@ questions around them. Being the best answer means the product actually does it 
 - [x] 2026-10-31: Article `apple-watch-glucose` (can Apple Watch measure blood sugar; Apple's reported plans, FDA warning on
       "glucose" watches/rings, how to see a CGM on the watch today), 5 languages, author Giorgi.
 
+- [x] 2026-11-03: Desktop smoothness ("laggy on a MacBook Air M3"). Measured in Chrome on the Mac (GPU and renderer
+      process load, GPU utilisation, effects switched off one by one): the background glucose canvas redrew every frame
+      on every page, which forced four large CSS-blurred light beams and a soft-light grain layer to recomposite every
+      frame. Fixes: the canvas draws only while something moves (scroll, a reading every 4 s); beams are soft gradients
+      with a mask instead of `filter: blur`; grain uses plain opacity; the 3D phone runs at 30 fps when nothing drives
+      it and steps its pixel ratio down if frames stay slow; smoke cards keep their WebGL context (no shader compiles
+      mid-scroll) and idle at 30 fps. Result on an M5 (headless, same scroll script): guide pages GPU-process load
+      about -45%, GPU utilisation back to the machine's idle level; home idle about -30%. Look unchanged.
+- [x] 2026-11-03: `libreview` (4,700 impressions, ~5 clicks in 28 days at position 8-9, navigational "libreview
+      login" intent): titles/descriptions promise the direct libreview.com link + fixes, and the first line of every
+      language now links libreview.com.
+- [x] 2026-11-03: Backlink plan with real targets and an outreach template: `seo/backlinks-2026-11-03.md`. Index
+      check: `/en` home still "Crawled - currently not indexed" (last crawl 2026-08-11) though tags and status are fine;
+      links pointing at `/en` are the lever.
+
 ## Next for Claude (in order)
 
 0. **1.0.4 on the website** (done 2026-10-25, owner decision to publish before approval; app live 2026-10-27):
