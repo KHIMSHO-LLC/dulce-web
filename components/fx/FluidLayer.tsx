@@ -56,8 +56,10 @@ export function FluidLayer({
 
     const loop = (now: number) => {
       raf = requestAnimationFrame(loop);
-      if (!fluid || document.hidden) return;
-      const dt = Math.min(0.0166, (now - last) / 1000);
+      if (!fluid || document.hidden || !inView) return;
+      // Ambient smoke drifts slowly: 30 fps until the pointer stirs it.
+      if (!pointer.inside && now - last < 30) return;
+      const dt = Math.min(0.033, (now - last) / 1000);
       last = now;
       if (pointer.moved) {
         pointer.moved = false;
@@ -80,19 +82,33 @@ export function FluidLayer({
       fluid.render();
     };
 
+    // The context is created the first time the card nears the viewport and
+    // then kept: off screen the loop just pauses. Re-creating it on every
+    // visit compiled shaders mid-scroll, which showed up as scroll hitches.
     const start = async () => {
-      if (fluid || creating) return;
+      if (fluid) {
+        if (!raf) {
+          last = performance.now();
+          raf = requestAnimationFrame(loop);
+        }
+        return;
+      }
+      if (creating) return;
       creating = true;
       const { createFluid } = await import("./fluid");
       creating = false;
       if (!ref.current || !inView) return;
-      fluid = createFluid(canvas, { simRes: 128, dyeRes: 640 });
+      fluid = createFluid(canvas, { simRes: 96, dyeRes: 512 });
       if (!fluid) return;
       last = performance.now();
       raf = requestAnimationFrame(loop);
     };
-    const stop = () => {
+    const pause = () => {
       cancelAnimationFrame(raf);
+      raf = 0;
+    };
+    const stop = () => {
+      pause();
       fluid?.dispose();
       fluid = null;
     };
@@ -101,7 +117,7 @@ export function FluidLayer({
       ([e]) => {
         inView = e.isIntersecting;
         if (inView) start();
-        else stop();
+        else pause();
       },
       { rootMargin: "15% 0px" },
     );
@@ -112,7 +128,7 @@ export function FluidLayer({
     // is restored, then pick the simulation back up.
     const onLost = (e: Event) => {
       e.preventDefault();
-      cancelAnimationFrame(raf);
+      pause();
       fluid = null;
       canvas.style.visibility = "hidden";
     };

@@ -364,10 +364,55 @@ export function createStage(canvas: HTMLCanvasElement, locale: ScreenLocale, opt
     }
   }
 
+  // Adaptive resolution: start at full device resolution (crisp screen text)
+  // and step down once if a GPU can't keep up, e.g. a fanless laptop driving a
+  // Retina panel. Only sustained slow frames count, never a single hitch.
+  let dpr = renderer.getPixelRatio();
+  const minDpr = Math.min(window.devicePixelRatio || 1, 1.25);
+  let slowFrames = 0;
+  let sampled = 0;
+  let lastFrameAt = 0;
+  const watchFrameRate = (nowMs: number) => {
+    const dt = nowMs - lastFrameAt;
+    lastFrameAt = nowMs;
+    if (dt > 100 || dpr <= minDpr) return; // a pause, not a slow frame
+    sampled++;
+    if (dt > 22) slowFrames++;
+    if (sampled < 90) return;
+    if (slowFrames > 45) {
+      dpr = Math.max(minDpr, dpr - 0.5);
+      renderer.setPixelRatio(dpr);
+      renderer.setSize(vw, vh, false);
+    }
+    sampled = 0;
+    slowFrames = 0;
+  };
+
+  // While nothing drives the scene (no scroll, pointer or tween) only the slow
+  // sway moves: 30 fps is enough for it and halves the GPU work of a still page.
+  let lastActive = performance.now();
+  let lastRenderAt = 0;
+  const markActive = () => {
+    lastActive = performance.now();
+    requestRender();
+  };
+  window.addEventListener("scroll", markActive, { passive: true });
+  window.addEventListener("pointermove", markActive, { passive: true });
+
   function frame() {
     running = false;
     if (disposed) return;
+    const nowFrame = performance.now();
+    if (nowFrame - lastActive > 800 && nowFrame - lastRenderAt < 30) {
+      running = true;
+      raf = requestAnimationFrame(frame);
+      return;
+    }
+    lastRenderAt = nowFrame;
     const t = clock.getElapsedTime();
+    // Judge the GPU only on full-rate frames, never on the idle 30 fps ones.
+    if (nowFrame - lastActive <= 800) watchFrameRate(nowFrame);
+    else lastFrameAt = 0;
 
     // Tick the live reading every few seconds while anything shows it.
     const nowMs = performance.now();
@@ -408,6 +453,7 @@ export function createStage(canvas: HTMLCanvasElement, locale: ScreenLocale, opt
   // Every tween writes into `state`; nudge the loop whenever it might sleep.
   const stateProxy = new Proxy(state, {
     get(target, prop, receiver) {
+      lastActive = performance.now();
       requestRender();
       return Reflect.get(target, prop, receiver);
     },
@@ -424,6 +470,8 @@ export function createStage(canvas: HTMLCanvasElement, locale: ScreenLocale, opt
       hoverOff.forEach((fn) => fn());
       window.removeEventListener("resize", resize);
       window.removeEventListener("pointermove", onPointer);
+      window.removeEventListener("scroll", markActive);
+      window.removeEventListener("pointermove", markActive);
       document.removeEventListener("visibilitychange", onVisibility);
       textures.forEach((t) => t.texture.dispose());
       phone.dispose();

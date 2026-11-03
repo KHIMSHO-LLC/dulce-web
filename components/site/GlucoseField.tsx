@@ -8,6 +8,8 @@ const N = 2600; // 5-minute readings, about nine days
 const STEP_MIN = 5;
 const MIN_V = 40;
 const MAX_V = 280;
+const READING_MS = 4000;
+const PULSE_MS = 1400;
 
 function gauss(x: number, mu: number, s: number) {
   return Math.exp(-((x - mu) ** 2) / (2 * s * s));
@@ -40,8 +42,8 @@ export function GlucoseField() {
     let windowPts = 84;
     let raf = 0;
     let current = 0; // smoothed index at the cursor
-    const t0 = performance.now();
-    let lastPulse = 0;
+    let live = 0; // readings landed since load, one every READING_MS
+    let lastPulse = -Infinity;
 
     const scrollP = () => {
       const max = document.documentElement.scrollHeight - innerHeight;
@@ -89,6 +91,7 @@ export function GlucoseField() {
       windowPts = W < 768 ? 48 : W < 1280 ? 72 : 90;
       build();
       if (reduce) draw(performance.now());
+      else wake();
     };
 
     const valueAt = (f: number) => {
@@ -109,11 +112,11 @@ export function GlucoseField() {
       const nowX = W * (small ? 0.7 : 0.76);
       const px = W / windowPts;
 
-      // Live crawl: a reading every few seconds even without scrolling.
-      const live = reduce ? 0 : (now - t0) / 4000;
+      // Live crawl: a reading lands every few seconds even without scrolling.
       const target = indexAt(reduce ? 0.02 : scrollP()) + live;
       current += (target - current) * (reduce ? 1 : 0.08);
-      if (Math.abs(target - current) < 0.001) current = target;
+      if (Math.abs(target - current) < 0.002) current = target;
+      settled = current === target;
 
       // Range corridor and thresholds.
       ctx.fillStyle = "rgba(102,196,91,0.045)";
@@ -191,8 +194,8 @@ export function GlucoseField() {
       ctx.fillStyle = g;
       ctx.fillRect(Math.round(nowX), top - 40, 1, bottom - top + 50);
 
-      if (!reduce && now - lastPulse > 1800) lastPulse = now;
-      const k = reduce ? 1 : Math.min(1, (now - lastPulse) / 1400);
+      const k = reduce ? 1 : Math.min(1, (now - lastPulse) / PULSE_MS);
+      pulsing = k < 1;
       ctx.beginPath();
       ctx.arc(nowX, y(v), 6 + k * 22, 0, Math.PI * 2);
       ctx.strokeStyle = hexA(st.text, 0.35 * (1 - k));
@@ -212,21 +215,48 @@ export function GlucoseField() {
       ctx.fillText("mg/dL", nowX + 14, y(v) + 6);
     }
 
+    // Draw only while something moves (the trace easing after a scroll or a
+    // new reading, or the pulse ring), then sleep. A canvas repainted every
+    // frame forces the blended layers above it to recomposite every frame,
+    // which kept fanless laptops' GPUs busy even on a still page.
+    let settled = false;
+    let pulsing = false;
     const loop = (now: number) => {
-      raf = requestAnimationFrame(loop);
+      raf = 0;
       if (document.hidden) return;
       draw(now);
+      if (!settled || pulsing) raf = requestAnimationFrame(loop);
+    };
+    const wake = () => {
+      if (!raf && !document.hidden) raf = requestAnimationFrame(loop);
+    };
+    const onReading = () => {
+      live += 1;
+      lastPulse = performance.now();
+      wake();
     };
 
     resize();
     window.addEventListener("resize", resize);
     // Section positions settle after fonts and the 3D stage mount.
-    const rebuild = window.setTimeout(build, 1200);
-    if (!reduce) raf = requestAnimationFrame(loop);
+    const rebuild = window.setTimeout(() => {
+      build();
+      wake();
+    }, 1200);
+    let timer = 0;
+    if (!reduce) {
+      window.addEventListener("scroll", wake, { passive: true });
+      document.addEventListener("visibilitychange", wake);
+      timer = window.setInterval(onReading, READING_MS);
+      onReading();
+    }
     return () => {
       cancelAnimationFrame(raf);
       window.clearTimeout(rebuild);
+      window.clearInterval(timer);
       window.removeEventListener("resize", resize);
+      window.removeEventListener("scroll", wake);
+      document.removeEventListener("visibilitychange", wake);
     };
   }, []);
 
