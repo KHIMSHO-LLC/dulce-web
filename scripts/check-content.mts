@@ -9,7 +9,7 @@ import { TOOLS } from "../lib/tools.ts";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const LOCALES = ["es", "en", "de", "fr", "it"] as const;
-const today = new Date().toISOString().slice(0, 10);
+const today = new Date().toLocaleDateString("sv-SE"); // local date: the site is published from Europe
 const errors: string[] = [];
 const warnings: string[] = [];
 const err = (id: string, msg: string) => errors.push(`${id}: ${msg}`);

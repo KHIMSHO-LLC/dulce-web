@@ -1,0 +1,88 @@
+**La respuesta corta:** xDrip+ y Juggluco son apps de Android y ninguna está en el App Store. En un iPhone tienes tres caminos: **xDrip4iOS**, la app de código abierto para iPhone, que se instala con una invitación de TestFlight o compilándola tú; **Zukka**, una app del App Store hecha a partir del código de xDrip4iOS por otro desarrollador; o una app que lee tus lecturas de **LibreLinkUp o Dexcom Share**, como Dulce, mientras la app de Abbott o de Dexcom sigue leyendo el sensor.
+
+Si te pasas de Android a iPhone, o has leído sobre xDrip+ o Juggluco en un foro y quieres lo mismo en tu iPhone, esta guía explica qué es de verdad cada opción, qué pierdes con cada una y cómo elegir.
+
+<Callout>
+Hacemos Dulce, tenlo en cuenta al leer. Lo que contamos de las otras apps sale de su propia documentación y de sus fichas del App Store (consultadas el 4 de noviembre de 2026); los enlaces están al final.
+</Callout>
+
+## Qué hacen xDrip+ y Juggluco en Android
+
+Las dos hablan con el sensor **directamente por Bluetooth**. Pueden sustituir a la app de Abbott o de Dexcom en el móvil: reciben cada lectura, dibujan la gráfica, tienen sus propias alarmas y mandan los datos a relojes y otras apps. La web de Juggluco la presenta como una app alternativa para Android para FreeStyle Libre, Dexcom G7 y otros sensores. xDrip+ es de código abierto y también solo para Android.
+
+Esa conexión directa es lo que gusta de ellas: sin cuenta de Abbott por medio, lecturas incluso sin internet y muchísimos ajustes. También es la razón de que no existan igual en el iPhone.
+
+## ¿Hay xDrip para iPhone?
+
+Sí, con matices. **xDrip4iOS** es otro proyecto de código abierto, para iPhone, de otro equipo. Su documentación dice que **no se distribuye en el App Store público**. Se instala de una de estas dos formas:
+
+- **Una invitación de TestFlight** de alguien de confianza. Las versiones de TestFlight caducan, y quien las publica decide plazas, actualizaciones y plazos.
+- **Compilándola tú**, desde un Mac con Xcode o desde el navegador con GitHub Actions y Fastlane. Con una cuenta de Apple gratuita la versión caduca tras un periodo corto; con el Apple Developer Program de pago dura más.
+
+xDrip4iOS puede conectarse directamente a algunos sensores de Dexcom y Libre, o funcionar como seguidor de Nightscout, LibreLinkUp o Dexcom Share.
+
+En el App Store también está **Zukka**, gratis, que dice estar basada en el código de xDrip4iOS. El equipo de xDrip4iOS aclara que no se hizo en colaboración con ellos. Si quieres algo parecido a xDrip que se instale como una app normal, es lo más cercano.
+
+## ¿Hay Juggluco para iPhone?
+
+No. Buscando "Juggluco" en el App Store de EE. UU. el 4 de noviembre de 2026 no aparece ninguna app Juggluco, y la web y el código de Juggluco describen una app para Android y Wear OS. Si te pasan un enlace a un "Juggluco para iOS", desconfía.
+
+## El otro camino: mantener la app de Abbott y leer de la nube
+
+Apps como Dulce no tocan el sensor. La app de Abbott (FreeStyle Libre 3, LibreLink o Libre) o la de Dexcom lo sigue leyendo, con sus propias alarmas, y sube cada lectura. Dulce inicia sesión en **LibreLinkUp** o **Dexcom Share** y pone esa misma lectura en tu pantalla de bloqueo, la Dynamic Island, los widgets y el Apple Watch, y puede mandarla a los móviles de tu familia.
+
+| | xDrip4iOS / Zukka | Dulce |
+| --- | --- | --- |
+| De dónde saca las lecturas | Directamente de algunos sensores por Bluetooth, o como seguidor | De LibreLinkUp o Dexcom Share |
+| App de Abbott o Dexcom | No hace falta en modo directo | Sigue funcionando y leyendo el sensor |
+| Necesita internet | No en modo directo | Sí, en el móvil del sensor y en el que usa Dulce |
+| Cómo se instala | TestFlight o compilación propia (xDrip4iOS); App Store (Zukka) | App Store |
+| Familia | Con Nightscout u otros montajes de seguidor | Incluida: hasta 3 seguidores, gratis para ellos |
+| Idiomas | Muchos (traducciones de la comunidad) | Español, inglés, alemán, francés e italiano |
+| Precio | Gratis | Descarga gratis; suscripción Pro para la pantalla de bloqueo, el Apple Watch y avisos cada minuto |
+
+<Callout type="warning">
+Pasar un sensor a una app de terceros es una decisión para pensarla bien. La ayuda de Juggluco explica que, cuando toma un sensor Libre 2, la app de Abbott ya solo puede escanearlo, y que dos apps en un mismo sensor pueden dar problemas de conexión. Las apps de terceros no son el sistema aprobado por el fabricante del sensor. Uses lo que uses, ten siempre una alarma de hipoglucemia que funcione.
+</Callout>
+
+## ¿Cuál te conviene?
+
+- Quieres **seguir con la app de Abbott o Dexcom** y sus alarmas, instalar desde el App Store y ver tu glucosa en la pantalla de bloqueo y el reloj, con tu familia siguiéndote: **Dulce**. Mira la <ArticleLink to="lock-screen">guía de la pantalla de bloqueo</ArticleLink> y la <ArticleLink to="apple-watch">guía del Apple Watch</ArticleLink>.
+- No quieres **ninguna app de Abbott**, quieres lecturas sin internet o te montas tu propio lazo: **xDrip4iOS**, sabiendo que tendrás que gestionar la caducidad de TestFlight o tus propias compilaciones.
+- Quieres algo tipo xDrip **desde el App Store**: echa un vistazo a **Zukka** y comprueba antes qué admite para tu sensor.
+
+Para las otras apps del App Store que leen LibreLinkUp, como Sweet Dreams y Gluroo, mira nuestra <ArticleLink to="glucose-apps-compared">comparativa de apps de Libre para iPhone</ArticleLink>.
+
+<AppCta title="Tu glucosa en el iPhone sin compilar nada" />
+
+## Si vienes de Android: cómo empezar con Dulce
+
+<Steps>
+<Step title="Inicia el sensor con la app de Abbott o de Dexcom">
+En el iPhone (o en el móvil de quien lleva el sensor), usa FreeStyle Libre 3, LibreLink o Libre para un Libre, o la app de Dexcom para un Dexcom. Esa app se queda a cargo del sensor y de sus alarmas.
+</Step>
+<Step title="Activa el compartir">
+Con un Libre, invita a una cuenta de LibreLinkUp desde la app de Libre y acepta la invitación en LibreLinkUp. Con un Dexcom, activa Compartir en la app de Dexcom con al menos un seguidor. La <PageLink to="/setup">guía de configuración</PageLink> tiene todos los pasos.
+</Step>
+<Step title="Inicia sesión en Dulce">
+Instala Dulce y entra con esa cuenta de LibreLinkUp, o con tu propia cuenta de Dexcom si usas Dexcom Share.
+</Step>
+<Step title="Añade los widgets y el reloj">
+Añade los widgets desde la pantalla de inicio y, con Pro, activa la Live Activity y la app del Apple Watch.
+</Step>
+</Steps>
+
+Las lecturas llegan a Dulce después de pasar por los servidores de Abbott o Dexcom, así que hay un pequeño retraso frente a una app con Bluetooth directo. Si dejan de llegar, mira <ArticleLink to="librelinkup-not-working">LibreLinkUp no funciona</ArticleLink>.
+
+<Callout type="warning">
+Dulce no es un producto sanitario y no sustituye las alarmas de tu sensor. Las decisiones de tratamiento se toman con la lectura de tu sensor y tu equipo médico.
+</Callout>
+
+## Fuentes
+
+- Documentación de xDrip4iOS. *Install xDrip4iOS* e *Install with TestFlight*. [xdrip4ios.readthedocs.io](https://xdrip4ios.readthedocs.io/en/latest/install/install/)
+- Apple App Store. *Zukka* (ficha de EE. UU.: basada en xDrip4iOS). [apps.apple.com](https://apps.apple.com/us/app/zukka/id6743448282)
+- Juggluco. *Juggluco* (sensores compatibles, Android y Wear OS). [juggluco.nl](https://www.juggluco.nl/Juggluco/index.html)
+- Código fuente y README de Juggluco. [github.com/j-kaltes/Juggluco](https://github.com/j-kaltes/Juggluco)
+- Abbott. *Preguntas frecuentes de LibreLinkUp*. [librelinkup.com](https://www.librelinkup.com/faqs)
+- Apple App Store. *Dulce: Glucose at a Glance*. [apps.apple.com](https://apps.apple.com/app/id6770694596)
