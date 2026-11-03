@@ -180,6 +180,14 @@ questions around them. Being the best answer means the product actually does it 
       check: `/en` home still "Crawled - currently not indexed" (last crawl 2026-08-11) though tags and status are fine;
       links pointing at `/en` are the lever.
 
+- [x] 2026-11-03: English is the default locale at `/` (Spanish moved to `/es`). Why: English pages already got the
+      most clicks (29 of 82, Oct 4 - Nov 1) and `/en` was "crawled, not indexed"; the root has the domain's authority.
+      Old Spanish root URLs 308 to `/es/...` (proxy.ts), `/en/*` 308 to `/*` (next.config.ts). First visits to
+      pages without a per-language slug (home, setup, pro, tools, status, legal, `/f/*`) follow the NEXT_LOCALE
+      cookie (language switcher) then the browser's Accept-Language; articles and author pages are never redirected.
+      After deploy: resubmit the sitemap in Search Console, run `npm run indexnow`, watch Coverage for
+      "Page with redirect" on the old Spanish URLs (expected) and Spanish clicks for ~4 weeks.
+
 ## Next for Claude (in order)
 
 0. **1.0.4 on the website** (done 2026-10-25, owner decision to publish before approval; app live 2026-10-27):

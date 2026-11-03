@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function GlobalNotFound() {
   return (
-    <html lang="es">
+    <html lang="en">
       <body
         style={{
           fontFamily: "system-ui, -apple-system, sans-serif",
@@ -18,10 +18,10 @@ export default function GlobalNotFound() {
       >
         <div style={{ maxWidth: 480, textAlign: "center" }}>
           <h1 style={{ fontSize: "2rem", fontWeight: 700, marginBottom: "0.5rem" }}>
-            Página no encontrada
+            Page not found
           </h1>
           <p style={{ color: "#cfc6bd", marginBottom: "1.5rem" }}>
-            El enlace que has seguido es incorrecto o la página ha sido movida.
+            The link you followed is wrong or the page has moved.
           </p>
           <Link
             href="/"
@@ -35,7 +35,7 @@ export default function GlobalNotFound() {
               fontWeight: 600,
             }}
           >
-            Volver al inicio
+            Back to home
           </Link>
         </div>
       </body>

@@ -12,7 +12,7 @@ cp .env.example .env.local   # fill in Supabase + (optional) Resend keys
 npm run dev
 ```
 
-Open <http://localhost:3000>. Spanish (default) at `/`, the other languages at `/en`, `/de`, `/fr`, `/it`.
+Open <http://localhost:3000>. English (default) at `/`, the other languages at `/es`, `/de`, `/fr`, `/it`.
 
 ## Scripts
 

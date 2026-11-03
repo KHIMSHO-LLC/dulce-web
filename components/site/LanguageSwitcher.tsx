@@ -3,10 +3,11 @@
 import { useLocale, useTranslations } from "next-intl";
 import { useTransition } from "react";
 import { useRouter, usePathname } from "@/i18n/navigation";
-import { locales } from "@/i18n/routing";
+import { defaultLocale, locales } from "@/i18n/routing";
+import { rememberLocale } from "@/lib/localeCookie";
 import { cn } from "@/lib/utils/cn";
 
-/** Quiet text toggles, ES, EN and DE. The active one is ink, the other mute. */
+/** Quiet text toggles, one per language. The active one is ink, the other mute. */
 export function LanguageSwitcher({ className, tone = "dark" }: { className?: string; tone?: "dark" | "light" }) {
   const t = useTranslations("languageSwitcher");
   const locale = useLocale();
@@ -16,11 +17,12 @@ export function LanguageSwitcher({ className, tone = "dark" }: { className?: str
 
   const onChange = (next: (typeof locales)[number]) => {
     if (next === locale) return;
+    rememberLocale(next);
     // Dynamic routes (articles, authors) have a different slug per language,
     // so the router can't build the target. The page's own hreflang link knows it.
     if (pathname.includes("[")) {
       const alt = document.querySelector<HTMLLinkElement>(`link[rel="alternate"][hreflang="${next}"]`);
-      const blog = next === "es" ? "/blog" : `/${next}/blog`;
+      const blog = next === defaultLocale ? "/blog" : `/${next}/blog`;
       window.location.assign(alt ? new URL(alt.href).pathname : blog);
       return;
     }

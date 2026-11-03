@@ -30,7 +30,7 @@ Made by someone who lives with T1D, for people with T1D wherever they live. Neve
 - Live today: FreeStyle Libre 2 and 3 via LibreLinkUp, Apple Health (read-only), Apple Watch app with complications, Lock Screen Live Activity and Dynamic Island, home-screen widgets, low/high alerts with custom thresholds, quiet hours and a stronger alarm for very low glucose, logbook (carbs, insulin, glucose, quick slider), trends over 7/14/30/90 days (time in range, average, GMI), followers by invite link with nudges and a one-tap "I'm OK" reply, revocable anytime.
 - Live since 1.0.4 (2026-10-27): Dexcom G6, G7 and ONE+ via Dexcom Share.
 - Coming, not live: Nightscout, Android (waitlist only).
-- The app UI is available in Spanish, English, German, French and Italian. The site is Spanish at `/` and English, German, French and Italian at `/en`, `/de`, `/fr`, `/it`.
+- The app UI is available in Spanish, English, German, French and Italian. The site is English at `/` and Spanish, German, French and Italian at `/es`, `/de`, `/fr`, `/it` (Spanish was at `/` until 2026-11-03). First visits to pages without a per-language slug follow the browser language.
 - Pricing: free download; Dulce Pro (Apple Watch, family sharing and more) with a 14-day free trial. Do not state Pro prices on the site.
 - Requires iPhone with iOS 17 or later; Dynamic Island needs iPhone 14 Pro or later.
 - Not a medical device. It does not diagnose, treat or replace the CGM's own alarms or the care team's judgment.

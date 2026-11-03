@@ -576,7 +576,7 @@
       "**Do** set display lines in Archivo 300 at wdth 104 with -0.035em tracking, two short lines, revealed word by word.",
       "**Do** use tabular Archivo 600 at wdth 76 for figures that are data.",
       "**Do** make every control a pill and every tile 28px with a 1px white hairline.",
-      "**Do** depict the app with its real icon and iOS system type, in the visitor's locale (Spanish at `/`, English at `/en`).",
+      "**Do** depict the app with its real icon and iOS system type, in the visitor's locale (English at `/`, Spanish at `/es`).",
       "**Do** provide a static device frame for every 3D moment, and a resting state for every scroll animation under reduced motion.",
       "**Do** keep pinned copy clear of the bottom nav band (108px on mobile).",
       "**Do** use the official App Store badge unaltered, and show QR codes on an Ink plate."

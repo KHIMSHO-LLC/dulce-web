@@ -1,12 +1,13 @@
 import { defineRouting } from "next-intl/routing";
 
-export const locales = ["es", "en", "de", "fr", "it"] as const;
+export const locales = ["en", "es", "de", "fr", "it"] as const;
 export type AppLocale = (typeof locales)[number];
-export const defaultLocale: AppLocale = "es";
+export const defaultLocale: AppLocale = "en";
 
 /**
  * Localized path slugs.
- * Spanish (default) at `/`, the other languages under `/<locale>/...` (en, de, fr, it).
+ * English (default) at `/`, the other languages under `/<locale>/...` (es, de, fr, it).
+ * Until 2026-11-03 Spanish was at `/`; proxy.ts sends those old Spanish URLs to `/es/...`.
  *
  * The marketing story is a single landing page. Besides it: functional routes
  * something outside the site depends on (the App Store links the privacy
@@ -18,8 +19,9 @@ export const routing = defineRouting({
   locales,
   defaultLocale,
   localePrefix: "as-needed",
-  // `/` always serves Spanish. Users opt in to another language via the
-  // language switcher (or by visiting `/en`, `/de`). Keeps canonical URLs stable for SEO.
+  // Language detection is done by proxy.ts (NEXT_LOCALE cookie, then the
+  // browser's languages) and only on pages that have no per-language slug, so
+  // an article a search engine sent someone to is never swapped for another one.
   localeDetection: false,
   pathnames: {
     "/": "/",

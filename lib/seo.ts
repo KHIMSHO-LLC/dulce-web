@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { locales, routing, type AppLocale, type AppPathname } from "@/i18n/routing";
 import { SITE_URL } from "./site";
 
-/** Prefix a locale-relative path: es at root, the others under /<locale>. */
+/** Prefix a locale-relative path: the default locale (en) at root, the others under /<locale>. */
 export function withLocalePrefix(locale: AppLocale, path: string): string {
   if (locale === routing.defaultLocale) return path;
   return path === "/" ? `/${locale}` : `/${locale}${path}`;
 }
 
-/** The public path of an internal route in a locale (es at root, other languages under /<locale>). */
+/** The public path of an internal route in a locale (en at root, other languages under /<locale>). */
 export function localizedPath(
   locale: AppLocale,
   internal: AppPathname,
