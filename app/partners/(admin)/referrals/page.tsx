@@ -28,6 +28,7 @@ import {
 } from "../../api";
 import { useAdmin } from "../../AdminGate";
 import { PartnerCard } from "../../PartnerCard";
+import { OfferCodeHelp } from "../../OfferCodeHelp";
 import { PartnerForm } from "../../PartnerForm";
 import { eur, pct } from "../../format";
 
@@ -200,6 +201,7 @@ export default function PartnersPage() {
           <p className="mt-1 text-label text-muted">Influencers, their codes, who converts best and what you owe them.</p>
         </div>
         <div className="flex gap-2">
+          <OfferCodeHelp />
           <button
             type="button"
             onClick={() => void loadAll(adminKey)}
