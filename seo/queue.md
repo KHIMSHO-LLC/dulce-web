@@ -2,7 +2,7 @@
 
 Owner-requested jobs. The daily run does the top unchecked item, one per run, then ticks it here.
 
-- [ ] **"Libre 3 signal loss / alarms unavailable on iPhone" article** (found 2026-11-04, Google autocomplete: "libre 3 signal
+- [x] **"Libre 3 signal loss / alarms unavailable on iPhone" article** (done 2026-11-04, `libre-signal-loss`) (found 2026-11-04, Google autocomplete: "libre 3 signal
   loss iphone", "libre 3 signal loss fix", "libre 3 alarms unavailable iphone", "libre 3 not connecting to iphone",
   "librelinkup not sending notifications"). The sensor-phone side; `librelinkup-not-working` covers the follower side.
   Facts already checked on Abbott's US FAQ (cite them): Signal Loss alarm = no sensor-app communication for 20 minutes;
