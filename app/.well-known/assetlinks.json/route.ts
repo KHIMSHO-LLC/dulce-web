@@ -11,19 +11,20 @@
  * Fingerprints:
  *   - debug: the local ~/.android/debug.keystore on the dev machine, so
  *     emulator debug builds verify during development.
- *   - PLACEHOLDER_PLAY_APP_SIGNING: replace with the "App signing key
- *     certificate — SHA-256" from Play Console → Setup → App signing after the
- *     first upload (Play re-signs release builds with its own key). Until then
- *     App Links won't verify for store builds — the dulce:// scheme fallback
- *     still works.
- *   - If EAS preview APKs (EAS-managed keystore) need to verify too, add the
- *     SHA-256 from `eas credentials -p android`.
+ *   - Play App Signing key: Play Console → App integrity → App signing →
+ *     "App signing key certificate". Play re-signs every store build with it.
+ *     If the key is ever rotated, add the new one and keep the old one while
+ *     installs signed with it remain.
+ *   - EAS upload key: signs builds installed straight from EAS (preview APKs,
+ *     local release builds), which Play doesn't re-sign.
  */
 const FINGERPRINTS = [
   // Local debug keystore (dev machine)
   "05:58:10:E1:DF:A3:D4:E7:23:51:41:F9:46:F9:CF:7F:6D:40:E3:BB:6B:F2:89:CD:33:96:F3:55:BE:42:FE:23",
-  // TODO(B0): Play App Signing key — replace after first Play Console upload.
-  "PLACEHOLDER_PLAY_APP_SIGNING_SHA256",
+  // Play App Signing key (store builds)
+  "BC:DA:F0:9A:82:79:8C:9B:57:B1:ED:F9:BE:8E:63:23:E6:66:F9:5A:AB:D9:94:D0:13:2B:45:FA:72:5E:72:69",
+  // EAS upload key (builds installed from EAS)
+  "21:63:FF:C6:04:20:5C:CF:7D:EB:4D:3C:1E:06:2E:42:C3:9F:5D:79:77:F2:D6:C4:30:0D:8C:A1:39:3B:54:1D",
 ];
 
 const ASSET_LINKS = [
