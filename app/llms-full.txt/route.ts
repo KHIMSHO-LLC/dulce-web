@@ -5,7 +5,7 @@
  * content files the pages render. /llms.txt is the short index; this is the
  * long form (llmstxt.org convention).
  */
-import { ARTICLES } from "@/content/articles";
+import { ARTICLES, isTranslated } from "@/content/articles";
 import { locales, type AppLocale } from "@/i18n/routing";
 import { articleMarkdown, sitePagesMarkdown, toolMarkdown } from "@/lib/markdown";
 import { TOOLS } from "@/lib/tools";
@@ -13,14 +13,14 @@ import { absoluteUrl } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
-const LANGUAGE: Record<AppLocale, string> = { es: "Spanish", en: "English", de: "German", fr: "French", it: "Italian" };
+const LANGUAGE: Record<AppLocale, string> = { es: "Spanish", en: "English", de: "German", fr: "French", it: "Italian", fi: "Finnish", nl: "Dutch" };
 
 export async function GET() {
   const order: AppLocale[] = ["en", ...locales.filter((l) => l !== "en")];
   const sections = await Promise.all(
     order.map(
       async (l) =>
-        `# Dulce in ${LANGUAGE[l]}\n\n${await sitePagesMarkdown(l)}\n\n${TOOLS.map((t) => toolMarkdown(t.path, t.name, l)).join("\n\n")}\n\n# Guides in ${LANGUAGE[l]}\n\n${ARTICLES.map((a) => articleMarkdown(a, l).replace(/^# /, "## ").replace(/\n## /g, "\n### ")).join("\n---\n\n")}`,
+        `# Dulce in ${LANGUAGE[l]}\n\n${await sitePagesMarkdown(l)}\n\n${TOOLS.map((t) => toolMarkdown(t.path, t.name, l)).join("\n\n")}\n\n# Guides in ${LANGUAGE[l]}\n\n${ARTICLES.filter((a) => isTranslated(a, l)).map((a) => articleMarkdown(a, l).replace(/^# /, "## ").replace(/\n## /g, "\n### ")).join("\n---\n\n")}`,
     ),
   );
   const body = `# Dulce: full site text

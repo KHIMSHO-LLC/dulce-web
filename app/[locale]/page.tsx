@@ -1,3 +1,4 @@
+import { screenLocale } from "@/components/screens/strings";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { hasLocale } from "next-intl";
@@ -86,6 +87,26 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Diario di carboidrati, insulina e glicemia",
     "Andamento: tempo nel range, glicemia media e GMI da 7 a 90 giorni",
   ],
+  fi: [
+    "Reaaliaikainen glukoosi FreeStyle Libre 2- ja Libre 3 -sensoreista (LibreLinkUp) sekä Dexcom G6-, G7- ja ONE+ -sensoreista (Dexcom Share)",
+    "Live Activity lukitusnäytöllä ja Dynamic Islandissa, päivittyy minuutin välein",
+    "Widgetit koti- ja lukitusnäytölle sekä StandByhin",
+    "Apple Watch -sovellus komplikaatioineen",
+    "Hälytykset matalista ja korkeista arvoista, kriittinen hälytys vakavasta hypoglykemiasta ja hiljaiset tunnit",
+    "Perheenjäsenet seuraajiksi kutsulinkillä, omine hälytyksineen ja yhden napautuksen viesteineen",
+    "Päiväkirja hiilihydraateille, insuliinille ja glukoosille",
+    "Trendit: aika tavoitealueella, keskiglukoosi ja GMI 7–90 päivän ajalta",
+  ],
+  nl: [
+    "Realtime glucose van de FreeStyle Libre 2 en Libre 3 (LibreLinkUp) en de Dexcom G6, G7 en ONE+ (Dexcom Share)",
+    "Live Activity op het toegangsscherm en in het Dynamic Island, elke minuut bijgewerkt",
+    "Widgets voor het beginscherm, het toegangsscherm en StandBy",
+    "Apple Watch-app met complicaties",
+    "Meldingen bij lage en hoge waarden, een kritieke melding bij een ernstige hypo en stille uren",
+    "Familieleden als volgers via een uitnodigingslink, met eigen meldingen en berichten met één tik",
+    "Logboek voor koolhydraten, insuline en glucose",
+    "Trends: tijd binnen bereik, gemiddelde glucose en GMI over 7 tot 90 dagen",
+  ],
 };
 
 const AUDIENCE: Record<AppLocale, string> = {
@@ -94,6 +115,8 @@ const AUDIENCE: Record<AppLocale, string> = {
   de: "Menschen mit Diabetes, die einen FreeStyle Libre oder einen Dexcom tragen, und ihre Familien: Eltern von Kindern mit Typ-1-Diabetes, Partner und Angehörige",
   fr: "Personnes diabétiques qui portent un FreeStyle Libre ou un Dexcom, et leurs familles : parents d'enfants atteints de diabète de type 1, conjoints et aidants",
   it: "Persone con diabete che usano un FreeStyle Libre o un Dexcom e le loro famiglie: genitori di bambini con diabete di tipo 1, partner e caregiver",
+  fi: "Diabeetikot, joilla on FreeStyle Libre tai Dexcom, ja heidän perheensä: tyypin 1 diabetesta sairastavien lasten vanhemmat, kumppanit ja omaishoitajat",
+  nl: "Mensen met diabetes die een FreeStyle Libre of Dexcom dragen, en hun familie: ouders van kinderen met diabetes type 1, partners en mantelzorgers",
 };
 
 function appSchema(locale: AppLocale, description: string) {
@@ -145,7 +168,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       {/* Same items the FAQ section renders (home.faq.items), so markup and visible text match. */}
       <JsonLd data={faqSchema(faqItems.map((i) => ({ question: i.q, answer: i.a })), loc)} />
       <Preloader />
-      <Stage locale={loc} />
+      <Stage locale={screenLocale(loc)} />
 
       {/* The phone's journey: hero 100vh + chapters 180/190/190vh (JOURNEY_VH in Stage.tsx). */}
       <div id="journey" className="relative">
@@ -156,7 +179,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           mood="dusk"
           title={t("lock.title")}
           body={t("lock.body")}
-          locale={loc}
+          locale={screenLocale(loc)}
           screen="lock"
           screenAlt={t("lock.alt")}
           extra={
@@ -173,7 +196,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           mood="night"
           title={t("alerts.title")}
           body={t("alerts.body")}
-          locale={loc}
+          locale={screenLocale(loc)}
           screen="alerts"
           screenAlt={t("alerts.alt")}
           progress={1}
@@ -186,14 +209,14 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           mood="deep"
           title={t("standby.title")}
           body={t("standby.body")}
-          locale={loc}
+          locale={screenLocale(loc)}
           screen="standby"
           screenAlt={t("standby.alt")}
         />
       </div>
 
       <WristChip
-        locale={loc}
+        locale={screenLocale(loc)}
         before={t("watch.before")}
         after={t("watch.after")}
         title={t("watch.title")}
@@ -209,7 +232,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         <Reveal className="container-page">
           <Split id="day-title" text={t("day.title")} className="type-display text-[clamp(2.5rem,6vw,6rem)] text-ink" />
           <div data-fade className="mt-12 md:mt-16">
-            <DayAccordion locale={loc} items={dayItems} altTemplate={t.raw("day.alt") as string} />
+            <DayAccordion locale={screenLocale(loc)} items={dayItems} altTemplate={t.raw("day.alt") as string} />
           </div>
         </Reveal>
       </section>

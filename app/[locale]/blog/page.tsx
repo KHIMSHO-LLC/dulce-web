@@ -7,7 +7,7 @@ import { routing, type AppLocale } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { ArticleCard } from "@/components/article/ArticleCard";
-import { articlesNewestFirst, type ArticleCategory } from "@/content/articles";
+import { articlesNewestFirst, isTranslated, type ArticleCategory } from "@/content/articles";
 import { articleUrl } from "@/lib/articles";
 import { TOOL_COPY } from "@/lib/tools";
 import { absoluteUrl, localizedPath, seoFor } from "@/lib/seo";
@@ -30,7 +30,9 @@ export default async function BlogIndex({ params }: PageProps<"/[locale]/blog">)
   const loc = locale as AppLocale;
   const t = await getTranslations({ locale: loc, namespace: "blog" });
   const url = absoluteUrl(localizedPath(loc, "/blog"));
-  const articles = articlesNewestFirst().sort((a, b) => ORDER.indexOf(a.category) - ORDER.indexOf(b.category));
+  const articles = articlesNewestFirst()
+    .filter((a) => isTranslated(a, loc))
+    .sort((a, b) => ORDER.indexOf(a.category) - ORDER.indexOf(b.category));
 
   return (
     <>

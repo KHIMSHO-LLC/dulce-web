@@ -7,12 +7,13 @@ import { Split } from "@/components/motion/Split";
 import { DeviceFrame } from "@/components/screens/DeviceFrame";
 import { ScreenCanvas } from "@/components/screens/ScreenCanvas";
 import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
+import type { AppLocale } from "@/i18n/routing";
 import { DownloadButton } from "@/components/site/DownloadButton";
 import { DropMark } from "@/components/site/DropMark";
 import { LanguageSwitcher } from "@/components/site/LanguageSwitcher";
 import { QrButton } from "@/components/site/QrButton";
 import { SECTION } from "@/lib/site";
-import type { ScreenLocale } from "@/components/screens/strings";
+import { screenLocale } from "@/components/screens/strings";
 
 /**
  * First viewport, composed like the reference: headline top-left, wordmark
@@ -21,7 +22,8 @@ import type { ScreenLocale } from "@/components/screens/strings";
  * three) stands in the centre column, leaning, running off the bottom edge.
  */
 export async function Hero() {
-  const locale = (await getLocale()) as ScreenLocale;
+  const siteLocale = (await getLocale()) as AppLocale;
+  const locale = screenLocale(siteLocale);
   const t = await getTranslations("home.hero");
   const headline = `${t("line1")}\n${t("line2")}`;
   const glyphAfter = Number(t.raw("glyphAfter"));
@@ -79,7 +81,7 @@ export async function Hero() {
                 {t("made")}
               </p>
               <div className="mt-4" data-depth="1">
-                <AppStoreBadge campaign="web_hero" locale={locale} className="origin-left scale-[0.84]" />
+                <AppStoreBadge campaign="web_hero" locale={siteLocale} className="origin-left scale-[0.84]" />
               </div>
             </TiltCard>
 

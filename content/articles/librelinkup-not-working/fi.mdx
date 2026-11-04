@@ -1,0 +1,74 @@
+LibreLinkUp on Abbottin sovellus toisen ihmisen glukoosin seuraamiseen, ja samalla ovi, jonka kautta tietosi kulkevat Dulcen kaltaisiin sovelluksiin. Kun se ei toimi, syy on lähes aina yksi kolmesta: et pääse kirjautumaan, kirjaudut mutta et näe tietoja, tai tiedot lakkaavat päivittymästä. Käydään ne läpi yksi kerrallaan.
+
+<Callout>
+Tarkista ensin, onko palvelu itse alhaalla, <PageLink to="/librelinkup-status">LibreLinkUpin reaaliaikaisesta tilasta</PageLink>, joka mitataan minuutin välein.
+</Callout>
+
+## 1. En pääse kirjautumaan LibreLinkUpiin
+
+**Käytätkö oikeaa tiliä?** Tämä on ylivoimaisesti yleisin virhe. **LibreLink** (sovellus, jolla luet sensoria) ja **LibreLinkUp** (seuraajan sovellus) ovat erillisiä sovelluksia erillisillä tileillä, vaikka käyttäisit samaa sähköpostia. Jos salasanasi "ei toimi", syötät todennäköisesti LibreLink-salasanasi LibreLinkUpiin. Selitämme sen sivulla <PageLink to="/setup">LibreLink vai LibreLinkUp</PageLink>. Myös LibreView-kirjautumisesi on LibreLink-tili, joten sekään ei toimi tässä: katso <ArticleLink to="libreview">mikä LibreView on</ArticleLink>.
+
+**Oletko yrittänyt monta kertaa peräkkäin?** Abbottin palvelimet estävät toistuvat kirjautumiset hetkeksi. Odota minuutti ennen kuin yrität uudelleen.
+
+**Onko Abbott muuttanut ehtojaan?** Aika ajoin LibreLinkUp pyytää hyväksymään uudet ehdot. Avaa LibreLinkUp-sovellus, kirjaudu ja hyväksy ne.
+
+**Onko tili toisesta maasta?** Abbottin mukaan LibreLinkUp-yhteydet toimivat vain saman alueen käyttäjien välillä.
+
+## 2. Kirjaudun, mutta en näe tietoja
+
+LibreLinkUp-tilisi toimii, mutta kukaan ei vielä jaa sille mitään. Sensoria käyttävän ihmisen on kutsuttava se:
+
+<Steps>
+<Step title="Avaa sensorin Libre-sovellus">
+Avaa sensoria käyttävän ihmisen puhelimessa FreeStyle LibreLink tai FreeStyle Libre 3.
+</Step>
+<Step title="Mene kohtaan Yhdistetyt sovellukset">
+Avaa valikosta yhdistettyjen sovellusten osio ja valitse **LibreLinkUp**.
+</Step>
+<Step title="Lisää yhteys">
+Kirjoita sama sähköpostiosoite, jolla LibreLinkUp-tili luotiin. Abbott vaatii tarkan vastaavuuden.
+</Step>
+<Step title="Hyväksy kutsu">
+Avaa LibreLinkUp sillä tilillä ja hyväksy kutsu. Lukemat alkavat tulla siitä lähtien.
+</Step>
+</Steps>
+
+Jos olit jo tehnyt tämän etkä silti näe mitään, tarkista nämä tapaukset, joita Abbottin mukaan **ei jaeta**:
+
+- Sensori **käynnistettiin lukulaitteella** tai toisella puhelimella.
+- Lukemat otettiin **skannaamalla lukulaitteella**, ei puhelimella.
+- Käytät Libre-sovelluksen **erikoisversiota**, joka ei ole yhteensopiva LibreLinkUpin kanssa.
+
+## 3. Tiedot viivästyvät tai jäätyvät
+
+Lukemat kulkevat näin: sensori → Libre-sovellus puhelimessa → Abbottin pilvi → LibreLinkUp. Jos jokin vaihe katkeaa, näkemäsi lakkaa liikkumasta.
+
+- **Sensorin puhelin tarvitsee internetin.** Ilman mobiilidataa tai wifiä lukemat jäävät siihen puhelimeen. Kun yhteys palaa, käyrä täydentyy, mutta ilmoitukset voivat näyttää vain viimeisimmän lukeman.
+- **Sensorin on oltava lähellä puhelinta.** FreeStyle Libre 3:lla lukemat tulevat vain, kun sensori on puhelimen Bluetooth-kantaman sisällä.
+- **Älä sulje Libre-sovellusta väkisin.** Jos pyyhkäiset sen pois, iOS voi lakata herättämästä sitä ja se lakkaa lähettämästä lukemia.
+- **Virransäästötila** ja Libre-sovelluksen **Päivitys taustalla** -asetuksen poistaminen hidastavat myös lähettämistä.
+- **Myös seuraaja tarvitsee internetin**, tietenkin.
+
+<Callout>
+Abbott huomauttaa, ettei signaalin katkeamisen hälytyksiäkään jaeta. Jos sensori lakkaa puhumasta puhelimelle, perheesi ei saa tietää sitä LibreLinkUpin kautta; he vain eivät näe uusia lukemia.
+</Callout>
+
+## LibreLinkUpin hälytykset eivät soi
+
+- Hälytyksiä on vain **FreeStyle Libre 2:ssa ja Libre 3:ssa**, ja sensoria käyttävän ihmisen on pidettävä ne **päällä omassa Libre-sovelluksessaan**.
+- LibreLinkUpissa jokaisella yhteydellä on omat ilmoitusasetuksensa: tarkista ne.
+- Jos puhelin on äänettömällä, värinällä tai Keskittyminen-tilassa, LibreLinkUp ei pääse sen läpi.
+
+Dulcen hälytykset noudattavat samoja iPhonen ääniasetuksia, paitsi kriittinen hälytys vakavasta hypoglykemiasta: se soi myös äänettömällä ja Älä häiritse -tilassa ja ohittaa Dulcen hiljaiset tunnit ja torkut. Miten ne asetetaan, jotta kuulet ne yöllä, kerrotaan <ArticleLink to="alerts">glukoosihälytysten oppaassa</ArticleLink> (englanniksi).
+
+## Mihin Dulce sopii
+
+Dulce lukee tietosi LibreLinkUpin kautta, joten kaikki yllä oleva koskee myös sitä: jos LibreLinkUp ei saa lukemia, ei Dulcekaan. Erona on, että Dulce kertoo sen selvästi: se näyttää aina, kuinka kauan viimeisestä lukemasta on, ja kirjautuessasi se kertoo, jos käytät väärää tiliä tai jos kukaan ei vielä jaa tilillesi.
+
+<AppCta title="Kokeile Dulcea LibreLinkUp-tililläsi" />
+
+Kun kaikki toimii, voit laittaa glukoosisi <ArticleLink to="widgets">iPhonen widgettiin</ArticleLink> tai jakaa sen enintään kolmelle perheenjäsenelle ilman, että heidän tarvitsee luoda Abbott-tiliä: katso <ArticleLink to="family-sharing">perheen seurannan opas</ArticleLink> (englanniksi).
+
+## Lähde
+
+- Abbott. *LibreLinkUp FAQs*. [librelinkup.com](https://www.librelinkup.com/faqs)

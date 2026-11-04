@@ -1,7 +1,12 @@
 import { defineRouting } from "next-intl/routing";
 
-export const locales = ["en", "es", "de", "fr", "it"] as const;
+export const locales = ["en", "es", "de", "fr", "it", "fi", "nl"] as const;
 export type AppLocale = (typeof locales)[number];
+/** Languages every article and tool text is written in. fi and nl (added 2026-11-04) have the site
+ * chrome, home, setup, tools and legal fallback; their articles appear as they get translated. */
+export const CORE_LOCALES = ["en", "es", "de", "fr", "it"] as const;
+export type CoreLocale = (typeof CORE_LOCALES)[number];
+export type ExtraLocale = Exclude<AppLocale, CoreLocale>;
 export const defaultLocale: AppLocale = "en";
 
 /**
@@ -31,6 +36,8 @@ export const routing = defineRouting({
       de: "/legal/privacy",
       fr: "/legal/privacy",
       it: "/legal/privacy",
+      fi: "/legal/privacy",
+      nl: "/legal/privacy",
     },
     "/legal/terms": {
       es: "/legal/terminos",
@@ -38,6 +45,8 @@ export const routing = defineRouting({
       de: "/legal/terms",
       fr: "/legal/terms",
       it: "/legal/terms",
+      fi: "/legal/terms",
+      nl: "/legal/terms",
     },
     "/legal/disclaimer": {
       es: "/legal/aviso-medico",
@@ -45,6 +54,8 @@ export const routing = defineRouting({
       de: "/legal/disclaimer",
       fr: "/legal/disclaimer",
       it: "/legal/disclaimer",
+      fi: "/legal/disclaimer",
+      nl: "/legal/disclaimer",
     },
     "/legal/cookies": "/legal/cookies",
     // Unlocalized on purpose: the app deep-links here with a fixed `/setup`
@@ -59,6 +70,8 @@ export const routing = defineRouting({
       de: "/librelinkup-status",
       fr: "/statut-librelinkup",
       it: "/stato-librelinkup",
+      fi: "/librelinkup-tila",
+      nl: "/librelinkup-storing",
     },
     // Articles: one route, the slug is localized per article (content/articles.ts).
     "/blog": "/blog",
@@ -69,6 +82,8 @@ export const routing = defineRouting({
       de: "/autoren/[author]",
       fr: "/auteurs/[author]",
       it: "/autori/[author]",
+      fi: "/kirjoittajat/[author]",
+      nl: "/auteurs/[author]",
     },
     "/tools/glucose-converter": {
       es: "/herramientas/conversor-glucosa-mg-dl-mmol-l",
@@ -76,6 +91,8 @@ export const routing = defineRouting({
       de: "/tools/blutzucker-umrechner-mg-dl-mmol-l",
       fr: "/outils/convertisseur-glycemie-mg-dl-mmol-l",
       it: "/strumenti/convertitore-glicemia-mg-dl-mmol-l",
+      fi: "/tyokalut/verensokeri-muunnin-mg-dl-mmol-l",
+      nl: "/tools/bloedsuiker-omrekenen-mg-dl-mmol-l",
     },
     "/tools/sensor-end-date": {
       es: "/herramientas/calculadora-fin-sensor-libre",
@@ -83,6 +100,8 @@ export const routing = defineRouting({
       de: "/tools/libre-sensor-ablauf-rechner",
       fr: "/outils/calculateur-fin-capteur-libre",
       it: "/strumenti/calcolatore-scadenza-sensore-libre",
+      fi: "/tyokalut/libre-sensorin-vaihtopaiva-laskuri",
+      nl: "/tools/libre-sensor-einddatum-berekenen",
     },
     "/tools/a1c-calculator": {
       es: "/herramientas/calculadora-hba1c-glucosa-media",
@@ -90,13 +109,17 @@ export const routing = defineRouting({
       de: "/tools/hba1c-rechner-durchschnittlicher-blutzucker",
       fr: "/outils/calculateur-hba1c-glycemie-moyenne",
       it: "/strumenti/calcolatore-hba1c-glicemia-media",
+      fi: "/tyokalut/hba1c-laskuri-keskiverensokeri",
+      nl: "/tools/hba1c-berekenen-gemiddelde-glucose",
     },
   },
 });
 
 export type AppPathname = keyof typeof routing.pathnames;
 
-/** Every language has its legal texts (components/legal). */
-export const LEGAL_LOCALES: readonly AppLocale[] = locales;
+/** Languages with their own legal texts (sitemap). fi and nl show the English text with a notice, noindex. */
+export const LEGAL_LOCALES: readonly AppLocale[] = CORE_LOCALES;
 /** Legal texts translated from the Spanish one, which prevails (they show a notice saying so). */
 export const TRANSLATED_LEGAL_LOCALES: readonly AppLocale[] = ["de", "fr", "it"];
+/** Languages without their own legal texts: their legal pages show the English text (see app/[locale]/legal). */
+export const ENGLISH_LEGAL_LOCALES: readonly AppLocale[] = ["fi", "nl"];

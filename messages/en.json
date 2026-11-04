@@ -265,7 +265,9 @@
     "en": "English",
     "de": "German",
     "fr": "French",
-    "it": "Italian"
+    "it": "Italian",
+    "fi": "Finnish",
+    "nl": "Dutch"
   },
   "legal": {
     "lastUpdated": "Last updated: {date}",

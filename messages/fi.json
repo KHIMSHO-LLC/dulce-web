@@ -1,0 +1,567 @@
+{
+  "metadata": {
+    "siteName": "Dulce",
+    "defaultTitle": "Dulce: FreeStyle Libre -glukoosi Apple Watchissa ja lukitusnäytöllä",
+    "defaultDescription": "FreeStyle Libre -glukoosisi lukitusnäytöllä, Dynamic Islandissa ja Apple Watchissa. Hälytykset, päiväkirja ja perheen seuranta. Tehnyt tyypin 1 diabeetikko.",
+    "keywords": "FreeStyle Libre Apple Watch, LibreLinkUp Apple Watch sovellus, glukoosi lukitusnäyttö widget, verensokeri Live Activity, Dynamic Island glukoosi, jaa verensokeri perheen kanssa, tyypin 1 diabetes sovellus, CGM widget iPhone, aika tavoitealueella, diabetespäiväkirja"
+  },
+  "nav": {
+    "menu": "Valikko",
+    "openMenu": "Avaa valikko",
+    "closeMenu": "Sulje valikko",
+    "download": "Lataa",
+    "home": "Etusivu",
+    "skipToContent": "Siirry sisältöön",
+    "sections": {
+      "lockScreen": "Lukitusnäyttö",
+      "alerts": "Hälytykset",
+      "standby": "Yöpöytä",
+      "watch": "Apple Watch",
+      "family": "Perhe",
+      "day": "Päiväsi",
+      "faq": "Kysymykset"
+    },
+    "help": "Ohjeet",
+    "setup": "LibreLinkUpin käyttöönotto",
+    "contact": "Kirjoita meille",
+    "legal": "Juridiset tiedot",
+    "privacy": "Tietosuoja",
+    "terms": "Käyttöehdot",
+    "disclaimer": "Lääketieteellinen vastuuvapaus",
+    "cookies": "Evästeet",
+    "language": "Kieli",
+    "guides": "Oppaat",
+    "tools": "Laskurit"
+  },
+  "preloader": {
+    "label": "Ladataan Dulcea"
+  },
+  "home": {
+    "title": "Libre- ja Dexcom-glukoosi Apple Watchissa ja lukitusnäytöllä",
+    "description": "Dulce tuo FreeStyle Libre- tai Dexcom-glukoosisi lukitusnäytölle, Dynamic Islandiin, StandByhin, Apple Watchiin ja perheesi puhelimeen. Ilmainen App Storessa.",
+    "hero": {
+      "line1": "Verensokerisi,",
+      "line2": "aina näkyvillä.",
+      "glyphAfter": 2,
+      "sub": "Lukemasi lukitusnäytöllä, ranteessa ja perheesi puhelimessa. Avaamatta sovellusta.",
+      "cta": "Lataa ilmaiseksi",
+      "qrOpen": "Näytä QR-koodi latausta varten",
+      "qrCaption": "Skannaa iPhonella ja lataa Dulce.",
+      "made": "Tehnyt tyypin 1 diabeetikko kaikille, jotka elävät sen kanssa joka päivä.",
+      "watchTile": "Katso Dulce Apple Watchissa",
+      "phoneAlt": "Dulcen aloitusnäkymä, glukoosi tavoitealueella ja viimeisen 12 tunnin käyrä"
+    },
+    "lock": {
+      "title": "Lukemasi\navaamatta lukitusta.",
+      "body": "Live Activity lukitusnäytöllä ja Dynamic Islandissa, päivittyy minuutin välein. Vilkaiset sitä kuin kelloa.",
+      "tags": [
+        "Live Activity",
+        "Dynamic Island",
+        "Widgetit"
+      ],
+      "alt": "Lukitusnäyttö, jossa Dulcen Live Activity näyttää glukoosin tavoitealueella"
+    },
+    "alerts": {
+      "title": "Hälytykset\nomilla ehdoillasi.",
+      "body": "Matalat ja korkeat arvot omilla rajoillasi, hiljaiset tunnit ja kovempi hälytys hyvin matalasta glukoosista, joka soi myös äänettömällä.",
+      "note": "Dulce ei korvaa sensorisi omia hälytyksiä.",
+      "alt": "Lukitusnäyttö aamuyöllä: korkean, matalan ja hyvin matalan glukoosin hälytykset"
+    },
+    "standby": {
+      "title": "Kello 3 yöllä,\nyhdellä silmäyksellä.",
+      "body": "Käännä iPhone kyljelleen latauksen ajaksi, niin StandBy tekee Dulcesta yöpöydän kellon: iso luku ja käyrä vieressä.",
+      "alt": "iPhone StandBy-tilassa, glukoosi isolla ja viimeisten tuntien käyrä"
+    },
+    "watch": {
+      "before": "Dulce",
+      "after": "ranteessasi",
+      "title": "Natiivi Apple Watch -sovellus.",
+      "body": "Komplikaatiot kellotauluun ja haptiset hälytykset. Jos tieto on yli 15 minuuttia vanhaa, näet sen selvästi, et koskaan harhaanjohtavaa lukua.",
+      "alt": "Apple Watch, jonka kellotaululla näkyy Dulcen glukoosi",
+      "pro": "Dulce Prolla, 14 päivän ilmainen kokeilu."
+    },
+    "counter": {
+      "prefix": "Jopa",
+      "value": "1 440",
+      "spoken": "tuhat neljäsataaneljäkymmentä",
+      "unit": "lukemaa päivässä",
+      "body": "Dulce synkronoi glukoosisi minuutin välein, yötä päivää. Sinun tarvitsee vain katsoa.",
+      "note": "FreeStyle Libre 2:n ja 3:n kanssa LibreLinkUpin kautta."
+    },
+    "family": {
+      "lead": "Elätpä tyypin 1 diabeteksen kanssa, hoidat jotakuta joka elää tai haluat vain pysyä lähellä: jokainen näkee sen mitä tarvitsee, ja sinä päätät kuka.",
+      "drag": "Vedä",
+      "prev": "Edellinen",
+      "next": "Seuraava",
+      "cards": [
+        {
+          "title": "Elän T1D:n kanssa",
+          "body": "Lukemasi, trendisi ja päiväkirjasi yhdellä silmäyksellä.",
+          "screen": "home",
+          "alt": "Dulcen aloitusnäkymä"
+        },
+        {
+          "title": "Hoidan lastani",
+          "body": "Hänen hälytyksensä tulevat puhelimeesi, myös aamuyöllä.",
+          "screen": "parentAlert",
+          "alt": "Perheenjäsenen matalan glukoosin hälytys lukitusnäytöllä"
+        },
+        {
+          "title": "Se on kumppanini",
+          "body": "Yksi napautus kysyä. Yksi napautus vastata ”Olen OK”.",
+          "screen": "nudge",
+          "alt": "Vastaanotettu tönäisy ja Olen OK -painike"
+        },
+        {
+          "title": "Vanhempani kaukana",
+          "body": "Kutsu linkillä ja peru pääsy milloin haluat.",
+          "screen": "followers",
+          "alt": "Seuraajaluettelo Dulcessa"
+        }
+      ],
+      "pro": "Perheen seuranta kuuluu Dulce Prohon, 14 päivän ilmainen kokeilu."
+    },
+    "day": {
+      "title": "Päiväsi\nyhdellä silmäyksellä.",
+      "items": [
+        {
+          "key": "logbook",
+          "title": "Päiväkirja",
+          "body": "Hiilihydraatit, insuliini ja glukoosi sekunneissa liukusäätimellä. Yksi aikajana, jota oikeasti pystyy lukemaan."
+        },
+        {
+          "key": "trends",
+          "title": "Trendit",
+          "body": "Aika tavoitealueella, keskiarvo ja GMI 7, 14, 30 tai 90 päivän ajalta, myös aamuittain, iltapäivittäin ja öisin."
+        },
+        {
+          "key": "health",
+          "title": "Apple Terveys",
+          "body": "Dulce lukee Apple Terveys -tietosi, jotta kaikki on samassa paikassa. Vain luku."
+        }
+      ],
+      "alt": "Dulcen näkymä: {name}"
+    },
+    "more": {
+      "title": "Kaikki muu,\npidetty yksinkertaisena.",
+      "family": {
+        "title": "Perheesi mukanasi",
+        "body": "Kutsumasi ihmiset näkevät glukoosisi reaaliajassa ja saavat omat hälytyksensä. He lähettävät tönäisyn, ja sinä vastaat nostamatta puhelinta.",
+        "from": "Äiti",
+        "incoming": "Äiti lähetti sinulle tönäisyn",
+        "question": "Kaikki hyvin?",
+        "reply": "Olen OK",
+        "sent": "Lähetetty. Äiti tietää.",
+        "again": "Toista",
+        "pro": "Dulce Prolla, 14 päivän ilmainen kokeilu."
+      },
+      "widgets": {
+        "title": "Widgetit",
+        "body": "Luku tai käyrä kotinäytöllä."
+      },
+      "tir": {
+        "title": "Aika tavoitealueella",
+        "body": "Tavoitteesi vihreällä.",
+        "low": "Matala",
+        "range": "Tavoitteessa",
+        "high": "Korkea",
+        "sample": "Esimerkkitiedot"
+      },
+      "sensors": {
+        "title": "FreeStyle Libre ja Dexcom",
+        "body": "Yhdistä LibreLinkUp-tilisi tai Dexcom-tilisi, jossa jakaminen (Share) on päällä.",
+        "link": "Näin otat sen käyttöön"
+      },
+      "privacy": {
+        "title": "Tietosi ovat sinun",
+        "body": "Emme myy tietojasi, eikä Dulcessa ole mainoksia. GDPR:n mukainen."
+      }
+    },
+    "founder": {
+      "quote": "Minulla on tyypin 1 diabetes. Kyllästyin avaamaan puhelimen lukituksen, avaamaan sovelluksen ja odottamaan latausta vain nähdäkseni yhden luvun. Joten tein Dulcen itselleni. Sitten perheeni halusi sen myös.",
+      "name": "Giorgio",
+      "role": "Dulcen perustaja"
+    },
+    "faq": {
+      "marquee": "Kysyttävää?",
+      "intro": "Tavalliset kysymykset vastauksineen. Puuttuuko jokin? Kirjoita meille, niin ihminen vastaa.",
+      "contact": "Kirjoita meille",
+      "contactClose": "Sulje lomake",
+      "emailLabel": "Tai sähköpostilla:",
+      "items": [
+        {
+          "q": "Paljonko Dulce maksaa?",
+          "a": "Lataus on ilmainen ja sisältää olennaisen. Pro-ominaisuuksissa (Apple Watch, perheen seuranta ja muuta) on 14 päivän ilmainen kokeilu."
+        },
+        {
+          "q": "Mitkä sensorit toimivat?",
+          "a": "FreeStyle Libre 2 ja Libre 3 LibreLinkUp-tilisi kautta sekä Dexcom G6, G7 ja ONE+ Dexcom Sharen kautta (oma Dexcom-tilisi, jossa jakaminen on päällä)."
+        },
+        {
+          "q": "Miksi LibreLink-tunnukseni eivät toimi?",
+          "a": "Dulce käyttää LibreLinkUpia, ei LibreLinkiä: ne ovat kaksi eri sovellusta eri tileillä. Käyttöönotto-opas neuvoo sen neljässä vaiheessa.",
+          "link": "Lue opas"
+        },
+        {
+          "q": "Tarvitsevatko seuraajani sensorin?",
+          "a": "Eivät. Riittää iPhone ja ilmainen Dulce-sovellus. He avaavat lähettämäsi linkin, ja siinä kaikki."
+        },
+        {
+          "q": "Millä kielillä sovellus on?",
+          "a": "Englanniksi, espanjaksi, saksaksi, ranskaksi ja italiaksi."
+        },
+        {
+          "q": "Onko Android-versiota?",
+          "a": "Työstämme sitä. Jätä sähköpostiosoitteesi tämän sivun alaosaan, niin kerromme kun se on valmis."
+        },
+        {
+          "q": "Onko Dulce lääkinnällinen laite?",
+          "a": "Ei. Dulce ei diagnosoi eikä hoida mitään sairautta, eikä se korvaa sensorisi hälytyksiä tai hoitotiimisi arviota."
+        },
+        {
+          "q": "Tarvitsenko tietyn iPhonen?",
+          "a": "Mikä tahansa iPhone, jossa on iOS 17 tai uudempi. Dynamic Island vaatii iPhone 14 Pron tai uudemman."
+        }
+      ]
+    },
+    "download": {
+      "title": "Lukemasi\nminne katsotkin.",
+      "sub": "Ilmainen App Storessa. Dulce Prossa on 14 päivän kokeilu.",
+      "qr": "Skannaa iPhonella",
+      "android": "Käytätkö Androidia? Lähetämme sähköpostia, kun se on valmis."
+    }
+  },
+  "footer": {
+    "scan": "Skannaa koodi ja lataa Dulce iPhoneesi.",
+    "onPage": "Tällä sivulla",
+    "help": "Ohjeet",
+    "legal": "Juridiset tiedot",
+    "disclaimer": "Dulce ei ole lääkinnällinen laite. Se ei korvaa sensorisi hälytyksiä tai hoitotiimisi arviota. Tämän sivun näkymissä on esimerkkitietoja.",
+    "trademarks": "FreeStyle Libre ja LibreLinkUp ovat Abbottin tavaramerkkejä. Apple Watch ja Apple Terveys ovat Apple Inc:n tavaramerkkejä. Dulce on itsenäinen sovellus.",
+    "copyright": "© {year} Dulce",
+    "top": "Takaisin ylös",
+    "wordmark": "dulce",
+    "learn": "Opi"
+  },
+  "waitlist": {
+    "email": {
+      "label": "Sähköposti",
+      "placeholder": "sinä@sähköposti.fi"
+    },
+    "consent": "Hyväksyn, että minulle lähetetään sähköpostia, kun Android-versio julkaistaan. Lisää <privacy>tietosuojaselosteessa</privacy>.",
+    "submit": "Ilmoita minulle",
+    "submitting": "Lähetetään…",
+    "success": "Valmis. Lähetämme sähköpostia, kun Dulce tulee Androidille.",
+    "errors": {
+      "generic": "Jokin meni pieleen. Yritä uudelleen.",
+      "rateLimit": "Liian monta yritystä. Odota hetki.",
+      "alreadyJoined": "Tämä sähköposti on jo listalla. Kiitos!",
+      "invalidEmail": "Sähköpostiosoite ei näytä kelvolliselta."
+    }
+  },
+  "languageSwitcher": {
+    "label": "Kieli",
+    "es": "espanja",
+    "en": "englanti",
+    "de": "saksa",
+    "fr": "ranska",
+    "it": "italia",
+    "fi": "suomi",
+    "nl": "hollanti"
+  },
+  "legal": {
+    "lastUpdated": "Päivitetty viimeksi: {date}",
+    "tableOfContents": "Sisältö",
+    "privacy": {
+      "title": "Tietosuojaseloste",
+      "description": "Miten keräämme, käytämme ja suojaamme henkilötietojasi."
+    },
+    "terms": {
+      "title": "Käyttöehdot",
+      "description": "Säännöt, jotka koskevat Dulcen ja tämän sivuston käyttöä."
+    },
+    "disclaimer": {
+      "title": "Lääketieteellinen vastuuvapauslauseke",
+      "description": "Dulce ei ole lääkinnällinen laite. Tutustu sen rajoihin ennen kuin luotat siihen."
+    },
+    "cookies": {
+      "title": "Evästekäytäntö",
+      "description": "Mitä evästeitä käytämme ja miksi."
+    },
+    "translationNotice": "Tämä teksti on saatavilla englanniksi. Ristiriitatilanteessa espanjankielinen versio on ratkaiseva."
+  },
+  "notFound": {
+    "title": "Sivua ei löytynyt",
+    "headline": "Tätä sivua ei ole",
+    "body": "Seuraamasi linkki on virheellinen tai sivu on siirretty.",
+    "cta": "Takaisin etusivulle"
+  },
+  "follow": {
+    "eyebrow": "Perhekutsu",
+    "headline": "Sinut on kutsuttu seuraamaan jotakuta Dulcessa",
+    "body": "Dulcen avulla perheenjäsen voi jakaa glukoosilukemansa kanssasi reaaliajassa. Asenna sovellus ja syötä tämä koodi aloittaaksesi seuraamisen.",
+    "codeLabel": "Kutsukoodisi",
+    "openApp": "Avaa Dulcessa",
+    "getApp": "Lataa Dulce App Storesta",
+    "steps": {
+      "title": "Näin se toimii",
+      "one": "Asenna Dulce App Storesta.",
+      "two": "Avaa sovellus ja napauta ”Seuraa jotakuta”.",
+      "three": "Syötä yllä oleva koodi yhdistääksesi."
+    },
+    "expiryNote": "Kutsukoodit vanhenevat 24 tunnin kuluttua luomisesta. Pyydä uusi, jos tämä lakkaa toimimasta.",
+    "noCode": "Tästä linkistä ei löytynyt kutsukoodia. Pyydä uusi kutsu."
+  },
+  "setup": {
+    "title": "LibreLinkUp-kirjautuminen vai LibreLink: kumpaa tiliä Dulce käyttää",
+    "description": "Dulce kirjautuu LibreLinkUp-tilillä, ei LibreLinkillä. Tässä ero ja ohjeet jakamisen kytkemiseen päälle, jotta lukemasi tulevat Dulceen.",
+    "hero": {
+      "headline": "LibreLink vai LibreLinkUp: kumpaa Dulce käyttää?",
+      "subheadline": "Ne näyttävät lähes samalta, mutta ne ovat kaksi eri sovellusta ja kaksi eri kirjautumista. Dulce yhdistää LibreLinkUpiin, sovellukseen joka vastaanottaa kanssasi jaetut lukemat. Tämä sivu näyttää tarkalleen, miten otat sen käyttöön."
+    },
+    "compare": {
+      "title": "Kaksi sovellusta, kaksi tiliä",
+      "scan": {
+        "title": "LibreLink",
+        "body": "Sovellus, jolla luet FreeStyle Libre -sensoriasi ja näet omat lukemasi. Dulce ei voi kirjautua tällä tilillä."
+      },
+      "share": {
+        "title": "LibreLinkUp",
+        "body": "Kumppanisovellus, joka vastaanottaa kanssasi jaetut lukemat, yleensä perheen käytössä. Tätä tiliä Dulce tarvitsee."
+      }
+    },
+    "steps": {
+      "title": "Kytke jakaminen päälle 4 vaiheessa",
+      "step1": {
+        "title": "Asenna LibreLinkUp",
+        "body": "Lataa LibreLinkUp App Storesta tai Google Playsta ja luo tili sähköpostiosoitteellasi. Pidä tämä sähköposti ja salasana tallessa, käytät niitä Dulcessa."
+      },
+      "step2": {
+        "title": "Avaa LibreLink ja mene kohtaan Yhdistetyt sovellukset",
+        "body": "Avaa sensorin lukemiseen käyttämäsi LibreLink-sovelluksen valikko ja etsi jakaminen tai ”Yhdistetyt sovellukset / LinkUp”."
+      },
+      "step3": {
+        "title": "Kutsu LibreLinkUp-sähköpostisi",
+        "body": "Lisää yhteydeksi sama sähköpostiosoite, jonka juuri rekisteröit LibreLinkUpiin, ja hyväksy kutsu LibreLinkUpissa."
+      },
+      "step4": {
+        "title": "Kirjaudu Dulceen",
+        "body": "Avaa Dulce ja syötä LibreLinkUp-sähköpostisi ja -salasanasi. Glukoosisi näkyy muutamassa sekunnissa."
+      }
+    },
+    "faq": {
+      "title": "Yleisiä kysymyksiä",
+      "q1": "Miksi LibreLink-tunnukseni eivät toimi Dulcessa?",
+      "a1": "Koska LibreLink ja LibreLinkUp ovat erillisiä sovelluksia erillisillä tileillä. Dulce käyttää LibreLinkUpia. Jos kirjautuminen hylätään, syötät lähes varmasti LibreLink-tunnuksiasi: luo LibreLinkUp-tili ja käytä sitä.",
+      "q2": "Kirjauduin, mutta Dulce ei näytä tietoja. Mikä on vialla?",
+      "a2": "LibreLinkUp-kirjautumisesi toimi, mutta sille ei vielä jaeta mitään. Avaa sensorin lukemiseen käyttämäsi LibreLink-sovellus, mene kohtaan Yhdistetyt sovellukset ja kutsu LibreLinkUp-sähköpostisi. Hyväksy kutsu, niin Dulce alkaa saada lukemia.",
+      "q3": "Onko Dulce Abbottin tekemä?",
+      "a3": "Ei. Dulce on itsenäinen sovellus, eikä Abbott ole sidoksissa siihen, suosittele sitä tai sponsoroi sitä. FreeStyle Libre, LibreLink ja LibreLinkUp ovat Abbottin tavaramerkkejä, joita käytetään tässä vain yhdistämisen kuvaamiseen."
+    },
+    "cta": {
+      "title": "Valmiina näkemään glukoosisi Dulcessa?",
+      "subtitle": "Ilmainen App Storessa. Ota LibreLinkUp-tili käyttöön ja kirjaudu."
+    },
+    "disclaimer": "Dulce on itsenäinen sovellus, eikä Abbott ole sidoksissa siihen, suosittele sitä tai sponsoroi sitä. FreeStyle Libre, LibreLink ja LibreLinkUp ovat Abbott Diabetes Caren tavaramerkkejä. Dulce ei ole lääkinnällinen laite eikä korvaa CGM-laitteesi omia hälytyksiä.",
+    "breadcrumbHome": "Etusivu"
+  },
+  "contact": {
+    "form": {
+      "title": "Lähetä meille viesti",
+      "subtitle": "Täytä alla oleva lomake, niin vastaamme sinulle suoraan.",
+      "name": {
+        "label": "Nimesi",
+        "placeholder": "Maija Meikäläinen"
+      },
+      "email": {
+        "label": "Sähköpostisi",
+        "placeholder": "sinä@sähköposti.fi"
+      },
+      "subject": {
+        "label": "Aihe",
+        "placeholder": "Mitä mielessäsi?"
+      },
+      "message": {
+        "label": "Viesti",
+        "placeholder": "Kerro mitä vain: kysymyksiä, ideoita, palautetta tai pelkkä tervehdys."
+      },
+      "submit": "Lähetä viesti",
+      "submitting": "Lähetetään…",
+      "success": {
+        "title": "Viesti lähetetty!",
+        "body": "Vastaamme 48 arkitunnin kuluessa."
+      },
+      "errors": {
+        "validation": "Täytä kaikki kentät oikein.",
+        "rateLimit": "Liian monta viestiä. Odota hetki.",
+        "generic": "Jokin meni pieleen. Voit myös kirjoittaa osoitteeseen hola@dulceglucosa.com."
+      }
+    }
+  },
+  "blog": {
+    "title": "Oppaita glukoosista, Libresta ja iPhonesta",
+    "description": "Käytännön oppaita FreeStyle Libre -glukoosin näyttämiseen iPhonessa, Apple Watchissa ja perheen kanssa. Kirjoittaneet diabeteksen kanssa elävät ihmiset.",
+    "eyebrow": "Oppaat",
+    "headline": "Saa sensoristasi enemmän irti",
+    "sub": "Käytännön oppaita, jotka ovat kirjoittaneet diabeteksen kanssa elävät ihmiset. Ei täytettä: miten se toimii, miten se otetaan käyttöön ja mitä tehdä, kun se ei toimi.",
+    "by": "Kirjoittanut {name}",
+    "updated": "Päivitetty {date}",
+    "published": "Julkaistu {date}",
+    "minutes": "{n} min lukuaika",
+    "related": "Lue lisää",
+    "faqTitle": "Pikakysymykset",
+    "faqMore": "Lue lisää:",
+    "read": "Lue",
+    "allArticles": "Kaikki oppaat",
+    "toolsTitle": "Laskurit",
+    "relatedGuides": "Aiheeseen liittyvät oppaat",
+    "usefulLinks": "Työkalut ja käyttöönotto",
+    "setupLink": "Yhdistä Dulce: LibreLink vai LibreLinkUp",
+    "home": "Etusivu",
+    "authorArticles": "Kirjoittajan {name} artikkelit",
+    "medical": "Tämä artikkeli on tarkoitettu tiedoksi eikä korvaa hoitotiimisi neuvoja. Dulce ei ole lääkinnällinen laite eikä korvaa sensorisi hälytyksiä.",
+    "independent": "Dulce on itsenäinen sovellus, joka ei ole sidoksissa Abbottiin. FreeStyle Libre, LibreLink ja LibreLinkUp ovat Abbottin tavaramerkkejä."
+  },
+  "llustatus": {
+    "nav": "LibreLinkUpin tila",
+    "title": "Onko LibreLinkUp alhaalla? Tila reaaliajassa",
+    "description": "Onko LibreLinkUp alhaalla? Tila mitataan minuutin välein: viimeiset 24 tuntia, vasteaika, kärsivät alueet ja mitä tehdä katkon aikana.",
+    "eyebrow": "Tila reaaliajassa",
+    "headline": {
+      "operational": "LibreLinkUp toimii normaalisti",
+      "degraded": "LibreLinkUpissa on ongelmia",
+      "down": "LibreLinkUp näyttää olevan alhaalla",
+      "unknown": "Juuri nyt ei ole tarpeeksi tietoa"
+    },
+    "lead": {
+      "operational": "Tarkistuksemme saavat lukemia LibreLinkUpista tavalliseen tapaan. Jos et näe uusia lukemia, ongelma on todennäköisimmin sensorin puhelimessa.",
+      "degraded": "Osa LibreLinkUp-pyynnöistä epäonnistuu tai on hitaita. Lukemat voivat tulla myöhässä tai jäädä hetkeksi kokonaan tulematta.",
+      "down": "Suurin osa LibreLinkUp-pyynnöistä epäonnistuu. Seuraajat ja LibreLinkUpia lukevat sovellukset, Dulce mukaan lukien, eivät saa uusia lukemia ennen kuin palvelu palautuu.",
+      "unknown": "Viime minuuteilta on liian vähän tarkistuksia sanoaksemme. Tarkista hetken kuluttua uudelleen."
+    },
+    "updated": "Tarkistettu {time} UTC",
+    "unavailable": "Tilatiedot eivät ole tilapäisesti saatavilla.",
+    "metrics": {
+      "failure": "Epäonnistuneet pyynnöt",
+      "latency": "Vasteaika",
+      "calls": "Tarkistukset (viim. 10 min)"
+    },
+    "timeline": {
+      "title": "Viimeiset 24 tuntia",
+      "hint": "Jokainen palkki on 30 minuuttia. Ajat UTC-aikaa.",
+      "operational": "Toimii",
+      "degraded": "Ongelmia",
+      "down": "Alhaalla",
+      "unknown": "Ei tietoa"
+    },
+    "regions": {
+      "title": "Kärsivät alueet",
+      "none": "Mikään alue ei erotu juuri nyt."
+    },
+    "lastIncident": "Viimeisin ongelma 24 tunnin sisällä: {time} UTC",
+    "noIncident": "Ei ongelmia viimeisen 24 tunnin aikana.",
+    "how": {
+      "title": "Näin tämä toimii",
+      "body": "Dulcen palvelimet lukevat LibreLinkUpia minuutin välein Dulcen käyttäjille. Laskemme, kuinka moni pyynnöistä onnistuu ja kuinka kauan ne kestävät, kaikilla alueilla. Yhden ihmisen väärä salasana tai vanhentunut kirjautuminen ei lasketa virheeksi, vain LibreLinkUpin omat virheet lasketaan. Emme tallenna kenenkään glukoosia tätä sivua varten."
+    },
+    "todo": {
+      "title": "Mitä tehdä, jos LibreLinkUp on alhaalla",
+      "items": [
+        "Sensorisi toimii edelleen. Katso glukoosisi suoraan puhelimesi Libre-sovelluksesta (LibreLink tai Libre 3).",
+        "Pidä Libre-sovelluksen omat hälytykset päällä: ne eivät riipu LibreLinkUpista.",
+        "Kerro seuraajillesi: he eivät näe uusia lukemia ennen kuin palvelu palaa.",
+        "Kun LibreLinkUp palautuu, käyrä täydentyy puuttuvilla lukemilla."
+      ]
+    },
+    "upButNoData": {
+      "title": "LibreLinkUp toimii, mutta et näe tietoja?",
+      "body": "Silloin ongelma on lähes aina sensoria käyttävän ihmisen puhelimessa: ei internetyhteyttä, järjestelmä on sulkenut Libre-sovelluksen tai jakaminen on pois päältä. Vianmääritysoppaamme käy läpi jokaisen syyn.",
+      "link": "LibreLinkUp ei toimi: vaihe vaiheelta"
+    },
+    "faq": [
+      {
+        "q": "Onko LibreLinkUp alhaalla juuri nyt?",
+        "a": "Tämä sivu näyttää LibreLinkUpin tilan reaaliajassa, mitattuna minuutin välein Dulcen palvelimilta: toimii, ongelmia tai alhaalla, sekä viimeiset 24 tuntia."
+      },
+      {
+        "q": "Toimiiko Dulce, kun LibreLinkUp on alhaalla?",
+        "a": "Ei. Dulce lukee lukemasi LibreLinkUpin kautta, joten kun LibreLinkUp on alhaalla, Dulcekaan ei saa mitään uutta. Sensorisi ja Libre-sovellus toimivat edelleen."
+      },
+      {
+        "q": "Onko tämä Abbottin virallinen tilasivu?",
+        "a": "Ei. Dulce on itsenäinen eikä sidoksissa Abbottiin. Nämä ovat omia mittauksiamme; Abbott voi raportoida alueellesi toisin."
+      }
+    ],
+    "disclaimer": "Dulce on itsenäinen sovellus, joka ei ole sidoksissa Abbottiin. FreeStyle Libre, LibreLink ja LibreLinkUp ovat Abbottin tavaramerkkejä. Dulce mittaa tilan, eikä se välttämättä kuvaa jokaista aluetta tai tiliä.",
+    "region": {
+      "eu": "Eurooppa",
+      "eu2": "Eurooppa 2",
+      "us": "Yhdysvallat",
+      "de": "Saksa",
+      "fr": "Ranska",
+      "jp": "Japani",
+      "ap": "Aasia ja Tyynimeri",
+      "au": "Australia",
+      "ae": "Lähi-itä",
+      "ca": "Kanada",
+      "la": "Latinalainen Amerikka"
+    }
+  },
+  "pro": {
+    "nav": "Ilmainen vai Pro",
+    "title": "Dulce Pro: mikä on ilmaista ja mitä Pro tuo lisää",
+    "description": "Mitä saat Dulcessa ilmaiseksi ja mitä Dulce Pro tuo: Live Activity lukitusnäytöllä, Apple Watch, perheen seuranta ja Apple Terveys. 14 päivän ilmainen kokeilu.",
+    "headline": "Ilmainen käyttää. Pro, kun haluat enemmän.",
+    "lead": "Dulcen lataus on ilmainen ja olennainen pysyy ilmaisena. Dulce Pro lisää ominaisuudet, jotka pitävät lukemasi silmiesi edessä ja perheesi ajan tasalla.",
+    "freeTitle": "Ilmainen",
+    "proTitle": "Dulce Pro",
+    "free": [
+      "Reaaliaikainen glukoosi trendinuolella ja käyrällä",
+      "Widgetit koti- ja lukitusnäytölle sekä StandByhin",
+      "Matalan, korkean ja kriittisen matalan arvon hälytykset (tarkistus 5 minuutin välein)",
+      "Päiväkirja hiilihydraateille, insuliinille ja glukoosille",
+      "Trendit: aika tavoitealueella, keskiarvo ja GMI",
+      "Toisen ihmisen glukoosin seuraaminen"
+    ],
+    "pro": [
+      "Live Activity lukitusnäytöllä ja Dynamic Islandissa, päivittyy minuutin välein",
+      "Apple Watch -sovellus ja komplikaatiot",
+      "Perheen seuranta enintään 3 seuraajalle, jotka eivät maksa mitään",
+      "Apple Terveys -tiedot päiväkirjassa ja trendeissä",
+      "Hälytysten tarkistus minuutin välein"
+    ],
+    "trialTitle": "Näin kokeilu toimii",
+    "trial": [
+      "Uudet tilaajat saavat 14 päivää ilmaiseksi.",
+      "Valitse kuukausi- tai vuositilaus. App Store näyttää hinnan omassa valuutassasi ennen vahvistusta.",
+      "Peru milloin tahansa Apple ID:si tilausasetuksista; jos perut kokeilun aikana, et maksa mitään."
+    ],
+    "faq": [
+      {
+        "q": "Onko Dulce ilmainen?",
+        "a": "On. Dulcen lataus on ilmainen, ja siinä on reaaliaikainen glukoosi, widgetit, hälytykset, päiväkirja ja trendit. Dulce Pro on valinnainen tilaus, jossa on 14 päivän ilmainen kokeilu."
+      },
+      {
+        "q": "Mitä Dulce Pro tuo lisää?",
+        "a": "Live Activityn lukitusnäytöllä ja Dynamic Islandissa, Apple Watch -sovelluksen, perheen seurannan enintään 3 seuraajalle, Apple Terveys -tiedot ja hälytysten tarkistuksen minuutin välein 5 minuutin sijaan."
+      },
+      {
+        "q": "Tarvitsevatko seuraajani Pron?",
+        "a": "Eivät. Perheen seuranta kuuluu sensoria käyttävän ihmisen Pro-tilaukseen; seuraajat asentavat Dulcen ilmaiseksi."
+      },
+      {
+        "q": "Miten peruutan?",
+        "a": "Tilauksia hoitaa Apple. Avaa iPhonen Asetukset, napauta nimeäsi, sitten Tilaukset ja valitse Dulce."
+      }
+    ],
+    "cta": "Lataa Dulce ilmaiseksi"
+  },
+  "consent": {
+    "title": "Analytiikkaevästeet",
+    "text": "Haluaisimme käyttää Google Analyticsin evästeitä nähdäksemme, mitkä sivut auttavat ihmisiä. Vain jos hyväksyt.",
+    "policy": "Evästekäytäntö",
+    "accept": "Hyväksy",
+    "decline": "Hylkää",
+    "settings": "Evästeasetukset"
+  }
+}

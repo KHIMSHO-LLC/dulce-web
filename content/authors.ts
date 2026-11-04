@@ -29,6 +29,8 @@ export const AUTHORS: Record<AuthorId, Author> = {
       de: "Gründer von Dulce, lebt mit Typ-1-Diabetes",
       fr: "Fondateur de Dulce, vit avec un diabète de type 1",
       it: "Fondatore di Dulce, vive con il diabete di tipo 1",
+      fi: "Dulcen perustaja, elää tyypin 1 diabeteksen kanssa",
+      nl: "Oprichter van Dulce, leeft met diabetes type 1",
     },
     // Only facts the authors confirmed. Extend when they add more.
     bio: {
@@ -37,6 +39,8 @@ export const AUTHORS: Record<AuthorId, Author> = {
       de: "Giorgi lebt mit Typ-1-Diabetes und hat Dulce gegründet. Er hat die App gebaut, weil er es satt hatte, das Handy zu entsperren, eine App zu öffnen und zu warten, nur um eine Zahl zu sehen. Er schreibt über das, was er jeden Tag mit Sensor, iPhone und Apple Watch nutzt.",
       fr: "Giorgi vit avec un diabète de type 1 et a fondé Dulce. Il a créé l'app parce qu'il en avait assez de déverrouiller son téléphone, d'ouvrir une app et d'attendre juste pour voir un chiffre. Il écrit sur ce qu'il utilise chaque jour avec son capteur, son iPhone et son Apple Watch.",
       it: "Giorgi vive con il diabete di tipo 1 e ha fondato Dulce. Ha creato l'app perché era stanco di sbloccare il telefono, aprire un'app e aspettare solo per vedere un numero. Scrive di ciò che usa ogni giorno con il suo sensore, l'iPhone e l'Apple Watch.",
+      fi: "Giorgi elää tyypin 1 diabeteksen kanssa ja on Dulcen perustaja. Hän teki sovelluksen, koska kyllästyi avaamaan puhelimen lukituksen, avaamaan sovelluksen ja odottamaan vain nähdäkseen yhden luvun. Hän kirjoittaa siitä, mitä käyttää joka päivä sensorinsa, iPhonensa ja Apple Watchinsa kanssa.",
+      nl: "Giorgi leeft met diabetes type 1 en heeft Dulce opgericht. Hij maakte de app omdat hij het zat was om zijn telefoon te ontgrendelen, een app te openen en te wachten alleen om één getal te zien. Hij schrijft over wat hij elke dag gebruikt met zijn sensor, iPhone en Apple Watch.",
     },
   },
   levan: {
@@ -50,6 +54,8 @@ export const AUTHORS: Record<AuthorId, Author> = {
       de: "Lebt mit Diabetes, schreibt die Dulce-Ratgeber",
       fr: "Vit avec le diabète, écrit les guides de Dulce",
       it: "Vive con il diabete, scrive le guide di Dulce",
+      fi: "Elää diabeteksen kanssa, kirjoittaa Dulcen oppaat",
+      nl: "Leeft met diabetes, schrijft de gidsen van Dulce",
     },
     bio: {
       es: "Levan es el hermano de Giorgi y también vive con diabetes. Escribe las guías de Dulce desde el punto de vista de quien convive con la diabetes cada día.",
@@ -57,6 +63,8 @@ export const AUTHORS: Record<AuthorId, Author> = {
       de: "Levan ist Giorgis Bruder und lebt ebenfalls mit Diabetes. Er schreibt die Dulce-Ratgeber aus der Sicht von jemandem, der jeden Tag mit Diabetes lebt.",
       fr: "Levan est le frère de Giorgi et vit lui aussi avec le diabète. Il écrit les guides de Dulce du point de vue de quelqu'un qui gère le diabète au quotidien.",
       it: "Levan è il fratello di Giorgi e anche lui vive con il diabete. Scrive le guide di Dulce dal punto di vista di chi gestisce il diabete ogni giorno.",
+      fi: "Levan on Giorgin veli ja elää myös diabeteksen kanssa. Hän kirjoittaa Dulcen oppaat sellaisen ihmisen näkökulmasta, joka hoitaa diabetesta joka päivä.",
+      nl: "Levan is de broer van Giorgi en leeft ook met diabetes. Hij schrijft de gidsen van Dulce vanuit het perspectief van iemand die elke dag met diabetes leeft.",
     },
   },
 };

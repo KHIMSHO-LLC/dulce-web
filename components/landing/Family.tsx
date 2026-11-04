@@ -4,7 +4,7 @@ import { Parallax } from "@/components/motion/Parallax";
 import { ScrubWords } from "@/components/motion/ScrubWords";
 import { DeviceFrame } from "@/components/screens/DeviceFrame";
 import type { ScreenName } from "@/components/screens/draw";
-import type { ScreenLocale } from "@/components/screens/strings";
+import { screenLocale } from "@/components/screens/strings";
 import { SECTION } from "@/lib/site";
 import { DragCarousel } from "./DragCarousel";
 
@@ -20,7 +20,7 @@ const FIELDS = [
 
 /** Who Dulce is for, read as one sentence, then thrown sideways as cards. */
 export async function Family() {
-  const locale = (await getLocale()) as ScreenLocale;
+  const locale = screenLocale(await getLocale());
   const t = await getTranslations("home.family");
   const cards = t.raw("cards") as Card[];
 

@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { ORG_ID } from "@/lib/schema";
 import { ReadingSurface } from "@/components/article/ReadingSurface";
 import { ArticleCard } from "@/components/article/ArticleCard";
-import { articlesNewestFirst } from "@/content/articles";
+import { articlesNewestFirst, isTranslated, pick } from "@/content/articles";
 import { AUTHORS, authorBySlug } from "@/content/authors";
 import { articleUrl } from "@/lib/articles";
 import { absoluteUrl, seoFor, localizedPath } from "@/lib/seo";
@@ -43,7 +43,7 @@ export default async function AuthorPage({ params }: PageProps<"/[locale]/author
   setRequestLocale(locale);
   const loc = locale as AppLocale;
   const t = await getTranslations({ locale: loc, namespace: "blog" });
-  const articles = articlesNewestFirst().filter((a) => a.author === author.id);
+  const articles = articlesNewestFirst().filter((a) => a.author === author.id && isTranslated(a, loc));
   const url = absoluteUrl(localizedPath(loc, "/authors/[author]", { author: author.slug }));
 
   return (
@@ -60,7 +60,7 @@ export default async function AuthorPage({ params }: PageProps<"/[locale]/author
             jobTitle: author.role[loc],
             worksFor: { "@id": ORG_ID },
           },
-          hasPart: articles.map((a) => ({ "@type": "Article", url: articleUrl(a, loc), headline: a.title[loc] })),
+          hasPart: articles.map((a) => ({ "@type": "Article", url: articleUrl(a, loc), headline: pick(a.title, loc) })),
         }}
       />
       <ReadingSurface>

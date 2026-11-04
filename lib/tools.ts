@@ -62,6 +62,14 @@ export const TOOL_COPY: Record<ToolPath, Record<AppLocale, ToolCopy>> = {
       title: "Convertitore glicemia da mg/dL a mmol/L, con tabella",
       description: "Converti la glicemia da mg/dL a mmol/L e viceversa all'istante. Tabella completa da 40 a 400 mg/dL e da 2 a 25 mmol/L, con gli intervalli target.",
     },
+    fi: {
+      title: "Verensokerin muunnin mg/dL ↔ mmol/l ja taulukko",
+      description: "Muunna verensokeri mg/dL-arvosta mmol/l-arvoksi ja takaisin heti. Koko taulukko 40–400 mg/dL ja 2–25 mmol/l sekä tavoitealueet.",
+    },
+    nl: {
+      title: "Bloedsuiker omrekenen: mg/dL naar mmol/L, met tabel",
+      description: "Reken je bloedsuiker direct om van mg/dL naar mmol/L en terug. Volledige tabel van 40 tot 400 mg/dL en 2 tot 25 mmol/L, met de streefwaarden.",
+    },
   },
   "/tools/a1c-calculator": {
     es: {
@@ -84,6 +92,14 @@ export const TOOL_COPY: Record<ToolPath, Record<AppLocale, ToolCopy>> = {
       title: "Calcolatore e tabella emoglobina glicata (HbA1c)",
       description: "Converti la HbA1c in glicemia media stimata e in mmol/mol, o calcola il GMI dalla media del sensore. Tabella HbA1c completa dal 4% al 14%.",
     },
+    fi: {
+      title: "HbA1c-laskuri ja -taulukko: keskiglukoosi ja GMI",
+      description: "Muunna HbA1c arvioiduksi keskiglukoosiksi ja mmol/mol-arvoksi tai laske GMI sensorisi keskiarvosta. HbA1c-taulukko 4–14 %.",
+    },
+    nl: {
+      title: "HbA1c berekenen en tabel: gemiddelde glucose en GMI",
+      description: "Reken je HbA1c om naar geschatte gemiddelde glucose en mmol/mol, of bereken de GMI uit het gemiddelde van je sensor. HbA1c-tabel van 4 tot 14%.",
+    },
   },
   "/tools/sensor-end-date": {
     es: {
@@ -105,6 +121,14 @@ export const TOOL_COPY: Record<ToolPath, Record<AppLocale, ToolCopy>> = {
     it: {
       title: "Calcolatore di scadenza del sensore FreeStyle Libre",
       description: "Calcola quando scade il tuo sensore FreeStyle Libre 2, 3, 2 Plus o 3 Plus e quando arrivano le letture dopo il riscaldamento, dal giorno e dall'ora di applicazione.",
+    },
+    fi: {
+      title: "FreeStyle Libre -sensorin vaihtopäivän laskuri",
+      description: "Laske, milloin FreeStyle Libre 2-, 3-, 2 Plus- tai 3 Plus -sensorisi päättyy ja milloin lukemat alkavat lämpenemisen jälkeen, asetuspäivän ja -ajan perusteella.",
+    },
+    nl: {
+      title: "FreeStyle Libre sensor einddatum berekenen",
+      description: "Bereken wanneer je FreeStyle Libre 2, 3, 2 Plus of 3 Plus sensor afloopt en wanneer de metingen na de opwarmtijd beginnen, vanaf de dag en tijd van plaatsen.",
     },
   },
 };
@@ -147,6 +171,8 @@ export const A1C_CHART_HEAD: Record<AppLocale, [string, string, string, string]>
   de: ["HbA1c (%)", "IFCC (mmol/mol)", "Ø Blutzucker (mg/dL)", "Ø Blutzucker (mmol/L)"],
   fr: ["HbA1c (%)", "IFCC (mmol/mol)", "Glycémie moyenne (mg/dL)", "Glycémie moyenne (mmol/L)"],
   it: ["HbA1c (%)", "IFCC (mmol/mol)", "Glicemia media (mg/dL)", "Glicemia media (mmol/L)"],
+  fi: ["HbA1c (%)", "IFCC (mmol/mol)", "Keskiglukoosi (mg/dL)", "Keskiglukoosi (mmol/l)"],
+  nl: ["HbA1c (%)", "IFCC (mmol/mol)", "Gemiddelde glucose (mg/dL)", "Gemiddelde glucose (mmol/L)"],
 };
 
 /** Parses "5,5" or "5.5". */

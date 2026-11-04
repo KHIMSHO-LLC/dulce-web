@@ -13,6 +13,8 @@ const L: Record<
   de: { sensor: "Sensor", started: "Gesetzt am", ready: "Werte bereit (Ende der Aufwärmphase)", ends: "Sensor endet", left: "Restzeit", ended: "Dieser Sensor ist bereits abgelaufen", days: "T", hours: "Std." },
   fr: { sensor: "Capteur", started: "Posé le", ready: "Mesures prêtes (fin du préchauffage)", ends: "Le capteur expire", left: "Temps restant", ended: "Ce capteur a déjà expiré", days: "j", hours: "h" },
   it: { sensor: "Sensore", started: "Applicato il", ready: "Letture pronte (fine del riscaldamento)", ends: "Il sensore scade", left: "Tempo rimanente", ended: "Questo sensore è già scaduto", days: "g", hours: "h" },
+  fi: { sensor: "Sensori", started: "Asetettu", ready: "Lukemat valmiina (lämpenemisen jälkeen)", ends: "Sensori päättyy", left: "Aikaa jäljellä", ended: "Tämä sensori on jo päättynyt", days: "pv", hours: "h" },
+  nl: { sensor: "Sensor", started: "Geplaatst op", ready: "Metingen klaar (na de opwarmtijd)", ends: "Sensor eindigt", left: "Resterende tijd", ended: "Deze sensor is al afgelopen", days: "d", hours: "u" },
 };
 
 /** "2026-10-22T08:30" in the browser's local time, for <input type="datetime-local">. */

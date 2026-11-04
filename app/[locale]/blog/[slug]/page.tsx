@@ -10,7 +10,7 @@ import { ReadingSurface } from "@/components/article/ReadingSurface";
 import { PROSE } from "@/components/article/prose";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { AppCta, ArticleLink, Callout, Figure, PageLink, Step, Steps } from "@/components/article/MdxParts";
-import { ARTICLES, CATEGORY_LABEL, articleBySlug, getArticle } from "@/content/articles";
+import { ARTICLES, CATEGORY_LABEL, articleBySlug, articleLocales, getArticle, isTranslated, pick } from "@/content/articles";
 import { AUTHORS } from "@/content/authors";
 import { articlePath, articleUrl, authorPath, readingMinutes } from "@/lib/articles";
 import { Calculator, Link2 } from "lucide-react";
@@ -24,7 +24,9 @@ import { SITE_URL } from "@/lib/site";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return routing.locales.flatMap((locale) => ARTICLES.map((a) => ({ locale, slug: a.slug[locale] })));
+  return routing.locales.flatMap((locale) =>
+    ARTICLES.filter((a) => isTranslated(a, locale)).map((a) => ({ locale, slug: pick(a.slug, locale) })),
+  );
 }
 
 function resolve(locale: string, slug: string) {
@@ -39,21 +41,21 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/blog/[sl
   if (!found) return {};
   const { article } = found;
   const loc = found.locale;
-  const paths = Object.fromEntries(routing.locales.map((l) => [l, articlePath(article, l)]));
+  const paths = Object.fromEntries(articleLocales(article).map((l) => [l, articlePath(article, l)]));
   // Google shows the site name on its own; drop the " · Dulce" suffix when it
   // would push the title past what search results display (~60 characters).
-  const headline = article.title[loc];
+  const headline = pick(article.title, loc);
   const seo = seoFromPaths(loc, paths, {
     type: "article",
-    title: article.title[loc],
-    description: article.description[loc],
+    title: pick(article.title, loc),
+    description: pick(article.description, loc),
     publishedTime: article.datePublished,
     modifiedTime: article.dateModified,
-    images: [{ url: article.image, alt: article.imageAlt[loc] }],
+    images: [{ url: article.image, alt: pick(article.imageAlt, loc) }],
   });
   return {
     title: headline.length > 52 ? { absolute: headline } : headline,
-    description: article.description[loc],
+    description: pick(article.description, loc),
     openGraph: seo.openGraph,
     alternates: {
       ...seo.alternates,
@@ -93,8 +95,10 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
   const url = articleUrl(article, loc);
   const home = absoluteUrl(localizedPath(loc, "/"));
   const blog = absoluteUrl(localizedPath(loc, "/blog"));
-  const related = article.related.map((id) => getArticle(id)).filter((a) => a !== undefined);
-  const faq = article.faq?.[loc] ?? [];
+  const related = article.related
+    .map((id) => getArticle(id))
+    .filter((a) => a !== undefined && isTranslated(a, loc)) as NonNullable<ReturnType<typeof getArticle>>[];
+  const faq = (article.faq ? pick(article.faq, loc) : undefined) ?? [];
   const steps = howToSteps(mdxSource(article, loc));
   // Every guide links to the calculators that list it (lib/tools.ts); /setup is the LibreLinkUp guide.
   const tools = toolsForArticle(article.id);
@@ -105,29 +109,29 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
       <JsonLd
         data={articleSchema({
           url,
-          headline: article.title[loc],
-          description: article.description[loc],
+          headline: pick(article.title, loc),
+          description: pick(article.description, loc),
           image: `${SITE_URL}${article.image}`,
           locale: loc,
           datePublished: article.datePublished,
           dateModified: article.dateModified,
           author: authorPerson(article.author, loc),
-          keywords: article.keywords[loc],
+          keywords: pick(article.keywords, loc),
         })}
       />
       <JsonLd
         data={breadcrumbSchema([
           { name: t("home"), url: home },
           { name: t("eyebrow"), url: blog },
-          { name: article.title[loc], url },
+          { name: pick(article.title, loc), url },
         ])}
       />
       {steps.length >= 2 ? (
         <JsonLd
           data={howToSchema({
             url,
-            name: article.title[loc],
-            description: article.description[loc],
+            name: pick(article.title, loc),
+            description: pick(article.description, loc),
             locale: loc,
             image: `${SITE_URL}${article.image}`,
             steps,
@@ -146,8 +150,8 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
             <span aria-hidden> / </span>
             <span className="text-soft">{CATEGORY_LABEL[article.category][loc]}</span>
           </nav>
-          <h1 className="type-display mt-5 text-[clamp(2.2rem,4.8vw,4rem)] text-ink">{article.title[loc]}</h1>
-          <AnswerFirst summary={article.summary?.[loc]} fallback={article.description[loc]} />
+          <h1 className="type-display mt-5 text-[clamp(2.2rem,4.8vw,4rem)] text-ink">{pick(article.title, loc)}</h1>
+          <AnswerFirst summary={(article.summary ? pick(article.summary, loc) : undefined)} fallback={pick(article.description, loc)} />
           <Byline
             locale={loc}
             author={article.author}
@@ -173,7 +177,7 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
                           {" "}
                           {t("faqMore")}{" "}
                           <ArticleLink locale={loc} to={target.id}>
-                            {target.title[loc]}
+                            {pick(target.title, loc)}
                           </ArticleLink>
                         </>
                       ) : null}

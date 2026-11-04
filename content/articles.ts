@@ -11,10 +11,13 @@
  * Rules (see content/README.md): only describe what the released app does,
  * real dates (never future), a named author, sources for any medical number.
  */
-import type { AppLocale } from "@/i18n/routing";
+import type { AppLocale, CoreLocale, ExtraLocale } from "@/i18n/routing";
 import type { AuthorId } from "./authors";
 
-export type Localized<T = string> = Record<AppLocale, T>;
+/** Every core language, plus fi/nl once the article is translated into them. */
+export type Localized<T = string> = Record<CoreLocale, T> & Partial<Record<ExtraLocale, T>>;
+/** Fully localized (site chrome: category labels). */
+export type AllLocales<T = string> = Record<AppLocale, T>;
 
 export type ArticleCategory = "guide" | "health" | "help";
 
@@ -56,10 +59,10 @@ export type Article = {
   faq?: Localized<FaqEntry[]>;
 };
 
-export const CATEGORY_LABEL: Record<ArticleCategory, Localized> = {
-  guide: { es: "Guía de Dulce", en: "Dulce guide", de: "Dulce-Ratgeber", fr: "Guide Dulce", it: "Guida di Dulce" },
-  health: { es: "Salud", en: "Health", de: "Gesundheit", fr: "Santé", it: "Salute" },
-  help: { es: "Ayuda", en: "Help", de: "Hilfe", fr: "Aide", it: "Aiuto" },
+export const CATEGORY_LABEL: Record<ArticleCategory, AllLocales> = {
+  guide: { es: "Guía de Dulce", en: "Dulce guide", de: "Dulce-Ratgeber", fr: "Guide Dulce", it: "Guida di Dulce", fi: "Dulce-opas", nl: "Dulce-gids" },
+  health: { es: "Salud", en: "Health", de: "Gesundheit", fr: "Santé", it: "Salute", fi: "Terveys", nl: "Gezondheid" },
+  help: { es: "Ayuda", en: "Help", de: "Hilfe", fr: "Aide", it: "Aiuto", fi: "Ohjeet", nl: "Hulp" },
 };
 
 export const ARTICLES: readonly Article[] = [
@@ -578,6 +581,8 @@ export const ARTICLES: readonly Article[] = [
       de: "librelinkup-funktioniert-nicht",
       fr: "librelinkup-ne-fonctionne-pas",
       it: "librelinkup-non-funziona",
+      fi: "librelinkup-ei-toimi",
+      nl: "librelinkup-werkt-niet",
     },
     title: {
       es: "LibreLinkUp no funciona: sin datos recientes, no se actualiza o no entra",
@@ -585,6 +590,8 @@ export const ARTICLES: readonly Article[] = [
       de: "LibreLinkUp funktioniert nicht: keine aktuellen Daten, kein Login",
       fr: "LibreLinkUp ne fonctionne pas : pas de données ou connexion impossible",
       it: "LibreLinkUp non funziona: niente dati o accesso impossibile",
+      fi: "LibreLinkUp ei toimi: ei uusia tietoja, ei päivity, kirjautuminen",
+      nl: "LibreLinkUp werkt niet: geen recente gegevens, inloggen",
     },
     description: {
       es: "Soluciones paso a paso cuando LibreLinkUp no muestra datos, no se actualiza o rechaza tu contraseña, y qué revisar en el móvil de quien lleva el sensor.",
@@ -592,6 +599,8 @@ export const ARTICLES: readonly Article[] = [
       de: "Schritt-für-Schritt-Lösungen, wenn LibreLinkUp keine Daten zeigt, nicht aktualisiert oder dein Passwort ablehnt, und was du am Handy des Sensorträgers prüfst.",
       fr: "Solutions pas à pas quand LibreLinkUp n'affiche aucune donnée, ne se met plus à jour ou refuse ton mot de passe, et quoi vérifier sur le téléphone du capteur.",
       it: "Soluzioni passo passo quando LibreLinkUp non mostra dati, non si aggiorna o rifiuta la password, e cosa controllare sul telefono di chi porta il sensore.",
+      fi: "Vaiheittaiset korjaukset, kun LibreLinkUp ei näytä tietoja, lakkaa päivittymästä tai hylkää salasanasi, ja mitä tarkistaa sensoria käyttävän puhelimesta.",
+      nl: "Stap voor stap oplossen als LibreLinkUp geen gegevens toont, niet meer bijwerkt of je wachtwoord weigert, en wat je controleert op de telefoon met de sensor.",
     },
     summary: {
       es: "Casi todos los problemas de LibreLinkUp son uno de estos tres: no puedes entrar (casi siempre porque escribes la contraseña de LibreLink, que es otra cuenta), entras pero no ves datos (nadie comparte todavía con esa cuenta) o los datos dejan de actualizarse. Las lecturas van sensor → app de Libre → nube de Abbott → LibreLinkUp, así que si se congelan comprueba que el móvil del sensor tiene internet, no ha cerrado la app de Libre y está cerca del sensor.",
@@ -599,6 +608,8 @@ export const ARTICLES: readonly Article[] = [
       de: "Fast jedes LibreLinkUp-Problem ist eines von dreien: Du kommst nicht rein (meist, weil du das Passwort von LibreLink eingibst, einem anderen Konto), du kommst rein, siehst aber keine Daten (noch teilt niemand mit diesem Konto), oder die Daten werden nicht mehr aktualisiert. Die Werte laufen Sensor → Libre-App → Abbott-Cloud → LibreLinkUp; wenn sie hängen, prüf also, ob das Sensor-Handy Internet hat, die Libre-App nicht beendet wurde und das Handy in der Nähe des Sensors ist.",
       fr: "Presque tous les problèmes de LibreLinkUp se rangent en trois cas : tu n'arrives pas à te connecter (souvent parce que tu tapes le mot de passe de LibreLink, un autre compte), tu te connectes mais ne vois aucune donnée (personne ne partage encore avec ce compte), ou les données ne se mettent plus à jour. Les mesures passent capteur → app Libre → cloud d'Abbott → LibreLinkUp : si elles se figent, vérifie que le téléphone du capteur a internet, n'a pas fermé l'app Libre et reste près du capteur.",
       it: "Quasi tutti i problemi di LibreLinkUp sono uno di questi tre: non riesci ad accedere (di solito perché scrivi la password di LibreLink, che è un altro account), accedi ma non vedi dati (nessuno condivide ancora con quell'account) oppure i dati smettono di aggiornarsi. Le letture passano sensore → app Libre → cloud di Abbott → LibreLinkUp, quindi se si bloccano controlla che il telefono del sensore abbia internet, non abbia chiuso l'app Libre e sia vicino al sensore.",
+      fi: "Lähes jokainen LibreLinkUp-ongelma on yksi kolmesta: et pääse kirjautumaan (yleensä koska syötät LibreLink-salasanasi, joka kuuluu eri tilille), kirjaudut mutta et näe tietoja (kukaan ei vielä jaa sille tilille), tai tiedot lakkaavat päivittymästä. Lukemat kulkevat sensori → Libre-sovellus → Abbottin pilvi → LibreLinkUp, joten jäätyneiden tietojen kohdalla tarkista, että sensorin puhelimella on internet, sensori on Bluetooth-kantamalla eikä Libre-sovellusta ole suljettu väkisin.",
+      nl: "Bijna elk LibreLinkUp-probleem is een van drie: je kunt niet inloggen (meestal omdat je je LibreLink-wachtwoord typt, dat bij een ander account hoort), je logt in maar ziet geen gegevens (niemand deelt nog met dat account), of de gegevens worden niet meer bijgewerkt. Metingen reizen sensor → Libre-app → cloud van Abbott → LibreLinkUp, dus bij bevroren gegevens controleer je of de telefoon met de sensor internet heeft, de sensor binnen Bluetooth-bereik is en de Libre-app niet geforceerd is afgesloten.",
     },
     keywords: {
       es: ["librelinkup no funciona", "librelinkup no muestra datos", "librelinkup no se actualiza", "librelinkup login", "librelink vs librelinkup"],
@@ -606,6 +617,8 @@ export const ARTICLES: readonly Article[] = [
       de: ["librelinkup funktioniert nicht", "librelinkup keine daten", "librelinkup aktualisiert nicht", "librelinkup login", "librelink librelinkup unterschied"],
       fr: ["librelinkup ne fonctionne pas", "librelinkup pas de données", "librelinkup ne se met pas à jour", "librelinkup connexion", "librelink ou librelinkup"],
       it: ["librelinkup non funziona", "librelinkup nessun dato", "librelinkup non si aggiorna", "librelinkup accesso", "librelink o librelinkup"],
+      fi: ["librelinkup ei toimi", "librelinkup ei näytä tietoja", "librelinkup ei päivity", "librelinkup kirjautuminen", "librelink vai librelinkup"],
+      nl: ["librelinkup werkt niet", "librelinkup geen gegevens", "librelinkup geen recente gegevens", "librelinkup inloggen", "librelink of librelinkup", "librelinkup storing"],
     },
     image: "/guides/home-screen.jpg",
     imageAlt: {
@@ -614,6 +627,8 @@ export const ARTICLES: readonly Article[] = [
       de: "Startbildschirm von Dulce mit Werten aus LibreLinkUp",
       fr: "Écran d'accueil de Dulce recevant des mesures de LibreLinkUp",
       it: "Schermata Home di Dulce che riceve letture da LibreLinkUp",
+      fi: "Dulcen aloitusnäkymä vastaanottaa lukemia LibreLinkUpista",
+      nl: "Startscherm van Dulce dat metingen van LibreLinkUp ontvangt",
     },
     related: ["widgets", "family-sharing", "apple-watch"],
     faq: {
@@ -646,6 +661,18 @@ export const ARTICLES: readonly Article[] = [
         { q: "Perché LibreLinkUp non mostra dati?", a: "Perché nessuno condivide ancora con quell'account. Sul telefono di chi porta il sensore apri l'app Libre, vai su App collegate, aggiungi LibreLinkUp con l'email esatta dell'account LibreLinkUp e accetta l'invito in LibreLinkUp." },
         { q: "Perché LibreLinkUp è in ritardo o bloccato?", a: "Quasi sempre perché il telefono del sensore non carica. Ha bisogno di Internet, con il Libre 3 il sensore deve restare nel raggio Bluetooth, e l'app Libre non deve essere chiusa a forza né rallentata dal Risparmio energetico." },
         { q: "Dulce funziona se LibreLinkUp non riceve dati?", a: "No. Dulce riceve le letture tramite LibreLinkUp, quindi se LibreLinkUp non riceve nulla non lo riceve nemmeno Dulce. Dulce però mostra da quanto risale l'ultima lettura e ti avvisa all'accesso se usi l'account sbagliato.", link: "family-sharing" },
+      ],
+      fi: [
+        { q: "Miksi en pääse kirjautumaan LibreLinkUpiin?", a: "Lähes aina siksi, että syötät LibreLink-salasanasi. LibreLink ja LibreLinkUp ovat erillisiä sovelluksia erillisillä tileillä. Jos olet yrittänyt monta kertaa peräkkäin, odota minuutti ja hyväksy uudet ehdot, jos sovellus pyytää." },
+        { q: "Miksi LibreLinkUp ei näytä tietoja?", a: "Koska kukaan ei vielä jaa sille tilille. Avaa sensoria käyttävän puhelimessa Libre-sovellus, mene kohtaan Yhdistetyt sovellukset, lisää LibreLinkUp LibreLinkUp-tilin tarkalla sähköpostiosoitteella ja hyväksy kutsu LibreLinkUpissa." },
+        { q: "Miksi LibreLinkUp on myöhässä tai jumissa?", a: "Lähes aina siksi, ettei sensorin puhelin lähetä lukemia. Se tarvitsee internetin, Libre 3:lla sensorin on oltava Bluetooth-kantamalla, eikä Libre-sovellusta saa sulkea väkisin tai hidastaa virransäästötilalla." },
+        { q: "Toimiiko Dulce, jos LibreLinkUp ei saa tietoja?", a: "Ei. Dulce saa lukemasi LibreLinkUpin kautta, joten jos LibreLinkUp ei saa mitään, ei Dulcekaan. Dulce näyttää kuitenkin, kuinka kauan viimeisestä lukemasta on, ja kertoo kirjautuessa, jos käytät väärää tiliä.", link: "family-sharing" },
+      ],
+      nl: [
+        { q: "Waarom kan ik niet inloggen bij LibreLinkUp?", a: "Bijna altijd omdat je het wachtwoord van LibreLink typt. LibreLink en LibreLinkUp zijn aparte apps met aparte accounts. Heb je het vaak achter elkaar geprobeerd, wacht dan een minuut, en accepteer nieuwe voorwaarden als de app erom vraagt." },
+        { q: "Waarom toont LibreLinkUp geen gegevens?", a: "Omdat niemand nog met dat account deelt. Open op de telefoon van degene met de sensor de Libre-app, ga naar Verbonden apps, voeg LibreLinkUp toe met het exacte e-mailadres van het LibreLinkUp-account en accepteer de uitnodiging in LibreLinkUp." },
+        { q: "Waarom loopt LibreLinkUp achter of staat het stil?", a: "Bijna altijd omdat de telefoon met de sensor niets uploadt. Die heeft internet nodig, bij de Libre 3 moet de sensor binnen Bluetooth-bereik zijn, en de Libre-app mag niet geforceerd worden afgesloten of afgeremd door de energiebesparingsmodus." },
+        { q: "Werkt Dulce als LibreLinkUp geen gegevens krijgt?", a: "Nee. Dulce krijgt je metingen via LibreLinkUp, dus als LibreLinkUp niets krijgt, krijgt Dulce ook niets. Dulce laat wel zien hoe lang geleden de laatste meting was en zegt bij het inloggen of je het verkeerde account gebruikt.", link: "family-sharing" },
       ],
     },
   },
@@ -1061,6 +1088,8 @@ export const ARTICLES: readonly Article[] = [
       de: "libreview",
       fr: "libreview",
       it: "libreview",
+      fi: "libreview",
+      nl: "libreview",
     },
     title: {
       es: "LibreView iniciar sesión (libreview.com): acceso, contraseña y errores",
@@ -1068,6 +1097,8 @@ export const ARTICLES: readonly Article[] = [
       de: "LibreView Login (libreview.com): anmelden, Passwort, Fehler beheben",
       fr: "LibreView connexion (libreview.com) : se connecter, mot de passe, erreurs",
       it: "LibreView accedi (libreview.com): login, password e problemi di accesso",
+      fi: "LibreView kirjautuminen (libreview.com): salasana ja virheet",
+      nl: "LibreView inloggen (libreview.com): aanmelden, wachtwoord, fouten",
     },
     description: {
       es: "Enlace directo a libreview.com y el acceso correcto: el de tu app de Libre, no LibreLinkUp. Contraseña olvidada, cuenta borrada o compartir con tu centro.",
@@ -1075,6 +1106,8 @@ export const ARTICLES: readonly Article[] = [
       de: "Direkter Link zu libreview.com und der richtige Login: der deiner Libre-App, nicht LibreLinkUp. Passwort vergessen, Konto gelöscht, Praxis verbinden.",
       fr: "Lien direct vers libreview.com et le bon identifiant : celui de ton app Libre, pas LibreLinkUp. Mot de passe oublié, compte supprimé, partage avec ton centre.",
       it: "Link diretto a libreview.com e il login giusto: quello della tua app Libre, non LibreLinkUp. Password dimenticata, account cancellato, condividere col centro.",
+      fi: "Suora linkki libreview.comiin ja oikea kirjautuminen: Libre-sovelluksesi tunnukset, ei LibreLinkUp. Unohtunut salasana, poistettu tili ja jakaminen hoitopaikalle.",
+      nl: "Directe link naar libreview.com en de juiste login: die van je Libre-app, niet LibreLinkUp. Wachtwoord vergeten, verwijderd account of delen met je zorgverlener.",
     },
     summary: {
       es: "Para entrar en LibreView, abre libreview.com y usa el mismo email y contraseña que en la app con la que lees el sensor (FreeStyle LibreLink, FreeStyle Libre 3 o Libre), no tu cuenta de LibreLinkUp, que es otra distinta. Si has olvidado la contraseña, es la misma que la de esa app y se restablece con un enlace por email; según Abbott, las cuentas sin uso en 6 meses pueden borrarse tras un aviso. LibreView guarda tus lecturas y las convierte en informes, como el AGP con el tiempo en rango, para ti y tu centro.",
@@ -1082,6 +1115,8 @@ export const ARTICLES: readonly Article[] = [
       de: "Für den LibreView Login öffnest du libreview.com und nutzt dieselbe E-Mail und dasselbe Passwort wie in der App, mit der du den Sensor ausliest (FreeStyle LibreLink, FreeStyle Libre 3 oder Libre), nicht dein LibreLinkUp-Konto, das ein eigenes ist. Ein vergessenes Passwort ist das dieser App und wird über einen Link per E-Mail zurückgesetzt; laut Abbott können Konten, die 6 Monate ungenutzt sind, nach einer Vorwarnung gelöscht werden. LibreView speichert deine Werte und macht daraus Berichte wie das AGP mit der Zeit im Zielbereich, für dich und deine Praxis.",
       fr: "Pour te connecter à LibreView, ouvre libreview.com avec le même e-mail et le même mot de passe que dans l'app qui lit ton capteur (FreeStyle LibreLink, FreeStyle Libre 3 ou Libre), pas ton compte LibreLinkUp, qui est un compte à part. Un mot de passe oublié est celui de cette app et se réinitialise par un lien envoyé par e-mail ; selon Abbott, les comptes inutilisés pendant 6 mois peuvent être supprimés après un avertissement. LibreView stocke tes mesures et en fait des rapports, comme l'AGP avec le temps dans la cible, pour toi et ton centre.",
       it: "Per accedere a LibreView apri libreview.com e usa la stessa email e la stessa password dell'app con cui leggi il sensore (FreeStyle LibreLink, FreeStyle Libre 3 o Libre), non l'account LibreLinkUp, che è un altro. Se hai dimenticato la password, è quella di quell'app e si ripristina con un link via email; secondo Abbott gli account inutilizzati per 6 mesi possono essere cancellati dopo un avviso. LibreView salva le tue letture e le trasforma in report, come l'AGP con il tempo nel range, per te e il tuo centro.",
+      fi: "Kirjaudu LibreView'hun osoitteessa libreview.com samalla sähköpostilla ja salasanalla kuin sovelluksessa, jolla luet sensoria (FreeStyle LibreLink, FreeStyle Libre 3 tai Libre), et LibreLinkUp-tililläsi, joka on eri tili. Jos unohdit salasanan, se on sama kuin tuon sovelluksen ja palautetaan kirjautumisnäytön Unohditko salasanan -toiminnolla. LibreView'lla ei ole omaa sovellusta: se on verkkosivusto raportteja varten.",
+      nl: "Log in bij LibreView op libreview.com met hetzelfde e-mailadres en wachtwoord als de app waarmee je je sensor uitleest (FreeStyle LibreLink, FreeStyle Libre 3 of Libre), niet met je LibreLinkUp-account, want dat is een ander account. Ben je je wachtwoord vergeten, dan is het hetzelfde als dat van die app en reset je het met Wachtwoord vergeten op het inlogscherm. LibreView heeft geen eigen app: het is een website voor rapporten.",
     },
     keywords: {
       es: ["libreview", "libreview login", "libreview iniciar sesión", "libreview contraseña olvidada", "libreview app", "libreview vs librelinkup"],
@@ -1089,6 +1124,8 @@ export const ARTICLES: readonly Article[] = [
       de: ["libreview", "libreview login", "libreview anmelden", "libreview passwort vergessen", "libreview app", "libreview librelinkup unterschied"],
       fr: ["libreview", "libreview connexion", "libreview se connecter", "libreview mon compte", "libreview mot de passe oublié", "libreview ou librelinkup"],
       it: ["libreview", "libreview accedi", "libreview login", "libreview password dimenticata", "libreview app", "libreview o librelinkup"],
+      fi: ["libreview", "libreview kirjautuminen", "libreview kirjaudu sisään", "libreview salasana unohtunut", "libreview sovellus", "libreview vai librelinkup"],
+      nl: ["libreview", "libreview inloggen", "libreview aanmelden", "libreview wachtwoord vergeten", "libreview app", "libreview of librelinkup"],
     },
     image: "/guides/home-screen.jpg",
     imageAlt: {
@@ -1097,6 +1134,8 @@ export const ARTICLES: readonly Article[] = [
       de: "Startbildschirm von Dulce mit Werten, die über LibreLinkUp ankommen",
       fr: "Écran d'accueil de Dulce avec des mesures reçues via LibreLinkUp",
       it: "Schermata Home di Dulce con letture ricevute tramite LibreLinkUp",
+      fi: "Dulcen aloitusnäkymä, lukemat tulevat LibreLinkUpin kautta",
+      nl: "Startscherm van Dulce met metingen die via LibreLinkUp binnenkomen",
     },
     related: ["librelinkup-not-working", "time-in-range", "trends"],
     faq: {
@@ -1139,6 +1178,22 @@ export const ARTICLES: readonly Article[] = [
         { q: "Esiste un'app LibreView?", a: "Non ne abbiamo trovate nell'App Store (Spagna, Italia e Germania, ottobre 2026). LibreView si usa nel browser su libreview.com; sul telefono le tue letture sono nell'app Libre." },
         { q: "Posso accedere a LibreLinkUp con l'account LibreView?", a: "No. LibreLinkUp è l'app dei follower e ha un account suo. Va invitato da App collegate nell'app Libre di chi porta il sensore.", link: "librelinkup-not-working" },
         { q: "Dulce ha bisogno del mio account LibreView?", a: "No. Dulce accede con un account LibreLinkUp con cui condividi le tue letture. Con i dati di LibreLink o LibreView non può accedere." },
+      ],
+      fi: [
+        { q: "Mikä LibreView on?", a: "Se on Abbottin pilvipalvelu FreeStyle Libre -tiedoille. Sinä ja hoitotiimisi näette siellä raportteja lukemistasi, kuten AGP-raportin ja ajan tavoitealueella." },
+        { q: "Millä käyttäjätunnuksella ja salasanalla kirjaudun LibreView'hun?", a: "Samoilla kuin sovelluksessa, jolla luet sensoria (FreeStyle LibreLink tai FreeStyle Libre 3). Jos käytät sitä sovellusta, sinulla on jo LibreView-tili." },
+        { q: "Unohdin LibreView-salasanani. Mitä teen?", a: "Se on sama salasana kuin Libre-sovelluksessasi. Valitse kirjautuessa Unohditko salasanan ja seuraa Abbottin sähköpostilla lähettämää linkkiä. Jos et vieläkään pääse sisään, ota yhteyttä Abbottiin omassa maassasi." },
+        { q: "Onko LibreView-sovellusta?", a: "Emme löytäneet sellaista App Storesta (Espanja, Italia ja Saksa, lokakuu 2026). LibreView'ta käytetään selaimessa osoitteessa libreview.com; puhelimessa lukemasi ovat Libre-sovelluksessa." },
+        { q: "Voinko kirjautua LibreLinkUpiin LibreView-tililläni?", a: "Et. LibreLinkUp on seuraajan sovellus, ja sillä on oma tilinsä. Se kutsutaan sensoria käyttävän Libre-sovelluksesta kohdasta Yhdistetyt sovellukset.", link: "librelinkup-not-working" },
+        { q: "Tarvitseeko Dulce LibreView-tiliäni?", a: "Ei. Dulce kirjautuu LibreLinkUp-tilillä, jolle jaat lukemasi. LibreLink- tai LibreView-tunnuksillasi se ei pääse sisään." },
+      ],
+      nl: [
+        { q: "Wat is LibreView?", a: "Het cloudplatform van Abbott voor FreeStyle Libre-gegevens. Jij en je zorgteam zien daar rapporten van je metingen, zoals het AGP-rapport met tijd binnen bereik." },
+        { q: "Welke gebruikersnaam en welk wachtwoord gebruik ik voor LibreView?", a: "Dezelfde als in de app waarmee je je sensor uitleest (FreeStyle LibreLink of FreeStyle Libre 3). Gebruik je die app, dan heb je al een LibreView-account." },
+        { q: "Ik ben mijn LibreView-wachtwoord vergeten. Wat nu?", a: "Het is hetzelfde wachtwoord als van je Libre-app. Kies bij het inloggen Wachtwoord vergeten en volg de link die Abbott je mailt. Kom je er nog steeds niet in, neem dan contact op met Abbott in je land." },
+        { q: "Is er een LibreView-app?", a: "We vonden er geen in de App Store (Spanje, Italië en Duitsland, oktober 2026). LibreView gebruik je in een browser op libreview.com; op je telefoon staan je metingen in de Libre-app." },
+        { q: "Kan ik met mijn LibreView-account inloggen bij LibreLinkUp?", a: "Nee. LibreLinkUp is de app voor volgers en heeft een eigen account. Het moet worden uitgenodigd via Verbonden apps in de Libre-app van degene met de sensor.", link: "librelinkup-not-working" },
+        { q: "Heeft Dulce mijn LibreView-account nodig?", a: "Nee. Dulce logt in met een LibreLinkUp-account waarmee je je metingen deelt. Met je LibreLink- of LibreView-gegevens kan het niet inloggen." },
       ],
     },
   },
@@ -1496,6 +1551,8 @@ export const ARTICLES: readonly Article[] = [
       de: "blutzucker-messen-apple-watch",
       fr: "apple-watch-mesurer-glycemie",
       it: "apple-watch-misurare-glicemia",
+      fi: "voiko-apple-watch-mitata-verensokeria",
+      nl: "kan-apple-watch-bloedsuiker-meten",
     },
     title: {
       es: "¿Puede el Apple Watch medir la glucosa? Lo que hay en 2026",
@@ -1503,6 +1560,8 @@ export const ARTICLES: readonly Article[] = [
       de: "Kann die Apple Watch Blutzucker messen? Stand 2026",
       fr: "L'Apple Watch peut-elle mesurer la glycémie ? Où en est Apple",
       it: "Apple Watch può misurare la glicemia? A che punto è Apple",
+      fi: "Voiko Apple Watch mitata verensokeria? Tilanne 2026",
+      nl: "Kan een Apple Watch bloedsuiker meten? Stand van zaken 2026",
     },
     description: {
       es: "Ningún Apple Watch mide la glucosa, tampoco el Series 12. Qué prepara Apple, por qué es tan difícil, los relojes «de glucosa» a evitar y cómo verla hoy.",
@@ -1510,6 +1569,8 @@ export const ARTICLES: readonly Article[] = [
       de: "Keine Apple Watch misst Blutzucker, auch nicht die Series 12. Woran Apple arbeitet, warum es so schwer ist, welche Uhren du meidest und was heute geht.",
       fr: "Aucune Apple Watch ne mesure la glycémie, Series 12 comprise. Ce qu'Apple prépare, pourquoi c'est dur, les montres à éviter et comment la voir aujourd'hui.",
       it: "Nessun Apple Watch misura la glicemia, nemmeno il Series 12. Cosa prepara Apple, perché è difficile, gli orologi da evitare e come vederla già oggi.",
+      fi: "Mikään Apple Watch ei mittaa verensokeria, ei Series 12:kaan. Mitä Apple rakentaa, miksi se on vaikeaa, mitä kelloja välttää ja miten näet glukoosisi jo nyt.",
+      nl: "Geen Apple Watch meet bloedsuiker, ook de Series 12 niet. Wat Apple bouwt, waarom het zo moeilijk is, welke glucosehorloges je vermijdt en hoe je je waarde nu al ziet.",
     },
     summary: {
       es: "No: ningún Apple Watch puede medir la glucosa, tampoco el Series 12 de septiembre de 2026. Según Bloomberg, Apple trabaja desde hace más de 15 años en un sensor óptico sin agujas, pero aún faltarían años y Apple no ha anunciado nada. Hoy, para ver tu glucosa en la muñeca necesitas un sensor como FreeStyle Libre o Dexcom y una app como Dulce que la lleve al reloj.",
@@ -1517,6 +1578,8 @@ export const ARTICLES: readonly Article[] = [
       de: "Nein: Keine Apple Watch kann Blutzucker messen, auch nicht die Series 12 vom September 2026. Laut Bloomberg arbeitet Apple seit über 15 Jahren an einem optischen Sensor ohne Nadel, aber das soll noch Jahre dauern, und Apple hat nichts angekündigt. Heute brauchst du für deinen Zucker am Handgelenk einen Sensor wie FreeStyle Libre oder Dexcom und eine App wie Dulce, die ihn auf die Uhr bringt.",
       fr: "Non : aucune Apple Watch ne peut mesurer la glycémie, pas même la Series 12 sortie en septembre 2026. Selon Bloomberg, Apple travaille depuis plus de 15 ans sur un capteur optique sans aiguille, mais il faudrait encore des années et Apple n'a rien annoncé. Aujourd'hui, pour voir ta glycémie au poignet, il te faut un capteur comme un FreeStyle Libre ou un Dexcom et une app comme Dulce qui l'affiche sur la montre.",
       it: "No: nessun Apple Watch può misurare la glicemia, nemmeno il Series 12 uscito a settembre 2026. Secondo Bloomberg, Apple lavora da più di 15 anni a un sensore ottico senza aghi, ma mancherebbero ancora anni e Apple non ha annunciato nulla. Oggi, per vedere la glicemia al polso ti servono un sensore come FreeStyle Libre o Dexcom e un'app come Dulce che la porti sull'orologio.",
+      fi: "Ei: mikään Apple Watch ei pysty mittaamaan verensokeria, ei myöskään syyskuussa 2026 julkaistu Series 12. Bloombergin mukaan Apple on työstänyt neulatonta optista sensoria yli 15 vuotta, mutta siihen on kertoman mukaan yhä vuosia, eikä Apple ole ilmoittanut mitään. Tänään glukoosin näkeminen ranteessa vaatii sensorin, kuten FreeStyle Libren tai Dexcomin, ja Dulcen kaltaisen sovelluksen, joka tuo sen kelloon.",
+      nl: "Nee: geen enkele Apple Watch kan bloedsuiker meten, ook de Series 12 van september 2026 niet. Volgens Bloomberg werkt Apple al meer dan 15 jaar aan een optische sensor zonder naald, maar die is naar verluidt nog jaren weg en Apple heeft niets aangekondigd. Vandaag heb je om je glucose om je pols te zien een sensor nodig, zoals een FreeStyle Libre of Dexcom, en een app zoals Dulce die de waarde op het horloge zet.",
     },
     keywords: {
       es: ["apple watch mide glucosa", "apple watch medir azúcar", "glucosa apple watch", "medir glucosa apple watch sin pinchar", "reloj que mide la glucosa"],
@@ -1524,6 +1587,8 @@ export const ARTICLES: readonly Article[] = [
       de: ["blutzucker messen apple watch", "blutzucker apple watch", "kann die apple watch blutzucker messen", "apple watch blutzucker ohne stechen", "smartwatch blutzucker messen"],
       fr: ["apple watch mesure glycémie", "glycémie apple watch", "mesure glycémie apple watch", "montre qui mesure la glycémie", "apple watch glycémie sans piqûre"],
       it: ["apple watch misura glicemia", "glicemia apple watch", "misurazione glicemia apple watch", "orologio che misura la glicemia", "apple watch glicemia senza aghi"],
+      fi: ["verensokeri apple watch", "voiko apple watch mitata verensokeria", "apple watch verensokerin mittaus", "apple watch glukoosi", "verensokerikello"],
+      nl: ["bloedsuiker meten apple watch", "kan apple watch bloedsuiker meten", "apple watch glucose meten", "apple watch bloedsuiker", "glucose horloge"],
     },
     image: "/guides/apple-watch-3.jpg",
     imageAlt: {
@@ -1532,6 +1597,8 @@ export const ARTICLES: readonly Article[] = [
       de: "Dulce-App auf der Apple Watch mit Glukose 86 und Tagesverlauf",
       fr: "App Dulce sur l'Apple Watch affichant une glycémie de 86 et la courbe du jour",
       it: "App di Dulce su Apple Watch con glicemia 86 e grafico della giornata",
+      fi: "Dulce-sovellus Apple Watchissa näyttää glukoosin 86 ja päivän käyrän",
+      nl: "Dulce-app op de Apple Watch met glucose 86 en de grafiek van de dag",
     },
     related: ["apple-watch", "dexcom", "blood-sugar-levels", "glucose-apps-compared"],
     faq: {
@@ -1564,6 +1631,18 @@ export const ARTICLES: readonly Article[] = [
         { q: "Quando Apple Watch misurerà la glicemia?", a: "Fuori da Apple nessuno lo sa. Secondo Bloomberg, Apple lavora da più di 15 anni a un sensore ottico senza aghi e mancherebbero ancora diversi anni, sempre che arrivi. Apple non ha annunciato nulla." },
         { q: "Esistono orologi che misurano la glicemia senza aghi?", a: "Non in modo affidabile. A febbraio 2024 la FDA ha chiesto di non comprare né usare orologi o anelli che dicono di misurare la glicemia senza forare la pelle: nessuno è autorizzato e le loro letture possono portare a errori di dose pericolosi." },
         { q: "Come vedo la glicemia su Apple Watch?", a: "Con un sensore per il monitoraggio continuo e un'app che porti il valore sull'orologio. Dulce legge FreeStyle Libre tramite LibreLinkUp e Dexcom tramite Dexcom Share e mostra la glicemia nelle complicazioni e in un'app per l'orologio (Dulce Pro, 14 giorni di prova gratuita).", link: "apple-watch" },
+      ],
+      fi: [
+        { q: "Voiko Apple Watch mitata verensokeria?", a: "Ei. Mikään Apple Watch ei mittaa verensokeria, ei myöskään syyskuussa 2026 julkaistu Series 12. Se voi kuitenkin näyttää sovelluksen kautta sensorin, kuten FreeStyle Libren tai Dexcomin, glukoosin." },
+        { q: "Milloin Apple Watch mittaa glukoosia?", a: "Kukaan Applen ulkopuolella ei tiedä. Bloombergin mukaan Apple on työstänyt neulatonta optista sensoria yli 15 vuotta, ja siihen on yhä useita vuosia, jos se koskaan tulee. Apple ei ole ilmoittanut mitään." },
+        { q: "Ovatko verensokeria mittaavat älykellot totta?", a: "Eivät. FDA varoitti helmikuussa 2024 ostamasta tai käyttämästä älykelloja tai -sormuksia, jotka väittävät mittaavansa glukoosia ihoa lävistämättä: yhtäkään ei ole hyväksytty, ja niiden lukemat voivat johtaa vaarallisiin annosteluvirheisiin." },
+        { q: "Miten näen verensokerini Apple Watchissa?", a: "Jatkuvalla glukoosinseurannalla ja sovelluksella, joka näyttää sen kellossa. Dulce lukee FreeStyle Librea LibreLinkUpin ja Dexcomia Dexcom Sharen kautta ja näyttää glukoosisi komplikaatioissa ja kellosovelluksessa (Dulce Pro, 14 päivän ilmainen kokeilu).", link: "apple-watch" },
+      ],
+      nl: [
+        { q: "Kan een Apple Watch bloedsuiker meten?", a: "Nee. Geen enkele Apple Watch meet bloedglucose, ook de Series 12 van september 2026 niet. Via een app kan hij wel de glucose van een sensor zoals een FreeStyle Libre of Dexcom tonen." },
+        { q: "Wanneer gaat de Apple Watch glucose meten?", a: "Niemand buiten Apple weet het. Volgens Bloomberg werkt Apple al meer dan 15 jaar aan een optische sensor zonder naald en duurt het nog een aantal jaar, als hij er ooit komt. Apple heeft niets aangekondigd." },
+        { q: "Bestaan er smartwatches die bloedsuiker meten zonder prikken?", a: "Niet betrouwbaar. De FDA waarschuwde in februari 2024 om geen smartwatches of ringen te kopen of te gebruiken die zeggen glucose te meten zonder door de huid te gaan: geen enkele is toegelaten en hun waarden kunnen tot gevaarlijke doseerfouten leiden." },
+        { q: "Hoe zie ik mijn bloedsuiker op mijn Apple Watch?", a: "Met een continue glucosemonitor en een app die de waarde op het horloge zet. Dulce leest de FreeStyle Libre via LibreLinkUp en de Dexcom via Dexcom Share en toont je glucose in complicaties en een horloge-app (Dulce Pro, 14 dagen gratis proberen).", link: "apple-watch" },
       ],
     },
   },
@@ -1735,12 +1814,27 @@ export const ARTICLES: readonly Article[] = [
   },
 ];
 
+/** The value for a locale; fi/nl fall back to English (callers only show articles translated into it). */
+export function pick<T>(map: Localized<T>, locale: AppLocale): T {
+  return (map as Partial<Record<AppLocale, T>>)[locale] ?? map.en;
+}
+
+/** Whether the article is written in that language (always true for the core languages). */
+export function isTranslated(article: Article, locale: AppLocale): boolean {
+  return Boolean((article.slug as Partial<Record<AppLocale, string>>)[locale]);
+}
+
+/** The languages an article is written in. */
+export function articleLocales(article: Article): AppLocale[] {
+  return (Object.keys(article.slug) as AppLocale[]).filter((l) => isTranslated(article, l));
+}
+
 export function getArticle(id: string): Article | undefined {
   return ARTICLES.find((a) => a.id === id);
 }
 
 export function articleBySlug(locale: AppLocale, slug: string): Article | undefined {
-  return ARTICLES.find((a) => a.slug[locale] === slug);
+  return ARTICLES.find((a) => isTranslated(a, locale) && pick(a.slug, locale) === slug);
 }
 
 /** Newest first, by publish date then registry order. */

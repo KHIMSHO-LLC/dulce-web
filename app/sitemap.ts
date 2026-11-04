@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { LEGAL_LOCALES, locales, routing, type AppLocale, type AppPathname } from "@/i18n/routing";
-import { ARTICLES } from "@/content/articles";
+import { ARTICLES, articleLocales } from "@/content/articles";
 import { AUTHORS } from "@/content/authors";
 import { articlePath } from "@/lib/articles";
 import { lastModified } from "@/lib/lastModified";
@@ -99,8 +99,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
     ...ARTICLES.flatMap((article) =>
       entries(
-        Object.fromEntries(locales.map((l) => [l, articlePath(article, l)])) as Record<AppLocale, string>,
+        Object.fromEntries(articleLocales(article).map((l) => [l, articlePath(article, l)])) as Record<AppLocale, string>,
         { lastModified: new Date(article.dateModified), changeFrequency: "monthly", priority: 0.7 },
+        articleLocales(article),
       ),
     ),
     ...Object.values(AUTHORS).flatMap((author) =>

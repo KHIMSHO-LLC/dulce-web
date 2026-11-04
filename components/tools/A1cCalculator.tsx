@@ -73,6 +73,28 @@ const L: Record<
     gmi: "GMI (indicatore di gestione del glucosio)",
     ifcc: "In mmol/mol (IFCC)",
   },
+  fi: {
+    fromA1c: "Tiedän HbA1c-arvoni",
+    fromMean: "Tiedän sensorini keskiglukoosin",
+    a1c: "HbA1c (%)",
+    mean: "Keskiglukoosi",
+    unit: "Yksikkö",
+    eag: "Arvioitu keskiglukoosi (eAG)",
+    estA1c: "Arvioitu HbA1c (ADAG-kaava)",
+    gmi: "GMI (glukoosinhallinnan indikaattori)",
+    ifcc: "Yksikössä mmol/mol (IFCC)",
+  },
+  nl: {
+    fromA1c: "Ik weet mijn HbA1c",
+    fromMean: "Ik weet de gemiddelde glucose van mijn sensor",
+    a1c: "HbA1c (%)",
+    mean: "Gemiddelde glucose",
+    unit: "Eenheid",
+    eag: "Geschatte gemiddelde glucose (eAG)",
+    estA1c: "Geschatte HbA1c (ADAG-formule)",
+    gmi: "GMI (glucosemanagementindicator)",
+    ifcc: "In mmol/mol (IFCC)",
+  },
 };
 
 function Result({ label, value }: { label: string; value: string }) {

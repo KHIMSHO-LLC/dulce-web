@@ -5,14 +5,16 @@
  * next-intl proxy leaves it alone.
  */
 import { locales, type AppLocale } from "@/i18n/routing";
-import { ARTICLES } from "@/content/articles";
+import { ARTICLES, isTranslated, pick } from "@/content/articles";
 import { articleBySlugAnyLocale, articleMarkdown } from "@/lib/markdown";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return locales.flatMap((locale) => ARTICLES.map((a) => ({ locale, file: `${a.slug[locale]}.md` })));
+  return locales.flatMap((locale) =>
+    ARTICLES.filter((a) => isTranslated(a, locale)).map((a) => ({ locale, file: `${pick(a.slug, locale)}.md` })),
+  );
 }
 
 export async function GET(_req: Request, ctx: { params: Promise<{ locale: string; file: string }> }) {

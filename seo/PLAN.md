@@ -188,6 +188,16 @@ questions around them. Being the best answer means the product actually does it 
       After deploy: resubmit the sitemap in Search Console, run `npm run indexnow`, watch Coverage for
       "Page with redirect" on the old Spanish URLs (expected) and Spanish clicks for ~4 weeks.
 
+- [x] 2026-11-04: `xdrip-iphone` guide (5 languages) for "xdrip iphone", "xdrip4ios", "juggluco iphone" (autocomplete).
+- [x] 2026-11-04: Finnish (`/fi`) and Dutch (`/nl`) site. Why: tier-1 markets on mmol/L, Dutch LibreView queries already in
+      Search Console ("libreview inloggen" 122 impressions), Finnish app language in 1.0.6. Translated: all site text,
+      the 3 calculators, `libreview`, `librelinkup-not-working`, `apple-watch-glucose`. Articles are optional per
+      language (`Localized` = core + optional fi/nl, `pick()`/`isTranslated()` in content/articles.ts). Legal pages in
+      fi/nl show the English text, noindex. Browser-language detection sends fi/nl browsers there.
+      **When 1.0.6 (Finnish app) is live:** update the fi FAQ "Millä kielillä" answer, drop "sovellus on toistaiseksi
+      englanniksi" notes in fi MDX, and add "fi" to `ScreenLocale` only if the screen strings get Finnish.
+      Next fi/nl translations by value: apple-watch, lock-screen, widgets, glucose-apps-compared, blood-sugar-levels.
+
 ## Next for Claude (in order)
 
 0. **1.0.4 on the website** (done 2026-10-25, owner decision to publish before approval; app live 2026-10-27):

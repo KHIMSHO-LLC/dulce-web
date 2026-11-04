@@ -8,7 +8,7 @@ import { AppCta, ArticleLink, Callout, PageLink } from "@/components/article/Mdx
 import { breadcrumbSchema, toolSchema } from "@/lib/schema";
 import { absoluteUrl, localizedPath } from "@/lib/seo";
 import { TOOL_COPY, toolByPath, type ToolPath } from "@/lib/tools";
-import { getArticle } from "@/content/articles";
+import { getArticle, isTranslated } from "@/content/articles";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { Byline } from "@/components/article/Byline";
 import { A1cTable, GlucoseTable } from "@/components/tools/ConversionTables";
@@ -31,7 +31,9 @@ export async function ToolPage({
   const t = await getTranslations({ locale, namespace: "blog" });
   const copy = TOOL_COPY[path][locale];
   const tool = toolByPath(path);
-  const guides = tool.guides.map((id) => getArticle(id)).filter((a) => a !== undefined);
+  const guides = tool.guides
+    .map((id) => getArticle(id))
+    .filter((a) => a !== undefined && isTranslated(a, locale)) as NonNullable<ReturnType<typeof getArticle>>[];
   const { default: Body } = (await import(`@/content/tools/${name}/${locale}.mdx`)) as {
     default: (props: { components: Record<string, unknown> }) => ReactNode;
   };

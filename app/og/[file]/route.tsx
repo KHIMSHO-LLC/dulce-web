@@ -46,6 +46,16 @@ const copy: Record<AppLocale, { line1: string; line2: string; sub: string }> = {
     line2: "sempre sotto gli occhi.",
     sub: "Schermata di blocco, Apple Watch e il telefono della tua famiglia.",
   },
+  fi: {
+    line1: "Verensokerisi,",
+    line2: "aina näkyvillä.",
+    sub: "Lukitusnäyttö, Apple Watch ja perheesi puhelin.",
+  },
+  nl: {
+    line1: "Je glucose,",
+    line2: "altijd in beeld.",
+    sub: "Toegangsscherm, Apple Watch en de telefoon van je familie.",
+  },
 };
 
 export async function GET(_request: Request, { params }: RouteContext<"/og/[file]">) {

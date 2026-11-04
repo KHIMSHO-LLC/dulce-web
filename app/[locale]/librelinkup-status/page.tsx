@@ -7,7 +7,7 @@ import { Link } from "@/i18n/navigation";
 import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/motion/Reveal";
-import { getArticle } from "@/content/articles";
+import { getArticle, isTranslated, pick } from "@/content/articles";
 import { fetchLluStatus, utcTime, type LluState } from "@/lib/lluStatus";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { seoFor, localizedPath } from "@/lib/seo";
@@ -157,13 +157,22 @@ export default async function LluStatusPage({ params }: PageProps<"/[locale]/lib
           >
             <h2 className="text-[1.5rem] font-light text-ink">{t("upButNoData.title")}</h2>
             <p className="mt-3 text-body leading-relaxed text-soft">{t("upButNoData.body")}</p>
-            {help ? (
+            {help && isTranslated(help, loc) ? (
               <Link
-                href={{ pathname: "/blog/[slug]", params: { slug: help.slug[loc] } }}
+                href={{ pathname: "/blog/[slug]", params: { slug: pick(help.slug, loc) } }}
                 className="mt-5 inline-block font-medium text-ember transition-colors hover:text-ember-hi"
               >
                 {t("upButNoData.link")} →
               </Link>
+            ) : help ? (
+              // Not translated into this language yet: the English guide.
+              <a
+                href={`/blog/${help.slug.en}`}
+                hrefLang="en"
+                className="mt-5 inline-block font-medium text-ember transition-colors hover:text-ember-hi"
+              >
+                {t("upButNoData.link")} →
+              </a>
             ) : null}
           </article>
         </Reveal>

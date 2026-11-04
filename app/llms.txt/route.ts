@@ -6,7 +6,7 @@
  * and content/articles.ts, so they never go stale. The path contains a dot, so
  * the next-intl proxy leaves it alone.
  */
-import { ARTICLES } from "@/content/articles";
+import { ARTICLES, isTranslated, pick } from "@/content/articles";
 import { locales, type AppLocale } from "@/i18n/routing";
 import { articleUrl } from "@/lib/articles";
 import { markdownPath } from "@/lib/markdown";
@@ -17,14 +17,14 @@ import { TOOLS, TOOL_COPY } from "@/lib/tools";
 
 export const dynamic = "force-static";
 
-const LANGUAGE: Record<AppLocale, string> = { es: "Spanish", en: "English", de: "German", fr: "French", it: "Italian" };
+const LANGUAGE: Record<AppLocale, string> = { es: "Spanish", en: "English", de: "German", fr: "French", it: "Italian", fi: "Finnish", nl: "Dutch" };
 
 const url = (locale: AppLocale, path: Parameters<typeof localizedPath>[1]) => absoluteUrl(localizedPath(locale, path));
 
 function guides(locale: AppLocale): string {
-  return ARTICLES.map(
+  return ARTICLES.filter((a) => isTranslated(a, locale)).map(
     (a) =>
-      `- [${a.title[locale]}](${articleUrl(a, locale)}): ${a.description[locale]} ([Markdown](${absoluteUrl(markdownPath(a, locale))}))`,
+      `- [${pick(a.title, locale)}](${articleUrl(a, locale)}): ${pick(a.description, locale)} ([Markdown](${absoluteUrl(markdownPath(a, locale))}))`,
   ).join("\n");
 }
 

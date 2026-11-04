@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
-import { TRANSLATED_LEGAL_LOCALES, routing, type AppLocale } from "@/i18n/routing";
+import { ENGLISH_LEGAL_LOCALES, TRANSLATED_LEGAL_LOCALES, routing, type AppLocale } from "@/i18n/routing";
 import { seoFor } from "@/lib/seo";
 import { LegalLayout } from "@/components/legal/LegalLayout";
 import { CookiesEs } from "@/components/legal/CookiesEs";
@@ -12,7 +12,7 @@ import { CookiesFr } from "@/components/legal/CookiesFr";
 import { CookiesIt } from "@/components/legal/CookiesIt";
 
 /** The Spanish text prevails; the others are translations of it. */
-const DOC: Record<AppLocale, () => React.JSX.Element> = { es: CookiesEs, en: CookiesEn, de: CookiesDe, fr: CookiesFr, it: CookiesIt };
+const DOC: Record<AppLocale, () => React.JSX.Element> = { es: CookiesEs, en: CookiesEn, de: CookiesDe, fr: CookiesFr, it: CookiesIt, fi: CookiesEn, nl: CookiesEn };
 
 const LAST_UPDATED = "2026-10-29";
 
@@ -28,6 +28,7 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     ...seoFor(safeLocale, "/legal/cookies", { title: t("title"), description: t("description") }),
+    ...(ENGLISH_LEGAL_LOCALES.includes(safeLocale) ? { robots: { index: false, follow: true } } : {}),
   };
 }
 
@@ -43,7 +44,9 @@ export default async function CookiesPage({
 
   return (
     <LegalLayout title={tDoc("title")} lastUpdated={t("lastUpdated", { date: LAST_UPDATED })}>
-      {TRANSLATED_LEGAL_LOCALES.includes(locale as AppLocale) ? <p>{t("translationNotice")}</p> : null}
+      {TRANSLATED_LEGAL_LOCALES.includes(locale as AppLocale) || ENGLISH_LEGAL_LOCALES.includes(locale as AppLocale) ? (
+        <p>{t("translationNotice")}</p>
+      ) : null}
       {(() => {
         const Doc = DOC[locale as AppLocale];
         return <Doc />;

@@ -1,13 +1,13 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { AppLocale } from "@/i18n/routing";
-import type { Article } from "@/content/articles";
+import { pick, type Article } from "@/content/articles";
 import { AUTHORS } from "@/content/authors";
 import { absoluteUrl, localizedPath } from "./seo";
 
 /** Public path of an article in a locale. */
 export function articlePath(article: Article, locale: AppLocale): string {
-  return localizedPath(locale, "/blog/[slug]", { slug: article.slug[locale] });
+  return localizedPath(locale, "/blog/[slug]", { slug: pick(article.slug, locale) });
 }
 
 export function authorPath(authorId: Article["author"], locale: AppLocale): string {

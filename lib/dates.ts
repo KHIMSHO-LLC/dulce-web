@@ -6,6 +6,8 @@ const MONTHS: Record<AppLocale, string[]> = {
   de: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
   fr: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
   it: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"],
+  fi: ["tammikuuta", "helmikuuta", "maaliskuuta", "huhtikuuta", "toukokuuta", "kesäkuuta", "heinäkuuta", "elokuuta", "syyskuuta", "lokakuuta", "marraskuuta", "joulukuuta"],
+  nl: ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"],
 };
 
 /**
@@ -17,6 +19,7 @@ export function formatDate(iso: string, locale: AppLocale): string {
   const month = MONTHS[locale][m - 1];
   if (locale === "en") return `${month} ${d}, ${y}`;
   if (locale === "de") return `${d}. ${month} ${y}`;
-  if (locale === "fr" || locale === "it") return `${d} ${month} ${y}`;
+  if (locale === "fr" || locale === "it" || locale === "nl") return `${d} ${month} ${y}`;
+  if (locale === "fi") return `${d}. ${month} ${y}`;
   return `${d} de ${month} de ${y}`;
 }

@@ -6,7 +6,7 @@ import { TiltCard } from "@/components/fx/TiltCard";
 import { Reveal } from "@/components/motion/Reveal";
 import { Split } from "@/components/motion/Split";
 import { DeviceFrame } from "@/components/screens/DeviceFrame";
-import type { ScreenLocale } from "@/components/screens/strings";
+import { screenLocale } from "@/components/screens/strings";
 import { SECTION } from "@/lib/site";
 import { NudgeDemo } from "./NudgeDemo";
 
@@ -16,7 +16,7 @@ import { NudgeDemo } from "./NudgeDemo";
  * (setup path), privacy (a promise).
  */
 export async function MoreBento() {
-  const locale = (await getLocale()) as ScreenLocale;
+  const locale = screenLocale(await getLocale());
   const t = await getTranslations("home.more");
 
   const tir = [

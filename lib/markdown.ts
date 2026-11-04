@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { AppLocale, AppPathname } from "@/i18n/routing";
-import { ARTICLES, getArticle, type Article } from "@/content/articles";
+import { ARTICLES, getArticle, isTranslated, pick, type Article } from "@/content/articles";
 import { AUTHORS } from "@/content/authors";
 import { appStoreUrl, type StoreCampaign } from "./appStore";
 import { articleUrl } from "./articles";
@@ -20,6 +20,8 @@ const APP_CTA: Record<AppLocale, string> = {
   de: "Dulce im App Store laden",
   fr: "Télécharger Dulce dans l'App Store",
   it: "Scarica Dulce dall'App Store",
+  fi: "Lataa Dulce App Storesta",
+  nl: "Download Dulce in de App Store",
 };
 
 function attr(tag: string, name: string): string | undefined {
@@ -110,10 +112,10 @@ export function howToSteps(source: string): { name: string; text: string }[] {
 /** Full Markdown document for one guide in one language. */
 export function articleMarkdown(article: Article, locale: AppLocale): string {
   const author = AUTHORS[article.author];
-  const faq = article.faq?.[locale] ?? [];
+  const faq = (article.faq ? pick(article.faq, locale) : undefined) ?? [];
   const parts = [
-    `# ${article.title[locale]}`,
-    `> ${article.summary?.[locale] ?? article.description[locale]}`,
+    `# ${pick(article.title, locale)}`,
+    `> ${(article.summary ? pick(article.summary, locale) : undefined) ?? pick(article.description, locale)}`,
     `URL: ${articleUrl(article, locale)}  \nAuthor: ${author.name}  \nPublished: ${article.datePublished}  \nUpdated: ${article.dateModified}`,
     mdxToMarkdown(mdxSource(article, locale), locale, `blog_${article.id}`),
   ];
@@ -126,11 +128,11 @@ export function articleMarkdown(article: Article, locale: AppLocale): string {
 }
 
 export function markdownPath(article: Article, locale: AppLocale): string {
-  return `/md/${locale}/${article.slug[locale]}.md`;
+  return `/md/${locale}/${pick(article.slug, locale)}.md`;
 }
 
 export function articleBySlugAnyLocale(locale: AppLocale, slug: string): Article | undefined {
-  return ARTICLES.find((a) => a.slug[locale] === slug);
+  return ARTICLES.find((a) => pick(a.slug, locale) === slug);
 }
 
 type Messages = typeof import("@/messages/en.json");
@@ -141,6 +143,8 @@ const MESSAGES: Record<AppLocale, () => Promise<Messages>> = {
   de: () => import("@/messages/de.json").then((m) => m.default as Messages),
   fr: () => import("@/messages/fr.json").then((m) => m.default as Messages),
   it: () => import("@/messages/it.json").then((m) => m.default as Messages),
+  fi: () => import("@/messages/fi.json").then((m) => m.default as Messages),
+  nl: () => import("@/messages/nl.json").then((m) => m.default as Messages),
 };
 
 const qa = (items: { q: string; a: string }[]) => items.map((f) => `**${f.q}**\n\n${f.a}`).join("\n\n");
