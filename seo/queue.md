@@ -2,6 +2,19 @@
 
 Owner-requested jobs. The daily run does the top unchecked item, one per run, then ticks it here.
 
+- [ ] **"Libre 3 signal loss / alarms unavailable on iPhone" article** (found 2026-11-04, Google autocomplete: "libre 3 signal
+  loss iphone", "libre 3 signal loss fix", "libre 3 alarms unavailable iphone", "libre 3 not connecting to iphone",
+  "librelinkup not sending notifications"). The sensor-phone side; `librelinkup-not-working` covers the follower side.
+  Facts already checked on Abbott's US FAQ (cite them): Signal Loss alarm = no sensor-app communication for 20 minutes;
+  range Libre 3 / 3 Plus 10 m (33 ft) unobstructed, Libre 2 6 m (20 ft); causes: too far, Bluetooth off, sensor problem;
+  fixes in order: back in range and wait 2-4 minutes, don't force-close the Libre app, Bluetooth off/on, restart the
+  phone, then Abbott Customer Care; Libre 3 / 3 Plus backfill automatically when back in range (no scan), Libre 2 uses
+  scan-to-backfill; alarms only fire when enabled and in range. Pages: freestyle.abbott/en-us/support/faq/alarms/
+  causes-of-signal-loss-alerts-in-the-libre-app.html, .../system/reconnecting-freestyle-libre-3-sensor-after-signal-loss.html,
+  .../sensor/freestyle-libre-3-plus-signal-loss-quick-fix-steps.html, .../apps/scan-to-backfill-with-freestyle-libre-3-in-the-libre-app.html.
+  Dulce angle (released app): it shows "Last reading N min ago" / stale state instead of an old number; it doesn't fix
+  the sensor connection. Link `librelinkup-not-working`, `alerts`, `/librelinkup-status`. 5 core languages (fi/nl optional).
+
 - [x] **Glucose converter: full conversion table + cholesterol note** (requested by Giorgi 2026-10-30; done 2026-10-30, see log)
   - Why (Search Console, Oct 2026): the converter ranks top 10 for exact-value queries ("160 mg/dl to mmol/l" 5,
     "192 mg dl to mmol l" 2, "245 mg/dl to mmol/l" 2, "6 mmol/l to mg/dl" 4.7, "13 mmol/l to mg/dl" 4) but 50-75 for
