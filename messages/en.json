@@ -38,7 +38,7 @@
   },
   "home": {
     "title": "Libre and Dexcom glucose on Apple Watch and the Lock Screen",
-    "description": "Dulce brings your FreeStyle Libre or Dexcom glucose to the Lock Screen, Dynamic Island, StandBy, Apple Watch and your family's phone. Free on the App Store.",
+    "description": "Dulce brings your FreeStyle Libre, Dexcom or Medtronic glucose to the Lock Screen, Dynamic Island, StandBy, Apple Watch and your family's phone. Free on the App Store.",
     "hero": {
       "line1": "Your glucose,",
       "line2": "always in sight.",
@@ -127,7 +127,7 @@
         {
           "key": "logbook",
           "title": "Logbook",
-          "body": "Carbs, insulin and glucose in seconds with a quick slider. One timeline you can actually read."
+          "body": "Carbs, insulin and glucose in seconds with a quick slider, or doses straight from your NFC smart insulin pen. One timeline you can actually read."
         },
         {
           "key": "trends",
@@ -168,8 +168,8 @@
         "sample": "Sample data"
       },
       "sensors": {
-        "title": "FreeStyle Libre and Dexcom",
-        "body": "Connect your LibreLinkUp account, or your Dexcom account with Share turned on.",
+        "title": "FreeStyle Libre, Dexcom, Medtronic and Nightscout",
+        "body": "Connect LibreLinkUp, Dexcom Share, Medtronic CareLink or your own Nightscout site.",
         "link": "How to set it up"
       },
       "privacy": {
@@ -195,7 +195,7 @@
         },
         {
           "q": "Which sensors work with it?",
-          "a": "FreeStyle Libre 2 and Libre 3 through your LibreLinkUp account, and Dexcom G6, G7 and ONE+ through Dexcom Share (your Dexcom account with Share turned on)."
+          "a": "FreeStyle Libre 2 and Libre 3 through LibreLinkUp, Dexcom G6, G7 and ONE+ through Dexcom Share, Medtronic Simplera, Guardian, Instinct and MiniMed 780G through CareLink, and any sensor that uploads to your own Nightscout site."
         },
         {
           "q": "Why doesn't my LibreLink login work?",
@@ -523,12 +523,14 @@
       "Widgets for the Home Screen, Lock Screen and StandBy",
       "Low, high and critical-low alerts (checked every 5 minutes)",
       "Logbook for carbs, insulin and glucose",
+      "Doses imported from NFC smart insulin pens",
       "Trends: time in range, average and GMI",
       "Following someone else's glucose"
     ],
     "pro": [
       "Lock Screen Live Activity and Dynamic Island, updated every minute",
       "Apple Watch app and complications",
+      "Your glucose card on CarPlay and in the Apple Watch Smart Stack",
       "Family sharing with up to 3 followers, who pay nothing",
       "Apple Health data in your Logbook and Trends",
       "Alerts checked every minute"

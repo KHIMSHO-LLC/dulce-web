@@ -38,7 +38,7 @@
   },
   "home": {
     "title": "Libre und Dexcom Glukose auf Apple Watch und Sperrbildschirm",
-    "description": "Dulce bringt deine FreeStyle Libre oder Dexcom Glukose auf Sperrbildschirm, Dynamic Island, Apple Watch und das Handy deiner Familie. Kostenlos im App Store.",
+    "description": "Dulce bringt deine FreeStyle Libre-, Dexcom- oder Medtronic-Werte auf den Sperrbildschirm, in die Dynamic Island, in StandBy, auf die Apple Watch und auf das Handy deiner Familie. Kostenlos im App Store.",
     "hero": {
       "line1": "Dein Zucker,",
       "line2": "immer im Blick.",
@@ -127,7 +127,7 @@
         {
           "key": "logbook",
           "title": "Logbuch",
-          "body": "Kohlenhydrate, Insulin und Glukose in Sekunden mit einem schnellen Schieberegler. Eine Zeitleiste, die man wirklich lesen kann."
+          "body": "Kohlenhydrate, Insulin und Glukose in Sekunden mit einem schnellen Regler, oder die Dosen direkt aus deinem NFC-Smart-Insulinpen. Eine Zeitleiste, die man wirklich lesen kann."
         },
         {
           "key": "trends",
@@ -168,8 +168,8 @@
         "sample": "Beispieldaten"
       },
       "sensors": {
-        "title": "FreeStyle Libre und Dexcom",
-        "body": "Verbinde dein LibreLinkUp-Konto oder dein Dexcom-Konto mit aktiviertem Teilen.",
+        "title": "FreeStyle Libre, Dexcom, Medtronic und Nightscout",
+        "body": "Verbinde LibreLinkUp, Dexcom Share, Medtronic CareLink oder deine eigene Nightscout-Seite.",
         "link": "So richtest du es ein"
       },
       "privacy": {
@@ -195,7 +195,7 @@
         },
         {
           "q": "Welche Sensoren funktionieren?",
-          "a": "FreeStyle Libre 2 und Libre 3 über dein LibreLinkUp-Konto, und Dexcom G6, G7 und ONE+ über Dexcom Share (dein Dexcom-Konto mit aktiviertem Teilen)."
+          "a": "FreeStyle Libre 2 und Libre 3 über LibreLinkUp, Dexcom G6, G7 und ONE+ über Dexcom Share, Medtronic Simplera, Guardian, Instinct und MiniMed 780G über CareLink sowie jeder Sensor, der auf deine eigene Nightscout-Seite hochlädt."
         },
         {
           "q": "Warum funktioniert meine LibreLink-Anmeldung nicht?",
@@ -523,12 +523,14 @@
       "Widgets für Home-Bildschirm, Sperrbildschirm und StandBy",
       "Warnungen bei niedrigen, hohen und kritisch niedrigen Werten (alle 5 Minuten geprüft)",
       "Logbuch für Kohlenhydrate, Insulin und Glukose",
+      "Dosen aus NFC-Smart-Insulinpens übernehmen",
       "Trends: Zeit im Zielbereich, Durchschnitt und GMI",
       "Den Zucker einer anderen Person verfolgen"
     ],
     "pro": [
       "Live-Aktivität auf dem Sperrbildschirm und Dynamic Island, jede Minute aktualisiert",
       "Apple Watch App und Komplikationen",
+      "Deine Glukose-Karte in CarPlay und im Smart Stack der Apple Watch",
       "Teilen mit der Familie, bis zu 3 Follower, die nichts zahlen",
       "Apple Health Daten in Logbuch und Trends",
       "Warnungen jede Minute geprüft"

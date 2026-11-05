@@ -38,7 +38,7 @@
   },
   "home": {
     "title": "Libre- ja Dexcom-glukoosi Apple Watchissa ja lukitusnäytöllä",
-    "description": "Dulce tuo FreeStyle Libre- tai Dexcom-glukoosisi lukitusnäytölle, Dynamic Islandiin, StandByhin, Apple Watchiin ja perheesi puhelimeen. Ilmainen App Storessa.",
+    "description": "Dulce tuo FreeStyle Libre-, Dexcom- tai Medtronic-glukoosisi lukitusnäytölle, Dynamic Islandiin, StandByhin, Apple Watchiin ja perheesi puhelimeen. Ilmainen App Storessa.",
     "hero": {
       "line1": "Verensokerisi,",
       "line2": "aina näkyvillä.",
@@ -127,7 +127,7 @@
         {
           "key": "logbook",
           "title": "Päiväkirja",
-          "body": "Hiilihydraatit, insuliini ja glukoosi sekunneissa liukusäätimellä. Yksi aikajana, jota oikeasti pystyy lukemaan."
+          "body": "Hiilihydraatit, insuliini ja glukoosi sekunneissa nopealla liukusäätimellä, tai annokset suoraan älykkäästä NFC-insuliinikynästäsi. Yksi aikajana, jota oikeasti pystyy lukemaan."
         },
         {
           "key": "trends",
@@ -168,8 +168,8 @@
         "sample": "Esimerkkitiedot"
       },
       "sensors": {
-        "title": "FreeStyle Libre ja Dexcom",
-        "body": "Yhdistä LibreLinkUp-tilisi tai Dexcom-tilisi, jossa jakaminen (Share) on päällä.",
+        "title": "FreeStyle Libre, Dexcom, Medtronic ja Nightscout",
+        "body": "Yhdistä LibreLinkUp, Dexcom Share, Medtronic CareLink tai oma Nightscout-sivustosi.",
         "link": "Näin otat sen käyttöön"
       },
       "privacy": {
@@ -195,7 +195,7 @@
         },
         {
           "q": "Mitkä sensorit toimivat?",
-          "a": "FreeStyle Libre 2 ja Libre 3 LibreLinkUp-tilisi kautta sekä Dexcom G6, G7 ja ONE+ Dexcom Sharen kautta (oma Dexcom-tilisi, jossa jakaminen on päällä)."
+          "a": "FreeStyle Libre 2 ja Libre 3 LibreLinkUpin kautta, Dexcom G6, G7 ja ONE+ Dexcom Sharen kautta, Medtronic Simplera, Guardian, Instinct ja MiniMed 780G CareLinkin kautta sekä mikä tahansa sensori, joka lähettää tiedot omalle Nightscout-sivustollesi."
         },
         {
           "q": "Miksi LibreLink-tunnukseni eivät toimi?",
@@ -523,12 +523,14 @@
       "Widgetit koti- ja lukitusnäytölle sekä StandByhin",
       "Matalan, korkean ja kriittisen matalan arvon hälytykset (tarkistus 5 minuutin välein)",
       "Päiväkirja hiilihydraateille, insuliinille ja glukoosille",
+      "Annokset tuodaan älykkäistä NFC-insuliinikynistä",
       "Trendit: aika tavoitealueella, keskiarvo ja GMI",
       "Toisen ihmisen glukoosin seuraaminen"
     ],
     "pro": [
       "Live Activity lukitusnäytöllä ja Dynamic Islandissa, päivittyy minuutin välein",
       "Apple Watch -sovellus ja komplikaatiot",
+      "Glukoosikorttisi CarPlayssa ja Apple Watchin Smart Stackissa",
       "Perheen seuranta enintään 3 seuraajalle, jotka eivät maksa mitään",
       "Apple Terveys -tiedot päiväkirjassa ja trendeissä",
       "Hälytysten tarkistus minuutin välein"

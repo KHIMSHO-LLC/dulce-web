@@ -38,7 +38,7 @@
   },
   "home": {
     "title": "Libre- och Dexcom-glukos på Apple Watch och låsskärmen",
-    "description": "Dulce visar din FreeStyle Libre- eller Dexcom-glukos på låsskärmen, i Dynamic Island, i Vänteläge, på Apple Watch och på din familjs telefon. Gratis i App Store.",
+    "description": "Dulce visar din FreeStyle Libre-, Dexcom- eller Medtronic-glukos på låsskärmen, i Dynamic Island, i Vänteläge, på Apple Watch och på din familjs telefon. Gratis i App Store.",
     "hero": {
       "line1": "Din glukos,",
       "line2": "alltid inom synhåll.",
@@ -127,7 +127,7 @@
         {
           "key": "logbook",
           "title": "Loggbok",
-          "body": "Kolhydrater, insulin och glukos på några sekunder med ett snabbt reglage. En tidslinje du faktiskt kan läsa."
+          "body": "Kolhydrater, insulin och glukos på några sekunder med ett snabbt reglage, eller doserna direkt från din smarta NFC-insulinpenna. En tidslinje du faktiskt kan läsa."
         },
         {
           "key": "trends",
@@ -168,8 +168,8 @@
         "sample": "Exempeldata"
       },
       "sensors": {
-        "title": "FreeStyle Libre och Dexcom",
-        "body": "Anslut ditt LibreLinkUp-konto, eller ditt Dexcom-konto med Share påslaget.",
+        "title": "FreeStyle Libre, Dexcom, Medtronic och Nightscout",
+        "body": "Anslut LibreLinkUp, Dexcom Share, Medtronic CareLink eller din egen Nightscout-webbplats.",
         "link": "Så konfigurerar du det"
       },
       "privacy": {
@@ -195,7 +195,7 @@
         },
         {
           "q": "Vilka sensorer fungerar?",
-          "a": "FreeStyle Libre 2 och Libre 3 via ditt LibreLinkUp-konto, och Dexcom G6, G7 och ONE+ via Dexcom Share (ditt Dexcom-konto med Share påslaget)."
+          "a": "FreeStyle Libre 2 och Libre 3 via LibreLinkUp, Dexcom G6, G7 och ONE+ via Dexcom Share, Medtronic Simplera, Guardian, Instinct och MiniMed 780G via CareLink, och alla sensorer som laddar upp till din egen Nightscout-webbplats."
         },
         {
           "q": "Varför fungerar inte min LibreLink-inloggning?",
@@ -523,12 +523,14 @@
       "Widgetar för hemskärmen, låsskärmen och Vänteläge",
       "Larm för lågt, högt och kritiskt lågt (kontrolleras var 5:e minut)",
       "Loggbok för kolhydrater, insulin och glukos",
+      "Doser importerade från smarta NFC-insulinpennor",
       "Trender: tid inom målområdet, genomsnitt och GMI",
       "Följa någon annans glukos"
     ],
     "pro": [
       "Live-aktivitet på låsskärmen och Dynamic Island, uppdaterad varje minut",
       "App och komplikationer för Apple Watch",
+      "Ditt glukoskort i CarPlay och i Apple Watch Smart Stack",
       "Familjedelning med upp till 3 följare, som inte betalar något",
       "Data från Apple Hälsa i loggboken och trenderna",
       "Larm som kontrolleras varje minut"

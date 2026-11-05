@@ -201,6 +201,10 @@ questions around them. Being the best answer means the product actually does it 
       setup/status/Pro pages, OG, badges, legal in English + noindex; no/nn browsers → nb). App languages listed everywhere
       (12 incl. Georgian). Guides translated: librelinkup-not-working, libreview, apple-watch-glucose. Mobile menu
       language row now wraps (10 codes overflowed the panel). Next nb/sv/ru guides by value: same list as fi/nl.
+- [x] 2026-11-05: 1.0.6 on the site (owner's go-ahead before the store release): Medtronic (CareLink), Nightscout and NFC
+      smart insulin pens in the home copy, sensors FAQ, Free vs Pro lists, app schema and llms.txt, all 10 languages.
+      New guide `smart-insulin-pen` (NovoPen 6 / Echo Plus, 5 core languages; logbook links to it). Pen brand names are
+      fine on the web; the App Store copy stays brand-free.
 
 ## Next for Claude (in order)
 

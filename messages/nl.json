@@ -38,7 +38,7 @@
   },
   "home": {
     "title": "Libre- en Dexcom-glucose op je Apple Watch en toegangsscherm",
-    "description": "Dulce zet je FreeStyle Libre- of Dexcom-glucose op het toegangsscherm, in het Dynamic Island, StandBy, op je Apple Watch en de telefoon van je familie. Gratis in de App Store.",
+    "description": "Dulce zet je glucose van FreeStyle Libre, Dexcom of Medtronic op het toegangsscherm, in het Dynamic Island, in StandBy, op je Apple Watch en op de telefoon van je familie. Gratis in de App Store.",
     "hero": {
       "line1": "Je glucose,",
       "line2": "altijd in beeld.",
@@ -127,7 +127,7 @@
         {
           "key": "logbook",
           "title": "Logboek",
-          "body": "Koolhydraten, insuline en glucose in een paar seconden met een schuifregelaar. Eén tijdlijn die je echt kunt lezen."
+          "body": "Koolhydraten, insuline en glucose in seconden met een snelle schuifregelaar, of doses rechtstreeks uit je slimme NFC-insulinepen. Eén tijdlijn die je echt kunt lezen."
         },
         {
           "key": "trends",
@@ -168,8 +168,8 @@
         "sample": "Voorbeeldgegevens"
       },
       "sensors": {
-        "title": "FreeStyle Libre en Dexcom",
-        "body": "Koppel je LibreLinkUp-account, of je Dexcom-account met Delen (Share) aan.",
+        "title": "FreeStyle Libre, Dexcom, Medtronic en Nightscout",
+        "body": "Verbind LibreLinkUp, Dexcom Share, Medtronic CareLink of je eigen Nightscout-site.",
         "link": "Zo stel je het in"
       },
       "privacy": {
@@ -195,7 +195,7 @@
         },
         {
           "q": "Met welke sensoren werkt het?",
-          "a": "FreeStyle Libre 2 en Libre 3 via je LibreLinkUp-account, en Dexcom G6, G7 en ONE+ via Dexcom Share (je eigen Dexcom-account met Delen aan)."
+          "a": "FreeStyle Libre 2 en Libre 3 via LibreLinkUp, Dexcom G6, G7 en ONE+ via Dexcom Share, Medtronic Simplera, Guardian, Instinct en MiniMed 780G via CareLink, en elke sensor die uploadt naar je eigen Nightscout-site."
         },
         {
           "q": "Waarom werken mijn LibreLink-gegevens niet?",
@@ -523,12 +523,14 @@
       "Widgets voor het beginscherm, het toegangsscherm en StandBy",
       "Meldingen bij laag, hoog en kritiek laag (elke 5 minuten gecontroleerd)",
       "Logboek voor koolhydraten, insuline en glucose",
+      "Doses geïmporteerd uit slimme NFC-insulinepennen",
       "Trends: tijd binnen bereik, gemiddelde en GMI",
       "De glucose van iemand anders volgen"
     ],
     "pro": [
       "Live Activity op het toegangsscherm en in het Dynamic Island, elke minuut bijgewerkt",
       "Apple Watch-app en complicaties",
+      "Je glucosekaart in CarPlay en in de Smart Stack van de Apple Watch",
       "Delen met familie met tot 3 volgers, die niets betalen",
       "Gegevens uit Apple Gezondheid in je logboek en trends",
       "Meldingen elke minuut gecontroleerd"

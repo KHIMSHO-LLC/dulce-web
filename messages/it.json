@@ -38,7 +38,7 @@
   },
   "home": {
     "title": "glicemia Libre e Dexcom su Apple Watch e schermata di blocco",
-    "description": "Dulce porta la glicemia di FreeStyle Libre o Dexcom su schermata di blocco, Dynamic Island, Apple Watch e sul telefono di chi ami. Gratis sull'App Store.",
+    "description": "Dulce porta la tua glicemia di FreeStyle Libre, Dexcom o Medtronic sulla schermata di blocco, nella Dynamic Island, in StandBy, sull'Apple Watch e sul telefono della tua famiglia. Gratis sull'App Store.",
     "hero": {
       "line1": "La tua glicemia,",
       "line2": "sempre sotto gli occhi.",
@@ -127,7 +127,7 @@
         {
           "key": "logbook",
           "title": "Diario",
-          "body": "Carboidrati, insulina e glicemia in pochi secondi con un cursore rapido. Una cronologia che si legge davvero."
+          "body": "Carboidrati, insulina e glicemia in pochi secondi con un cursore rapido, o le dosi direttamente dalla tua penna per insulina smart NFC. Una sola linea del tempo che si legge davvero."
         },
         {
           "key": "trends",
@@ -168,8 +168,8 @@
         "sample": "Dati di esempio"
       },
       "sensors": {
-        "title": "FreeStyle Libre e Dexcom",
-        "body": "Collega il tuo account LibreLinkUp, oppure il tuo account Dexcom con la condivisione (Share) attiva.",
+        "title": "FreeStyle Libre, Dexcom, Medtronic e Nightscout",
+        "body": "Collega LibreLinkUp, Dexcom Share, Medtronic CareLink o il tuo sito Nightscout.",
         "link": "Come configurarlo"
       },
       "privacy": {
@@ -195,7 +195,7 @@
         },
         {
           "q": "Con quali sensori funziona?",
-          "a": "FreeStyle Libre 2 e Libre 3 tramite il tuo account LibreLinkUp, e Dexcom G6, G7 e ONE+ tramite Dexcom Share (il tuo account Dexcom con la condivisione attiva)."
+          "a": "FreeStyle Libre 2 e Libre 3 tramite LibreLinkUp, Dexcom G6, G7 e ONE+ tramite Dexcom Share, Medtronic Simplera, Guardian, Instinct e MiniMed 780G tramite CareLink, e qualsiasi sensore che carica i dati sul tuo sito Nightscout."
         },
         {
           "q": "Perché il mio accesso LibreLink non funziona?",
@@ -523,12 +523,14 @@
       "Widget per la Home, la schermata di blocco e StandBy",
       "Avvisi di glicemia bassa, alta e ipo critica (controllati ogni 5 minuti)",
       "Diario di carboidrati, insulina e glicemia",
+      "Dosi importate dalle penne per insulina smart NFC",
       "Andamento: tempo nel range, media e GMI",
       "Seguire la glicemia di un'altra persona"
     ],
     "pro": [
       "Attività in tempo reale sulla schermata di blocco e Dynamic Island, aggiornata ogni minuto",
       "App per Apple Watch e complicazioni",
+      "La tua scheda della glicemia in CarPlay e nello Smart Stack di Apple Watch",
       "Condivisione in famiglia con fino a 3 follower, che non pagano nulla",
       "Dati di Salute di Apple nel Diario e in Andamento",
       "Avvisi controllati ogni minuto"

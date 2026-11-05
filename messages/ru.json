@@ -38,7 +38,7 @@
   },
   "home": {
     "title": "Глюкоза Libre и Dexcom на Apple Watch и экране блокировки",
-    "description": "Dulce показывает глюкозу FreeStyle Libre или Dexcom на экране блокировки, в Dynamic Island, в режиме ожидания, на Apple Watch и на телефоне вашей семьи. Бесплатно в App Store.",
+    "description": "Dulce выводит глюкозу FreeStyle Libre, Dexcom или Medtronic на экран блокировки, в Dynamic Island, режим ожидания, на Apple Watch и на телефон вашей семьи. Бесплатно в App Store.",
     "hero": {
       "line1": "Ваша глюкоза",
       "line2": "всегда на виду.",
@@ -127,7 +127,7 @@
         {
           "key": "logbook",
           "title": "Дневник",
-          "body": "Углеводы, инсулин и глюкоза за секунды с удобным ползунком. Одна лента событий, которую действительно можно читать."
+          "body": "Углеводы, инсулин и глюкоза за секунды с удобным ползунком — или дозы прямо из умной шприц-ручки с NFC. Одна лента событий, которую действительно можно читать."
         },
         {
           "key": "trends",
@@ -168,8 +168,8 @@
         "sample": "Пример данных"
       },
       "sensors": {
-        "title": "FreeStyle Libre и Dexcom",
-        "body": "Подключите аккаунт LibreLinkUp или аккаунт Dexcom с включённым Share.",
+        "title": "FreeStyle Libre, Dexcom, Medtronic и Nightscout",
+        "body": "Подключите LibreLinkUp, Dexcom Share, Medtronic CareLink или свой сайт Nightscout.",
         "link": "Как настроить"
       },
       "privacy": {
@@ -195,7 +195,7 @@
         },
         {
           "q": "Какие сенсоры поддерживаются?",
-          "a": "FreeStyle Libre 2 и Libre 3 через аккаунт LibreLinkUp, а также Dexcom G6, G7 и ONE+ через Dexcom Share (аккаунт Dexcom с включённым Share)."
+          "a": "FreeStyle Libre 2 и Libre 3 через LibreLinkUp, Dexcom G6, G7 и ONE+ через Dexcom Share, Medtronic Simplera, Guardian, Instinct и MiniMed 780G через CareLink, а также любой сенсор, который загружает данные на ваш собственный сайт Nightscout."
         },
         {
           "q": "Почему не работает вход через LibreLink?",
@@ -523,12 +523,14 @@
       "Виджеты для экрана «Домой», экрана блокировки и режима ожидания",
       "Оповещения о низком, высоком и критически низком уровне (проверка каждые 5 минут)",
       "Дневник углеводов, инсулина и глюкозы",
+      "Дозы из умных шприц-ручек с NFC",
       "Тренды: время в диапазоне, среднее и GMI",
       "Следить за глюкозой другого человека"
     ],
     "pro": [
       "Live Activity на экране блокировки и в Dynamic Island с обновлением каждую минуту",
       "Приложение и расширения для Apple Watch",
+      "Карточка глюкозы в CarPlay и в Смарт-стопке Apple Watch",
       "Семейный доступ до 3 наблюдателей, которые ничего не платят",
       "Данные Apple Здоровье в дневнике и трендах",
       "Оповещения с проверкой каждую минуту"

@@ -242,7 +242,7 @@ export const TOOLS: readonly Tool[] = [
     path: "/tools/a1c-calculator",
     name: "a1c-calculator",
     dateModified: "2026-10-30",
-    guides: ["hba1c", "blood-sugar-levels", "time-in-range", "trends", "logbook", "apple-health", "libreview"],
+    guides: ["hba1c", "blood-sugar-levels", "time-in-range", "trends", "logbook", "smart-insulin-pen", "apple-health", "libreview"],
   },
   {
     path: "/tools/sensor-end-date",
