@@ -110,6 +110,85 @@ const FUNNEL_STEPS: { step: FunnelStep; label: string }[] = [
   { step: "ob_purchase", label: "Started trial / bought" },
 ];
 
+/** One labelled bar per count, scaled to `base` (or the largest value). */
+function Rows({
+  rows,
+  counts,
+  base,
+}: {
+  rows: { step: FunnelStep; label: string }[];
+  counts: Partial<Record<FunnelStep, number>>;
+  base?: number;
+}) {
+  const max = base || Math.max(1, ...rows.map((r) => counts[r.step] ?? 0));
+  return (
+    <>
+      {rows.map(({ step, label }) => {
+        const n = counts[step] ?? 0;
+        const share = Math.round((n / max) * 100);
+        return (
+          <div
+            key={step}
+            className="grid grid-cols-[minmax(0,12rem)_1fr_auto] items-center gap-3 py-1.5"
+          >
+            <span className="text-label text-foreground">{label}</span>
+            <div className="h-2 rounded-full bg-accent-soft">
+              <div className="h-2 rounded-full bg-accent" style={{ width: `${Math.min(100, share)}%` }} />
+            </div>
+            <span className="w-20 text-right text-label tabular-nums text-foreground">
+              {n} <span className="text-caption text-muted">{share}%</span>
+            </span>
+          </div>
+        );
+      })}
+    </>
+  );
+}
+
+const ACTIVE_ROWS: { step: FunnelStep; label: string }[] = [
+  { step: "act_free", label: "Free" },
+  { step: "act_trial", label: "Trial" },
+  { step: "act_paid", label: "Pro (paying)" },
+  { step: "use_follower", label: "Family members (followers)" },
+];
+const FEATURE_ROWS: { step: FunnelStep; label: string }[] = [
+  { step: "use_alerts", label: "Alerts on" },
+  { step: "use_la", label: "Lock Screen / live notification" },
+  { step: "use_widget", label: "Home Screen widget" },
+  { step: "use_watch", label: "Watch" },
+  { step: "use_family", label: "Has followers" },
+  { step: "use_logbook", label: "Logged an entry" },
+  { step: "use_trends", label: "Opened Trends" },
+  { step: "use_pens", label: "Read an insulin pen" },
+];
+const PAYWALL_ROWS: { step: FunnelStep; label: string }[] = [
+  { step: "pw_view", label: "Saw the paywall" },
+  { step: "pw_plan_monthly", label: "Tapped monthly" },
+  { step: "pw_plan_yearly", label: "Tapped yearly" },
+  { step: "pw_buy_tap", label: "Tapped the buy button" },
+  { step: "pw_buy_cancel", label: "Cancelled at Apple / Google" },
+  { step: "pw_buy_fail", label: "Purchase failed" },
+  { step: "pw_buy_ok", label: "Bought or started a trial" },
+  { step: "pw_close", label: "Left without buying" },
+];
+const WHY_ROWS: { step: FunnelStep; label: string }[] = [
+  { step: "why_price", label: "Too expensive" },
+  { step: "why_looking", label: "Just looking" },
+  { step: "why_not_working", label: "Sensor or sign-in not working" },
+  { step: "why_later", label: "Will decide later" },
+  { step: "why_other", label: "Something else" },
+];
+const UNINSTALL_ROWS: { step: FunnelStep; label: string }[] = [
+  { step: "un_day0", label: "Within a day of installing" },
+  { step: "un_week1", label: "In the first week" },
+  { step: "un_month1", label: "In the first month" },
+  { step: "un_later", label: "Later" },
+  { step: "un_free", label: "Was on Free" },
+  { step: "un_trial", label: "Was on a trial" },
+  { step: "un_paid", label: "Was paying" },
+  { step: "un_never_connected", label: "Never connected a sensor" },
+];
+
 export default function UsagePage() {
   const { adminKey, onUnauthorized } = useAdmin();
   const [data, setData] = useState<UsageResponse | null>(null);
@@ -315,6 +394,43 @@ export default function UsagePage() {
                   {data.funnel!.last7d.ob_welcome} opened, {data.funnel!.last7d.ob_connected}{" "}
                   connected, {data.funnel!.last7d.ob_purchase} started a trial or bought.
                 </p>
+              </div>
+
+              <h2 className="mt-10 text-headline font-bold text-foreground">Behaviour · last 30 days</h2>
+              <p className="mt-1 text-label text-muted">
+                Distinct devices, anonymous (each phone counts once per day per item, nothing
+                else is sent). Counted from the app update that adds it; uninstalls from the
+                relay update.
+              </p>
+              <div className="mt-4 grid gap-3 lg:grid-cols-2">
+                <Card title="Who uses Dulce" subtitle="Opened the app at least once, by plan.">
+                  <Rows rows={ACTIVE_ROWS} counts={funnel} />
+                </Card>
+                <Card
+                  title="What they use"
+                  subtitle="Share of active patients (free + trial + Pro) with each feature on or used."
+                >
+                  <Rows
+                    rows={FEATURE_ROWS}
+                    counts={funnel}
+                    base={(funnel.act_free ?? 0) + (funnel.act_trial ?? 0) + (funnel.act_paid ?? 0)}
+                  />
+                </Card>
+                <Card title="Paywall" subtitle="Share of devices that saw it.">
+                  <Rows rows={PAYWALL_ROWS} counts={funnel} base={funnel.pw_view ?? 0} />
+                </Card>
+                <Card
+                  title="Why they didn't start the trial"
+                  subtitle="One tap after closing the offer at the end of onboarding (optional)."
+                >
+                  <Rows rows={WHY_ROWS} counts={funnel} />
+                </Card>
+                <Card
+                  title="Who deleted the app"
+                  subtitle="When Apple / Google report Dulce gone: how long after install, plan, and whether a sensor ever sent a reading."
+                >
+                  <Rows rows={UNINSTALL_ROWS} counts={funnel} />
+                </Card>
               </div>
             </>
           ) : null}
