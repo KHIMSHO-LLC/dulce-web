@@ -104,6 +104,7 @@ const FUNNEL_STEPS: { step: FunnelStep; label: string }[] = [
   { step: "ob_welcome", label: "Opened the app (welcome)" },
   { step: "ob_goals", label: "Picked goals" },
   { step: "ob_login", label: "Reached sensor sign-in" },
+  { step: "ob_login_submit", label: "Tapped Connect" },
   { step: "ob_connected", label: "Connected a sensor" },
   { step: "ob_offer", label: "Saw the Pro offer" },
   { step: "ob_purchase", label: "Started trial / bought" },
@@ -283,7 +284,7 @@ export default function UsagePage() {
               </p>
               <div className="mt-4 rounded-[var(--radius-card)] border border-border-subtle bg-card p-5">
                 {FUNNEL_STEPS.map(({ step, label }) => {
-                  const n = funnel[step];
+                  const n = funnel[step] ?? 0;
                   const share = Math.round((n / (funnel.ob_welcome || 1)) * 100);
                   return (
                     <div
@@ -304,6 +305,12 @@ export default function UsagePage() {
                   );
                 })}
                 <p className="mt-3 text-caption text-muted">
+                  Sign-in failures (devices): {funnel.ob_err_credentials ?? 0} wrong email or
+                  password, {funnel.ob_err_no_data ?? 0} no shared readings,{" "}
+                  {funnel.ob_err_network ?? 0} network, {funnel.ob_err_other ?? 0} other. Counted
+                  from the next app update.
+                </p>
+                <p className="mt-1 text-caption text-muted">
                   {funnel.ob_offer_declined} closed the offer without buying. Last 7 days:{" "}
                   {data.funnel!.last7d.ob_welcome} opened, {data.funnel!.last7d.ob_connected}{" "}
                   connected, {data.funnel!.last7d.ob_purchase} started a trial or bought.

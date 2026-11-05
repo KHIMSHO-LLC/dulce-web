@@ -123,8 +123,14 @@ export type FunnelStep =
   | "ob_connected"
   | "ob_offer"
   | "ob_offer_declined"
-  | "ob_purchase";
+  | "ob_purchase"
+  | "ob_login_submit"
+  | "ob_err_credentials"
+  | "ob_err_no_data"
+  | "ob_err_network"
+  | "ob_err_other";
 
+/** Sign-in steps are newer than the rest; older relays omit them. */
 export type FunnelCounts = Record<FunnelStep, number>;
 
 /** A point-in-time count of what exists. */
