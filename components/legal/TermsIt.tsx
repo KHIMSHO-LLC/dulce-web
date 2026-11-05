@@ -77,7 +77,7 @@ export function TermsIt() {
       <p>
         Per usare il Servizio devi avere almeno 14 anni. Tra i 14 e i 18 anni ti serve il
         consenso di un genitore o tutore legale. Se gestisci un account per conto di un minore,
-        sei responsabile di farlo nel rispetto della legge applicabile.
+        sei responsabile di farlo nel rispetto della legge applicabile. Su Android devi avere almeno 18 anni per usare Dulce e il consenso indicato sopra non si applica. Un genitore o tutore legale può comunque usare Dulce su Android per seguire la glicemia di un minore.
       </p>
 
       <h2 id="accounts">5. Account e credenziali</h2>

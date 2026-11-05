@@ -14,7 +14,7 @@ import { TermsIt } from "@/components/legal/TermsIt";
 /** The Spanish text prevails; the others are translations of it. */
 const DOC: Record<AppLocale, () => React.JSX.Element> = { es: TermsEs, en: TermsEn, de: TermsDe, fr: TermsFr, it: TermsIt, fi: TermsEn, nl: TermsEn, nb: TermsEn, sv: TermsEn, ru: TermsEn };
 
-const LAST_UPDATED = "2026-10-30";
+const LAST_UPDATED = "2026-11-05";
 
 export async function generateMetadata({
   params,

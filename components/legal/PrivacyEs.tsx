@@ -60,10 +60,10 @@ export function PrivacyEs() {
           LibreLinkUp (Abbott) o Dexcom Share. La contraseña se guarda en el llavero seguro de
           tu dispositivo y no se envía a Dulce. La app la usa para conectarse al proveedor;
           cuando conectas tu CGM, se envía al relay un token de sesión del proveedor
-          (no tu contraseña), como se explica a continuación.
+          (no tu contraseña), como se explica a continuación. Con Medtronic CareLink, escribes tu contraseña en la propia página de Medtronic, por lo que Dulce nunca la ve, y Dulce recibe tokens de acceso de Medtronic. Con Nightscout, introduces la dirección de tu sitio y un token de acceso o secreto de API (Dulce solo guarda la huella SHA-1 del secreto).
         </li>
         <li>
-          <strong>Lecturas de glucosa</strong> obtenidas de LibreLinkUp o Dexcom Share,
+          <strong>Lecturas de glucosa</strong> obtenidas de LibreLinkUp, Dexcom Share, Medtronic CareLink o Nightscout,
           guardadas en una base de datos local en tu dispositivo.
         </li>
         <li>
@@ -110,13 +110,13 @@ export function PrivacyEs() {
         Cuando conectas tu CGM, la app registra esta instalación en nuestro relay para poder
         ofrecer actualizaciones en segundo plano, alertas, funciones de Apple Watch y
         seguimiento familiar cuando las uses. El relay es un pequeño servidor que operamos y
-        alojamos en Cloudflare. Obtiene lecturas de LibreLinkUp o Dexcom Share y envía
+        alojamos en Cloudflare. Obtiene lecturas de LibreLinkUp, Dexcom Share, Medtronic CareLink o Nightscout y envía
         actualizaciones a tus dispositivos. El relay procesa:
       </p>
       <ul>
         <li>
           <strong>Un token de sesión del proveedor</strong> (no tu contraseña): un token de
-          LibreLinkUp o un ID de sesión de Dexcom Share, para obtener lecturas en tu nombre.
+          LibreLinkUp o un ID de sesión de Dexcom Share, para obtener lecturas en tu nombre. Con Medtronic CareLink, el relay guarda tus tokens de acceso de CareLink. Con Nightscout, guarda la dirección de tu sitio y tu token de acceso o la huella SHA-1 de tu secreto de API.
         </li>
         <li>
           <strong>Un ID aleatorio de instalación y un identificador de tu cuenta CGM</strong>
@@ -296,7 +296,7 @@ export function PrivacyEs() {
       <h2 id="recipients">7. Con quién compartimos tus datos</h2>
       <p>
         Usamos los proveedores que se indican a continuación. Algunos tratan datos por nuestra
-        cuenta bajo contrato; Abbott, Dexcom, Apple y Google también prestan servicios sujetos
+        cuenta bajo contrato; Abbott, Dexcom, Medtronic, Apple y Google también prestan servicios sujetos
         a sus propias condiciones y políticas de privacidad:
       </p>
       <ul>
@@ -339,6 +339,12 @@ export function PrivacyEs() {
           <strong>Dexcom (Share)</strong> — tu dispositivo y, mientras tu CGM está conectado,
           nuestro relay se conecta a Dexcom Share mediante un ID de sesión para obtener
           lecturas. Se aplican las condiciones de privacidad de Dexcom.
+        </li>
+        <li>
+          <strong>Medtronic (CareLink)</strong> — si conectas CareLink, tu dispositivo y nuestro relay se conectan al servicio de Medtronic mediante tokens de acceso para obtener tus lecturas. Se aplican las condiciones de privacidad de Medtronic.
+        </li>
+        <li>
+          <strong>Nightscout</strong> — si conectas Nightscout, tu dispositivo y nuestro relay obtienen las lecturas del sitio que gestionas o eliges. Quien aloja ese sitio es responsable de él.
         </li>
       </ul>
       <p>
@@ -389,7 +395,7 @@ export function PrivacyEs() {
 
       <h2 id="minors">10. Menores</h2>
       <p>
-        Dulce no está dirigida a menores de 14 años. Un padre, madre o tutor legal puede usar
+        Dulce no está dirigida a menores de 14 años. En Android, Dulce está pensada para adultos de 18 años o más. Un padre, madre o tutor legal puede usar
         Dulce para seguir la glucosa de un menor bajo su propia responsabilidad. Si crees que
         un menor a tu cargo nos ha facilitado datos sin tu consentimiento, contáctanos y los
         eliminaremos.

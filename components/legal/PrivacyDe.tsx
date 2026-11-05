@@ -62,10 +62,10 @@ Missbrauch.
           (Abbott) oder Dexcom-Share-Konto an. Dein Passwort wird im sicheren Schlüsselbund
           deines Geräts gespeichert und nicht an Dulce gesendet. Die App nutzt es, um den
           Anbieter aufzurufen. Wenn dein CGM verbunden ist, wird wie unten beschrieben
-          ein Sitzungstoken des Anbieters (nicht dein Passwort) an das Relay gesendet.
+          ein Sitzungstoken des Anbieters (nicht dein Passwort) an das Relay gesendet. Bei Medtronic CareLink gibst du dein Passwort auf der Seite von Medtronic ein, Dulce sieht es also nie, und Dulce erhält Anmelde-Tokens von Medtronic. Bei Nightscout gibst du deine Website-Adresse und ein Zugriffstoken oder API-Secret ein (Dulce speichert nur den SHA-1-Fingerabdruck des Secrets).
         </li>
         <li>
-          <strong>Glukosewerte</strong> aus LibreLinkUp oder Dexcom Share, gespeichert in einer
+          <strong>Glukosewerte</strong> aus LibreLinkUp, Dexcom Share, Medtronic CareLink oder Nightscout, gespeichert in einer
           lokalen Datenbank auf deinem Gerät.
         </li>
         <li>
@@ -86,14 +86,14 @@ Missbrauch.
         Wenn dein CGM verbunden ist, registriert die App diese Installation bei unserem Relay,
         damit es Hintergrund-Updates, Warnungen, Apple-Watch-Funktionen und Familienfreigabe
         bereitstellen kann. Das Relay ist ein kleiner, von uns betriebener Server bei Cloudflare.
-        Es ruft Werte bei LibreLinkUp oder Dexcom Share ab und sendet Updates an deine Geräte.
+        Es ruft Werte bei LibreLinkUp, Dexcom Share, Medtronic CareLink oder Nightscout ab und sendet Updates an deine Geräte.
         Je nach genutzten Funktionen und Einstellungen verarbeitet das Relay:
       </p>
       <ul>
         <li>
           <strong>Ein Sitzungstoken des Anbieters</strong> (nicht dein Passwort): ein
           LibreLinkUp-Token oder eine Dexcom-Share-Sitzungs-ID, damit das Relay Werte in deinem
-          Namen abrufen kann.
+          Namen abrufen kann. Bei Medtronic CareLink speichert das Relay deine CareLink-Anmelde-Tokens. Bei Nightscout speichert es deine Website-Adresse und dein Zugriffstoken oder den SHA-1-Fingerabdruck deines API-Secrets.
         </li>
         <li>
           <strong>Eine zufällige Installations-ID und eine CGM-Konto-Kennung</strong>, um
@@ -271,7 +271,7 @@ Missbrauch.
       <h2 id="recipients">7. An wen wir deine Daten weitergeben</h2>
       <p>
         Wir nutzen die folgenden Dienstleister. Einige verarbeiten Daten für uns im Auftrag;
-        Abbott, Dexcom, Apple und Google erbringen außerdem eigene Dienste nach ihren eigenen
+        Abbott, Dexcom, Medtronic, Apple und Google erbringen außerdem eigene Dienste nach ihren eigenen
         Bedingungen und Datenschutzhinweisen:
       </p>
       <ul>
@@ -310,6 +310,12 @@ Missbrauch.
           <strong>Dexcom (Share)</strong>: Dein Gerät und, solange dein CGM verbunden ist, auch
           unser Relay verbinden sich über eine Sitzungs-ID mit Dexcom Share, um Werte abzurufen.
           Für diesen Dienst gelten Dexcoms Datenschutzbedingungen.
+        </li>
+        <li>
+          <strong>Medtronic (CareLink)</strong>: Wenn du CareLink verbindest, verbinden sich dein Gerät und unser Relay über Anmelde-Tokens mit dem Dienst von Medtronic, um deine Werte abzurufen. Für diesen Dienst gelten die Datenschutzbedingungen von Medtronic.
+        </li>
+        <li>
+          <strong>Nightscout</strong>: Wenn du Nightscout verbindest, rufen dein Gerät und unser Relay Werte von der Website ab, die du betreibst oder auswählst. Verantwortlich dafür ist, wer diese Website hostet.
         </li>
       </ul>
       <p>
@@ -359,7 +365,7 @@ Missbrauch.
 
       <h2 id="minors">10. Kinder</h2>
       <p>
-        Dulce richtet sich nicht an Kinder unter 14 Jahren. Eltern oder gesetzliche Vertreter
+        Dulce richtet sich nicht an Kinder unter 14 Jahren. Unter Android richtet sich Dulce an Erwachsene ab 18 Jahren. Eltern oder gesetzliche Vertreter
         können Dulce in eigener Verantwortung nutzen, um die Glukose eines Kindes zu verfolgen.
         Wenn du glaubst, dass ein Kind in deiner Obhut uns ohne deine Einwilligung Daten gegeben
         hat, melde dich bei uns und wir löschen sie.

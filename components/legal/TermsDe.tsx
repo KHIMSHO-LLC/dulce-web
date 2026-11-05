@@ -82,7 +82,7 @@ export function TermsDe() {
         Um den Dienst zu nutzen, musst du mindestens 14 Jahre alt sein. Zwischen 14 und 18
         Jahren brauchst du die Zustimmung eines Elternteils oder gesetzlichen Vertreters. Wenn du
         ein Konto für ein Kind verwaltest, bist du dafür verantwortlich, dies im Einklang mit dem
-        geltenden Recht zu tun.
+        geltenden Recht zu tun. Unter Android musst du mindestens 18 Jahre alt sein, um Dulce zu nutzen; die oben genannte Zustimmung gilt dort nicht. Eltern oder gesetzliche Vertreter können Dulce unter Android weiterhin nutzen, um die Glukose eines Kindes zu verfolgen.
       </p>
 
       <h2 id="accounts">5. Konten und Zugangsdaten</h2>
