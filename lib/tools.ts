@@ -70,6 +70,18 @@ export const TOOL_COPY: Record<ToolPath, Record<AppLocale, ToolCopy>> = {
       title: "Bloedsuiker omrekenen: mg/dL naar mmol/L, met tabel",
       description: "Reken je bloedsuiker direct om van mg/dL naar mmol/L en terug. Volledige tabel van 40 tot 400 mg/dL en 2 tot 25 mmol/L, met de streefwaarden.",
     },
+    nb: {
+      title: "Blodsukkeromregner mg/dL til mmol/L, med tabell",
+      description: "Regn om blodsukkeret fra mg/dL til mmol/L og tilbake med en gang. Full tabell fra 40 til 400 mg/dL og 2 til 25 mmol/L, med målområdene.",
+    },
+    sv: {
+      title: "Blodsockeromvandlare mg/dL till mmol/L, med tabell",
+      description: "Räkna om blodsockret från mg/dL till mmol/L och tillbaka direkt. Fullständig tabell från 40 till 400 mg/dL och 2 till 25 mmol/L, med målområdena.",
+    },
+    ru: {
+      title: "Конвертер глюкозы из мг/дл в ммоль/л с таблицей",
+      description: "Мгновенно переводите глюкозу из мг/дл в ммоль/л и обратно. Полная таблица от 40 до 400 мг/дл и от 2 до 25 ммоль/л с целевыми диапазонами.",
+    },
   },
   "/tools/a1c-calculator": {
     es: {
@@ -100,6 +112,18 @@ export const TOOL_COPY: Record<ToolPath, Record<AppLocale, ToolCopy>> = {
       title: "HbA1c berekenen en tabel: gemiddelde glucose en GMI",
       description: "Reken je HbA1c om naar geschatte gemiddelde glucose en mmol/mol, of bereken de GMI uit het gemiddelde van je sensor. HbA1c-tabel van 4 tot 14%.",
     },
+    nb: {
+      title: "HbA1c-kalkulator og tabell: gjennomsnittlig glukose og GMI",
+      description: "Regn om HbA1c til anslått gjennomsnittlig glukose og mmol/mol, eller finn GMI fra sensorens gjennomsnitt. HbA1c-tabell fra 4 til 14 %.",
+    },
+    sv: {
+      title: "HbA1c-kalkylator och tabell: genomsnittlig glukos och GMI",
+      description: "Räkna om HbA1c till uppskattad genomsnittlig glukos och mmol/mol, eller få GMI från sensorns genomsnitt. HbA1c-tabell från 4 till 14 %.",
+    },
+    ru: {
+      title: "Калькулятор и таблица HbA1c: средняя глюкоза и GMI",
+      description: "Переведите HbA1c в расчётную среднюю глюкозу и ммоль/моль или узнайте GMI по средней глюкозе сенсора. Таблица HbA1c от 4 до 14 %.",
+    },
   },
   "/tools/sensor-end-date": {
     es: {
@@ -129,6 +153,18 @@ export const TOOL_COPY: Record<ToolPath, Record<AppLocale, ToolCopy>> = {
     nl: {
       title: "FreeStyle Libre sensor einddatum berekenen",
       description: "Bereken wanneer je FreeStyle Libre 2, 3, 2 Plus of 3 Plus sensor afloopt en wanneer de metingen na de opwarmtijd beginnen, vanaf de dag en tijd van plaatsen.",
+    },
+    nb: {
+      title: "Kalkulator for utløpsdato for FreeStyle Libre-sensor",
+      description: "Regn ut når FreeStyle Libre 2-, 3-, 2 Plus- eller 3 Plus-sensoren din slutter og når målingene starter etter oppvarmingen, ut fra dagen og tiden du satte den på.",
+    },
+    sv: {
+      title: "Kalkylator för slutdatum för FreeStyle Libre-sensor",
+      description: "Räkna ut när din FreeStyle Libre 2-, 3-, 2 Plus- eller 3 Plus-sensor slutar och när mätvärdena börjar efter uppvärmningen, utifrån dag och tid då du satte på den.",
+    },
+    ru: {
+      title: "Калькулятор окончания сенсора FreeStyle Libre",
+      description: "Узнайте, когда заканчивается ваш сенсор FreeStyle Libre 2, 3, 2 Plus или 3 Plus и когда после прогрева появятся показания, по дню и времени установки.",
     },
   },
 };
@@ -173,6 +209,9 @@ export const A1C_CHART_HEAD: Record<AppLocale, [string, string, string, string]>
   it: ["HbA1c (%)", "IFCC (mmol/mol)", "Glicemia media (mg/dL)", "Glicemia media (mmol/L)"],
   fi: ["HbA1c (%)", "IFCC (mmol/mol)", "Keskiglukoosi (mg/dL)", "Keskiglukoosi (mmol/l)"],
   nl: ["HbA1c (%)", "IFCC (mmol/mol)", "Gemiddelde glucose (mg/dL)", "Gemiddelde glucose (mmol/L)"],
+  nb: ["HbA1c (%)", "IFCC (mmol/mol)", "Gjennomsnittlig glukose (mg/dL)", "Gjennomsnittlig glukose (mmol/L)"],
+  sv: ["HbA1c (%)", "IFCC (mmol/mol)", "Genomsnittlig glukos (mg/dL)", "Genomsnittlig glukos (mmol/L)"],
+  ru: ["HbA1c (%)", "IFCC (ммоль/моль)", "Средняя глюкоза (мг/дл)", "Средняя глюкоза (ммоль/л)"],
 };
 
 /** Parses "5,5" or "5.5". */

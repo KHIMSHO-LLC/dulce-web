@@ -90,7 +90,22 @@ const CTA_COPY: Record<AppLocale, { title: string; body: string; button: string 
     title: "Probeer het op je iPhone",
     body: "Dulce is gratis in de App Store. Pro-functies kun je 14 dagen gratis proberen.",
     button: "Download Dulce gratis",
-  }
+  },
+  nb: {
+    title: "Prøv det på iPhonen din",
+    body: "Dulce er gratis i App Store. Pro-funksjonene kan du prøve gratis i 14 dager.",
+    button: "Last ned Dulce gratis",
+  },
+  sv: {
+    title: "Prova på din iPhone",
+    body: "Dulce är gratis i App Store. Pro-funktionerna kan du prova gratis i 14 dagar.",
+    button: "Hämta Dulce gratis",
+  },
+  ru: {
+    title: "Попробуйте на своём iPhone",
+    body: "Dulce бесплатно в App Store. Функции Pro можно попробовать бесплатно 14 дней.",
+    button: "Скачать Dulce бесплатно",
+  },
 };
 
 /** The install call to action. Placed mid-article and at the end. */
@@ -116,7 +131,7 @@ export function ArticleLink({ locale, to, children }: { locale: AppLocale; to: s
   const target = ARTICLES.find((a) => a.id === to);
   if (!target) throw new Error(`ArticleLink: unknown article "${to}"`);
   const slug = target.slug[locale];
-  // fi/nl articles can link to a guide that isn't translated yet: send them to the English one.
+  // fi/nl/nb/sv/ru articles can link to a guide that isn't translated yet: send them to the English one.
   if (!slug) return <a href={`/blog/${target.slug.en}`} hrefLang="en">{children}</a>;
   return (
     <Link href={{ pathname: "/blog/[slug]", params: { slug } }}>

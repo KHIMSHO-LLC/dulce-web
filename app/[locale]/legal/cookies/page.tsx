@@ -12,7 +12,7 @@ import { CookiesFr } from "@/components/legal/CookiesFr";
 import { CookiesIt } from "@/components/legal/CookiesIt";
 
 /** The Spanish text prevails; the others are translations of it. */
-const DOC: Record<AppLocale, () => React.JSX.Element> = { es: CookiesEs, en: CookiesEn, de: CookiesDe, fr: CookiesFr, it: CookiesIt, fi: CookiesEn, nl: CookiesEn };
+const DOC: Record<AppLocale, () => React.JSX.Element> = { es: CookiesEs, en: CookiesEn, de: CookiesDe, fr: CookiesFr, it: CookiesIt, fi: CookiesEn, nl: CookiesEn, nb: CookiesEn, sv: CookiesEn, ru: CookiesEn };
 
 const LAST_UPDATED = "2026-10-29";
 

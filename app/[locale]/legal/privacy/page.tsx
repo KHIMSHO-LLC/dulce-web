@@ -12,7 +12,7 @@ import { PrivacyFr } from "@/components/legal/PrivacyFr";
 import { PrivacyIt } from "@/components/legal/PrivacyIt";
 
 /** The Spanish text prevails; the others are translations of it. */
-const DOC: Record<AppLocale, () => React.JSX.Element> = { es: PrivacyEs, en: PrivacyEn, de: PrivacyDe, fr: PrivacyFr, it: PrivacyIt, fi: PrivacyEn, nl: PrivacyEn };
+const DOC: Record<AppLocale, () => React.JSX.Element> = { es: PrivacyEs, en: PrivacyEn, de: PrivacyDe, fr: PrivacyFr, it: PrivacyIt, fi: PrivacyEn, nl: PrivacyEn, nb: PrivacyEn, sv: PrivacyEn, ru: PrivacyEn };
 
 const LAST_UPDATED = "2026-10-30";
 

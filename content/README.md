@@ -7,10 +7,11 @@ Every article lives in two places:
   title's question answered in the first sentence, facts from the article only. Also add the article id to at least
   one calculator's `guides` list in `lib/tools.ts`.
 - `content/articles/<id>/{es,en,de,fr,it}.mdx`: the body in each language (required). Finnish and Dutch
-  (`fi.mdx`, `nl.mdx`, added 2026-11-04) are optional: an article appears in /fi or /nl only once its registry entry
-  has `fi`/`nl` values for slug, title, description, summary, keywords, imageAlt and faq and the MDX exists. In fi/nl
-  bodies, links to guides not yet translated go to the English page (mark them "(englanniksi)" / "(in het Engels)").
-  The app is not in Dutch, and Finnish only ships with 1.0.6: until then fi/nl pages say the app is in English. The page renders the title (H1),
+  (`fi.mdx`, `nl.mdx`, added 2026-11-04) and Norwegian, Swedish and Russian (`nb.mdx`, `sv.mdx`, `ru.mdx`, site added
+  2026-11-05, no guides translated yet) are optional: an article appears in that language only once its registry entry
+  has values for slug, title, description, summary, keywords, imageAlt and faq and the MDX exists. In those
+  bodies, links to guides not yet translated go to the English page (mark them "(englanniksi)" / "(in het Engels)" /
+  "(på engelsk)" / "(på engelska)" / "(на английском)"). The app has all these languages from 1.0.6 on. The page renders the title (H1),
   byline, closing CTA and disclaimers, so the body starts with an intro paragraph and uses `##` sections.
 
 Calculators: `app/[locale]/tools/*`, formulas in `lib/tools.ts`, explanations in `content/tools/<name>/<locale>.mdx`.

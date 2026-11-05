@@ -22,6 +22,9 @@ const APP_CTA: Record<AppLocale, string> = {
   it: "Scarica Dulce dall'App Store",
   fi: "Lataa Dulce App Storesta",
   nl: "Download Dulce in de App Store",
+  nb: "Last ned Dulce fra App Store",
+  sv: "Hämta Dulce i App Store",
+  ru: "Загрузить Dulce в App Store",
 };
 
 function attr(tag: string, name: string): string | undefined {
@@ -145,6 +148,9 @@ const MESSAGES: Record<AppLocale, () => Promise<Messages>> = {
   it: () => import("@/messages/it.json").then((m) => m.default as Messages),
   fi: () => import("@/messages/fi.json").then((m) => m.default as Messages),
   nl: () => import("@/messages/nl.json").then((m) => m.default as Messages),
+  nb: () => import("@/messages/nb.json").then((m) => m.default as Messages),
+  sv: () => import("@/messages/sv.json").then((m) => m.default as Messages),
+  ru: () => import("@/messages/ru.json").then((m) => m.default as Messages),
 };
 
 const qa = (items: { q: string; a: string }[]) => items.map((f) => `**${f.q}**\n\n${f.a}`).join("\n\n");

@@ -107,6 +107,36 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Logboek voor koolhydraten, insuline en glucose",
     "Trends: tijd binnen bereik, gemiddelde glucose en GMI over 7 tot 90 dagen",
   ],
+  nb: [
+    "Glukose i sanntid fra FreeStyle Libre 2 og Libre 3 (LibreLinkUp) og Dexcom G6, G7 og ONE+ (Dexcom Share)",
+    "Live-aktivitet på låseskjermen og i Dynamic Island, oppdatert hvert minutt",
+    "Widgeter for Hjem-skjermen, låseskjermen og StandBy",
+    "Apple Watch-app med komplikasjoner",
+    "Alarmer for lave og høye verdier, kritisk alarm ved alvorlig hypoglykemi og stilletimer",
+    "Familiemedlemmer som følgere via invitasjonslenke, med egne alarmer og meldinger med ett trykk",
+    "Loggbok for karbohydrater, insulin og glukose",
+    "Trender: tid i målområdet, gjennomsnittlig glukose og GMI over 7 til 90 dager",
+  ],
+  sv: [
+    "Glukos i realtid från FreeStyle Libre 2 och Libre 3 (LibreLinkUp) och Dexcom G6, G7 och ONE+ (Dexcom Share)",
+    "Live-aktivitet på låsskärmen och i Dynamic Island, uppdaterad varje minut",
+    "Widgetar för hemskärmen, låsskärmen och Vänteläge",
+    "Apple Watch-app med komplikationer",
+    "Larm vid låga och höga värden, kritiskt larm vid allvarlig hypoglykemi och tysta timmar",
+    "Familjemedlemmar som följare via inbjudningslänk, med egna larm och meddelanden med ett tryck",
+    "Loggbok för kolhydrater, insulin och glukos",
+    "Trender: tid inom målområdet, genomsnittlig glukos och GMI över 7 till 90 dagar",
+  ],
+  ru: [
+    "Глюкоза в реальном времени с FreeStyle Libre 2 и Libre 3 (LibreLinkUp) и Dexcom G6, G7 и ONE+ (Dexcom Share)",
+    "Live Activity на экране блокировки и в Dynamic Island с обновлением каждую минуту",
+    "Виджеты для экрана «Домой», экрана блокировки и режима ожидания",
+    "Приложение для Apple Watch с расширениями",
+    "Оповещения о низком и высоком уровне, критическое оповещение при тяжёлой гипогликемии и тихие часы",
+    "Члены семьи как наблюдатели по ссылке-приглашению, со своими оповещениями и сообщениями в одно касание",
+    "Дневник углеводов, инсулина и глюкозы",
+    "Тренды: время в диапазоне, средняя глюкоза и GMI за 7–90 дней",
+  ],
 };
 
 const AUDIENCE: Record<AppLocale, string> = {
@@ -117,6 +147,9 @@ const AUDIENCE: Record<AppLocale, string> = {
   it: "Persone con diabete che usano un FreeStyle Libre o un Dexcom e le loro famiglie: genitori di bambini con diabete di tipo 1, partner e caregiver",
   fi: "Diabeetikot, joilla on FreeStyle Libre tai Dexcom, ja heidän perheensä: tyypin 1 diabetesta sairastavien lasten vanhemmat, kumppanit ja omaishoitajat",
   nl: "Mensen met diabetes die een FreeStyle Libre of Dexcom dragen, en hun familie: ouders van kinderen met diabetes type 1, partners en mantelzorgers",
+  nb: "Personer med diabetes som bruker FreeStyle Libre eller Dexcom, og familiene deres: foreldre til barn med diabetes type 1, partnere og pårørende",
+  sv: "Personer med diabetes som använder FreeStyle Libre eller Dexcom, och deras familjer: föräldrar till barn med typ 1-diabetes, partner och anhöriga",
+  ru: "Люди с диабетом, которые носят FreeStyle Libre или Dexcom, и их семьи: родители детей с диабетом 1 типа, партнёры и ухаживающие",
 };
 
 function appSchema(locale: AppLocale, description: string) {

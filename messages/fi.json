@@ -267,7 +267,10 @@
     "fr": "ranska",
     "it": "italia",
     "fi": "suomi",
-    "nl": "hollanti"
+    "nl": "hollanti",
+    "nb": "norja",
+    "sv": "ruotsi",
+    "ru": "venäjä"
   },
   "legal": {
     "lastUpdated": "Päivitetty viimeksi: {date}",

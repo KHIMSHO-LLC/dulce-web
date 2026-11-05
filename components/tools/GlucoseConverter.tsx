@@ -12,6 +12,9 @@ const L: Record<AppLocale, { mgdl: string; mmol: string; hint: string }> = {
   it: { mgdl: "Glicemia in mg/dL", mmol: "Glicemia in mmol/L", hint: "Scrivi in una delle due caselle." },
   fi: { mgdl: "Glukoosi (mg/dL)", mmol: "Glukoosi (mmol/l)", hint: "Kirjoita arvo kumpaan tahansa kenttään." },
   nl: { mgdl: "Glucose in mg/dL", mmol: "Glucose in mmol/L", hint: "Typ in een van beide vakken." },
+  nb: { mgdl: "Glukose i mg/dL", mmol: "Glukose i mmol/L", hint: "Skriv i et av feltene." },
+  sv: { mgdl: "Glukos i mg/dL", mmol: "Glukos i mmol/L", hint: "Skriv i något av fälten." },
+  ru: { mgdl: "Глюкоза в мг/дл", mmol: "Глюкоза в ммоль/л", hint: "Введите значение в любое из полей." },
 };
 
 /** Two linked fields: editing one updates the other. */

@@ -13,7 +13,7 @@ import { absoluteUrl } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
-const LANGUAGE: Record<AppLocale, string> = { es: "Spanish", en: "English", de: "German", fr: "French", it: "Italian", fi: "Finnish", nl: "Dutch" };
+const LANGUAGE: Record<AppLocale, string> = { es: "Spanish", en: "English", de: "German", fr: "French", it: "Italian", fi: "Finnish", nl: "Dutch", nb: "Norwegian", sv: "Swedish", ru: "Russian" };
 
 export async function GET() {
   const order: AppLocale[] = ["en", ...locales.filter((l) => l !== "en")];

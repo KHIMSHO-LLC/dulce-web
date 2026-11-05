@@ -31,6 +31,9 @@ export const AUTHORS: Record<AuthorId, Author> = {
       it: "Fondatore di Dulce, vive con il diabete di tipo 1",
       fi: "Dulcen perustaja, elää tyypin 1 diabeteksen kanssa",
       nl: "Oprichter van Dulce, leeft met diabetes type 1",
+      nb: "Grunnlegger av Dulce, lever med diabetes type 1",
+      sv: "Grundare av Dulce, lever med typ 1-diabetes",
+      ru: "Основатель Dulce, живёт с диабетом 1 типа",
     },
     // Only facts the authors confirmed. Extend when they add more.
     bio: {
@@ -41,6 +44,9 @@ export const AUTHORS: Record<AuthorId, Author> = {
       it: "Giorgi vive con il diabete di tipo 1 e ha fondato Dulce. Ha creato l'app perché era stanco di sbloccare il telefono, aprire un'app e aspettare solo per vedere un numero. Scrive di ciò che usa ogni giorno con il suo sensore, l'iPhone e l'Apple Watch.",
       fi: "Giorgi elää tyypin 1 diabeteksen kanssa ja on Dulcen perustaja. Hän teki sovelluksen, koska kyllästyi avaamaan puhelimen lukituksen, avaamaan sovelluksen ja odottamaan vain nähdäkseen yhden luvun. Hän kirjoittaa siitä, mitä käyttää joka päivä sensorinsa, iPhonensa ja Apple Watchinsa kanssa.",
       nl: "Giorgi leeft met diabetes type 1 en heeft Dulce opgericht. Hij maakte de app omdat hij het zat was om zijn telefoon te ontgrendelen, een app te openen en te wachten alleen om één getal te zien. Hij schrijft over wat hij elke dag gebruikt met zijn sensor, iPhone en Apple Watch.",
+      nb: "Giorgi lever med diabetes type 1 og grunnla Dulce. Han lagde appen fordi han var lei av å låse opp telefonen, åpne en app og vente bare for å se ett tall. Han skriver om det han bruker hver dag med sensoren, iPhonen og Apple Watch.",
+      sv: "Giorgi lever med typ 1-diabetes och grundade Dulce. Han byggde appen för att han var trött på att låsa upp telefonen, öppna en app och vänta bara för att se ett värde. Han skriver om det han använder varje dag med sin sensor, iPhone och Apple Watch.",
+      ru: "Гиорги живёт с диабетом 1 типа и основал Dulce. Он создал приложение, потому что устал разблокировать телефон, открывать приложение и ждать только ради одного числа. Он пишет о том, чем пользуется каждый день: сенсоре, iPhone и Apple Watch.",
     },
   },
   levan: {
@@ -56,6 +62,9 @@ export const AUTHORS: Record<AuthorId, Author> = {
       it: "Vive con il diabete, scrive le guide di Dulce",
       fi: "Elää diabeteksen kanssa, kirjoittaa Dulcen oppaat",
       nl: "Leeft met diabetes, schrijft de gidsen van Dulce",
+      nb: "Lever med diabetes, skriver Dulces guider",
+      sv: "Lever med diabetes, skriver Dulces guider",
+      ru: "Живёт с диабетом, пишет руководства Dulce",
     },
     bio: {
       es: "Levan es el hermano de Giorgi y también vive con diabetes. Escribe las guías de Dulce desde el punto de vista de quien convive con la diabetes cada día.",
@@ -65,6 +74,9 @@ export const AUTHORS: Record<AuthorId, Author> = {
       it: "Levan è il fratello di Giorgi e anche lui vive con il diabete. Scrive le guide di Dulce dal punto di vista di chi gestisce il diabete ogni giorno.",
       fi: "Levan on Giorgin veli ja elää myös diabeteksen kanssa. Hän kirjoittaa Dulcen oppaat sellaisen ihmisen näkökulmasta, joka hoitaa diabetesta joka päivä.",
       nl: "Levan is de broer van Giorgi en leeft ook met diabetes. Hij schrijft de gidsen van Dulce vanuit het perspectief van iemand die elke dag met diabetes leeft.",
+      nb: "Levan er broren til Giorgi og lever også med diabetes. Han skriver Dulces guider fra ståstedet til en som håndterer diabetes hver dag.",
+      sv: "Levan är Giorgis bror och lever också med diabetes. Han skriver Dulces guider utifrån någon som hanterar diabetes varje dag.",
+      ru: "Леван — брат Гиорги, он тоже живёт с диабетом. Он пишет руководства Dulce с точки зрения человека, который справляется с диабетом каждый день.",
     },
   },
 };

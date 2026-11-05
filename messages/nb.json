@@ -1,0 +1,570 @@
+{
+  "metadata": {
+    "siteName": "Dulce",
+    "defaultTitle": "Dulce: FreeStyle Libre-glukose på Apple Watch og låseskjermen",
+    "defaultDescription": "FreeStyle Libre-glukosen din på låseskjermen, i Dynamic Island og på Apple Watch. Alarmer, loggbok og familiedeling. Laget av en som har diabetes type 1.",
+    "keywords": "FreeStyle Libre Apple Watch, LibreLinkUp Apple Watch-app, glukose-widget låseskjerm, glukose Live-aktivitet, Dynamic Island glukose, del glukose med familien, app for diabetes type 1, CGM-widget iPhone, tid i målområdet, diabetesloggbok"
+  },
+  "nav": {
+    "menu": "Meny",
+    "openMenu": "Åpne meny",
+    "closeMenu": "Lukk meny",
+    "download": "Last ned",
+    "home": "Hjem",
+    "skipToContent": "Gå til innholdet",
+    "sections": {
+      "lockScreen": "Låseskjerm",
+      "alerts": "Alarmer",
+      "standby": "Nattbord",
+      "watch": "Apple Watch",
+      "family": "Familie",
+      "day": "Dagen din",
+      "faq": "Spørsmål"
+    },
+    "help": "Hjelp",
+    "setup": "Sett opp LibreLinkUp",
+    "contact": "Skriv til oss",
+    "legal": "Juridisk",
+    "privacy": "Personvern",
+    "terms": "Vilkår",
+    "disclaimer": "Medisinsk ansvarsfraskrivelse",
+    "cookies": "Informasjonskapsler",
+    "language": "Språk",
+    "guides": "Guider",
+    "tools": "Kalkulatorer"
+  },
+  "preloader": {
+    "label": "Laster inn Dulce"
+  },
+  "home": {
+    "title": "Libre- og Dexcom-glukose på Apple Watch og låseskjermen",
+    "description": "Dulce viser FreeStyle Libre- eller Dexcom-glukosen din på låseskjermen, i Dynamic Island, i StandBy, på Apple Watch og på telefonen til familien din. Gratis i App Store.",
+    "hero": {
+      "line1": "Glukosen din,",
+      "line2": "alltid i syne.",
+      "glyphAfter": 2,
+      "sub": "Tallet ditt på låseskjermen, på håndleddet og på telefonen til familien. Uten å åpne en app.",
+      "cta": "Last ned gratis",
+      "qrOpen": "Vis QR-kode for nedlasting",
+      "qrCaption": "Skann med iPhonen for å laste ned Dulce.",
+      "made": "Laget av en som har diabetes type 1, for alle som lever med det hver dag.",
+      "watchTile": "Se Dulce på Apple Watch",
+      "phoneAlt": "Dulce-hjemskjermen med glukose i målområdet og grafen for de siste 12 timene"
+    },
+    "lock": {
+      "title": "Tallet ditt,\nuten å låse opp.",
+      "body": "En Live-aktivitet på låseskjermen og i Dynamic Island, oppdatert hvert minutt. Du sjekker den slik du sjekker klokken.",
+      "tags": [
+        "Live-aktivitet",
+        "Dynamic Island",
+        "Widgeter"
+      ],
+      "alt": "Låseskjerm med Dulces Live-aktivitet som viser glukose i målområdet"
+    },
+    "alerts": {
+      "title": "Alarmer slik\ndu vil ha dem.",
+      "body": "Lave og høye verdier ved dine egne grenser, stilletimer og en kraftigere alarm for svært lav glukose som ringer selv på lydløs.",
+      "note": "Dulce erstatter ikke sensorens egne alarmer.",
+      "alt": "Låseskjerm midt på natten med alarmer for høy, lav og svært lav glukose"
+    },
+    "standby": {
+      "title": "Klokken tre om natten,\nmed ett blikk.",
+      "body": "Legg iPhonen på siden mens den lades, så gjør StandBy Dulce til en nattbordklokke: tallet stort, grafen ved siden av.",
+      "alt": "iPhone i StandBy som viser glukosen stort med grafen for de siste timene"
+    },
+    "watch": {
+      "before": "Dulce",
+      "after": "på håndleddet",
+      "title": "En egen app for Apple Watch.",
+      "body": "Komplikasjoner til urskiven og alarmer med vibrasjon. Er dataene mer enn 15 minutter gamle, ser du det tydelig, aldri et misvisende tall.",
+      "alt": "Apple Watch som viser Dulce-glukose på urskiven",
+      "pro": "Med Dulce Pro, 14 dagers gratis prøveperiode."
+    },
+    "counter": {
+      "prefix": "Opptil",
+      "value": "1 440",
+      "spoken": "ett tusen fire hundre og førti",
+      "unit": "målinger om dagen",
+      "body": "Dulce synkroniserer glukosen din hvert minutt, dag og natt. Alt du gjør, er å se.",
+      "note": "Med FreeStyle Libre 2 og 3 via LibreLinkUp."
+    },
+    "family": {
+      "lead": "Enten du har type 1, passer på noen som har det, eller bare vil være nær: alle ser det de trenger, og du bestemmer hvem.",
+      "drag": "Dra",
+      "prev": "Forrige",
+      "next": "Neste",
+      "cards": [
+        {
+          "title": "Jeg har diabetes type 1",
+          "body": "Tallet ditt, trenden og loggboken, med ett blikk.",
+          "screen": "home",
+          "alt": "Dulce-hjemskjermen"
+        },
+        {
+          "title": "Jeg passer på barnet mitt",
+          "body": "Alarmene deres kommer til telefonen din, også midt på natten.",
+          "screen": "parentAlert",
+          "alt": "Et familiemedlems alarm om lav glukose på låseskjermen"
+        },
+        {
+          "title": "Det er partneren min",
+          "body": "Ett trykk for å spørre. Ett trykk for å svare «Jeg har det bra».",
+          "screen": "nudge",
+          "alt": "En mottatt melding med knappen Jeg har det bra"
+        },
+        {
+          "title": "Foreldrene mine, langt unna",
+          "body": "Inviter med en lenke og trekk tilgangen tilbake når du vil.",
+          "screen": "followers",
+          "alt": "Listen over følgere i Dulce"
+        }
+      ],
+      "pro": "Familiedeling er en del av Dulce Pro, med 14 dagers gratis prøveperiode."
+    },
+    "day": {
+      "title": "Dagen din,\nmed ett blikk.",
+      "items": [
+        {
+          "key": "logbook",
+          "title": "Loggbok",
+          "body": "Karbohydrater, insulin og glukose på sekunder med en rask glidebryter. Én tidslinje du faktisk kan lese."
+        },
+        {
+          "key": "trends",
+          "title": "Trender",
+          "body": "Tid i målområdet, snitt og GMI over 7, 14, 30 eller 90 dager, også fordelt på morgen, ettermiddag og natt."
+        },
+        {
+          "key": "health",
+          "title": "Apple Helse",
+          "body": "Dulce leser dataene dine fra Apple Helse, så alt ligger samlet. Bare lesing."
+        }
+      ],
+      "alt": "Dulce-skjerm: {name}"
+    },
+    "more": {
+      "title": "Resten,\nholdt enkelt.",
+      "family": {
+        "title": "Familien din, med deg",
+        "body": "Den du inviterer, ser glukosen din live og får egne alarmer. De sender en melding, og du svarer uten å ta frem telefonen.",
+        "from": "Mamma",
+        "incoming": "Mamma sendte deg en melding",
+        "question": "Går det bra?",
+        "reply": "Jeg har det bra",
+        "sent": "Sendt. Mamma vet.",
+        "again": "Spill av igjen",
+        "pro": "Med Dulce Pro, 14 dagers gratis prøveperiode."
+      },
+      "widgets": {
+        "title": "Widgeter",
+        "body": "Tallet eller grafen, på Hjem-skjermen."
+      },
+      "tir": {
+        "title": "Tid i målområdet",
+        "body": "Målet ditt, i grønt.",
+        "low": "Lav",
+        "range": "I målområdet",
+        "high": "Høy",
+        "sample": "Eksempeldata"
+      },
+      "sensors": {
+        "title": "FreeStyle Libre og Dexcom",
+        "body": "Koble til LibreLinkUp-kontoen din, eller Dexcom-kontoen din med Share slått på.",
+        "link": "Slik setter du det opp"
+      },
+      "privacy": {
+        "title": "Dataene dine er dine",
+        "body": "Vi selger ikke dataene dine, og Dulce har ingen reklame. I samsvar med GDPR."
+      }
+    },
+    "founder": {
+      "quote": "Jeg har diabetes type 1. Jeg ble lei av å låse opp telefonen, åpne en app og vente på et lastesymbol bare for å se ett tall. Så jeg lagde Dulce til meg selv. Så ville familien min også ha den.",
+      "name": "Giorgio",
+      "role": "Grunnlegger av Dulce"
+    },
+    "faq": {
+      "marquee": "Spørsmål?",
+      "intro": "De vanlige spørsmålene, besvart. Mangler det et? Skriv til oss, så svarer et menneske.",
+      "contact": "Skriv til oss",
+      "contactClose": "Lukk skjemaet",
+      "emailLabel": "Eller på e-post:",
+      "items": [
+        {
+          "q": "Hva koster Dulce?",
+          "a": "Den er gratis å laste ned og har det viktigste med. Pro-funksjonene (Apple Watch, familiedeling og mer) kommer med 14 dagers gratis prøveperiode."
+        },
+        {
+          "q": "Hvilke sensorer fungerer?",
+          "a": "FreeStyle Libre 2 og Libre 3 via LibreLinkUp-kontoen din, og Dexcom G6, G7 og ONE+ via Dexcom Share (Dexcom-kontoen din med Share slått på)."
+        },
+        {
+          "q": "Hvorfor fungerer ikke LibreLink-påloggingen min?",
+          "a": "Dulce bruker LibreLinkUp, ikke LibreLink: det er to apper med hver sin konto. Oppsettsguiden tar deg gjennom det i fire trinn.",
+          "link": "Les guiden"
+        },
+        {
+          "q": "Trenger følgerne mine en sensor?",
+          "a": "Nei. Bare en iPhone og den gratis Dulce-appen. De åpner lenken du sender dem, og det er alt."
+        },
+        {
+          "q": "Hvilke språk finnes den på?",
+          "a": "Spansk, engelsk, tysk, fransk, italiensk, nederlandsk, finsk, svensk, dansk, norsk, russisk og georgisk."
+        },
+        {
+          "q": "Finnes det en Android-versjon?",
+          "a": "Vi jobber med den. Legg igjen e-postadressen din nederst på denne siden, så sier vi fra når den er klar."
+        },
+        {
+          "q": "Er Dulce medisinsk utstyr?",
+          "a": "Nei. Dulce diagnostiserer eller behandler ingen sykdom, og den erstatter ikke sensorens alarmer eller vurderingen til behandlerne dine."
+        },
+        {
+          "q": "Trenger jeg en bestemt iPhone?",
+          "a": "Hvilken som helst iPhone med iOS 17 eller nyere. Dynamic Island krever iPhone 14 Pro eller nyere."
+        }
+      ]
+    },
+    "download": {
+      "title": "Tallet ditt,\nder du ser.",
+      "sub": "Gratis i App Store. Dulce Pro kommer med 14 dagers prøveperiode.",
+      "qr": "Skann med iPhonen",
+      "android": "Bruker du Android? Vi sender deg en e-post når den er klar."
+    }
+  },
+  "footer": {
+    "scan": "Skann koden for å laste ned Dulce på iPhonen.",
+    "onPage": "På denne siden",
+    "help": "Hjelp",
+    "legal": "Juridisk",
+    "disclaimer": "Dulce er ikke medisinsk utstyr. Den erstatter ikke sensorens alarmer eller vurderingen til behandlerne dine. Skjermene på denne siden viser eksempeldata.",
+    "trademarks": "FreeStyle Libre og LibreLinkUp er varemerker for Abbott. Apple Watch og Apple Helse er varemerker for Apple Inc. Dulce er en uavhengig app.",
+    "copyright": "© {year} Dulce",
+    "top": "Til toppen",
+    "wordmark": "dulce",
+    "learn": "Lær mer"
+  },
+  "waitlist": {
+    "email": {
+      "label": "E-post",
+      "placeholder": "deg@epost.no"
+    },
+    "consent": "Jeg godtar å få en e-post når Android-versjonen kommer. Mer i <privacy>personvernreglene</privacy>.",
+    "submit": "Gi meg beskjed",
+    "submitting": "Sender…",
+    "success": "Ferdig. Vi sender deg en e-post når Dulce kommer til Android.",
+    "errors": {
+      "generic": "Noe gikk galt. Prøv igjen.",
+      "rateLimit": "For mange forsøk. Vent litt.",
+      "alreadyJoined": "Denne e-postadressen står allerede på listen. Takk!",
+      "invalidEmail": "Den e-postadressen ser ikke gyldig ut."
+    }
+  },
+  "languageSwitcher": {
+    "label": "Språk",
+    "es": "Spansk",
+    "en": "Engelsk",
+    "de": "Tysk",
+    "fr": "Fransk",
+    "it": "Italiensk",
+    "fi": "Finsk",
+    "nl": "Nederlandsk",
+    "nb": "Norsk",
+    "sv": "Svensk",
+    "ru": "Russisk"
+  },
+  "legal": {
+    "lastUpdated": "Sist oppdatert: {date}",
+    "tableOfContents": "Innhold",
+    "privacy": {
+      "title": "Personvernregler",
+      "description": "Hvordan vi samler inn, bruker og beskytter personopplysningene dine."
+    },
+    "terms": {
+      "title": "Bruksvilkår",
+      "description": "Reglene for bruken av Dulce og dette nettstedet."
+    },
+    "disclaimer": {
+      "title": "Medisinsk ansvarsfraskrivelse",
+      "description": "Dulce er ikke medisinsk utstyr. Forstå begrensningene før du stoler på den."
+    },
+    "cookies": {
+      "title": "Retningslinjer for informasjonskapsler",
+      "description": "Hvilke informasjonskapsler vi bruker, og hvorfor."
+    },
+    "translationNotice": "Denne teksten er tilgjengelig på engelsk. Ved uoverensstemmelser gjelder den spanske versjonen."
+  },
+  "notFound": {
+    "title": "Fant ikke siden",
+    "headline": "Denne siden finnes ikke",
+    "body": "Lenken du fulgte, er feil, eller siden er flyttet.",
+    "cta": "Tilbake til forsiden"
+  },
+  "follow": {
+    "eyebrow": "Familieinvitasjon",
+    "headline": "Du er invitert til å følge noen i Dulce",
+    "body": "Med Dulce kan et familiemedlem dele glukosemålingene sine med deg i sanntid. Installer appen, og skriv inn denne koden for å begynne å følge.",
+    "codeLabel": "Invitasjonskoden din",
+    "openApp": "Åpne i Dulce",
+    "getApp": "Last ned Dulce fra App Store",
+    "steps": {
+      "title": "Slik fungerer det",
+      "one": "Installer Dulce fra App Store.",
+      "two": "Åpne appen og trykk på «Følg noen».",
+      "three": "Skriv inn koden over for å koble til."
+    },
+    "expiryNote": "Invitasjonskoder utløper 24 timer etter at de er laget. Be om en ny hvis denne slutter å virke.",
+    "noCode": "Fant ingen invitasjonskode i denne lenken. Be om en ny invitasjon."
+  },
+  "setup": {
+    "title": "LibreLinkUp-pålogging eller LibreLink: hvilken konto Dulce bruker",
+    "description": "Dulce logger på med LibreLinkUp-kontoen din, ikke LibreLink. Her er forskjellen, og slik slår du på deling så målingene dine når Dulce.",
+    "hero": {
+      "headline": "LibreLink eller LibreLinkUp: hvilken bruker Dulce?",
+      "subheadline": "De ser nesten like ut, men det er to forskjellige apper med to forskjellige pålogginger. Dulce kobler seg til LibreLinkUp, appen som mottar målinger som deles med deg. Denne siden viser nøyaktig hvordan du setter det opp."
+    },
+    "compare": {
+      "title": "To apper, to kontoer",
+      "scan": {
+        "title": "LibreLink",
+        "body": "Appen du installerer for å skanne FreeStyle Libre-sensoren og se dine egne målinger. Dulce kan ikke logge på med denne kontoen."
+      },
+      "share": {
+        "title": "LibreLinkUp",
+        "body": "Følgeappen som mottar målinger som deles med deg, vanligvis brukt av familien. Dette er kontoen Dulce trenger."
+      }
+    },
+    "steps": {
+      "title": "Slå på deling i 4 trinn",
+      "step1": {
+        "title": "Installer LibreLinkUp",
+        "body": "Last ned LibreLinkUp fra App Store eller Google Play og opprett en konto med e-postadressen din. Ta vare på e-post og passord, du bruker dem i Dulce."
+      },
+      "step2": {
+        "title": "Åpne LibreLink og gå til Tilkoblede apper",
+        "body": "I LibreLink-appen du skanner med, åpner du menyen og finner delingsdelen eller «Tilkoblede apper / LinkUp»."
+      },
+      "step3": {
+        "title": "Inviter LibreLinkUp-e-posten din",
+        "body": "Legg til den samme e-postadressen du nettopp registrerte i LibreLinkUp som en tilkobling, og godta deretter invitasjonen i LibreLinkUp."
+      },
+      "step4": {
+        "title": "Logg på Dulce",
+        "body": "Åpne Dulce og skriv inn e-post og passord for LibreLinkUp. Glukosen din vises i løpet av noen sekunder."
+      }
+    },
+    "faq": {
+      "title": "Vanlige spørsmål",
+      "q1": "Hvorfor fungerer ikke LibreLink-påloggingen min i Dulce?",
+      "a1": "Fordi LibreLink og LibreLinkUp er separate apper med separate kontoer. Dulce bruker LibreLinkUp. Hvis påloggingen avvises, skriver du nesten helt sikkert inn LibreLink-detaljene dine. Opprett en LibreLinkUp-konto og bruk den i stedet.",
+      "q2": "Jeg logget på, men Dulce viser ingen data. Hva er galt?",
+      "a2": "LibreLinkUp-påloggingen fungerte, men ingenting deles med den ennå. Åpne LibreLink-appen du skanner med, gå til Tilkoblede apper og inviter LibreLinkUp-e-posten din. Godta invitasjonen, så begynner Dulce å motta målinger.",
+      "q3": "Er Dulce laget av Abbott?",
+      "a3": "Nei. Dulce er en uavhengig app og er ikke tilknyttet, godkjent eller sponset av Abbott. FreeStyle Libre, LibreLink og LibreLinkUp er varemerker for Abbott, brukt her bare for å beskrive tilkoblingen."
+    },
+    "cta": {
+      "title": "Klar til å se glukosen din i Dulce?",
+      "subtitle": "Gratis i App Store. Sett opp LibreLinkUp-kontoen din og logg på."
+    },
+    "disclaimer": "Dulce er en uavhengig app og er ikke tilknyttet, godkjent eller sponset av Abbott. FreeStyle Libre, LibreLink og LibreLinkUp er varemerker for Abbott Diabetes Care. Dulce er ikke medisinsk utstyr og erstatter ikke CGM-ens egne alarmer.",
+    "breadcrumbHome": "Hjem"
+  },
+  "contact": {
+    "form": {
+      "title": "Send oss en melding",
+      "subtitle": "Fyll ut skjemaet nedenfor, så svarer vi deg direkte.",
+      "name": {
+        "label": "Navnet ditt",
+        "placeholder": "Kari Nordmann"
+      },
+      "email": {
+        "label": "E-postadressen din",
+        "placeholder": "deg@epost.no"
+      },
+      "subject": {
+        "label": "Emne",
+        "placeholder": "Hva tenker du på?"
+      },
+      "message": {
+        "label": "Melding",
+        "placeholder": "Fortell oss hva som helst: spørsmål, ideer, tilbakemeldinger eller bare et hei."
+      },
+      "submit": "Send melding",
+      "submitting": "Sender…",
+      "success": {
+        "title": "Meldingen er sendt!",
+        "body": "Vi svarer deg innen 48 arbeidstimer."
+      },
+      "errors": {
+        "validation": "Fyll ut alle feltene riktig.",
+        "rateLimit": "For mange meldinger sendt. Vent litt.",
+        "generic": "Noe gikk galt. Du kan også skrive til oss på hola@dulceglucosa.com."
+      }
+    }
+  },
+  "blog": {
+    "title": "Guider om glukose, Libre og iPhone",
+    "description": "Praktiske guider for å se FreeStyle Libre-glukosen din på iPhone, Apple Watch og med familien, skrevet av folk som lever med diabetes.",
+    "eyebrow": "Guider",
+    "headline": "Få mer ut av sensoren din",
+    "sub": "Praktiske guider skrevet av folk som lever med diabetes. Uten fyll: hvordan det fungerer, hvordan du setter det opp og hva du gjør når noe slutter å virke.",
+    "by": "Av {name}",
+    "updated": "Oppdatert {date}",
+    "published": "Publisert {date}",
+    "minutes": "{n} min lesing",
+    "related": "Les videre",
+    "faqTitle": "Raske spørsmål",
+    "faqMore": "Les mer:",
+    "read": "Les",
+    "allArticles": "Alle guider",
+    "toolsTitle": "Kalkulatorer",
+    "relatedGuides": "Relaterte guider",
+    "usefulLinks": "Verktøy og oppsett",
+    "setupLink": "Koble til Dulce: LibreLink eller LibreLinkUp",
+    "home": "Hjem",
+    "authorArticles": "Artikler av {name}",
+    "medical": "Denne artikkelen er til informasjon og erstatter ikke råd fra behandlerne dine. Dulce er ikke medisinsk utstyr og erstatter ikke sensorens alarmer.",
+    "independent": "Dulce er en uavhengig app, ikke tilknyttet Abbott. FreeStyle Libre, LibreLink og LibreLinkUp er varemerker for Abbott."
+  },
+  "llustatus": {
+    "nav": "LibreLinkUp-status",
+    "title": "Er LibreLinkUp nede? Live-status",
+    "description": "Er LibreLinkUp nede? Live-status målt hvert minutt: de siste 24 timene, responstid, berørte regioner og hva du gjør under et avbrudd.",
+    "eyebrow": "Live-status",
+    "headline": {
+      "operational": "LibreLinkUp fungerer normalt",
+      "degraded": "LibreLinkUp har problemer",
+      "down": "LibreLinkUp ser ut til å være nede",
+      "unknown": "Ikke nok data akkurat nå"
+    },
+    "lead": {
+      "operational": "Kontrollene våre får målinger fra LibreLinkUp som vanlig. Hvis du ikke ser nye målinger, ligger problemet mest sannsynlig på sensortelefonen.",
+      "degraded": "Noen forespørsler til LibreLinkUp feiler eller er trege. Målinger kan komme sent eller ikke i det hele tatt en stund.",
+      "down": "De fleste forespørsler til LibreLinkUp feiler. Følgere og apper som leser LibreLinkUp, også Dulce, får ikke nye målinger før det er i orden igjen.",
+      "unknown": "Det var for få kontroller de siste minuttene til å si noe. Sjekk igjen om litt."
+    },
+    "updated": "Kontrollert {time} UTC",
+    "unavailable": "Statusdataene er midlertidig utilgjengelige.",
+    "metrics": {
+      "failure": "Mislykkede forespørsler",
+      "latency": "Responstid",
+      "calls": "Kontroller (siste 10 min)"
+    },
+    "timeline": {
+      "title": "Siste 24 timer",
+      "hint": "Hver stolpe er 30 minutter. Tider i UTC.",
+      "operational": "Fungerer",
+      "degraded": "Problemer",
+      "down": "Nede",
+      "unknown": "Ingen data"
+    },
+    "regions": {
+      "title": "Berørte regioner",
+      "none": "Ingen region skiller seg ut akkurat nå."
+    },
+    "lastIncident": "Siste problem de siste 24 timene: {time} UTC",
+    "noIncident": "Ingen problemer de siste 24 timene.",
+    "how": {
+      "title": "Slik fungerer det",
+      "body": "Dulces servere leser LibreLinkUp hvert minutt for dem som bruker Dulce. Vi teller hvor mange av forespørslene som lykkes og hvor lang tid de tar, i alle regioner. Feil passord eller en utløpt pålogging for én person regnes ikke som feil; bare feil fra LibreLinkUp selv gjør det. Vi lagrer ikke noens glukose for denne siden."
+    },
+    "todo": {
+      "title": "Hva du gjør hvis LibreLinkUp er nede",
+      "items": [
+        "Sensoren fortsetter å virke. Les glukosen din direkte i Libre-appen på telefonen (LibreLink eller Libre 3).",
+        "Ha Libre-appens egne alarmer på: de er ikke avhengige av LibreLinkUp.",
+        "Gi følgerne dine beskjed: de ser ikke nye målinger før det er tilbake.",
+        "Når LibreLinkUp er tilbake, fylles grafen ut med målingene som manglet."
+      ]
+    },
+    "upButNoData": {
+      "title": "LibreLinkUp fungerer, men du ser ingen data?",
+      "body": "Da ligger problemet nesten alltid på telefonen til den som har sensoren: ingen internettilgang, Libre-appen lukket av systemet eller deling slått av. Feilsøkingsguiden vår dekker alle årsakene.",
+      "link": "LibreLinkUp fungerer ikke: trinn for trinn"
+    },
+    "faq": [
+      {
+        "q": "Er LibreLinkUp nede akkurat nå?",
+        "a": "Denne siden viser live-statusen til LibreLinkUp, målt hvert minutt fra Dulces servere: fungerer, har problemer eller nede, med de siste 24 timene."
+      },
+      {
+        "q": "Fungerer Dulce når LibreLinkUp er nede?",
+        "a": "Nei. Dulce leser målingene dine via LibreLinkUp, så når LibreLinkUp er nede, får heller ikke Dulce noe nytt. Sensoren og Libre-appen fortsetter å virke."
+      },
+      {
+        "q": "Er dette en offisiell statusside fra Abbott?",
+        "a": "Nei. Dulce er uavhengig og ikke tilknyttet Abbott. Dette er våre egne målinger; Abbott kan rapportere annerledes for din region."
+      }
+    ],
+    "disclaimer": "Dulce er en uavhengig app, ikke tilknyttet Abbott. FreeStyle Libre, LibreLink og LibreLinkUp er varemerker for Abbott. Statusen måles av Dulce og gjenspeiler kanskje ikke alle regioner eller kontoer.",
+    "region": {
+      "eu": "Europa",
+      "eu2": "Europa 2",
+      "us": "USA",
+      "de": "Tyskland",
+      "fr": "Frankrike",
+      "jp": "Japan",
+      "ap": "Asia og stillehavsområdet",
+      "au": "Australia",
+      "ae": "Midtøsten",
+      "ca": "Canada",
+      "la": "Latin-Amerika"
+    }
+  },
+  "pro": {
+    "nav": "Gratis eller Pro",
+    "title": "Dulce Pro: hva som er gratis og hva Pro gir",
+    "description": "Hva du får gratis i Dulce, og hva Dulce Pro legger til: Live-aktivitet på låseskjermen, Apple Watch, familiedeling og Apple Helse. 14 dagers gratis prøveperiode, si opp når som helst.",
+    "headline": "Gratis å bruke. Pro når du vil ha mer.",
+    "lead": "Dulce er gratis å laste ned, og det viktigste forblir gratis. Dulce Pro legger til funksjonene som holder tallet ditt foran deg og familien din oppdatert.",
+    "freeTitle": "Gratis",
+    "proTitle": "Dulce Pro",
+    "free": [
+      "Live glukose med trendpil og graf",
+      "Widgeter for Hjem-skjermen, låseskjermen og StandBy",
+      "Alarmer for lav, høy og kritisk lav (sjekkes hvert 5. minutt)",
+      "Loggbok for karbohydrater, insulin og glukose",
+      "Trender: tid i målområdet, snitt og GMI",
+      "Følge glukosen til noen andre"
+    ],
+    "pro": [
+      "Live-aktivitet på låseskjermen og Dynamic Island, oppdatert hvert minutt",
+      "App og komplikasjoner for Apple Watch",
+      "Familiedeling med opptil 3 følgere, som ikke betaler noe",
+      "Data fra Apple Helse i loggboken og trendene",
+      "Alarmer som sjekkes hvert minutt"
+    ],
+    "trialTitle": "Slik fungerer prøveperioden",
+    "trial": [
+      "Nye abonnenter får 14 dager gratis.",
+      "Velg månedlig eller årlig. App Store viser prisen i din valuta før du bekrefter.",
+      "Si opp når som helst i abonnementsinnstillingene for Apple-ID-en din; sier du opp i prøveperioden, betaler du ingenting."
+    ],
+    "faq": [
+      {
+        "q": "Er Dulce gratis?",
+        "a": "Ja. Dulce er gratis å laste ned, med live glukose, widgeter, alarmer, loggbok og trender. Dulce Pro er et valgfritt abonnement med 14 dagers gratis prøveperiode."
+      },
+      {
+        "q": "Hva legger Dulce Pro til?",
+        "a": "Live-aktiviteten på låseskjermen og Dynamic Island, Apple Watch-appen, familiedeling med opptil 3 følgere, data fra Apple Helse og alarmer som sjekkes hvert minutt i stedet for hvert 5. minutt."
+      },
+      {
+        "q": "Trenger følgerne mine Pro?",
+        "a": "Nei. Familiedeling er en del av Pro for den som har sensoren; følgerne installerer Dulce gratis."
+      },
+      {
+        "q": "Hvordan sier jeg opp?",
+        "a": "Abonnementer håndteres av Apple. Åpne Innstillinger på iPhonen, trykk på navnet ditt, deretter Abonnementer, og velg Dulce."
+      }
+    ],
+    "cta": "Last ned Dulce gratis"
+  },
+  "consent": {
+    "title": "Analysekapsler",
+    "text": "Vi vil gjerne bruke informasjonskapsler fra Google Analytics for å se hvilke sider som hjelper folk. Bare hvis du godtar.",
+    "policy": "Retningslinjer for informasjonskapsler",
+    "accept": "Godta",
+    "decline": "Avslå",
+    "settings": "Innstillinger for informasjonskapsler"
+  }
+}

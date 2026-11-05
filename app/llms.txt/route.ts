@@ -17,7 +17,7 @@ import { TOOLS, TOOL_COPY } from "@/lib/tools";
 
 export const dynamic = "force-static";
 
-const LANGUAGE: Record<AppLocale, string> = { es: "Spanish", en: "English", de: "German", fr: "French", it: "Italian", fi: "Finnish", nl: "Dutch" };
+const LANGUAGE: Record<AppLocale, string> = { es: "Spanish", en: "English", de: "German", fr: "French", it: "Italian", fi: "Finnish", nl: "Dutch", nb: "Norwegian", sv: "Swedish", ru: "Russian" };
 
 const url = (locale: AppLocale, path: Parameters<typeof localizedPath>[1]) => absoluteUrl(localizedPath(locale, path));
 

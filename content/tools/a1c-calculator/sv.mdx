@@ -1,0 +1,33 @@
+## Vad den här kalkylatorn gör
+
+Den har två lägen:
+
+- **Jag vet mitt HbA1c.** Den räknar ut den **uppskattade genomsnittliga glukosen (eAG)** som motsvarar ditt HbA1c, med formeln från ADAG-studien: eAG (mg/dL) = 28,7 × HbA1c − 46,7. Den ger dig också HbA1c i mmol/mol, IFCC-enheten som svenska och många andra europeiska laboratorier använder.
+- **Jag vet min sensors genomsnittliga glukos.** Den räknar ut **GMI** (glukoskontrollindikator), siffran som sensorrapporter visar: GMI (%) = 3,31 + 0,02392 × genomsnittlig glukos i mg/dL. Bredvid ser du HbA1c uppskattat med ADAG-formeln, så att du ser att de inte alltid stämmer överens.
+
+## GMI och HbA1c är inte samma sak
+
+HbA1c är ett blodprov: det mäter hur mycket hemoglobin som har bundit glukos under ungefär tre månader. GMI är en beräkning utifrån dina sensormätningar. Den fick nytt namn (den hette tidigare ”uppskattat HbA1c”) just för att så många upplevde att labbsvaret inte stämde med siffran i appen.
+
+Det är normalt att de skiljer sig. Hur länge de röda blodkropparna lever, anemi, graviditet eller vissa hemoglobinvarianter påverkar HbA1c utan att den genomsnittliga glukosen ändras. Därför läses de två siffrorna tillsammans, inte den ena i stället för den andra.
+
+## HbA1c-tabell: HbA1c till genomsnittlig glukos
+
+Alla HbA1c-värden från 4 % till 14 %, i steg om 0,1 mellan 5 % och 9 %, med IFCC-värdet i mmol/mol och den uppskattade genomsnittliga glukosen (ADAG-formeln) i mg/dL och mmol/L.
+
+<A1cTable />
+
+<Callout>
+I vardagen säger <ArticleLink to="time-in-range">tid inom målområdet</ArticleLink> mer än någon av de här siffrorna: två personer med samma HbA1c kan ha mycket olika dagar.
+</Callout>
+
+## Här ser du genomsnittlig glukos och GMI
+
+Fliken Trender i Dulce räknar ut genomsnittlig glukos, GMI och tid inom målområdet från dina FreeStyle Libre-mätningar över 7, 14, 30 eller 90 dagar. Vi förklarar det i <ArticleLink to="trends">guiden om Trender</ArticleLink>.
+
+<AppCta />
+
+## Källor
+
+- Nathan D. M. et al. *Translating the A1C Assay Into Estimated Average Glucose Values*. Diabetes Care 2008;31:1473-1478. [doi.org/10.2337/dc08-0545](https://doi.org/10.2337/dc08-0545)
+- Bergenstal R. M. et al. *Glucose Management Indicator (GMI)*. Diabetes Care 2018;41:2275-2280. [doi.org/10.2337/dc18-1581](https://doi.org/10.2337/dc18-1581)

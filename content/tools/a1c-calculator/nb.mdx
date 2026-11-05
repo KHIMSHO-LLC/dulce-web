@@ -1,0 +1,33 @@
+## Hva denne kalkulatoren gjør
+
+Den har to moduser:
+
+- **Jeg vet HbA1c-en min.** Den regner ut **anslått gjennomsnittlig glukose (eAG)** som tilsvarer HbA1c-en, med formelen fra ADAG-studien: eAG (mg/dL) = 28,7 × HbA1c − 46,7. Den gir deg også HbA1c i mmol/mol, IFCC-enheten mange laboratorier i Europa og Norge bruker.
+- **Jeg vet gjennomsnittsglukosen fra sensoren min.** Den regner ut **GMI** (glukosestyringsindikator), tallet sensorrapportene viser: GMI (%) = 3,31 + 0,02392 × gjennomsnittlig glukose i mg/dL. Ved siden av ser du HbA1c anslått med ADAG-formelen, så du ser at de ikke alltid stemmer overens.
+
+## GMI og HbA1c er ikke det samme
+
+HbA1c er en blodprøve: den måler hvor mye hemoglobin som har bundet seg til glukose over omtrent tre måneder. GMI er en beregning ut fra sensormålingene dine. Den fikk nytt navn (den het tidligere «anslått HbA1c») nettopp fordi så mange opplevde at labsvaret ikke stemte med tallet i appen.
+
+Det er normalt at de er forskjellige. Hvor lenge de røde blodcellene lever, anemi, graviditet eller enkelte hemoglobinvarianter påvirker HbA1c uten at gjennomsnittsglukosen endrer seg. Derfor leses de to tallene sammen, ikke det ene i stedet for det andre.
+
+## HbA1c-tabell: HbA1c til gjennomsnittlig glukose
+
+Alle HbA1c-verdier fra 4 % til 14 %, i trinn på 0,1 mellom 5 % og 9 %, med IFCC-verdien i mmol/mol og anslått gjennomsnittlig glukose (ADAG-formelen) i mg/dL og mmol/L.
+
+<A1cTable />
+
+<Callout>
+I hverdagen sier <ArticleLink to="time-in-range">tid i målområdet</ArticleLink> mer enn noen av disse tallene: to personer med samme HbA1c kan ha svært ulike dager.
+</Callout>
+
+## Her ser du gjennomsnittsglukose og GMI
+
+Trender-fanen i Dulce regner ut gjennomsnittlig glukose, GMI og tid i målområdet fra FreeStyle Libre-målingene dine over 7, 14, 30 eller 90 dager. Vi forklarer det i <ArticleLink to="trends">guiden om Trender</ArticleLink>.
+
+<AppCta />
+
+## Kilder
+
+- Nathan D. M. et al. *Translating the A1C Assay Into Estimated Average Glucose Values*. Diabetes Care 2008;31:1473-1478. [doi.org/10.2337/dc08-0545](https://doi.org/10.2337/dc08-0545)
+- Bergenstal R. M. et al. *Glucose Management Indicator (GMI)*. Diabetes Care 2018;41:2275-2280. [doi.org/10.2337/dc18-1581](https://doi.org/10.2337/dc18-1581)

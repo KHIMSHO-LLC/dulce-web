@@ -15,6 +15,9 @@ const L: Record<
   it: { sensor: "Sensore", started: "Applicato il", ready: "Letture pronte (fine del riscaldamento)", ends: "Il sensore scade", left: "Tempo rimanente", ended: "Questo sensore è già scaduto", days: "g", hours: "h" },
   fi: { sensor: "Sensori", started: "Asetettu", ready: "Lukemat valmiina (lämpenemisen jälkeen)", ends: "Sensori päättyy", left: "Aikaa jäljellä", ended: "Tämä sensori on jo päättynyt", days: "pv", hours: "h" },
   nl: { sensor: "Sensor", started: "Geplaatst op", ready: "Metingen klaar (na de opwarmtijd)", ends: "Sensor eindigt", left: "Resterende tijd", ended: "Deze sensor is al afgelopen", days: "d", hours: "u" },
+  nb: { sensor: "Sensor", started: "Satt på", ready: "Målinger klare (etter oppvarmingen)", ends: "Sensoren slutter", left: "Tid igjen", ended: "Denne sensoren har allerede sluttet", days: "d", hours: "t" },
+  sv: { sensor: "Sensor", started: "Satt på", ready: "Mätvärden klara (efter uppvärmningen)", ends: "Sensorn slutar", left: "Tid kvar", ended: "Den här sensorn har redan slutat", days: "d", hours: "h" },
+  ru: { sensor: "Сенсор", started: "Установлен", ready: "Показания готовы (после прогрева)", ends: "Сенсор заканчивается", left: "Осталось", ended: "Срок этого сенсора уже истёк", days: "дн.", hours: "ч" },
 };
 
 /** "2026-10-22T08:30" in the browser's local time, for <input type="datetime-local">. */

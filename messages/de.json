@@ -267,7 +267,10 @@
     "fr": "Französisch",
     "it": "Italienisch",
     "fi": "Finnisch",
-    "nl": "Niederländisch"
+    "nl": "Niederländisch",
+    "nb": "Norwegisch",
+    "sv": "Schwedisch",
+    "ru": "Russisch"
   },
   "legal": {
     "lastUpdated": "Zuletzt aktualisiert: {date}",

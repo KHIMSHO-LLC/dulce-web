@@ -12,7 +12,7 @@ import { DisclaimerFr } from "@/components/legal/DisclaimerFr";
 import { DisclaimerIt } from "@/components/legal/DisclaimerIt";
 
 /** The Spanish text prevails; the others are translations of it. */
-const DOC: Record<AppLocale, () => React.JSX.Element> = { es: DisclaimerEs, en: DisclaimerEn, de: DisclaimerDe, fr: DisclaimerFr, it: DisclaimerIt, fi: DisclaimerEn, nl: DisclaimerEn };
+const DOC: Record<AppLocale, () => React.JSX.Element> = { es: DisclaimerEs, en: DisclaimerEn, de: DisclaimerDe, fr: DisclaimerFr, it: DisclaimerIt, fi: DisclaimerEn, nl: DisclaimerEn, nb: DisclaimerEn, sv: DisclaimerEn, ru: DisclaimerEn };
 
 const LAST_UPDATED = "2026-10-30";
 

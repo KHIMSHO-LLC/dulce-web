@@ -70,7 +70,10 @@ function preferredLocale(request: NextRequest): AppLocale | null {
     .map((part, i) => {
       const [tag, ...params] = part.trim().split(";");
       const q = params.find((p) => p.trim().startsWith("q="));
-      return { lang: tag.trim().toLowerCase().split("-")[0], q: q ? Number(q.trim().slice(2)) || 0 : 1, i };
+      const base = tag.trim().toLowerCase().split("-")[0];
+      // Norwegian browsers send nb, no or nn; the site's Norwegian is nb.
+      const lang = base === "no" || base === "nn" ? "nb" : base;
+      return { lang, q: q ? Number(q.trim().slice(2)) || 0 : 1, i };
     })
     .filter((x) => x.q > 0)
     .sort((a, b) => b.q - a.q || a.i - b.i);

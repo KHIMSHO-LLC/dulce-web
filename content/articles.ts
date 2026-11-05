@@ -60,9 +60,9 @@ export type Article = {
 };
 
 export const CATEGORY_LABEL: Record<ArticleCategory, AllLocales> = {
-  guide: { es: "Guía de Dulce", en: "Dulce guide", de: "Dulce-Ratgeber", fr: "Guide Dulce", it: "Guida di Dulce", fi: "Dulce-opas", nl: "Dulce-gids" },
-  health: { es: "Salud", en: "Health", de: "Gesundheit", fr: "Santé", it: "Salute", fi: "Terveys", nl: "Gezondheid" },
-  help: { es: "Ayuda", en: "Help", de: "Hilfe", fr: "Aide", it: "Aiuto", fi: "Ohjeet", nl: "Hulp" },
+  guide: { es: "Guía de Dulce", en: "Dulce guide", de: "Dulce-Ratgeber", fr: "Guide Dulce", it: "Guida di Dulce", fi: "Dulce-opas", nl: "Dulce-gids", nb: "Dulce-guide", sv: "Dulce-guide", ru: "Руководство Dulce" },
+  health: { es: "Salud", en: "Health", de: "Gesundheit", fr: "Santé", it: "Salute", fi: "Terveys", nl: "Gezondheid", nb: "Helse", sv: "Hälsa", ru: "Здоровье" },
+  help: { es: "Ayuda", en: "Help", de: "Hilfe", fr: "Aide", it: "Aiuto", fi: "Ohjeet", nl: "Hulp", nb: "Hjelp", sv: "Hjälp", ru: "Помощь" },
 };
 
 export const ARTICLES: readonly Article[] = [

@@ -4,7 +4,7 @@
  */
 export type ScreenLocale = "es" | "en" | "de" | "fr" | "it";
 
-/** The app's UI language for a site language: fi/nl pages show the English app (the languages the released app has). */
+/** The app's UI language for a site language: fi/nl/nb/sv/ru pages show the English app (these mockups exist in 5 languages). */
 export function screenLocale(locale: string): ScreenLocale {
   return (["es", "en", "de", "fr", "it"] as const).includes(locale as ScreenLocale) ? (locale as ScreenLocale) : "en";
 }

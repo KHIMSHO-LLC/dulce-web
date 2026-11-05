@@ -10,6 +10,9 @@ const ARIA: Record<AppLocale, string> = {
   it: "Scarica Dulce dall'App Store",
   fi: "Lataa Dulce App Storesta",
   nl: "Download Dulce in de App Store",
+  nb: "Last ned Dulce fra App Store",
+  sv: "Hämta Dulce i App Store",
+  ru: "Загрузить Dulce в App Store",
 };
 
 type Props = {
@@ -22,7 +25,7 @@ type Props = {
 };
 
 /** Official badge file per language (Apple's artwork from tools.applemediaservices.com; never redraw it). */
-const BADGE_FILE: Record<AppLocale, string> = { es: "es", en: "en", de: "de", fr: "fr", it: "it", fi: "fi", nl: "nl" };
+const BADGE_FILE: Record<AppLocale, string> = { es: "es", en: "en", de: "de", fr: "fr", it: "it", fi: "fi", nl: "nl", nb: "nb", sv: "sv", ru: "ru" };
 
 /**
  * Official "Download on the App Store" badge artwork (from Apple's badge

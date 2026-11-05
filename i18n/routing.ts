@@ -1,8 +1,8 @@
 import { defineRouting } from "next-intl/routing";
 
-export const locales = ["en", "es", "de", "fr", "it", "fi", "nl"] as const;
+export const locales = ["en", "es", "de", "fr", "it", "fi", "nl", "nb", "sv", "ru"] as const;
 export type AppLocale = (typeof locales)[number];
-/** Languages every article and tool text is written in. fi and nl (added 2026-11-04) have the site
+/** Languages every article and tool text is written in. fi and nl (added 2026-11-04) and nb, sv, ru (2026-11-05) have the site
  * chrome, home, setup, tools and legal fallback; their articles appear as they get translated. */
 export const CORE_LOCALES = ["en", "es", "de", "fr", "it"] as const;
 export type CoreLocale = (typeof CORE_LOCALES)[number];
@@ -38,6 +38,9 @@ export const routing = defineRouting({
       it: "/legal/privacy",
       fi: "/legal/privacy",
       nl: "/legal/privacy",
+      nb: "/legal/privacy",
+      sv: "/legal/privacy",
+      ru: "/legal/privacy",
     },
     "/legal/terms": {
       es: "/legal/terminos",
@@ -47,6 +50,9 @@ export const routing = defineRouting({
       it: "/legal/terms",
       fi: "/legal/terms",
       nl: "/legal/terms",
+      nb: "/legal/terms",
+      sv: "/legal/terms",
+      ru: "/legal/terms",
     },
     "/legal/disclaimer": {
       es: "/legal/aviso-medico",
@@ -56,6 +62,9 @@ export const routing = defineRouting({
       it: "/legal/disclaimer",
       fi: "/legal/disclaimer",
       nl: "/legal/disclaimer",
+      nb: "/legal/disclaimer",
+      sv: "/legal/disclaimer",
+      ru: "/legal/disclaimer",
     },
     "/legal/cookies": "/legal/cookies",
     // Unlocalized on purpose: the app deep-links here with a fixed `/setup`
@@ -72,6 +81,9 @@ export const routing = defineRouting({
       it: "/stato-librelinkup",
       fi: "/librelinkup-tila",
       nl: "/librelinkup-storing",
+      nb: "/librelinkup-status",
+      sv: "/librelinkup-status",
+      ru: "/librelinkup-status",
     },
     // Articles: one route, the slug is localized per article (content/articles.ts).
     "/blog": "/blog",
@@ -84,6 +96,9 @@ export const routing = defineRouting({
       it: "/autori/[author]",
       fi: "/kirjoittajat/[author]",
       nl: "/auteurs/[author]",
+      nb: "/forfattere/[author]",
+      sv: "/forfattare/[author]",
+      ru: "/authors/[author]",
     },
     "/tools/glucose-converter": {
       es: "/herramientas/conversor-glucosa-mg-dl-mmol-l",
@@ -93,6 +108,9 @@ export const routing = defineRouting({
       it: "/strumenti/convertitore-glicemia-mg-dl-mmol-l",
       fi: "/tyokalut/verensokeri-muunnin-mg-dl-mmol-l",
       nl: "/tools/bloedsuiker-omrekenen-mg-dl-mmol-l",
+      nb: "/verktoy/blodsukker-omregner-mg-dl-mmol-l",
+      sv: "/verktyg/blodsocker-omvandlare-mg-dl-mmol-l",
+      ru: "/tools/konverter-glyukozy-mg-dl-mmol-l",
     },
     "/tools/sensor-end-date": {
       es: "/herramientas/calculadora-fin-sensor-libre",
@@ -102,6 +120,9 @@ export const routing = defineRouting({
       it: "/strumenti/calcolatore-scadenza-sensore-libre",
       fi: "/tyokalut/libre-sensorin-vaihtopaiva-laskuri",
       nl: "/tools/libre-sensor-einddatum-berekenen",
+      nb: "/verktoy/libre-sensor-utlopsdato-kalkulator",
+      sv: "/verktyg/libre-sensor-slutdatum-kalkylator",
+      ru: "/tools/kalkulyator-okonchaniya-sensora-libre",
     },
     "/tools/a1c-calculator": {
       es: "/herramientas/calculadora-hba1c-glucosa-media",
@@ -111,6 +132,9 @@ export const routing = defineRouting({
       it: "/strumenti/calcolatore-hba1c-glicemia-media",
       fi: "/tyokalut/hba1c-laskuri-keskiverensokeri",
       nl: "/tools/hba1c-berekenen-gemiddelde-glucose",
+      nb: "/verktoy/hba1c-kalkulator-gjennomsnittlig-blodsukker",
+      sv: "/verktyg/hba1c-kalkylator-genomsnittligt-blodsocker",
+      ru: "/tools/kalkulyator-hba1c-srednyaya-glyukoza",
     },
   },
 });
@@ -122,4 +146,4 @@ export const LEGAL_LOCALES: readonly AppLocale[] = CORE_LOCALES;
 /** Legal texts translated from the Spanish one, which prevails (they show a notice saying so). */
 export const TRANSLATED_LEGAL_LOCALES: readonly AppLocale[] = ["de", "fr", "it"];
 /** Languages without their own legal texts: their legal pages show the English text (see app/[locale]/legal). */
-export const ENGLISH_LEGAL_LOCALES: readonly AppLocale[] = ["fi", "nl"];
+export const ENGLISH_LEGAL_LOCALES: readonly AppLocale[] = ["fi", "nl", "nb", "sv", "ru"];

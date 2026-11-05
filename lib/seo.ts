@@ -59,7 +59,7 @@ export function alternatesFor(
 }
 
 /** OpenGraph locale codes. */
-export const OG_LOCALE: Record<AppLocale, string> = { es: "es_ES", en: "en_US", de: "de_DE", fr: "fr_FR", it: "it_IT", fi: "fi_FI", nl: "nl_NL" };
+export const OG_LOCALE: Record<AppLocale, string> = { es: "es_ES", en: "en_US", de: "de_DE", fr: "fr_FR", it: "it_IT", fi: "fi_FI", nl: "nl_NL", nb: "nb_NO", sv: "sv_SE", ru: "ru_RU" };
 
 export const OG_IMAGE_SIZE = { width: 1200, height: 630 };
 
