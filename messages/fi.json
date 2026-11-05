@@ -190,6 +190,14 @@
       "emailLabel": "Tai sähköpostilla:",
       "items": [
         {
+          "q": "Kenelle Dulce sopii?",
+          "a": "Kaikille, joilla on tuettu glukoosisensori ja jotka haluavat nähdä sen avaamatta sovellusta, sekä heistä huolehtiville: tyypin 1 diabetesta sairastavien lasten vanhemmille, ikääntyneille perheineen, vastadiagnosoiduille, kumppaneille, omaishoitajille ja työssäkäyville."
+        },
+        {
+          "q": "Toimiiko Dulce LADAn, tyypin 2 tai muiden diabetestyyppien kanssa?",
+          "a": "Kyllä. Dulce näyttää sen, mitä sensorisi mittaa, joten se toimii kaikkien diabetestyyppien kanssa, myös LADAn, tyypin 2, raskausdiabeteksen ja MODYn, kunhan sensori on tuettu."
+        },
+        {
           "q": "Paljonko Dulce maksaa?",
           "a": "Lataus on ilmainen ja sisältää olennaisen. Pro-ominaisuuksissa (Apple Watch, perheen seuranta ja muuta) on 14 päivän ilmainen kokeilu."
         },
@@ -568,5 +576,122 @@
     "accept": "Hyväksy",
     "decline": "Hylkää",
     "settings": "Evästeasetukset"
+  },
+  "audience": {
+    "nav": "Kenelle",
+    "title": "Kenelle Dulce sopii? Vanhemmat, ikääntyneet, työssäkäyvät, kaikki diabetestyypit",
+    "description": "Dulce sopii tyypin 1 diabetesta sairastavien lasten vanhemmille, ikääntyneille, vastadiagnosoiduille, työssäkäyville sekä LADA- ja tyypin 2 sensorikäyttäjille.",
+    "headline": "Kaikille, jotka elävät glukoosisensorin kanssa, ja kaikille, jotka välittävät",
+    "lead": "Dulce tuo sensorisi lukeman lukitusnäytölle, Apple Watchiin ja perheesi iPhoneihin, jotta kenenkään ei tarvitse avata sovellusta jatkuvasti. Dulce ei koskaan kysy diabetestyyppiäsi: jos sensorisi on tuettu, lukema tulee luoksesi.",
+    "homeTitle": "Tehty sinun päivääsi",
+    "homeLead": "Äiti töissä, isoisä kotona, hoitaja yövuorossa, viime viikolla diagnoosin saanut. Eri elämät, sama tarve: nähdä lukema keskeyttämättä sitä, mitä on tekemässä.",
+    "homeCta": "Katso, kenelle Dulce sopii",
+    "segments": [
+      {
+        "id": "parents",
+        "title": "Tyypin 1 diabetesta sairastavien lasten vanhemmat",
+        "short": "Seuraa lapsesi glukoosia koulupäivän ja yön aikana omalla iPhonella.",
+        "body": "Näet lapsesi glukoosin omalla lukitusnäytölläsi ja saat omat hälytykset matalista ja korkeista arvoista, kun lapsi on tunnilla tai nukkuu. Molemmat vanhemmat ja isovanhempi voivat seurata, eivätkä seuraajat maksa mitään.",
+        "guide": "diabetes-at-school",
+        "guideLabel": "Koulu-opas (englanniksi)"
+      },
+      {
+        "id": "older-adults",
+        "title": "Ikääntyneet ja heidän perheensä",
+        "short": "Selkeä lukema lukitusnäytöllä, ja hälytys menee myös lapselle.",
+        "body": "Ei etsittävää sovellusta eikä opeteltavia valikoita: lukema ja sen väri näkyvät lukitusnäytöllä ja yöpöydän iPhonessa StandByssa. Poika tai tytär voi seurata omasta iPhonestaan ja lähettää \"Oletko kunnossa?\" -viestin, johon vastataan yhdellä napautuksella.",
+        "guide": "older-adults-cgm",
+        "guideLabel": "Sensorit ikääntyneille (englanniksi)"
+      },
+      {
+        "id": "at-work",
+        "title": "Työssäkäyvät",
+        "short": "Palaverit, vuorot, käsineet kädessä: näe lukemasi avaamatta mitään.",
+        "body": "Puhelimen avaaminen ja sovelluksen käynnistäminen kaksikymmentä kertaa päivässä ei sovi palaveriin, osastolle tai työmaalle. Dulce pitää lukeman lukitusnäytöllä, ranteessa ja CarPlay-näytöllä, joten vilkaisu riittää.",
+        "guide": "diabetes-at-work",
+        "guideLabel": "Diabetes työssä (englanniksi)"
+      },
+      {
+        "id": "newly-diagnosed",
+        "title": "Vastadiagnosoitu tyyppi 1",
+        "short": "Ensimmäinen sensorisi selitettynä ja yksi rauhallinen lukema katsottavana.",
+        "body": "Ensimmäiset viikot tuovat paljon uusia sanoja ja lukuja. Dulce alkaa ilmaiseksi: reaaliaikainen glukoosi, widgetit, hälytykset, päiväkirja ja aika tavoitealueella, ja läheisesi voivat seurata mukana, kun opettelet.",
+        "guide": "newly-diagnosed",
+        "guideLabel": "Ensimmäiset viikot (englanniksi)"
+      },
+      {
+        "id": "partners",
+        "title": "Kumppanit ja omaishoitajat",
+        "short": "Tiedä, että kaikki on hyvin, kysymättä.",
+        "body": "Jopa 3 ihmistä voi seurata yhden ihmisen glukoosia, kukin omin hälytyksin ja hiljaisin tunnein. Se on kaikille rauhallisempaa kuin viesti joka tunti, ja diabeetikko päättää, kuka näkee mitä.",
+        "guide": "family-sharing",
+        "guideLabel": "Perhejaon opas"
+      },
+      {
+        "id": "on-the-move",
+        "title": "Liikunta ja tie",
+        "short": "Juoksu ilman puhelinta tai vilkaisu kojelautaan.",
+        "body": "Apple Watch päivittyy Wi-Fin tai matkapuhelinverkon kautta, vaikka iPhone ei olisi lähellä. iOS 26:ssa glukoosikorttisi näkyy myös CarPlay-näytöllä.",
+        "guide": "apple-watch",
+        "guideLabel": "Apple Watch -opas"
+      }
+    ],
+    "typesTitle": "Kaikki diabetestyypit, yksi tapa nähdä",
+    "typesLead": "Dulce näyttää sen, mitä sensorisi mittaa, joten se toimii samoin diagnoosista riippumatta. Tavoitteet ja hoidon päätät hoitotiimisi kanssa; sovelluksessa voit asettaa oman tavoitealueesi.",
+    "types": [
+      {
+        "name": "Tyypin 1 diabetes",
+        "body": "Heille Dulce tehtiin ensin, ja sen kanssa perustaja elää.",
+        "guide": "newly-diagnosed",
+        "guideLabel": "Ensimmäiset viikot (englanniksi)."
+      },
+      {
+        "name": "LADA (tyyppi 1,5)",
+        "body": "Autoimmuunidiabetes, joka alkaa aikuisilla hitaasti ja jota luullaan usein aluksi tyypin 2 diabetekseksi.",
+        "guide": "lada-diabetes",
+        "guideLabel": "Lue LADAsta (englanniksi)."
+      },
+      {
+        "name": "Tyypin 2 diabetes",
+        "body": "Kaikille tuetun sensorin käyttäjille, insuliinin kanssa tai ilman. Ilmaisversiossa on widgetit, hälytykset, päiväkirja ja trendit.",
+        "guide": "type-2-cgm",
+        "guideLabel": "CGM ja tyyppi 2 (englanniksi)."
+      },
+      {
+        "name": "Raskausdiabetes",
+        "body": "Jos hoitotiimisi on antanut sinulle tuetun sensorin, Dulce voi näyttää sen. Raskauden aikana tavoitteet ovat tiukemmat, joten aseta heidän antamansa alue."
+      },
+      {
+        "name": "MODY",
+        "body": "Yhden geenin aiheuttama perinnöllinen diabetes. Tuetun sensorin kanssa Dulce toimii samoin.",
+        "guide": "lada-diabetes",
+        "guideLabel": "MODY ja LADA verrattuna (englanniksi)."
+      },
+      {
+        "name": "Muut tyypit",
+        "body": "Haimaleikkauksen tai haimatulehduksen jälkeinen diabetes (tyyppi 3c) ja kaikki muut muodot: ratkaisevaa on sensori, ei nimi."
+      }
+    ],
+    "faqTitle": "Lyhyet kysymykset",
+    "faq": [
+      {
+        "q": "Voiko lapsi käyttää Dulcea?",
+        "a": "Dulcea käyttää vanhempi tai huoltaja. Alle 14-vuotiaan glukoosia aikuinen seuraa omalla iPhonellaan omalla vastuullaan; 14–18-vuotias voi käyttää sitä vanhemman suostumuksella."
+      },
+      {
+        "q": "Toimiiko Dulce LADAn, tyypin 2 tai raskausdiabeteksen kanssa?",
+        "a": "Kyllä, kunhan käytät tuettua sensoria. Dulce lukee sensoria eikä riipu diabetestyypistäsi."
+      },
+      {
+        "q": "Mitä tarvitsen aloittaakseni?",
+        "a": "iPhonen, jossa on iOS 17 tai uudempi, ja tuetun sensorin, joka jakaa omalla palvelullaan: FreeStyle Libre, Dexcom, Medtronic tai oma Nightscout-sivusto. Seuraajat tarvitsevat vain iPhonen ja ilmaisen sovelluksen."
+      },
+      {
+        "q": "Toimiiko se ilman puhelinta sensorin lähellä?",
+        "a": "Ei. Puhelimen on luettava sensoria ja oltava verkossa, sillä niin lukemat lähtevät sensorilta. Erilliset lukijat eivät lähetä mitään internetiin, joten Dulce ei voi näyttää niitä."
+      }
+    ],
+    "note": "Live Activity, Apple Watch -sovellus, CarPlay-kortti ja perhejako ovat Dulce Pro -ominaisuuksia, joissa on 14 päivän ilmainen kokeilu; seuraajat eivät maksa. Dulce ei ole lääkinnällinen laite. Se näyttää lukemat, ei diagnosoi, hoida tai anna annosneuvoja, eikä se korvaa sensorisi hälytyksiä tai hoitotiimisi arviota.",
+    "cta": "Ilmainen ladata. Seuraajat eivät maksa mitään."
   }
 }

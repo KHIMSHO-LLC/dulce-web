@@ -190,6 +190,14 @@
       "emailLabel": "Ou par e-mail :",
       "items": [
         {
+          "q": "Pour qui est Dulce ?",
+          "a": "Pour toute personne qui porte un capteur de glucose pris en charge et veut le voir sans ouvrir d'app, et pour ceux qui veillent sur elle : parents d'enfants avec un diabète de type 1, personnes âgées et leurs familles, nouveaux diagnostics, conjoints, aidants et actifs."
+        },
+        {
+          "q": "Dulce fonctionne-t-elle avec le LADA, le type 2 ou d'autres diabètes ?",
+          "a": "Oui. Dulce affiche ce que mesure ton capteur : elle fonctionne avec tout type de diabète, dont le LADA, le type 2, le diabète gestationnel et le MODY, si ton capteur est pris en charge."
+        },
+        {
           "q": "Combien coûte Dulce ?",
           "a": "Le téléchargement est gratuit et inclut l'essentiel. Les fonctions Pro (Apple Watch, partage en famille et plus) ont un essai gratuit de 14 jours."
         },
@@ -568,5 +576,122 @@
     "accept": "Accepter",
     "decline": "Refuser",
     "settings": "Paramètres des cookies"
+  },
+  "audience": {
+    "nav": "Pour qui",
+    "title": "Pour qui est Dulce ? Parents, seniors, actifs et tous les types de diabète",
+    "description": "Dulce s'adresse aux parents d'enfants diabétiques de type 1, aux seniors, aux nouveaux diagnostics, aux actifs et au LADA ou type 2 sous capteur.",
+    "headline": "Pour celles et ceux qui vivent avec un capteur, et pour ceux qui veillent sur eux",
+    "lead": "Dulce affiche la mesure de ton capteur sur l'écran verrouillé, l'Apple Watch et l'iPhone de tes proches, pour que personne n'ait à ouvrir une app sans arrêt. Dulce ne te demande jamais ton type de diabète : si ton capteur est pris en charge, le chiffre vient à toi.",
+    "homeTitle": "Faite pour tes journées",
+    "homeLead": "Une mère au travail, un grand-père à la maison, une infirmière de nuit, quelqu'un diagnostiqué la semaine dernière. Des vies différentes, un même besoin : voir le chiffre sans s'interrompre.",
+    "homeCta": "Voir pour qui est Dulce",
+    "segments": [
+      {
+        "id": "parents",
+        "title": "Parents d'enfants avec un diabète de type 1",
+        "short": "Suis la glycémie de ton enfant à l'école et la nuit depuis ton iPhone.",
+        "body": "Vois la glycémie de ton enfant sur ton propre écran verrouillé, avec tes propres alertes d'hypo et d'hyper, pendant qu'il est en classe ou qu'il dort. Les deux parents et un grand-parent peuvent suivre, et les abonnés ne paient rien.",
+        "guide": "diabetes-at-school",
+        "guideLabel": "Guide de l'école"
+      },
+      {
+        "id": "older-adults",
+        "title": "Personnes âgées et leurs familles",
+        "short": "Un chiffre clair sur l'écran verrouillé, et un proche qui reçoit l'alerte.",
+        "body": "Pas d'app à chercher, pas de menus à apprendre : le chiffre et sa couleur sont sur l'écran verrouillé et sur l'iPhone de la table de nuit en StandBy. Un fils ou une fille peut suivre depuis son iPhone et envoyer un « Ça va ? » auquel on répond d'un geste.",
+        "guide": "older-adults-cgm",
+        "guideLabel": "Capteurs et personnes âgées"
+      },
+      {
+        "id": "at-work",
+        "title": "Les actifs",
+        "short": "Réunions, gardes, gants : vois ton chiffre sans rien ouvrir.",
+        "body": "Déverrouiller son téléphone et ouvrir une app vingt fois par jour ne va pas avec une réunion, un service hospitalier ou un chantier. Dulce garde le chiffre sur l'écran verrouillé, au poignet et sur le tableau de bord CarPlay : un regard suffit.",
+        "guide": "diabetes-at-work",
+        "guideLabel": "Diabète au travail"
+      },
+      {
+        "id": "newly-diagnosed",
+        "title": "Diabète de type 1 tout juste découvert",
+        "short": "Ton premier capteur, expliqué, avec un seul chiffre calme à regarder.",
+        "body": "Les premières semaines apportent beaucoup de mots et de chiffres nouveaux. Dulce démarre gratuitement avec la glycémie en direct, les widgets, les alertes, le journal et le temps dans la cible, et tes proches peuvent suivre pendant que tu apprends.",
+        "guide": "newly-diagnosed",
+        "guideLabel": "Guide des premières semaines"
+      },
+      {
+        "id": "partners",
+        "title": "Conjoints et aidants",
+        "short": "Savoir que tout va bien sans avoir à demander.",
+        "body": "Jusqu'à 3 personnes peuvent suivre la glycémie de quelqu'un, chacune avec ses alertes et ses heures calmes. C'est plus serein pour tous qu'un message toutes les heures, et la personne diabétique décide qui voit quoi.",
+        "guide": "family-sharing",
+        "guideLabel": "Guide du suivi en famille"
+      },
+      {
+        "id": "on-the-move",
+        "title": "Sport et route",
+        "short": "Courir sans téléphone, ou un regard au tableau de bord.",
+        "body": "L'Apple Watch continue de se mettre à jour en Wi-Fi ou en cellulaire même sans l'iPhone à côté. Sur iOS 26, ta carte de glycémie apparaît aussi sur le tableau de bord CarPlay.",
+        "guide": "apple-watch",
+        "guideLabel": "Guide Apple Watch"
+      }
+    ],
+    "typesTitle": "Tous les types de diabète, une seule façon de le voir",
+    "typesLead": "Dulce affiche ce que mesure ton capteur : il fonctionne donc de la même façon quel que soit ton diagnostic. Tes objectifs et ton traitement sont décidés avec ton équipe soignante ; dans l'app, tu peux régler ta propre cible.",
+    "types": [
+      {
+        "name": "Diabète de type 1",
+        "body": "Ceux pour qui Dulce a d'abord été créée, et ce avec quoi vit son fondateur.",
+        "guide": "newly-diagnosed",
+        "guideLabel": "Ce qui t'attend les premières semaines."
+      },
+      {
+        "name": "Diabète LADA (type 1,5)",
+        "body": "Diabète auto-immun qui s'installe lentement chez l'adulte et que l'on prend souvent d'abord pour un type 2.",
+        "guide": "lada-diabetes",
+        "guideLabel": "Comprendre le LADA."
+      },
+      {
+        "name": "Diabète de type 2",
+        "body": "Pour toute personne avec un capteur pris en charge, sous insuline ou non. La version gratuite comprend les widgets, les alertes, le Journal et les Tendances.",
+        "guide": "type-2-cgm",
+        "guideLabel": "Capteur et type 2."
+      },
+      {
+        "name": "Diabète gestationnel",
+        "body": "Si ton équipe soignante t'a prescrit un capteur pris en charge, Dulce peut l'afficher. Les objectifs sont plus stricts pendant la grossesse : règle la cible qu'elle t'indique."
+      },
+      {
+        "name": "MODY",
+        "body": "Diabète héréditaire dû à un seul gène. Avec un capteur pris en charge, Dulce fonctionne de la même façon.",
+        "guide": "lada-diabetes",
+        "guideLabel": "MODY et LADA comparés."
+      },
+      {
+        "name": "Autres types",
+        "body": "Diabète après une chirurgie du pancréas ou une pancréatite (type 3c) et toute autre forme : ce qui compte, c'est le capteur, pas l'étiquette."
+      }
+    ],
+    "faqTitle": "Questions rapides",
+    "faq": [
+      {
+        "q": "Un enfant peut-il utiliser Dulce ?",
+        "a": "Dulce est utilisée par le parent ou le tuteur. Avant 14 ans, un adulte suit la glycémie de l'enfant sur son propre iPhone, sous sa responsabilité ; de 14 à 18 ans, le jeune peut l'utiliser avec l'accord de ses parents."
+      },
+      {
+        "q": "Dulce fonctionne-t-elle avec le LADA, le type 2 ou le diabète gestationnel ?",
+        "a": "Oui, dès lors que tu utilises un capteur pris en charge. Dulce lit le capteur et ne dépend pas de ton type de diabète."
+      },
+      {
+        "q": "De quoi ai-je besoin pour commencer ?",
+        "a": "Un iPhone sous iOS 17 ou plus récent et un capteur pris en charge, partagé par son propre service : FreeStyle Libre, Dexcom, Medtronic ou ton site Nightscout. Les abonnés n'ont besoin que d'un iPhone et de l'app gratuite."
+      },
+      {
+        "q": "Ça marche sans téléphone près du capteur ?",
+        "a": "Non. Un téléphone doit lire le capteur et être connecté, car c'est ainsi que les mesures en sortent. Les lecteurs autonomes n'envoient rien sur internet, Dulce ne peut donc pas les afficher."
+      }
+    ],
+    "note": "L'Activité en direct, l'app Apple Watch, la carte CarPlay et le partage en famille sont des fonctions Dulce Pro, avec 14 jours d'essai gratuit ; les abonnés ne paient rien. Dulce n'est pas un dispositif médical. Elle affiche des mesures, ne diagnostique pas, ne traite pas et ne donne aucun conseil de dose. Elle ne remplace ni les alarmes de ton capteur ni l'avis de ton équipe soignante.",
+    "cta": "Téléchargement gratuit. Les abonnés ne paient rien."
   }
 }

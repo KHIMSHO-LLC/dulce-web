@@ -66,6 +66,8 @@ questions around them. Being the best answer means the product actually does it 
 
 ## Done
 
+- [x] 2026-11-05: Audience segmentation (owner request). Hub `/who-is-dulce-for` (10 languages), home section `Audience`, 2 home FAQs, JSON-LD audience, /llms.txt section, 6 guides in 5 languages (`lada-diabetes`, `newly-diagnosed`, `older-adults-cgm`, `diabetes-at-work`, `diabetes-at-school`, `type-2-cgm`). App Store draft 1.0.7 re-segmented. Everything is explained in `seo/segments.md`, including what can't be said in the App Store.
+
 - [x] 2026-10-22: Internal links on Spanish pages pointed at `/es/...` (307). Fixed (`components/article/MdxParts.tsx`).
 - [x] 2026-10-22: "Quick questions" + FAQPage JSON-LD on every article (`faq` in `content/articles.ts`).
 - [x] 2026-10-22: Article `child-glucose` (parents/caregivers).
@@ -275,6 +277,8 @@ Open:
    `sign_up` event should be key events; verify them in DebugView with consent enabled. They are web actions, not
    install or subscription counts. Have the revised five-language Cookie Policy and other legal pages checked by
    Spanish privacy counsel.
+
+0a. **Submit the 1.0.7 listing draft** (with build 88): saved in App Store Connect 2026-11-05, needs What's New and new watch screenshots. See `seo/segments.md`. Compare ranks 2-4 weeks later.
 
 1. **App Store listing follow-up:** the de/fr/it localization work was completed for 1.0.4 (2026-10-25), but
    verify the public storefront still exposes the expected language metadata and localized screenshots. The

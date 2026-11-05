@@ -159,7 +159,7 @@ export const ARTICLES: readonly Article[] = [
     category: "health",
     author: "giorgi",
     datePublished: "2026-07-12",
-    dateModified: "2026-10-28",
+    dateModified: "2026-11-05",
     slug: {
       es: "tiempo-en-rango-vs-hba1c",
       en: "time-in-range-vs-a1c",
@@ -320,7 +320,7 @@ export const ARTICLES: readonly Article[] = [
     category: "guide",
     author: "giorgi",
     datePublished: "2026-10-19",
-    dateModified: "2026-11-01",
+    dateModified: "2026-11-05",
     slug: {
       es: "glucosa-libre-en-pantalla-de-bloqueo-iphone",
       en: "libre-glucose-on-iphone-lock-screen",
@@ -951,7 +951,7 @@ export const ARTICLES: readonly Article[] = [
     category: "guide",
     author: "giorgi",
     datePublished: "2026-10-22",
-    dateModified: "2026-10-31",
+    dateModified: "2026-11-05",
     slug: {
       es: "ver-glucosa-de-mi-hijo-en-el-iphone",
       en: "monitor-child-glucose-on-iphone",
@@ -1765,7 +1765,7 @@ export const ARTICLES: readonly Article[] = [
     category: "health",
     author: "giorgi",
     datePublished: "2026-11-03",
-    dateModified: "2026-11-03",
+    dateModified: "2026-11-05",
     slug: {
       es: "hemoglobina-glicosilada-hba1c",
       en: "hba1c-a1c-test-vs-gmi",
@@ -2091,6 +2091,1078 @@ export const ARTICLES: readonly Article[] = [
         { q: "Dulce mi dice quanta insulina fare?", a: "No. Dulce registra solo ciò che la penna ha memorizzato. Non calcola né suggerisce dosi; lo decidi con il tuo team di cura." },
       ],
     },
+  },
+  {
+    "id": "lada-diabetes",
+    "category": "health",
+    "author": "giorgi",
+    "datePublished": "2026-11-05",
+    "dateModified": "2026-11-05",
+    "slug": {
+      "es": "diabetes-lada",
+      "en": "lada-diabetes",
+      "de": "lada-diabetes",
+      "fr": "diabete-lada",
+      "it": "diabete-lada"
+    },
+    "title": {
+      "es": "Diabetes LADA: qué es, síntomas, diagnóstico y diferencias con MODY",
+      "en": "LADA diabetes: symptoms, diagnosis, treatment and LADA vs MODY",
+      "de": "LADA Diabetes: Symptome, Diagnostik, Therapie und Unterschied zu MODY",
+      "fr": "Diabète LADA : symptômes, diagnostic, traitement, LADA ou MODY",
+      "it": "Diabete LADA: cos'è, sintomi, diagnosi, terapia e differenze con MODY"
+    },
+    "description": {
+      "es": "Qué es la diabetes LADA o tipo 1,5: síntomas, anticuerpos y diagnóstico, tratamiento, diferencias con tipo 1, tipo 2 y MODY, y qué aporta un sensor de glucosa.",
+      "en": "What LADA (type 1.5) diabetes is: symptoms, antibody tests, diagnosis, treatment, how it compares with type 1, type 2 and MODY, and how a sensor helps.",
+      "de": "Was LADA Diabetes (Typ 1,5) ist: Symptome, Antikörper und Diagnostik, Therapie, der Vergleich mit Typ 1, Typ 2 und MODY und was ein Glukosesensor dabei bringt.",
+      "fr": "Le diabète LADA ou type 1,5 : symptômes, anticorps, diagnostic, traitement, différences avec le type 1, le type 2 et le MODY, et l'apport d'un capteur.",
+      "it": "Cos'è il diabete LADA o tipo 1,5: sintomi, anticorpi e diagnosi, terapia, differenze con tipo 1, tipo 2 e MODY e cosa aggiunge un sensore del glucosio."
+    },
+    "summary": {
+      "es": "La diabetes LADA es una diabetes autoinmune que empieza despacio en adultos, por lo que al principio suele confundirse con la tipo 2. Se confirma con un análisis de autoanticuerpos, sobre todo anti-GAD, y el tratamiento lo decide tu equipo médico según cuánta insulina sigas produciendo. Muchas personas acaban necesitando insulina con el tiempo.",
+      "en": "LADA is autoimmune diabetes that starts slowly in adults, so it's often first mistaken for type 2. It's confirmed with a blood test for autoantibodies, most often GAD, and your care team sets the treatment according to how much insulin you still make. Many people with LADA need insulin sooner or later.",
+      "de": "LADA ist ein autoimmuner Diabetes, der bei Erwachsenen langsam beginnt und deshalb anfangs oft für Typ 2 gehalten wird. Bestätigt wird er durch einen Bluttest auf Autoantikörper, meist GAD, und die Therapie legt dein Behandlungsteam danach fest, wie viel Insulin du noch bildest. Viele Menschen mit LADA brauchen früher oder später Insulin.",
+      "fr": "Le LADA est un diabète auto-immun qui s'installe lentement chez l'adulte et que l'on prend donc souvent d'abord pour un type 2. Il se confirme par une recherche d'auto-anticorps, le plus souvent anti-GAD, et ton équipe soignante fixe le traitement selon la quantité d'insuline que tu produis encore. Beaucoup de personnes finissent par avoir besoin d'insuline.",
+      "it": "Il LADA è un diabete autoimmune che inizia lentamente negli adulti e all'inizio viene spesso scambiato per tipo 2. Si conferma con un esame degli autoanticorpi, di solito anti-GAD, e il tuo team decide la terapia in base a quanta insulina produci ancora. Molte persone con LADA hanno bisogno di insulina prima o poi."
+    },
+    "keywords": {
+      "es": [
+        "diabetes lada",
+        "diabetes lada síntomas",
+        "diabetes lada tratamiento",
+        "diabetes lada y mody diferencias",
+        "diabetes lada anticuerpos"
+      ],
+      "en": [
+        "lada diabetes",
+        "lada diabetes symptoms",
+        "lada diabetes treatment",
+        "lada diabetes diagnosis",
+        "lada vs mody"
+      ],
+      "de": [
+        "lada diabetes",
+        "lada diabetes symptome",
+        "lada diabetes therapie",
+        "lada diabetes diagnostik",
+        "lada diabetes typ 1"
+      ],
+      "fr": [
+        "diabète lada",
+        "diabète lada symptômes",
+        "diabète lada traitement",
+        "diabète lada diagnostic",
+        "diabète lada et mody"
+      ],
+      "it": [
+        "diabete lada",
+        "diabete lada sintomi",
+        "diabete lada cos'è",
+        "diabete lada cura",
+        "diabete mody e lada"
+      ]
+    },
+    "image": "/guides/home-screen.jpg",
+    "imageAlt": {
+      "es": "Pantalla de inicio de Dulce con glucosa y barra de tiempo en rango",
+      "en": "Dulce home screen with glucose and the time in range bar",
+      "de": "Startbildschirm von Dulce mit Glukose und Balken für die Zeit im Zielbereich",
+      "fr": "Écran d'accueil de Dulce avec la glycémie et la barre de temps dans la cible",
+      "it": "Schermata Home di Dulce con la glicemia e la barra del tempo nel range"
+    },
+    "related": [
+      "type-2-cgm",
+      "time-in-range",
+      "blood-sugar-levels"
+    ],
+    "faq": {
+      "es": [
+        {
+          "q": "¿La diabetes LADA es tipo 1 o tipo 2?",
+          "a": "Es autoinmune, como la tipo 1, pero avanza más despacio y al principio se parece a la tipo 2. La Asociación Americana de Diabetes la incluye en la tipo 1, y a veces se la llama tipo 1,5."
+        },
+        {
+          "q": "¿La LADA siempre necesita insulina?",
+          "a": "Muchas personas la necesitan antes o después, pero el momento varía. Tu equipo médico lo decide según cuánta insulina produce aún tu cuerpo."
+        },
+        {
+          "q": "¿En qué se diferencia la LADA de la MODY?",
+          "a": "La LADA es autoinmune y aparece en adultos con anticuerpos. La MODY la causa un solo gen heredado, no tiene anticuerpos y se confirma con una prueba genética."
+        },
+        {
+          "q": "¿Dulce funciona con diabetes LADA?",
+          "a": "Sí, siempre que uses un sensor compatible. Dulce muestra lo que mide tu sensor y no pregunta qué tipo de diabetes tienes.",
+          "link": "type-2-cgm"
+        }
+      ],
+      "en": [
+        {
+          "q": "Is LADA type 1 or type 2?",
+          "a": "It's autoimmune like type 1, but it progresses more slowly and looks like type 2 at first. The American Diabetes Association groups it under type 1, and it's sometimes called type 1.5."
+        },
+        {
+          "q": "Does LADA always need insulin?",
+          "a": "Many people need it sooner or later, but the timing varies. Your care team decides based on how much insulin your body still makes."
+        },
+        {
+          "q": "What's the difference between LADA and MODY?",
+          "a": "LADA is autoimmune and appears in adults with antibodies. MODY is caused by a single inherited gene, has no antibodies and is confirmed with a genetic test."
+        },
+        {
+          "q": "Does Dulce work with LADA?",
+          "a": "Yes, as long as you use a supported sensor. Dulce shows what your sensor measures and doesn't ask what type of diabetes you have.",
+          "link": "type-2-cgm"
+        }
+      ],
+      "de": [
+        {
+          "q": "Ist LADA Typ 1 oder Typ 2?",
+          "a": "LADA ist autoimmun wie Typ 1, schreitet aber langsamer voran und ähnelt anfangs Typ 2. Die American Diabetes Association ordnet ihn Typ 1 zu, manchmal heißt er auch Typ 1,5."
+        },
+        {
+          "q": "Braucht man bei LADA immer Insulin?",
+          "a": "Viele brauchen es früher oder später, der Zeitpunkt ist aber unterschiedlich. Dein Behandlungsteam entscheidet danach, wie viel Insulin dein Körper noch bildet."
+        },
+        {
+          "q": "Was ist der Unterschied zwischen LADA und MODY?",
+          "a": "LADA ist autoimmun und tritt bei Erwachsenen mit Antikörpern auf. MODY entsteht durch ein einzelnes vererbtes Gen, hat keine Antikörper und wird per Gentest bestätigt."
+        },
+        {
+          "q": "Funktioniert Dulce bei LADA?",
+          "a": "Ja, solange du einen unterstützten Sensor nutzt. Dulce zeigt, was dein Sensor misst, und fragt nicht nach deinem Diabetestyp.",
+          "link": "type-2-cgm"
+        }
+      ],
+      "fr": [
+        {
+          "q": "Le LADA est-il un type 1 ou un type 2 ?",
+          "a": "Il est auto-immun comme le type 1, mais il progresse plus lentement et ressemble d'abord à un type 2. L'American Diabetes Association le classe dans le type 1, et on l'appelle parfois type 1,5."
+        },
+        {
+          "q": "Le LADA nécessite-t-il toujours de l'insuline ?",
+          "a": "Beaucoup de personnes en ont besoin tôt ou tard, mais le moment varie. Ton équipe soignante décide selon la quantité d'insuline que ton corps produit encore."
+        },
+        {
+          "q": "Quelle différence entre LADA et MODY ?",
+          "a": "Le LADA est auto-immun et apparaît chez l'adulte avec des anticorps. Le MODY est dû à un seul gène hérité, sans anticorps, et se confirme par un test génétique."
+        },
+        {
+          "q": "Dulce fonctionne-t-elle avec le LADA ?",
+          "a": "Oui, dès lors que tu utilises un capteur pris en charge. Dulce affiche ce que mesure ton capteur et ne demande pas ton type de diabète.",
+          "link": "type-2-cgm"
+        }
+      ],
+      "it": [
+        {
+          "q": "Il LADA è tipo 1 o tipo 2?",
+          "a": "È autoimmune come il tipo 1, ma progredisce più lentamente e all'inizio somiglia al tipo 2. L'American Diabetes Association lo comprende nel tipo 1, e a volte si chiama tipo 1,5."
+        },
+        {
+          "q": "Il LADA richiede sempre l'insulina?",
+          "a": "Molte persone ne hanno bisogno prima o poi, ma i tempi variano. Decide il tuo team in base a quanta insulina produce ancora il tuo corpo."
+        },
+        {
+          "q": "Che differenza c'è tra LADA e MODY?",
+          "a": "Il LADA è autoimmune e compare negli adulti con anticorpi. Il MODY è causato da un solo gene ereditato, non ha anticorpi e si conferma con un test genetico."
+        },
+        {
+          "q": "Dulce funziona con il LADA?",
+          "a": "Sì, purché tu usi un sensore supportato. Dulce mostra ciò che misura il tuo sensore e non chiede che tipo di diabete hai.",
+          "link": "type-2-cgm"
+        }
+      ]
+    }
+  },
+  {
+    "id": "newly-diagnosed",
+    "category": "guide",
+    "author": "giorgi",
+    "datePublished": "2026-11-05",
+    "dateModified": "2026-11-05",
+    "slug": {
+      "es": "debut-diabetes-tipo-1",
+      "en": "newly-diagnosed-type-1-diabetes",
+      "de": "typ-1-diabetes-neu-diagnostiziert",
+      "fr": "decouverte-diabete-type-1",
+      "it": "esordio-diabete-tipo-1"
+    },
+    "title": {
+      "es": "Debut de diabetes tipo 1 en adultos y niños: las primeras semanas",
+      "en": "Newly diagnosed with type 1 diabetes: a guide to the first weeks",
+      "de": "Typ-1-Diabetes neu diagnostiziert: die ersten Wochen",
+      "fr": "Découverte d'un diabète de type 1 : guide des premières semaines",
+      "it": "Esordio del diabete di tipo 1: guida alle prime settimane"
+    },
+    "description": {
+      "es": "Acabas de recibir el diagnóstico, tú o tu hijo: qué aclarar con tu equipo médico, las palabras clave, tu primer sensor y cómo ver la glucosa sin agobiarte.",
+      "en": "Just diagnosed with type 1, as an adult or as a parent? What to ask your care team, the key words, your first sensor and how to see your glucose without stress.",
+      "de": "Gerade die Diagnose Typ 1 bekommen, als Erwachsener oder als Eltern? Was du klären solltest, die wichtigsten Begriffe und dein erster Sensor.",
+      "fr": "Tu viens d'apprendre un diabète de type 1, pour toi ou ton enfant ? Quoi demander à ton équipe, les mots clés et ton premier capteur.",
+      "it": "Hai appena ricevuto la diagnosi di tipo 1, per te o tuo figlio? Cosa chiedere al team, le parole chiave, il primo sensore e come vedere la glicemia senza ansia."
+    },
+    "summary": {
+      "es": "En las primeras semanas tras el debut de la diabetes tipo 1, lo prioritario es saber tratar una hipoglucemia, qué hacer si estás enfermo y a quién llamar, todo con tu equipo médico. El debut puede ocurrir a cualquier edad, y la Asociación Americana de Diabetes respalda usar un sensor desde el inicio. Dulce empieza gratis y te enseña la glucosa sin abrir ninguna app, mientras los tuyos te acompañan.",
+      "en": "In the first weeks after a type 1 diagnosis, the priorities are knowing how to treat a low, what to do when you're ill and who to call, all with your care team. Type 1 can start at any age, and the American Diabetes Association supports using a sensor from the start. Dulce starts free and shows your glucose without opening an app while the people around you follow along.",
+      "de": "In den ersten Wochen nach der Diagnose Typ 1 zählt vor allem, mit deinem Behandlungsteam zu klären, wie du eine Unterzuckerung behandelst, was du bei Krankheit tust und wen du anrufst. Typ 1 kann in jedem Alter beginnen, und die American Diabetes Association befürwortet einen Sensor von Anfang an. Dulce startet kostenlos und zeigt deinen Wert, ohne dass du eine App öffnen musst.",
+      "fr": "Dans les premières semaines après la découverte d'un type 1, la priorité est de savoir traiter une hypo, quoi faire quand tu es malade et qui appeler, avec ton équipe soignante. Le type 1 peut débuter à tout âge, et l'American Diabetes Association soutient l'usage d'un capteur dès le début. Dulce démarre gratuitement et affiche ta glycémie sans ouvrir d'app.",
+      "it": "Nelle prime settimane dopo l'esordio del tipo 1 la priorità è sapere come trattare un'ipo, cosa fare quando stai male e chi chiamare, insieme al tuo team. Il tipo 1 può iniziare a ogni età, e l'American Diabetes Association sostiene l'uso del sensore fin dall'inizio. Dulce parte gratis e mostra la glicemia senza aprire nessuna app."
+    },
+    "keywords": {
+      "es": [
+        "debut diabetes tipo 1",
+        "debut diabetes tipo 1 en adultos",
+        "debut diabetes adultos",
+        "sintomas debut diabetes tipo 1",
+        "debut diabetes tipo 1 tratamiento"
+      ],
+      "en": [
+        "newly diagnosed type 1 diabetes",
+        "newly diagnosed type 1 diabetes adults",
+        "newly diagnosed type 1 diabetes child",
+        "can you get type 1 diabetes later in life",
+        "type 1 diabetes first weeks"
+      ],
+      "de": [
+        "typ 1 diabetes neu diagnostiziert",
+        "diabetes typ 1 erwachsene",
+        "diabetes typ 1 erwachsenenalter",
+        "diabetes neu diagnostiziert",
+        "diagnose typ 1 diabetes"
+      ],
+      "fr": [
+        "découverte diabète type 1",
+        "diabète type 1 découverte à 40 ans",
+        "diagnostic diabète type 1 adulte",
+        "diabète type 1 adulte",
+        "bilan découverte diabète type 1"
+      ],
+      "it": [
+        "esordio diabete tipo 1",
+        "diabete tipo 1 esordio tardivo",
+        "esordio diabete tipo 1 bambini",
+        "sintomi esordio diabete tipo 1",
+        "età esordio diabete tipo 1"
+      ]
+    },
+    "image": "/guides/lock-screen-alerts-watch.jpg",
+    "imageAlt": {
+      "es": "Pantalla de bloqueo del iPhone con la Actividad en vivo de Dulce mostrando 120 mg/dL y avisos de glucosa",
+      "en": "iPhone Lock Screen with the Dulce Live Activity showing 120 mg/dL and glucose alerts",
+      "de": "iPhone-Sperrbildschirm mit der Live-Aktivität von Dulce, 120 mg/dL und Glukosewarnungen",
+      "fr": "Écran verrouillé d'iPhone avec l'Activité en direct de Dulce à 120 mg/dL et des alertes de glycémie",
+      "it": "Schermata di blocco dell'iPhone con l'Attività in tempo reale di Dulce a 120 mg/dL e avvisi di glicemia"
+    },
+    "related": [
+      "child-glucose",
+      "family-sharing",
+      "time-in-range"
+    ],
+    "faq": {
+      "es": [
+        {
+          "q": "¿Se puede tener un debut de diabetes tipo 1 de adulto?",
+          "a": "Sí. La diabetes tipo 1 puede aparecer a cualquier edad. Si te diagnostican de adulto, tu equipo médico confirmará el tipo con las pruebas adecuadas."
+        },
+        {
+          "q": "¿Cuándo empezar con un sensor?",
+          "a": "Pregunta a tu equipo desde el principio. La Asociación Americana de Diabetes respalda el sensor desde el debut en niños, adolescentes y adultos con insulina que puedan usarlo con seguridad."
+        },
+        {
+          "q": "¿Dulce me dice cuánta insulina ponerme?",
+          "a": "No. Dulce muestra lecturas y guarda tu Diario, pero no calcula ni sugiere dosis. Eso se decide con tu equipo médico."
+        },
+        {
+          "q": "¿Mi familia puede ver mi glucosa?",
+          "a": "Sí. Con Dulce Pro puedes invitar hasta a 3 personas, que ven tu glucosa desde su iPhone sin pagar nada.",
+          "link": "family-sharing"
+        }
+      ],
+      "en": [
+        {
+          "q": "Can you get type 1 diabetes as an adult?",
+          "a": "Yes. Type 1 diabetes can start at any age. If you're diagnosed as an adult, your care team will confirm the type with the right tests."
+        },
+        {
+          "q": "When should I start using a sensor?",
+          "a": "Ask your care team from the start. The American Diabetes Association supports a sensor from the onset of diabetes for children, teens and adults on insulin who can use it safely."
+        },
+        {
+          "q": "Does Dulce tell me how much insulin to take?",
+          "a": "No. Dulce shows readings and keeps your Logbook, but it doesn't calculate or suggest doses. That's for you and your care team."
+        },
+        {
+          "q": "Can my family see my glucose?",
+          "a": "Yes. With Dulce Pro you can invite up to 3 people, who see your glucose on their own iPhone and pay nothing.",
+          "link": "family-sharing"
+        }
+      ],
+      "de": [
+        {
+          "q": "Kann man als Erwachsener Typ-1-Diabetes bekommen?",
+          "a": "Ja. Typ-1-Diabetes kann in jedem Alter beginnen. Bei einer Diagnose im Erwachsenenalter bestätigt dein Behandlungsteam den Typ mit den passenden Tests."
+        },
+        {
+          "q": "Wann sollte ich mit einem Sensor anfangen?",
+          "a": "Frag dein Team von Anfang an. Die American Diabetes Association befürwortet einen Sensor ab Beginn bei Kindern, Jugendlichen und Erwachsenen mit Insulin, die ihn sicher nutzen können."
+        },
+        {
+          "q": "Sagt mir Dulce, wie viel Insulin ich spritzen soll?",
+          "a": "Nein. Dulce zeigt Werte und führt dein Logbuch, berechnet oder empfiehlt aber keine Dosen. Das entscheidest du mit deinem Behandlungsteam."
+        },
+        {
+          "q": "Kann meine Familie meinen Wert sehen?",
+          "a": "Ja. Mit Dulce Pro lädst du bis zu 3 Personen ein, die deinen Wert auf dem eigenen iPhone sehen und nichts zahlen.",
+          "link": "family-sharing"
+        }
+      ],
+      "fr": [
+        {
+          "q": "Peut-on découvrir un diabète de type 1 à l'âge adulte ?",
+          "a": "Oui. Le diabète de type 1 peut débuter à tout âge. Si le diagnostic tombe à l'âge adulte, ton équipe soignante confirme le type avec les examens adaptés."
+        },
+        {
+          "q": "Quand commencer un capteur ?",
+          "a": "Pose la question à ton équipe dès le début. L'American Diabetes Association soutient le capteur dès le début du diabète chez les enfants, ados et adultes sous insuline qui peuvent l'utiliser en sécurité."
+        },
+        {
+          "q": "Dulce me dit-elle combien d'insuline faire ?",
+          "a": "Non. Dulce affiche les mesures et tient ton Journal, mais elle ne calcule ni ne suggère de doses. Cela se décide avec ton équipe soignante."
+        },
+        {
+          "q": "Ma famille peut-elle voir ma glycémie ?",
+          "a": "Oui. Avec Dulce Pro, tu invites jusqu'à 3 personnes, qui voient ta glycémie sur leur iPhone sans rien payer.",
+          "link": "family-sharing"
+        }
+      ],
+      "it": [
+        {
+          "q": "Il diabete di tipo 1 può comparire da adulti?",
+          "a": "Sì. Il diabete di tipo 1 può iniziare a ogni età. Se la diagnosi arriva da adulto, il tuo team conferma il tipo con gli esami adatti."
+        },
+        {
+          "q": "Quando iniziare con un sensore?",
+          "a": "Chiedilo al tuo team fin dall'inizio. L'American Diabetes Association sostiene il sensore dall'esordio in bambini, ragazzi e adulti in terapia insulinica che possono usarlo in sicurezza."
+        },
+        {
+          "q": "Dulce mi dice quanta insulina fare?",
+          "a": "No. Dulce mostra le letture e tiene il Diario, ma non calcola né suggerisce dosi. Questo si decide con il tuo team."
+        },
+        {
+          "q": "La mia famiglia può vedere la mia glicemia?",
+          "a": "Sì. Con Dulce Pro inviti fino a 3 persone, che vedono la tua glicemia sul proprio iPhone senza pagare nulla.",
+          "link": "family-sharing"
+        }
+      ]
+    }
+  },
+  {
+    "id": "older-adults-cgm",
+    "category": "guide",
+    "author": "giorgi",
+    "datePublished": "2026-11-05",
+    "dateModified": "2026-11-05",
+    "slug": {
+      "es": "sensor-glucosa-personas-mayores",
+      "en": "cgm-for-older-adults",
+      "de": "glukosesensor-senioren",
+      "fr": "capteur-glycemie-personnes-agees",
+      "it": "sensore-glicemia-anziani"
+    },
+    "title": {
+      "es": "Sensor de glucosa para personas mayores: cómo elegir y seguirlo",
+      "en": "Best CGM for elderly people: how to choose and follow from afar",
+      "de": "Glukosesensor für Senioren: Auswahl und Mitverfolgen durch die Familie",
+      "fr": "Capteur de glycémie pour personne âgée : choisir et suivre",
+      "it": "Sensore glicemia per anziani: come scegliere e seguirlo in famiglia"
+    },
+    "description": {
+      "es": "Qué mirar en un sensor para personas mayores, por qué conviene tocar menos la pantalla y cómo un hijo puede seguir la glucosa desde otra casa.",
+      "en": "What to look for in a CGM for older adults, why less tapping matters, and how a son or daughter can follow a parent's glucose from another home.",
+      "de": "Worauf es bei einem Sensor für Senioren ankommt, warum weniger Tippen zählt und wie Söhne oder Töchter den Wert von zu Hause aus verfolgen.",
+      "fr": "Quoi regarder dans un capteur pour personne âgée, pourquoi moins toucher l'écran compte et comment suivre sa glycémie depuis chez toi.",
+      "it": "Cosa guardare in un sensore per anziani, perché toccare meno lo schermo conta e come un figlio può seguire la glicemia da un'altra casa con i propri avvisi."
+    },
+    "summary": {
+      "es": "No hay un mejor sensor para personas mayores: depende de la vista, la destreza, el móvil y quién ayude, y conviene elegirlo con su equipo médico. La Asociación Americana de Diabetes recomienda el sensor en mayores con tipo 1 y con tipo 2 con insulina. Con Dulce, el número queda en la pantalla de bloqueo y un hijo puede seguir la glucosa desde su iPhone con sus propios avisos.",
+      "en": "There's no single best CGM for older adults: it depends on eyesight, dexterity, their phone and who helps, so choose with their care team. The American Diabetes Association recommends CGM for older adults with type 1 and for those with type 2 on insulin. With Dulce the number stays on the Lock Screen, and a son or daughter can follow from their own iPhone with their own alerts.",
+      "de": "Den einen besten Sensor für Senioren gibt es nicht: Es kommt auf Sehkraft, Fingerfertigkeit, Handy und Hilfe an, also wählt ihn am besten mit dem Behandlungsteam. Die American Diabetes Association empfiehlt CGM für Ältere mit Typ 1 und mit Typ 2 unter Insulin. Mit Dulce bleibt der Wert auf dem Sperrbildschirm, und Sohn oder Tochter folgen mit eigenen Warnungen vom eigenen iPhone aus.",
+      "fr": "Il n'y a pas de meilleur capteur pour personne âgée : tout dépend de la vue, de la dextérité, du téléphone et de l'aide, à voir avec son équipe soignante. L'American Diabetes Association recommande le capteur aux personnes âgées avec un type 1 ou un type 2 sous insuline. Avec Dulce, le chiffre reste sur l'écran verrouillé et un fils ou une fille peut suivre depuis son iPhone.",
+      "it": "Non esiste un sensore migliore per gli anziani: dipende da vista, manualità, telefono e aiuto disponibile, quindi va scelto con il team diabetologico. L'American Diabetes Association lo raccomanda agli anziani con tipo 1 e con tipo 2 in terapia insulinica. Con Dulce il numero resta sulla schermata di blocco e un figlio può seguire dal proprio iPhone con i suoi avvisi."
+    },
+    "keywords": {
+      "es": [
+        "sensor glucosa personas mayores",
+        "diabetes personas mayores",
+        "controlar glucosa padre mayor",
+        "cuidar diabetes anciano",
+        "sensor glucosa ancianos"
+      ],
+      "en": [
+        "cgm for elderly",
+        "best cgm for elderly",
+        "cgm for seniors",
+        "best glucose monitor for elderly",
+        "easiest glucose monitor for elderly"
+      ],
+      "de": [
+        "glukosesensor senioren",
+        "diabetes im alter",
+        "blutzucker eltern überwachen",
+        "diabetes senioren",
+        "sensor senioren diabetes"
+      ],
+      "fr": [
+        "capteur glycémie personne âgée",
+        "diabète personne âgée",
+        "diabète personne âgée taux",
+        "surveiller glycémie parent âgé",
+        "diabète senior"
+      ],
+      "it": [
+        "sensore glicemia anziani",
+        "diabete anziani",
+        "diabete anziani valori",
+        "controllare glicemia genitore anziano",
+        "glicemia anziani"
+      ]
+    },
+    "image": "/guides/widgets-everywhere.jpg",
+    "imageAlt": {
+      "es": "Widgets de Dulce: Dynamic Island, pantalla de bloqueo, pantalla de inicio y Apple Watch",
+      "en": "Dulce widgets: Dynamic Island, Lock Screen, Home Screen and Apple Watch",
+      "de": "Dulce-Widgets: Dynamic Island, Sperrbildschirm, Home-Bildschirm und Apple Watch",
+      "fr": "Widgets de Dulce : Dynamic Island, écran verrouillé, écran d'accueil et Apple Watch",
+      "it": "Widget di Dulce: Dynamic Island, schermata di blocco, Home e Apple Watch"
+    },
+    "related": [
+      "child-glucose",
+      "widgets",
+      "night-lows"
+    ],
+    "faq": {
+      "es": [
+        {
+          "q": "¿Cuál es el mejor sensor de glucosa para personas mayores?",
+          "a": "No hay uno mejor para todos. Elige con su equipo médico según la vista, la destreza, el móvil que use y quién le ayude."
+        },
+        {
+          "q": "¿Mi padre o mi madre tiene que usar la app?",
+          "a": "No necesariamente. Si su app del sensor comparte con tu cuenta de LibreLinkUp, tú abres Dulce en tu iPhone y en su móvil no cambia nada.",
+          "link": "child-glucose"
+        },
+        {
+          "q": "¿Funciona con el lector del sensor?",
+          "a": "No. Los lectores no envían lecturas a internet. Hace falta un móvil que lea el sensor y tenga conexión."
+        },
+        {
+          "q": "¿Los objetivos son distintos en mayores?",
+          "a": "Pueden serlo. El consenso propone objetivos más suaves para mayores o con más riesgo de hipoglucemia, pero el rango lo fija su equipo médico."
+        }
+      ],
+      "en": [
+        {
+          "q": "What's the best CGM for elderly people?",
+          "a": "There's no single best one. Choose with their care team based on eyesight, dexterity, the phone they use and who helps them."
+        },
+        {
+          "q": "Does my parent have to use the app?",
+          "a": "Not necessarily. If their sensor app shares with your LibreLinkUp account, you open Dulce on your iPhone and nothing changes on theirs.",
+          "link": "child-glucose"
+        },
+        {
+          "q": "Does it work with the sensor's reader?",
+          "a": "No. Readers don't send readings to the internet. You need a phone that reads the sensor and stays online."
+        },
+        {
+          "q": "Are targets different for older adults?",
+          "a": "They can be. Consensus targets are gentler for older people or those at higher risk of lows, but their care team sets the range."
+        }
+      ],
+      "de": [
+        {
+          "q": "Welcher Glukosesensor ist der beste für Senioren?",
+          "a": "Den einen besten gibt es nicht. Wählt ihn mit dem Behandlungsteam nach Sehkraft, Fingerfertigkeit, Handy und vorhandener Hilfe aus."
+        },
+        {
+          "q": "Muss meine Mutter oder mein Vater die App nutzen?",
+          "a": "Nicht unbedingt. Teilt die Sensor-App mit deinem LibreLinkUp-Konto, öffnest du Dulce auf deinem iPhone, und auf ihrem Handy ändert sich nichts.",
+          "link": "child-glucose"
+        },
+        {
+          "q": "Funktioniert es mit dem Lesegerät?",
+          "a": "Nein. Lesegeräte senden keine Werte ins Internet. Nötig ist ein Handy, das den Sensor liest und online bleibt."
+        },
+        {
+          "q": "Gelten für Senioren andere Ziele?",
+          "a": "Das kann sein. Die Konsensziele sind für Ältere oder bei höherem Unterzuckerungsrisiko milder, den Bereich legt aber das Behandlungsteam fest."
+        }
+      ],
+      "fr": [
+        {
+          "q": "Quel est le meilleur capteur de glycémie pour une personne âgée ?",
+          "a": "Il n'y en a pas un seul. Choisissez avec l'équipe soignante selon la vue, la dextérité, le téléphone utilisé et l'aide disponible."
+        },
+        {
+          "q": "Mon parent doit-il utiliser l'app ?",
+          "a": "Pas forcément. Si l'app de son capteur partage avec ton compte LibreLinkUp, tu ouvres Dulce sur ton iPhone et rien ne change sur le sien.",
+          "link": "child-glucose"
+        },
+        {
+          "q": "Est-ce que ça marche avec le lecteur du capteur ?",
+          "a": "Non. Les lecteurs n'envoient rien sur internet. Il faut un téléphone qui lit le capteur et reste connecté."
+        },
+        {
+          "q": "Les objectifs sont-ils différents pour les personnes âgées ?",
+          "a": "Ils peuvent l'être. Les objectifs de consensus sont plus souples pour les personnes âgées ou à risque d'hypo, mais c'est l'équipe soignante qui fixe la cible."
+        }
+      ],
+      "it": [
+        {
+          "q": "Qual è il miglior sensore glicemia per anziani?",
+          "a": "Non ne esiste uno migliore per tutti. Scegliete con il team in base a vista, manualità, telefono usato e aiuto disponibile."
+        },
+        {
+          "q": "Mio padre o mia madre deve usare l'app?",
+          "a": "Non per forza. Se l'app del sensore condivide con il tuo account LibreLinkUp, apri Dulce sul tuo iPhone e sul suo telefono non cambia niente.",
+          "link": "child-glucose"
+        },
+        {
+          "q": "Funziona con il lettore del sensore?",
+          "a": "No. I lettori non inviano nulla a internet. Serve un telefono che legga il sensore e resti connesso."
+        },
+        {
+          "q": "Gli obiettivi sono diversi per gli anziani?",
+          "a": "Possono esserlo. Gli obiettivi di consenso sono più morbidi per gli anziani o per chi ha più rischio di ipo, ma l'intervallo lo fissa il team."
+        }
+      ]
+    }
+  },
+  {
+    "id": "diabetes-at-work",
+    "category": "guide",
+    "author": "giorgi",
+    "datePublished": "2026-11-05",
+    "dateModified": "2026-11-05",
+    "slug": {
+      "es": "diabetes-en-el-trabajo",
+      "en": "type-1-diabetes-at-work",
+      "de": "diabetes-bei-der-arbeit",
+      "fr": "diabete-au-travail",
+      "it": "diabete-e-lavoro"
+    },
+    "title": {
+      "es": "Diabetes en el trabajo: ver tu glucosa sin abrir apps y qué decir",
+      "en": "Type 1 diabetes at work: check glucose without opening an app",
+      "de": "Diabetes bei der Arbeit: Werte im Blick, ohne eine App zu öffnen",
+      "fr": "Diabète au travail : voir sa glycémie sans ouvrir d'app",
+      "it": "Diabete e lavoro: vedere la glicemia senza aprire un'app"
+    },
+    "description": {
+      "es": "Cómo ver tu glucosa en reuniones, turnos o con guantes sin abrir una app, qué hacer si no se permiten móviles, y qué decirle a la empresa sobre tu diabetes.",
+      "en": "See your glucose in meetings, on shifts or with gloves on without opening an app, what to do if phones are banned, and what to tell your employer.",
+      "de": "So siehst du deinen Wert in Meetings, in der Schicht oder mit Handschuhen ohne App, was bei Handyverbot hilft und was du dem Arbeitgeber sagst.",
+      "fr": "Comment voir ta glycémie en réunion, de garde ou avec des gants sans ouvrir d'app, que faire si le téléphone est interdit et que dire à ton employeur.",
+      "it": "Come vedere la glicemia in riunione, nei turni o con i guanti senza aprire un'app, cosa fare se i telefoni sono vietati e cosa dire al datore di lavoro."
+    },
+    "summary": {
+      "es": "Para ver tu glucosa en el trabajo sin abrir una app, deja el número en la pantalla de bloqueo o en el Apple Watch con Dulce, y mira solo cuando lo necesites. Si no se permiten móviles, el teléfono que lee el sensor debe seguir al alcance. Lo que debes contar a la empresa depende del país y del puesto, así que pregunta a tu asociación de diabetes.",
+      "en": "To see your glucose at work without opening an app, keep the number on your Lock Screen or Apple Watch with Dulce and glance only when you need to. If phones aren't allowed, the phone reading your sensor must still stay within range. What you tell your employer depends on your country and job, so ask your diabetes association or an adviser.",
+      "de": "Um deinen Wert bei der Arbeit ohne App zu sehen, halte ihn mit Dulce auf dem Sperrbildschirm oder der Apple Watch und schau nur bei Bedarf hin. Gilt ein Handyverbot, muss das Telefon, das den Sensor liest, trotzdem in Reichweite bleiben. Was du dem Arbeitgeber sagst, hängt von Land und Beruf ab, frag also eine Beratungsstelle oder diabetesDE.",
+      "fr": "Pour voir ta glycémie au travail sans ouvrir d'app, garde le chiffre sur l'écran verrouillé ou l'Apple Watch avec Dulce et regarde seulement quand il le faut. Si les téléphones sont interdits, celui qui lit ton capteur doit quand même rester à portée. Ce que tu dis à ton employeur dépend du pays et du métier : renseigne-toi auprès d'une association.",
+      "it": "Per vedere la glicemia al lavoro senza aprire un'app, tieni il numero sulla schermata di blocco o su Apple Watch con Dulce e guarda solo quando serve. Se i telefoni sono vietati, quello che legge il sensore deve comunque restare a portata. Cosa dire al datore di lavoro dipende da paese e mansione, quindi chiedi a un'associazione."
+    },
+    "keywords": {
+      "es": [
+        "diabetes en el trabajo",
+        "diabetes tipo 1 y trabajo",
+        "diabetes en el lugar de trabajo",
+        "ley de diabetes en el trabajo",
+        "diabetes mellitus en el trabajo"
+      ],
+      "en": [
+        "type 1 diabetes at work",
+        "diabetes at work",
+        "managing type 1 diabetes at work",
+        "type 1 diabetes rights at work",
+        "type 1 diabetes work accommodations"
+      ],
+      "de": [
+        "diabetes arbeit",
+        "diabetes arbeitgeber",
+        "diabetes typ 1 beruf",
+        "diabetes arbeitgeber melden",
+        "diabetes arbeitsrecht"
+      ],
+      "fr": [
+        "diabète au travail",
+        "diabète type 1 travail",
+        "diabète type 1 et travail de nuit",
+        "diabète travail de nuit",
+        "diabète travailleur handicapé"
+      ],
+      "it": [
+        "diabete e lavoro",
+        "diabete tipo 1 e lavoro notturno",
+        "diabete e lavoro a turni",
+        "diabete lavoro notturno",
+        "diabete lavoro agevolazioni"
+      ]
+    },
+    "image": "/guides/lock-screen-alerts-watch.jpg",
+    "imageAlt": {
+      "es": "Pantalla de bloqueo del iPhone con la Actividad en vivo de Dulce mostrando 120 mg/dL y avisos de glucosa",
+      "en": "iPhone Lock Screen with the Dulce Live Activity showing 120 mg/dL and glucose alerts",
+      "de": "iPhone-Sperrbildschirm mit der Live-Aktivität von Dulce, 120 mg/dL und Glukosewarnungen",
+      "fr": "Écran verrouillé d'iPhone avec l'Activité en direct de Dulce à 120 mg/dL et des alertes de glycémie",
+      "it": "Schermata di blocco dell'iPhone con l'Attività in tempo reale di Dulce a 120 mg/dL e avvisi di glicemia"
+    },
+    "related": [
+      "apple-watch",
+      "lock-screen",
+      "widgets"
+    ],
+    "faq": {
+      "es": [
+        {
+          "q": "¿Puedo ver mi glucosa en el trabajo sin sacar el móvil?",
+          "a": "Sí. Con Dulce Pro la lectura aparece en el Apple Watch y sus complicaciones, y basta con mirar la muñeca.",
+          "link": "apple-watch"
+        },
+        {
+          "q": "¿Tengo que decirle a la empresa que tengo diabetes?",
+          "a": "Depende del país y del puesto. Consulta a tu asociación de diabetes o a un asesor laboral, sobre todo si tu trabajo tiene normas de seguridad."
+        },
+        {
+          "q": "¿Qué pasa si en mi trabajo no se permiten móviles?",
+          "a": "El teléfono que lee el sensor debe seguir al alcance y con internet. Acuerda con la empresa un sitio cercano para dejarlo."
+        },
+        {
+          "q": "¿Dulce sirve para el trabajo a turnos?",
+          "a": "Sí. Puedes poner las horas tranquilas según lo que duermes, y los avisos de glucosa muy baja siguen llegando."
+        }
+      ],
+      "en": [
+        {
+          "q": "Can I see my glucose at work without taking out my phone?",
+          "a": "Yes. With Dulce Pro the reading appears on your Apple Watch and its complications, so a look at your wrist is enough.",
+          "link": "apple-watch"
+        },
+        {
+          "q": "Do I have to tell my employer I have diabetes?",
+          "a": "It depends on your country and job. Ask your diabetes association or an employment adviser, especially if your work has safety rules."
+        },
+        {
+          "q": "What if phones aren't allowed at my work?",
+          "a": "The phone reading your sensor has to stay within range and online. Agree on a nearby spot for it with your employer."
+        },
+        {
+          "q": "Does Dulce work for shift work?",
+          "a": "Yes. You can set quiet hours around when you actually sleep, and very low alerts still come through."
+        }
+      ],
+      "de": [
+        {
+          "q": "Kann ich meinen Wert bei der Arbeit sehen, ohne das Handy herauszuholen?",
+          "a": "Ja. Mit Dulce Pro erscheint der Wert auf der Apple Watch und in den Komplikationen, ein Blick aufs Handgelenk genügt.",
+          "link": "apple-watch"
+        },
+        {
+          "q": "Muss ich dem Arbeitgeber sagen, dass ich Diabetes habe?",
+          "a": "Das hängt von Land und Beruf ab. Frag diabetesDE, den Betriebsrat oder eine Beratungsstelle, vor allem wenn dein Beruf Sicherheitsvorgaben hat."
+        },
+        {
+          "q": "Was, wenn Handys bei der Arbeit nicht erlaubt sind?",
+          "a": "Das Telefon, das den Sensor liest, muss in Reichweite und online bleiben. Sprich mit dem Arbeitgeber einen Platz in der Nähe ab."
+        },
+        {
+          "q": "Passt Dulce zur Schichtarbeit?",
+          "a": "Ja. Du legst die Ruhezeiten auf die Stunden, in denen du wirklich schläfst, und sehr niedrige Werte kommen weiter durch."
+        }
+      ],
+      "fr": [
+        {
+          "q": "Puis-je voir ma glycémie au travail sans sortir mon téléphone ?",
+          "a": "Oui. Avec Dulce Pro, la mesure s'affiche sur l'Apple Watch et ses complications : un regard au poignet suffit.",
+          "link": "apple-watch"
+        },
+        {
+          "q": "Dois-je dire à mon employeur que je suis diabétique ?",
+          "a": "Cela dépend du pays et du métier. Renseigne-toi auprès de la Fédération Française des Diabétiques ou de la médecine du travail, surtout si ton poste a des règles de sécurité."
+        },
+        {
+          "q": "Et si les téléphones sont interdits à mon travail ?",
+          "a": "Celui qui lit ton capteur doit rester à portée et connecté. Convenez avec ton employeur d'un endroit proche."
+        },
+        {
+          "q": "Dulce convient-elle au travail posté ?",
+          "a": "Oui. Tu règles les heures calmes selon ton vrai sommeil, et les alertes de glycémie très basse passent toujours."
+        }
+      ],
+      "it": [
+        {
+          "q": "Posso vedere la glicemia al lavoro senza tirare fuori il telefono?",
+          "a": "Sì. Con Dulce Pro la lettura compare su Apple Watch e nelle complicazioni: basta un'occhiata al polso.",
+          "link": "apple-watch"
+        },
+        {
+          "q": "Devo dire al datore di lavoro che ho il diabete?",
+          "a": "Dipende dal paese e dalla mansione. Chiedi a Diabete Italia, al medico competente o al sindacato, soprattutto se il tuo lavoro ha regole di sicurezza."
+        },
+        {
+          "q": "E se al lavoro i telefoni sono vietati?",
+          "a": "Quello che legge il sensore deve restare a portata e connesso. Concorda con il datore di lavoro un punto vicino."
+        },
+        {
+          "q": "Dulce va bene per il lavoro a turni?",
+          "a": "Sì. Imposti le ore di silenzio sulle ore in cui dormi davvero, e gli avvisi di glicemia molto bassa arrivano comunque."
+        }
+      ]
+    }
+  },
+  {
+    "id": "diabetes-at-school",
+    "category": "guide",
+    "author": "giorgi",
+    "datePublished": "2026-11-05",
+    "dateModified": "2026-11-05",
+    "slug": {
+      "es": "diabetes-tipo-1-en-el-colegio",
+      "en": "type-1-diabetes-at-school",
+      "de": "diabetes-typ-1-kind-schule",
+      "fr": "diabete-enfant-ecole",
+      "it": "diabete-bambini-scuola"
+    },
+    "title": {
+      "es": "Niños con diabetes tipo 1 en el colegio: plan, móvil y seguimiento",
+      "en": "Type 1 diabetes at school: a parent's guide to plans and phones",
+      "de": "Diabetes Typ 1 in der Schule: Plan, Handy und Sensor für Eltern",
+      "fr": "Diabète de l'enfant à l'école : PAI, téléphone et capteur",
+      "it": "Diabete di tipo 1 a scuola: piano, telefono e sensore per i genitori"
+    },
+    "description": {
+      "es": "Guía para padres: qué acordar con el colegio, qué hacer con el móvil que lee el sensor y cómo seguir la glucosa de tu hijo desde el trabajo.",
+      "en": "A guide for parents: what to agree with the school, what to do about the phone reading the sensor, and how to follow your child's glucose from work.",
+      "de": "Für Eltern: was du mit der Schule vereinbarst, was mit dem Handy am Sensor passiert und wie du den Wert deines Kindes bei der Arbeit siehst.",
+      "fr": "Pour les parents : quoi convenir avec l'école, que faire du téléphone qui lit le capteur et comment suivre la glycémie de ton enfant depuis ton travail.",
+      "it": "Per i genitori: cosa concordare con la scuola, cosa fare del telefono che legge il sensore e come seguire la glicemia di tuo figlio dal lavoro senza chiamare."
+    },
+    "summary": {
+      "es": "Antes del primer día, acuerda con el colegio un plan escrito: cómo tratar una bajada, quién está formado y a quién llamar. El móvil que lee el sensor debe seguir cerca de tu hijo y con internet, así que pide que conste en el plan como necesidad médica. Con Dulce ves su glucosa en tu pantalla de bloqueo, con tus propios avisos, sin llamar al colegio.",
+      "en": "Before the first day, agree a written plan with the school: how to treat a low, who is trained and who to call. The phone reading the sensor has to stay near your child and online, so ask for it to be written into the plan as a medical need. With Dulce you see their glucose on your own Lock Screen, with your own alerts, without calling the school.",
+      "de": "Vereinbare vor dem ersten Tag einen schriftlichen Plan mit der Schule: wie eine Unterzuckerung behandelt wird, wer eingewiesen ist und wer angerufen wird. Das Handy, das den Sensor liest, muss nah beim Kind und online bleiben, also lass es als medizinische Notwendigkeit in den Plan aufnehmen. Mit Dulce siehst du den Wert auf deinem Sperrbildschirm, mit eigenen Warnungen.",
+      "fr": "Avant le premier jour, convenez d'un plan écrit avec l'école (PAI en France) : comment traiter une hypo, qui est formé et qui appeler. Le téléphone qui lit le capteur doit rester près de ton enfant et connecté, demande donc qu'il figure au plan comme un besoin médical. Avec Dulce, tu vois sa glycémie sur ton écran verrouillé, avec tes propres alertes.",
+      "it": "Prima del primo giorno concorda con la scuola un piano scritto: come trattare un'ipo, chi è formato e chi chiamare. Il telefono che legge il sensore deve restare vicino a tuo figlio e connesso, quindi chiedi che sia scritto nel piano come necessità medica. Con Dulce vedi la sua glicemia sulla tua schermata di blocco, con i tuoi avvisi."
+    },
+    "keywords": {
+      "es": [
+        "niños con diabetes tipo 1 en el colegio",
+        "diabetes en el colegio",
+        "diabetes tipo 1 en el colegio",
+        "niños con diabetes en el colegio",
+        "sensor glucosa niños"
+      ],
+      "en": [
+        "type 1 diabetes at school",
+        "type 1 diabetes child in school",
+        "diabetic child at school",
+        "cgm at school",
+        "best cgm for kids"
+      ],
+      "de": [
+        "diabetes typ 1 kind schule",
+        "diabetes kind schule",
+        "typ 1 diabetes kinder",
+        "diabetes typ 1 kinder schulbegleiter",
+        "sensor diabetes kinder"
+      ],
+      "fr": [
+        "diabète enfant école",
+        "pai diabète école",
+        "capteur glycémie enfant",
+        "diabète type 1 enfant école",
+        "application diabète enfant"
+      ],
+      "it": [
+        "diabete bambini scuola",
+        "sensore glicemia bambini",
+        "diabete tipo 1 scuola",
+        "diabete adolescenti",
+        "diabete tipo 1 bambini"
+      ]
+    },
+    "image": "/guides/family-followers.jpg",
+    "imageAlt": {
+      "es": "Lista de seguidores de Dulce con un mensaje para revisar la glucosa y el botón Estoy bien",
+      "en": "Dulce followers list with a “Check your glucose” message and the I'm OK button",
+      "de": "Follower-Liste in Dulce mit einer Nachricht zum Zucker-Check und der Antwort „Mir geht es gut“",
+      "fr": "Liste des abonnés de Dulce avec un message « Vérifie ta glycémie » et le bouton Ça va",
+      "it": "Elenco dei follower di Dulce con un messaggio «Controlla la glicemia» e il pulsante Sto bene"
+    },
+    "related": [
+      "child-glucose",
+      "family-sharing",
+      "alerts"
+    ],
+    "faq": {
+      "es": [
+        {
+          "q": "¿Mi hijo puede llevar el móvil al colegio por la diabetes?",
+          "a": "Pídelo por escrito. El móvil que lee el sensor debe seguir cerca de él y con internet, así que conviene que el plan lo recoja como necesidad médica."
+        },
+        {
+          "q": "¿Puedo ver su glucosa desde el trabajo?",
+          "a": "Sí. Con Dulce la ves en tu iPhone, con tus propios avisos, si su app de Libre comparte con tu cuenta de LibreLinkUp o si te invita desde Dulce.",
+          "link": "child-glucose"
+        },
+        {
+          "q": "¿Un niño puede usar Dulce?",
+          "a": "Dulce lo usa el adulto. Con menos de 14 años, un padre o tutor sigue la glucosa del niño bajo su responsabilidad."
+        },
+        {
+          "q": "¿El profesor necesita instalar algo?",
+          "a": "No. Basta con el plan del colegio y una hoja con qué hacer. Nadie espera que siga los datos en su móvil salvo que el plan lo diga."
+        }
+      ],
+      "en": [
+        {
+          "q": "Can my child keep a phone at school for diabetes?",
+          "a": "Ask for it in writing. The phone reading the sensor has to stay near them and online, so it's best written into the plan as a medical need."
+        },
+        {
+          "q": "Can I see their glucose from work?",
+          "a": "Yes. With Dulce you see it on your iPhone with your own alerts, if their Libre app shares with your LibreLinkUp account or they invite you from Dulce.",
+          "link": "child-glucose"
+        },
+        {
+          "q": "Can a child use Dulce?",
+          "a": "Dulce is used by the adult. Under 14, a parent or guardian follows the child's glucose under their own responsibility."
+        },
+        {
+          "q": "Does the teacher need to install anything?",
+          "a": "No. The school plan and one page of what to do are enough. Nobody expects them to follow data on their own phone unless the plan says so."
+        }
+      ],
+      "de": [
+        {
+          "q": "Darf mein Kind wegen Diabetes ein Handy in der Schule haben?",
+          "a": "Lass es schriftlich festhalten. Das Handy, das den Sensor liest, muss nah beim Kind und online bleiben, am besten steht es als medizinische Notwendigkeit im Plan."
+        },
+        {
+          "q": "Kann ich den Wert von der Arbeit aus sehen?",
+          "a": "Ja. Mit Dulce siehst du ihn mit eigenen Warnungen auf deinem iPhone, wenn die Libre-App mit deinem LibreLinkUp-Konto teilt oder dein Kind dich aus Dulce einlädt.",
+          "link": "child-glucose"
+        },
+        {
+          "q": "Kann ein Kind Dulce nutzen?",
+          "a": "Dulce nutzt der Erwachsene. Unter 14 Jahren folgen Eltern oder Erziehungsberechtigte den Werten des Kindes in eigener Verantwortung."
+        },
+        {
+          "q": "Muss die Lehrkraft etwas installieren?",
+          "a": "Nein. Der Schulplan und eine Seite mit dem, was zu tun ist, reichen. Niemand erwartet, dass sie Daten auf dem eigenen Handy verfolgt, sofern der Plan das nicht vorsieht."
+        }
+      ],
+      "fr": [
+        {
+          "q": "Mon enfant peut-il garder un téléphone à l'école pour son diabète ?",
+          "a": "Demande-le par écrit. Le téléphone qui lit le capteur doit rester près de lui et connecté : le mieux est de l'inscrire au PAI comme un besoin médical."
+        },
+        {
+          "q": "Puis-je voir sa glycémie depuis mon travail ?",
+          "a": "Oui. Avec Dulce, tu la vois sur ton iPhone avec tes propres alertes, si son app Libre partage avec ton compte LibreLinkUp ou s'il t'invite depuis Dulce.",
+          "link": "child-glucose"
+        },
+        {
+          "q": "Un enfant peut-il utiliser Dulce ?",
+          "a": "Dulce est utilisée par l'adulte. Avant 14 ans, un parent ou tuteur suit la glycémie de l'enfant sous sa responsabilité."
+        },
+        {
+          "q": "L'enseignant doit-il installer quelque chose ?",
+          "a": "Non. Le plan de l'école et une page sur quoi faire suffisent. On n'attend pas de lui qu'il suive les données sur son téléphone, sauf si le plan le prévoit."
+        }
+      ],
+      "it": [
+        {
+          "q": "Mio figlio può tenere il telefono a scuola per il diabete?",
+          "a": "Chiedilo per iscritto. Il telefono che legge il sensore deve restare vicino a lui e connesso, quindi conviene scriverlo nel piano come necessità medica."
+        },
+        {
+          "q": "Posso vedere la sua glicemia dal lavoro?",
+          "a": "Sì. Con Dulce la vedi sul tuo iPhone con i tuoi avvisi, se la sua app Libre condivide con il tuo account LibreLinkUp o se ti invita da Dulce.",
+          "link": "child-glucose"
+        },
+        {
+          "q": "Un bambino può usare Dulce?",
+          "a": "Dulce la usa l'adulto. Sotto i 14 anni un genitore o tutore segue la glicemia del bambino sotto la propria responsabilità."
+        },
+        {
+          "q": "L'insegnante deve installare qualcosa?",
+          "a": "No. Bastano il piano della scuola e una pagina su cosa fare. Nessuno si aspetta che segua i dati sul proprio telefono, salvo che il piano lo preveda."
+        }
+      ]
+    }
+  },
+  {
+    "id": "type-2-cgm",
+    "category": "health",
+    "author": "giorgi",
+    "datePublished": "2026-11-05",
+    "dateModified": "2026-11-05",
+    "slug": {
+      "es": "sensor-glucosa-diabetes-tipo-2",
+      "en": "cgm-for-type-2-diabetes",
+      "de": "sensor-diabetes-typ-2",
+      "fr": "capteur-glycemie-diabete-type-2",
+      "it": "sensore-glicemia-diabete-tipo-2"
+    },
+    "title": {
+      "es": "Sensor de glucosa en diabetes tipo 2: con insulina o sin ella",
+      "en": "CGM for type 2 diabetes: with or without insulin",
+      "de": "Sensor bei Diabetes Typ 2: mit oder ohne Insulin",
+      "fr": "Capteur de glycémie et diabète de type 2 : avec ou sans insuline",
+      "it": "Sensore glicemia e diabete di tipo 2: con o senza insulina"
+    },
+    "description": {
+      "es": "Qué muestra un sensor de glucosa en la diabetes tipo 2, con insulina o sin ella, qué no hace, la financiación y cómo ver los números sin abrir una app.",
+      "en": "What a CGM shows in type 2 diabetes, on insulin or not, what it doesn't do, how coverage varies, and how to see the numbers without opening an app.",
+      "de": "Was ein Sensor bei Diabetes Typ 2 mit oder ohne Insulin zeigt, was er nicht leistet, was die Krankenkasse zahlt und wie du die Werte ohne App-Öffnen siehst.",
+      "fr": "Ce que montre un capteur dans le diabète de type 2, avec ou sans insuline, ce qu'il ne fait pas, le remboursement et comment voir les chiffres.",
+      "it": "Cosa mostra un sensore nel diabete di tipo 2, con o senza insulina, cosa non fa, la rimborsabilità e come vedere i numeri senza aprire un'app."
+    },
+    "summary": {
+      "es": "Un sensor de glucosa también sirve en la diabetes tipo 2: enseña cómo responden tus comidas, qué hace un paseo y si tienes bajadas, y la Asociación Americana de Diabetes lo contempla con insulina y con otros tratamientos. La financiación cambia según el país. Si usas un sensor compatible, Dulce muestra tus lecturas gratis en widgets, con avisos, Diario y Tendencias.",
+      "en": "A glucose sensor is useful in type 2 too: it shows how meals affect you, what a walk does and whether you have lows, and the American Diabetes Association includes it for people on insulin and on other treatments. Coverage varies by country. With a supported sensor, Dulce shows your readings for free in widgets, with alerts, a Logbook and Trends.",
+      "de": "Ein Glukosesensor nützt auch bei Typ 2: Er zeigt, wie Mahlzeiten wirken, was ein Spaziergang bewirkt und ob Unterzuckerungen auftreten, und die American Diabetes Association sieht ihn bei Insulin und anderen Therapien vor. Die Kostenübernahme ist je nach Land und Kasse verschieden. Mit einem unterstützten Sensor zeigt Dulce deine Werte kostenlos in Widgets, mit Warnungen, Logbuch und Trends.",
+      "fr": "Un capteur de glucose est utile aussi dans le type 2 : il montre l'effet des repas, d'une marche et d'éventuelles hypos, et l'American Diabetes Association le prévoit sous insuline et avec d'autres traitements. Le remboursement varie selon les pays. Avec un capteur pris en charge, Dulce affiche tes mesures gratuitement en widget, avec alertes, Journal et Tendances.",
+      "it": "Un sensore del glucosio è utile anche nel tipo 2: mostra l'effetto dei pasti, di una passeggiata e di eventuali ipo, e l'American Diabetes Association lo contempla con l'insulina e con altre terapie. La rimborsabilità varia secondo il paese. Con un sensore supportato, Dulce mostra le letture gratis nei widget, con avvisi, Diario e Andamento."
+    },
+    "keywords": {
+      "es": [
+        "sensor glucosa diabetes tipo 2",
+        "diabetes tipo 2 sensor glucosa",
+        "app diabetes tipo 2",
+        "sensor glucosa sin insulina",
+        "tabla glucosa diabetes tipo 2"
+      ],
+      "en": [
+        "cgm for type 2 diabetes",
+        "cgm for type 2 diabetes no insulin",
+        "cgm for type 2 diabetes on insulin",
+        "type 2 diabetes app iphone",
+        "best free type 2 diabetes app for iphone"
+      ],
+      "de": [
+        "sensor typ 2 diabetes",
+        "diabetes typ 2 sensor krankenkasse",
+        "cgm bei diabetes typ 2",
+        "blutzucker sensor diabetes typ 2",
+        "diabetes typ 2 app"
+      ],
+      "fr": [
+        "capteur glycémie diabète type 2",
+        "application diabète type 2",
+        "capteur glycémie diabète type 2 prix",
+        "mesure glycémie diabète type 2",
+        "application diabète type 2 gratuit"
+      ],
+      "it": [
+        "sensore glicemia diabete tipo 2",
+        "app diabete tipo 2",
+        "sensore diabete tipo 2",
+        "app per diabete tipo 2",
+        "sensore glicemia senza insulina"
+      ]
+    },
+    "image": "/guides/logbook.jpg",
+    "imageAlt": {
+      "es": "Diario de Dulce con registros de insulina e hidratos y el panel para añadir 5,5 u",
+      "en": "Dulce Logbook with insulin and carb entries and the add-entry sheet at 5.5 u",
+      "de": "Dulce-Tagebuch mit Insulin- und Kohlenhydrat-Einträgen und dem Eingabefeld mit 5,5 IE",
+      "fr": "Journal de Dulce avec des entrées d'insuline et de glucides et la fiche d'ajout à 5,5 U",
+      "it": "Diario di Dulce con voci di insulina e carboidrati e la scheda di inserimento a 5,5 U"
+    },
+    "related": [
+      "lada-diabetes",
+      "logbook",
+      "time-in-range"
+    ],
+    "faq": {
+      "es": [
+        {
+          "q": "¿Puedo usar un sensor de glucosa con diabetes tipo 2 sin insulina?",
+          "a": "Sí, y mucha gente lo hace durante un tiempo para aprender cómo responde a las comidas. La financiación depende del país, así que pregunta a tu equipo médico."
+        },
+        {
+          "q": "¿Dulce sirve para la diabetes tipo 2?",
+          "a": "Sí. Muestra lo que mide cualquier sensor compatible, y los widgets, avisos, Diario y Tendencias son gratis."
+        },
+        {
+          "q": "¿Dulce me dice qué comer?",
+          "a": "No. Dulce muestra datos y los guarda en tu Diario. No da consejos de dieta ni de medicación.",
+          "link": "logbook"
+        }
+      ],
+      "en": [
+        {
+          "q": "Can I use a CGM with type 2 diabetes without insulin?",
+          "a": "Yes, and many people do for a while to learn how they respond to meals. Coverage depends on your country, so ask your care team."
+        },
+        {
+          "q": "Does Dulce work for type 2 diabetes?",
+          "a": "Yes. It shows what any supported sensor measures, and widgets, alerts, the Logbook and Trends are free."
+        },
+        {
+          "q": "Does Dulce tell me what to eat?",
+          "a": "No. Dulce shows your data and keeps it in your Logbook. It doesn't give diet or medication advice.",
+          "link": "logbook"
+        }
+      ],
+      "de": [
+        {
+          "q": "Kann ich bei Typ 2 ohne Insulin einen Sensor nutzen?",
+          "a": "Ja, viele tun das eine Zeit lang, um zu lernen, wie sie auf Mahlzeiten reagieren. Ob die Kasse zahlt, hängt von Land und Therapie ab, frag dein Behandlungsteam."
+        },
+        {
+          "q": "Funktioniert Dulce bei Typ-2-Diabetes?",
+          "a": "Ja. Es zeigt, was jeder unterstützte Sensor misst, und Widgets, Warnungen, Logbuch und Trends sind kostenlos."
+        },
+        {
+          "q": "Sagt mir Dulce, was ich essen soll?",
+          "a": "Nein. Dulce zeigt deine Daten und speichert sie im Logbuch. Es gibt keine Ernährungs- oder Medikamentenratschläge.",
+          "link": "logbook"
+        }
+      ],
+      "fr": [
+        {
+          "q": "Puis-je utiliser un capteur avec un type 2 sans insuline ?",
+          "a": "Oui, et beaucoup de personnes le font un temps pour apprendre comment elles réagissent aux repas. Le remboursement dépend du pays, demande à ton équipe soignante."
+        },
+        {
+          "q": "Dulce convient-elle au diabète de type 2 ?",
+          "a": "Oui. Elle affiche ce que mesure tout capteur pris en charge, et les widgets, les alertes, le Journal et les Tendances sont gratuits."
+        },
+        {
+          "q": "Dulce me dit-elle quoi manger ?",
+          "a": "Non. Dulce affiche tes données et les garde dans ton Journal. Elle ne donne aucun conseil de régime ni de traitement.",
+          "link": "logbook"
+        }
+      ],
+      "it": [
+        {
+          "q": "Posso usare un sensore con il tipo 2 senza insulina?",
+          "a": "Sì, e molti lo fanno per un periodo per capire come reagiscono ai pasti. La rimborsabilità dipende dal paese, quindi chiedi al tuo team."
+        },
+        {
+          "q": "Dulce va bene per il diabete di tipo 2?",
+          "a": "Sì. Mostra ciò che misura qualsiasi sensore supportato, e widget, avvisi, Diario e Andamento sono gratis."
+        },
+        {
+          "q": "Dulce mi dice cosa mangiare?",
+          "a": "No. Dulce mostra i tuoi dati e li conserva nel Diario. Non dà consigli su dieta o farmaci.",
+          "link": "logbook"
+        }
+      ]
+    }
   },
 ];
 

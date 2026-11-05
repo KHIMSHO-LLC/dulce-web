@@ -44,7 +44,7 @@ Also known as: "Dulce glucosa", "Dulce: Glucosa de un vistazo" (Spanish App Stor
 
 ## Key facts
 
-- Platform: iPhone (iOS 17 or later) and Apple Watch. Android is not available yet (waitlist on the site). Nightscout is not supported.
+- Platform: iPhone (iOS 17 or later) and Apple Watch. Android is not available yet (waitlist on the site).
 - Sensors (since app version 1.0.4): FreeStyle Libre 2 and Libre 3 through the user's LibreLinkUp account (Abbott's follower app, not LibreLink); Dexcom G6, G7 and ONE+ through the wearer's own Dexcom account with Share turned on (Dexcom Share). Libre readings arrive every minute (up to 1,440 a day), Dexcom readings every 5 minutes.
 - Lock Screen Live Activity and Dynamic Island, updated by Dulce's server with every new reading with Dulce Pro, even with the app closed.
 - Home Screen, Lock Screen and StandBy widgets (free). Apple Watch app with complications in every shape (Pro).
@@ -57,6 +57,17 @@ Also known as: "Dulce glucosa", "Dulce: Glucosa de un vistazo" (Spanish App Stor
 - App Store: ${APP_STORE_URL}
 - Contact: ${CONTACT_EMAIL}
 ${SOCIAL.map((s) => `- ${s.name}: ${s.url}`).join("\n")}
+
+## Who it's for
+
+Dulce never asks what type of diabetes someone has: it shows what a supported sensor measures. Overview: https://dulceglucosa.com/who-is-dulce-for
+
+- Parents and caregivers of children with type 1 diabetes, who follow from their own iPhone. Dulce is used by the adult: under 14 a parent follows under their own responsibility; from 14 to 18 with a parent's consent. It is not a children's app.
+- Older adults and the sons and daughters who look out for them: the number on the Lock Screen and in StandBy, with no app to learn.
+- People at work who can't keep opening an app: Lock Screen, Apple Watch and the CarPlay card.
+- People newly diagnosed with type 1, at any age.
+- Partners and caregivers, up to 3 followers per person.
+- Any type of diabetes with a supported sensor: type 1, LADA, type 2 with or without insulin, gestational, MODY, type 3c.
 
 ## Help
 

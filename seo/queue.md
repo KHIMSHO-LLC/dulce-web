@@ -2,6 +2,11 @@
 
 Owner-requested jobs. The daily run does the top unchecked item, one per run, then ticks it here.
 
+- [ ] **Translate the 6 segment guides into nl, fi, sv, nb, ru** (owner request 2026-11-05, `seo/segments.md`): `lada-diabetes`, `newly-diagnosed`, `older-adults-cgm`, `diabetes-at-work`, `diabetes-at-school`, `type-2-cgm`. One guide into all 5 languages per run, LADA first (demand in every market). The hub links to the English page until each is translated.
+- [ ] **Gestational diabetes and CGM** (autocomplete 2026-11-05: "gestational diabetes cgm targets", "schwangerschaftsdiabetes sensor", "diabete gestationnel capteur", "diabetes gestacional sensor"). Pregnancy targets need a primary source. 5 languages. Link from the hub's `types` row in `messages/*.json`.
+- [ ] **Partner of someone with type 1** (autocomplete 2026-11-05: "partner with type 1 diabetes", "spouse type 1 diabetes"). Practical, not medical; link `family-sharing`, `night-lows`.
+- [ ] **T1D parent burnout** (autocomplete 2026-11-05: "t1d parent burnout"). Needs a real source; link `diabetes-at-school`, `child-glucose`.
+
 - [x] **"Libre 3 signal loss / alarms unavailable on iPhone" article** (done 2026-11-04, `libre-signal-loss`) (found 2026-11-04, Google autocomplete: "libre 3 signal
   loss iphone", "libre 3 signal loss fix", "libre 3 alarms unavailable iphone", "libre 3 not connecting to iphone",
   "librelinkup not sending notifications"). The sensor-phone side; `librelinkup-not-working` covers the follower side.

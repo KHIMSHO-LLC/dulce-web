@@ -72,6 +72,19 @@ export const routing = defineRouting({
     // the same slug.
     "/setup": "/setup",
     "/pro": "/pro",
+    // Segment hub: who Dulce is for, by person and by type of diabetes.
+    "/who-is-dulce-for": {
+      es: "/para-quien-es-dulce",
+      en: "/who-is-dulce-for",
+      de: "/fuer-wen-ist-dulce",
+      fr: "/pour-qui-est-dulce",
+      it: "/per-chi-e-dulce",
+      fi: "/kenelle-dulce-sopii",
+      nl: "/voor-wie-is-dulce",
+      nb: "/hvem-er-dulce-for",
+      sv: "/vem-ar-dulce-for",
+      ru: "/dlya-kogo-dulce",
+    },
     // Live LibreLinkUp status measured by the relay (lib/lluStatus.ts).
     "/librelinkup-status": {
       es: "/estado-librelinkup",

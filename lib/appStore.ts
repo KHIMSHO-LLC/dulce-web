@@ -21,6 +21,7 @@ export type StoreCampaign =
   | "web_sticky"
   | "web_qr"
   | "web_page"
+  | "web_audience"
   | "web_tool"
   | "web_status"
   /** Markdown copies for AI assistants (/llms-full.txt, /md/...). */

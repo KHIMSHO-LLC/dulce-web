@@ -1,5 +1,7 @@
 # App Store metadata (draft, updated 2026-10-22)
 
+> **Current metadata is in `seo/segments.md` (2026-11-05, saved in the App Store Connect 1.0.7 draft). The lists below are the older drafts; keep them for the rules, not the words.**
+
 Paste into App Store Connect → the app → the next version → each localization. Name, subtitle and keywords only
 change with a new app version; promotional text can change any time. Limits (Apple): name 30 chars, subtitle 30
 chars, keywords 100 bytes (comma-separated, no spaces), promotional text 170 chars. Every string below was measured.

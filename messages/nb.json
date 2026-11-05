@@ -190,6 +190,14 @@
       "emailLabel": "Eller på e-post:",
       "items": [
         {
+          "q": "Hvem er Dulce for?",
+          "a": "For alle som bruker en støttet glukosesensor og vil se den uten å åpne en app, og for dem som tar vare på dem: foreldre til barn med type 1, eldre og familiene deres, nydiagnostiserte, partnere, pårørende og folk i jobb."
+        },
+        {
+          "q": "Virker Dulce ved LADA, type 2 eller andre typer diabetes?",
+          "a": "Ja. Dulce viser det sensoren måler, så den virker ved alle typer diabetes, også LADA, type 2, svangerskapsdiabetes og MODY, så lenge sensoren støttes."
+        },
+        {
           "q": "Hva koster Dulce?",
           "a": "Den er gratis å laste ned og har det viktigste med. Pro-funksjonene (Apple Watch, familiedeling og mer) kommer med 14 dagers gratis prøveperiode."
         },
@@ -568,5 +576,122 @@
     "accept": "Godta",
     "decline": "Avslå",
     "settings": "Innstillinger for informasjonskapsler"
+  },
+  "audience": {
+    "nav": "Hvem den er for",
+    "title": "Hvem er Dulce for? Foreldre, eldre, folk i jobb og alle typer diabetes",
+    "description": "Dulce er for foreldre til barn med diabetes type 1, eldre og familiene deres, nydiagnostiserte, folk i jobb og sensorbrukere med LADA eller type 2.",
+    "headline": "For alle som lever med en glukosesensor, og alle som bryr seg",
+    "lead": "Dulce viser verdien fra sensoren på låseskjermen, Apple Watch og familiens iPhoner, så ingen trenger å åpne en app hele tiden. Dulce spør aldri hvilken type diabetes du har: støttes sensoren din, kommer tallet til deg.",
+    "homeTitle": "Laget for din type dag",
+    "homeLead": "En mor på jobb, en bestefar hjemme, en sykepleier på nattevakt, en som fikk diagnosen forrige uke. Ulike liv, samme behov: se tallet uten å stoppe det du holder på med.",
+    "homeCta": "Se hvem Dulce er for",
+    "segments": [
+      {
+        "id": "parents",
+        "title": "Foreldre til barn med diabetes type 1",
+        "short": "Følg barnets glukose på skolen og om natten fra din egen iPhone.",
+        "body": "Se barnets glukose på din egen låseskjerm, med egne varsler ved lave og høye verdier, mens barnet er i timen eller sover. Begge foreldrene og en besteforelder kan følge, og følgere betaler ingenting.",
+        "guide": "diabetes-at-school",
+        "guideLabel": "Guide om skolen (på engelsk)"
+      },
+      {
+        "id": "older-adults",
+        "title": "Eldre og familiene deres",
+        "short": "Et tydelig tall på låseskjermen, og en sønn eller datter som får varselet.",
+        "body": "Ingen app å lete etter og ingen menyer å lære: tallet og fargen står på låseskjermen og på iPhonen på nattbordet i StandBy. En sønn eller datter kan følge fra sin egen iPhone og sende et \"Går det bra?\" som besvares med ett trykk.",
+        "guide": "older-adults-cgm",
+        "guideLabel": "Sensorer for eldre (på engelsk)"
+      },
+      {
+        "id": "at-work",
+        "title": "Folk i jobb",
+        "short": "Møter, skift, hansker på: se tallet uten å åpne noe.",
+        "body": "Å låse opp telefonen og åpne en app tjue ganger om dagen passer ikke på et møte, en avdeling eller en byggeplass. Dulce holder tallet på låseskjermen, på håndleddet og på CarPlay-skjermen, så ett blikk holder.",
+        "guide": "diabetes-at-work",
+        "guideLabel": "Diabetes på jobben (på engelsk)"
+      },
+      {
+        "id": "newly-diagnosed",
+        "title": "Nydiagnostisert med type 1",
+        "short": "Din første sensor forklart, med ett rolig tall å se på.",
+        "body": "De første ukene kommer med mange nye ord og tall. Dulce starter gratis med glukose i sanntid, widgeter, varsler, loggbok og tid i målområdet, og de nærmeste kan følge med mens du lærer.",
+        "guide": "newly-diagnosed",
+        "guideLabel": "De første ukene (på engelsk)"
+      },
+      {
+        "id": "partners",
+        "title": "Partnere og pårørende",
+        "short": "Vite at alt er bra uten å måtte spørre.",
+        "body": "Opptil 3 personer kan følge noens glukose, hver med egne varsler og stille timer. Det er roligere for alle enn en melding hver time, og personen med diabetes bestemmer hvem som ser hva.",
+        "guide": "family-sharing",
+        "guideLabel": "Guide om familiedeling"
+      },
+      {
+        "id": "on-the-move",
+        "title": "Sport og vei",
+        "short": "Løpe uten telefon eller et blikk på dashbordet.",
+        "body": "Apple Watch fortsetter å oppdatere via wifi eller mobilnett selv om iPhonen ikke er i nærheten. På iOS 26 vises glukosekortet ditt også på CarPlay-skjermen.",
+        "guide": "apple-watch",
+        "guideLabel": "Apple Watch-guide"
+      }
+    ],
+    "typesTitle": "Alle typer diabetes, én måte å se dem på",
+    "typesLead": "Dulce viser det sensoren måler, så den virker likt uansett diagnose. Mål og behandling bestemmer du med behandlingsteamet ditt; i appen kan du sette ditt eget målområde.",
+    "types": [
+      {
+        "name": "Diabetes type 1",
+        "body": "De Dulce først ble laget for, og det grunnleggeren selv lever med.",
+        "guide": "newly-diagnosed",
+        "guideLabel": "De første ukene (på engelsk)."
+      },
+      {
+        "name": "LADA (type 1,5)",
+        "body": "Autoimmun diabetes som starter sakte hos voksne og ofte først blir tatt for type 2.",
+        "guide": "lada-diabetes",
+        "guideLabel": "Les om LADA (på engelsk)."
+      },
+      {
+        "name": "Diabetes type 2",
+        "body": "For alle med en støttet sensor, med eller uten insulin. Gratisversjonen har widgeter, varsler, loggbok og trender.",
+        "guide": "type-2-cgm",
+        "guideLabel": "CGM ved type 2 (på engelsk)."
+      },
+      {
+        "name": "Svangerskapsdiabetes",
+        "body": "Hvis behandlingsteamet ditt har gitt deg en støttet sensor, kan Dulce vise den. Målene er strengere i svangerskapet, så sett området de oppgir."
+      },
+      {
+        "name": "MODY",
+        "body": "Arvelig diabetes forårsaket av ett enkelt gen. Med en støttet sensor virker Dulce likt.",
+        "guide": "lada-diabetes",
+        "guideLabel": "MODY sammenlignet med LADA (på engelsk)."
+      },
+      {
+        "name": "Andre typer",
+        "body": "Diabetes etter bukspyttkjerteloperasjon eller pankreatitt (type 3c) og alle andre former: det er sensoren som teller, ikke merkelappen."
+      }
+    ],
+    "faqTitle": "Korte spørsmål",
+    "faq": [
+      {
+        "q": "Kan et barn bruke Dulce?",
+        "a": "Dulce brukes av forelderen eller vergen. Under 14 år følger en voksen barnets glukose på sin egen iPhone på eget ansvar; fra 14 til 18 år kan en ungdom bruke den med samtykke fra en forelder."
+      },
+      {
+        "q": "Virker Dulce ved LADA, type 2 eller svangerskapsdiabetes?",
+        "a": "Ja, så lenge du bruker en støttet sensor. Dulce leser sensoren og er ikke avhengig av diabetestypen din."
+      },
+      {
+        "q": "Hva trenger jeg for å starte?",
+        "a": "En iPhone med iOS 17 eller nyere og en støttet sensor som deler via sin egen tjeneste: FreeStyle Libre, Dexcom, Medtronic eller din egen Nightscout-side. Følgere trenger bare en iPhone og den gratis appen."
+      },
+      {
+        "q": "Virker det uten telefon nær sensoren?",
+        "a": "Nei. En telefon må lese sensoren og være på nett, for det er slik verdiene forlater den. Frittstående avlesere sender ingenting til internett, så Dulce kan ikke vise dem."
+      }
+    ],
+    "note": "Live-aktivitet, Apple Watch-appen, CarPlay-kortet og familiedeling er Dulce Pro-funksjoner med 14 dagers gratis prøveperiode; følgere betaler ingenting. Dulce er ikke medisinsk utstyr. Den viser verdier, stiller ikke diagnoser, behandler ikke og gir ikke doseråd, og den erstatter ikke sensorens alarmer eller vurderingen til behandlingsteamet ditt.",
+    "cta": "Gratis å laste ned. Følgere betaler ingenting."
   }
 }

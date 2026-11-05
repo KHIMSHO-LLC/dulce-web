@@ -8,7 +8,7 @@ web
 
 ## Users
 
-People anywhere in the world living with type 1 diabetes who wear a continuous glucose monitor (FreeStyle Libre or Dexcom) and want to see their glucose without opening an app. Dulce is not limited to any country or language group. Also the people around them: parents of children with T1D, partners and family who follow someone's glucose from their own iPhone. Visitors arrive on a laptop or phone, often from search or a shared invite link, and leave by installing the iPhone app.
+People anywhere in the world living with type 1 diabetes who wear a continuous glucose monitor (FreeStyle Libre or Dexcom) and want to see their glucose without opening an app. Dulce is not limited to any country or language group. Also the people around them: parents of children with T1D, partners and family who follow someone's glucose from their own iPhone. Segments since 2026-11-05 (hub `/who-is-dulce-for`, map in `seo/segments.md`): parents, older adults and their families, people at work, the newly diagnosed, partners and caregivers, sport and driving, and every sensor user whatever the diagnosis (LADA, type 2, gestational, MODY, type 3c). Visitors arrive on a laptop or phone, often from search or a shared invite link, and leave by installing the iPhone app.
 
 ## Product Purpose
 

@@ -190,6 +190,14 @@
       "emailLabel": "Of per e-mail:",
       "items": [
         {
+          "q": "Voor wie is Dulce?",
+          "a": "Voor iedereen met een ondersteunde glucosesensor die de waarde wil zien zonder een app te openen, en voor wie op hen let: ouders van kinderen met type 1, ouderen en hun familie, pas gediagnosticeerden, partners, mantelzorgers en werkenden."
+        },
+        {
+          "q": "Werkt Dulce bij LADA, type 2 of andere vormen van diabetes?",
+          "a": "Ja. Dulce toont wat je sensor meet en werkt dus bij elke vorm van diabetes, ook LADA, type 2, zwangerschapsdiabetes en MODY, zolang je sensor wordt ondersteund."
+        },
+        {
           "q": "Wat kost Dulce?",
           "a": "Downloaden is gratis en de basis zit erin. Pro-functies (Apple Watch, delen met familie en meer) kun je 14 dagen gratis proberen."
         },
@@ -568,5 +576,122 @@
     "accept": "Accepteren",
     "decline": "Weigeren",
     "settings": "Cookie-instellingen"
+  },
+  "audience": {
+    "nav": "Voor wie",
+    "title": "Voor wie is Dulce? Ouders, ouderen, werkenden en elke vorm van diabetes",
+    "description": "Dulce is voor ouders van kinderen met diabetes type 1, ouderen en hun familie, pas gediagnosticeerden, werkenden en sensorgebruikers met LADA of type 2.",
+    "headline": "Voor iedereen die met een glucosesensor leeft, en iedereen die meekijkt",
+    "lead": "Dulce zet de waarde van je sensor op je toegangsscherm, je Apple Watch en de iPhones van je familie, zodat niemand steeds een app hoeft te openen. Dulce vraagt nooit welk type diabetes je hebt: wordt je sensor ondersteund, dan komt het getal naar jou.",
+    "homeTitle": "Gemaakt voor jouw soort dag",
+    "homeLead": "Een moeder op het werk, een opa thuis, een verpleegkundige op nachtdienst, iemand met een diagnose van vorige week. Verschillende levens, dezelfde behoefte: het getal zien zonder te stoppen waar je mee bezig bent.",
+    "homeCta": "Bekijk voor wie Dulce is",
+    "segments": [
+      {
+        "id": "parents",
+        "title": "Ouders van kinderen met diabetes type 1",
+        "short": "Volg de glucose van je kind op school en 's nachts op je eigen iPhone.",
+        "body": "Zie de glucose van je kind op je eigen toegangsscherm, met je eigen meldingen bij lage en hoge waarden, terwijl het in de klas zit of slaapt. Beide ouders en een grootouder kunnen volgen, volgers betalen niets.",
+        "guide": "diabetes-at-school",
+        "guideLabel": "Gids over school (in het Engels)"
+      },
+      {
+        "id": "older-adults",
+        "title": "Ouderen en hun familie",
+        "short": "Een duidelijk getal op het toegangsscherm, en een zoon of dochter die de melding krijgt.",
+        "body": "Geen app zoeken, geen menu's leren: het getal en de kleur staan op het toegangsscherm en op de iPhone op het nachtkastje in StandBy. Een zoon of dochter kan volgen op de eigen iPhone en een \"Gaat het?\" sturen dat met één tik wordt beantwoord.",
+        "guide": "older-adults-cgm",
+        "guideLabel": "Sensoren voor ouderen (in het Engels)"
+      },
+      {
+        "id": "at-work",
+        "title": "Werkenden",
+        "short": "Vergaderingen, diensten, handschoenen aan: zie je getal zonder iets te openen.",
+        "body": "Twintig keer per dag je telefoon ontgrendelen en een app openen past niet bij een vergadering, een afdeling of een bouwplaats. Dulce houdt het getal op je toegangsscherm, om je pols en op het CarPlay-dashboard, één blik is genoeg.",
+        "guide": "diabetes-at-work",
+        "guideLabel": "Diabetes op het werk (in het Engels)"
+      },
+      {
+        "id": "newly-diagnosed",
+        "title": "Pas gediagnosticeerd met type 1",
+        "short": "Je eerste sensor uitgelegd, met één rustig getal om naar te kijken.",
+        "body": "De eerste weken brengen veel nieuwe woorden en getallen. Dulce begint gratis met live glucose, widgets, meldingen, een logboek en tijd binnen bereik, en je naasten kunnen meekijken terwijl jij leert.",
+        "guide": "newly-diagnosed",
+        "guideLabel": "Gids eerste weken (in het Engels)"
+      },
+      {
+        "id": "partners",
+        "title": "Partners en mantelzorgers",
+        "short": "Weten dat het goed gaat zonder te hoeven vragen.",
+        "body": "Tot 3 mensen kunnen iemands glucose volgen, elk met eigen meldingen en stille uren. Dat is rustiger voor iedereen dan elk uur een berichtje, en de persoon met diabetes bepaalt wie wat ziet.",
+        "guide": "family-sharing",
+        "guideLabel": "Gids familie delen"
+      },
+      {
+        "id": "on-the-move",
+        "title": "Sport en onderweg",
+        "short": "Hardlopen zonder telefoon of een blik op het dashboard.",
+        "body": "De Apple Watch blijft bijwerken via wifi of mobiel netwerk, ook als je iPhone niet in de buurt is. Op iOS 26 verschijnt je glucosekaart ook op het CarPlay-dashboard.",
+        "guide": "apple-watch",
+        "guideLabel": "Apple Watch-gids"
+      }
+    ],
+    "typesTitle": "Elke vorm van diabetes, één manier om het te zien",
+    "typesLead": "Dulce toont wat je sensor meet en werkt dus hetzelfde bij elke diagnose. Je doelen en behandeling bepaal je met je zorgteam; in de app stel je je eigen streefbereik in.",
+    "types": [
+      {
+        "name": "Diabetes type 1",
+        "body": "Waar Dulce eerst voor is gemaakt, en waarmee de oprichter leeft.",
+        "guide": "newly-diagnosed",
+        "guideLabel": "De eerste weken (in het Engels)."
+      },
+      {
+        "name": "LADA (type 1,5)",
+        "body": "Auto-immuundiabetes die langzaam begint bij volwassenen en eerst vaak voor type 2 wordt aangezien.",
+        "guide": "lada-diabetes",
+        "guideLabel": "Over LADA (in het Engels)."
+      },
+      {
+        "name": "Diabetes type 2",
+        "body": "Voor iedereen met een ondersteunde sensor, met of zonder insuline. De gratis versie heeft widgets, meldingen, Logboek en Trends.",
+        "guide": "type-2-cgm",
+        "guideLabel": "CGM bij type 2 (in het Engels)."
+      },
+      {
+        "name": "Zwangerschapsdiabetes",
+        "body": "Heeft je zorgteam je een ondersteunde sensor gegeven, dan kan Dulce die tonen. Tijdens de zwangerschap gelden strengere doelen, dus stel het bereik in dat je zorgteam noemt."
+      },
+      {
+        "name": "MODY",
+        "body": "Erfelijke diabetes door één gen. Met een ondersteunde sensor werkt Dulce hetzelfde.",
+        "guide": "lada-diabetes",
+        "guideLabel": "MODY en LADA vergeleken (in het Engels)."
+      },
+      {
+        "name": "Andere vormen",
+        "body": "Diabetes na een alvleesklieroperatie of pancreatitis (type 3c) en elke andere vorm: het gaat om de sensor, niet om het label."
+      }
+    ],
+    "faqTitle": "Korte vragen",
+    "faq": [
+      {
+        "q": "Kan een kind Dulce gebruiken?",
+        "a": "Dulce wordt gebruikt door de ouder of voogd. Onder de 14 volgt een volwassene de glucose van het kind op de eigen iPhone, onder eigen verantwoordelijkheid; van 14 tot 18 jaar kan een jongere het gebruiken met toestemming van een ouder."
+      },
+      {
+        "q": "Werkt Dulce bij LADA, type 2 of zwangerschapsdiabetes?",
+        "a": "Ja, zolang je een ondersteunde sensor gebruikt. Dulce leest de sensor en hangt niet af van je type diabetes."
+      },
+      {
+        "q": "Wat heb ik nodig om te beginnen?",
+        "a": "Een iPhone met iOS 17 of nieuwer en een ondersteunde sensor die via zijn eigen dienst deelt: FreeStyle Libre, Dexcom, Medtronic of je eigen Nightscout-site. Volgers hebben alleen een iPhone en de gratis app nodig."
+      },
+      {
+        "q": "Werkt het zonder telefoon bij de sensor?",
+        "a": "Nee. Een telefoon moet de sensor lezen en online zijn, want zo verlaten de waarden de sensor. Losse afleesapparaten sturen niets naar internet, dus Dulce kan die waarden niet tonen."
+      }
+    ],
+    "note": "De Live Activity, de Apple Watch-app, de CarPlay-kaart en familie delen zijn Dulce Pro-functies met 14 dagen gratis proef; volgers betalen niets. Dulce is geen medisch hulpmiddel. Het toont waarden, stelt geen diagnose, behandelt niet en geeft geen doseeradvies. Het vervangt de alarmen van je sensor en je zorgteam niet.",
+    "cta": "Gratis te downloaden. Volgers betalen niets."
   }
 }

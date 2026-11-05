@@ -14,6 +14,7 @@ import { ReadingsCounter } from "@/components/landing/ReadingsCounter";
 import { Family } from "@/components/landing/Family";
 import { DayAccordion } from "@/components/landing/DayAccordion";
 import { MoreBento } from "@/components/landing/MoreBento";
+import { Audience } from "@/components/landing/Audience";
 import { Founder } from "@/components/landing/Founder";
 import { Faq, type FaqItem } from "@/components/landing/Faq";
 import { DownloadCta } from "@/components/landing/DownloadCta";
@@ -150,16 +151,16 @@ const FEATURES: Record<AppLocale, string[]> = {
 };
 
 const AUDIENCE: Record<AppLocale, string> = {
-  es: "Personas con diabetes que llevan un FreeStyle Libre o un Dexcom y sus familias: padres de niños con diabetes tipo 1, parejas y cuidadores",
-  en: "People with diabetes who wear a FreeStyle Libre or a Dexcom, and their families: parents of children with type 1 diabetes, partners and caregivers",
-  de: "Menschen mit Diabetes, die einen FreeStyle Libre oder einen Dexcom tragen, und ihre Familien: Eltern von Kindern mit Typ-1-Diabetes, Partner und Angehörige",
-  fr: "Personnes diabétiques qui portent un FreeStyle Libre ou un Dexcom, et leurs familles : parents d'enfants atteints de diabète de type 1, conjoints et aidants",
-  it: "Persone con diabete che usano un FreeStyle Libre o un Dexcom e le loro famiglie: genitori di bambini con diabete di tipo 1, partner e caregiver",
-  fi: "Diabeetikot, joilla on FreeStyle Libre tai Dexcom, ja heidän perheensä: tyypin 1 diabetesta sairastavien lasten vanhemmat, kumppanit ja omaishoitajat",
-  nl: "Mensen met diabetes die een FreeStyle Libre of Dexcom dragen, en hun familie: ouders van kinderen met diabetes type 1, partners en mantelzorgers",
-  nb: "Personer med diabetes som bruker FreeStyle Libre eller Dexcom, og familiene deres: foreldre til barn med diabetes type 1, partnere og pårørende",
-  sv: "Personer med diabetes som använder FreeStyle Libre eller Dexcom, och deras familjer: föräldrar till barn med typ 1-diabetes, partner och anhöriga",
-  ru: "Люди с диабетом, которые носят FreeStyle Libre или Dexcom, и их семьи: родители детей с диабетом 1 типа, партнёры и ухаживающие",
+  es: "Personas con diabetes que llevan un sensor de glucosa (tipo 1, LADA, tipo 2 y otros tipos) y quienes las cuidan: padres de niños con diabetes tipo 1, personas mayores y sus familias, recién diagnosticados, parejas y cuidadores, y quienes trabajan y no pueden abrir una app a cada rato",
+  en: "People with diabetes who wear a glucose sensor (type 1, LADA, type 2 and other types) and the people who care for them: parents of children with type 1 diabetes, older adults and their families, the newly diagnosed, partners and caregivers, and people at work who can't keep opening an app",
+  de: "Menschen mit Diabetes, die einen Glukosesensor tragen (Typ 1, LADA, Typ 2 und andere Formen), und alle, die sich um sie kümmern: Eltern von Kindern mit Typ-1-Diabetes, Senioren und ihre Familien, frisch Diagnostizierte, Partner und Angehörige sowie Berufstätige, die nicht ständig eine App öffnen können",
+  fr: "Personnes diabétiques qui portent un capteur de glucose (type 1, LADA, type 2 et autres types) et leurs proches : parents d'enfants atteints de diabète de type 1, personnes âgées et leurs familles, personnes nouvellement diagnostiquées, conjoints et aidants, et actifs qui ne peuvent pas ouvrir une app sans arrêt",
+  it: "Persone con diabete che usano un sensore del glucosio (tipo 1, LADA, tipo 2 e altri tipi) e chi se ne prende cura: genitori di bambini con diabete di tipo 1, anziani e le loro famiglie, chi ha appena ricevuto la diagnosi, partner e caregiver, e chi lavora e non può aprire un'app di continuo",
+  fi: "Diabeetikot, joilla on glukoosisensori (tyyppi 1, LADA, tyyppi 2 ja muut tyypit), ja heistä huolehtivat: tyypin 1 diabetesta sairastavien lasten vanhemmat, ikääntyneet ja heidän perheensä, vastadiagnosoidut, kumppanit ja omaishoitajat sekä työssäkäyvät, jotka eivät voi avata sovellusta jatkuvasti",
+  nl: "Mensen met diabetes die een glucosesensor dragen (type 1, LADA, type 2 en andere vormen) en wie voor hen zorgt: ouders van kinderen met diabetes type 1, ouderen en hun familie, pas gediagnosticeerden, partners en mantelzorgers, en werkenden die niet steeds een app kunnen openen",
+  nb: "Personer med diabetes som bruker glukosesensor (type 1, LADA, type 2 og andre typer) og de som tar vare på dem: foreldre til barn med diabetes type 1, eldre og familiene deres, nydiagnostiserte, partnere og pårørende, og folk på jobb som ikke kan åpne en app hele tiden",
+  sv: "Personer med diabetes som använder glukossensor (typ 1, LADA, typ 2 och andra typer) och de som bryr sig om dem: föräldrar till barn med typ 1-diabetes, äldre och deras familjer, nydiagnostiserade, partner och anhöriga, och de som arbetar och inte kan öppna en app hela tiden",
+  ru: "Люди с диабетом, которые носят сенсор глюкозы (1 тип, LADA, 2 тип и другие типы), и те, кто о них заботится: родители детей с диабетом 1 типа, пожилые люди и их семьи, те, кому только что поставили диагноз, партнёры и ухаживающие, а также работающие люди, которым неудобно всё время открывать приложение",
 };
 
 function appSchema(locale: AppLocale, description: string) {
@@ -281,6 +282,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       </section>
 
       <MoreBento />
+      <Audience />
       <Founder />
       <Faq />
       <DownloadCta />

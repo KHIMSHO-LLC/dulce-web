@@ -236,19 +236,19 @@ export const TOOLS: readonly Tool[] = [
     path: "/tools/glucose-converter",
     name: "glucose-converter",
     dateModified: "2026-10-30",
-    guides: ["blood-sugar-levels", "alerts", "night-lows", "child-glucose", "family-sharing", "dexcom", "dexcom-follow-alternative", "glucose-apps-compared", "xdrip-iphone"],
+    guides: ["blood-sugar-levels", "alerts", "night-lows", "child-glucose", "family-sharing", "dexcom", "dexcom-follow-alternative", "glucose-apps-compared", "xdrip-iphone", "diabetes-at-school", "older-adults-cgm"],
   },
   {
     path: "/tools/a1c-calculator",
     name: "a1c-calculator",
     dateModified: "2026-10-30",
-    guides: ["hba1c", "blood-sugar-levels", "time-in-range", "trends", "logbook", "smart-insulin-pen", "apple-health", "libreview"],
+    guides: ["hba1c", "blood-sugar-levels", "time-in-range", "trends", "logbook", "smart-insulin-pen", "apple-health", "libreview", "lada-diabetes", "type-2-cgm", "newly-diagnosed"],
   },
   {
     path: "/tools/sensor-end-date",
     name: "sensor-end-date",
     dateModified: "2026-10-23",
-    guides: ["librelinkup-not-working", "libre-signal-loss", "apple-watch", "apple-watch-glucose", "lock-screen", "widgets"],
+    guides: ["librelinkup-not-working", "libre-signal-loss", "apple-watch", "apple-watch-glucose", "lock-screen", "widgets", "diabetes-at-work"],
   },
 ];
 

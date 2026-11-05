@@ -190,6 +190,14 @@
       "emailLabel": "Or by email:",
       "items": [
         {
+          "q": "Who is Dulce for?",
+          "a": "Anyone who wears a supported glucose sensor and wants to see it without opening an app, and the people who look out for them: parents of children with type 1, older adults and their families, the newly diagnosed, partners, caregivers and people at work."
+        },
+        {
+          "q": "Does Dulce work with LADA, type 2 or other types of diabetes?",
+          "a": "Yes. Dulce shows what your sensor measures, so it works with any type of diabetes, including LADA, type 2, gestational and MODY, as long as your sensor is supported."
+        },
+        {
           "q": "How much does Dulce cost?",
           "a": "It's free to download and includes the essentials. Pro features (Apple Watch, family sharing and more) come with a 14-day free trial."
         },
@@ -568,5 +576,122 @@
     "accept": "Accept",
     "decline": "Decline",
     "settings": "Cookie settings"
+  },
+  "audience": {
+    "nav": "Who it's for",
+    "title": "Who is Dulce for? Parents, older adults, workers and every type of diabetes",
+    "description": "Dulce is for parents of children with type 1, older adults and their families, the newly diagnosed, busy workers and LADA, type 2 and other sensor users.",
+    "headline": "For everyone who lives with a glucose sensor, and everyone who cares",
+    "lead": "Dulce puts the reading from your sensor on your Lock Screen, your Apple Watch and your family's iPhones, so nobody has to keep opening an app. It never asks what type of diabetes you have: if your sensor is supported, the number comes to you.",
+    "homeTitle": "Made for your kind of day",
+    "homeLead": "A parent at work, a grandfather at home, a nurse on a night shift, someone diagnosed last week. Different lives, same need: see the number without stopping what you're doing.",
+    "homeCta": "See who Dulce is for",
+    "segments": [
+      {
+        "id": "parents",
+        "title": "Parents of children with type 1",
+        "short": "Follow your child's glucose at school and overnight from your own iPhone.",
+        "body": "See your child's glucose on your own Lock Screen, with your own low and high alerts, while they're in class or asleep. Both parents and a grandparent can follow, and followers pay nothing.",
+        "guide": "diabetes-at-school",
+        "guideLabel": "School guide"
+      },
+      {
+        "id": "older-adults",
+        "title": "Older adults and their families",
+        "short": "A clear number on the Lock Screen, and a son or daughter who gets the alert.",
+        "body": "No app to find and no menus to learn: the number and its colour are on the Lock Screen and on the bedside iPhone in StandBy. A son or daughter can follow from their own iPhone and send an \"Are you OK?\" answered with one tap.",
+        "guide": "older-adults-cgm",
+        "guideLabel": "Sensors for older adults"
+      },
+      {
+        "id": "at-work",
+        "title": "People at work",
+        "short": "Meetings, shifts, gloves on: see your number without opening anything.",
+        "body": "Unlocking a phone and opening an app twenty times a day doesn't fit a meeting, a ward or a building site. Dulce keeps the number on the Lock Screen, on your wrist and on the CarPlay dashboard, so a glance is enough.",
+        "guide": "diabetes-at-work",
+        "guideLabel": "Diabetes at work"
+      },
+      {
+        "id": "newly-diagnosed",
+        "title": "Newly diagnosed with type 1",
+        "short": "Your first sensor, explained, with one calm number to look at.",
+        "body": "The first weeks bring a lot of new words and numbers. Dulce starts free with live glucose, widgets, alerts, a logbook and time in range, and lets the people around you follow along while you learn.",
+        "guide": "newly-diagnosed",
+        "guideLabel": "First weeks guide"
+      },
+      {
+        "id": "partners",
+        "title": "Partners and caregivers",
+        "short": "Know they're fine without having to ask.",
+        "body": "Up to 3 people can follow one person's glucose, each with their own alerts and quiet hours. It's calmer for everyone than a message every hour, and the person with diabetes stays in control of who sees what.",
+        "guide": "family-sharing",
+        "guideLabel": "Family sharing guide"
+      },
+      {
+        "id": "on-the-move",
+        "title": "Sport and the road",
+        "short": "Running without your phone, or a glance at the dashboard.",
+        "body": "The Apple Watch keeps updating on Wi-Fi or cellular even when your iPhone isn't nearby. On iOS 26 your glucose card also appears on the CarPlay dashboard.",
+        "guide": "apple-watch",
+        "guideLabel": "Apple Watch guide"
+      }
+    ],
+    "typesTitle": "Every type of diabetes, one way of seeing it",
+    "typesLead": "Dulce shows what your sensor measures, so it works the same whatever your diagnosis. Your care team decides your targets and your treatment; you can set your own target range in the app.",
+    "types": [
+      {
+        "name": "Type 1 diabetes",
+        "body": "The people Dulce was first built for, and what its founder lives with.",
+        "guide": "newly-diagnosed",
+        "guideLabel": "What to expect in the first weeks."
+      },
+      {
+        "name": "LADA (type 1.5)",
+        "body": "Autoimmune diabetes that starts slowly in adults and is often first taken for type 2.",
+        "guide": "lada-diabetes",
+        "guideLabel": "Read about LADA."
+      },
+      {
+        "name": "Type 2 diabetes",
+        "body": "For anyone using a supported sensor, with or without insulin. The free version covers widgets, alerts, the Logbook and Trends.",
+        "guide": "type-2-cgm",
+        "guideLabel": "CGM for type 2."
+      },
+      {
+        "name": "Gestational diabetes",
+        "body": "If your care team has you on a supported sensor, Dulce can show it. Pregnancy targets are tighter, so set the range they give you."
+      },
+      {
+        "name": "MODY",
+        "body": "Inherited diabetes caused by a single gene. Dulce works the same with a supported sensor.",
+        "guide": "lada-diabetes",
+        "guideLabel": "MODY compared with LADA."
+      },
+      {
+        "name": "Other types",
+        "body": "Diabetes after pancreas surgery or pancreatitis (type 3c) and any other form: what counts is the sensor, not the label."
+      }
+    ],
+    "faqTitle": "Quick questions",
+    "faq": [
+      {
+        "q": "Can a child use Dulce?",
+        "a": "Dulce is used by the parent or guardian. Under 14, a parent follows the child's glucose on their own iPhone under their responsibility; from 14 to 18 a young person can use it with a parent's consent."
+      },
+      {
+        "q": "Does Dulce work with LADA, type 2 or gestational diabetes?",
+        "a": "Yes, as long as you use a supported sensor. Dulce reads the sensor and doesn't depend on your type of diabetes."
+      },
+      {
+        "q": "What do I need to start?",
+        "a": "An iPhone on iOS 17 or later and a supported sensor shared through its own service: FreeStyle Libre, Dexcom, Medtronic or your own Nightscout site. Followers only need an iPhone and the free app."
+      },
+      {
+        "q": "Does it work without a phone near the sensor?",
+        "a": "No. A phone has to read the sensor and be online, because that's how readings leave it. Standalone readers don't send readings to the internet, so Dulce can't show them."
+      }
+    ],
+    "note": "The Live Activity, Apple Watch app, CarPlay card and family sharing are Dulce Pro features, with a 14-day free trial; followers pay nothing. Dulce is not a medical device. It shows readings and doesn't diagnose, treat or give dosing advice, and it doesn't replace your sensor's alarms or your care team's judgment.",
+    "cta": "Free to download. Followers pay nothing."
   }
 }

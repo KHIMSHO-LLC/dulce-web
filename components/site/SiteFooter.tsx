@@ -18,6 +18,7 @@ export async function SiteFooter() {
   const nav = await getTranslations("nav");
   const status = await getTranslations("llustatus");
   const pro = await getTranslations("pro");
+  const audience = await getTranslations("audience");
   const year = new Date().getFullYear();
   const home = (id: string) => homeSection(locale as AppLocale, id);
 
@@ -54,6 +55,9 @@ export async function SiteFooter() {
 
           <nav aria-label={t("learn")} className="grid content-start gap-2 text-label">
             <p className="mb-1 text-mute">{t("learn")}</p>
+            <Link href="/who-is-dulce-for" className={linkClass}>
+              {audience("nav")}
+            </Link>
             <Link href="/blog" className={linkClass}>
               {nav("guides")}
             </Link>
