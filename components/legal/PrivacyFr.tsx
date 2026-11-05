@@ -63,10 +63,10 @@ export function PrivacyFr() {
           ton appareil et n&apos;est pas envoyé à Dulce. L&apos;app l&apos;utilise pour joindre
           le fournisseur ; si tu actives des fonctions du relais, un jeton de session du
           fournisseur (pas ton mot de passe) est envoyé au relais quand ton CGM est connecté,
-          comme expliqué ci-dessous.
+          comme expliqué ci-dessous. Avec Medtronic CareLink, tu saisis ton mot de passe sur la page de Medtronic : Dulce ne le voit jamais et reçoit des jetons de connexion de Medtronic. Avec Nightscout, tu saisis l’adresse de ton site et un jeton d’accès ou secret API (Dulce ne conserve que l’empreinte SHA-1 du secret).
         </li>
         <li>
-          <strong>Les mesures de glycémie</strong> récupérées depuis LibreLinkUp ou Dexcom Share,
+          <strong>Les mesures de glycémie</strong> récupérées depuis LibreLinkUp, Dexcom Share, Medtronic CareLink ou Nightscout,
           stockées dans une base de données locale sur ton appareil.
         </li>
         <li>
@@ -88,13 +88,12 @@ export function PrivacyFr() {
         Quand ton CGM est connecté, l&apos;app enregistre cette installation auprès de notre
         relais pour permettre les mises à jour en arrière-plan, les alertes, les fonctions
         Apple Watch et le suivi familial lorsque tu les utilises. Le relais est un petit serveur
-        que nous exploitons chez Cloudflare. Il récupère les mesures depuis LibreLinkUp ou Dexcom
-        Share et envoie des mises à jour à tes appareils. Le relais traite :
+        que nous exploitons chez Cloudflare. Il récupère les mesures depuis LibreLinkUp, Dexcom Share, Medtronic CareLink ou Nightscout et envoie des mises à jour à tes appareils. Le relais traite :
       </p>
       <ul>
         <li>
           <strong>Un jeton de session du fournisseur</strong> (pas ton mot de passe) : un jeton
-          LibreLinkUp ou un identifiant de session Dexcom Share, pour récupérer les mesures à ta place.
+          LibreLinkUp ou un identifiant de session Dexcom Share, pour récupérer les mesures à ta place. Avec Medtronic CareLink, le relais conserve tes jetons de connexion CareLink. Avec Nightscout, il conserve l’adresse de ton site et ton jeton d’accès ou l’empreinte SHA-1 de ton secret API.
         </li>
         <li>
           <strong>Un identifiant d&apos;installation aléatoire et un identifiant de compte CGM</strong>
@@ -276,7 +275,7 @@ export function PrivacyFr() {
       <h2 id="recipients">7. Avec qui nous partageons tes données</h2>
       <p>
         Nous utilisons les prestataires ci-dessous. Certains traitent des données pour notre
-        compte en vertu d&apos;un contrat ; Abbott, Dexcom, Apple et Google fournissent aussi leurs
+        compte en vertu d&apos;un contrat ; Abbott, Dexcom, Medtronic, Apple et Google fournissent aussi leurs
         propres services selon leurs conditions et politiques de confidentialité :
       </p>
       <ul>
@@ -316,6 +315,12 @@ export function PrivacyFr() {
           <strong>Dexcom (Share)</strong> : ton appareil et, tant que ton CGM est connecté, notre
           relais se connectent à Dexcom Share avec un identifiant de session pour
           récupérer les mesures. Les règles de confidentialité de Dexcom s&apos;appliquent à ce service.
+        </li>
+        <li>
+          <strong>Medtronic (CareLink)</strong> : si tu connectes CareLink, ton appareil et notre relais se connectent au service de Medtronic avec des jetons de connexion pour récupérer tes mesures. Les règles de confidentialité de Medtronic s’appliquent à ce service.
+        </li>
+        <li>
+          <strong>Nightscout</strong> : si tu connectes Nightscout, ton appareil et notre relais récupèrent les mesures depuis le site que tu gères ou choisis. Son hébergeur en est responsable.
         </li>
       </ul>
       <p>
@@ -366,7 +371,7 @@ export function PrivacyFr() {
 
       <h2 id="minors">10. Enfants</h2>
       <p>
-        Dulce ne s&apos;adresse pas aux enfants de moins de 14 ans. Un parent ou un représentant
+        Dulce ne s&apos;adresse pas aux enfants de moins de 14 ans. Sur Android, Dulce est destiné aux adultes de 18 ans et plus. Un parent ou un représentant
         légal peut utiliser Dulce pour suivre la glycémie d&apos;un mineur sous sa propre
         responsabilité. Si tu penses qu&apos;un mineur dont tu as la charge nous a fourni des
         données sans ton accord, contacte-nous et nous les supprimerons.

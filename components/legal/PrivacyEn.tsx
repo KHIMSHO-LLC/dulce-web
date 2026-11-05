@@ -59,10 +59,10 @@ export function PrivacyEn() {
           (Abbott) or Dexcom Share account. Your sign-in password is stored in your device’s
           secure keychain and is not sent to Dulce. The app uses it to connect to the provider;
           when your CGM is connected, a provider session token (not your password) is sent
-          to the relay as described below.
+          to the relay as described below. For Medtronic CareLink, you enter your password on Medtronic’s own page, so Dulce never sees it, and Dulce receives sign-in tokens from Medtronic. For Nightscout, you enter your site address and an access token or API secret (Dulce keeps only the secret’s SHA-1 fingerprint).
         </li>
         <li>
-          <strong>Glucose readings</strong> fetched from LibreLinkUp or Dexcom Share, stored
+          <strong>Glucose readings</strong> fetched from LibreLinkUp, Dexcom Share, Medtronic CareLink or Nightscout, stored
           in a local database on your device.
         </li>
         <li>
@@ -108,13 +108,13 @@ export function PrivacyEn() {
         When your CGM is connected, the app registers this installation with our relay so it
         can provide background updates, alerts, Apple Watch features and family following
         when you use them. The relay is a small server operated by us and hosted on Cloudflare.
-        It fetches readings from LibreLinkUp or Dexcom Share and sends updates to your devices.
+        It fetches readings from LibreLinkUp, Dexcom Share, Medtronic CareLink or Nightscout and sends updates to your devices.
         The relay processes:
       </p>
       <ul>
         <li>
           <strong>A provider session token</strong> (not your password): a LibreLinkUp token
-          or a Dexcom Share session ID, so it can fetch readings on your behalf.
+          or a Dexcom Share session ID, so it can fetch readings on your behalf. For Medtronic CareLink, the relay holds your CareLink sign-in tokens. For Nightscout, it holds your site address and your access token or the SHA-1 fingerprint of your API secret.
         </li>
         <li>
           <strong>A random installation ID and provider account identifier</strong> to associate
@@ -282,7 +282,7 @@ export function PrivacyEn() {
       <h2 id="recipients">7. Who we share your data with</h2>
       <p>
         We use the service providers listed below. Some process data for us under contract;
-        Abbott, Dexcom, Apple and Google also provide services under their own terms and
+        Abbott, Dexcom, Medtronic, Apple and Google also provide services under their own terms and
         privacy policies:
       </p>
       <ul>
@@ -324,6 +324,12 @@ export function PrivacyEn() {
           <strong>Dexcom (Share)</strong> — your device and, while your CGM is connected, our
           relay connect to Dexcom Share using a session ID to fetch readings. Dexcom’s own
           privacy terms apply to that service.
+        </li>
+        <li>
+          <strong>Medtronic (CareLink)</strong> — if you connect CareLink, your device and our relay connect to Medtronic’s service using sign-in tokens to fetch your readings. Medtronic’s own privacy terms apply to that service.
+        </li>
+        <li>
+          <strong>Nightscout</strong> — if you connect Nightscout, your device and our relay fetch readings from the site you run or choose. Whoever hosts that site is responsible for it.
         </li>
       </ul>
       <p>
@@ -373,7 +379,7 @@ export function PrivacyEn() {
 
       <h2 id="minors">10. Children</h2>
       <p>
-        Dulce is not directed at children under the age of 14. A parent or legal guardian may
+        Dulce is not directed at children under the age of 14. On Android, Dulce is intended for adults aged 18 and over. A parent or legal guardian may
         use Dulce to follow a minor’s glucose under their own responsibility. If you believe a
         minor in your care has provided us with data without your consent, contact us and we
         will delete it.
