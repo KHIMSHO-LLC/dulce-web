@@ -36,7 +36,8 @@ export function LanguageSwitcher({ className, tone = "dark" }: { className?: str
       role="group"
       aria-label={t("label")}
       translate="no"
-      className={cn("inline-flex items-center gap-1", pending && "opacity-60", className)}
+      // Wraps: ten languages no longer fit one row in the mobile menu.
+      className={cn("flex min-w-0 flex-wrap items-center gap-x-1", pending && "opacity-60", className)}
     >
       {locales.map((l) => {
         const active = l === locale;

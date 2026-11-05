@@ -197,6 +197,10 @@ questions around them. Being the best answer means the product actually does it 
       **When 1.0.6 (Finnish app) is live:** update the fi FAQ "Millä kielillä" answer, drop "sovellus on toistaiseksi
       englanniksi" notes in fi MDX, and add "fi" to `ScreenLocale` only if the screen strings get Finnish.
       Next fi/nl translations by value: apple-watch, lock-screen, widgets, glucose-apps-compared, blood-sugar-levels.
+- [x] 2026-11-05: Norwegian (`/nb`), Swedish (`/sv`) and Russian (`/ru`) site, same scope as fi/nl (site text, calculators,
+      setup/status/Pro pages, OG, badges, legal in English + noindex; no/nn browsers → nb). App languages listed everywhere
+      (12 incl. Georgian). Guides translated: librelinkup-not-working, libreview, apple-watch-glucose. Mobile menu
+      language row now wraps (10 codes overflowed the panel). Next nb/sv/ru guides by value: same list as fi/nl.
 
 ## Next for Claude (in order)
 

@@ -1,0 +1,74 @@
+LibreLinkUp er Abbotts app for å følge glukosen til noen andre, og også døren dataene dine kommer gjennom inn i apper som Dulce. Når den svikter, er det nesten alltid én av tre ting: du kommer ikke inn, du kommer inn men ser ingen data, eller dataene slutter å oppdateres. Vi tar dem én om gangen.
+
+<Callout>
+Sjekk først om selve tjenesten er nede på siden vår med <PageLink to="/librelinkup-status">live-status for LibreLinkUp</PageLink>, målt hvert minutt.
+</Callout>
+
+## 1. Jeg kommer ikke inn i LibreLinkUp
+
+**Bruker du riktig konto?** Dette er den klart vanligste feilen. **LibreLink** (appen du skanner eller leser sensoren med) og **LibreLinkUp** (følgerappen) er separate apper med separate kontoer, selv om du bruker samme e-postadresse. Hvis passordet ditt «ikke virker», skriver du sannsynligvis inn LibreLink-passordet i LibreLinkUp. Vi forklarer det med skjermbilder i <PageLink to="/setup">LibreLink eller LibreLinkUp</PageLink>. Påloggingen til LibreView er også LibreLink-påloggingen, så den virker heller ikke her: se <ArticleLink to="libreview">hva LibreView er</ArticleLink>.
+
+**Har du prøvd mange ganger på rad?** Abbotts servere blokkerer gjentatte pålogginger en stund. Vent et minutt før du prøver igjen.
+
+**Har Abbott endret vilkårene?** Av og til ber LibreLinkUp deg om å godta nye vilkår. Åpne LibreLinkUp-appen, logg på og godta dem.
+
+**Er kontoen fra et annet land?** Ifølge Abbott fungerer LibreLinkUp-tilkoblinger bare mellom brukere i samme region.
+
+## 2. Jeg kommer inn, men ser ingen data
+
+LibreLinkUp-kontoen din fungerer, men ingen deler med den ennå. Den som har sensoren, må invitere den:
+
+<Steps>
+<Step title="Åpne sensorens Libre-app">
+Åpne FreeStyle LibreLink eller FreeStyle Libre 3 på telefonen til den som har sensoren.
+</Step>
+<Step title="Gå til Tilkoblede apper">
+Åpne delen for tilkoblede apper fra menyen og velg **LibreLinkUp**.
+</Step>
+<Step title="Legg til tilkoblingen">
+Skriv inn den samme e-postadressen som LibreLinkUp-kontoen ble opprettet med. Abbott krever at den stemmer nøyaktig.
+</Step>
+<Step title="Godta invitasjonen">
+Åpne LibreLinkUp med den kontoen og godta invitasjonen. Fra da av begynner målingene å komme.
+</Step>
+</Steps>
+
+Hvis du allerede hadde gjort dette og fortsatt ikke ser noe, sjekk disse tilfellene, som ifølge Abbott **ikke deles**:
+
+- Sensoren ble **startet med en avleser** eller en annen telefon.
+- Målingene ble tatt ved å **skanne med avleseren**, ikke telefonen.
+- Du bruker en **spesialutgave** av Libre-appen, som ikke er kompatibel med LibreLinkUp.
+
+## 3. Dataene er forsinket eller står stille
+
+Målingene går slik: sensor → Libre-appen på telefonen → Abbotts sky → LibreLinkUp. Ryker ett ledd, slutter det du ser å bevege seg.
+
+- **Sensortelefonen trenger internett.** Uten mobildata eller Wi-Fi blir målingene liggende på den telefonen. Når tilkoblingen kommer tilbake, fylles grafen ut, men varslene viser kanskje bare den siste målingen.
+- **Sensoren må være nær telefonen.** Med FreeStyle Libre 3 kommer målingene bare mens sensoren er innenfor Bluetooth-rekkevidde av telefonen. Viser Libre-appen signaltap, se <ArticleLink to="libre-signal-loss">signaltap med Libre 3 på iPhone</ArticleLink> (på engelsk).
+- **Ikke tving Libre-appen til å avslutte.** Sveiper du den bort, kan iOS slutte å vekke den, og da slutter den å laste opp målinger.
+- **Strømsparingsmodus** og å slå av **Oppdatering i bakgrunnen** for Libre-appen gjør også opplastingen tregere.
+- **Følgeren trenger selvsagt også internett.**
+
+<Callout>
+Abbott påpeker at alarmer om signaltap heller ikke deles. Slutter sensoren å snakke med telefonen, får ikke familien vite det via LibreLinkUp; de ser bare ingen nye målinger.
+</Callout>
+
+## LibreLinkUp-alarmene går ikke
+
+- Alarmer finnes bare med **FreeStyle Libre 2 og Libre 3**, og den som har sensoren, må ha dem **slått på i Libre-appen sin**.
+- I LibreLinkUp har hver tilkobling sine egne varselinnstillinger: sjekk dem.
+- Er telefonen på lydløs, vibrering eller en fokusmodus, kan ikke LibreLinkUp bryte gjennom.
+
+Dulce-alarmene følger de samme lydinnstillingene på iPhonen, bortsett fra den kritiske alarmen for svært lave verdier: den ringer også på lydløs og i Ikke forstyrr, og kommer gjennom Dulces stilletimer og slumring. Hvordan du stiller dem inn så du hører dem om natten, står i <ArticleLink to="alerts">guiden til glukosealarmer på iPhone</ArticleLink> (på engelsk).
+
+## Hvor Dulce kommer inn
+
+Dulce leser dataene dine via LibreLinkUp, så alt over påvirker også Dulce: får ikke LibreLinkUp målinger, får heller ikke Dulce det. Forskjellen er at Dulce sier det tydelig: den viser alltid hvor lenge siden den siste målingen var, og når du logger på, sier den fra hvis du bruker feil konto eller hvis ingen deler med kontoen din ennå.
+
+<AppCta title="Prøv Dulce med LibreLinkUp-kontoen din" />
+
+Når det fungerer, kan du legge glukosen i en <ArticleLink to="widgets">widget på iPhone</ArticleLink> (på engelsk) eller dele den med opptil 3 familiemedlemmer uten at de trenger en Abbott-konto: se <ArticleLink to="family-sharing">guiden til familiedeling</ArticleLink> (på engelsk).
+
+## Kilde
+
+- Abbott. *LibreLinkUp FAQs*. [librelinkup.com](https://www.librelinkup.com/faqs)

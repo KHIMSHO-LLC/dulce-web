@@ -268,8 +268,8 @@ export function PillNav() {
               </div>
             </div>
 
-            <div data-item className="mt-4 flex items-center gap-2 text-label text-[#6b6058]">
-              <span>{t("language")}</span>
+            <div data-item className="mt-4 flex items-start gap-2 text-label text-[#6b6058]">
+              <span className="shrink-0 leading-9">{t("language")}</span>
               <LanguageSwitcher tone="light" />
             </div>
 
