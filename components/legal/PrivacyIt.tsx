@@ -72,7 +72,7 @@ export function PrivacyIt() {
           Salvato in locale.
         </li>
         <li>
-          <strong>I dati di Salute di Apple</strong>, in sola lettura, se dai il permesso.
+          <strong>I dati di Salute di Apple</strong> (iPhone) o di <strong>Health Connect</strong> (Android), se dai il permesso. Su Android, Dulce legge soltanto. Su iPhone, dalla versione 1.0.7, Dulce può anche salvare le letture del sensore in Salute, al massimo una ogni 5 minuti, se attivi la glicemia in Dulce e lo consenti. Puoi interrompere il salvataggio nelle impostazioni di Dulce o nell’app Salute. Le letture salvate restano in Salute e le altre app a cui lo consenti possono leggerle.
         </li>
         <li>
           <strong>Le preferenze</strong>: unità, intervallo target, lingua, tema, impostazioni
