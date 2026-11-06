@@ -14,12 +14,12 @@ and treatment queries ("perro diabetico que puede comer", "diabetes katze sympto
 App Store (iTunes Search API): "diabetic dog", "pet diabetes", "cat diabetes", "perro diabetico", "diabetes hund" return
 small single-purpose pet diabetes journals with 0-14 ratings. Weak competition, so pet words are worth keyword slots.
 
-## Website (branch `seo/pet-care`, not pushed)
+## Website (live since 2026-11-06, owner pushed ahead of 1.0.7)
 
 - Guide `pet-glucose` in es/en/de/fr/it (`/blog/cgm-for-dogs-and-cats`), 4 peer-reviewed vet sources, FAQ JSON-LD.
 - "Dogs and cats with diabetes" card + FAQ on the Who is Dulce for hub (10 languages), llms.txt line, link from the
   family sharing guide, listed under the glucose converter's guides.
-- **Publish only when 1.0.7 is live** (content rule 1: only what the released app does).
+- Published ahead of the 1.0.7 release on the owner's go-ahead.
 
 ## Rules for pet copy (web and store)
 
