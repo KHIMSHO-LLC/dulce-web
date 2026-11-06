@@ -115,9 +115,7 @@ Missbrauch.
           App-Version).
         </li>
         <li>
-          <strong>Nutzungsereignisse:</strong> grundlegende Ereignisse zu Einrichtung,
-          Verbindung und Abonnement, die mit der zufälligen Installations-ID verknüpft sind, um
-          den Dienst zu messen und zu verbessern.
+          <strong>Nutzungsereignisse:</strong> Ereignisse zu Einrichtung, Verbindung, Abonnement, Bezahlseite und Funktionsnutzung sowie jede Feedback-Option, die du antippst. Sie sind mit der zufälligen Installations-ID verknüpft und dienen dazu, den Dienst zu messen und zu verbessern. Sie enthalten keine Glukosewerte und keinen Nachrichtentext.
         </li>
         <li>
           <strong>Betriebsprotokolle:</strong> Diagnoseprotokolle in Cloudflare Workers Logs
@@ -141,8 +139,7 @@ Missbrauch.
       <p>
         Wenn du jemanden einlädst, dir zu folgen, liefert das Relay ab dem Moment der Annahme
         deine neuesten Werte und Warnungen an dessen Gerät; frühere Verläufe werden nicht
-        geteilt. Kurze Check-in-Nachrichten, auch mit einem Text deiner Wahl, laufen ebenfalls
-        über das Relay; es ist kein Chatdienst. Du kannst einem Follower den Zugang jederzeit
+        geteilt. Nachrichten zwischen dir und deinen Followern, auch selbst geschriebener Text, laufen über das Relay und den Push-Dienst von Apple oder Google, um ihre Geräte zu erreichen. Das Relay speichert weder den Nachrichtentext noch einen Nachrichtenverlauf. Du kannst einem Follower den Zugang jederzeit
         entziehen und Follower-Nachrichten ganz ausschalten.
       </p>
 

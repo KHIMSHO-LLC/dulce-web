@@ -134,8 +134,7 @@ export function PrivacyEn() {
           version).
         </li>
         <li>
-          <strong>Usage events:</strong> basic setup, connection and subscription events linked
-          to the random installation ID, used to measure and improve the service.
+          <strong>Usage events:</strong> setup, connection, subscription, paywall and feature-use events, plus any feedback option you tap, linked to the random installation ID and used to measure and improve the service. They don’t include glucose readings or message text.
         </li>
         <li>
           <strong>Operational logs:</strong> troubleshooting logs sent to Cloudflare Workers
@@ -158,8 +157,7 @@ export function PrivacyEn() {
       <p>
         If you invite someone to follow you, the relay delivers your recent readings and
         alerts to their device from the moment they accept — earlier history is not shared.
-        Short check-in messages, including text you choose, also pass through the relay; this is
-        not a chat service. You can revoke a follower’s access at any time, and you can turn off
+        Messages between you and your followers, including text you write, pass through the relay and Apple’s or Google’s push service to reach their devices. The relay doesn’t keep the message text or a message history. You can revoke a follower’s access at any time, and you can turn off
         follower messages entirely.
       </p>
 
