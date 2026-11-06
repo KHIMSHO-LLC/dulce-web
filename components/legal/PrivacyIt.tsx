@@ -113,9 +113,7 @@ export function PrivacyIt() {
           piattaforma e versione dell&apos;app).
         </li>
         <li>
-          <strong>Eventi di utilizzo:</strong> eventi di base relativi a configurazione,
-          connessione e abbonamento, associati all&apos;ID casuale dell&apos;installazione per
-          misurare e migliorare il servizio.
+          <strong>Eventi di utilizzo:</strong> eventi relativi a configurazione, connessione, abbonamento, pagina di pagamento e uso delle funzioni, oltre a ogni opzione di feedback che tocchi, associati all&apos;ID casuale dell&apos;installazione per misurare e migliorare il servizio. Non includono letture della glicemia né il testo dei messaggi.
         </li>
         <li>
           <strong>Log operativi:</strong> i log diagnostici inviati a Cloudflare Workers Logs
@@ -139,8 +137,7 @@ export function PrivacyIt() {
       <p>
         Se inviti qualcuno a seguirti, il relay invia le tue letture recenti e i tuoi avvisi al
         suo dispositivo dal momento in cui accetta; lo storico precedente non viene condiviso.
-        Anche brevi messaggi per sapere come stai, con il testo che scegli, passano dal relay;
-        non è un servizio di chat. Puoi revocare l&apos;accesso a un follower in qualsiasi momento
+        I messaggi tra te e i tuoi follower, compreso il testo che scrivi, passano dal relay e dal servizio di notifiche di Apple o Google per raggiungere i loro dispositivi. Il relay non conserva il testo dei messaggi né una cronologia. Puoi revocare l&apos;accesso a un follower in qualsiasi momento
         e disattivare del tutto questi messaggi.
       </p>
 

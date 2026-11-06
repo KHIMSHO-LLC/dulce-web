@@ -115,9 +115,7 @@ export function PrivacyFr() {
           horaire, plateforme et version de l&apos;app).
         </li>
         <li>
-          <strong>Événements d&apos;usage :</strong> événements de base liés à la configuration,
-          à la connexion et à l&apos;abonnement, associés à l&apos;identifiant aléatoire
-          d&apos;installation pour mesurer et améliorer le service.
+          <strong>Événements d&apos;usage :</strong> événements liés à la configuration, à la connexion, à l&apos;abonnement, à la page de paiement et à l&apos;utilisation des fonctions, ainsi que toute option de retour que tu touches, associés à l&apos;identifiant aléatoire d&apos;installation pour mesurer et améliorer le service. Ils ne contiennent ni mesures de glycémie ni texte de message.
         </li>
         <li>
           <strong>Journaux opérationnels :</strong> les journaux de diagnostic envoyés à
@@ -142,8 +140,7 @@ export function PrivacyFr() {
       <p>
         Si tu invites quelqu&apos;un à te suivre, le relais transmet tes mesures récentes et tes
         alertes à son appareil à partir du moment où il accepte ; l&apos;historique antérieur
-        n&apos;est pas partagé. De courts messages de prise de nouvelles, avec le texte de ton
-        choix, passent aussi par le relais ; ce n&apos;est pas un service de discussion. Tu peux
+        n&apos;est pas partagé. Les messages entre toi et tes abonnés, y compris le texte que tu écris, passent par le relais et par le service de notification d&apos;Apple ou de Google pour atteindre leurs appareils. Le relais ne conserve ni le texte des messages ni d&apos;historique. Tu peux
         retirer l&apos;accès d&apos;un abonné à tout moment et désactiver complètement ces messages.
       </p>
 

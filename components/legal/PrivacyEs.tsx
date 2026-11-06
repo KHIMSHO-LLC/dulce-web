@@ -137,8 +137,7 @@ export function PrivacyEs() {
           plataforma y versión de la app).
         </li>
         <li>
-          <strong>Eventos de uso:</strong> eventos básicos de configuración, conexión y
-          suscripción asociados al ID aleatorio de instalación para medir y mejorar el servicio.
+          <strong>Eventos de uso:</strong> eventos de configuración, conexión, suscripción, pantalla de pago y uso de funciones, además de cualquier opción de opinión que toques, asociados al ID aleatorio de instalación para medir y mejorar el servicio. No incluyen lecturas de glucosa ni el texto de los mensajes.
         </li>
         <li>
           <strong>Registros operativos:</strong> los registros de diagnóstico enviados a
@@ -162,8 +161,7 @@ export function PrivacyEs() {
       <p>
         Si invitas a alguien a seguirte, el relay entrega tus lecturas recientes y tus
         alertas a su dispositivo desde el momento en que acepta — el historial anterior no se
-        comparte. Los mensajes breves para comprobar cómo estás, incluido el texto que elijas,
-        también pasan por el relay; no es un servicio de chat. Puedes revocar el acceso de un
+        comparte. Los mensajes entre tú y tus seguidores, incluido el texto que escribas, pasan por el relay y por el servicio de notificaciones de Apple o Google para llegar a sus dispositivos. El relay no guarda el texto de los mensajes ni un historial. Puedes revocar el acceso de un
         seguidor en cualquier momento y desactivar por completo esos mensajes.
       </p>
 
