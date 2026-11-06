@@ -2,7 +2,7 @@
 
 Owner-requested jobs. The daily run does the top unchecked item, one per run, then ticks it here.
 
-- [ ] **Translate the 6 segment guides into nl, fi, sv, nb, ru** (owner request 2026-11-05, `seo/segments.md`): `lada-diabetes`, `newly-diagnosed`, `older-adults-cgm`, `diabetes-at-work`, `diabetes-at-school`, `type-2-cgm`. One guide into all 5 languages per run, LADA first (demand in every market). The hub links to the English page until each is translated.
+- [ ] **Translate the 6 segment guides into nl, fi, sv, nb, ru** (owner request 2026-11-05, `seo/segments.md`): `lada-diabetes`, `newly-diagnosed`, `older-adults-cgm`, `diabetes-at-work`, `diabetes-at-school`, `type-2-cgm`. One guide into all 5 languages per run, LADA first (demand in every market). The hub links to the English page until each is translated. Done: `lada-diabetes` (2026-11-06). Next: `newly-diagnosed`.
 - [ ] **Gestational diabetes and CGM** (autocomplete 2026-11-05: "gestational diabetes cgm targets", "schwangerschaftsdiabetes sensor", "diabete gestationnel capteur", "diabetes gestacional sensor"). Pregnancy targets need a primary source. 5 languages. Link from the hub's `types` row in `messages/*.json`.
 - [ ] **Partner of someone with type 1** (autocomplete 2026-11-05: "partner with type 1 diabetes", "spouse type 1 diabetes"). Practical, not medical; link `family-sharing`, `night-lows`.
 - [ ] **T1D parent burnout** (autocomplete 2026-11-05: "t1d parent burnout"). Needs a real source; link `diabetes-at-school`, `child-glucose`.

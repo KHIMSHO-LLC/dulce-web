@@ -649,7 +649,7 @@
         "name": "LADA (type 1,5)",
         "body": "Auto-immuundiabetes die langzaam begint bij volwassenen en eerst vaak voor type 2 wordt aangezien.",
         "guide": "lada-diabetes",
-        "guideLabel": "Over LADA (in het Engels)."
+        "guideLabel": "Over LADA."
       },
       {
         "name": "Diabetes type 2",
@@ -665,7 +665,7 @@
         "name": "MODY",
         "body": "Erfelijke diabetes door één gen. Met een ondersteunde sensor werkt Dulce hetzelfde.",
         "guide": "lada-diabetes",
-        "guideLabel": "MODY en LADA vergeleken (in het Engels)."
+        "guideLabel": "MODY en LADA vergeleken."
       },
       {
         "name": "Andere vormen",

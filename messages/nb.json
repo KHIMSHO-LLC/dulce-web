@@ -649,7 +649,7 @@
         "name": "LADA (type 1,5)",
         "body": "Autoimmun diabetes som starter sakte hos voksne og ofte først blir tatt for type 2.",
         "guide": "lada-diabetes",
-        "guideLabel": "Les om LADA (på engelsk)."
+        "guideLabel": "Les om LADA."
       },
       {
         "name": "Diabetes type 2",
@@ -665,7 +665,7 @@
         "name": "MODY",
         "body": "Arvelig diabetes forårsaket av ett enkelt gen. Med en støttet sensor virker Dulce likt.",
         "guide": "lada-diabetes",
-        "guideLabel": "MODY sammenlignet med LADA (på engelsk)."
+        "guideLabel": "MODY sammenlignet med LADA."
       },
       {
         "name": "Andre typer",

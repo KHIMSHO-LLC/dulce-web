@@ -649,7 +649,7 @@
         "name": "LADA (tyyppi 1,5)",
         "body": "Autoimmuunidiabetes, joka alkaa aikuisilla hitaasti ja jota luullaan usein aluksi tyypin 2 diabetekseksi.",
         "guide": "lada-diabetes",
-        "guideLabel": "Lue LADAsta (englanniksi)."
+        "guideLabel": "Lue LADAsta."
       },
       {
         "name": "Tyypin 2 diabetes",
@@ -665,7 +665,7 @@
         "name": "MODY",
         "body": "Yhden geenin aiheuttama perinnöllinen diabetes. Tuetun sensorin kanssa Dulce toimii samoin.",
         "guide": "lada-diabetes",
-        "guideLabel": "MODY ja LADA verrattuna (englanniksi)."
+        "guideLabel": "MODY ja LADA verrattuna."
       },
       {
         "name": "Muut tyypit",

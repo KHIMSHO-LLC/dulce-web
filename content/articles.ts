@@ -2097,34 +2097,54 @@ export const ARTICLES: readonly Article[] = [
     "category": "health",
     "author": "giorgi",
     "datePublished": "2026-11-05",
-    "dateModified": "2026-11-05",
+    "dateModified": "2026-11-06",
     "slug": {
       "es": "diabetes-lada",
       "en": "lada-diabetes",
       "de": "lada-diabetes",
       "fr": "diabete-lada",
-      "it": "diabete-lada"
+      "it": "diabete-lada",
+      "fi": "lada-diabetes",
+      "nl": "lada-diabetes",
+      "nb": "lada-diabetes",
+      "sv": "lada-diabetes",
+      "ru": "lada-diabet"
     },
     "title": {
       "es": "Diabetes LADA: qué es, síntomas, diagnóstico y diferencias con MODY",
       "en": "LADA diabetes: symptoms, diagnosis, treatment and LADA vs MODY",
       "de": "LADA Diabetes: Symptome, Diagnostik, Therapie und Unterschied zu MODY",
       "fr": "Diabète LADA : symptômes, diagnostic, traitement, LADA ou MODY",
-      "it": "Diabete LADA: cos'è, sintomi, diagnosi, terapia e differenze con MODY"
+      "it": "Diabete LADA: cos'è, sintomi, diagnosi, terapia e differenze con MODY",
+      "fi": "LADA-diabetes: oireet, diagnoosi, hoito ja ero MODYyn",
+      "nl": "LADA-diabetes: symptomen, diagnose, behandeling en verschil met MODY",
+      "nb": "LADA-diabetes: symptomer, diagnose, behandling og forskjell fra MODY",
+      "sv": "LADA-diabetes: symtom, diagnos, behandling och skillnad mot MODY",
+      "ru": "Диабет LADA: симптомы, диагностика, лечение и отличие от MODY"
     },
     "description": {
       "es": "Qué es la diabetes LADA o tipo 1,5: síntomas, anticuerpos y diagnóstico, tratamiento, diferencias con tipo 1, tipo 2 y MODY, y qué aporta un sensor de glucosa.",
       "en": "What LADA (type 1.5) diabetes is: symptoms, antibody tests, diagnosis, treatment, how it compares with type 1, type 2 and MODY, and how a sensor helps.",
       "de": "Was LADA Diabetes (Typ 1,5) ist: Symptome, Antikörper und Diagnostik, Therapie, der Vergleich mit Typ 1, Typ 2 und MODY und was ein Glukosesensor dabei bringt.",
       "fr": "Le diabète LADA ou type 1,5 : symptômes, anticorps, diagnostic, traitement, différences avec le type 1, le type 2 et le MODY, et l'apport d'un capteur.",
-      "it": "Cos'è il diabete LADA o tipo 1,5: sintomi, anticorpi e diagnosi, terapia, differenze con tipo 1, tipo 2 e MODY e cosa aggiunge un sensore del glucosio."
+      "it": "Cos'è il diabete LADA o tipo 1,5: sintomi, anticorpi e diagnosi, terapia, differenze con tipo 1, tipo 2 e MODY e cosa aggiunge un sensore del glucosio.",
+      "fi": "Mitä LADA-diabetes eli tyyppi 1,5 on: oireet, vasta-aineet ja diagnoosi, hoito, erot tyyppeihin 1 ja 2 sekä MODYyn, ja mitä glukoosisensori tuo mukanaan.",
+      "nl": "Wat LADA-diabetes (type 1,5) is: symptomen, antistoffen en diagnose, behandeling, de verschillen met type 1, type 2 en MODY en wat een glucosesensor toevoegt.",
+      "nb": "Hva LADA-diabetes (type 1,5) er: symptomer, antistoffer og diagnose, behandling, forskjellene fra type 1, type 2 og MODY, og hva en glukosesensor kan bidra med.",
+      "sv": "Vad LADA-diabetes (typ 1,5) är: symtom, antikroppar och diagnos, behandling, skillnaderna mot typ 1, typ 2 och MODY, och vad en glukossensor kan tillföra.",
+      "ru": "Что такое диабет LADA (тип 1,5): симптомы, антитела и диагностика, лечение, отличия от 1 и 2 типа и MODY и чем может помочь сенсор глюкозы."
     },
     "summary": {
       "es": "La diabetes LADA es una diabetes autoinmune que empieza despacio en adultos, por lo que al principio suele confundirse con la tipo 2. Se confirma con un análisis de autoanticuerpos, sobre todo anti-GAD, y el tratamiento lo decide tu equipo médico según cuánta insulina sigas produciendo. Muchas personas acaban necesitando insulina con el tiempo.",
       "en": "LADA is autoimmune diabetes that starts slowly in adults, so it's often first mistaken for type 2. It's confirmed with a blood test for autoantibodies, most often GAD, and your care team sets the treatment according to how much insulin you still make. Many people with LADA need insulin sooner or later.",
       "de": "LADA ist ein autoimmuner Diabetes, der bei Erwachsenen langsam beginnt und deshalb anfangs oft für Typ 2 gehalten wird. Bestätigt wird er durch einen Bluttest auf Autoantikörper, meist GAD, und die Therapie legt dein Behandlungsteam danach fest, wie viel Insulin du noch bildest. Viele Menschen mit LADA brauchen früher oder später Insulin.",
       "fr": "Le LADA est un diabète auto-immun qui s'installe lentement chez l'adulte et que l'on prend donc souvent d'abord pour un type 2. Il se confirme par une recherche d'auto-anticorps, le plus souvent anti-GAD, et ton équipe soignante fixe le traitement selon la quantité d'insuline que tu produis encore. Beaucoup de personnes finissent par avoir besoin d'insuline.",
-      "it": "Il LADA è un diabete autoimmune che inizia lentamente negli adulti e all'inizio viene spesso scambiato per tipo 2. Si conferma con un esame degli autoanticorpi, di solito anti-GAD, e il tuo team decide la terapia in base a quanta insulina produci ancora. Molte persone con LADA hanno bisogno di insulina prima o poi."
+      "it": "Il LADA è un diabete autoimmune che inizia lentamente negli adulti e all'inizio viene spesso scambiato per tipo 2. Si conferma con un esame degli autoanticorpi, di solito anti-GAD, e il tuo team decide la terapia in base a quanta insulina produci ancora. Molte persone con LADA hanno bisogno di insulina prima o poi.",
+      "fi": "LADA on autoimmuunidiabetes, joka alkaa hitaasti aikuisena, joten sitä luullaan usein aluksi tyypin 2 diabetekseksi. Se varmistetaan autovasta-aineiden verikokeella, useimmiten GAD-vasta-aineilla, ja hoitotiimisi päättää hoidosta sen mukaan, kuinka paljon insuliinia vielä tuotat. Moni LADA-diabeetikko tarvitsee insuliinia ennemmin tai myöhemmin.",
+      "nl": "LADA is auto-immune diabetes die langzaam begint bij volwassenen, en daarom in het begin vaak voor type 2 wordt aangezien. De diagnose wordt bevestigd met een bloedtest op auto-antistoffen, meestal GAD, en je zorgteam bepaalt de behandeling op basis van hoeveel insuline je nog maakt. Veel mensen met LADA hebben vroeg of laat insuline nodig.",
+      "nb": "LADA er autoimmun diabetes som begynner langsomt hos voksne, og som derfor ofte først forveksles med type 2. Den bekreftes med en blodprøve for autoantistoffer, oftest GAD, og behandlingsteamet ditt legger opp behandlingen etter hvor mye insulin du fortsatt lager. Mange med LADA trenger insulin før eller siden.",
+      "sv": "LADA är autoimmun diabetes som börjar långsamt hos vuxna och därför ofta först misstas för typ 2. Den bekräftas med ett blodprov för autoantikroppar, oftast GAD, och ditt vårdteam bestämmer behandlingen utifrån hur mycket insulin du fortfarande bildar. Många med LADA behöver insulin förr eller senare.",
+      "ru": "LADA — это аутоиммунный диабет, который начинается медленно у взрослых, поэтому его часто сначала принимают за диабет 2 типа. Его подтверждают анализом крови на аутоантитела, чаще всего к GAD, а лечение определяет лечащая команда в зависимости от того, сколько инсулина вы ещё вырабатываете. Многим людям с LADA рано или поздно нужен инсулин."
     },
     "keywords": {
       "es": [
@@ -2161,6 +2181,41 @@ export const ARTICLES: readonly Article[] = [
         "diabete lada cos'è",
         "diabete lada cura",
         "diabete mody e lada"
+      ],
+      "fi": [
+        "lada diabetes",
+        "lada diabetes oireet",
+        "lada diabetes hoito",
+        "lada diabetes diagnoosi",
+        "lada ja mody"
+      ],
+      "nl": [
+        "lada diabetes",
+        "lada diabetes symptomen",
+        "lada diabetes behandeling",
+        "lada diabetes diagnose",
+        "diabetes type 1,5"
+      ],
+      "nb": [
+        "lada diabetes",
+        "lada diabetes symptomer",
+        "lada diabetes behandling",
+        "lada diabetes diagnose",
+        "diabetes type 1,5"
+      ],
+      "sv": [
+        "lada diabetes",
+        "lada diabetes symtom",
+        "lada diabetes behandling",
+        "lada diabetes diagnos",
+        "diabetes typ 1,5"
+      ],
+      "ru": [
+        "диабет lada",
+        "lada диабет симптомы",
+        "lada диабет лечение",
+        "lada диабет диагностика",
+        "диабет 1,5 типа"
       ]
     },
     "image": "/guides/home-screen.jpg",
@@ -2169,7 +2224,12 @@ export const ARTICLES: readonly Article[] = [
       "en": "Dulce home screen with glucose and the time in range bar",
       "de": "Startbildschirm von Dulce mit Glukose und Balken für die Zeit im Zielbereich",
       "fr": "Écran d'accueil de Dulce avec la glycémie et la barre de temps dans la cible",
-      "it": "Schermata Home di Dulce con la glicemia e la barra del tempo nel range"
+      "it": "Schermata Home di Dulce con la glicemia e la barra del tempo nel range",
+      "fi": "Dulcen aloitusnäkymä, jossa näkyvät glukoosi ja tavoitealueella olevan ajan palkki",
+      "nl": "Startscherm van Dulce met glucose en de balk voor tijd binnen bereik",
+      "nb": "Dulce-hjemskjermen med glukose og stolpen for tid i målområdet",
+      "sv": "Dulces hemskärm med glukos och stapeln för tid inom målområdet",
+      "ru": "Главный экран Dulce с глюкозой и полосой времени в диапазоне"
     },
     "related": [
       "type-2-cgm",
@@ -2269,6 +2329,101 @@ export const ARTICLES: readonly Article[] = [
         {
           "q": "Dulce funziona con il LADA?",
           "a": "Sì, purché tu usi un sensore supportato. Dulce mostra ciò che misura il tuo sensore e non chiede che tipo di diabete hai.",
+          "link": "type-2-cgm"
+        }
+      ],
+      "fi": [
+        {
+          "q": "Onko LADA tyyppi 1 vai tyyppi 2?",
+          "a": "Se on autoimmuuni kuten tyyppi 1, mutta etenee hitaammin ja näyttää alussa tyypiltä 2. American Diabetes Association luokittelee sen tyyppiin 1, ja sitä kutsutaan joskus tyypiksi 1,5."
+        },
+        {
+          "q": "Tarvitaanko LADAssa aina insuliinia?",
+          "a": "Moni tarvitsee sitä ennemmin tai myöhemmin, mutta ajankohta vaihtelee. Hoitotiimisi päättää asiasta sen mukaan, kuinka paljon insuliinia kehosi vielä tuottaa."
+        },
+        {
+          "q": "Mitä eroa on LADAlla ja MODYlla?",
+          "a": "LADA on autoimmuuni ja ilmenee aikuisilla vasta-aineiden kanssa. MODYn aiheuttaa yksi periytyvä geeni, siinä ei ole vasta-aineita ja se varmistetaan geenitestillä."
+        },
+        {
+          "q": "Toimiiko Dulce LADAssa?",
+          "a": "Kyllä, kunhan käytät tuettua sensoria. Dulce näyttää sen, mitä sensorisi mittaa, eikä kysy diabetestyyppiäsi.",
+          "link": "type-2-cgm"
+        }
+      ],
+      "nl": [
+        {
+          "q": "Is LADA type 1 of type 2?",
+          "a": "LADA is auto-immuun, net als type 1, maar verloopt langzamer en lijkt in het begin op type 2. De American Diabetes Association rekent het tot type 1, en soms heet het type 1,5."
+        },
+        {
+          "q": "Is bij LADA altijd insuline nodig?",
+          "a": "Veel mensen hebben het vroeg of laat nodig, maar het moment verschilt. Je zorgteam beslist op basis van hoeveel insuline je lichaam nog maakt."
+        },
+        {
+          "q": "Wat is het verschil tussen LADA en MODY?",
+          "a": "LADA is auto-immuun en komt voor bij volwassenen met antistoffen. MODY wordt veroorzaakt door één erfelijk gen, heeft geen antistoffen en wordt bevestigd met een genetische test."
+        },
+        {
+          "q": "Werkt Dulce bij LADA?",
+          "a": "Ja, zolang je een ondersteunde sensor gebruikt. Dulce toont wat je sensor meet en vraagt niet welk type diabetes je hebt.",
+          "link": "type-2-cgm"
+        }
+      ],
+      "nb": [
+        {
+          "q": "Er LADA type 1 eller type 2?",
+          "a": "Den er autoimmun som type 1, men utvikler seg langsommere og ligner på type 2 i starten. American Diabetes Association regner den som type 1, og den kalles noen ganger type 1,5."
+        },
+        {
+          "q": "Trenger man alltid insulin ved LADA?",
+          "a": "Mange trenger det før eller siden, men tidspunktet varierer. Behandlingsteamet ditt avgjør det ut fra hvor mye insulin kroppen fortsatt lager."
+        },
+        {
+          "q": "Hva er forskjellen på LADA og MODY?",
+          "a": "LADA er autoimmun og oppstår hos voksne med antistoffer. MODY skyldes ett arvelig gen, har ikke antistoffer og bekreftes med en gentest."
+        },
+        {
+          "q": "Virker Dulce ved LADA?",
+          "a": "Ja, så lenge du bruker en støttet sensor. Dulce viser det sensoren måler, og spør ikke hvilken type diabetes du har.",
+          "link": "type-2-cgm"
+        }
+      ],
+      "sv": [
+        {
+          "q": "Är LADA typ 1 eller typ 2?",
+          "a": "Den är autoimmun som typ 1, men utvecklas långsammare och liknar typ 2 i början. American Diabetes Association räknar den till typ 1, och den kallas ibland typ 1,5."
+        },
+        {
+          "q": "Behövs alltid insulin vid LADA?",
+          "a": "Många behöver det förr eller senare, men tidpunkten varierar. Ditt vårdteam avgör det utifrån hur mycket insulin kroppen fortfarande bildar."
+        },
+        {
+          "q": "Vad är skillnaden mellan LADA och MODY?",
+          "a": "LADA är autoimmun och uppstår hos vuxna med antikroppar. MODY orsakas av en enda ärftlig gen, har inga antikroppar och bekräftas med ett gentest."
+        },
+        {
+          "q": "Fungerar Dulce vid LADA?",
+          "a": "Ja, så länge du använder en sensor som stöds. Dulce visar vad din sensor mäter och frågar inte vilken typ av diabetes du har.",
+          "link": "type-2-cgm"
+        }
+      ],
+      "ru": [
+        {
+          "q": "LADA — это 1 или 2 тип диабета?",
+          "a": "Он аутоиммунный, как 1 тип, но развивается медленнее и поначалу похож на 2 тип. Американская диабетическая ассоциация относит его к 1 типу, а иногда его называют типом 1,5."
+        },
+        {
+          "q": "При LADA всегда нужен инсулин?",
+          "a": "Многим он рано или поздно нужен, но сроки различаются. Решение принимает лечащая команда, исходя из того, сколько инсулина ещё вырабатывает ваш организм."
+        },
+        {
+          "q": "Чем LADA отличается от MODY?",
+          "a": "LADA аутоиммунный и возникает у взрослых, у которых есть антитела. MODY вызван одним наследуемым геном, антител при нём нет, а подтверждают его генетическим тестом."
+        },
+        {
+          "q": "Работает ли Dulce при LADA?",
+          "a": "Да, если вы пользуетесь поддерживаемым сенсором. Dulce показывает то, что измеряет сенсор, и не спрашивает, какой у вас тип диабета.",
           "link": "type-2-cgm"
         }
       ]
