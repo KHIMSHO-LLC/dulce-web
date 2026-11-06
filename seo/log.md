@@ -265,3 +265,36 @@ Apple granted the critical-alert entitlement. Site copy now says the critical lo
 - check:content (19 articles, 0/0) and build passed. Deployed (en and de pages verified live, dated 3 Nov),
   `npm run indexnow`: 165 URLs → 200. Compare from ~2026-11-24: impressions for "hba1c"/"hemoglobina glicosilada"/
   "gmi vs a1c" on the new pages, and whether the A1C calculator (pos 55-57) moves.
+
+## 2026-11-06 (daily run, Mac, queue item: segment guides in nl/fi/sv/nb/ru, `lada-diabetes`)
+
+- Queue: top item, 1 of 6 guides, so step 1 topic picking was skipped. The queue item stays unticked (with a progress
+  note) until all 6 are done. Next: `newly-diagnosed`.
+- Search Console (gum OK, 2026-10-07 to 11-04, queries containing "lada"): no LADA query rows at all. The 5 rows
+  returned were Spanish "calculadora de hemoglobina glicosilada" variants on the calculator (the substring is in
+  "calculadora"), 1-2 impressions, pos 60-91. The guide is only a day old, so there's no baseline; the case for this
+  work is the autocomplete demand in `seo/segments.md`. That demand was measured in the 5 core markets only, so the
+  nl/fi/sv/nb/ru keywords in the registry are natural-language equivalents, NOT measured queries. Same-day `seo:gaps`
+  not run (not needed for a queue item).
+- Published: `content/articles/lada-diabetes/{nl,fi,sv,nb,ru}.mdx` and registry slug, title, description, summary,
+  keywords, imageAlt, faq (dateModified 2026-11-06). Slugs: `lada-diabetes` (nl, fi, sv, nb), `lada-diabet` (ru). Links
+  to `time-in-range` and `blood-sugar-levels` go to English, marked as such. FAQ 4's "read more" (`type-2-cgm`) is also
+  English until that guide is translated, and it is not marked.
+- Outside content/ and seo/ (the queue item names the hub): `messages/{nl,fi,sv,nb,ru}.json`, dropped the "(in
+  English)" note from the 2 hub labels pointing at this guide (LADA and MODY rows). Hub verified live on nl only.
+- App facts on dulce-app main (edff9e9, 1.0.7): no "type of diabetes" question in src (grep), so "Dulce doesn't ask"
+  holds. Time-in-range labels from each locale's common.json: nl "Tijd binnen bereik", fi "Aika tavoitealueella",
+  sv "Tid inom målområdet", nb "Tid i målområdet", ru "Время в диапазоне". Lock Screen terms from the site's messages
+  (nl is "toegangsscherm").
+- External facts, read in full via Europe PMC XML (PMC7809717, Buzzetti 2020): 2-12% of adult-onset diabetes; >30
+  years, autoantibodies, no insulin for at least 6 months; C-peptide drives treatment; potentially progressive. The
+  paper calls GADA the "most sensitive marker"; "most common" in our text rests on search snippets, not that page.
+  ADA and WHO could NOT be opened (ADA 2026 403/500 on every route, WHO PDF 403). ADA "autoimmune = type 1" confirmed
+  only from the 2023 edition's wording plus secondary reviews, not the 2026 text we cite. WHO "hybrid forms" confirmed
+  only from secondary sources (Diabetes on the Net and others). Both are worth a human check, as is the source list on
+  all 10 language versions. The two 2023-2024 meta-analyses found pooled figures of about 7-9%, within the 2-12% range.
+- Translations are mine and not reviewed by a native speaker or a clinician (no medical reviewer yet, see PLAN).
+- check:content (28 articles, 0/0), build (495 pages) passed. `check:jsonld` NOT completed (no local server on :3000,
+  and `BASE=https://dulceglucosa.com` needed an approval this run couldn't get), so the weekly workflow is the first
+  JSON-LD check of these pages. Pushed f42f1a0; all 5 pages verified live (200, H1 correct, updated 6 Nov). `npm run
+  indexnow`: 290 URLs → 200. Compare from ~2026-11-27: impressions for LADA queries on these 5 pages.
