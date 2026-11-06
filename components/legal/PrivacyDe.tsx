@@ -73,7 +73,7 @@ Missbrauch.
           Notizen. Lokal gespeichert.
         </li>
         <li>
-          <strong>Daten aus Apple Health</strong>, nur lesend, wenn du die Berechtigung erteilst.
+          <strong>Daten aus Apple Health</strong> (iPhone) oder <strong>Health Connect</strong> (Android), wenn du die Berechtigung erteilst. Auf Android liest Dulce nur. Auf dem iPhone kann Dulce ab Version 1.0.7 außerdem deine Sensorwerte in Apple Health speichern, höchstens einen alle 5 Minuten, wenn du Glukose in Dulce aktivierst und es erlaubst. Du kannst das in den Einstellungen von Dulce oder in der Health-App beenden. Dort gespeicherte Werte bleiben in Apple Health, und andere Apps, denen du es erlaubst, können sie lesen.
         </li>
         <li>
           <strong>Einstellungen</strong>: Einheiten, Zielbereich, Sprache, Design,

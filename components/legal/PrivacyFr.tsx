@@ -74,8 +74,8 @@ export function PrivacyFr() {
           notes. Stocké localement.
         </li>
         <li>
-          <strong>Les données d&apos;Apple Santé</strong>, en lecture seule, si tu donnes
-          l&apos;autorisation.
+          <strong>Les données d&apos;Apple Santé</strong> (iPhone) ou de <strong>Health Connect</strong> (Android), si tu donnes
+          l&apos;autorisation. Sur Android, Dulce ne fait que lire. Sur iPhone, à partir de la version 1.0.7, Dulce peut aussi enregistrer les mesures de ton capteur dans Apple Santé, au maximum une toutes les 5 minutes, si tu actives la glycémie dans Dulce et que tu l’autorises. Tu peux arrêter cela dans les réglages de Dulce ou dans l’app Santé. Les mesures enregistrées restent dans Apple Santé et les autres apps que tu autorises peuvent les lire.
         </li>
         <li>
           <strong>Les préférences</strong> : unités, plage cible, langue, thème, réglages des

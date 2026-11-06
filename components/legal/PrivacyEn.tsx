@@ -71,7 +71,7 @@ export function PrivacyEn() {
         </li>
         <li>
           <strong>Apple Health data</strong> (iPhone) or <strong>Health Connect data</strong>{" "}
-          (Android) in read-only mode, if you grant permission. See 2.2.1.
+          (Android), if you grant permission. See 2.2.1.
         </li>
         <li>
           <strong>Preferences</strong>: units, target range, language, theme, alert settings.
@@ -83,8 +83,7 @@ export function PrivacyEn() {
         If you turn it on in Settings, Dulce reads blood glucose and carbohydrate records (on
         iPhone also insulin) from Apple Health or, on Android, from Health Connect. You choose
         each type, and you can turn access off at any time in Dulce&apos;s settings or in the
-        system&apos;s health settings. Dulce only reads: it never writes to Apple Health or
-        Health Connect.
+        system&apos;s health settings. On Android, Dulce only reads: it never writes to Health Connect. On iPhone, from version 1.0.7, if you turn on glucose in Dulce and allow it, Dulce also saves your sensor glucose readings to Apple Health, at most one every 5 minutes. You can stop this in Dulce’s settings or in the Health app. Readings saved there stay in Apple Health, under Apple’s terms, and other apps you allow can read them.
       </p>
       <p>
         We use this data only to show it in your chart and logbook. It is stored on your device,
