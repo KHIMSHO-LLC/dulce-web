@@ -33,7 +33,7 @@ Calculators: `app/[locale]/tools/*`, formulas in `lib/tools.ts`, explanations in
 
 1. **Only what the released app does.** The site describes 1.0.6 (owner's go-ahead 2026-11-05, ahead of the store
    release): Dexcom (G6/G7/ONE+ via Dexcom Share), Medtronic (CareLink), Nightscout, NFC smart insulin pens (NovoPen 6,
-   NovoPen Echo Plus; free) and 12 app languages. Android is NOT released. Use the app's exact UI labels from
+   NovoPen Echo Plus; free) and 12 app languages. Pet mode (1.0.7, "Who is Dulce for?" → "A pet") may be described too: owner's go-ahead 2026-11-06, while 1.0.7 was in review. Android is NOT released. Use the app's exact UI labels from
    `dulce-app/src/locales/{en,es-ES,de}/common.json` on `main` when naming buttons or settings.
 2. **No invented facts.** Medical numbers need a source listed at the end (consensus papers, ADA, Abbott docs).
    No invented anecdotes, quotes, user counts or statistics. Authors are real people
