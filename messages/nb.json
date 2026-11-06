@@ -634,6 +634,14 @@
         "body": "Apple Watch fortsetter å oppdatere via wifi eller mobilnett selv om iPhonen ikke er i nærheten. På iOS 26 vises glukosekortet ditt også på CarPlay-skjermen.",
         "guide": "apple-watch",
         "guideLabel": "Apple Watch-guide"
+      },
+      {
+        "id": "pets",
+        "title": "Hunder og katter med diabetes",
+        "short": "Veterinærens grenser og kjæledyrets verdi på låseskjermen.",
+        "body": "Når veterinæren setter en glukosesensor på hunden eller katten din, bruker kjæledyrmodusen i Dulce (fra versjon 1.0.7) veterinærens målområde, linjefarger og kritisk lav-grense i stedet for verdiene for mennesker. Dyrepasseren kan også følge med.",
+        "guide": "pet-glucose",
+        "guideLabel": "Sensorer på hund og katt (på engelsk)"
       }
     ],
     "typesTitle": "Alle typer diabetes, én måte å se dem på",
@@ -689,6 +697,10 @@
       {
         "q": "Virker det uten telefon nær sensoren?",
         "a": "Nei. En telefon må lese sensoren og være på nett, for det er slik verdiene forlater den. Frittstående avlesere sender ingenting til internett, så Dulce kan ikke vise dem."
+      },
+      {
+        "q": "Kan jeg bruke Dulce for hunden eller katten min?",
+        "a": "Ja. Fra versjon 1.0.7 velger du kjæledyr i Innstillinger og legger inn veterinærens grenser. Glukosesensorer er laget for mennesker, så bruk på dyr er off-label: sjekk lave verdier med et blodsukkerapparat."
       }
     ],
     "note": "Live-aktivitet, Apple Watch-appen, CarPlay-kortet og familiedeling er Dulce Pro-funksjoner med 14 dagers gratis prøveperiode; følgere betaler ingenting. Dulce er ikke medisinsk utstyr. Den viser verdier, stiller ikke diagnoser, behandler ikke og gir ikke doseråd, og den erstatter ikke sensorens alarmer eller vurderingen til behandlingsteamet ditt.",

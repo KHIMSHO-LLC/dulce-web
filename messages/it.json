@@ -634,6 +634,14 @@
         "body": "Apple Watch continua ad aggiornarsi via Wi-Fi o rete cellulare anche senza iPhone vicino. Su iOS 26 la tua scheda della glicemia compare anche sul cruscotto con CarPlay.",
         "guide": "apple-watch",
         "guideLabel": "Guida ad Apple Watch"
+      },
+      {
+        "id": "pets",
+        "title": "Cani e gatti con diabete",
+        "short": "Gli intervalli del veterinario, la glicemia del tuo animale sulla schermata di blocco.",
+        "body": "Quando il veterinario applica un sensore della glicemia al tuo cane o gatto, la modalità animale di Dulce (dalla versione 1.0.7) usa intervallo, colori e soglia critica del veterinario invece di quelli di una persona. Anche il pet sitter può seguirla.",
+        "guide": "pet-glucose",
+        "guideLabel": "Sensori per cane e gatto"
       }
     ],
     "typesTitle": "Ogni tipo di diabete, un solo modo di vederlo",
@@ -689,6 +697,10 @@
       {
         "q": "Funziona senza un telefono vicino al sensore?",
         "a": "No. Un telefono deve leggere il sensore ed essere connesso, perché è così che le letture lo lasciano. I lettori autonomi non inviano nulla a internet, quindi Dulce non può mostrarle."
+      },
+      {
+        "q": "Posso usare Dulce per il mio cane o gatto?",
+        "a": "Sì. Dalla versione 1.0.7 scegli Un animale nelle Impostazioni e inserisci gli intervalli del veterinario. I sensori sono fatti per le persone, sull'animale è un uso off-label: controlla le letture basse con un glucometro."
       }
     ],
     "note": "L'Attività in tempo reale, l'app Apple Watch, la scheda CarPlay e la condivisione in famiglia sono funzioni di Dulce Pro, con 14 giorni di prova gratuita; i follower non pagano. Dulce non è un dispositivo medico. Mostra le letture, non fa diagnosi, non cura e non dà consigli sulle dosi, e non sostituisce gli allarmi del sensore né il parere del tuo team diabetologico.",

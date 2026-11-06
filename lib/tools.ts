@@ -236,7 +236,7 @@ export const TOOLS: readonly Tool[] = [
     path: "/tools/glucose-converter",
     name: "glucose-converter",
     dateModified: "2026-10-30",
-    guides: ["blood-sugar-levels", "alerts", "night-lows", "child-glucose", "family-sharing", "dexcom", "dexcom-follow-alternative", "glucose-apps-compared", "xdrip-iphone", "diabetes-at-school", "older-adults-cgm"],
+    guides: ["blood-sugar-levels", "alerts", "night-lows", "child-glucose", "family-sharing", "dexcom", "dexcom-follow-alternative", "glucose-apps-compared", "xdrip-iphone", "diabetes-at-school", "older-adults-cgm", "pet-glucose"],
   },
   {
     path: "/tools/a1c-calculator",

@@ -68,6 +68,7 @@ Dulce never asks what type of diabetes someone has: it shows what a supported se
 - People newly diagnosed with type 1, at any age.
 - Partners and caregivers, up to 3 followers per person.
 - Any type of diabetes with a supported sensor: type 1, LADA, type 2 with or without insulin, gestational, MODY, type 3c.
+- Owners of dogs and cats with diabetes whose vet uses a glucose sensor (off-label in animals): from version 1.0.7, pet mode (Settings, Targets & units, Who is Dulce for?, A pet) uses the vet's target range, line colours and critical-low level. Dulce never suggests a range for an animal.
 
 ## Help
 

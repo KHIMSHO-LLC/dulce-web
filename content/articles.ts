@@ -237,7 +237,7 @@ export const ARTICLES: readonly Article[] = [
     category: "guide",
     author: "levan",
     datePublished: "2026-07-16",
-    dateModified: "2026-10-26",
+    dateModified: "2026-11-06",
     slug: {
       es: "compartir-glucosa-cgm-con-familia",
       en: "sharing-cgm-glucose-with-family",
@@ -281,7 +281,7 @@ export const ARTICLES: readonly Article[] = [
       fr: "Liste des abonnés de Dulce avec un message « Vérifie ta glycémie » et le bouton Ça va",
       it: "Elenco dei follower di Dulce con un messaggio «Controlla la glicemia» e il pulsante Sto bene",
     },
-    related: ["alerts", "lock-screen", "librelinkup-not-working"],
+    related: ["alerts", "lock-screen", "librelinkup-not-working", "pet-glucose"],
     faq: {
       es: [
         { q: "¿Cómo puede mi familia ver la glucosa de mi FreeStyle Libre?", a: "Invitándoles desde Dulce. Ve a Ajustes, Seguidores, Invitar a alguien, y mándales el enlace o el código. Instalan Dulce gratis y ven tu glucosa en tiempo real, sin sensor ni cuenta de Abbott." },
@@ -3315,6 +3315,188 @@ export const ARTICLES: readonly Article[] = [
           "q": "Dulce mi dice cosa mangiare?",
           "a": "No. Dulce mostra i tuoi dati e li conserva nel Diario. Non dà consigli su dieta o farmaci.",
           "link": "logbook"
+        }
+      ]
+    }
+  },
+  {
+    "id": "pet-glucose",
+    "category": "guide",
+    "author": "giorgi",
+    "datePublished": "2026-11-06",
+    "dateModified": "2026-11-06",
+    "slug": {
+      "es": "sensor-glucosa-perros-gatos",
+      "en": "cgm-for-dogs-and-cats",
+      "de": "glukosesensor-hund-katze",
+      "fr": "capteur-glycemie-chien-chat",
+      "it": "sensore-glicemia-cane-gatto"
+    },
+    "title": {
+      "es": "Sensor de glucosa en perros y gatos: verla en tu iPhone",
+      "en": "CGM for dogs and cats: see your pet's glucose on your iPhone",
+      "de": "Glukosesensor bei Hund und Katze: Werte auf dem iPhone",
+      "fr": "Capteur de glycémie chien et chat : la voir sur iPhone",
+      "it": "Sensore glicemia per cane e gatto: vederla sull'iPhone"
+    },
+    "description": {
+      "es": "Qué saber antes de poner un FreeStyle Libre a tu perro o gato, por qué las bajadas se leen altas y cómo ver su glucosa con el modo mascota de Dulce.",
+      "en": "What to know before your dog or cat gets a FreeStyle Libre, why lows read too high, and how to see their glucose with Dulce's pet mode and your vet's ranges.",
+      "de": "Was du vor dem FreeStyle Libre für Hund oder Katze wissen solltest, warum tiefe Werte zu hoch erscheinen und wie du sie mit dem Haustiermodus von Dulce siehst.",
+      "fr": "Ce qu'il faut savoir avant un FreeStyle Libre pour ton chien ou ton chat, pourquoi les hypos s'affichent trop haut et le mode animal de Dulce.",
+      "it": "Cosa sapere prima di mettere un FreeStyle Libre al cane o al gatto, perché le ipo sembrano più alte e come vedere la glicemia con la modalità animale di Dulce."
+    },
+    "summary": {
+      "es": "Sí, muchos veterinarios usan un FreeStyle Libre en perros y gatos, aunque es un uso fuera de indicación: es útil en general, pero en bajadas marcadas (por debajo de unos 55-60 mg/dL) marca de más, así que una lectura baja se comprueba con glucómetro. Con el modo mascota de Dulce pones el rango, los colores y el nivel crítico de tu veterinario y ves la glucosa en la pantalla de bloqueo, y hasta 3 personas pueden seguirla.",
+      "en": "Yes, many vets use a FreeStyle Libre on dogs and cats, although it is off-label: it is clinically useful, but in marked lows (below about 55-60 mg/dL) it reads too high, so check a low reading with a meter. With Dulce's pet mode you set your vet's range, line colours and critical level, see the glucose on your Lock Screen, and up to 3 people can follow.",
+      "de": "Ja, viele Tierarztpraxen nutzen einen FreeStyle Libre bei Hund und Katze, auch wenn das Off-Label ist: Er ist klinisch brauchbar, zeigt aber bei deutlicher Unterzuckerung (unter etwa 55-60 mg/dL) zu hoch an, also prüfe tiefe Werte mit einem Messgerät. Im Haustiermodus von Dulce stellst du Zielbereich, Linienfarben und kritische Grenze deiner Praxis ein, siehst den Wert auf dem Sperrbildschirm, und bis zu 3 Personen folgen.",
+      "fr": "Oui, beaucoup de vétérinaires posent un FreeStyle Libre aux chiens et aux chats, même si c'est hors indication : il est utile, mais en hypo marquée (sous 55-60 mg/dL environ) il affiche trop haut, donc vérifie une valeur basse au lecteur. Avec le mode animal de Dulce, tu règles la plage, les couleurs et le seuil critique de ton vétérinaire, tu vois la glycémie sur l'écran verrouillé et jusqu'à 3 personnes suivent.",
+      "it": "Sì, molti veterinari usano un FreeStyle Libre su cani e gatti, anche se è off-label: è utile, ma in ipoglicemia marcata (sotto circa 55-60 mg/dL) segna troppo alto, quindi una lettura bassa va controllata con il glucometro. Con la modalità animale di Dulce imposti intervallo, colori e soglia critica del veterinario, vedi la glicemia sulla schermata di blocco e fino a 3 persone possono seguirla."
+    },
+    "keywords": {
+      "es": [
+        "sensor glucosa perro",
+        "sensor de glucosa para perros",
+        "freestyle libre perro",
+        "freestyle libre gato",
+        "perro diabetico sensor"
+      ],
+      "en": [
+        "cgm for dogs",
+        "libre sensor dog",
+        "freestyle libre cat",
+        "dog glucose monitor",
+        "cgm for dogs and cats"
+      ],
+      "de": [
+        "libre sensor hund",
+        "freestyle libre sensor hund",
+        "glukosesensor hund",
+        "libre sensor katze",
+        "diabetes hund sensor"
+      ],
+      "fr": [
+        "capteur glycémie chien",
+        "freestyle libre chien",
+        "freestyle libre chat",
+        "chien diabétique capteur",
+        "chat diabétique capteur"
+      ],
+      "it": [
+        "sensore glicemia cane",
+        "freestyle libre cane",
+        "freestyle libre gatto",
+        "cane diabetico sensore",
+        "gatto diabetico sensore"
+      ]
+    },
+    "image": "/guides/lock-screen-alerts-watch.jpg",
+    "imageAlt": {
+      "es": "Dulce en la pantalla de bloqueo con una alerta y en el Apple Watch",
+      "en": "Dulce on the Lock Screen with an alert, and on Apple Watch",
+      "de": "Dulce auf dem Sperrbildschirm mit Alarm und auf der Apple Watch",
+      "fr": "Dulce sur l'écran verrouillé avec une alerte, et sur l'Apple Watch",
+      "it": "Dulce sulla schermata di blocco con un avviso e sull'Apple Watch"
+    },
+    "related": [
+      "family-sharing",
+      "alerts",
+      "librelinkup-not-working"
+    ],
+    "faq": {
+      "es": [
+        {
+          "q": "¿Se puede usar un FreeStyle Libre en un perro o un gato?",
+          "a": "Sí, muchos veterinarios lo hacen, pero es un uso fuera de indicación porque el sensor está aprobado para personas. Lo coloca y lo interpreta tu veterinario."
+        },
+        {
+          "q": "¿Es fiable el sensor cuando mi mascota está baja?",
+          "a": "Menos que en valores normales. En gatos marcó más alto que la sangre por debajo de unos 55-60 mg/dL, así que comprueba siempre una lectura baja con un glucómetro."
+        },
+        {
+          "q": "¿Dulce tiene un modo para mascotas?",
+          "a": "Sí, desde la versión 1.0.7. En Ajustes, Objetivos y unidades, ¿Para quién es Dulce?, eliges Mascota y pones el rango, los colores y el nivel crítico de tu veterinario."
+        },
+        {
+          "q": "¿Puede seguirlo también quien cuida a mi mascota?",
+          "a": "Sí. Con Dulce Pro invitas hasta a 3 personas, que ven la glucosa en su iPhone con sus propias alertas sin pagar nada.",
+          "link": "family-sharing"
+        }
+      ],
+      "en": [
+        {
+          "q": "Can a FreeStyle Libre be used on a dog or cat?",
+          "a": "Yes, many vets do it, but it is off-label because the sensor is approved for people. Your vet places it and interprets it."
+        },
+        {
+          "q": "Is the sensor reliable when my pet is low?",
+          "a": "Less than in the normal range. In cats it read higher than blood below about 55-60 mg/dL, so always check a low reading with a meter."
+        },
+        {
+          "q": "Does Dulce have a pet mode?",
+          "a": "Yes, from version 1.0.7. In Settings, Targets & units, Who is Dulce for?, choose A pet and enter your vet's range, line colours and critical level."
+        },
+        {
+          "q": "Can my pet sitter follow too?",
+          "a": "Yes. With Dulce Pro you invite up to 3 people, who see the glucose on their own iPhone with their own alerts and pay nothing.",
+          "link": "family-sharing"
+        }
+      ],
+      "de": [
+        {
+          "q": "Kann man einen FreeStyle Libre bei Hund oder Katze verwenden?",
+          "a": "Ja, viele Tierarztpraxen tun das, aber es ist Off-Label, weil der Sensor für Menschen zugelassen ist. Setzen und auswerten sollte ihn deine Praxis."
+        },
+        {
+          "q": "Ist der Sensor zuverlässig, wenn mein Tier tief ist?",
+          "a": "Weniger als im Normalbereich. Bei Katzen zeigte er unter etwa 55-60 mg/dL höher an als das Blut, also prüfe tiefe Werte immer mit einem Messgerät."
+        },
+        {
+          "q": "Hat Dulce einen Haustiermodus?",
+          "a": "Ja, ab Version 1.0.7. Unter Einstellungen, Zielwerte & Einheiten, Für wen ist Dulce? wählst du Ein Haustier und trägst Zielbereich, Linienfarben und kritische Grenze deiner Praxis ein."
+        },
+        {
+          "q": "Kann auch der Tiersitter mitverfolgen?",
+          "a": "Ja. Mit Dulce Pro lädst du bis zu 3 Personen ein, die den Wert auf dem eigenen iPhone mit eigenen Alarmen sehen und nichts zahlen.",
+          "link": "family-sharing"
+        }
+      ],
+      "fr": [
+        {
+          "q": "Peut-on utiliser un FreeStyle Libre sur un chien ou un chat ?",
+          "a": "Oui, beaucoup de vétérinaires le font, mais c'est hors indication car le capteur est autorisé pour les personnes. C'est ton vétérinaire qui le pose et interprète les valeurs."
+        },
+        {
+          "q": "Le capteur est-il fiable quand mon animal est bas ?",
+          "a": "Moins que dans les valeurs normales. Chez le chat, il a affiché plus haut que le sang sous 55-60 mg/dL environ, donc vérifie toujours une valeur basse au lecteur."
+        },
+        {
+          "q": "Dulce a-t-il un mode animal ?",
+          "a": "Oui, depuis la version 1.0.7. Dans Réglages, Cibles et unités, Pour qui est Dulce ?, choisis Un animal et saisis la plage, les couleurs et le seuil critique de ton vétérinaire."
+        },
+        {
+          "q": "Mon pet-sitter peut-il suivre aussi ?",
+          "a": "Oui. Avec Dulce Pro, tu invites jusqu'à 3 personnes, qui voient la glycémie sur leur iPhone avec leurs propres alertes et ne paient rien.",
+          "link": "family-sharing"
+        }
+      ],
+      "it": [
+        {
+          "q": "Si può usare un FreeStyle Libre su un cane o un gatto?",
+          "a": "Sì, molti veterinari lo fanno, ma è off-label perché il sensore è approvato per le persone. Lo applica e lo interpreta il tuo veterinario."
+        },
+        {
+          "q": "Il sensore è affidabile quando il mio animale è basso?",
+          "a": "Meno che nei valori normali. Nei gatti ha segnato più alto del sangue sotto circa 55-60 mg/dL, quindi controlla sempre una lettura bassa con un glucometro."
+        },
+        {
+          "q": "Dulce ha una modalità per animali?",
+          "a": "Sì, dalla versione 1.0.7. In Impostazioni, Obiettivi e unità, Per chi è Dulce?, scegli Un animale e inserisci intervallo, colori e soglia critica del veterinario."
+        },
+        {
+          "q": "Anche il pet sitter può seguirlo?",
+          "a": "Sì. Con Dulce Pro inviti fino a 3 persone, che vedono la glicemia sul proprio iPhone con i propri avvisi senza pagare nulla.",
+          "link": "family-sharing"
         }
       ]
     }

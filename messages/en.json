@@ -634,6 +634,14 @@
         "body": "The Apple Watch keeps updating on Wi-Fi or cellular even when your iPhone isn't nearby. On iOS 26 your glucose card also appears on the CarPlay dashboard.",
         "guide": "apple-watch",
         "guideLabel": "Apple Watch guide"
+      },
+      {
+        "id": "pets",
+        "title": "Dogs and cats with diabetes",
+        "short": "Your vet's ranges, your pet's number on your Lock Screen.",
+        "body": "When the vet puts a glucose sensor on your dog or cat, Dulce's pet mode (from version 1.0.7) uses your vet's target range, line colours and critical-low level instead of a person's. The pet sitter can follow too.",
+        "guide": "pet-glucose",
+        "guideLabel": "Sensors for dogs and cats"
       }
     ],
     "typesTitle": "Every type of diabetes, one way of seeing it",
@@ -689,6 +697,10 @@
       {
         "q": "Does it work without a phone near the sensor?",
         "a": "No. A phone has to read the sensor and be online, because that's how readings leave it. Standalone readers don't send readings to the internet, so Dulce can't show them."
+      },
+      {
+        "q": "Can I use Dulce for my dog or cat?",
+        "a": "Yes. From version 1.0.7, choose A pet in Settings and enter your vet's ranges. Glucose sensors are made for people, so using one on an animal is off-label: check low readings with a meter."
       }
     ],
     "note": "The Live Activity, Apple Watch app, CarPlay card and family sharing are Dulce Pro features, with a 14-day free trial; followers pay nothing. Dulce is not a medical device. It shows readings and doesn't diagnose, treat or give dosing advice, and it doesn't replace your sensor's alarms or your care team's judgment.",

@@ -634,6 +634,14 @@
         "body": "Apple Watch päivittyy Wi-Fin tai matkapuhelinverkon kautta, vaikka iPhone ei olisi lähellä. iOS 26:ssa glukoosikorttisi näkyy myös CarPlay-näytöllä.",
         "guide": "apple-watch",
         "guideLabel": "Apple Watch -opas"
+      },
+      {
+        "id": "pets",
+        "title": "Diabeetikkokoirat ja -kissat",
+        "short": "Eläinlääkärisi rajat ja lemmikkisi arvo lukitusnäytöllä.",
+        "body": "Kun eläinlääkäri asettaa koirallesi tai kissallesi glukoosisensorin, Dulcen lemmikkitila (versiosta 1.0.7) käyttää eläinlääkärin tavoitealuetta, viivan värejä ja kriittisen matalan rajaa ihmisen arvojen sijaan. Myös lemmikin hoitaja voi seurata.",
+        "guide": "pet-glucose",
+        "guideLabel": "Sensorit koirilla ja kissoilla (englanniksi)"
       }
     ],
     "typesTitle": "Kaikki diabetestyypit, yksi tapa nähdä",
@@ -689,6 +697,10 @@
       {
         "q": "Toimiiko se ilman puhelinta sensorin lähellä?",
         "a": "Ei. Puhelimen on luettava sensoria ja oltava verkossa, sillä niin lukemat lähtevät sensorilta. Erilliset lukijat eivät lähetä mitään internetiin, joten Dulce ei voi näyttää niitä."
+      },
+      {
+        "q": "Voinko käyttää Dulcea koiralleni tai kissalleni?",
+        "a": "Kyllä. Versiosta 1.0.7 alkaen valitse asetuksista lemmikki ja syötä eläinlääkärisi rajat. Glukoosisensorit on tehty ihmisille, joten eläimellä käyttö on off-label: tarkista matalat lukemat mittarilla."
       }
     ],
     "note": "Live Activity, Apple Watch -sovellus, CarPlay-kortti ja perhejako ovat Dulce Pro -ominaisuuksia, joissa on 14 päivän ilmainen kokeilu; seuraajat eivät maksa. Dulce ei ole lääkinnällinen laite. Se näyttää lukemat, ei diagnosoi, hoida tai anna annosneuvoja, eikä se korvaa sensorisi hälytyksiä tai hoitotiimisi arviota.",
