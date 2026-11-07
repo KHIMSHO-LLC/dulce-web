@@ -177,10 +177,21 @@
         "body": "Nous ne vendons pas tes données et Dulce n'a pas de publicité. Conforme au RGPD."
       }
     },
+    "video": {
+      "title": "Voir Dulce en action",
+      "sub": "Un aperçu rapide de Dulce : l'écran verrouillé, l'Apple Watch et l'app elle-même.",
+      "play": "Lire la vidéo",
+      "note": "Lecture depuis YouTube. Rien n'est chargé depuis YouTube avant que tu appuies sur lecture."
+    },
     "founder": {
       "quote": "J'ai un diabète de type 1. J'en avais assez de déverrouiller mon téléphone, d'ouvrir une app et d'attendre qu'elle charge juste pour voir un chiffre. Alors j'ai créé Dulce pour moi. Puis ma famille l'a voulu aussi.",
       "name": "Giorgio",
       "role": "Fondateur de Dulce"
+    },
+    "ai": {
+      "title": "Demande à une IA ce qu'est Dulce",
+      "body": "Envie d'un deuxième avis ? Demande à ton assistant. La question l'envoie vers notre site, pour que la réponse parte de ce que Dulce fait vraiment.",
+      "prompt": "Qu'est-ce que Dulce, l'app iPhone qui affiche la glycémie des FreeStyle Libre, Dexcom, Medtronic et Nightscout ? Explique ce qu'elle fait, ce qui est gratuit et ce que Dulce Pro ajoute. Utilise https://dulceglucosa.com/fr et https://dulceglucosa.com/llms.txt"
     },
     "faq": {
       "marquee": "Des questions ?",

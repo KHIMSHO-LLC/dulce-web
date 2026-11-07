@@ -7,7 +7,11 @@ export const CONTACT_EMAIL = "hola@dulceglucosa.com";
 export const SOCIAL = [
   { name: "Instagram", url: "https://www.instagram.com/dulce_glucosa" },
   { name: "TikTok", url: "https://www.tiktok.com/@dulce.glucose.tra" },
+  { name: "YouTube", url: "https://www.youtube.com/@DULCEGLUCOSE" },
 ] as const;
+
+/** Homepage walkthrough video on our YouTube channel ("Dulce: Your Glucose, at a Glance"). */
+export const YOUTUBE_DEMO_ID = "yFOrkOwrFXE";
 
 /**
  * Section anchors on the landing page. Language-neutral on purpose: the
@@ -23,7 +27,9 @@ export const SECTION = {
   family: "family",
   day: "your-day",
   more: "more",
+  video: "video",
   founder: "founder",
+  plans: "free-vs-pro",
   faq: "faq",
   contact: "contact",
   download: "download",

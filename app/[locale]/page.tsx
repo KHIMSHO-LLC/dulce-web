@@ -18,6 +18,9 @@ import { Audience } from "@/components/landing/Audience";
 import { Founder } from "@/components/landing/Founder";
 import { Faq, type FaqItem } from "@/components/landing/Faq";
 import { DownloadCta } from "@/components/landing/DownloadCta";
+import { VideoDemo } from "@/components/landing/VideoDemo";
+import { PlanCompare } from "@/components/landing/PlanCompare";
+import { AskAi } from "@/components/landing/AskAi";
 import { Reveal } from "@/components/motion/Reveal";
 import { Split } from "@/components/motion/Split";
 import type { ScreenName } from "@/components/screens/draw";
@@ -282,9 +285,12 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       </section>
 
       <MoreBento />
+      <VideoDemo />
       <Audience />
       <Founder />
+      <PlanCompare />
       <Faq />
+      <AskAi />
       <DownloadCta />
     </>
   );

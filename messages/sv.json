@@ -177,10 +177,21 @@
         "body": "Vi säljer inte dina data och Dulce har ingen reklam. Följer GDPR."
       }
     },
+    "video": {
+      "title": "Se hur det fungerar",
+      "sub": "En snabb titt på Dulce: låsskärmen, Apple Watch och själva appen.",
+      "play": "Spela upp videon",
+      "note": "Spelas upp från YouTube. Inget laddas från YouTube förrän du trycker på spela upp."
+    },
     "founder": {
       "quote": "Jag har typ 1-diabetes. Jag tröttnade på att låsa upp telefonen, öppna en app och vänta på en laddningssymbol bara för att se ett värde. Så jag byggde Dulce åt mig själv. Sedan ville min familj också ha den.",
       "name": "Giorgio",
       "role": "Grundare av Dulce"
+    },
+    "ai": {
+      "title": "Fråga en AI om Dulce",
+      "body": "Vill du ha en andra åsikt? Fråga din assistent. Frågan pekar på vår webbplats, så svaret utgår från vad Dulce faktiskt gör.",
+      "prompt": "Vad är Dulce, iPhone-appen som visar glukos från FreeStyle Libre, Dexcom, Medtronic och Nightscout? Förklara vad den gör, vad som är gratis och vad Dulce Pro lägger till. Använd https://dulceglucosa.com/sv och https://dulceglucosa.com/llms.txt"
     },
     "faq": {
       "marquee": "Frågor?",

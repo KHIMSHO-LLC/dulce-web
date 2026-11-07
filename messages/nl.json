@@ -177,10 +177,21 @@
         "body": "We verkopen je gegevens niet en Dulce heeft geen advertenties. AVG-conform."
       }
     },
+    "video": {
+      "title": "Zie het in actie",
+      "sub": "Een korte blik op Dulce: het toegangsscherm, de Apple Watch en de app zelf.",
+      "play": "Video afspelen",
+      "note": "Speelt af via YouTube. Er wordt niets van YouTube geladen tot je op afspelen drukt."
+    },
     "founder": {
       "quote": "Ik heb diabetes type 1. Ik was het zat om mijn telefoon te ontgrendelen, een app te openen en op een laadicoontje te wachten, alleen om één getal te zien. Dus maakte ik Dulce voor mezelf. Toen wilde mijn familie het ook.",
       "name": "Giorgio",
       "role": "Oprichter van Dulce"
+    },
+    "ai": {
+      "title": "Vraag een AI naar Dulce",
+      "body": "Wil je een tweede mening? Vraag het je assistent. De vraag verwijst naar onze site, zodat het antwoord uitgaat van wat Dulce echt doet.",
+      "prompt": "Wat is Dulce, de iPhone-app die glucose van FreeStyle Libre, Dexcom, Medtronic en Nightscout laat zien? Leg uit wat de app doet, wat gratis is en wat Dulce Pro toevoegt. Gebruik https://dulceglucosa.com/nl en https://dulceglucosa.com/llms.txt"
     },
     "faq": {
       "marquee": "Vragen?",
