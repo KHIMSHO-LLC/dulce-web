@@ -45,3 +45,7 @@ next-env.d.ts
 /.impeccable/review/
 /seo/gaps.json
 /seo/runs/
+
+# Blog cover renderer: Apple device frames can't be redistributed (public repo); render output
+/scripts/covers/frames/
+/scripts/covers/out/

@@ -1,0 +1,86 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:U;src:url(assets/Urbanist-ExtraBold.ttf);font-weight:800}
+@font-face{font-family:U;src:url(assets/Urbanist-Bold.ttf);font-weight:700}
+@font-face{font-family:U;src:url(assets/Urbanist-SemiBold.ttf);font-weight:600}
+*{margin:0;box-sizing:border-box}
+html,body{width:1600px;height:1040px;overflow:hidden;background:#0f0e0d;font-family:U}
+#c{position:relative;width:1600px;height:1040px;overflow:hidden;
+  background:radial-gradient(900px 700px at 1180px 520px,rgba(242,115,78,.30),transparent 70%),
+             radial-gradient(700px 500px at 1350px 980px,rgba(76,175,80,.18),transparent 70%),
+             linear-gradient(160deg,#1a1715 0%,#0f0e0d 60%)}
+.brand{position:absolute;left:96px;top:84px;display:flex;align-items:center;gap:16px;color:#fff;font-weight:700;font-size:34px;letter-spacing:-.01em}
+.brand img{height:52px}
+.kick{position:absolute;left:96px;top:300px;color:#F2734E;font-weight:700;font-size:26px;letter-spacing:.16em;text-transform:uppercase}
+h1{position:absolute;left:92px;top:346px;width:700px;color:#fff;font-weight:800;font-size:96px;line-height:.98;letter-spacing:-.045em}
+h1 span{color:#F2734E}
+.sub{position:absolute;left:96px;top:620px;width:600px;color:rgba(255,255,255,.66);font-weight:600;font-size:31px;line-height:1.3}
+.url{position:absolute;left:96px;bottom:70px;color:rgba(255,255,255,.5);font-weight:700;font-size:24px;letter-spacing:.02em}
+svg.line{position:absolute;left:0;bottom:120px;z-index:1}
+.ph{position:absolute;filter:drop-shadow(0 50px 60px rgba(0,0,0,.55))}
+.ph .sc{position:absolute;left:5.333%;top:2.5%;width:89.333%;height:95%;overflow:hidden;border-radius:13.5%/6.2%;background:#000}
+.ph .sc img{width:100%;height:100%;display:block;object-fit:cover;object-position:top}
+.ph>img{position:absolute;inset:0;width:100%;height:100%}
+.wt{position:absolute;filter:drop-shadow(0 50px 60px rgba(0,0,0,.6))}
+.wt .sc{position:absolute;left:15.97%;top:22.66%;width:68.06%;height:54.68%;overflow:hidden;border-radius:21%/17.5%;background:#000}
+.wt .sc img{width:100%;height:100%;display:block;object-fit:cover}
+.wt>img{position:absolute;inset:0;width:100%;height:100%}
+.crop{position:absolute;background-repeat:no-repeat;box-shadow:0 0 0 1.5px rgba(255,255,255,.12),0 50px 90px rgba(0,0,0,.65)}
+.card{position:absolute;border-radius:36px;background:linear-gradient(160deg,#25211e,#171513);box-shadow:0 0 0 1.5px rgba(255,255,255,.08),0 50px 90px rgba(0,0,0,.6);color:#fff;padding:40px 44px}
+.card .ct{font-weight:700;font-size:22px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:26px}
+.row{display:flex;align-items:center;gap:22px;padding:20px 0;border-top:1.5px solid rgba(255,255,255,.07);font-weight:700;font-size:31px}
+.row:first-of-type{border-top:0}
+.row .n{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-size:24px;font-weight:800;flex:none}
+.row small{display:block;font-weight:600;font-size:22px;color:rgba(255,255,255,.5);margin-top:4px}
+.row .v{margin-left:auto;font-weight:800;font-size:30px;text-align:right;white-space:nowrap}
+.dot{width:18px;height:18px;border-radius:50%;flex:none}
+.chip{display:inline-flex;align-items:center;gap:12px;padding:16px 24px;border-radius:999px;background:rgba(255,255,255,.07);box-shadow:0 0 0 1.5px rgba(255,255,255,.08);font-weight:700;font-size:28px;color:#fff;margin:0 12px 14px 0}
+</style></head><body><div id="c"></div><script>
+const v=new URLSearchParams(location.search).get('v')||'watch';
+const ph=(img,x,y,w,r=0,z=5)=>`<div class="ph" style="left:${x}px;top:${y}px;width:${w}px;height:${w*2760/1350}px;transform:rotate(${r}deg);z-index:${z}"><div class="sc"><img src="assets/${img}"></div><img src="frames/bz-iphone.png"></div>`;
+const wt=(img,x,y,w,r=0,z=20)=>`<div class="wt" style="left:${x}px;top:${y}px;width:${w}px;height:${w*940/620}px;transform:rotate(${r}deg);z-index:${z}"><div class="sc"><img src="assets/${img}"></div><img src="frames/bz-watch.png"></div>`;
+const crop=(src,W,[a,b,w,h,rad],x,y,s,rot=0,z=30)=>`<div class="crop" style="left:${x}px;top:${y}px;width:${w*s}px;height:${h*s}px;border-radius:${rad*s}px;background-image:url(${src});background-size:${W*s}px auto;background-position:${-a*s}px ${-b*s}px;transform:rotate(${rot}deg);z-index:${z}"></div>`;
+const line=`<svg class="line" width="1600" height="160" viewBox="0 0 1600 160"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#4CAF50" stop-opacity="0"/><stop offset=".25" stop-color="#4CAF50" stop-opacity=".55"/><stop offset=".55" stop-color="#4CAF50" stop-opacity=".35"/><stop offset="1" stop-color="#4CAF50" stop-opacity="0"/></linearGradient></defs><path d="M0 110 C80 105 120 70 190 78 S300 120 370 96 S470 40 540 62 S640 118 720 92 S800 70 860 84" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round"/><circle cx="860" cy="84" r="9" fill="#4CAF50"/><circle cx="860" cy="84" r="22" fill="#4CAF50" opacity=".22"/></svg>`;
+const T={
+ watch:{k:'Apple Watch guide',h:'Your glucose<br>on your <span>wrist</span>',s:'Libre 3 and Libre 3 Plus readings on Apple Watch, with the chart and time in range.',
+   dev:ph('h2.png',1040,150,400,9,5)+wt('11.png',760,250,600,-6,20)},
+ lock:{k:'Lock Screen guide',h:'Glucose on your<br><span>Lock Screen</span>',s:'A Live Activity that updates every minute, even when Dulce is closed.',
+   dev:ph('3.png',930,120,430,6,5)+crop('assets/3.png',923,[32,1335,855,372,60],820,560,0.80,-3,30)}
+,
+ widgets:{k:'Widget guide',h:'Glucose on your<br><span>Home Screen</span>',s:'Widgets for the Home Screen, Lock Screen and StandBy, without opening an app.',
+   dev:ph('3.png',1150,110,400,8,5)+crop('assets/10.png',923,[28,28,840,372,90],830,170,0.72,-3,30)+crop('assets/10.png',923,[58,652,808,378,45],880,560,0.74,2,31)},
+ llu:{k:'Troubleshooting',h:'LibreLinkUp<br>not <span>updating?</span>',s:'Login problems, no data, frozen readings: what to check, in order.',
+   dev:`<div class="card" style="left:900px;top:190px;width:580px;transform:rotate(2deg)"><div class="ct">Check, in order</div>
+   <div class="row"><div class="n" style="background:#F2734E">1</div><div>Sign in again<small>LibreLinkUp account, not LibreView</small></div></div>
+   <div class="row"><div class="n" style="background:#F2734E">2</div><div>Accept the invitation<small>Connected Apps on the sensor's phone</small></div></div>
+   <div class="row"><div class="n" style="background:#F2734E">3</div><div>Fix delayed data<small>The sensor's phone must be online</small></div></div>
+   <div class="row"><div class="n" style="background:#4CAF50">✓</div><div>Readings again<small>Back in LibreLinkUp and Dulce</small></div></div></div>`},
+ libreview:{k:'LibreView guide',h:'LibreView<br><span>login</span>, explained',s:'Which account to use, how to reset your password and how to share with your clinic.',
+   dev:`<div class="card" style="left:900px;top:220px;width:580px;transform:rotate(-2deg)"><div class="ct">libreview.com</div>
+   <div class="row"><div class="dot" style="background:#F2734E"></div><div>Sign in<small>With your Libre app account</small></div></div>
+   <div class="row"><div class="dot" style="background:#F2734E"></div><div>Forgot password<small>Reset it from the sign-in page</small></div></div>
+   <div class="row"><div class="dot" style="background:#4CAF50"></div><div>Share with your clinic<small>Using the practice ID</small></div></div></div>`},
+ bsl:{k:'Reference chart',h:'Blood sugar<br>levels <span>chart</span>',s:'Normal, prediabetes and diabetes ranges for fasting glucose and HbA1c.',
+   dev:`<div class="card" style="left:860px;top:200px;width:640px"><div class="ct">Fasting glucose</div>
+   <div class="row"><div class="dot" style="background:#4CAF50"></div><div>Normal</div><div class="v">&lt; 100<small>mg/dL</small></div></div>
+   <div class="row"><div class="dot" style="background:#E8A23A"></div><div>Prediabetes</div><div class="v">100–125<small>mg/dL</small></div></div>
+   <div class="row"><div class="dot" style="background:#E5484D"></div><div>Diabetes</div><div class="v">126+<small>mg/dL</small></div></div>
+   <div class="ct" style="margin:30px 0 0;font-size:18px;letter-spacing:.06em;text-transform:none;color:rgba(255,255,255,.4)">Source: American Diabetes Association</div></div>`},
+ health:{k:'Apple Health guide',h:'Libre and<br><span>Apple Health</span>',s:'What Dulce reads from Apple Health, and how to grant or revoke access.',
+   dev:ph('h2.png',1060,130,400,6,5)+`<div class="card" style="left:780px;top:600px;width:520px;padding:34px 36px;z-index:30;transform:rotate(-3deg)"><div class="ct" style="margin-bottom:18px">Read from Health</div><span class="chip"><span class="dot" style="background:#4CAF50"></span>Glucose</span><span class="chip"><span class="dot" style="background:#F2734E"></span>Insulin</span><span class="chip"><span class="dot" style="background:#E8A23A"></span>Carbs</span></div>`},
+ night:{k:'Night lows',h:'Why night lows<br>are easy to <span>miss</span>',s:'Signs you had one, compression lows, and how to set up alerts that wake you.',
+   dev:`<div class="card" style="left:860px;top:230px;width:660px;padding:40px 40px 30px"><div class="ct" style="display:flex;justify-content:space-between"><span>Overnight</span><svg width="26" height="26" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="rgba(255,255,255,.55)"/></svg></div>
+   <svg width="580" height="300" viewBox="0 0 580 300"><rect x="0" y="210" width="580" height="90" fill="rgba(229,72,77,.12)"/><line x1="0" y1="210" x2="580" y2="210" stroke="#E5484D" stroke-dasharray="8 8" stroke-width="2"/><text x="572" y="200" fill="#E5484D" font-family="U" font-weight="700" font-size="20" text-anchor="end">70</text>
+   <path d="M0 120 C60 115 90 100 140 110 S220 160 260 200 S320 255 350 245 S400 190 440 150 S520 120 580 118" fill="none" stroke="#4CAF50" stroke-width="5" stroke-linecap="round"/>
+   <circle cx="340" cy="248" r="10" fill="#E5484D"/><circle cx="340" cy="248" r="24" fill="#E5484D" opacity=".2"/>
+   <g font-family="U" font-weight="600" font-size="20" fill="rgba(255,255,255,.4)"><text x="0" y="296">23:00</text><text x="300" y="296">03:00</text><text x="520" y="296">07:00</text></g></svg>
+   <div style="font-weight:600;font-size:18px;color:rgba(255,255,255,.35);margin-top:8px">Illustration</div></div>`}
+,
+ pet:{k:'Pet guide',h:'Your pet\'s glucose<br>on your <span>iPhone</span>',s:'A CGM for dogs and cats, with pet mode and the levels your vet gives you.',
+   dev:`<div class="card" style="left:880px;top:200px;width:610px;transform:rotate(-2deg)"><div class="ct">Who is Dulce for?</div>
+   <div class="row" style="opacity:.45"><div class="dot" style="background:rgba(255,255,255,.4)"></div><div>Me<small>My own sensor</small></div></div>
+   <div class="row" style="opacity:.45"><div class="dot" style="background:rgba(255,255,255,.4)"></div><div>Someone I care for<small>A child, parent, partner or anyone you look after</small></div></div>
+   <div class="row"><div class="n" style="background:#F2734E;font-size:26px"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><circle cx="6" cy="9" r="2.4"/><circle cx="10" cy="5" r="2.4"/><circle cx="14.5" cy="5" r="2.4"/><circle cx="18.5" cy="9" r="2.4"/><path d="M12 11c3 0 6 4.2 6 6.6 0 1.8-1.5 2.4-3 2.4-1.2 0-2-.6-3-.6s-1.8.6-3 .6c-1.5 0-3-.6-3-2.4C6 15.2 9 11 12 11z"/></svg></div><div>A pet<small>A dog, cat or other pet, with your vet's ranges</small></div><div class="v" style="color:#4CAF50">✓</div></div></div>`}
+}[v];
+if(v==='night')document.getElementById('c').style.background='radial-gradient(900px 700px at 1180px 520px,rgba(90,110,200,.28),transparent 70%),linear-gradient(160deg,#141826 0%,#0b0d14 60%)';
+document.getElementById('c').innerHTML=`<div class="brand"><img src="assets/dulce-drop.png">Dulce</div><div class="kick">${T.k}</div><h1>${T.h}</h1><div class="sub">${T.s}</div>${line}<div class="url">dulceglucosa.com</div>${T.dev}`;
+</script></body></html>

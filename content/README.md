@@ -33,10 +33,10 @@ Every new article gets its own cover (`image` in the registry) and at least one 
   under `/guides/covers/` do). Two styles, both built from **real Dulce screens** (never AI-drawn UI):
   1. **Designed** (default): dark Dulce background, kicker, two-line headline with one orange word, subline, and real
      screens in Apple frames or a small card (checklist, ranges, chips). Template:
-     `DULCE/marketing/output/blog-covers-test/src/cover.html` (+ `render.mjs`, one `T` entry per article).
+     `scripts/covers/cover.html` (+ `render.mjs`, one `T` entry per article; see `scripts/covers/README.md`).
   2. **Photo**: a free-license photo (Unsplash License) of a hand holding an iPhone or similar, with a real screenshot
-     placed on the screen by `src/photo_screen.py`. Only when the screen faces the camera; record the photo in
-     `final/CREDITS.txt`. Rejected by the owner (2026-11-07): watch on a wrist with a finger over it, and the
+     placed on the screen by `scripts/covers/photo_screen.py`. Only when the screen faces the camera; note the photo id in the
+     commit message. Rejected by the owner (2026-11-07): watch on a wrist with a finger over it, and the
      over-the-shoulder cat photo. AI-generated scenes were rejected too.
   Text on covers states only what the article says; medical numbers need the article's source.
 - **Inline**: at least one `<Figure>` with a real screenshot of the screen the article talks about.
