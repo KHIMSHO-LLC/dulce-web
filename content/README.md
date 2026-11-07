@@ -27,18 +27,21 @@ Calculators: `app/[locale]/tools/*`, formulas in `lib/tools.ts`, explanations in
   are 1400×3034; pass `width`/`height` otherwise, `narrow={false}` for wide images).
 ## Images (from 2026-11-07)
 
-Every article gets its own cover and at least one real in-app screenshot:
+Every new article gets its own cover (`image` in the registry) and at least one real in-app screenshot inline.
 
-- **Cover** (`image` in the registry): a generated lifestyle photo that matches the topic (a parent checking a phone
-  at school pickup, a runner glancing at a watch, a cat owner on the sofa) with a **real Dulce screenshot** on the
-  phone/watch screen. 800×520 or 1600×1040, webp or jpg, in `public/guides/covers/<article id>.webp`. Never let the
-  image model draw the UI itself (it garbles numbers and labels): pass the real screenshot from `public/guides/` or
-  `public/screenshots/` as a reference and ask it to place it on the screen unchanged. Glucose on screen must be a
-  plausible value; no people's names, no brand logos other than Dulce's, no fake reviews or quotes.
+- **Cover:** `public/guides/covers/<article id>.webp`, 1600×1040. It also shows at the top of the article (only covers
+  under `/guides/covers/` do). Two styles, both built from **real Dulce screens** (never AI-drawn UI):
+  1. **Designed** (default): dark Dulce background, kicker, two-line headline with one orange word, subline, and real
+     screens in Apple frames or a small card (checklist, ranges, chips). Template:
+     `DULCE/marketing/output/blog-covers-test/src/cover.html` (+ `render.mjs`, one `T` entry per article).
+  2. **Photo**: a free-license photo (Unsplash License) of a hand holding an iPhone or similar, with a real screenshot
+     placed on the screen by `src/photo_screen.py`. Only when the screen faces the camera; record the photo in
+     `final/CREDITS.txt`. Rejected by the owner (2026-11-07): watch on a wrist with a finger over it, and the
+     over-the-shoulder cat photo. AI-generated scenes were rejected too.
+  Text on covers states only what the article says; medical numbers need the article's source.
 - **Inline**: at least one `<Figure>` with a real screenshot of the screen the article talks about.
-- No cover yet for a topic: use the closest existing image and add a line to `seo/covers-needed.md`
-  (article id, scene, which screenshot goes on the screen). Covers are generated in an interactive session and
-  the line is removed when the file lands.
+- The headless writer cannot render covers: it uses the closest existing image and adds the article to
+  `seo/covers-needed.md` (id, kicker, headline, subline, which screens). An interactive session renders them.
 
 ## More MDX components
 

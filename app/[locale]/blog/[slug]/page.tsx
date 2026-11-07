@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
@@ -159,6 +160,20 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
             extra={t("minutes", { n: readingMinutes(article, loc) })}
           />
         </header>
+
+        {article.image.startsWith("/guides/covers/") ? (
+          <div className="mt-10 max-w-[68ch] overflow-hidden rounded-[24px] border border-white/8">
+            <Image
+              src={article.image}
+              alt={pick(article.imageAlt, loc)}
+              width={1600}
+              height={1040}
+              priority
+              sizes="(min-width: 768px) 68ch, 100vw"
+              className="h-auto w-full"
+            />
+          </div>
+        ) : null}
 
         <div className={`${PROSE} mt-12`}>
           <Body components={components} />
