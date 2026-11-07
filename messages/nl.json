@@ -183,6 +183,17 @@
       "play": "Video afspelen",
       "note": "Speelt af via YouTube. Er wordt niets van YouTube geladen tot je op afspelen drukt."
     },
+    "reviews": {
+      "title": "In hun woorden",
+      "translated": "Vertaald uit het {lang}",
+      "source": {
+        "email": "E-mail aan Dulce",
+        "appStore": "App Store-review",
+        "facebook": "Facebookbericht"
+      },
+      "note": "Echte berichten van mensen die Dulce gebruiken, gedeeld met hun toestemming. App Store-reviews zijn openbaar.",
+      "stars": "{n} van 5 sterren"
+    },
     "founder": {
       "quote": "Ik heb diabetes type 1. Ik was het zat om mijn telefoon te ontgrendelen, een app te openen en op een laadicoontje te wachten, alleen om één getal te zien. Dus maakte ik Dulce voor mezelf. Toen wilde mijn familie het ook.",
       "name": "Giorgio",

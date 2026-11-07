@@ -183,6 +183,17 @@
       "play": "Play the video",
       "note": "Plays from YouTube. Nothing loads from YouTube until you press play."
     },
+    "reviews": {
+      "title": "In their words",
+      "translated": "Translated from {lang}",
+      "source": {
+        "email": "Email to Dulce",
+        "appStore": "App Store review",
+        "facebook": "Facebook post"
+      },
+      "note": "Real messages from people who use Dulce, shared with their permission. App Store reviews are public.",
+      "stars": "{n} out of 5 stars"
+    },
     "founder": {
       "quote": "I have type 1 diabetes. I got tired of unlocking my phone, opening an app and waiting on a spinner just to see one number. So I built Dulce for myself. Then my family wanted it too.",
       "name": "Giorgio",

@@ -28,6 +28,7 @@ export const SECTION = {
   day: "your-day",
   more: "more",
   video: "video",
+  reviews: "reviews",
   founder: "founder",
   plans: "free-vs-pro",
   faq: "faq",

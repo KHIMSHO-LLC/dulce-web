@@ -183,6 +183,17 @@
       "play": "Video abspielen",
       "note": "Läuft über YouTube. Von YouTube wird erst etwas geladen, wenn du auf Play tippst."
     },
+    "reviews": {
+      "title": "In ihren Worten",
+      "translated": "Übersetzung, Original auf {lang}",
+      "source": {
+        "email": "E-Mail an Dulce",
+        "appStore": "App-Store-Bewertung",
+        "facebook": "Facebook-Beitrag"
+      },
+      "note": "Echte Nachrichten von Menschen, die Dulce nutzen, mit ihrer Erlaubnis geteilt. App-Store-Bewertungen sind öffentlich.",
+      "stars": "{n} von 5 Sternen"
+    },
     "founder": {
       "quote": "Ich habe Typ-1-Diabetes. Ich hatte es satt, das Handy zu entsperren, eine App zu öffnen und auf einen Ladekreis zu warten, nur um eine Zahl zu sehen. Also habe ich Dulce für mich gebaut. Dann wollte meine Familie es auch.",
       "name": "Giorgio",

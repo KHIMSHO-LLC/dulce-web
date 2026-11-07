@@ -21,6 +21,7 @@ import { DownloadCta } from "@/components/landing/DownloadCta";
 import { VideoDemo } from "@/components/landing/VideoDemo";
 import { PlanCompare } from "@/components/landing/PlanCompare";
 import { AskAi } from "@/components/landing/AskAi";
+import { Reviews } from "@/components/landing/Reviews";
 import { Reveal } from "@/components/motion/Reveal";
 import { Split } from "@/components/motion/Split";
 import type { ScreenName } from "@/components/screens/draw";
@@ -287,6 +288,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <MoreBento />
       <VideoDemo />
       <Audience />
+      <Reviews />
       <Founder />
       <PlanCompare />
       <Faq />

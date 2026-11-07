@@ -183,6 +183,17 @@
       "play": "Toista video",
       "note": "Toistetaan YouTubesta. YouTubesta ei ladata mitään ennen kuin painat toistoa."
     },
+    "reviews": {
+      "title": "Heidän sanoin",
+      "translated": "Käännetty kielestä: {lang}",
+      "source": {
+        "email": "Sähköposti Dulcelle",
+        "appStore": "App Store -arvio",
+        "facebook": "Facebook-julkaisu"
+      },
+      "note": "Aitoja viestejä Dulcen käyttäjiltä, jaettu heidän luvallaan. App Store -arviot ovat julkisia.",
+      "stars": "{n}/5 tähteä"
+    },
     "founder": {
       "quote": "Minulla on tyypin 1 diabetes. Kyllästyin avaamaan puhelimen lukituksen, avaamaan sovelluksen ja odottamaan latausta vain nähdäkseni yhden luvun. Joten tein Dulcen itselleni. Sitten perheeni halusi sen myös.",
       "name": "Giorgio",

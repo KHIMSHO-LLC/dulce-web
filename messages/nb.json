@@ -183,6 +183,17 @@
       "play": "Spill av videoen",
       "note": "Spilles av fra YouTube. Ingenting lastes fra YouTube før du trykker på spill av."
     },
+    "reviews": {
+      "title": "Med deres ord",
+      "translated": "Oversatt fra {lang}",
+      "source": {
+        "email": "E-post til Dulce",
+        "appStore": "Anmeldelse i App Store",
+        "facebook": "Facebook-innlegg"
+      },
+      "note": "Ekte meldinger fra folk som bruker Dulce, delt med deres tillatelse. Anmeldelser i App Store er offentlige.",
+      "stars": "{n} av 5 stjerner"
+    },
     "founder": {
       "quote": "Jeg har diabetes type 1. Jeg ble lei av å låse opp telefonen, åpne en app og vente på et lastesymbol bare for å se ett tall. Så jeg lagde Dulce til meg selv. Så ville familien min også ha den.",
       "name": "Giorgio",
