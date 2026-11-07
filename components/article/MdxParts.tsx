@@ -113,11 +113,12 @@ export function AppCta({ locale, campaign, title }: { locale: AppLocale; campaig
   const copy = CTA_COPY[locale];
   return (
     <aside className="my-10 rounded-[24px] border border-ember/25 bg-ember/[0.07] p-6 md:p-7">
-      <p className="text-[1.15rem] font-medium text-ink">{title ?? copy.title}</p>
-      <p className="mt-1 text-label leading-relaxed text-soft">{copy.body}</p>
+      {/* "!" because the PROSE wrapper styles every <p> and <a> (orange, underlined links), which hid the label on the orange button. */}
+      <p className="!mt-0 !text-[1.15rem] font-medium !leading-snug !text-ink">{title ?? copy.title}</p>
+      <p className="!mt-1 !text-label !leading-relaxed !text-soft">{copy.body}</p>
       <a
         href={appStoreUrl(campaign)}
-        className="mt-5 inline-flex h-11 items-center gap-2 rounded-full bg-ember pl-5 pr-4 text-label font-semibold text-ember-ink no-underline transition-colors hover:bg-ember-hi"
+        className="mt-5 inline-flex h-11 items-center gap-2 rounded-full bg-ember pl-5 pr-4 text-label font-semibold !text-ember-ink !no-underline transition-colors hover:bg-ember-hi hover:!text-ember-ink"
       >
         {copy.button}
         <ArrowUpRight className="h-4 w-4" aria-hidden />
