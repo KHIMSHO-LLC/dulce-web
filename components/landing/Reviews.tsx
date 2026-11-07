@@ -26,7 +26,7 @@ export async function Reviews() {
       <Reveal className="container-page">
         <Split id="reviews-title" text={t("title")} className="type-display text-[clamp(2.5rem,6vw,6rem)] text-ink" />
 
-        <div className="mt-10 grid gap-4 md:mt-14 md:grid-cols-3">
+        <div className="mt-10 grid gap-4 md:mt-14 md:grid-cols-2 xl:grid-cols-4">
           {reviews.map((r) => {
             const translated = r.lang !== locale ? r.translations[locale] : undefined;
             const context = r.context?.[locale] ?? r.context?.en;
