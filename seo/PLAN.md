@@ -210,6 +210,11 @@ questions around them. Being the best answer means the product actually does it 
       New guide `smart-insulin-pen` (NovoPen 6 / Echo Plus, 5 core languages; logbook links to it). Pen brand names are
       fine on the web; the App Store copy stays brand-free.
 
+- [x] 2026-11-07: Two more calculators, all 10 languages: Time in Range (`/tools/time-in-range-calculator`: paste readings,
+      5 consensus bands with time per day and the Battelino 2019 targets, average, GMI, CV; runs in the browser) and GMI
+      (`/tools/gmi-calculator`: mg/dL or mmol/L, % and mmol/mol, GMI chart 100-350 mg/dL as `GmiTable`). Footer, /blog
+      tools list, sitemap, llms.txt/llms-full.txt and guide links (`TOOLS.guides`) included.
+
 ## Next for Claude (in order)
 
 0. **1.0.4 on the website** (done 2026-10-25, owner decision to publish before approval; app live 2026-10-27):

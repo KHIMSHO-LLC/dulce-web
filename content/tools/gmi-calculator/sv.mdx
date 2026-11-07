@@ -1,0 +1,38 @@
+## Vad kalkylatorn gör
+
+Skriv in den genomsnittliga glukosen från din sensorrapport så får du **GMI** (glukoskontrollindikator) med formlerna som Bergenstal och kollegor publicerade 2018:
+
+- GMI (%) = 3,31 + 0,02392 × genomsnittlig glukos i mg/dL
+- GMI (mmol/mol) = 12,71 + 4,70587 × genomsnittlig glukos i mmol/L
+
+Du kan skriva medelvärdet i mmol/L eller mg/dL. Ett medelvärde på 8,5 mmol/L (153 mg/dL) ger till exempel ett GMI på 7,0 % (53 mmol/mol). Bredvid ser du HbA1c uppskattat med den äldre ADAG-formeln, som kommer från en annan studie och ger en något annan siffra.
+
+## GMI är inte ditt HbA1c från labbet
+
+GMI är en beräkning från sensorvärden, HbA1c är ett blodprov. GMI kallades tidigare "uppskattat HbA1c" och bytte namn eftersom så många såg att labbsvaret skilde sig från siffran i appen. En skillnad är normal: blodbrist, graviditet, hur länge de röda blodkropparna lever och vissa hemoglobinvarianter ändrar HbA1c utan att medelglukosen ändras. Från HbA1c till genomsnittlig glukos kommer du med <PageLink to="/tools/a1c-calculator">HbA1c-kalkylatorn</PageLink>, och <ArticleLink to="hba1c">HbA1c-guiden</ArticleLink> (på engelska) förklarar provet.
+
+## Hur mycket data GMI behöver
+
+Formeln togs fram från sensordata, och konsensusen om tid inom målområdet rekommenderar minst 14 dagar med sensorn på ungefär 70 % av tiden. Med medelvärdet från två eller tre dagar kan GMI ändras mycket från vecka till vecka.
+
+## GMI-tabell
+
+Genomsnittlig glukos från 100 till 350 mg/dL var tionde, med värdet i mmol/L och motsvarande GMI i % och mmol/mol.
+
+<GmiTable />
+
+<Callout>
+GMI sammanfattar medelvärdet, inte svängningarna. Två personer med samma GMI kan ha mycket olika dagar, därför läses det tillsammans med <ArticleLink to="time-in-range">tid inom målområdet</ArticleLink> (på engelska). Din egen räknar du ut med <PageLink to="/tools/time-in-range-calculator">kalkylatorn för tid inom målområdet</PageLink>.
+</Callout>
+
+## GMI i Dulce
+
+Fliken Trender i Dulce visar genomsnittlig glukos och uppskattat HbA1c från GMI för 7, 14, 30 eller 90 dagar, beräknat från din sensors värden. <ArticleLink to="trends">Guiden om Trender</ArticleLink> (på engelska) förklarar det. GMI är information till dig och ditt diabetesteam, inte ett skäl att ändra behandlingen på egen hand.
+
+<AppCta />
+
+## Källor
+
+- Bergenstal R. M. et al. *Glucose Management Indicator (GMI): A New Term for Estimating A1C From Continuous Glucose Monitoring*. Diabetes Care 2018;41:2275-2280. [doi.org/10.2337/dc18-1581](https://doi.org/10.2337/dc18-1581)
+- Battelino T. et al. *Clinical Targets for Continuous Glucose Monitoring Data Interpretation: Recommendations From the International Consensus on Time in Range*. Diabetes Care 2019;42:1593-1603. [doi.org/10.2337/dci19-0028](https://doi.org/10.2337/dci19-0028)
+- Nathan D. M. et al. *Translating the A1C Assay Into Estimated Average Glucose Values*. Diabetes Care 2008;31:1473-1478. [doi.org/10.2337/dc08-0545](https://doi.org/10.2337/dc08-0545)

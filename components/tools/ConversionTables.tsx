@@ -1,5 +1,5 @@
 import type { AppLocale } from "@/i18n/routing";
-import { A1C_CHART_HEAD, a1cChartRows, glucoseChartRows } from "@/lib/tools";
+import { A1C_CHART_HEAD, GMI_CHART_HEAD, a1cChartRows, glucoseChartRows, gmiChartRows } from "@/lib/tools";
 
 /**
  * Full conversion charts for the calculator pages. Rows come from lib/tools.ts
@@ -43,10 +43,18 @@ export function GlucoseTable({ locale, from }: { locale: AppLocale; from: "mgdl"
 }
 
 export function A1cTable({ locale }: { locale: AppLocale }) {
-  const head = A1C_CHART_HEAD[locale];
+  return <WideTable head={A1C_CHART_HEAD[locale]} rows={a1cChartRows(locale)} />;
+}
+
+export function GmiTable({ locale }: { locale: AppLocale }) {
+  return <WideTable head={GMI_CHART_HEAD[locale]} rows={gmiChartRows(locale)} />;
+}
+
+/** Four-column chart in two halves side by side on wide screens. */
+function WideTable({ head, rows }: { head: string[]; rows: string[][] }) {
   return (
     <div className="mt-6 grid gap-x-8 text-label md:grid-cols-2">
-      {chunk(a1cChartRows(locale), 2).map((part, i) => (
+      {chunk(rows, 2).map((part, i) => (
         <table key={i} className="!mt-0 w-full border-collapse">
           <thead>
             <tr>

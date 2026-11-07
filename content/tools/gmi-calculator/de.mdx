@@ -1,0 +1,38 @@
+## Was dieser Rechner macht
+
+Gib den Mittelwert aus deinem Sensorbericht ein, und er berechnet den **GMI** (Glukose-Management-Indikator) mit den Formeln, die Bergenstal und Kollegen 2018 veröffentlicht haben:
+
+- GMI (%) = 3,31 + 0,02392 × Mittelwert in mg/dL
+- GMI (mmol/mol) = 12,71 + 4,70587 × Mittelwert in mmol/L
+
+Du kannst den Mittelwert in mg/dL oder mmol/L eingeben. Ein Mittelwert von 154 mg/dL (8,6 mmol/L) ergibt zum Beispiel einen GMI von 7,0 % (53 mmol/mol). Daneben steht der HbA1c nach der älteren ADAG-Formel, die aus einer anderen Studie stammt und eine etwas andere Zahl liefert.
+
+## Der GMI ist nicht dein Labor-HbA1c
+
+Der GMI ist eine Rechnung aus Sensorwerten, der HbA1c ein Bluttest. Früher hieß der GMI „geschätzter HbA1c“; er wurde umbenannt, weil so viele Menschen sahen, dass ihr Laborwert von der Zahl in der App abwich. Ein Unterschied ist normal: Anämie, Schwangerschaft, die Lebensdauer der roten Blutkörperchen und manche Hämoglobinvarianten verändern den HbA1c, ohne dass sich dein Mittelwert ändert. Vom HbA1c zum Durchschnittsblutzucker kommst du mit dem <PageLink to="/tools/a1c-calculator">HbA1c-Rechner</PageLink>, und unser <ArticleLink to="hba1c">Ratgeber zum HbA1c</ArticleLink> erklärt den Test.
+
+## Wie viele Daten der GMI braucht
+
+Die Formel wurde aus Sensordaten entwickelt, und der Time-in-Range-Konsens empfiehlt mindestens 14 Tage mit einer Tragezeit von etwa 70 %. Mit dem Mittelwert aus zwei oder drei Tagen kann der GMI von Woche zu Woche stark schwanken.
+
+## GMI-Tabelle
+
+Mittelwert von 100 bis 350 mg/dL in 10er-Schritten, mit dem passenden GMI in % und mmol/mol.
+
+<GmiTable />
+
+<Callout>
+Der GMI fasst den Mittelwert zusammen, nicht die Schwankungen. Zwei Menschen mit demselben GMI können sehr unterschiedliche Tage haben, deshalb liest man ihn zusammen mit der <ArticleLink to="time-in-range">Zeit im Zielbereich</ArticleLink>. Deine kannst du mit dem <PageLink to="/tools/time-in-range-calculator">Time-in-Range-Rechner</PageLink> ausrechnen.
+</Callout>
+
+## Der GMI in Dulce
+
+Der Trends-Tab in Dulce zeigt deinen Mittelwert und den geschätzten HbA1c aus dem GMI für 7, 14, 30 oder 90 Tage, berechnet aus den Werten deines Sensors. Der <ArticleLink to="trends">Ratgeber zu Trends</ArticleLink> erklärt ihn. Der GMI ist eine Information für dich und dein Behandlungsteam, keine Grundlage, um die Therapie auf eigene Faust zu ändern.
+
+<AppCta />
+
+## Quellen
+
+- Bergenstal R. M. et al. *Glucose Management Indicator (GMI): A New Term for Estimating A1C From Continuous Glucose Monitoring*. Diabetes Care 2018;41:2275-2280. [doi.org/10.2337/dc18-1581](https://doi.org/10.2337/dc18-1581)
+- Battelino T. et al. *Clinical Targets for Continuous Glucose Monitoring Data Interpretation: Recommendations From the International Consensus on Time in Range*. Diabetes Care 2019;42:1593-1603. [doi.org/10.2337/dci19-0028](https://doi.org/10.2337/dci19-0028)
+- Nathan D. M. et al. *Translating the A1C Assay Into Estimated Average Glucose Values*. Diabetes Care 2008;31:1473-1478. [doi.org/10.2337/dc08-0545](https://doi.org/10.2337/dc08-0545)

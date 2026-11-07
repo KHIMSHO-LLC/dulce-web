@@ -6,7 +6,7 @@ import { AUTHORS } from "@/content/authors";
 import { appStoreUrl, type StoreCampaign } from "./appStore";
 import { articleUrl } from "./articles";
 import { absoluteUrl, localizedPath } from "./seo";
-import { A1C_CHART_HEAD, TOOL_COPY, a1cChartRows, glucoseChartRows, type ToolPath } from "./tools";
+import { A1C_CHART_HEAD, GMI_CHART_HEAD, TOOL_COPY, a1cChartRows, glucoseChartRows, gmiChartRows, type ToolPath } from "./tools";
 
 /**
  * Plain-Markdown versions of the guides for AI assistants and answer engines
@@ -71,6 +71,7 @@ export function mdxToMarkdown(source: string, locale: AppLocale, campaign: Store
     table(from === "mgdl" ? ["mg/dL", "mmol/L"] : ["mmol/L", "mg/dL"], glucoseChartRows(from, locale)),
   );
   s = s.replace(/<A1cTable\s*\/>/g, () => table(A1C_CHART_HEAD[locale], a1cChartRows(locale)));
+  s = s.replace(/<GmiTable\s*\/>/g, () => table(GMI_CHART_HEAD[locale], gmiChartRows(locale)));
   // Callouts → blockquotes.
   s = s.replace(/<Callout\b[^>]*>([\s\S]*?)<\/Callout>/g, (_, body: string) =>
     body

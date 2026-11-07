@@ -1,0 +1,38 @@
+## Qué calcula esta herramienta
+
+Escribe la glucosa media del informe de tu sensor y te da el **GMI** (indicador de gestión de glucosa), con las fórmulas que publicaron Bergenstal y sus colegas en 2018:
+
+- GMI (%) = 3,31 + 0,02392 × glucosa media en mg/dL
+- GMI (mmol/mol) = 12,71 + 4,70587 × glucosa media en mmol/L
+
+Puedes poner la media en mg/dL o en mmol/L. Una media de 154 mg/dL (8,6 mmol/L), por ejemplo, da un GMI del 7,0 % (53 mmol/mol). Al lado verás la HbA1c estimada con la fórmula ADAG, más antigua, que sale de otro estudio y da una cifra algo distinta.
+
+## El GMI no es tu HbA1c del análisis
+
+El GMI es un cálculo a partir de las lecturas del sensor; la HbA1c es un análisis de sangre. Antes se llamaba «A1c estimada» y se le cambió el nombre porque mucha gente veía que su análisis no coincidía con la cifra de la app. Que haya diferencia es normal: la anemia, el embarazo, la vida de los glóbulos rojos o algunas variantes de la hemoglobina mueven la HbA1c sin que cambie tu glucosa media. Para pasar de HbA1c a glucosa media, usa la <PageLink to="/tools/a1c-calculator">calculadora de HbA1c</PageLink>, y en la <ArticleLink to="hba1c">guía de la HbA1c</ArticleLink> explicamos el análisis.
+
+## Cuántos datos necesita el GMI
+
+La fórmula se construyó con datos de sensor, y el consenso sobre tiempo en rango recomienda al menos 14 días con el sensor puesto alrededor del 70 % del tiempo. Con la media de dos o tres días, el GMI puede cambiar mucho de una semana a otra.
+
+## Tabla de GMI
+
+Glucosa media de 100 a 350 mg/dL, de 10 en 10, con su GMI en % y en mmol/mol.
+
+<GmiTable />
+
+<Callout>
+El GMI resume la media, no las subidas y bajadas. Dos personas con el mismo GMI pueden tener días muy distintos, y por eso se mira junto al <ArticleLink to="time-in-range">tiempo en rango</ArticleLink>. Puedes calcular el tuyo con la <PageLink to="/tools/time-in-range-calculator">calculadora de tiempo en rango</PageLink>.
+</Callout>
+
+## El GMI en Dulce
+
+La pestaña Tendencias de Dulce muestra tu glucosa media y la HbA1c estimada a partir del GMI en 7, 14, 30 o 90 días, calculadas con las lecturas de tu sensor. Lo explicamos en la <ArticleLink to="trends">guía de Tendencias</ArticleLink>. El GMI es información para ti y tu equipo médico, no una base para cambiar el tratamiento por tu cuenta.
+
+<AppCta />
+
+## Fuentes
+
+- Bergenstal R. M. et al. *Glucose Management Indicator (GMI): A New Term for Estimating A1C From Continuous Glucose Monitoring*. Diabetes Care 2018;41:2275-2280. [doi.org/10.2337/dc18-1581](https://doi.org/10.2337/dc18-1581)
+- Battelino T. et al. *Clinical Targets for Continuous Glucose Monitoring Data Interpretation: Recommendations From the International Consensus on Time in Range*. Diabetes Care 2019;42:1593-1603. [doi.org/10.2337/dci19-0028](https://doi.org/10.2337/dci19-0028)
+- Nathan D. M. et al. *Translating the A1C Assay Into Estimated Average Glucose Values*. Diabetes Care 2008;31:1473-1478. [doi.org/10.2337/dc08-0545](https://doi.org/10.2337/dc08-0545)

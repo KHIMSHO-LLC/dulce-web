@@ -1,0 +1,52 @@
+## Ce que fait ce calculateur
+
+Colle tes glycémies et il les répartit dans les cinq plages qu'utilisent les rapports des capteurs, selon le consensus international sur le temps dans la cible :
+
+- **Très basse :** en dessous de 54 mg/dL (3,0 mmol/L)
+- **Basse :** de 54 à 69 mg/dL (3,0 à 3,8 mmol/L)
+- **Dans la cible :** de 70 à 180 mg/dL (3,9 à 10,0 mmol/L)
+- **Haute :** de 181 à 250 mg/dL (10,1 à 13,9 mmol/L)
+- **Très haute :** au-dessus de 250 mg/dL (13,9 mmol/L)
+
+Chaque mesure compte pour la même part de temps, comme dans les rapports du capteur : un MCG mesure à intervalles fixes. Les mesures doivent donc être régulières, pas quelques glycémies capillaires faites quand quelque chose n'allait pas. À côté de chaque plage, tu vois ce que cela représente sur une journée de 24 heures et l'objectif du consensus. Tu obtiens aussi ta glycémie moyenne, le GMI et la variabilité (CV). Le calcul se fait dans ton navigateur : rien de ce que tu colles n'est envoyé.
+
+## Où trouver tes mesures
+
+La plupart des applis et sites des capteurs permettent de télécharger les mesures dans un tableur (CSV). Ouvre-le, copie la colonne de glycémie et colle-la ici. Avec FreeStyle Libre, tes mesures sont dans LibreView ; notre <ArticleLink to="libreview">guide LibreView</ArticleLink> explique comment te connecter et ce que tu y trouves.
+
+## Les objectifs du consensus
+
+Pour la plupart des adultes avec un diabète de type 1 ou de type 2, le consensus propose :
+
+| Plage | Objectif | Par jour |
+|---|---|---|
+| Dans la cible (70-180 mg/dL) | Plus de 70 % | Plus de 16 h 48 min |
+| Sous 70 mg/dL (basse + très basse) | Moins de 4 % | Moins de 58 min |
+| Sous 54 mg/dL | Moins de 1 % | Moins de 15 min |
+| Au-dessus de 180 mg/dL (haute + très haute) | Moins de 25 % | Moins de 6 h |
+| Au-dessus de 250 mg/dL | Moins de 5 % | Moins de 1 h 12 min |
+
+Chez les personnes âgées ou plus à risque d'hypoglycémie, les objectifs sont plus prudents : plus de 50 % dans la cible, moins de 1 % sous 70 mg/dL et moins de 10 % au-dessus de 250 mg/dL. Pendant la grossesse avec un diabète de type 1, la plage est plus étroite (63-140 mg/dL). Ce sont des repères généraux : c'est ton équipe soignante qui fixe tes objectifs.
+
+<Callout>
+Le consensus demande au moins 14 jours de données, avec le capteur porté environ 70 % du temps. Une seule journée, comme dans l'exemple, montre seulement comment fonctionne le calcul.
+</Callout>
+
+## Variabilité (CV)
+
+Le coefficient de variation est l'écart type divisé par la moyenne. Le consensus considère comme stable un CV de 36 % ou moins. Un CV élevé avec une bonne moyenne signale souvent de fortes variations, c'est pourquoi on le lit avec le temps sous la cible. Ce que ces pourcentages veulent dire au quotidien, on l'explique dans <ArticleLink to="time-in-range">temps dans la cible ou HbA1c</ArticleLink>.
+
+<Callout type="warning">
+Ce calculateur regarde des mesures passées. Ce n'est pas une alarme et il ne donne aucun conseil de traitement : face à une hypo ou une hyper en ce moment, fie-toi à ton capteur et au plan de ton équipe soignante.
+</Callout>
+
+## Le temps dans la cible dans Dulce
+
+L'onglet Tendances de Dulce affiche ton temps dans la cible, ta glycémie moyenne et l'HbA1c estimée sur 7, 14, 30 ou 90 jours, et **Créer le PDF** prépare un rapport avec les cinq plages et la variabilité (CV) pour ta consultation. Le <ArticleLink to="trends">guide Tendances</ArticleLink> explique chaque chiffre. Pour passer d'une moyenne au GMI, utilise le <PageLink to="/tools/gmi-calculator">calculateur de GMI</PageLink>.
+
+<AppCta />
+
+## Fuentes
+
+- Battelino T. et al. *Clinical Targets for Continuous Glucose Monitoring Data Interpretation: Recommendations From the International Consensus on Time in Range*. Diabetes Care 2019;42:1593-1603. [doi.org/10.2337/dci19-0028](https://doi.org/10.2337/dci19-0028)
+- Bergenstal R. M. et al. *Glucose Management Indicator (GMI)*. Diabetes Care 2018;41:2275-2280. [doi.org/10.2337/dc18-1581](https://doi.org/10.2337/dc18-1581)

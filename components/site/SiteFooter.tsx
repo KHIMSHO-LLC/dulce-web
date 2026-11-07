@@ -67,6 +67,12 @@ export async function SiteFooter() {
             <Link href="/tools/a1c-calculator" className={linkClass}>
               {TOOL_COPY["/tools/a1c-calculator"][locale as AppLocale].title}
             </Link>
+            <Link href="/tools/time-in-range-calculator" className={linkClass}>
+              {TOOL_COPY["/tools/time-in-range-calculator"][locale as AppLocale].title}
+            </Link>
+            <Link href="/tools/gmi-calculator" className={linkClass}>
+              {TOOL_COPY["/tools/gmi-calculator"][locale as AppLocale].title}
+            </Link>
             <Link href="/tools/sensor-end-date" className={linkClass}>
               {TOOL_COPY["/tools/sensor-end-date"][locale as AppLocale].title}
             </Link>

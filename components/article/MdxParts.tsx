@@ -146,7 +146,15 @@ export function PageLink({
   children,
 }: {
   locale: AppLocale;
-  to: "/setup" | "/tools/glucose-converter" | "/tools/a1c-calculator" | "/legal/disclaimer" | "/librelinkup-status" | "/tools/sensor-end-date";
+  to:
+    | "/setup"
+    | "/tools/glucose-converter"
+    | "/tools/a1c-calculator"
+    | "/legal/disclaimer"
+    | "/librelinkup-status"
+    | "/tools/sensor-end-date"
+    | "/tools/time-in-range-calculator"
+    | "/tools/gmi-calculator";
   children: ReactNode;
 }) {
   return (

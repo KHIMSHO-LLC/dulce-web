@@ -1,0 +1,52 @@
+## What this calculator does
+
+Paste your glucose readings and it splits them into the five bands that CGM reports use, from the International Consensus on Time in Range:
+
+- **Very low:** below 54 mg/dL (3.0 mmol/L)
+- **Low:** 54 to 69 mg/dL (3.0 to 3.8 mmol/L)
+- **In range:** 70 to 180 mg/dL (3.9 to 10.0 mmol/L)
+- **High:** 181 to 250 mg/dL (10.1 to 13.9 mmol/L)
+- **Very high:** above 250 mg/dL (13.9 mmol/L)
+
+Each reading counts as the same slice of time, which is how sensor reports work: a CGM records at a fixed interval. That's why the readings should be evenly spaced, not a handful of finger pricks taken when something felt wrong. Next to every band you'll see the time it means in a 24-hour day and the consensus target. You also get your average glucose, the GMI and the variability (CV). The calculation runs in your browser: nothing you paste is sent anywhere.
+
+## Where to get your readings
+
+Most sensor apps and web portals let you download your readings as a spreadsheet (CSV). Open it, copy the glucose column and paste it here. With FreeStyle Libre your readings are in LibreView; our <ArticleLink to="libreview">LibreView guide</ArticleLink> covers signing in and what's there.
+
+## The consensus targets
+
+For most adults with type 1 or type 2 diabetes, the consensus suggests:
+
+| Band | Target | Per day |
+|---|---|---|
+| In range (70-180 mg/dL) | More than 70% | Over 16 h 48 min |
+| Below 70 mg/dL (low + very low) | Less than 4% | Under 58 min |
+| Below 54 mg/dL | Less than 1% | Under 15 min |
+| Above 180 mg/dL (high + very high) | Less than 25% | Under 6 h |
+| Above 250 mg/dL | Less than 5% | Under 1 h 12 min |
+
+For older people or those at higher risk of lows, the targets are gentler: more than 50% in range, less than 1% below 70 mg/dL and less than 10% above 250 mg/dL. Pregnancy with type 1 diabetes uses a tighter range (63-140 mg/dL). These are general guidelines: your care team sets your own targets.
+
+<Callout>
+The consensus asks for at least 14 days of data, with the sensor worn about 70% of the time. One day, like the example above, only shows how the calculation works.
+</Callout>
+
+## Variability (CV)
+
+The coefficient of variation is the standard deviation divided by the average. The consensus considers 36% or lower stable. A high CV with a good average usually means big swings, which is why it's read together with time below range. For more on what the percentages mean in daily life, read <ArticleLink to="time-in-range">time in range vs A1C</ArticleLink>.
+
+<Callout type="warning">
+This calculator looks back at past readings. It isn't an alarm and gives no treatment advice: for a low or high right now, go by your sensor and the plan from your care team.
+</Callout>
+
+## Time in range in Dulce
+
+The Trends tab in Dulce shows your time in range, average glucose and estimated A1C for 7, 14, 30 or 90 days, and **Create PDF** makes a report with the five bands and variability (CV) to take to your appointment. The <ArticleLink to="trends">Trends guide</ArticleLink> explains each number. To turn an average into a GMI, use the <PageLink to="/tools/gmi-calculator">GMI calculator</PageLink>.
+
+<AppCta />
+
+## Sources
+
+- Battelino T. et al. *Clinical Targets for Continuous Glucose Monitoring Data Interpretation: Recommendations From the International Consensus on Time in Range*. Diabetes Care 2019;42:1593-1603. [doi.org/10.2337/dci19-0028](https://doi.org/10.2337/dci19-0028)
+- Bergenstal R. M. et al. *Glucose Management Indicator (GMI)*. Diabetes Care 2018;41:2275-2280. [doi.org/10.2337/dc18-1581](https://doi.org/10.2337/dc18-1581)

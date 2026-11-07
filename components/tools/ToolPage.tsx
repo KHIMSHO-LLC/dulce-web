@@ -11,7 +11,7 @@ import { TOOL_COPY, toolByPath, type ToolPath } from "@/lib/tools";
 import { getArticle, isTranslated } from "@/content/articles";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { Byline } from "@/components/article/Byline";
-import { A1cTable, GlucoseTable } from "@/components/tools/ConversionTables";
+import { A1cTable, GlucoseTable, GmiTable } from "@/components/tools/ConversionTables";
 
 /**
  * Shared shell of a calculator page: title, the calculator, then the
@@ -44,6 +44,7 @@ export async function ToolPage({
     Callout,
     GlucoseTable: (p: { from: "mgdl" | "mmol" }) => <GlucoseTable locale={locale} {...p} />,
     A1cTable: () => <A1cTable locale={locale} />,
+    GmiTable: () => <GmiTable locale={locale} />,
   };
 
   return (

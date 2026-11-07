@@ -1,0 +1,38 @@
+## Wat deze calculator doet
+
+Vul de gemiddelde glucose uit je sensorrapport in en je krijgt de **GMI** (glucosemanagementindicator), met de formules die Bergenstal en collega's in 2018 publiceerden:
+
+- GMI (%) = 3,31 + 0,02392 × gemiddelde glucose in mg/dL
+- GMI (mmol/mol) = 12,71 + 4,70587 × gemiddelde glucose in mmol/L
+
+Je kunt het gemiddelde in mmol/L of mg/dL invullen. Een gemiddelde van 8,5 mmol/L (153 mg/dL) geeft bijvoorbeeld een GMI van 7,0% (53 mmol/mol). Ernaast zie je de HbA1c volgens de oudere ADAG-formule, die uit een ander onderzoek komt en een iets ander getal geeft.
+
+## De GMI is niet je HbA1c uit het lab
+
+De GMI is een berekening uit sensorwaarden, de HbA1c een bloedtest. De GMI heette vroeger "geschatte HbA1c" en kreeg een nieuwe naam omdat zoveel mensen zagen dat hun labwaarde afweek van het getal in hun app. Een verschil is normaal: bloedarmoede, zwangerschap, de levensduur van rode bloedcellen en sommige hemoglobinevarianten veranderen de HbA1c zonder dat je gemiddelde glucose verandert. Van HbA1c naar gemiddelde glucose ga je met <PageLink to="/tools/a1c-calculator">HbA1c berekenen</PageLink>, en onze <ArticleLink to="hba1c">HbA1c-gids</ArticleLink> (in het Engels) legt de test uit.
+
+## Hoeveel gegevens de GMI nodig heeft
+
+De formule is gemaakt met sensorgegevens, en de time-in-range-consensus raadt minstens 14 dagen aan met de sensor ongeveer 70% van de tijd gedragen. Met het gemiddelde van twee of drie dagen kan de GMI van week tot week flink verschillen.
+
+## GMI-tabel
+
+Gemiddelde glucose van 100 tot 350 mg/dL per 10, met de waarde in mmol/L en de bijbehorende GMI in % en mmol/mol.
+
+<GmiTable />
+
+<Callout>
+De GMI vat het gemiddelde samen, niet de schommelingen. Twee mensen met dezelfde GMI kunnen heel verschillende dagen hebben, daarom lees je hem samen met de <ArticleLink to="time-in-range">tijd binnen bereik</ArticleLink> (in het Engels). Die van jou bereken je met <PageLink to="/tools/time-in-range-calculator">tijd binnen bereik berekenen</PageLink>.
+</Callout>
+
+## GMI in Dulce
+
+Het tabblad Trends in Dulce toont je gemiddelde glucose en de geschatte HbA1c uit de GMI over 7, 14, 30 of 90 dagen, berekend uit de waarden van je sensor. De <ArticleLink to="trends">Trends-gids</ArticleLink> (in het Engels) legt het uit. De GMI is informatie voor jou en je behandelteam, geen reden om je behandeling op eigen houtje aan te passen.
+
+<AppCta />
+
+## Bronnen
+
+- Bergenstal R. M. et al. *Glucose Management Indicator (GMI): A New Term for Estimating A1C From Continuous Glucose Monitoring*. Diabetes Care 2018;41:2275-2280. [doi.org/10.2337/dc18-1581](https://doi.org/10.2337/dc18-1581)
+- Battelino T. et al. *Clinical Targets for Continuous Glucose Monitoring Data Interpretation: Recommendations From the International Consensus on Time in Range*. Diabetes Care 2019;42:1593-1603. [doi.org/10.2337/dci19-0028](https://doi.org/10.2337/dci19-0028)
+- Nathan D. M. et al. *Translating the A1C Assay Into Estimated Average Glucose Values*. Diabetes Care 2008;31:1473-1478. [doi.org/10.2337/dc08-0545](https://doi.org/10.2337/dc08-0545)

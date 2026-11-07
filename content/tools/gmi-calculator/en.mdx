@@ -1,0 +1,38 @@
+## What this calculator does
+
+Type the average glucose from your sensor report and it gives you the **GMI** (glucose management indicator), with the formulas published by Bergenstal and colleagues in 2018:
+
+- GMI (%) = 3.31 + 0.02392 × average glucose in mg/dL
+- GMI (mmol/mol) = 12.71 + 4.70587 × average glucose in mmol/L
+
+You can enter the average in mg/dL or mmol/L. An average of 154 mg/dL (8.6 mmol/L), for example, gives a GMI of 7.0% (53 mmol/mol). Next to it you'll see the A1C estimated with the older ADAG formula, which comes from a different study and gives a slightly different number.
+
+## GMI isn't your lab A1C
+
+GMI is a calculation from sensor readings; A1C is a blood test. GMI used to be called "estimated A1C" and was renamed because so many people saw their lab result differ from the number in their app. A gap between them is normal: anemia, pregnancy, how long red blood cells live and some hemoglobin variants all move A1C without changing your average glucose. To go from A1C to average glucose, use the <PageLink to="/tools/a1c-calculator">A1C calculator</PageLink>, and our <ArticleLink to="hba1c">A1C guide</ArticleLink> explains the test.
+
+## How much data GMI needs
+
+The formula was built from sensor data, and the time in range consensus recommends at least 14 days with the sensor worn about 70% of the time. An average from two or three days gives a GMI that can change a lot from one week to the next.
+
+## GMI chart
+
+Average glucose from 100 to 350 mg/dL, every 10, with the matching GMI in % and mmol/mol.
+
+<GmiTable />
+
+<Callout>
+GMI summarises the average, not the swings. Two people with the same GMI can have very different days, which is why it's read together with <ArticleLink to="time-in-range">time in range</ArticleLink>. You can work yours out with the <PageLink to="/tools/time-in-range-calculator">time in range calculator</PageLink>.
+</Callout>
+
+## GMI in Dulce
+
+The Trends tab in Dulce shows your average glucose and the estimated A1C from GMI for 7, 14, 30 or 90 days, worked out from your sensor's readings. The <ArticleLink to="trends">Trends guide</ArticleLink> explains it. GMI is information for you and your care team, not a basis for changing treatment on your own.
+
+<AppCta />
+
+## Sources
+
+- Bergenstal R. M. et al. *Glucose Management Indicator (GMI): A New Term for Estimating A1C From Continuous Glucose Monitoring*. Diabetes Care 2018;41:2275-2280. [doi.org/10.2337/dc18-1581](https://doi.org/10.2337/dc18-1581)
+- Battelino T. et al. *Clinical Targets for Continuous Glucose Monitoring Data Interpretation: Recommendations From the International Consensus on Time in Range*. Diabetes Care 2019;42:1593-1603. [doi.org/10.2337/dci19-0028](https://doi.org/10.2337/dci19-0028)
+- Nathan D. M. et al. *Translating the A1C Assay Into Estimated Average Glucose Values*. Diabetes Care 2008;31:1473-1478. [doi.org/10.2337/dc08-0545](https://doi.org/10.2337/dc08-0545)

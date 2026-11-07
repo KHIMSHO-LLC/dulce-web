@@ -59,6 +59,21 @@ const SOURCES: Partial<Record<AppPathname, string[]>> = {
     "components/tools/ToolPage.tsx",
     "lib/tools.ts",
   ],
+  "/tools/time-in-range-calculator": [
+    "app/[locale]/tools/time-in-range-calculator",
+    "content/tools/time-in-range-calculator",
+    "components/tools/TimeInRangeCalculator.tsx",
+    "components/tools/ToolPage.tsx",
+    "lib/tools.ts",
+  ],
+  "/tools/gmi-calculator": [
+    "app/[locale]/tools/gmi-calculator",
+    "content/tools/gmi-calculator",
+    "components/tools/GmiCalculator.tsx",
+    "components/tools/ConversionTables.tsx",
+    "components/tools/ToolPage.tsx",
+    "lib/tools.ts",
+  ],
 };
 
 /**

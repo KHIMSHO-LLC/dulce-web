@@ -79,7 +79,7 @@ export default async function BlogIndex({ params }: PageProps<"/[locale]/blog">)
             {t("toolsTitle")}
           </h2>
           <ul className="mt-6 grid gap-4 md:grid-cols-3">
-            {(["/tools/glucose-converter", "/tools/a1c-calculator", "/tools/sensor-end-date"] as const).map((href) => (
+            {(["/tools/glucose-converter", "/tools/a1c-calculator", "/tools/time-in-range-calculator", "/tools/gmi-calculator", "/tools/sensor-end-date"] as const).map((href) => (
               <li key={href}>
                 <Link
                   href={href}
