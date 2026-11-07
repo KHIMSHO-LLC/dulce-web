@@ -34,6 +34,8 @@ const retired: Array<{ source: string; destination: string }> = [
   { source: "/en/about", destination: "/#founder" },
   { source: "/contact", destination: "/#contact" },
   { source: "/en/contact", destination: "/#contact" },
+  // App Store support URLs (de-DE 1.0.7 uses /de/contact).
+  { source: "/:locale(es|de|fr|it|fi|nl|nb|sv|ru)/contact", destination: "/:locale#contact" },
   { source: "/android", destination: "/#download" },
   { source: "/en/android", destination: "/#download" },
 ];

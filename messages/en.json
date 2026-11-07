@@ -37,8 +37,8 @@
     "label": "Loading Dulce"
   },
   "home": {
-    "title": "Libre and Dexcom glucose on Apple Watch and the Lock Screen",
-    "description": "Dulce brings your FreeStyle Libre, Dexcom or Medtronic glucose to the Lock Screen, Dynamic Island, StandBy, Apple Watch and your family's phone. Free on the App Store.",
+    "title": "Glucose Tracker for Libre and Dexcom on Apple Watch and Lock Screen",
+    "description": "Dulce is a glucose tracker for iPhone and Apple Watch: your FreeStyle Libre, Dexcom or Medtronic glucose on the Lock Screen, Dynamic Island, StandBy and your family's phone. Free on the App Store.",
     "hero": {
       "line1": "Your glucose,",
       "line2": "always in sight.",
@@ -268,7 +268,7 @@
     "legal": "Legal",
     "disclaimer": "Dulce is not a medical device. It doesn't replace your sensor's alarms or your care team's judgment. Screens on this page show sample data.",
     "trademarks": "FreeStyle Libre and LibreLinkUp are trademarks of Abbott. Apple Watch and Apple Health are trademarks of Apple Inc. Dulce is an independent app.",
-    "copyright": "© {year} Dulce",
+    "copyright": "© {year} Dulce: Glucose Tracker",
     "top": "Back to top",
     "wordmark": "dulce",
     "learn": "Learn"

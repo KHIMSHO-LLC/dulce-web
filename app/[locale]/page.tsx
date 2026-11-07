@@ -173,8 +173,16 @@ function appSchema(locale: AppLocale, description: string) {
     "@type": "MobileApplication",
     "@id": APP_ID,
     name: "Dulce",
-    // App Store names (seo/aso.md): en/es, then the de/fr/it localized ones.
-    alternateName: ["Dulce: Glucose at a Glance", "Dulce: Blutzucker im Blick", "Dulce : Glycémie en direct", "Dulce: Glicemia sott'occhio"],
+    // App Store names (seo/aso.md, live 2026-11-07), plus the YouTube channel's "Dulce: Glucose Tracker"
+    // (also an earlier App Store name that Google still shows).
+    alternateName: [
+      "Dulce: Glucose Tracker",
+      "Dulce: Glucose at a Glance",
+      "Dulce: Glucosa de un vistazo",
+      "Dulce: Blutzucker im Blick",
+      "Dulce : Glycémie en direct",
+      "Dulce: Glicemia sott'occhio",
+    ],
     // dulce-app app.json: ios.deploymentTarget 17.0. The watch app ships inside it.
     operatingSystem: "iOS 17 or later",
     applicationCategory: "HealthApplication",
