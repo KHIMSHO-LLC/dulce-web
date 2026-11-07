@@ -178,6 +178,13 @@ const WHY_ROWS: { step: FunnelStep; label: string }[] = [
   { step: "why_later", label: "Will decide later" },
   { step: "why_other", label: "Something else" },
 ];
+const FEEDBACK_ROWS: { step: FunnelStep; label: string }[] = [
+  { step: "fb_connection", label: "Readings stop or drop out" },
+  { step: "fb_late", label: "Readings arrive late" },
+  { step: "fb_alerts", label: "Alerts don't work as wanted" },
+  { step: "fb_hard", label: "Hard to use" },
+  { step: "fb_other", label: "Something else" },
+];
 const UNINSTALL_ROWS: { step: FunnelStep; label: string }[] = [
   { step: "un_day0", label: "Within a day of installing" },
   { step: "un_week1", label: "In the first week" },
@@ -424,6 +431,12 @@ export default function UsagePage() {
                   subtitle="One tap after closing the offer at the end of onboarding (optional)."
                 >
                   <Rows rows={WHY_ROWS} counts={funnel} />
+                </Card>
+                <Card
+                  title="What could be better"
+                  subtitle={`One tap after readings dropped out on 3+ days in a week. Shown to ${funnel.fb_shown ?? 0}; App Store review asked of ${funnel.rv_asked ?? 0} satisfied paying users.`}
+                >
+                  <Rows rows={FEEDBACK_ROWS} counts={funnel} base={funnel.fb_shown ?? 0} />
                 </Card>
                 <Card
                   title="Who deleted the app"
