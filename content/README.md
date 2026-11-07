@@ -25,6 +25,23 @@ Calculators: `app/[locale]/tools/*`, formulas in `lib/tools.ts`, explanations in
   `/librelinkup-status`.
 - `<Figure src="/guides/x.jpg" alt="..." caption="..." />`: images in `public/guides/` (phone screenshots
   are 1400×3034; pass `width`/`height` otherwise, `narrow={false}` for wide images).
+## Images (from 2026-11-07)
+
+Every article gets its own cover and at least one real in-app screenshot:
+
+- **Cover** (`image` in the registry): a generated lifestyle photo that matches the topic (a parent checking a phone
+  at school pickup, a runner glancing at a watch, a cat owner on the sofa) with a **real Dulce screenshot** on the
+  phone/watch screen. 800×520 or 1600×1040, webp or jpg, in `public/guides/covers/<article id>.webp`. Never let the
+  image model draw the UI itself (it garbles numbers and labels): pass the real screenshot from `public/guides/` or
+  `public/screenshots/` as a reference and ask it to place it on the screen unchanged. Glucose on screen must be a
+  plausible value; no people's names, no brand logos other than Dulce's, no fake reviews or quotes.
+- **Inline**: at least one `<Figure>` with a real screenshot of the screen the article talks about.
+- No cover yet for a topic: use the closest existing image and add a line to `seo/covers-needed.md`
+  (article id, scene, which screenshot goes on the screen). Covers are generated in an interactive session and
+  the line is removed when the file lands.
+
+## More MDX components
+
 - `<Callout>` / `<Callout type="warning">`: notes; warnings for anything safety-related.
 - `<Steps><Step title="...">...</Step></Steps>`: numbered how-to steps.
 - Markdown tables work (remark-gfm).
