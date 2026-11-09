@@ -50,7 +50,7 @@ export async function Faq() {
               <SocialIcon name="facebook" className="h-[18px] w-[18px]" />
               {t("community.cta")}
             </a>
-            <div className="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">
+            <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-white/10 pt-5">
               <span className="text-label text-mute">{t("community.follow")}</span>
               <div className="flex gap-1">
                 {SOCIAL.map((s) => (
