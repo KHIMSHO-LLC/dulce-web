@@ -252,7 +252,13 @@
           "q": "Brauche ich ein bestimmtes iPhone?",
           "a": "Jedes iPhone mit iOS 17 oder neuer. Für die Dynamic Island brauchst du ein iPhone 14 Pro oder neuer."
         }
-      ]
+      ],
+      "community": {
+        "title": "Werde Teil der Dulce-Community",
+        "body": "Fragen, Tipps und Einstellungen von anderen, die Dulce nutzen, in unserer Facebook-Gruppe.",
+        "cta": "Der Gruppe beitreten",
+        "follow": "Folge Dulce"
+      }
     },
     "download": {
       "title": "Dein Wert,\nwo immer du hinschaust.",
@@ -271,7 +277,8 @@
     "copyright": "© {year} Dulce",
     "top": "Nach oben",
     "wordmark": "dulce",
-    "learn": "Lernen"
+    "learn": "Lernen",
+    "group": "Dulce-Community"
   },
   "waitlist": {
     "email": {

@@ -5,10 +5,14 @@ export const CONTACT_EMAIL = "hola@dulceglucosa.com";
 
 /** The brand's own social profiles (footer, Organization sameAs). */
 export const SOCIAL = [
-  { name: "Instagram", url: "https://www.instagram.com/dulce_glucosa" },
-  { name: "TikTok", url: "https://www.tiktok.com/@dulce.glucose.tra" },
-  { name: "YouTube", url: "https://www.youtube.com/@DULCEGLUCOSE" },
+  { name: "Instagram", icon: "instagram", url: "https://www.instagram.com/dulce_glucosa" },
+  { name: "Facebook", icon: "facebook", url: "https://www.facebook.com/profile.php?id=61596557061376" },
+  { name: "TikTok", icon: "tiktok", url: "https://www.tiktok.com/@dulce.glucose.tra" },
+  { name: "YouTube", icon: "youtube", url: "https://www.youtube.com/@DULCEGLUCOSE" },
 ] as const;
+
+/** The Dulce users' Facebook group (landing community card, footer). Not in sameAs: it's a group, not the brand. */
+export const COMMUNITY_GROUP_URL = "https://www.facebook.com/groups/1646762753559078";
 
 /** Homepage walkthrough video on our YouTube channel ("Dulce: Your Glucose, at a Glance"). */
 export const YOUTUBE_DEMO_ID = "yFOrkOwrFXE";

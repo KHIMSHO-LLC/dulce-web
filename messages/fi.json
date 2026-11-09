@@ -252,7 +252,13 @@
           "q": "Tarvitsenko tietyn iPhonen?",
           "a": "Mikä tahansa iPhone, jossa on iOS 17 tai uudempi. Dynamic Island vaatii iPhone 14 Pron tai uudemman."
         }
-      ]
+      ],
+      "community": {
+        "title": "Liity Dulce-yhteisöön",
+        "body": "Kysymyksiä, vinkkejä ja asetuksia muilta Dulcen käyttäjiltä Facebook-ryhmässämme.",
+        "cta": "Liity ryhmään",
+        "follow": "Seuraa Dulcea"
+      }
     },
     "download": {
       "title": "Lukemasi\nminne katsotkin.",
@@ -271,7 +277,8 @@
     "copyright": "© {year} Dulce",
     "top": "Takaisin ylös",
     "wordmark": "dulce",
-    "learn": "Opi"
+    "learn": "Opi",
+    "group": "Dulce-yhteisö"
   },
   "waitlist": {
     "email": {

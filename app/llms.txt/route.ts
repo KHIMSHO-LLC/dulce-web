@@ -12,7 +12,7 @@ import { articleUrl } from "@/lib/articles";
 import { markdownPath } from "@/lib/markdown";
 import { APP_STORE_URL } from "@/lib/schema";
 import { absoluteUrl, localizedPath } from "@/lib/seo";
-import { CONTACT_EMAIL, SOCIAL } from "@/lib/site";
+import { COMMUNITY_GROUP_URL, CONTACT_EMAIL, SOCIAL } from "@/lib/site";
 import { TOOLS, TOOL_COPY } from "@/lib/tools";
 
 export const dynamic = "force-static";
@@ -57,6 +57,7 @@ Also known as: "Dulce glucosa", "Dulce: Glucosa de un vistazo" (Spanish App Stor
 - App Store: ${APP_STORE_URL}
 - Contact: ${CONTACT_EMAIL}
 ${SOCIAL.map((s) => `- ${s.name}: ${s.url}`).join("\n")}
+- Community (Facebook group): ${COMMUNITY_GROUP_URL}
 
 ## Who it's for
 

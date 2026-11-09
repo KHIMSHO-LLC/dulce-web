@@ -252,7 +252,13 @@
           "q": "Do I need a particular iPhone?",
           "a": "Any iPhone on iOS 17 or later. The Dynamic Island needs an iPhone 14 Pro or later."
         }
-      ]
+      ],
+      "community": {
+        "title": "Join the Dulce community",
+        "body": "Questions, tips and setups from other people who use Dulce, in our Facebook group.",
+        "cta": "Join the group",
+        "follow": "Follow Dulce"
+      }
     },
     "download": {
       "title": "Your number,\nwherever you look.",
@@ -271,7 +277,8 @@
     "copyright": "© {year} Dulce: Glucose Tracker",
     "top": "Back to top",
     "wordmark": "dulce",
-    "learn": "Learn"
+    "learn": "Learn",
+    "group": "Dulce community"
   },
   "waitlist": {
     "email": {
