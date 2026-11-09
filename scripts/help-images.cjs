@@ -40,10 +40,21 @@ async function framed({ frame, fw, fh, box, src, out, prep, outW }) {
   // iPhone screen box: left 5.333%, top 2.5%, 89.333% x 95% of 1350x2760, radius 13.5%/6.2%.
   const pbox = [72, 69, 1206, 2622, 163, 163];
   const phone = (src, out, prep) => framed({ frame: PHONE, fw: 1350, fh: 2760, box: pbox, src, out, prep, outW: 700 });
-  // Lock screen: paint over the carrier name in the status bar.
-  await phone(`${D}/dulce-marketing/screenshots/lock-screen/06-105-in-range-green.png`, 'iphone-lock-screen.webp', async (img) =>
-    sharp(await img.composite([{ input: Buffer.from('<svg width="200" height="70"><rect width="200" height="70" fill="#000"/></svg>'), left: 90, top: 35 }]).png().toBuffer()));
-  await phone(`${D}/dulce-marketing/screenshots/walkthrough/17-alerts.png`, 'iphone-alerts.webp');
+  // Lock screens (923x2000): blur the carrier name in the status bar so it blends into the wallpaper.
+  const hideCarrier = async (img) => {
+    const buf = await img.png().toBuffer();
+    const { width, height } = await sharp(buf).metadata();
+    // Soft-edged mask over the carrier name, so the blurred patch has no visible border.
+    const mask = await sharp(Buffer.from(
+      `<svg width="${width}" height="${height}"><rect x="85" y="30" width="220" height="85" rx="30" fill="#fff"/></svg>`,
+    )).blur(14).png().toBuffer();
+    const blurred = await sharp(buf).blur(30).composite([{ input: mask, blend: 'dest-in' }]).png().toBuffer();
+    return sharp(await sharp(buf).composite([{ input: blurred }]).png().toBuffer());
+  };
+  await phone(`${D}/dulce-marketing/screenshots/lock-screen/06-105-in-range-green.png`, 'iphone-lock-screen.webp', hideCarrier);
+  // Alerts: Settings › Alerts with the red Critical low card, and the Lock Screen card at a critical low.
+  await phone(`${D}/dulce-marketing/screenshots/app/settings-alerts-critical-low.png`, 'iphone-alerts-critical.webp');
+  await phone(`${D}/dulce-marketing/screenshots/lock-screen/03-urgent-low-56-red-card.png`, 'iphone-critical-low.webp', hideCarrier);
 
   // Family: a cropped app screen, no frame.
   await sharp(`${D}/dulce-marketing/brand/app-images/paywall/family.jpg`).webp({ quality: 88 }).toFile(`${OUT}/family-followers.webp`);
