@@ -212,8 +212,23 @@ export interface FirstSeenBucket {
 
 /** Everything the Usage tab renders — see relay/src/routes/analytics.ts for
  *  how each number is derived and what it does NOT mean (device ≠ person). */
+/** Devices on one CGM source, by plan. */
+export interface SensorLevels {
+  total: number;
+  free: number;
+  trialing: number;
+  paid: number;
+  /** Got a new sensor reading in the last 7 days (all plans / Pro = trial + paid). */
+  readingLast7d: number;
+  readingLast7dPro: number;
+  /** 3+ failed polls in a row right now (expired session, no data, …). */
+  failing: number;
+}
+
 export interface UsageResponse {
   current: FleetLevels;
+  /** Per CGM source (libre, dexcom, carelink, nightscout). Older relays omit it. */
+  bySensor?: Record<string, SensorLevels> | null;
   today: { date: string; events: EventCounts };
   history: DailyRollup[];
   firstSeen: FirstSeenBucket[];

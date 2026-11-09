@@ -16,6 +16,7 @@ import {
   fetchUsage,
   type FunnelStep,
   type LifecycleEvent,
+  type SensorLevels,
   type UsageResponse,
 } from "../../api";
 import { useAdmin } from "../../AdminGate";
@@ -96,6 +97,73 @@ function Card({
       <h3 className="text-label font-bold text-foreground">{title}</h3>
       {subtitle ? <p className="mt-0.5 text-caption text-muted">{subtitle}</p> : null}
       <div className="mt-4">{children}</div>
+    </div>
+  );
+}
+
+const SENSOR_LABELS: Record<string, string> = {
+  libre: "FreeStyle Libre",
+  dexcom: "Dexcom",
+  carelink: "Medtronic CareLink",
+  nightscout: "Nightscout",
+};
+
+/** Devices per CGM source, by plan. Pro = trial + paid. */
+function SensorTable({ bySensor }: { bySensor: Record<string, SensorLevels> }) {
+  const rows = Object.entries(bySensor).sort((a, b) => b[1].total - a[1].total);
+  const sum = (k: keyof SensorLevels) => rows.reduce((n, [, s]) => n + s[k], 0);
+  const pct = (n: number, d: number) => (d ? `${Math.round((n / d) * 100)}%` : "–");
+  const cell = "px-3 py-2 text-right tabular-nums";
+  return (
+    <div className="mt-6">
+      <Card
+        title="Sensors"
+        subtitle="Devices per CGM source. Pro = trial + paying. Readings 7d = a new sensor reading reached the relay in the last 7 days. Failing = 3+ failed polls in a row now (expired session, no data)."
+      >
+        <div className="overflow-x-auto">
+          <table className="w-full text-label">
+            <thead className="text-caption uppercase tracking-wide text-muted">
+              <tr>
+                <th className="px-3 py-2 text-left">Sensor</th>
+                <th className={cell}>Devices</th>
+                <th className={cell}>Free</th>
+                <th className={cell}>Trial</th>
+                <th className={cell}>Paying</th>
+                <th className={cell}>Pro share</th>
+                <th className={cell}>Readings 7d</th>
+                <th className={cell}>Pro readings 7d</th>
+                <th className={cell}>Failing</th>
+              </tr>
+            </thead>
+            <tbody className="text-foreground">
+              {rows.map(([key, s]) => (
+                <tr key={key} className="border-t border-border-subtle">
+                  <td className="px-3 py-2 text-left font-bold">{SENSOR_LABELS[key] ?? key}</td>
+                  <td className={cell}>{s.total}</td>
+                  <td className={cell}>{s.free}</td>
+                  <td className={cell}>{s.trialing}</td>
+                  <td className={cell}>{s.paid}</td>
+                  <td className={cell}>{pct(s.trialing + s.paid, s.total)}</td>
+                  <td className={cell}>{s.readingLast7d}</td>
+                  <td className={cell}>{s.readingLast7dPro}</td>
+                  <td className={`${cell} ${s.failing ? "text-state-low" : ""}`}>{s.failing}</td>
+                </tr>
+              ))}
+              <tr className="border-t border-border-subtle font-bold">
+                <td className="px-3 py-2 text-left">All</td>
+                <td className={cell}>{sum("total")}</td>
+                <td className={cell}>{sum("free")}</td>
+                <td className={cell}>{sum("trialing")}</td>
+                <td className={cell}>{sum("paid")}</td>
+                <td className={cell}>{pct(sum("trialing") + sum("paid"), sum("total"))}</td>
+                <td className={cell}>{sum("readingLast7d")}</td>
+                <td className={cell}>{sum("readingLast7dPro")}</td>
+                <td className={cell}>{sum("failing")}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </Card>
     </div>
   );
 }
@@ -332,6 +400,8 @@ export default function UsagePage() {
               hint={`iOS / Android${current!.unknownPlatform ? ` · ${current!.unknownPlatform} unknown (old rows)` : ""}`}
             />
           </div>
+
+          {data.bySensor ? <SensorTable bySensor={data.bySensor} /> : null}
 
           <div className="mt-6 grid gap-3 lg:grid-cols-2">
             <Card
