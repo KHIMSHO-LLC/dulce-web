@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports -- plain Node script (CommonJS) */
 // Renders help-page images. When you change an image, give it a NEW file name (e.g. -v3):
 // browsers and the Next.js image cache keep serving the old picture under the same name.
 // Renders help-page images: app screenshots inside Apple Watch Ultra / iPhone frames.
