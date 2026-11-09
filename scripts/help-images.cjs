@@ -1,3 +1,5 @@
+// Renders help-page images. When you change an image, give it a NEW file name (e.g. -v3):
+// browsers and the Next.js image cache keep serving the old picture under the same name.
 // Renders help-page images: app screenshots inside Apple Watch Ultra / iPhone frames.
 // Run from dulce-web: WEB=$PWD DULCE=.. node scripts/help-images.cjs (needs the dulce-marketing repo next to it).
 const path = require('path');
@@ -51,10 +53,10 @@ async function framed({ frame, fw, fh, box, src, out, prep, outW }) {
     const blurred = await sharp(buf).blur(30).composite([{ input: mask, blend: 'dest-in' }]).png().toBuffer();
     return sharp(await sharp(buf).composite([{ input: blurred }]).png().toBuffer());
   };
-  await phone(`${D}/dulce-marketing/screenshots/lock-screen/06-105-in-range-green.png`, 'iphone-lock-screen.webp', hideCarrier);
+  await phone(`${D}/dulce-marketing/screenshots/lock-screen/06-105-in-range-green.png`, 'iphone-lock-screen-v2.webp', hideCarrier);
   // Alerts: Settings › Alerts with the red Critical low card, and the Lock Screen card at a critical low.
   await phone(`${D}/dulce-marketing/screenshots/app/settings-alerts-critical-low.png`, 'iphone-alerts-critical.webp');
-  await phone(`${D}/dulce-marketing/screenshots/lock-screen/03-urgent-low-56-red-card.png`, 'iphone-critical-low.webp', hideCarrier);
+  await phone(`${D}/dulce-marketing/screenshots/lock-screen/03-urgent-low-56-red-card.png`, 'iphone-critical-low-v2.webp', hideCarrier);
 
   // Family: a cropped app screen, no frame.
   await sharp(`${D}/dulce-marketing/brand/app-images/paywall/family.jpg`).webp({ quality: 88 }).toFile(`${OUT}/family-followers.webp`);
