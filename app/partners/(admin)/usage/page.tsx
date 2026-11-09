@@ -1,9 +1,12 @@
 "use client";
 
 /**
- * Devices tab (route /partners/usage) — every phone the relay knows.
+ * Usage tab (route /partners/usage) — every phone the relay knows.
  *
- * Everything here comes from one relay call (GET /ref/admin/usage). Read
+ * Device numbers come from GET /ref/admin/usage. The Paying / Trialing cards
+ * come from RevenueCat's Overview (GET /ref/admin/rc/overview) when it
+ * answers: devices can't give the real count (one subscriber can have two
+ * phones, and pre-1.0.5 builds don't send their RevenueCat id). Read
  * relay/src/routes/analytics.ts for how each number is derived; the caveats
  * that matter for interpretation are repeated on-screen, because a dashboard
  * number with an invisible caveat is worse than no number.
@@ -13,9 +16,11 @@ import { useCallback, useEffect, useState } from "react";
 import {
   LIFECYCLE_EVENTS,
   UnauthorizedError,
+  fetchRcOverview,
   fetchUsage,
   type FunnelStep,
   type LifecycleEvent,
+  type RcOverviewMetric,
   type SensorLevels,
   type UsageResponse,
 } from "../../api";
@@ -279,6 +284,7 @@ const UNINSTALL_ROWS: { step: FunnelStep; label: string }[] = [
 export default function UsagePage() {
   const { adminKey, onUnauthorized } = useAdmin();
   const [data, setData] = useState<UsageResponse | null>(null);
+  const [rcMetrics, setRcMetrics] = useState<RcOverviewMetric[] | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -287,7 +293,14 @@ export default function UsagePage() {
       setLoading(true);
       setError(null);
       try {
-        setData(await fetchUsage(key));
+        // The RevenueCat overview is optional: if it fails, the cards fall
+        // back to the device counts.
+        const [usage, ov] = await Promise.all([
+          fetchUsage(key),
+          fetchRcOverview(key).catch(() => null),
+        ]);
+        setData(usage);
+        setRcMetrics(ov?.ok ? (ov.data.metrics ?? null) : null);
       } catch (err) {
         if (err instanceof UnauthorizedError) {
           onUnauthorized();
@@ -311,6 +324,14 @@ export default function UsagePage() {
   const pct = (n: number) =>
     !current || current.total === 0 ? "0%" : `${Math.round((n / current.total) * 100)}%`;
   const funnel = data?.funnel?.last30d;
+  // Matched by id, with the display name as a fallback ("Active Subscriptions").
+  const rcValue = (id: string) => {
+    const name = id.replace(/_/g, " ");
+    const m = rcMetrics?.find((x) => x.id === id || x.name?.toLowerCase() === name);
+    return typeof m?.value === "number" ? m.value : null;
+  };
+  const rcSubs = rcValue("active_subscriptions");
+  const rcTrials = rcValue("active_trials");
 
   // The API returns 90 completed days plus today's partial counts. The event
   // small multiples chart the last 30: at 90 the bars collapse to one-pixel
@@ -334,7 +355,7 @@ export default function UsagePage() {
     <div className="container-page py-10">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <h1 className="text-display font-bold tracking-tight text-foreground">Devices</h1>
+          <h1 className="text-display font-bold tracking-tight text-foreground">Usage</h1>
           <p className="mt-1 text-label text-muted">
             Every device that has connected LibreLinkUp or Dexcom, free users included.
           </p>
@@ -370,20 +391,22 @@ export default function UsagePage() {
             />
             <Stat
               label="Paying"
-              value={String(current!.paid)}
+              value={String(rcSubs ?? current!.paid)}
               hint={
-                data.proCheck && !data.proCheck.error
-                  ? `${pct(current!.paid)} · production only, checked with RevenueCat${current!.test ? ` · ${current!.test} TestFlight/promo not counted` : ""}`
-                  : `${pct(current!.paid)} · as reported by the app (RevenueCat check unavailable)`
+                rcSubs != null
+                  ? `Active subscriptions in RevenueCat (production) · ${current!.paid} paying devices on the relay`
+                  : data.proCheck && !data.proCheck.error
+                    ? `${pct(current!.paid)} of devices · RevenueCat overview unavailable, device count shown`
+                    : `${pct(current!.paid)} · as reported by the app (RevenueCat unavailable)`
               }
             />
             <Stat
               label="Trialing"
-              value={String(current!.trialing)}
+              value={String(rcTrials ?? current!.trialing)}
               hint={
-                data.proCheck && data.proCheck.unknown
-                  ? `Production trials · ${data.proCheck.unknown} Pro on old app builds counted as reported`
-                  : "Production trials: full Pro access, no revenue yet"
+                rcTrials != null
+                  ? `Active trials in RevenueCat (production) · ${current!.trialing} trial devices on the relay`
+                  : "Device count (RevenueCat overview unavailable)"
               }
             />
             <Stat label="Free" value={String(current!.free)} hint={pct(current!.free)} />
