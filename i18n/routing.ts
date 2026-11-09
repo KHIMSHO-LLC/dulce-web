@@ -72,6 +72,10 @@ export const routing = defineRouting({
     // the same slug.
     "/setup": "/setup",
     "/pro": "/pro",
+    // Help centre: short how-to pages, opened from the app too (dulce-app `constants/links.ts`
+    // builds `/<locale>/help/<id>`), so the slugs are fixed, not localized (content/help.ts).
+    "/help": "/help",
+    "/help/[slug]": "/help/[slug]",
     // Segment hub: who Dulce is for, by person and by type of diabetes.
     "/who-is-dulce-for": {
       es: "/para-quien-es-dulce",

@@ -26,6 +26,7 @@ const useIsoLayoutEffect = typeof window === "undefined" ? useEffect : useLayout
  */
 export function PillNav() {
   const t = useTranslations("nav");
+  const helpT = useTranslations("help");
   const locale = useLocale();
   const pathname = usePathname();
   const onHome = pathname === "/";
@@ -247,6 +248,9 @@ export function PillNav() {
               <div className="grid content-start gap-1.5">
                 <Link href="/blog" className={smallClass}>
                   {t("guides")}
+                </Link>
+                <Link href="/help" className={smallClass}>
+                  {helpT("nav")}
                 </Link>
                 <Link href="/setup" className={smallClass}>
                   {t("setup")}

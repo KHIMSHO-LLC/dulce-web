@@ -1,0 +1,65 @@
+Dulce doesn't talk to your sensor directly. It reads your glucose from the account your sensor app already shares to. There are four ways in, depending on your sensor. All of them are free; Pro adds the extras (Live Activity, Apple Watch, family) on top.
+
+To switch later: <Path>Settings › Sensor › Connect a different sensor</Path>. Your history stays.
+
+<Option title="FreeStyle Libre 2 and 3 (LibreLinkUp)">
+
+Sign in with your **LibreLinkUp** email and password, the follower account, not the LibreLink one. If you've never used LibreLinkUp, turn on sharing first: <PageLink to="/setup">set up LibreLinkUp in four steps</PageLink>.
+
+<Pros>
+- A new reading every minute.
+</Pros>
+
+<Cons>
+- Needs a LibreLinkUp account, separate from your LibreLink one.
+- The phone that reads the sensor must be online for new readings to arrive.
+</Cons>
+
+</Option>
+
+<Option title="Dexcom G6, G7 and ONE+ (Dexcom Share)">
+
+Sign in with the account you use in the Dexcom app. First, in the Dexcom app, go to **Connections › Share**, turn Share on and invite at least one follower (a second email of your own is fine). Pick the region where you created your Dexcom account.
+
+<Pros>
+- No extra app: just turn on Share.
+</Pros>
+
+<Cons>
+- Dexcom shares a new reading every 5 minutes.
+- Sensor expiry reminders stay in the Dexcom app.
+</Cons>
+
+</Option>
+
+<Option title="Medtronic Simplera, Guardian, Instinct and MiniMed 780G (CareLink)">
+
+Tap **Sign in with CareLink**: Medtronic's own page opens and you sign in there, so Dulce never sees your password. Your Simplera or MiniMed app must be uploading to CareLink. A care partner account works too.
+
+<Pros>
+- Your password stays with Medtronic.
+</Pros>
+
+<Cons>
+- CareLink isn't an official connection for other apps, and Medtronic can change it at any time.
+</Cons>
+
+</Option>
+
+<Option title="Nightscout">
+
+Enter your site's https address and, if your site isn't open, a read-only **access token** (create one in Nightscout › Admin Tools with the "readable" role). Dulce only reads glucose and never writes to your site.
+
+<Pros>
+- Works with any sensor or uploader that feeds your Nightscout.
+</Pros>
+
+<Cons>
+- You need to run your own Nightscout site.
+</Cons>
+
+</Option>
+
+## If it doesn't connect
+
+The sign-in screen says what went wrong. The most common causes: the wrong account (LibreLink instead of LibreLinkUp), the wrong Dexcom region, or sharing not turned on yet. Readings stopped later? See <HelpLink to="not-updating">readings not updating</HelpLink>.

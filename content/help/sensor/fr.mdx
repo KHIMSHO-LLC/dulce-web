@@ -1,0 +1,65 @@
+Dulce ne parle pas directement à ton capteur. Il lit ta glycémie depuis le compte vers lequel l'app de ton capteur partage déjà. Il y a quatre façons de le connecter, selon ton capteur. Toutes sont gratuites ; Pro ajoute les extras (Activité en direct, Apple Watch, famille).
+
+Pour changer plus tard : <Path>Réglages › Capteur › Connecter un autre capteur</Path>. Ton historique est conservé.
+
+<Option title="FreeStyle Libre 2 et 3 (LibreLinkUp)">
+
+Connecte-toi avec l'e-mail et le mot de passe **LibreLinkUp**, le compte abonné, pas celui de LibreLink. Si tu n'as jamais utilisé LibreLinkUp, active d'abord le partage : <PageLink to="/setup">configurer LibreLinkUp en quatre étapes</PageLink>.
+
+<Pros>
+- Une nouvelle valeur chaque minute.
+</Pros>
+
+<Cons>
+- Nécessite un compte LibreLinkUp, distinct du compte LibreLink.
+- Le téléphone qui lit le capteur doit être connecté pour que les nouvelles valeurs arrivent.
+</Cons>
+
+</Option>
+
+<Option title="Dexcom G6, G7 et ONE+ (Dexcom Share)">
+
+Connecte-toi avec le compte que tu utilises dans l'app Dexcom. Avant, dans l'app Dexcom, va dans **Connexions › Partage**, active Share et invite au moins un abonné (une deuxième adresse e-mail à toi suffit). Choisis la région où tu as créé ton compte Dexcom.
+
+<Pros>
+- Pas d'app en plus : il suffit d'activer Share.
+</Pros>
+
+<Cons>
+- Dexcom partage une nouvelle valeur toutes les 5 minutes.
+- Les rappels de fin de capteur restent dans l'app Dexcom.
+</Cons>
+
+</Option>
+
+<Option title="Medtronic Simplera, Guardian, Instinct et MiniMed 780G (CareLink)">
+
+Touche **Se connecter avec CareLink** : la page de Medtronic s'ouvre et tu te connectes là-bas, donc Dulce ne voit jamais ton mot de passe. Ton app Simplera ou MiniMed doit envoyer ses données à CareLink. Un compte de proche aidant fonctionne aussi.
+
+<Pros>
+- Ton mot de passe reste chez Medtronic.
+</Pros>
+
+<Cons>
+- CareLink n'est pas une connexion officielle pour les autres apps, et Medtronic peut la modifier à tout moment.
+</Cons>
+
+</Option>
+
+<Option title="Nightscout">
+
+Saisis l'adresse https de ton site et, s'il n'est pas ouvert, un **jeton d'accès** en lecture seule (à créer dans Nightscout › Admin Tools avec le rôle « readable »). Dulce lit seulement la glycémie et n'écrit jamais sur ton site.
+
+<Pros>
+- Fonctionne avec n'importe quel capteur ou uploader qui alimente ton Nightscout.
+</Pros>
+
+<Cons>
+- Il te faut ton propre site Nightscout.
+</Cons>
+
+</Option>
+
+## Si ça ne se connecte pas
+
+L'écran de connexion indique ce qui a échoué. Les causes les plus fréquentes : le mauvais compte (LibreLink au lieu de LibreLinkUp), la mauvaise région Dexcom ou le partage pas encore activé. Les valeurs se sont arrêtées plus tard ? Vois <HelpLink to="not-updating">les valeurs ne se mettent pas à jour</HelpLink>.

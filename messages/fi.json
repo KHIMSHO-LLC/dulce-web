@@ -252,7 +252,13 @@
           "q": "Tarvitsenko tietyn iPhonen?",
           "a": "Mikä tahansa iPhone, jossa on iOS 17 tai uudempi. Dynamic Island vaatii iPhone 14 Pron tai uudemman."
         }
-      ]
+      ],
+      "community": {
+        "title": "Liity Dulce-yhteisöön",
+        "body": "Kysymyksiä, vinkkejä ja asetuksia muilta Dulcen käyttäjiltä Facebook-ryhmässämme.",
+        "cta": "Liity ryhmään",
+        "follow": "Seuraa Dulcea"
+      }
     },
     "download": {
       "title": "Lukemasi\nminne katsotkin.",
@@ -271,7 +277,8 @@
     "copyright": "© {year} Dulce",
     "top": "Takaisin ylös",
     "wordmark": "dulce",
-    "learn": "Opi"
+    "learn": "Opi",
+    "group": "Dulce-yhteisö"
   },
   "waitlist": {
     "email": {
@@ -727,5 +734,20 @@
     ],
     "note": "Live Activity, Apple Watch -sovellus, CarPlay-kortti ja perhejako ovat Dulce Pro -ominaisuuksia, joissa on 14 päivän ilmainen kokeilu; seuraajat eivät maksa. Dulce ei ole lääkinnällinen laite. Se näyttää lukemat, ei diagnosoi, hoida tai anna annosneuvoja, eikä se korvaa sensorisi hälytyksiä tai hoitotiimisi arviota.",
     "cta": "Ilmainen ladata. Seuraajat eivät maksa mitään."
+  },
+  "help": {
+    "nav": "Ohjeet",
+    "title": "Dulcen ohjeet",
+    "description": "Lyhyet ohjeet Dulcen käyttöön: Apple Watch, lukitusnäyttö, widgetit, hälytykset, jakaminen perheelle, sensorin yhdistäminen ja lukemat, jotka eivät päivity.",
+    "eyebrow": "Ohjeet",
+    "headline": "Miten voimme auttaa?",
+    "sub": "Lyhyet vastaukset Dulcen käyttäjille: vaihtoehdot, mihin kukin sopii ja minkä me valitsisimme.",
+    "updated": "Päivitetty {date}",
+    "more": "Lisää ohjeita",
+    "stuckTitle": "Etkö vieläkään pääse eteenpäin?",
+    "stuckBody": "Kirjoita meille, niin ihminen vastaa, yleensä 48 työtunnin kuluessa.",
+    "englishNotice": "Tämä sivu on toistaiseksi vain englanniksi.",
+    "medical": "Dulce ei ole lääkinnällinen laite. Se ei korvaa sensorisi hälytyksiä eikä hoitotiimisi neuvoja.",
+    "home": "Etusivu"
   }
 }

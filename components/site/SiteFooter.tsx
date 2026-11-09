@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { CONTACT_EMAIL, SECTION, SOCIAL, homeSection } from "@/lib/site";
+import { COMMUNITY_GROUP_URL, CONTACT_EMAIL, SECTION, SOCIAL, homeSection } from "@/lib/site";
+import { SocialIcon } from "./SocialIcon";
 import type { AppLocale } from "@/i18n/routing";
 import { WordmarkRise } from "@/components/motion/WordmarkRise";
 import { TOOL_COPY } from "@/lib/tools";
@@ -19,6 +20,7 @@ export async function SiteFooter() {
   const status = await getTranslations("llustatus");
   const pro = await getTranslations("pro");
   const audience = await getTranslations("audience");
+  const helpT = await getTranslations("help");
   const year = new Date().getFullYear();
   const home = (id: string) => homeSection(locale as AppLocale, id);
 
@@ -80,6 +82,9 @@ export async function SiteFooter() {
 
           <div className="grid content-start gap-2 text-label">
             <p className="mb-1 text-mute">{t("help")}</p>
+            <Link href="/help" className={linkClass}>
+              {helpT("nav")}
+            </Link>
             <Link href="/setup" className={linkClass}>
               {nav("setup")}
             </Link>
@@ -92,11 +97,24 @@ export async function SiteFooter() {
             <a href={`mailto:${CONTACT_EMAIL}`} className={linkClass}>
               {CONTACT_EMAIL}
             </a>
-            {SOCIAL.map((s) => (
-              <a key={s.name} href={s.url} target="_blank" rel="me noopener noreferrer" className={linkClass}>
-                {s.name}
-              </a>
-            ))}
+            <a href={COMMUNITY_GROUP_URL} target="_blank" rel="noopener noreferrer" className={linkClass}>
+              {t("group")}
+            </a>
+            <div className="-ml-2.5 mt-1 flex gap-0.5">
+              {SOCIAL.map((s) => (
+                <a
+                  key={s.name}
+                  href={s.url}
+                  target="_blank"
+                  rel="me noopener noreferrer"
+                  aria-label={s.name}
+                  title={s.name}
+                  className="grid h-10 w-10 place-items-center rounded-full text-soft transition-colors hover:bg-white/8 hover:text-ink"
+                >
+                  <SocialIcon name={s.icon} className="h-[18px] w-[18px]" />
+                </a>
+              ))}
+            </div>
             <div className="-ml-2.5 mt-2">
               <LanguageSwitcher />
             </div>

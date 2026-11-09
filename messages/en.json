@@ -252,7 +252,13 @@
           "q": "Do I need a particular iPhone?",
           "a": "Any iPhone on iOS 17 or later. The Dynamic Island needs an iPhone 14 Pro or later."
         }
-      ]
+      ],
+      "community": {
+        "title": "Join the Dulce community",
+        "body": "Questions, tips and setups from other people who use Dulce, in our Facebook group.",
+        "cta": "Join the group",
+        "follow": "Follow Dulce"
+      }
     },
     "download": {
       "title": "Your number,\nwherever you look.",
@@ -271,7 +277,8 @@
     "copyright": "© {year} Dulce: Glucose Tracker",
     "top": "Back to top",
     "wordmark": "dulce",
-    "learn": "Learn"
+    "learn": "Learn",
+    "group": "Dulce community"
   },
   "waitlist": {
     "email": {
@@ -727,5 +734,20 @@
     ],
     "note": "The Live Activity, Apple Watch app, CarPlay card and family sharing are Dulce Pro features, with a 14-day free trial; followers pay nothing. Dulce is not a medical device. It shows readings and doesn't diagnose, treat or give dosing advice, and it doesn't replace your sensor's alarms or your care team's judgment.",
     "cta": "Free to download. Followers pay nothing."
+  },
+  "help": {
+    "nav": "How-to guides",
+    "title": "Dulce help: how-to guides",
+    "description": "Short how-to guides for Dulce: Apple Watch, Lock Screen, widgets, alerts, family sharing, connecting your sensor and fixing readings that don't update.",
+    "eyebrow": "Help",
+    "headline": "How can we help?",
+    "sub": "Short answers for people who use Dulce: your options, what each one is good at, and what we'd pick.",
+    "updated": "Updated {date}",
+    "more": "More help",
+    "stuckTitle": "Still stuck?",
+    "stuckBody": "Write to us and a person will answer, usually within 48 working hours.",
+    "englishNotice": "This page is only available in English for now.",
+    "medical": "Dulce is not a medical device. It doesn't replace your sensor's alarms or your care team's advice.",
+    "home": "Home"
   }
 }

@@ -252,7 +252,13 @@
           "q": "Heb ik een bepaalde iPhone nodig?",
           "a": "Elke iPhone met iOS 17 of nieuwer. Voor het Dynamic Island heb je een iPhone 14 Pro of nieuwer nodig."
         }
-      ]
+      ],
+      "community": {
+        "title": "Word lid van de Dulce-community",
+        "body": "Vragen, tips en instellingen van anderen die Dulce gebruiken, in onze Facebookgroep.",
+        "cta": "Word lid van de groep",
+        "follow": "Volg Dulce"
+      }
     },
     "download": {
       "title": "Je waarde,\nwaar je ook kijkt.",
@@ -271,7 +277,8 @@
     "copyright": "© {year} Dulce",
     "top": "Terug naar boven",
     "wordmark": "dulce",
-    "learn": "Leren"
+    "learn": "Leren",
+    "group": "Dulce-community"
   },
   "waitlist": {
     "email": {
@@ -727,5 +734,20 @@
     ],
     "note": "De Live Activity, de Apple Watch-app, de CarPlay-kaart en familie delen zijn Dulce Pro-functies met 14 dagen gratis proef; volgers betalen niets. Dulce is geen medisch hulpmiddel. Het toont waarden, stelt geen diagnose, behandelt niet en geeft geen doseeradvies. Het vervangt de alarmen van je sensor en je zorgteam niet.",
     "cta": "Gratis te downloaden. Volgers betalen niets."
+  },
+  "help": {
+    "nav": "Handleidingen",
+    "title": "Dulce-hulp: handleidingen",
+    "description": "Korte handleidingen voor Dulce: Apple Watch, toegangsscherm, widgets, alarmen, delen met familie, je sensor koppelen en waarden die niet bijwerken.",
+    "eyebrow": "Hulp",
+    "headline": "Waarmee kunnen we helpen?",
+    "sub": "Korte antwoorden voor wie Dulce gebruikt: je opties, waar elk goed in is en wat wij zouden kiezen.",
+    "updated": "Bijgewerkt op {date}",
+    "more": "Meer hulp",
+    "stuckTitle": "Kom je er nog niet uit?",
+    "stuckBody": "Schrijf ons en een mens antwoordt, meestal binnen 48 werkuren.",
+    "englishNotice": "Deze pagina is voorlopig alleen in het Engels.",
+    "medical": "Dulce is geen medisch hulpmiddel. Het vervangt de alarmen van je sensor en het advies van je zorgteam niet.",
+    "home": "Home"
   }
 }

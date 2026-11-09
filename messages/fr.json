@@ -252,7 +252,13 @@
           "q": "Faut-il un iPhone particulier ?",
           "a": "N'importe quel iPhone sous iOS 17 ou plus récent. La Dynamic Island nécessite un iPhone 14 Pro ou plus récent."
         }
-      ]
+      ],
+      "community": {
+        "title": "Rejoignez la communauté Dulce",
+        "body": "Questions, astuces et réglages d'autres personnes qui utilisent Dulce, dans notre groupe Facebook.",
+        "cta": "Rejoindre le groupe",
+        "follow": "Suivre Dulce"
+      }
     },
     "download": {
       "title": "Ton chiffre,\nlà où tu regardes.",
@@ -271,7 +277,8 @@
     "copyright": "© {year} Dulce",
     "top": "Retour en haut",
     "wordmark": "dulce",
-    "learn": "Apprendre"
+    "learn": "Apprendre",
+    "group": "Communauté Dulce"
   },
   "waitlist": {
     "email": {
@@ -727,5 +734,20 @@
     ],
     "note": "L'Activité en direct, l'app Apple Watch, la carte CarPlay et le partage en famille sont des fonctions Dulce Pro, avec 14 jours d'essai gratuit ; les abonnés ne paient rien. Dulce n'est pas un dispositif médical. Elle affiche des mesures, ne diagnostique pas, ne traite pas et ne donne aucun conseil de dose. Elle ne remplace ni les alarmes de ton capteur ni l'avis de ton équipe soignante.",
     "cta": "Téléchargement gratuit. Les abonnés ne paient rien."
+  },
+  "help": {
+    "nav": "Guides pratiques",
+    "title": "Aide Dulce : guides pratiques",
+    "description": "Guides courts pour Dulce : Apple Watch, écran verrouillé, widgets, alertes, partage en famille, connexion du capteur et valeurs qui ne se mettent pas à jour.",
+    "eyebrow": "Aide",
+    "headline": "Comment pouvons-nous t'aider ?",
+    "sub": "Des réponses courtes pour celles et ceux qui utilisent Dulce : tes options, ce que chacune fait bien et ce que nous choisirions.",
+    "updated": "Mis à jour le {date}",
+    "more": "Plus d'aide",
+    "stuckTitle": "Toujours bloqué ?",
+    "stuckBody": "Écris-nous : une vraie personne te répond, en général sous 48 heures ouvrées.",
+    "englishNotice": "Cette page n'existe qu'en anglais pour l'instant.",
+    "medical": "Dulce n'est pas un dispositif médical. Il ne remplace ni les alarmes de ton capteur ni les conseils de ton équipe soignante.",
+    "home": "Accueil"
   }
 }
