@@ -1,0 +1,27 @@
+If the number on your Lock Screen, watch or widget looks stuck, go through these checks in order. Most of the time the cause is before Dulce: the sensor app or the sharing service stopped sending new readings.
+
+<Steps>
+<Step title="Check the time of the reading">
+Every Dulce screen shows how old the reading is. Open Dulce: if the app shows a fresh reading, skip to step 5.
+</Step>
+<Step title="Check the sensor app">
+Open your sensor's own app on the phone that reads the sensor. Does it show the current reading? That phone needs internet (Wi-Fi or mobile data) to share. If the sensor app is behind, Dulce will be too.
+</Step>
+<Step title="Check the sharing service">
+LibreLinkUp, Dexcom Share, CareLink and Nightscout sometimes have outages. For LibreLinkUp, our <PageLink to="/librelinkup-status">live LibreLinkUp status</PageLink> shows if it's down for everyone.
+</Step>
+<Step title="Sign in again if Dulce asks">
+If Dulce shows a banner asking you to sign in again (for example after you changed your password), tap it and sign in. With LibreLinkUp, open the LibreLinkUp app once too: if it asks you to accept new terms, accept them.
+</Step>
+<Step title="If only the Lock Screen, watch or widget is stuck">
+In the iPhone **Settings › Dulce**, check that **Live Activities** and **Background App Refresh** are on. Turn off **Low Power Mode** on the iPhone and the watch: it holds back background updates. For the watch, check it's connected to your iPhone or to Wi-Fi.
+</Step>
+</Steps>
+
+## Why widgets and complications lag
+
+iOS and watchOS decide when widgets and watch faces are redrawn, to save battery. A few minutes' delay there is normal, even when Dulce has the new reading. For a number that follows every reading, use the **Live Activity**: see <HelpLink to="iphone-glance">seeing your glucose without opening the app</HelpLink>.
+
+<Callout type="warning">
+Never act on a number without checking how old it is. If in doubt, check your sensor app or do a fingerstick.
+</Callout>

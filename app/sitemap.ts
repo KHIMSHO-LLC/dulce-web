@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
-import { LEGAL_LOCALES, locales, routing, type AppLocale, type AppPathname } from "@/i18n/routing";
+import { CORE_LOCALES, LEGAL_LOCALES, locales, routing, type AppLocale, type AppPathname } from "@/i18n/routing";
 import { ARTICLES, articleLocales } from "@/content/articles";
+import { HELP } from "@/content/help";
 import { AUTHORS } from "@/content/authors";
 import { articlePath } from "@/lib/articles";
 import { lastModified } from "@/lib/lastModified";
@@ -30,6 +31,7 @@ const SOURCES: Partial<Record<AppPathname, string[]>> = {
   "/setup": ["app/[locale]/setup", MESSAGES],
   "/pro": ["app/[locale]/pro", MESSAGES],
   "/who-is-dulce-for": ["app/[locale]/who-is-dulce-for", MESSAGES],
+  "/help": ["app/[locale]/help/page.tsx", "content/help.ts", MESSAGES],
   "/legal/privacy": ["app/[locale]/legal/privacy", "components/legal/PrivacyEs.tsx", "components/legal/PrivacyEn.tsx"],
   "/legal/terms": ["app/[locale]/legal/terms", "components/legal/TermsEs.tsx", "components/legal/TermsEn.tsx"],
   "/legal/disclaimer": [
@@ -110,9 +112,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 : "monthly",
           priority: internal === "/" ? 1 : internal === "/blog" ? 0.8 : legal ? 0.2 : 0.6,
         },
-        legal ? LEGAL_LOCALES : locales,
+        // Help pages exist in the core languages only (the others show English, noindex).
+        legal ? LEGAL_LOCALES : internal === "/help" ? CORE_LOCALES : locales,
       );
     }),
+    ...HELP.flatMap((help) =>
+      entries(
+        pathsFor("/help/[slug]", { slug: help.id }),
+        { lastModified: new Date(help.dateModified), changeFrequency: "monthly", priority: 0.5 },
+        CORE_LOCALES,
+      ),
+    ),
     ...ARTICLES.flatMap((article) =>
       entries(
         Object.fromEntries(articleLocales(article).map((l) => [l, articlePath(article, l)])) as Record<AppLocale, string>,

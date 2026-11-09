@@ -19,6 +19,7 @@ export async function SiteFooter() {
   const status = await getTranslations("llustatus");
   const pro = await getTranslations("pro");
   const audience = await getTranslations("audience");
+  const helpT = await getTranslations("help");
   const year = new Date().getFullYear();
   const home = (id: string) => homeSection(locale as AppLocale, id);
 
@@ -80,6 +81,9 @@ export async function SiteFooter() {
 
           <div className="grid content-start gap-2 text-label">
             <p className="mb-1 text-mute">{t("help")}</p>
+            <Link href="/help" className={linkClass}>
+              {helpT("nav")}
+            </Link>
             <Link href="/setup" className={linkClass}>
               {nav("setup")}
             </Link>

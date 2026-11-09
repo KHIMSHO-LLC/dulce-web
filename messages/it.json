@@ -727,5 +727,20 @@
     ],
     "note": "L'Attività in tempo reale, l'app Apple Watch, la scheda CarPlay e la condivisione in famiglia sono funzioni di Dulce Pro, con 14 giorni di prova gratuita; i follower non pagano. Dulce non è un dispositivo medico. Mostra le letture, non fa diagnosi, non cura e non dà consigli sulle dosi, e non sostituisce gli allarmi del sensore né il parere del tuo team diabetologico.",
     "cta": "Si scarica gratis. I follower non pagano nulla."
+  },
+  "help": {
+    "nav": "Guide all'uso",
+    "title": "Aiuto Dulce: guide all'uso",
+    "description": "Guide brevi per Dulce: Apple Watch, schermata di blocco, widget, avvisi, condivisione con la famiglia, collegamento del sensore e valori che non si aggiornano.",
+    "eyebrow": "Aiuto",
+    "headline": "Come possiamo aiutarti?",
+    "sub": "Risposte brevi per chi usa Dulce: le tue opzioni, in cosa è brava ognuna e quale sceglieremmo noi.",
+    "updated": "Aggiornato il {date}",
+    "more": "Altro aiuto",
+    "stuckTitle": "Ancora bloccato?",
+    "stuckBody": "Scrivici e ti risponde una persona, di solito entro 48 ore lavorative.",
+    "englishNotice": "Per ora questa pagina è disponibile solo in inglese.",
+    "medical": "Dulce non è un dispositivo medico. Non sostituisce gli allarmi del sensore né i consigli del tuo team di cura.",
+    "home": "Home"
   }
 }

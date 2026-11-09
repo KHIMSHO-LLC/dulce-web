@@ -1,0 +1,27 @@
+Si la valeur sur ton écran verrouillé, ta montre ou un widget semble bloquée, fais ces vérifications dans l'ordre. La plupart du temps, la cause est avant Dulce : l'app du capteur ou le service de partage n'envoie plus de nouvelles valeurs.
+
+<Steps>
+<Step title="Regarde l'heure de la valeur">
+Chaque écran de Dulce indique l'âge de la valeur. Ouvre Dulce : si l'app affiche une valeur récente, passe à l'étape 5.
+</Step>
+<Step title="Vérifie l'app du capteur">
+Ouvre l'app de ton capteur sur le téléphone qui le lit. Affiche-t-elle la valeur actuelle ? Ce téléphone a besoin d'internet (Wi-Fi ou données mobiles) pour partager. Si l'app du capteur est en retard, Dulce l'est aussi.
+</Step>
+<Step title="Vérifie le service de partage">
+LibreLinkUp, Dexcom Share, CareLink et Nightscout ont parfois des pannes. Pour LibreLinkUp, notre <PageLink to="/librelinkup-status">statut LibreLinkUp en direct</PageLink> montre si le service est en panne pour tout le monde.
+</Step>
+<Step title="Reconnecte-toi si Dulce le demande">
+Si Dulce affiche un bandeau pour te reconnecter (par exemple après un changement de mot de passe), touche-le et connecte-toi. Avec LibreLinkUp, ouvre aussi une fois l'app LibreLinkUp : si elle demande d'accepter de nouvelles conditions, accepte-les.
+</Step>
+<Step title="Si seuls l'écran verrouillé, la montre ou un widget bloquent">
+Dans **Réglages › Dulce** de l'iPhone, vérifie que **Activités en direct** et **Actualisation en arrière-plan** sont activés. Désactive le **mode économie d'énergie** sur l'iPhone et la montre : il freine les mises à jour en arrière-plan. Pour la montre, vérifie qu'elle est connectée à l'iPhone ou à un Wi-Fi.
+</Step>
+</Steps>
+
+## Pourquoi les widgets et les complications sont en retard
+
+iOS et watchOS décident quand les widgets et les cadrans sont redessinés, pour économiser la batterie. Quelques minutes de retard sont normales, même quand Dulce a déjà la nouvelle valeur. Pour une valeur qui suit chaque mesure, utilise l'**Activité en direct** : vois <HelpLink to="iphone-glance">voir ta glycémie sans ouvrir l'app</HelpLink>.
+
+<Callout type="warning">
+N'agis jamais sur une valeur sans vérifier son âge. En cas de doute, regarde l'app de ton capteur ou fais une glycémie capillaire.
+</Callout>

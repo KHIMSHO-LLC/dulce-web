@@ -1,0 +1,27 @@
+Wirkt der Wert auf Sperrbildschirm, Uhr oder Widget festgefahren, geh diese Punkte der Reihe nach durch. Meist liegt die Ursache vor Dulce: Die Sensor-App oder der Teilen-Dienst schickt keine neuen Werte mehr.
+
+<Steps>
+<Step title="Prüf die Zeit des Werts">
+Jeder Dulce-Bildschirm zeigt, wie alt der Wert ist. Öffne Dulce: Zeigt die App einen frischen Wert, spring zu Schritt 5.
+</Step>
+<Step title="Prüf die Sensor-App">
+Öffne die App deines Sensors auf dem Handy, das ihn liest. Zeigt sie den aktuellen Wert? Dieses Handy braucht Internet (WLAN oder mobile Daten) zum Teilen. Hinkt die Sensor-App hinterher, tut Dulce es auch.
+</Step>
+<Step title="Prüf den Teilen-Dienst">
+LibreLinkUp, Dexcom Share, CareLink und Nightscout fallen manchmal aus. Für LibreLinkUp zeigt unser <PageLink to="/librelinkup-status">LibreLinkUp-Status live</PageLink>, ob es für alle gestört ist.
+</Step>
+<Step title="Neu anmelden, wenn Dulce danach fragt">
+Zeigt Dulce einen Hinweis zum erneuten Anmelden (etwa nach einer Passwortänderung), tippe darauf und melde dich an. Bei LibreLinkUp öffne außerdem einmal die LibreLinkUp-App: Fragt sie nach neuen Bedingungen, akzeptiere sie.
+</Step>
+<Step title="Wenn nur Sperrbildschirm, Uhr oder Widget hängen">
+Prüfe in den iPhone-**Einstellungen › Dulce**, dass **Live-Aktivitäten** und **Hintergrundaktualisierung** an sind. Schalte den **Stromsparmodus** auf iPhone und Uhr aus: Er bremst Hintergrund-Updates. Prüfe bei der Uhr, dass sie mit dem iPhone oder einem WLAN verbunden ist.
+</Step>
+</Steps>
+
+## Warum Widgets und Komplikationen hinterherhinken
+
+iOS und watchOS entscheiden, wann Widgets und Zifferblätter neu gezeichnet werden, um Akku zu sparen. Ein paar Minuten Verzögerung sind dort normal, auch wenn Dulce den neuen Wert schon hat. Für einen Wert, der jeder Messung folgt, nutze die **Live-Aktivität**: siehe <HelpLink to="iphone-glance">Glukose sehen, ohne die App zu öffnen</HelpLink>.
+
+<Callout type="warning">
+Handle nie nach einem Wert, ohne sein Alter zu prüfen. Im Zweifel schau in die Sensor-App oder miss blutig nach.
+</Callout>

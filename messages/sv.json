@@ -727,5 +727,20 @@
     ],
     "note": "Live Activity, Apple Watch-appen, CarPlay-kortet och familjedelning är Dulce Pro-funktioner med 14 dagars gratis provperiod; följare betalar ingenting. Dulce är inte en medicinteknisk produkt. Den visar värden, ställer inga diagnoser, behandlar inte och ger inga dosråd, och den ersätter inte sensorns larm eller ditt vårdteams bedömning.",
     "cta": "Gratis att ladda ner. Följare betalar ingenting."
+  },
+  "help": {
+    "nav": "Guider",
+    "title": "Dulce-hjälp: guider",
+    "description": "Korta guider för Dulce: Apple Watch, låsskärm, widgetar, larm, dela med familjen, ansluta sensorn och värden som inte uppdateras.",
+    "eyebrow": "Hjälp",
+    "headline": "Vad kan vi hjälpa till med?",
+    "sub": "Korta svar för dig som använder Dulce: dina alternativ, vad vart och ett är bra på och vad vi skulle välja.",
+    "updated": "Uppdaterad {date}",
+    "more": "Mer hjälp",
+    "stuckTitle": "Fastnat ändå?",
+    "stuckBody": "Skriv till oss så svarar en människa, oftast inom 48 arbetstimmar.",
+    "englishNotice": "Den här sidan finns bara på engelska än så länge.",
+    "medical": "Dulce är inte en medicinteknisk produkt. Den ersätter inte sensorns larm eller vårdteamets råd.",
+    "home": "Hem"
   }
 }
