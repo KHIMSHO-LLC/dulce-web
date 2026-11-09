@@ -111,14 +111,20 @@ const SENSOR_LABELS: Record<string, string> = {
 /** Devices per CGM source, by plan. Pro = trial + paid. */
 function SensorTable({ bySensor }: { bySensor: Record<string, SensorLevels> }) {
   const rows = Object.entries(bySensor).sort((a, b) => b[1].total - a[1].total);
-  const sum = (k: keyof SensorLevels) => rows.reduce((n, [, s]) => n + s[k], 0);
+  const sum = (k: keyof SensorLevels) => rows.reduce((n, [, s]) => n + (s[k] ?? 0), 0);
+  const active = (all: number | undefined, pro: number | undefined) => (
+    <>
+      {all ?? "–"}
+      <span className="ml-1 text-caption font-normal text-muted">/ {pro ?? "–"} Pro</span>
+    </>
+  );
   const pct = (n: number, d: number) => (d ? `${Math.round((n / d) * 100)}%` : "–");
   const cell = "px-3 py-2 text-right tabular-nums";
   return (
     <div className="mt-6">
       <Card
         title="Sensors"
-        subtitle="Devices per CGM source. Pro = trial + paying. Readings 7d = a new sensor reading reached the relay in the last 7 days. Failing = 3+ failed polls in a row now (expired session, no data)."
+        subtitle="Devices per CGM source. Pro = trial + paying. Active 1d / 3d / 7d = a new sensor reading reached the relay in the last 1 / 3 / 7 days (all devices / of them Pro). Failing = 3+ failed polls in a row now (expired session, no data)."
       >
         <div className="overflow-x-auto">
           <table className="w-full text-label">
@@ -130,8 +136,9 @@ function SensorTable({ bySensor }: { bySensor: Record<string, SensorLevels> }) {
                 <th className={cell}>Trial</th>
                 <th className={cell}>Paying</th>
                 <th className={cell}>Pro share</th>
-                <th className={cell}>Readings 7d</th>
-                <th className={cell}>Pro readings 7d</th>
+                <th className={cell}>Active 1d</th>
+                <th className={cell}>Active 3d</th>
+                <th className={cell}>Active 7d</th>
                 <th className={cell}>Failing</th>
               </tr>
             </thead>
@@ -144,20 +151,22 @@ function SensorTable({ bySensor }: { bySensor: Record<string, SensorLevels> }) {
                   <td className={cell}>{s.trialing}</td>
                   <td className={cell}>{s.paid}</td>
                   <td className={cell}>{pct(s.trialing + s.paid, s.total)}</td>
-                  <td className={cell}>{s.readingLast7d}</td>
-                  <td className={cell}>{s.readingLast7dPro}</td>
+                  <td className={cell}>{active(s.readingLast1d, s.readingLast1dPro)}</td>
+                  <td className={cell}>{active(s.readingLast3d, s.readingLast3dPro)}</td>
+                  <td className={cell}>{active(s.readingLast7d, s.readingLast7dPro)}</td>
                   <td className={`${cell} ${s.failing ? "text-state-low" : ""}`}>{s.failing}</td>
                 </tr>
               ))}
-              <tr className="border-t border-border-subtle font-bold">
-                <td className="px-3 py-2 text-left">All</td>
+              <tr className="border-t-2 border-border-subtle font-bold">
+                <td className="px-3 py-2 text-left">Total</td>
                 <td className={cell}>{sum("total")}</td>
                 <td className={cell}>{sum("free")}</td>
                 <td className={cell}>{sum("trialing")}</td>
                 <td className={cell}>{sum("paid")}</td>
                 <td className={cell}>{pct(sum("trialing") + sum("paid"), sum("total"))}</td>
-                <td className={cell}>{sum("readingLast7d")}</td>
-                <td className={cell}>{sum("readingLast7dPro")}</td>
+                <td className={cell}>{active(sum("readingLast1d"), sum("readingLast1dPro"))}</td>
+                <td className={cell}>{active(sum("readingLast3d"), sum("readingLast3dPro"))}</td>
+                <td className={cell}>{active(sum("readingLast7d"), sum("readingLast7dPro"))}</td>
                 <td className={cell}>{sum("failing")}</td>
               </tr>
             </tbody>

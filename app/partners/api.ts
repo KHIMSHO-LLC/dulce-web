@@ -218,7 +218,12 @@ export interface SensorLevels {
   free: number;
   trialing: number;
   paid: number;
-  /** Got a new sensor reading in the last 7 days (all plans / Pro = trial + paid). */
+  /** Got a new sensor reading in the last 1 / 3 / 7 days (all plans / Pro = trial + paid).
+   *  1d/3d are optional: relays before 2026-11-09 evening don't send them. */
+  readingLast1d?: number;
+  readingLast1dPro?: number;
+  readingLast3d?: number;
+  readingLast3dPro?: number;
   readingLast7d: number;
   readingLast7dPro: number;
   /** 3+ failed polls in a row right now (expired session, no data, …). */
