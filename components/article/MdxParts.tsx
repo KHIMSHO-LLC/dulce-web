@@ -15,6 +15,7 @@ export function Figure({
   width = 1400,
   height = 3034,
   narrow = true,
+  bare = false,
 }: {
   src: string;
   alt: string;
@@ -23,6 +24,8 @@ export function Figure({
   height?: number;
   /** Phone screenshots read best narrow; set false for wide images. */
   narrow?: boolean;
+  /** Device mockups (transparent PNG/WebP with their own frame): no border or rounded corners. */
+  bare?: boolean;
 }) {
   return (
     <figure className={cn("my-10", narrow && "max-w-[320px]")}>
@@ -32,7 +35,7 @@ export function Figure({
         width={width}
         height={height}
         sizes={narrow ? "320px" : "(min-width: 768px) 680px, 100vw"}
-        className="h-auto w-full rounded-[22px] border border-white/8"
+        className={cn("h-auto w-full", !bare && "rounded-[22px] border border-white/8")}
       />
       {caption ? <figcaption className="mt-3 text-caption leading-relaxed text-mute">{caption}</figcaption> : null}
     </figure>
