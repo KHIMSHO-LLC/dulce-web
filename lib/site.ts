@@ -7,7 +7,7 @@ export const CONTACT_EMAIL = "hola@dulceglucosa.com";
 export const SOCIAL = [
   { name: "Instagram", icon: "instagram", url: "https://www.instagram.com/dulce_glucosa" },
   { name: "Facebook", icon: "facebook", url: "https://www.facebook.com/profile.php?id=61596557061376" },
-  { name: "TikTok", icon: "tiktok", url: "https://www.tiktok.com/@dulce.glucose.tra" },
+  { name: "TikTok", icon: "tiktok", url: "https://www.tiktok.com/@dulceglucosa" },
   { name: "YouTube", icon: "youtube", url: "https://www.youtube.com/@DULCEGLUCOSE" },
 ] as const;
 
