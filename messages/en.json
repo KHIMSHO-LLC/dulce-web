@@ -137,7 +137,7 @@
         {
           "key": "health",
           "title": "Apple Health",
-          "body": "Dulce reads your Apple Health data so everything sits together. Read only."
+          "body": "Dulce reads your Apple Health data so everything sits together, and can save your sensor glucose there."
         }
       ],
       "alt": "Dulce screen: {name}"

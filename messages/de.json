@@ -137,7 +137,7 @@
         {
           "key": "health",
           "title": "Apple Health",
-          "body": "Dulce liest deine Apple-Health-Daten, damit alles beisammen ist. Nur lesend."
+          "body": "Dulce liest deine Apple-Health-Daten, damit alles beisammen ist, und kann deine Sensor-Glukose dort speichern."
         }
       ],
       "alt": "Dulce-Bildschirm: {name}"
