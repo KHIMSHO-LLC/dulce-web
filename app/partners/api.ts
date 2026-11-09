@@ -194,6 +194,19 @@ export interface FleetLevels {
   failing: number;
   paused: number;
   neverPolled: number;
+  /** Live view only: Pro by TestFlight / sandbox / promo (not in paid or trialing). */
+  test?: number;
+}
+
+/** RevenueCat check behind the live paid / trial / test counts. */
+export interface ProCheck {
+  /** Pro devices' RevenueCat customers checked. */
+  checked: number;
+  /** Pro devices on builds that don't send their RevenueCat id (counted as reported). */
+  unknown: number;
+  errors: number;
+  error: string | null;
+  at: number;
 }
 
 /** One completed day from the relay's permanent history row. */
@@ -228,12 +241,15 @@ export interface SensorLevels {
   readingLast7dPro: number;
   /** 3+ failed polls in a row right now (expired session, no data, …). */
   failing: number;
+  /** TestFlight / sandbox / promo Pro. */
+  test?: number;
 }
 
 export interface UsageResponse {
   current: FleetLevels;
   /** Per CGM source (libre, dexcom, carelink, nightscout). Older relays omit it. */
   bySensor?: Record<string, SensorLevels> | null;
+  proCheck?: ProCheck | null;
   today: { date: string; events: EventCounts };
   history: DailyRollup[];
   firstSeen: FirstSeenBucket[];

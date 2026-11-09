@@ -124,7 +124,7 @@ function SensorTable({ bySensor }: { bySensor: Record<string, SensorLevels> }) {
     <div className="mt-6">
       <Card
         title="Sensors"
-        subtitle="Devices per CGM source. Pro = trial + paying. Active 1d / 3d / 7d = a new sensor reading reached the relay in the last 1 / 3 / 7 days (all devices / of them Pro). Failing = 3+ failed polls in a row now (expired session, no data)."
+        subtitle="Devices per CGM source. Pro = trial + paying, production only (checked with RevenueCat). Test = TestFlight / sandbox / promo Pro. Active 1d / 3d / 7d = a new sensor reading reached the relay in the last 1 / 3 / 7 days (all devices / of them Pro). Failing = 3+ failed polls in a row now (expired session, no data)."
       >
         <div className="overflow-x-auto">
           <table className="w-full text-label">
@@ -135,6 +135,7 @@ function SensorTable({ bySensor }: { bySensor: Record<string, SensorLevels> }) {
                 <th className={cell}>Free</th>
                 <th className={cell}>Trial</th>
                 <th className={cell}>Paying</th>
+                <th className={cell}>Test</th>
                 <th className={cell}>Pro share</th>
                 <th className={cell}>Active 1d</th>
                 <th className={cell}>Active 3d</th>
@@ -150,6 +151,7 @@ function SensorTable({ bySensor }: { bySensor: Record<string, SensorLevels> }) {
                   <td className={cell}>{s.free}</td>
                   <td className={cell}>{s.trialing}</td>
                   <td className={cell}>{s.paid}</td>
+                  <td className={`${cell} text-muted`}>{s.test ?? 0}</td>
                   <td className={cell}>{pct(s.trialing + s.paid, s.total)}</td>
                   <td className={cell}>{active(s.readingLast1d, s.readingLast1dPro)}</td>
                   <td className={cell}>{active(s.readingLast3d, s.readingLast3dPro)}</td>
@@ -163,6 +165,7 @@ function SensorTable({ bySensor }: { bySensor: Record<string, SensorLevels> }) {
                 <td className={cell}>{sum("free")}</td>
                 <td className={cell}>{sum("trialing")}</td>
                 <td className={cell}>{sum("paid")}</td>
+                <td className={`${cell} text-muted`}>{sum("test")}</td>
                 <td className={cell}>{pct(sum("trialing") + sum("paid"), sum("total"))}</td>
                 <td className={cell}>{active(sum("readingLast1d"), sum("readingLast1dPro"))}</td>
                 <td className={cell}>{active(sum("readingLast3d"), sum("readingLast3dPro"))}</td>
@@ -368,12 +371,20 @@ export default function UsagePage() {
             <Stat
               label="Paying"
               value={String(current!.paid)}
-              hint={`${pct(current!.paid)} · as reported by the app, includes your own phone`}
+              hint={
+                data.proCheck && !data.proCheck.error
+                  ? `${pct(current!.paid)} · production only, checked with RevenueCat${current!.test ? ` · ${current!.test} TestFlight/promo not counted` : ""}`
+                  : `${pct(current!.paid)} · as reported by the app (RevenueCat check unavailable)`
+              }
             />
             <Stat
               label="Trialing"
               value={String(current!.trialing)}
-              hint="Full Pro access, no revenue yet"
+              hint={
+                data.proCheck && data.proCheck.unknown
+                  ? `Production trials · ${data.proCheck.unknown} Pro on old app builds counted as reported`
+                  : "Production trials: full Pro access, no revenue yet"
+              }
             />
             <Stat label="Free" value={String(current!.free)} hint={pct(current!.free)} />
             <Stat
@@ -572,10 +583,12 @@ export default function UsagePage() {
                 sign-outs that reached the relay — a phone wiped while offline never sends one.
               </li>
               <li>
-                <strong className="text-foreground">Paying</strong>{" "}
-                is the tier each device last
-                reported from RevenueCat, not billing truth. Reconcile against RevenueCat before
-                anything financial.
+                <strong className="text-foreground">Paying</strong> and{" "}
+                <strong className="text-foreground">Trialing</strong> are checked live against
+                RevenueCat (production only): TestFlight / sandbox / promo Pro and plans that
+                already ended are left out. Phones on builds before 1.0.5 can&rsquo;t be checked
+                and count as they report. Devices count phones, RevenueCat counts customers, so
+                one person on two phones can differ. The history charts keep the app-reported tier.
               </li>
               <li>
                 <strong className="text-foreground">Getting readings</strong>{" "}
