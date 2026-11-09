@@ -37,7 +37,7 @@ export function useAdmin(): AdminSession {
 const TABS = [
   { href: "/partners", label: "Overview" },
   { href: "/partners/referrals", label: "Partners" },
-  { href: "/partners/usage", label: "Devices" },
+  { href: "/partners/usage", label: "Usage" },
   { href: "/partners/cancellations", label: "Cancellations" },
 ] as const;
 
