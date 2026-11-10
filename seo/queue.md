@@ -15,6 +15,14 @@ Owner-requested jobs. The daily run does the top unchecked item, one per run, th
   "confirm with your sensor". Links: `lock-screen`, `apple-watch`, `widgets`, `/pro`; link back from `lock-screen`.
   Cover: real CarPlay/Smart Stack card screens only (add to `seo/covers-needed.md` if the writer can't render).
 
+- [ ] **Translate the feature guides into fi, nl, nb, sv, ru** (owner request 2026-11-10: the new footer "Features" links and `/sensors`
+  fall back to the English page in these five languages): `dexcom`, `lock-screen`, `apple-watch`, `widgets`, `alerts`, `family-sharing`.
+  One guide into all 5 languages per run, in that order. Follow the "Optional languages" rules in `content/README.md` (registry
+  entry values for slug, title, description, summary, keywords, imageAlt and faq plus the MDX; mark links to guides not yet
+  translated "(englanniksi)" / "(in het Engels)" / "(på engelsk)" / "(på engelska)" / "(на английском)"). Use the app's exact labels from
+  `dulce-app/src/locales/<lang>/common.json`. Once a guide is translated, the glossary (`content/tools/cgm-glossary/<lang>.mdx`) can
+  drop the English marker on its link to that guide. Done: none yet. Next: `dexcom`.
+
 - [ ] **Translate the 6 segment guides into nl, fi, sv, nb, ru** (owner request 2026-11-05, `seo/segments.md`): `lada-diabetes`, `newly-diagnosed`, `older-adults-cgm`, `diabetes-at-work`, `diabetes-at-school`, `type-2-cgm`. One guide into all 5 languages per run, LADA first (demand in every market). The hub links to the English page until each is translated. Done: `lada-diabetes` (2026-11-06). Next: `newly-diagnosed`.
 - [ ] **Gestational diabetes and CGM** (autocomplete 2026-11-05: "gestational diabetes cgm targets", "schwangerschaftsdiabetes sensor", "diabete gestationnel capteur", "diabetes gestacional sensor"). Pregnancy targets need a primary source. 5 languages. Link from the hub's `types` row in `messages/*.json`.
 - [ ] **Partner of someone with type 1** (autocomplete 2026-11-05: "partner with type 1 diabetes", "spouse type 1 diabetes"). Practical, not medical; link `family-sharing`, `night-lows`.

@@ -281,7 +281,8 @@
     "learn": "Lernen",
     "group": "Dulce-Community",
     "features": "Funktionen",
-    "widgets": "Widgets"
+    "widgets": "Widgets",
+    "compare": "Glukose-Apps im Vergleich"
   },
   "waitlist": {
     "email": {
@@ -457,6 +458,8 @@
     "read": "Lesen",
     "allArticles": "Alle Ratgeber",
     "toolsTitle": "Rechner",
+    "toolsLabel": "Tools",
+    "glossaryLabel": "Glossar",
     "relatedGuides": "Passende Ratgeber",
     "usefulLinks": "Rechner und Einrichtung",
     "setupLink": "Dulce verbinden: LibreLink oder LibreLinkUp",

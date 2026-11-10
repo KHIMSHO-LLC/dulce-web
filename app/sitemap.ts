@@ -69,6 +69,13 @@ const SOURCES: Partial<Record<AppPathname, string[]>> = {
     "components/tools/ToolPage.tsx",
     "lib/tools.ts",
   ],
+  "/tools/cgm-glossary": [
+    "app/[locale]/tools/cgm-glossary",
+    "content/tools/cgm-glossary",
+    "components/tools/GlossaryTerm.tsx",
+    "components/tools/ToolPage.tsx",
+    "lib/tools.ts",
+  ],
   "/tools/gmi-calculator": [
     "app/[locale]/tools/gmi-calculator",
     "content/tools/gmi-calculator",

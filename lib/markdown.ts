@@ -91,6 +91,8 @@ export function mdxToMarkdown(source: string, locale: AppLocale, campaign: Store
       })
       .trim();
   });
+  // Glossary entries (content/tools/cgm-glossary) → "**Name**: definition".
+  s = s.replace(/<Term\s+id="[^"]+"\s+name="([^"]+)"\s*>([\s\S]*?)<\/Term>/g, (_, name: string, body: string) => `**${name}**: ${body.trim().replace(/\n+/g, " ")}`);
   // Anything left that looks like a component tag.
   s = s.replace(/<\/?[A-Z][A-Za-z]*\b[^>]*>/g, "");
   return s.replace(/\n{3,}/g, "\n\n").trim();

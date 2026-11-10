@@ -158,7 +158,9 @@ export function PageLink({
     | "/librelinkup-status"
     | "/tools/sensor-end-date"
     | "/tools/time-in-range-calculator"
-    | "/tools/gmi-calculator";
+    | "/tools/gmi-calculator"
+    | "/tools/cgm-glossary"
+    | "/sensors";
   children: ReactNode;
 }) {
   return (

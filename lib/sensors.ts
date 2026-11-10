@@ -16,14 +16,18 @@ export const SENSOR_STRIP: { id: SensorId; label: string }[] = [
 
 /**
  * Where each sensor's "If it doesn't connect" link goes: a troubleshooting guide (article id)
- * or the help-centre page `sensor` (content/help/sensor, covers all four ways in).
+ * or the help-centre page `sensor` (content/help/sensor, covers all four ways in), at the section
+ * with the stable `anchor` id (`<h2 id>` in every language's MDX).
  * Label is the shared message `sensors.troubleshoot`.
  */
-export const SENSOR_TROUBLESHOOT: Record<SensorId, { kind: "article"; id: string } | { kind: "help"; id: "sensor" }> = {
+export const SENSOR_TROUBLESHOOT: Record<
+  SensorId,
+  { kind: "article"; id: string } | { kind: "help"; id: "sensor"; anchor: string }
+> = {
   "freestyle-libre": { kind: "article", id: "librelinkup-not-working" },
   dexcom: { kind: "article", id: "dexcom" },
-  medtronic: { kind: "help", id: "sensor" },
-  nightscout: { kind: "help", id: "sensor" },
+  medtronic: { kind: "help", id: "sensor", anchor: "medtronic" },
+  nightscout: { kind: "help", id: "sensor", anchor: "nightscout" },
 };
 
 export type SensorItem = {

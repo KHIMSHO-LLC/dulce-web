@@ -119,7 +119,7 @@ export const HELP: readonly HelpArticle[] = [
       fr: "FreeStyle Libre, Dexcom, Medtronic ou Nightscout : ce qu'il faut pour chaque connexion et sa fréquence.",
       it: "FreeStyle Libre, Dexcom, Medtronic o Nightscout: cosa serve per ogni collegamento e ogni quanto si aggiorna.",
     },
-    dateModified: "2026-11-09",
+    dateModified: "2026-11-10",
   },
   {
     id: "not-updating",

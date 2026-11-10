@@ -281,7 +281,8 @@
     "learn": "Узнать больше",
     "group": "Сообщество Dulce",
     "features": "Возможности",
-    "widgets": "Виджеты"
+    "widgets": "Виджеты",
+    "compare": "Как выбрать приложение для глюкозы"
   },
   "waitlist": {
     "email": {
@@ -457,6 +458,8 @@
     "read": "Читать",
     "allArticles": "Все руководства",
     "toolsTitle": "Калькуляторы",
+    "toolsLabel": "Инструменты",
+    "glossaryLabel": "Глоссарий",
     "relatedGuides": "Похожие руководства",
     "usefulLinks": "Инструменты и настройка",
     "setupLink": "Подключение Dulce: LibreLink или LibreLinkUp",

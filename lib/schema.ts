@@ -150,6 +150,40 @@ export function toolSchema(input: { url: string; name: string; description: stri
   };
 }
 
+/** A glossary page: a DefinedTermSet whose terms link to their anchors on the page. */
+export function definedTermSetSchema(input: {
+  url: string;
+  name: string;
+  description: string;
+  locale: AppLocale;
+  dateModified: string;
+  terms: { id: string; name: string; description: string }[];
+}) {
+  const setId = `${input.url}#glossary`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "@id": setId,
+    name: input.name,
+    description: input.description,
+    url: input.url,
+    inLanguage: input.locale,
+    isAccessibleForFree: true,
+    dateModified: dateTime(input.dateModified),
+    author: { "@id": `${SITE_URL}/#person-${AUTHORS.giorgi.slug}` },
+    publisher,
+    hasDefinedTerm: input.terms.map((term) => ({
+      "@type": "DefinedTerm",
+      "@id": `${input.url}#${term.id}`,
+      name: term.name,
+      termCode: term.id,
+      description: term.description,
+      url: `${input.url}#${term.id}`,
+      inDefinedTermSet: { "@id": setId },
+    })),
+  };
+}
+
 /** HowTo for guides with numbered <Step> blocks (setup and troubleshooting). */
 export function howToSchema(input: {
   url: string;

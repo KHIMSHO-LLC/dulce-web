@@ -281,7 +281,8 @@
     "learn": "Aprender",
     "group": "Comunidad Dulce",
     "features": "Funciones",
-    "widgets": "Widgets"
+    "widgets": "Widgets",
+    "compare": "Elegir una app de glucosa"
   },
   "waitlist": {
     "email": {
@@ -457,6 +458,8 @@
     "read": "Leer",
     "allArticles": "Todas las guías",
     "toolsTitle": "Calculadoras",
+    "toolsLabel": "Herramientas",
+    "glossaryLabel": "Glosario",
     "relatedGuides": "Guías relacionadas",
     "usefulLinks": "Herramientas y configuración",
     "setupLink": "Conecta Dulce: LibreLink o LibreLinkUp",

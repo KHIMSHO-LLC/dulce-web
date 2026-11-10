@@ -281,7 +281,8 @@
     "learn": "Lär dig mer",
     "group": "Dulce-gemenskapen",
     "features": "Funktioner",
-    "widgets": "Widgetar"
+    "widgets": "Widgetar",
+    "compare": "Välja en glukosapp"
   },
   "waitlist": {
     "email": {
@@ -457,6 +458,8 @@
     "read": "Läs",
     "allArticles": "Alla guider",
     "toolsTitle": "Kalkylatorer",
+    "toolsLabel": "Verktyg",
+    "glossaryLabel": "Ordlista",
     "relatedGuides": "Relaterade guider",
     "usefulLinks": "Verktyg och konfiguration",
     "setupLink": "Anslut Dulce: LibreLink eller LibreLinkUp",

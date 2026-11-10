@@ -63,3 +63,20 @@ Gib die https-Adresse deiner Seite ein und, falls sie nicht offen ist, ein **Zug
 ## Wenn es nicht verbindet
 
 Der Anmeldebildschirm sagt dir, was schiefging. Häufigste Ursachen: das falsche Konto (LibreLink statt LibreLinkUp), die falsche Dexcom-Region oder das Teilen ist noch nicht eingeschaltet. Kommen später keine Werte mehr? Siehe <HelpLink to="not-updating">Werte aktualisieren sich nicht</HelpLink>.
+
+<h2 id="medtronic">Medtronic (CareLink): was die Meldungen bedeuten</h2>
+
+Wenn Dulce nicht verbinden kann, zeigt es eine dieser Meldungen. Behebe die Ursache und tippe dann noch einmal auf **Mit CareLink anmelden**.
+
+- **Anmeldung nicht möglich**: CareLink hat die Anmeldung nicht angenommen. Prüf die Region auf dem Anmeldebildschirm (Außerhalb der USA oder USA, je nachdem, wo dein CareLink-Konto liegt) und versuch es noch einmal.
+- **Noch niemand zum Folgen**: Du hast dich mit einem Betreuerkonto angemeldet, das mit niemandem verbunden ist. Nimm zuerst die Einladung in CareLink an.
+- **Angemeldet, aber noch keine Werte**: CareLink hat keine Sensorwerte aus den letzten Stunden. Prüf, ob deine Medtronic-App (Simplera oder MiniMed) Daten zu CareLink hochlädt.
+- **Keine Verbindung**: Dulce konnte Medtronic nicht erreichen. Prüf deine Internetverbindung und versuch es noch einmal.
+- **Anmeldung geschlossen**: Die Seite von Medtronic wurde geschlossen, bevor du fertig warst. Tippe auf den Button, um sie erneut zu öffnen.
+
+<h2 id="nightscout">Nightscout: was die Meldungen bedeuten</h2>
+
+- **Diese Adresse funktioniert nicht**: Nimm die https-Adresse, mit der du Nightscout öffnest, z. B. deineseite.herokuapp.com. Dulce verbindet sich nur über https.
+- **Zugriff verweigert**: Deine Seite braucht ein Zugriffstoken, oder das eingegebene ist falsch. Öffne in Nightscout die Admin Tools und erstelle eines mit der Rolle "readable". Lass das Feld nur leer, wenn deine Seite offen ist.
+- **Verbunden, aber keine Werte**: Deine Seite hat keine Glukosewerte aus den letzten 24 Stunden. Prüf deinen Uploader.
+- **Keine Verbindung**: Dulce konnte deine Seite nicht erreichen. Prüf die Adresse und deine Internetverbindung.

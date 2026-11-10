@@ -147,7 +147,8 @@ export type ToolPath =
   | "/tools/a1c-calculator"
   | "/tools/sensor-end-date"
   | "/tools/time-in-range-calculator"
-  | "/tools/gmi-calculator";
+  | "/tools/gmi-calculator"
+  | "/tools/cgm-glossary";
 
 type ToolCopy = { title: string; description: string };
 
@@ -362,6 +363,48 @@ export const TOOL_COPY: Record<ToolPath, Record<AppLocale, ToolCopy>> = {
       description: "Рассчитайте GMI по средней глюкозе сенсора в ммоль/л или мг/дл, в % и ммоль/моль. По опубликованной формуле Бергенстала, с полной таблицей.",
     },
   },
+  "/tools/cgm-glossary": {
+    es: {
+      title: "Glosario de CGM: sensor, tendencia, TIR y GMI explicados",
+      description: "30 términos que encuentras con un sensor de glucosa, del retraso del sensor y las flechas de tendencia al tiempo en rango, el GMI y la Live Activity, explicados en una o dos frases.",
+    },
+    en: {
+      title: "CGM glossary: sensor, trend arrow, TIR and GMI explained",
+      description: "30 terms you meet with a glucose sensor, from sensor lag and trend arrows to time in range, GMI and Live Activity, each explained in a sentence or two.",
+    },
+    de: {
+      title: "CGM-Glossar: Sensor, Trendpfeil, TIR und GMI erklärt",
+      description: "30 Begriffe, die dir mit einem Glukosesensor begegnen, von Sensorverzögerung und Trendpfeilen bis Time in Range, GMI und Live Activity, jeweils in ein, zwei Sätzen erklärt.",
+    },
+    fr: {
+      title: "Glossaire CGM : capteur, flèche de tendance, TIR et GMI",
+      description: "30 termes que tu croises avec un capteur de glucose, du décalage du capteur et des flèches de tendance au temps dans la cible, au GMI et à l'Activité en direct, expliqués en une ou deux phrases.",
+    },
+    it: {
+      title: "Glossario CGM: sensore, freccia di tendenza, TIR e GMI",
+      description: "30 termini che incontri con un sensore del glucosio, dal ritardo del sensore e le frecce di tendenza al tempo nel range, al GMI e all'Attività in tempo reale, spiegati in una o due frasi.",
+    },
+    fi: {
+      title: "CGM-sanasto: sensori, trendinuoli, TIR ja GMI selitettynä",
+      description: "30 termiä, joihin törmäät glukoosisensorin kanssa: sensorin viiveestä ja trendinuolista aikaan tavoitealueella, GMI:hin ja Live Activityyn, kukin selitettynä yhdellä tai kahdella lauseella.",
+    },
+    nl: {
+      title: "CGM-woordenlijst: sensor, trendpijl, TIR en GMI uitgelegd",
+      description: "30 termen die je tegenkomt met een glucosesensor, van sensorvertraging en trendpijlen tot tijd binnen bereik, GMI en Live Activity, elk in een of twee zinnen uitgelegd.",
+    },
+    nb: {
+      title: "CGM-ordliste: sensor, trendpil, TIR og GMI forklart",
+      description: "30 begreper du møter med en glukosesensor, fra sensorforsinkelse og trendpiler til tid i målområdet, GMI og Live Activity, hvert forklart med en eller to setninger.",
+    },
+    sv: {
+      title: "CGM-ordlista: sensor, trendpil, TIR och GMI förklarade",
+      description: "30 begrepp du möter med en glukossensor, från sensorfördröjning och trendpilar till tid inom målområdet, GMI och Live Activity, vart och ett förklarat med en eller två meningar.",
+    },
+    ru: {
+      title: "Глоссарий CGM: сенсор, стрелка тренда, TIR и GMI",
+      description: "30 терминов, которые встречаются с сенсором глюкозы: от задержки сенсора и стрелок тренда до времени в диапазоне, GMI и Live Activity, каждый объяснён в одном-двух предложениях.",
+    },
+  },
 };
 
 /** Locale-aware number formatting with a fixed number of decimals. */
@@ -456,6 +499,13 @@ export const TOOLS: readonly Tool[] = [
     name: "gmi-calculator",
     dateModified: "2026-11-07",
     guides: ["hba1c", "trends", "time-in-range", "libreview", "type-2-cgm", "lada-diabetes"],
+  },
+  {
+    // Not a calculator: a glossary (content/tools/cgm-glossary, `<Term>` blocks, DefinedTermSet JSON-LD).
+    path: "/tools/cgm-glossary",
+    name: "cgm-glossary",
+    dateModified: "2026-11-10",
+    guides: ["time-in-range", "hba1c", "libre-signal-loss", "widgets", "lock-screen", "apple-watch", "family-sharing", "trends"],
   },
 ];
 

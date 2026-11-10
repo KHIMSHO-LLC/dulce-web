@@ -281,7 +281,8 @@
     "learn": "Leren",
     "group": "Dulce-community",
     "features": "Functies",
-    "widgets": "Widgets"
+    "widgets": "Widgets",
+    "compare": "Een glucose-app kiezen"
   },
   "waitlist": {
     "email": {
@@ -457,6 +458,8 @@
     "read": "Lezen",
     "allArticles": "Alle gidsen",
     "toolsTitle": "Rekenhulpen",
+    "toolsLabel": "Tools",
+    "glossaryLabel": "Woordenlijst",
     "relatedGuides": "Gerelateerde gidsen",
     "usefulLinks": "Hulpmiddelen en installatie",
     "setupLink": "Dulce koppelen: LibreLink of LibreLinkUp",

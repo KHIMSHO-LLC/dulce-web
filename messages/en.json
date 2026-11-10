@@ -281,7 +281,8 @@
     "learn": "Learn",
     "group": "Dulce community",
     "features": "Features",
-    "widgets": "Widgets"
+    "widgets": "Widgets",
+    "compare": "Choosing a glucose app"
   },
   "waitlist": {
     "email": {
@@ -457,6 +458,8 @@
     "read": "Read",
     "allArticles": "All guides",
     "toolsTitle": "Calculators",
+    "toolsLabel": "Tools",
+    "glossaryLabel": "Glossary",
     "relatedGuides": "Related guides",
     "usefulLinks": "Tools and setup",
     "setupLink": "Connect Dulce: LibreLink vs LibreLinkUp",

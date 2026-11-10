@@ -195,7 +195,7 @@ export default async function SensorsPage({ params }: PageProps<"/[locale]/senso
                       {arrow}
                     </a>
                   ) : (
-                    <Link href={{ pathname: "/help/[slug]", params: { slug: target.id } }} className={cls}>
+                    <Link href={{ pathname: "/help/[slug]", params: { slug: target.id }, hash: target.anchor }} className={cls}>
                       {t("troubleshoot")}
                       {arrow}
                     </Link>

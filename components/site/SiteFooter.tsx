@@ -84,6 +84,9 @@ export async function SiteFooter() {
             <Link href="/blog" className={linkClass}>
               {nav("guides")}
             </Link>
+            <a href={guideHref("glucose-apps-compared", locale as AppLocale)} className={linkClass}>
+              {t("compare")}
+            </a>
             <Link href="/tools/glucose-converter" className={linkClass}>
               {TOOL_COPY["/tools/glucose-converter"][locale as AppLocale].title}
             </Link>
@@ -98,6 +101,9 @@ export async function SiteFooter() {
             </Link>
             <Link href="/tools/sensor-end-date" className={linkClass}>
               {TOOL_COPY["/tools/sensor-end-date"][locale as AppLocale].title}
+            </Link>
+            <Link href="/tools/cgm-glossary" className={linkClass}>
+              {TOOL_COPY["/tools/cgm-glossary"][locale as AppLocale].title}
             </Link>
           </nav>
 

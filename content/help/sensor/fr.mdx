@@ -63,3 +63,20 @@ Saisis l'adresse https de ton site et, s'il n'est pas ouvert, un **jeton d'accè
 ## Si ça ne se connecte pas
 
 L'écran de connexion indique ce qui a échoué. Les causes les plus fréquentes : le mauvais compte (LibreLink au lieu de LibreLinkUp), la mauvaise région Dexcom ou le partage pas encore activé. Les valeurs se sont arrêtées plus tard ? Vois <HelpLink to="not-updating">les valeurs ne se mettent pas à jour</HelpLink>.
+
+<h2 id="medtronic">Medtronic (CareLink) : ce que veulent dire les messages</h2>
+
+Si Dulce n'arrive pas à se connecter, il affiche l'un de ces messages. Corrige la cause, puis touche de nouveau **Se connecter avec CareLink**.
+
+- **Connexion impossible** : CareLink n'a pas accepté la connexion. Vérifie la région sur l'écran de connexion (Hors des États-Unis ou États-Unis, selon où se trouve ton compte CareLink) et réessaie.
+- **Personne à suivre pour l'instant** : tu t'es connecté avec un compte d'aidant qui n'est lié à personne. Accepte d'abord l'invitation dans CareLink.
+- **Connecté, mais pas encore de mesures** : CareLink n'a aucune mesure du capteur des dernières heures. Vérifie que ton app Medtronic (Simplera ou MiniMed) envoie ses données à CareLink.
+- **Pas de connexion** : Dulce n'a pas pu joindre Medtronic. Vérifie ta connexion internet et réessaie.
+- **Connexion fermée** : la page de Medtronic a été fermée avant la fin. Touche le bouton pour la rouvrir.
+
+<h2 id="nightscout">Nightscout : ce que veulent dire les messages</h2>
+
+- **Cette adresse ne fonctionne pas** : utilise l'adresse https avec laquelle tu ouvres Nightscout, comme tonsite.herokuapp.com. Dulce se connecte uniquement en https.
+- **Accès refusé** : ton site demande un jeton d'accès, ou celui que tu as saisi est incorrect. Dans Nightscout, ouvre Admin Tools et crées-en un avec le rôle « readable ». Laisse le champ vide seulement si ton site est ouvert.
+- **Connecté, mais aucune mesure** : ton site n'a aucune glycémie des dernières 24 heures. Vérifie ton uploader.
+- **Pas de connexion** : Dulce n'a pas pu joindre ton site. Vérifie l'adresse et ta connexion internet.
