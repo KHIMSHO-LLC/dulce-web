@@ -74,17 +74,16 @@ export async function Hero() {
             <div className="flex items-center gap-3">
               <DownloadButton label={t("cta")} campaign="web_hero" />
               <QrButton openLabel={t("qrOpen")} caption={t("qrCaption")} className="hidden md:block" />
-            </div>
-            {/* "Does it work with my sensor?" answered in the first viewport; each name opens its set-up section. */}
-            {/* Phones: one short line (the hero has no room for models). */}
-            <p className="text-caption text-soft md:hidden">
-              <a href={sensorsPath} className="underline-offset-4 hover:underline">
-                <span className="text-mute">{st("label")}</span>{" "}
-                <span translate="no" className="text-ink">
+              {/* Phones: beside the button, so the text block keeps its height and
+                  the subline stays clear of the 3D phone above it. */}
+              <a href={sensorsPath} className="min-w-0 text-caption leading-snug text-soft underline-offset-4 hover:underline md:hidden">
+                <span className="block text-mute">{st("label")}</span>
+                <span translate="no" className="block text-ink">
                   Libre · Dexcom · Medtronic · Nightscout
                 </span>
               </a>
-            </p>
+            </div>
+            {/* "Does it work with my sensor?" answered in the first viewport; each name opens its set-up section. */}
             <div className="hidden max-w-[40ch] text-caption leading-relaxed md:block">
               <p className="text-soft">
                 <a href={sensorsPath} className="text-mute underline-offset-4 hover:text-ink hover:underline">
