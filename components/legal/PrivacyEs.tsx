@@ -104,6 +104,29 @@ export function PrivacyEs() {
         , incluidos los requisitos de uso limitado.
       </p>
 
+      <h3>2.2.2 Medición de anuncios (opcional, iOS)</h3>
+      <p>
+        La app de Dulce puede incluir el SDK de Meta (Meta Platforms Ireland Ltd. para usuarios
+        en Europa) para medir si los anuncios propios de Dulce en Facebook e Instagram llevan a
+        instalaciones y suscripciones. Está <strong>desactivada</strong> hasta que dices que sí
+        a una pregunta dentro de la app, y puedes desactivarla de nuevo cuando quieras en Ajustes
+        (fila «Medición de anuncios»). Si dices que no, no se envía nada a Meta.
+      </p>
+      <p>
+        Si lo permites, compartimos que la app se instaló o se abrió, y que se inició una
+        suscripción o una prueba (los eventos de compra los envía nuestro proveedor de pagos,
+        RevenueCat), junto con un identificador anónimo que crea el SDK de Meta para esta app y
+        los datos técnicos que acompañan a cualquier solicitud (dirección IP, modelo de
+        dispositivo, versión del sistema operativo). Nunca compartimos lecturas de glucosa,
+        datos de salud, datos de la cuenta del sensor, tu nombre ni tu correo electrónico.
+      </p>
+      <p>
+        Dulce no muestra el aviso de seguimiento de Apple y no recopila el identificador
+        publicitario (IDFA). No se te sigue por apps ni sitios web de otras empresas, y la
+        medición es agregada. La base jurídica es tu consentimiento (art. 6.1.a RGPD), que
+        puedes retirar cuando quieras en Ajustes.
+      </p>
+
       <h3>2.3 El relay de Dulce (funciones en tiempo real)</h3>
       <p>
         Cuando conectas tu CGM, la app registra esta instalación en nuestro relay para poder
@@ -215,6 +238,11 @@ export function PrivacyEs() {
           espera o a la beta.
         </li>
         <li>
+          <strong>Consentimiento</strong> (art. 6.1.a RGPD): también para la medición de
+          anuncios opcional descrita en el apartado 2.2.2; puedes retirarlo cuando quieras en
+          Ajustes.
+        </li>
+        <li>
           <strong>Interés legítimo</strong> (art. 6.1.f RGPD): seguridad básica del sitio y
           respuesta a las consultas que envías mediante el formulario de contacto. La base
           jurídica de la analítica depende del servicio y de las normas regionales descritas en
@@ -319,6 +347,10 @@ export function PrivacyEs() {
           <strong>RevenueCat</strong> — validación de suscripciones (solo ID seudónimo).
         </li>
         <li>
+          <strong>Meta (Meta Platforms Ireland Ltd.)</strong> — solo si permites la medición de
+          anuncios en la app (apartado 2.2.2).
+        </li>
+        <li>
           <strong>Supabase</strong> (almacenamiento de lista de espera y beta) — alojado en
           la UE (eu-west-3).
         </li>
@@ -346,12 +378,13 @@ export function PrivacyEs() {
       </ul>
       <p>
         Nunca vendemos, alquilamos ni cedemos tus datos a terceros con fines publicitarios o
-        comerciales.
+        comerciales. Lo único relacionado con publicidad que se comparte es la medición de
+        anuncios opcional del apartado 2.2.2, que sigue desactivada salvo que la permitas.
       </p>
 
       <h2 id="transfers">8. Transferencias internacionales</h2>
       <p>
-        Algunos proveedores y servicios que usamos (Cloudflare, RevenueCat, Resend, Vercel,
+        Algunos proveedores y servicios que usamos (Cloudflare, RevenueCat, Resend, Vercel, Meta,
         Apple y Google) pueden tratar datos en EE. UU. u otros países. Cuando el RGPD exige
         garantías para una transferencia, el mecanismo aplicable depende del proveedor y del
         servicio, y puede incluir una decisión de adecuación o las Cláusulas Contractuales Tipo

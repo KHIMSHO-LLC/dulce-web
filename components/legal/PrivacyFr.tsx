@@ -83,6 +83,32 @@ export function PrivacyFr() {
         </li>
       </ul>
 
+      <h3>2.2.2 Mesure publicitaire (facultative, iOS)</h3>
+      <p>
+        L&apos;app Dulce peut inclure le SDK Meta (Meta Platforms Ireland Ltd. pour les
+        utilisateurs en Europe) afin de mesurer si les publicités de Dulce sur Facebook et
+        Instagram mènent à des installations et à des abonnements. Elle est
+        <strong>désactivée</strong> tant que tu ne réponds pas oui à une question dans l&apos;app,
+        et tu peux la désactiver à tout moment dans Réglages (ligne « Mesure publicitaire »). Si
+        tu réponds non, rien n&apos;est envoyé à Meta.
+      </p>
+      <p>
+        Si tu l&apos;autorises, nous partageons le fait que l&apos;app a été installée ou ouverte
+        et qu&apos;un abonnement ou un essai a démarré (les événements d&apos;achat sont envoyés
+        par notre prestataire de paiement, RevenueCat), ainsi qu&apos;un identifiant anonyme créé
+        par le SDK Meta pour cette app et les données techniques envoyées avec toute requête
+        (adresse IP, modèle d&apos;appareil, version du système). Nous ne partageons jamais de
+        mesures de glycémie, de données de santé, de données du compte du capteur, ni ton nom ou
+        ton e-mail.
+      </p>
+      <p>
+        Dulce n&apos;affiche pas la demande de suivi d&apos;Apple et ne collecte pas
+        l&apos;identifiant publicitaire (IDFA). Tu n&apos;es pas suivi sur les apps et sites
+        d&apos;autres entreprises, et la mesure est agrégée. La base juridique est ton
+        consentement (art. 6, par. 1, point a) du RGPD), que tu peux retirer à tout moment dans
+        Réglages.
+      </p>
+
       <h3>2.3 Le relais Dulce (fonctions en temps réel)</h3>
       <p>
         Quand ton CGM est connecté, l&apos;app enregistre cette installation auprès de notre
@@ -193,6 +219,11 @@ export function PrivacyFr() {
           t&apos;inscris à la liste d&apos;attente ou à la bêta.
         </li>
         <li>
+          <strong>Consentement</strong> (art. 6, par. 1, point a) du RGPD) : aussi pour la mesure
+          publicitaire facultative décrite à la section 2.2.2 ; tu peux le retirer à tout moment
+          dans Réglages.
+        </li>
+        <li>
           <strong>Intérêt légitime</strong> (art. 6, par. 1, point f) du RGPD) : sécurité de base
           du site et réponse aux demandes que tu envoies par le formulaire de contact. La base
           juridique des statistiques dépend du service et des règles régionales décrites dans
@@ -295,6 +326,10 @@ export function PrivacyFr() {
           uniquement).
         </li>
         <li>
+          <strong>Meta (Meta Platforms Ireland Ltd.)</strong> : uniquement si tu autorises la
+          mesure publicitaire dans l&apos;app (section 2.2.2).
+        </li>
+        <li>
           <strong>Supabase</strong> (stockage de la liste d&apos;attente et de la bêta) : hébergé
           dans l&apos;UE (eu-west-3).
         </li>
@@ -322,13 +357,14 @@ export function PrivacyFr() {
       </ul>
       <p>
         Nous ne vendons, ne louons et ne cédons jamais tes données à des tiers à des fins
-        publicitaires ou commerciales.
+        publicitaires ou commerciales. Le seul partage lié à la publicité est la mesure
+        publicitaire facultative de la section 2.2.2, qui reste désactivée sauf si tu l&apos;autorises.
       </p>
 
       <h2 id="transfers">8. Transferts internationaux</h2>
       <p>
         Certains fournisseurs et services que nous utilisons (Cloudflare, RevenueCat, Resend,
-        Vercel, Apple et Google) peuvent traiter des données aux États-Unis ou dans d&apos;autres
+        Vercel, Meta, Apple et Google) peuvent traiter des données aux États-Unis ou dans d&apos;autres
         pays. Lorsque le RGPD exige des garanties de transfert, le mécanisme applicable dépend du
         fournisseur et du service ; il peut s&apos;agir d&apos;une décision d&apos;adéquation ou des
         clauses contractuelles types de la Commission européenne. Google LLC figure comme actif

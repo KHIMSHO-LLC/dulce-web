@@ -80,6 +80,31 @@ export function PrivacyIt() {
         </li>
       </ul>
 
+      <h3>2.2.2 Misurazione degli annunci (facoltativa, iOS)</h3>
+      <p>
+        L&apos;app Dulce può includere l&apos;SDK di Meta (Meta Platforms Ireland Ltd. per gli
+        utenti in Europa) per misurare se gli annunci di Dulce su Facebook e Instagram portano a
+        installazioni e abbonamenti. È <strong>disattivata</strong> finché non rispondi di sì a
+        una domanda nell&apos;app, e puoi disattivarla di nuovo in qualsiasi momento in
+        Impostazioni (riga «Misurazione degli annunci»). Se rispondi di no, a Meta non viene
+        inviato nulla.
+      </p>
+      <p>
+        Se la consenti, condividiamo il fatto che l&apos;app è stata installata o aperta e che
+        è iniziato un abbonamento o una prova (gli eventi di acquisto li invia il nostro fornitore
+        di pagamenti, RevenueCat), insieme a un identificativo anonimo creato dall&apos;SDK di
+        Meta per questa app e ai dati tecnici inviati con ogni richiesta (indirizzo IP, modello
+        del dispositivo, versione del sistema operativo). Non condividiamo mai letture della
+        glicemia, dati sanitari, dati dell&apos;account del sensore, né il tuo nome o la tua
+        email.
+      </p>
+      <p>
+        Dulce non mostra la richiesta di tracciamento di Apple e non raccoglie l&apos;identificativo
+        pubblicitario (IDFA). Non vieni tracciato tra le app e i siti web di altre aziende e la
+        misurazione è aggregata. La base giuridica è il tuo consenso (art. 6, par. 1, lett. a)
+        GDPR), che puoi revocare in qualsiasi momento in Impostazioni.
+      </p>
+
       <h3>2.3 Il relay di Dulce (funzioni in tempo reale)</h3>
       <p>
         Quando il tuo CGM è collegato, l&apos;app registra questa installazione sul nostro relay
@@ -189,6 +214,11 @@ export function PrivacyIt() {
           d&apos;attesa o alla beta.
         </li>
         <li>
+          <strong>Consenso</strong> (art. 6, par. 1, lett. a) GDPR): anche per la misurazione
+          degli annunci facoltativa descritta nella sezione 2.2.2; puoi revocarlo in qualsiasi
+          momento in Impostazioni.
+        </li>
+        <li>
           <strong>Legittimo interesse</strong> (art. 6, par. 1, lett. f) GDPR): sicurezza di base
           del sito e risposta alle richieste inviate tramite il modulo di contatto. La base
           giuridica delle analisi dipende dal servizio e dalle norme regionali descritte nella
@@ -289,6 +319,10 @@ export function PrivacyIt() {
           pseudonimo).
         </li>
         <li>
+          <strong>Meta (Meta Platforms Ireland Ltd.)</strong>: solo se consenti la misurazione
+          degli annunci nell&apos;app (sezione 2.2.2).
+        </li>
+        <li>
           <strong>Supabase</strong> (archivio di lista d&apos;attesa e beta): ospitato nell&apos;UE
           (eu-west-3).
         </li>
@@ -316,12 +350,13 @@ export function PrivacyIt() {
       </ul>
       <p>
         Non vendiamo, affittiamo né cediamo mai i tuoi dati a terzi per scopi pubblicitari o
-        commerciali.
+        commerciali. L&apos;unica condivisione legata alla pubblicità è la misurazione degli
+        annunci facoltativa della sezione 2.2.2, che resta disattivata se non la consenti.
       </p>
 
       <h2 id="transfers">8. Trasferimenti internazionali</h2>
       <p>
-        Alcuni fornitori e servizi che usiamo (Cloudflare, RevenueCat, Resend, Vercel, Apple e
+        Alcuni fornitori e servizi che usiamo (Cloudflare, RevenueCat, Resend, Vercel, Meta, Apple e
         Google) possono trattare dati negli Stati Uniti o in altri Paesi. Quando il GDPR richiede
         garanzie per un trasferimento, il meccanismo applicabile dipende dal fornitore e dal
         servizio e può includere una decisione di adeguatezza o le clausole contrattuali tipo

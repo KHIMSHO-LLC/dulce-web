@@ -81,6 +81,29 @@ Missbrauch.
         </li>
       </ul>
 
+      <h3>2.2.2 Werbemessung (optional, iOS)</h3>
+      <p>
+        Die Dulce-App kann das Meta-SDK enthalten (Meta Platforms Ireland Ltd. für Nutzer in
+        Europa), um zu messen, ob Dulces eigene Anzeigen auf Facebook und Instagram zu
+        Installationen und Abonnements führen. Sie ist <strong>aus</strong>, bis du in der App
+        eine Frage mit Ja beantwortest, und du kannst sie jederzeit in den Einstellungen wieder
+        ausschalten (Zeile „Werbemessung“). Wenn du Nein sagst, wird nichts an Meta gesendet.
+      </p>
+      <p>
+        Wenn du zustimmst, teilen wir mit, dass die App installiert oder geöffnet wurde und dass
+        ein Abonnement oder eine Testphase gestartet wurde (Kaufereignisse sendet unser
+        Zahlungsdienstleister RevenueCat), zusammen mit einer anonymen Kennung, die das Meta-SDK
+        für diese App erzeugt, und den technischen Daten, die mit jeder Anfrage gesendet werden
+        (IP-Adresse, Gerätemodell, Betriebssystemversion). Wir teilen nie Glukosewerte,
+        Gesundheitsdaten, Zugangsdaten deines Sensorkontos, deinen Namen oder deine E-Mail-Adresse.
+      </p>
+      <p>
+        Dulce zeigt Apples Tracking-Abfrage nicht an und erhebt die Werbe-ID (IDFA) nicht. Du
+        wirst nicht über Apps und Websites anderer Unternehmen hinweg verfolgt, und die Messung
+        erfolgt aggregiert. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO),
+        die du jederzeit in den Einstellungen widerrufen kannst.
+      </p>
+
       <h3>2.3 Das Dulce-Relay (Echtzeitfunktionen)</h3>
       <p>
         Wenn dein CGM verbunden ist, registriert die App diese Installation bei unserem Relay,
@@ -191,6 +214,11 @@ Missbrauch.
           Warteliste oder die Beta einträgst.
         </li>
         <li>
+          <strong>Einwilligung</strong> (Art. 6 Abs. 1 lit. a DSGVO): auch für die optionale
+          Werbemessung nach Abschnitt 2.2.2; du kannst sie jederzeit in den Einstellungen
+          widerrufen.
+        </li>
+        <li>
           <strong>Berechtigtes Interesse</strong> (Art. 6 Abs. 1 lit. f DSGVO): grundlegende
           Sicherheit der Website und Beantwortung deiner Kontaktanfragen. Die Rechtsgrundlage
           für Analysen hängt vom Dienst und den in unserer Cookie-Richtlinie beschriebenen
@@ -290,6 +318,10 @@ Missbrauch.
           <strong>RevenueCat</strong>: Prüfung von Abonnements (nur pseudonyme Kennung).
         </li>
         <li>
+          <strong>Meta (Meta Platforms Ireland Ltd.)</strong>: nur wenn du die Werbemessung in
+          der App erlaubst (Abschnitt 2.2.2).
+        </li>
+        <li>
           <strong>Supabase</strong> (Speicher für Warteliste und Beta): gehostet in der EU
           (eu-west-3).
         </li>
@@ -317,12 +349,13 @@ Missbrauch.
       </ul>
       <p>
         Wir verkaufen, vermieten oder überlassen deine Daten nie Dritten für Werbe- oder
-        kommerzielle Zwecke.
+        kommerzielle Zwecke. Die einzige werbebezogene Weitergabe ist die optionale
+        Werbemessung nach Abschnitt 2.2.2, die ausgeschaltet bleibt, solange du sie nicht erlaubst.
       </p>
 
       <h2 id="transfers">8. Internationale Übermittlungen</h2>
       <p>
-        Einige von uns genutzte Anbieter und Dienste (Cloudflare, RevenueCat, Resend, Vercel,
+        Einige von uns genutzte Anbieter und Dienste (Cloudflare, RevenueCat, Resend, Vercel, Meta,
         Apple und Google) können Daten in den USA oder anderen Ländern verarbeiten. Wenn die
         DSGVO Schutzmaßnahmen für eine Übermittlung verlangt, hängt der geltende Mechanismus
         vom Anbieter und Dienst ab und kann einen Angemessenheitsbeschluss oder die
