@@ -568,7 +568,7 @@
       "Live Activity lukitusnäytöllä ja Dynamic Islandissa, päivittyy minuutin välein",
       "Apple Watch -sovellus ja komplikaatiot",
       "Glukoosikorttisi CarPlayssa ja Apple Watchin Smart Stackissa",
-      "Perheen seuranta enintään 3 seuraajalle, jotka eivät maksa mitään",
+      "Perheen seuranta rajattomalle määrälle seuraajia, jotka eivät maksa mitään",
       "Apple Terveys -tiedot päiväkirjassa ja trendeissä",
       "Hälytysten tarkistus minuutin välein"
     ],
@@ -585,7 +585,7 @@
       },
       {
         "q": "Mitä Dulce Pro tuo lisää?",
-        "a": "Live Activityn lukitusnäytöllä ja Dynamic Islandissa, Apple Watch -sovelluksen, perheen seurannan enintään 3 seuraajalle, Apple Terveys -tiedot ja hälytysten tarkistuksen minuutin välein 5 minuutin sijaan."
+        "a": "Live Activityn lukitusnäytöllä ja Dynamic Islandissa, Apple Watch -sovelluksen, perheen seurannan rajattomalle määrälle seuraajia, Apple Terveys -tiedot ja hälytysten tarkistuksen minuutin välein 5 minuutin sijaan."
       },
       {
         "q": "Tarvitsevatko seuraajani Pron?",
@@ -652,7 +652,7 @@
         "id": "partners",
         "title": "Kumppanit ja omaishoitajat",
         "short": "Tiedä, että kaikki on hyvin, kysymättä.",
-        "body": "Jopa 3 ihmistä voi seurata yhden ihmisen glukoosia, kukin omin hälytyksin ja hiljaisin tunnein. Se on kaikille rauhallisempaa kuin viesti joka tunti, ja diabeetikko päättää, kuka näkee mitä.",
+        "body": "Kuinka moni tahansa voi seurata yhden ihmisen glukoosia, kukin omin hälytyksin ja hiljaisin tunnein. Se on kaikille rauhallisempaa kuin viesti joka tunti, ja diabeetikko päättää, kuka näkee mitä.",
         "guide": "family-sharing",
         "guideLabel": "Perhejaon opas"
       },

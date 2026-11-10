@@ -568,7 +568,7 @@
       "Attività in tempo reale sulla schermata di blocco e Dynamic Island, aggiornata ogni minuto",
       "App per Apple Watch e complicazioni",
       "La tua scheda della glicemia in CarPlay e nello Smart Stack di Apple Watch",
-      "Condivisione in famiglia con fino a 3 follower, che non pagano nulla",
+      "Condivisione in famiglia con follower senza limiti, che non pagano nulla",
       "Dati di Salute di Apple nel Diario e in Andamento",
       "Avvisi controllati ogni minuto"
     ],
@@ -585,7 +585,7 @@
       },
       {
         "q": "Cosa aggiunge Dulce Pro?",
-        "a": "L'Attività in tempo reale sulla schermata di blocco e nella Dynamic Island, l'app per Apple Watch, la condivisione con fino a 3 follower, i dati di Salute di Apple e avvisi controllati ogni minuto invece che ogni 5."
+        "a": "L'Attività in tempo reale sulla schermata di blocco e nella Dynamic Island, l'app per Apple Watch, la condivisione con follower senza limiti, i dati di Salute di Apple e avvisi controllati ogni minuto invece che ogni 5."
       },
       {
         "q": "I miei follower hanno bisogno di Pro?",
@@ -652,7 +652,7 @@
         "id": "partners",
         "title": "Partner e caregiver",
         "short": "Sapere che va tutto bene senza dover chiedere.",
-        "body": "Fino a 3 persone possono seguire la glicemia di qualcuno, ognuna con i propri avvisi e le proprie ore di silenzio. È più sereno per tutti di un messaggio ogni ora, e chi ha il diabete decide chi vede cosa.",
+        "body": "Tutte le persone che vuoi possono seguire la glicemia di qualcuno, ognuna con i propri avvisi e le proprie ore di silenzio. È più sereno per tutti di un messaggio ogni ora, e chi ha il diabete decide chi vede cosa.",
         "guide": "family-sharing",
         "guideLabel": "Guida alla condivisione"
       },

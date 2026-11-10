@@ -568,7 +568,7 @@
       "Lock Screen Live Activity and Dynamic Island, updated every minute",
       "Apple Watch app and complications",
       "Your glucose card on CarPlay and in the Apple Watch Smart Stack",
-      "Family sharing with up to 3 followers, who pay nothing",
+      "Family sharing with unlimited followers, who pay nothing",
       "Apple Health data in your Logbook and Trends",
       "Alerts checked every minute"
     ],
@@ -585,7 +585,7 @@
       },
       {
         "q": "What does Dulce Pro add?",
-        "a": "The Lock Screen Live Activity and Dynamic Island, the Apple Watch app, family sharing with up to 3 followers, Apple Health data, and alerts checked every minute instead of every 5 minutes."
+        "a": "The Lock Screen Live Activity and Dynamic Island, the Apple Watch app, family sharing with unlimited followers, Apple Health data, and alerts checked every minute instead of every 5 minutes."
       },
       {
         "q": "Do my followers need Pro?",
@@ -652,7 +652,7 @@
         "id": "partners",
         "title": "Partners and caregivers",
         "short": "Know they're fine without having to ask.",
-        "body": "Up to 3 people can follow one person's glucose, each with their own alerts and quiet hours. It's calmer for everyone than a message every hour, and the person with diabetes stays in control of who sees what.",
+        "body": "Any number of people can follow one person's glucose, each with their own alerts and quiet hours. It's calmer for everyone than a message every hour, and the person with diabetes stays in control of who sees what.",
         "guide": "family-sharing",
         "guideLabel": "Family sharing guide"
       },

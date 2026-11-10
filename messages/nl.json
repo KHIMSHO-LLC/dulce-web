@@ -568,7 +568,7 @@
       "Live Activity op het toegangsscherm en in het Dynamic Island, elke minuut bijgewerkt",
       "Apple Watch-app en complicaties",
       "Je glucosekaart in CarPlay en in de Smart Stack van de Apple Watch",
-      "Delen met familie met tot 3 volgers, die niets betalen",
+      "Delen met familie met onbeperkt volgers, die niets betalen",
       "Gegevens uit Apple Gezondheid in je logboek en trends",
       "Meldingen elke minuut gecontroleerd"
     ],
@@ -585,7 +585,7 @@
       },
       {
         "q": "Wat voegt Dulce Pro toe?",
-        "a": "De Live Activity op het toegangsscherm en in het Dynamic Island, de Apple Watch-app, delen met familie met tot 3 volgers, gegevens uit Apple Gezondheid, en meldingen die elke minuut worden gecontroleerd in plaats van elke 5 minuten."
+        "a": "De Live Activity op het toegangsscherm en in het Dynamic Island, de Apple Watch-app, delen met familie met onbeperkt volgers, gegevens uit Apple Gezondheid, en meldingen die elke minuut worden gecontroleerd in plaats van elke 5 minuten."
       },
       {
         "q": "Hebben mijn volgers Pro nodig?",
@@ -652,7 +652,7 @@
         "id": "partners",
         "title": "Partners en mantelzorgers",
         "short": "Weten dat het goed gaat zonder te hoeven vragen.",
-        "body": "Tot 3 mensen kunnen iemands glucose volgen, elk met eigen meldingen en stille uren. Dat is rustiger voor iedereen dan elk uur een berichtje, en de persoon met diabetes bepaalt wie wat ziet.",
+        "body": "Onbeperkt veel mensen kunnen iemands glucose volgen, elk met eigen meldingen en stille uren. Dat is rustiger voor iedereen dan elk uur een berichtje, en de persoon met diabetes bepaalt wie wat ziet.",
         "guide": "family-sharing",
         "guideLabel": "Gids familie delen"
       },

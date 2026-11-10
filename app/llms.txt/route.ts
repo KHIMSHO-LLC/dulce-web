@@ -49,7 +49,7 @@ Also known as: "Dulce glucosa", "Dulce: Glucosa de un vistazo" (Spanish App Stor
 - Lock Screen Live Activity and Dynamic Island, updated by Dulce's server with every new reading with Dulce Pro, even with the app closed.
 - Home Screen, Lock Screen and StandBy widgets (free). Apple Watch app with complications in every shape (Pro).
 - Alerts: low and high with custom thresholds, rapid change, predictive low, quiet hours, and a critical alert for severe lows (55 mg/dL or less) that comes through quiet hours and snoozes and, on iPhone, rings even on silent and in Do Not Disturb (an iOS critical alert the user can turn off). Other alerts are regular notifications and follow the iPhone's silent switch and Focus settings.
-- Family following: the person wearing the sensor invites up to 3 followers by link or code (Pro, 14-day free trial; free for followers). Followers don't need a sensor, just an iPhone and the free app. They see glucose in real time with their own alerts and quiet hours, and can send short notification messages that the wearer answers with a one-tap "I'm OK". Access can be revoked at any time.
+- Family following: the person wearing the sensor invites as many followers as they like by link or code (Pro, 14-day free trial; free for followers). Followers don't need a sensor, just an iPhone and the free app. They see glucose in real time with their own alerts and quiet hours, and can send short notification messages that the wearer answers with a one-tap "I'm OK". Access can be revoked at any time.
 - Logbook (carbs, insulin bolus/basal, glucose) and Trends (time in range, average glucose and GMI over 7, 14, 30 or 90 days) are free. Apple Health is read-only and optional.
 - Price: free download; Dulce Pro is a monthly or yearly subscription with a 14-day free trial. The App Store shows the price in the local currency.
 - Privacy: no ads, glucose data is never sold or used for advertising, GDPR-based privacy policy.
@@ -67,7 +67,7 @@ Dulce never asks what type of diabetes someone has: it shows what a supported se
 - Older adults and the sons and daughters who look out for them: the number on the Lock Screen and in StandBy, with no app to learn.
 - People at work who can't keep opening an app: Lock Screen, Apple Watch and the CarPlay card.
 - People newly diagnosed with type 1, at any age.
-- Partners and caregivers, up to 3 followers per person.
+- Partners and caregivers, no limit on followers per person.
 - Any type of diabetes with a supported sensor: type 1, LADA, type 2 with or without insulin, gestational, MODY, type 3c.
 - Owners of dogs and cats with diabetes whose vet uses a glucose sensor (off-label in animals): from version 1.0.7, pet mode (Settings, Targets & units, Who is Dulce for?, A pet) uses the vet's target range, line colours and critical-low level. Dulce never suggests a range for an animal.
 

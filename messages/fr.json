@@ -568,7 +568,7 @@
       "Activité en direct sur l'écran verrouillé et Dynamic Island, mise à jour chaque minute",
       "App Apple Watch et complications",
       "Ta carte de glycémie dans CarPlay et dans le Smart Stack de l'Apple Watch",
-      "Partage en famille avec jusqu'à 3 abonnés, qui ne paient rien",
+      "Partage en famille avec des abonnés sans limite, qui ne paient rien",
       "Données Apple Santé dans ton Journal et tes Tendances",
       "Alertes vérifiées chaque minute"
     ],
@@ -585,7 +585,7 @@
       },
       {
         "q": "Qu'ajoute Dulce Pro ?",
-        "a": "L'Activité en direct sur l'écran verrouillé et la Dynamic Island, l'app Apple Watch, le partage avec jusqu'à 3 abonnés, les données Apple Santé et des alertes vérifiées chaque minute au lieu de toutes les 5 minutes."
+        "a": "L'Activité en direct sur l'écran verrouillé et la Dynamic Island, l'app Apple Watch, le partage avec des abonnés sans limite, les données Apple Santé et des alertes vérifiées chaque minute au lieu de toutes les 5 minutes."
       },
       {
         "q": "Mes abonnés ont-ils besoin de Pro ?",
@@ -652,7 +652,7 @@
         "id": "partners",
         "title": "Conjoints et aidants",
         "short": "Savoir que tout va bien sans avoir à demander.",
-        "body": "Jusqu'à 3 personnes peuvent suivre la glycémie de quelqu'un, chacune avec ses alertes et ses heures calmes. C'est plus serein pour tous qu'un message toutes les heures, et la personne diabétique décide qui voit quoi.",
+        "body": "Autant de personnes que tu veux peuvent suivre la glycémie de quelqu'un, chacune avec ses alertes et ses heures calmes. C'est plus serein pour tous qu'un message toutes les heures, et la personne diabétique décide qui voit quoi.",
         "guide": "family-sharing",
         "guideLabel": "Guide du suivi en famille"
       },

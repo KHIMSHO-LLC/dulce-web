@@ -568,7 +568,7 @@
       "Live-aktivitet på låsskärmen och Dynamic Island, uppdaterad varje minut",
       "App och komplikationer för Apple Watch",
       "Ditt glukoskort i CarPlay och i Apple Watch Smart Stack",
-      "Familjedelning med upp till 3 följare, som inte betalar något",
+      "Familjedelning med obegränsat antal följare, som inte betalar något",
       "Data från Apple Hälsa i loggboken och trenderna",
       "Larm som kontrolleras varje minut"
     ],
@@ -585,7 +585,7 @@
       },
       {
         "q": "Vad lägger Dulce Pro till?",
-        "a": "Live-aktiviteten på låsskärmen och Dynamic Island, Apple Watch-appen, familjedelning med upp till 3 följare, data från Apple Hälsa och larm som kontrolleras varje minut i stället för var 5:e minut."
+        "a": "Live-aktiviteten på låsskärmen och Dynamic Island, Apple Watch-appen, familjedelning med obegränsat antal följare, data från Apple Hälsa och larm som kontrolleras varje minut i stället för var 5:e minut."
       },
       {
         "q": "Behöver mina följare Pro?",
@@ -652,7 +652,7 @@
         "id": "partners",
         "title": "Partner och anhöriga",
         "short": "Veta att allt är bra utan att behöva fråga.",
-        "body": "Upp till 3 personer kan följa någons glukos, var och en med egna larm och tysta timmar. Det är lugnare för alla än ett meddelande varje timme, och personen med diabetes bestämmer vem som ser vad.",
+        "body": "Hur många som helst kan följa någons glukos, var och en med egna larm och tysta timmar. Det är lugnare för alla än ett meddelande varje timme, och personen med diabetes bestämmer vem som ser vad.",
         "guide": "family-sharing",
         "guideLabel": "Guide om familjedelning"
       },

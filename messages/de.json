@@ -568,7 +568,7 @@
       "Live-Aktivität auf dem Sperrbildschirm und Dynamic Island, jede Minute aktualisiert",
       "Apple Watch App und Komplikationen",
       "Deine Glukose-Karte in CarPlay und im Smart Stack der Apple Watch",
-      "Teilen mit der Familie, bis zu 3 Follower, die nichts zahlen",
+      "Teilen mit der Familie, beliebig viele Follower, die nichts zahlen",
       "Apple Health Daten in Logbuch und Trends",
       "Warnungen jede Minute geprüft"
     ],
@@ -585,7 +585,7 @@
       },
       {
         "q": "Was bietet Dulce Pro zusätzlich?",
-        "a": "Die Live-Aktivität auf dem Sperrbildschirm und in der Dynamic Island, die Apple Watch App, Teilen mit bis zu 3 Followern, Apple Health Daten und Warnungen, die jede Minute statt alle 5 Minuten geprüft werden."
+        "a": "Die Live-Aktivität auf dem Sperrbildschirm und in der Dynamic Island, die Apple Watch App, Teilen mit beliebig vielen Followern, Apple Health Daten und Warnungen, die jede Minute statt alle 5 Minuten geprüft werden."
       },
       {
         "q": "Brauchen meine Follower Pro?",
@@ -652,7 +652,7 @@
         "id": "partners",
         "title": "Partner und Angehörige",
         "short": "Wissen, dass alles gut ist, ohne zu fragen.",
-        "body": "Bis zu 3 Personen können den Werten eines Menschen folgen, jede mit eigenen Warnungen und Ruhezeiten. Das ist für alle entspannter als stündliche Nachrichten, und die Person mit Diabetes entscheidet, wer was sieht.",
+        "body": "Beliebig viele Personen können den Werten eines Menschen folgen, jede mit eigenen Warnungen und Ruhezeiten. Das ist für alle entspannter als stündliche Nachrichten, und die Person mit Diabetes entscheidet, wer was sieht.",
         "guide": "family-sharing",
         "guideLabel": "Ratgeber Familienfreigabe"
       },

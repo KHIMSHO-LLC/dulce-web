@@ -253,18 +253,18 @@ export const ARTICLES: readonly Article[] = [
       it: "Come condividere la glicemia del Libre con la famiglia",
     },
     description: {
-      es: "Comparte tus lecturas del FreeStyle Libre en tiempo real con hasta 3 familiares en Dulce: invitación por enlace, avisos para ellos y el botón «Estoy bien».",
-      en: "Share your FreeStyle Libre readings in real time with up to 3 family members in Dulce: invite by link, alerts for them, and the one-tap “I'm OK” reply.",
-      de: "Teile deine FreeStyle Libre Werte live mit bis zu 3 Familienmitgliedern in Dulce: Einladung per Link, eigene Warnungen und die Antwort „Mir geht es gut“.",
-      fr: "Partage tes mesures FreeStyle Libre en temps réel avec jusqu'à 3 proches dans Dulce : invitation par lien, alertes pour eux et réponse « Ça va » en un geste.",
-      it: "Condividi le letture del FreeStyle Libre in tempo reale con fino a 3 familiari in Dulce: invito con link, avvisi per loro e risposta «Sto bene» con un tocco.",
+      es: "Comparte tus lecturas del FreeStyle Libre en tiempo real con toda tu familia en Dulce: invitación por enlace, avisos para ellos y el botón «Estoy bien».",
+      en: "Share your FreeStyle Libre readings in real time with your whole family in Dulce: invite by link, alerts for them, and the one-tap “I'm OK” reply.",
+      de: "Teile deine FreeStyle Libre Werte live mit deiner ganzen Familie in Dulce: Einladung per Link, eigene Warnungen und die Antwort „Mir geht es gut“.",
+      fr: "Partage tes mesures FreeStyle Libre en temps réel avec toute ta famille dans Dulce : invitation par lien, alertes pour eux et réponse « Ça va » en un geste.",
+      it: "Condividi le letture del FreeStyle Libre in tempo reale con tutta la famiglia in Dulce: invito con link, avvisi per loro e risposta «Sto bene» con un tocco.",
     },
     summary: {
-      es: "En Dulce, ve a Ajustes, Seguidores, Invitar a alguien y manda el enlace o el código: hasta 3 familiares instalan Dulce gratis y ven tu glucosa en tiempo real, con sus propios avisos, sin sensor ni cuenta de Abbott. Compartir es una función de Dulce Pro para quien lleva el sensor, con 14 días de prueba gratis, y los seguidores no pagan nada. Puedes quitar a un seguidor cuando quieras y deja de ver tu glucosa al momento.",
-      en: "In Dulce, go to Settings, Followers, Invite someone and send the link or code: up to 3 family members install Dulce for free and see your glucose in real time, with their own alerts, without a sensor or an Abbott account. Sharing is a Dulce Pro feature for the person wearing the sensor, with a 14-day free trial, and followers pay nothing. You can remove a follower at any time and they stop seeing your glucose immediately.",
-      de: "Geh in Dulce zu Einstellungen, Follower, Jemanden einladen und schick den Link oder den Code: Bis zu 3 Familienmitglieder installieren Dulce kostenlos und sehen deinen Zucker in Echtzeit, mit eigenen Warnungen, ohne Sensor und ohne Abbott-Konto. Teilen ist eine Dulce Pro Funktion für die Person mit dem Sensor, mit 14 Tagen Gratis-Test, Follower zahlen nichts. Du kannst Follower jederzeit entfernen, dann sehen sie deinen Wert sofort nicht mehr.",
-      fr: "Dans Dulce, va dans Réglages, Abonnés, Inviter quelqu'un et envoie le lien ou le code : jusqu'à 3 proches installent Dulce gratuitement et voient ta glycémie en temps réel, avec leurs propres alertes, sans capteur ni compte Abbott. Le partage est une fonction Dulce Pro pour la personne qui porte le capteur, avec 14 jours d'essai gratuit, et les abonnés ne paient rien. Tu peux retirer un abonné quand tu veux, il cesse aussitôt de voir ta glycémie.",
-      it: "In Dulce vai su Impostazioni, Follower, Invita qualcuno e manda il link o il codice: fino a 3 familiari installano Dulce gratis e vedono la tua glicemia in tempo reale, con i propri avvisi, senza sensore né account Abbott. La condivisione è una funzione Dulce Pro per chi porta il sensore, con 14 giorni di prova gratuita, e i follower non pagano nulla. Puoi rimuovere un follower quando vuoi e smette subito di vedere la tua glicemia.",
+      es: "En Dulce, ve a Ajustes, Seguidores, Invitar a alguien y manda el enlace o el código: tus familiares, sin límite, instalan Dulce gratis y ven tu glucosa en tiempo real, con sus propios avisos, sin sensor ni cuenta de Abbott. Compartir es una función de Dulce Pro para quien lleva el sensor, con 14 días de prueba gratis, y los seguidores no pagan nada. Puedes quitar a un seguidor cuando quieras y deja de ver tu glucosa al momento.",
+      en: "In Dulce, go to Settings, Followers, Invite someone and send the link or code: any number of family members install Dulce for free and see your glucose in real time, with their own alerts, without a sensor or an Abbott account. Sharing is a Dulce Pro feature for the person wearing the sensor, with a 14-day free trial, and followers pay nothing. You can remove a follower at any time and they stop seeing your glucose immediately.",
+      de: "Geh in Dulce zu Einstellungen, Follower, Jemanden einladen und schick den Link oder den Code: Beliebig viele Familienmitglieder installieren Dulce kostenlos und sehen deinen Zucker in Echtzeit, mit eigenen Warnungen, ohne Sensor und ohne Abbott-Konto. Teilen ist eine Dulce Pro Funktion für die Person mit dem Sensor, mit 14 Tagen Gratis-Test, Follower zahlen nichts. Du kannst Follower jederzeit entfernen, dann sehen sie deinen Wert sofort nicht mehr.",
+      fr: "Dans Dulce, va dans Réglages, Abonnés, Inviter quelqu'un et envoie le lien ou le code : tes proches, sans limite, installent Dulce gratuitement et voient ta glycémie en temps réel, avec leurs propres alertes, sans capteur ni compte Abbott. Le partage est une fonction Dulce Pro pour la personne qui porte le capteur, avec 14 jours d'essai gratuit, et les abonnés ne paient rien. Tu peux retirer un abonné quand tu veux, il cesse aussitôt de voir ta glycémie.",
+      it: "In Dulce vai su Impostazioni, Follower, Invita qualcuno e manda il link o il codice: i tuoi familiari, senza limiti, installano Dulce gratis e vedono la tua glicemia in tempo reale, con i propri avvisi, senza sensore né account Abbott. La condivisione è una funzione Dulce Pro per chi porta il sensore, con 14 giorni di prova gratuita, e i follower non pagano nulla. Puoi rimuovere un follower quando vuoi e smette subito di vedere la tua glicemia.",
     },
     keywords: {
       es: ["compartir glucosa familia", "compartir libre con familia", "librelinkup familia", "compartir glucosa libre"],
@@ -285,31 +285,31 @@ export const ARTICLES: readonly Article[] = [
     faq: {
       es: [
         { q: "¿Cómo puede mi familia ver la glucosa de mi FreeStyle Libre?", a: "Invitándoles desde Dulce. Ve a Ajustes, Seguidores, Invitar a alguien, y mándales el enlace o el código. Instalan Dulce gratis y ven tu glucosa en tiempo real, sin sensor ni cuenta de Abbott." },
-        { q: "¿Cuántas personas pueden seguirme y cuánto cuesta?", a: "Hasta 3 personas. Compartir es una función de Dulce Pro para quien lleva el sensor, con 14 días de prueba gratis; los seguidores no pagan nada." },
+        { q: "¿Cuántas personas pueden seguirme y cuánto cuesta?", a: "Todas las que quieras, sin límite. Compartir es una función de Dulce Pro para quien lleva el sensor, con 14 días de prueba gratis; los seguidores no pagan nada." },
         { q: "¿Mis seguidores reciben avisos de hipo e hiper?", a: "Sí. Cada seguidor tiene sus propios avisos de glucosa baja y alta, con sus propias horas tranquilas, y las bajadas muy fuertes siempre le llegan. También puede tenerte en su pantalla de bloqueo con una Live Activity.", link: "alerts" },
         { q: "¿Mis seguidores pueden mandarme mensajes?", a: "Sí, mensajes cortos. Un seguidor puede mandarte “¿Estás bien?”, “Revisa tu glucosa” o un texto suyo; te llega como notificación y respondes “Estoy bien” con un toque. Puedes desactivar los mensajes de la familia en Ajustes.", link: "child-glucose" },
       ],
       en: [
         { q: "How can my family see my FreeStyle Libre glucose?", a: "Invite them from Dulce. Go to Settings, Followers, Invite someone, and send them the link or the code. They install Dulce for free and see your glucose in real time, with no sensor and no Abbott account." },
-        { q: "How many people can follow me, and what does it cost?", a: "Up to 3 people. Sharing is a Dulce Pro feature for the person wearing the sensor, with a 14-day free trial; followers pay nothing." },
+        { q: "How many people can follow me, and what does it cost?", a: "As many as you like, there's no limit. Sharing is a Dulce Pro feature for the person wearing the sensor, with a 14-day free trial; followers pay nothing." },
         { q: "Do my followers get low and high alerts?", a: "Yes. Each follower has their own low and high alerts, with their own quiet hours, and very low readings always reach them. They can also have you on their Lock Screen with a Live Activity.", link: "alerts" },
         { q: "Can my followers send me messages?", a: "Yes, short ones. A follower can send “Are you OK?”, “Check your glucose” or their own text; it arrives as a notification and you reply “I'm OK” with one tap. You can turn off messages from family in Settings.", link: "child-glucose" },
       ],
       de: [
         { q: "Wie kann meine Familie meinen FreeStyle Libre Wert sehen?", a: "Lade sie in Dulce ein. Geh zu Einstellungen, Follower, Jemanden einladen, und schick ihnen den Link oder den Code. Sie installieren Dulce kostenlos und sehen deinen Zucker in Echtzeit, ohne Sensor und ohne Abbott-Konto." },
-        { q: "Wie viele Personen können mir folgen, und was kostet das?", a: "Bis zu 3 Personen. Teilen ist eine Dulce Pro Funktion für die Person mit dem Sensor, mit 14 Tagen Gratis-Test; Follower zahlen nichts." },
+        { q: "Wie viele Personen können mir folgen, und was kostet das?", a: "So viele du willst, ohne Limit. Teilen ist eine Dulce Pro Funktion für die Person mit dem Sensor, mit 14 Tagen Gratis-Test; Follower zahlen nichts." },
         { q: "Bekommen meine Follower Warnungen bei Unter- und Überzucker?", a: "Ja. Jeder Follower hat eigene Warnungen für niedrige und hohe Werte, mit eigenen Ruhezeiten, und sehr niedrige Werte kommen immer an. Sie können dich auch mit einer Live-Aktivität auf ihrem Sperrbildschirm haben.", link: "alerts" },
         { q: "Können mir meine Follower Nachrichten schicken?", a: "Ja, kurze. Ein Follower kann dir „Geht es dir gut?“, „Überprüfe deinen Glukosewert“ oder einen eigenen Text schicken; er kommt als Mitteilung an, und du antwortest mit einem Tipp „Mir geht es gut“. Familien-Nachrichten kannst du in den Einstellungen ausschalten.", link: "child-glucose" },
       ],
       fr: [
         { q: "Comment ma famille peut-elle voir ma glycémie FreeStyle Libre ?", a: "En les invitant depuis Dulce. Va dans Réglages, Abonnés, Inviter quelqu'un, et envoie-leur le lien ou le code. Ils installent Dulce gratuitement et voient ta glycémie en temps réel, sans capteur ni compte Abbott." },
-        { q: "Combien de personnes peuvent me suivre, et combien ça coûte ?", a: "Jusqu'à 3 personnes. Le partage est une fonction de Dulce Pro pour la personne qui porte le capteur, avec 14 jours d'essai gratuit ; les abonnés ne paient rien." },
+        { q: "Combien de personnes peuvent me suivre, et combien ça coûte ?", a: "Autant que tu veux, sans limite. Le partage est une fonction de Dulce Pro pour la personne qui porte le capteur, avec 14 jours d'essai gratuit ; les abonnés ne paient rien." },
         { q: "Mes abonnés reçoivent-ils des alertes d'hypo et d'hyper ?", a: "Oui. Chaque abonné a ses propres alertes de glycémie basse et haute, avec ses propres heures calmes, et les valeurs très basses lui arrivent toujours. Il peut aussi t'avoir sur son écran verrouillé avec une Activité en direct.", link: "alerts" },
         { q: "Mes abonnés peuvent-ils m'envoyer des messages ?", a: "Oui, des messages courts. Un abonné peut t'envoyer « Ça va ? », « Vérifie ta glycémie » ou son propre texte ; il arrive en notification et tu réponds « Ça va » d'un geste. Tu peux désactiver les messages de la famille dans les Réglages.", link: "child-glucose" },
       ],
       it: [
         { q: "Come può la mia famiglia vedere la glicemia del mio FreeStyle Libre?", a: "Invitandola da Dulce. Vai su Impostazioni, Follower, Invita qualcuno, e manda il link o il codice. Installano Dulce gratis e vedono la tua glicemia in tempo reale, senza sensore né account Abbott." },
-        { q: "Quante persone possono seguirmi e quanto costa?", a: "Fino a 3 persone. La condivisione è una funzione di Dulce Pro per chi porta il sensore, con 14 giorni di prova gratuita; i follower non pagano nulla." },
+        { q: "Quante persone possono seguirmi e quanto costa?", a: "Quante ne vuoi, senza limiti. La condivisione è una funzione di Dulce Pro per chi porta il sensore, con 14 giorni di prova gratuita; i follower non pagano nulla." },
         { q: "I miei follower ricevono avvisi di ipo e iper?", a: "Sì. Ogni follower ha i propri avvisi di glicemia bassa e alta, con le proprie ore di silenzio, e i valori molto bassi gli arrivano sempre. Può anche averti sulla sua schermata di blocco con un'Attività in tempo reale.", link: "alerts" },
         { q: "I miei follower possono mandarmi messaggi?", a: "Sì, brevi. Un follower può mandarti «Tutto bene?», «Controlla la glicemia» o un testo suo; arriva come notifica e rispondi «Sto bene» con un tocco. Puoi disattivare i messaggi dalla famiglia in Impostazioni.", link: "child-glucose" },
       ],
@@ -1006,25 +1006,25 @@ export const ARTICLES: readonly Article[] = [
       en: [
         { q: "Can I monitor my child's glucose on my iPhone Lock Screen?", a: "Yes. With Dulce, your child's FreeStyle Libre glucose shows on your Lock Screen as a Live Activity, with low and high alerts, without unlocking your phone. Your child invites you as a follower from Dulce, or you sign in to Dulce with the LibreLinkUp account they already share with." },
         { q: "Does my child need an iPhone?", a: "They need a phone with the Libre app reading their sensor and an internet connection. To invite you from Dulce, that phone has to be an iPhone; if it only shares with your LibreLinkUp account, you open Dulce on your iPhone with that account." },
-        { q: "How much does it cost to follow someone?", a: "Nothing for the follower. Sharing is a Dulce Pro feature for the person wearing the sensor, with a 14-day free trial, and allows up to 3 followers." },
+        { q: "How much does it cost to follow someone?", a: "Nothing for the follower. Sharing is a Dulce Pro feature for the person wearing the sensor, with a 14-day free trial, and has no limit on followers." },
         { q: "Does it work for caring for an older parent?", a: "Yes. If their Libre app shares with your LibreLinkUp account, you sign in to Dulce with it and they don't have to install anything else on their phone." },
       ],
       de: [
         { q: "Kann ich den Zucker meines Kindes auf meinem iPhone-Sperrbildschirm sehen?", a: "Ja. Mit Dulce erscheint der FreeStyle Libre Wert deines Kindes als Live-Aktivität auf deinem Sperrbildschirm, mit Warnungen bei niedrigen und hohen Werten, ohne dass du das Handy entsperrst. Dein Kind lädt dich in Dulce als Follower ein, oder du meldest dich in Dulce mit dem LibreLinkUp-Konto an, mit dem es schon teilt." },
         { q: "Braucht mein Kind ein iPhone?", a: "Es braucht ein Handy mit der Libre-App, die den Sensor ausliest, und Internet. Um dich aus Dulce einzuladen, muss das ein iPhone sein; teilt es nur mit deinem LibreLinkUp-Konto, öffnest du Dulce auf deinem iPhone mit diesem Konto." },
-        { q: "Was kostet es, jemandem zu folgen?", a: "Für Follower nichts. Teilen ist eine Dulce Pro Funktion für die Person mit dem Sensor, mit 14 Tagen Gratis-Test, und erlaubt bis zu 3 Follower." },
+        { q: "Was kostet es, jemandem zu folgen?", a: "Für Follower nichts. Teilen ist eine Dulce Pro Funktion für die Person mit dem Sensor, mit 14 Tagen Gratis-Test, und erlaubt beliebig viele Follower." },
         { q: "Funktioniert das auch für ältere Eltern?", a: "Ja. Wenn ihre Libre-App mit deinem LibreLinkUp-Konto teilt, meldest du dich damit in Dulce an, und sie müssen nichts weiter auf ihrem Handy installieren." },
       ],
       fr: [
         { q: "Puis-je suivre la glycémie de mon enfant sur l'écran verrouillé de mon iPhone ?", a: "Oui. Avec Dulce, la glycémie FreeStyle Libre de ton enfant s'affiche sur ton écran verrouillé en Activité en direct, avec des alertes d'hypo et d'hyper, sans déverrouiller ton téléphone. Ton enfant t'invite comme abonné depuis Dulce, ou tu te connectes à Dulce avec le compte LibreLinkUp avec lequel il partage déjà." },
         { q: "Mon enfant a-t-il besoin d'un iPhone ?", a: "Il lui faut un téléphone avec l'app Libre qui lit son capteur et une connexion Internet. Pour t'inviter depuis Dulce, ce téléphone doit être un iPhone ; s'il partage seulement avec ton compte LibreLinkUp, tu ouvres Dulce sur ton iPhone avec ce compte." },
-        { q: "Combien coûte le fait de suivre quelqu'un ?", a: "Rien pour l'abonné. Le partage est une fonction de Dulce Pro pour la personne qui porte le capteur, avec 14 jours d'essai gratuit, et permet jusqu'à 3 abonnés." },
+        { q: "Combien coûte le fait de suivre quelqu'un ?", a: "Rien pour l'abonné. Le partage est une fonction de Dulce Pro pour la personne qui porte le capteur, avec 14 jours d'essai gratuit, et sans limite d'abonnés." },
         { q: "Est-ce que ça marche pour veiller sur un parent âgé ?", a: "Oui. Si son app Libre partage avec ton compte LibreLinkUp, tu te connectes à Dulce avec ce compte et il n'a rien d'autre à installer sur son téléphone." },
       ],
       it: [
         { q: "Posso seguire la glicemia di mio figlio sulla schermata di blocco del mio iPhone?", a: "Sì. Con Dulce la glicemia del FreeStyle Libre di tuo figlio compare sulla tua schermata di blocco come Attività in tempo reale, con avvisi di ipo e iper, senza sbloccare il telefono. Tuo figlio ti invita come follower da Dulce, oppure accedi a Dulce con l'account LibreLinkUp con cui già condivide." },
         { q: "Mio figlio ha bisogno di un iPhone?", a: "Gli serve un telefono con l'app Libre che legge il sensore e una connessione a Internet. Per invitarti da Dulce quel telefono deve essere un iPhone; se condivide solo con il tuo account LibreLinkUp, apri Dulce sul tuo iPhone con quell'account." },
-        { q: "Quanto costa seguire qualcuno?", a: "Niente per il follower. La condivisione è una funzione di Dulce Pro per chi porta il sensore, con 14 giorni di prova gratuita, e permette fino a 3 follower." },
+        { q: "Quanto costa seguire qualcuno?", a: "Niente per il follower. La condivisione è una funzione di Dulce Pro per chi porta il sensore, con 14 giorni di prova gratuita, e senza limite di follower." },
         { q: "Funziona anche per un genitore anziano?", a: "Sì. Se la sua app Libre condivide con il tuo account LibreLinkUp, accedi a Dulce con quell'account e lui non deve installare nient'altro sul telefono." },
       ],
     },
@@ -2529,7 +2529,7 @@ export const ARTICLES: readonly Article[] = [
         },
         {
           "q": "¿Mi familia puede ver mi glucosa?",
-          "a": "Sí. Con Dulce Pro puedes invitar hasta a 3 personas, que ven tu glucosa desde su iPhone sin pagar nada.",
+          "a": "Sí. Con Dulce Pro puedes invitar a todas las personas que quieras, que ven tu glucosa desde su iPhone sin pagar nada.",
           "link": "family-sharing"
         }
       ],
@@ -2548,7 +2548,7 @@ export const ARTICLES: readonly Article[] = [
         },
         {
           "q": "Can my family see my glucose?",
-          "a": "Yes. With Dulce Pro you can invite up to 3 people, who see your glucose on their own iPhone and pay nothing.",
+          "a": "Yes. With Dulce Pro you can invite as many people as you like, who see your glucose on their own iPhone and pay nothing.",
           "link": "family-sharing"
         }
       ],
@@ -2567,7 +2567,7 @@ export const ARTICLES: readonly Article[] = [
         },
         {
           "q": "Kann meine Familie meinen Wert sehen?",
-          "a": "Ja. Mit Dulce Pro lädst du bis zu 3 Personen ein, die deinen Wert auf dem eigenen iPhone sehen und nichts zahlen.",
+          "a": "Ja. Mit Dulce Pro lädst du so viele Personen ein, wie du willst, die deinen Wert auf dem eigenen iPhone sehen und nichts zahlen.",
           "link": "family-sharing"
         }
       ],
@@ -2586,7 +2586,7 @@ export const ARTICLES: readonly Article[] = [
         },
         {
           "q": "Ma famille peut-elle voir ma glycémie ?",
-          "a": "Oui. Avec Dulce Pro, tu invites jusqu'à 3 personnes, qui voient ta glycémie sur leur iPhone sans rien payer.",
+          "a": "Oui. Avec Dulce Pro, tu invites autant de personnes que tu veux, qui voient ta glycémie sur leur iPhone sans rien payer.",
           "link": "family-sharing"
         }
       ],
@@ -2605,7 +2605,7 @@ export const ARTICLES: readonly Article[] = [
         },
         {
           "q": "La mia famiglia può vedere la mia glicemia?",
-          "a": "Sì. Con Dulce Pro inviti fino a 3 persone, che vedono la tua glicemia sul proprio iPhone senza pagare nulla.",
+          "a": "Sì. Con Dulce Pro inviti tutte le persone che vuoi, che vedono la tua glicemia sul proprio iPhone senza pagare nulla.",
           "link": "family-sharing"
         }
       ]
@@ -3347,11 +3347,11 @@ export const ARTICLES: readonly Article[] = [
       "it": "Cosa sapere prima di mettere un FreeStyle Libre al cane o al gatto, perché le ipo sembrano più alte e come vedere la glicemia con la modalità animale di Dulce."
     },
     "summary": {
-      "es": "Sí, muchos veterinarios usan un FreeStyle Libre en perros y gatos, aunque es un uso fuera de indicación: es útil en general, pero en bajadas marcadas (por debajo de unos 55-60 mg/dL) marca de más, así que una lectura baja se comprueba con glucómetro. Con el modo mascota de Dulce pones el rango, los colores y el nivel crítico de tu veterinario y ves la glucosa en la pantalla de bloqueo, y hasta 3 personas pueden seguirla.",
-      "en": "Yes, many vets use a FreeStyle Libre on dogs and cats, although it is off-label: it is clinically useful, but in marked lows (below about 55-60 mg/dL) it reads too high, so check a low reading with a meter. With Dulce's pet mode you set your vet's range, line colours and critical level, see the glucose on your Lock Screen, and up to 3 people can follow.",
-      "de": "Ja, viele Tierarztpraxen nutzen einen FreeStyle Libre bei Hund und Katze, auch wenn das Off-Label ist: Er ist klinisch brauchbar, zeigt aber bei deutlicher Unterzuckerung (unter etwa 55-60 mg/dL) zu hoch an, also prüfe tiefe Werte mit einem Messgerät. Im Haustiermodus von Dulce stellst du Zielbereich, Linienfarben und kritische Grenze deiner Praxis ein, siehst den Wert auf dem Sperrbildschirm, und bis zu 3 Personen folgen.",
-      "fr": "Oui, beaucoup de vétérinaires posent un FreeStyle Libre aux chiens et aux chats, même si c'est hors indication : il est utile, mais en hypo marquée (sous 55-60 mg/dL environ) il affiche trop haut, donc vérifie une valeur basse au lecteur. Avec le mode animal de Dulce, tu règles la plage, les couleurs et le seuil critique de ton vétérinaire, tu vois la glycémie sur l'écran verrouillé et jusqu'à 3 personnes suivent.",
-      "it": "Sì, molti veterinari usano un FreeStyle Libre su cani e gatti, anche se è off-label: è utile, ma in ipoglicemia marcata (sotto circa 55-60 mg/dL) segna troppo alto, quindi una lettura bassa va controllata con il glucometro. Con la modalità animale di Dulce imposti intervallo, colori e soglia critica del veterinario, vedi la glicemia sulla schermata di blocco e fino a 3 persone possono seguirla."
+      "es": "Sí, muchos veterinarios usan un FreeStyle Libre en perros y gatos, aunque es un uso fuera de indicación: es útil en general, pero en bajadas marcadas (por debajo de unos 55-60 mg/dL) marca de más, así que una lectura baja se comprueba con glucómetro. Con el modo mascota de Dulce pones el rango, los colores y el nivel crítico de tu veterinario y ves la glucosa en la pantalla de bloqueo, y pueden seguirla todas las personas que quieras.",
+      "en": "Yes, many vets use a FreeStyle Libre on dogs and cats, although it is off-label: it is clinically useful, but in marked lows (below about 55-60 mg/dL) it reads too high, so check a low reading with a meter. With Dulce's pet mode you set your vet's range, line colours and critical level, see the glucose on your Lock Screen, and as many people as you like can follow.",
+      "de": "Ja, viele Tierarztpraxen nutzen einen FreeStyle Libre bei Hund und Katze, auch wenn das Off-Label ist: Er ist klinisch brauchbar, zeigt aber bei deutlicher Unterzuckerung (unter etwa 55-60 mg/dL) zu hoch an, also prüfe tiefe Werte mit einem Messgerät. Im Haustiermodus von Dulce stellst du Zielbereich, Linienfarben und kritische Grenze deiner Praxis ein, siehst den Wert auf dem Sperrbildschirm, und beliebig viele Personen folgen.",
+      "fr": "Oui, beaucoup de vétérinaires posent un FreeStyle Libre aux chiens et aux chats, même si c'est hors indication : il est utile, mais en hypo marquée (sous 55-60 mg/dL environ) il affiche trop haut, donc vérifie une valeur basse au lecteur. Avec le mode animal de Dulce, tu règles la plage, les couleurs et le seuil critique de ton vétérinaire, tu vois la glycémie sur l'écran verrouillé et autant de personnes que tu veux suivent.",
+      "it": "Sì, molti veterinari usano un FreeStyle Libre su cani e gatti, anche se è off-label: è utile, ma in ipoglicemia marcata (sotto circa 55-60 mg/dL) segna troppo alto, quindi una lettura bassa va controllata con il glucometro. Con la modalità animale di Dulce imposti intervallo, colori e soglia critica del veterinario, vedi la glicemia sulla schermata di blocco e possono seguirla tutte le persone che vuoi."
     },
     "keywords": {
       "es": [
@@ -3419,7 +3419,7 @@ export const ARTICLES: readonly Article[] = [
         },
         {
           "q": "¿Puede seguirlo también quien cuida a mi mascota?",
-          "a": "Sí. Con Dulce Pro invitas hasta a 3 personas, que ven la glucosa en su iPhone con sus propias alertas sin pagar nada.",
+          "a": "Sí. Con Dulce Pro invitas a todas las personas que quieras, que ven la glucosa en su iPhone con sus propias alertas sin pagar nada.",
           "link": "family-sharing"
         }
       ],
@@ -3438,7 +3438,7 @@ export const ARTICLES: readonly Article[] = [
         },
         {
           "q": "Can my pet sitter follow too?",
-          "a": "Yes. With Dulce Pro you invite up to 3 people, who see the glucose on their own iPhone with their own alerts and pay nothing.",
+          "a": "Yes. With Dulce Pro you invite as many people as you like, who see the glucose on their own iPhone with their own alerts and pay nothing.",
           "link": "family-sharing"
         }
       ],
@@ -3457,7 +3457,7 @@ export const ARTICLES: readonly Article[] = [
         },
         {
           "q": "Kann auch der Tiersitter mitverfolgen?",
-          "a": "Ja. Mit Dulce Pro lädst du bis zu 3 Personen ein, die den Wert auf dem eigenen iPhone mit eigenen Alarmen sehen und nichts zahlen.",
+          "a": "Ja. Mit Dulce Pro lädst du so viele Personen ein, wie du willst, die den Wert auf dem eigenen iPhone mit eigenen Alarmen sehen und nichts zahlen.",
           "link": "family-sharing"
         }
       ],
@@ -3476,7 +3476,7 @@ export const ARTICLES: readonly Article[] = [
         },
         {
           "q": "Mon pet-sitter peut-il suivre aussi ?",
-          "a": "Oui. Avec Dulce Pro, tu invites jusqu'à 3 personnes, qui voient la glycémie sur leur iPhone avec leurs propres alertes et ne paient rien.",
+          "a": "Oui. Avec Dulce Pro, tu invites autant de personnes que tu veux, qui voient la glycémie sur leur iPhone avec leurs propres alertes et ne paient rien.",
           "link": "family-sharing"
         }
       ],
@@ -3495,7 +3495,7 @@ export const ARTICLES: readonly Article[] = [
         },
         {
           "q": "Anche il pet sitter può seguirlo?",
-          "a": "Sì. Con Dulce Pro inviti fino a 3 persone, che vedono la glicemia sul proprio iPhone con i propri avvisi senza pagare nulla.",
+          "a": "Sì. Con Dulce Pro inviti tutte le persone che vuoi, che vedono la glicemia sul proprio iPhone con i propri avvisi senza pagare nulla.",
           "link": "family-sharing"
         }
       ]
