@@ -6,6 +6,7 @@ import { gsap, prefersReducedMotion } from "@/components/motion/gsap";
 import { DeviceFrame } from "@/components/screens/DeviceFrame";
 import type { ScreenLocale } from "@/components/screens/strings";
 import { SECTION } from "@/lib/site";
+import { GuideLink } from "./GuideLink";
 
 /**
  * "Dulce [chip] en tu muñeca": the chip between the words is a window onto an
@@ -22,6 +23,8 @@ export function WristChip({
   body,
   pro,
   alt,
+  guideHref,
+  guideLabel,
 }: {
   locale: ScreenLocale;
   before: string;
@@ -30,6 +33,8 @@ export function WristChip({
   body: string;
   pro: string;
   alt: string;
+  guideHref: string;
+  guideLabel: string;
 }) {
   const sectionRef = useRef<HTMLElement>(null);
   const stickyRef = useRef<HTMLDivElement>(null);
@@ -182,6 +187,7 @@ export function WristChip({
               </h2>
               <p className="mt-4 max-w-[40ch] text-[1.0625rem] leading-relaxed text-ink/85">{body}</p>
               <p className="mt-3 text-label font-semibold text-ink">{pro}</p>
+              <GuideLink href={guideHref} label={guideLabel} className="mt-3" />
             </div>
           </div>
         </div>

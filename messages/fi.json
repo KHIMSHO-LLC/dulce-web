@@ -265,7 +265,8 @@
       "sub": "Ilmainen App Storessa. Dulce Prossa on 14 päivän kokeilu.",
       "qr": "Skannaa iPhonella",
       "android": "Käytätkö Androidia? Lähetämme sähköpostia, kun se on valmis."
-    }
+    },
+    "guideLink": "Lue opas"
   },
   "footer": {
     "scan": "Skannaa koodi ja lataa Dulce iPhoneesi.",
@@ -278,7 +279,9 @@
     "top": "Takaisin ylös",
     "wordmark": "dulce",
     "learn": "Opi",
-    "group": "Dulce-yhteisö"
+    "group": "Dulce-yhteisö",
+    "features": "Ominaisuudet",
+    "widgets": "Widgetit"
   },
   "waitlist": {
     "email": {

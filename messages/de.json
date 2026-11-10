@@ -265,7 +265,8 @@
       "sub": "Kostenlos im App Store. Dulce Pro kannst du 14 Tage testen.",
       "qr": "Mit dem iPhone scannen",
       "android": "Du nutzt Android? Wir schreiben dir, sobald es so weit ist."
-    }
+    },
+    "guideLink": "Zur Anleitung"
   },
   "footer": {
     "scan": "Scanne den Code, um Dulce auf deinem iPhone zu laden.",
@@ -278,7 +279,9 @@
     "top": "Nach oben",
     "wordmark": "dulce",
     "learn": "Lernen",
-    "group": "Dulce-Community"
+    "group": "Dulce-Community",
+    "features": "Funktionen",
+    "widgets": "Widgets"
   },
   "waitlist": {
     "email": {

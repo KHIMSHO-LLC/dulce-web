@@ -265,7 +265,8 @@
       "sub": "Gratis i App Store. Dulce Pro har 14 dagars provperiod.",
       "qr": "Skanna med din iPhone",
       "android": "Har du Android? Vi mejlar dig när den är klar."
-    }
+    },
+    "guideLink": "Läs guiden"
   },
   "footer": {
     "scan": "Skanna koden för att hämta Dulce till din iPhone.",
@@ -278,7 +279,9 @@
     "top": "Till toppen",
     "wordmark": "dulce",
     "learn": "Lär dig mer",
-    "group": "Dulce-gemenskapen"
+    "group": "Dulce-gemenskapen",
+    "features": "Funktioner",
+    "widgets": "Widgetar"
   },
   "waitlist": {
     "email": {

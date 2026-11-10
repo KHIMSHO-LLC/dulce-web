@@ -265,7 +265,8 @@
       "sub": "Gratis in de App Store. Dulce Pro kun je 14 dagen proberen.",
       "qr": "Scan met je iPhone",
       "android": "Gebruik je Android? We mailen je zodra hij klaar is."
-    }
+    },
+    "guideLink": "Lees de gids"
   },
   "footer": {
     "scan": "Scan de code om Dulce op je iPhone te downloaden.",
@@ -278,7 +279,9 @@
     "top": "Terug naar boven",
     "wordmark": "dulce",
     "learn": "Leren",
-    "group": "Dulce-community"
+    "group": "Dulce-community",
+    "features": "Functies",
+    "widgets": "Widgets"
   },
   "waitlist": {
     "email": {

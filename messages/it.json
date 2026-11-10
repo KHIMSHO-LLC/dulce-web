@@ -265,7 +265,8 @@
       "sub": "Gratis sull'App Store. Dulce Pro include una prova di 14 giorni.",
       "qr": "Inquadra con il tuo iPhone",
       "android": "Hai Android? Ti scriveremo quando sarà pronta."
-    }
+    },
+    "guideLink": "Leggi la guida"
   },
   "footer": {
     "scan": "Inquadra il codice per scaricare Dulce sul tuo iPhone.",
@@ -278,7 +279,9 @@
     "top": "Torna su",
     "wordmark": "dulce",
     "learn": "Impara",
-    "group": "Community Dulce"
+    "group": "Community Dulce",
+    "features": "Funzioni",
+    "widgets": "Widget"
   },
   "waitlist": {
     "email": {

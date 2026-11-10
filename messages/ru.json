@@ -265,7 +265,8 @@
       "sub": "Бесплатно в App Store. Dulce Pro — с пробным периодом 14 дней.",
       "qr": "Отсканируйте iPhone",
       "android": "У вас Android? Мы напишем, когда будет готово."
-    }
+    },
+    "guideLink": "Читать руководство"
   },
   "footer": {
     "scan": "Отсканируйте код, чтобы скачать Dulce на iPhone.",
@@ -278,7 +279,9 @@
     "top": "Наверх",
     "wordmark": "dulce",
     "learn": "Узнать больше",
-    "group": "Сообщество Dulce"
+    "group": "Сообщество Dulce",
+    "features": "Возможности",
+    "widgets": "Виджеты"
   },
   "waitlist": {
     "email": {
