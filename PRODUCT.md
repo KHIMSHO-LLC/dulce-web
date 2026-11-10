@@ -20,19 +20,20 @@ Made by someone who lives with T1D, for people with T1D wherever they live. Neve
 
 ## Operating Context
 
-- Glucose comes from the user's LibreLinkUp account (not LibreLink). The `/setup` page explains the difference; the app deep-links to `/setup` with that fixed path.
+- Glucose comes from the sensor's own sharing account: LibreLinkUp (not LibreLink), Dexcom Share, Medtronic CareLink or the user's Nightscout site. `/sensors` lists every sensor with its set-up steps; `/setup` explains LibreLink vs LibreLinkUp and stays at that fixed path because the app deep-links to it.
 - Followers join through invite links `https://dulceglucosa.com/f/<code>` (universal links via `/.well-known/apple-app-site-association`); codes expire after 24 hours.
 - Used all day in glances, and at night (low alerts, StandBy on the nightstand).
 - `/partners` is an internal referral and usage dashboard talking to the Dulce relay; it is not part of the public site.
 
 ## Capabilities and Constraints
 
-- Live today: FreeStyle Libre 2 and 3 via LibreLinkUp, Apple Health (read-only), Apple Watch app with complications, Lock Screen Live Activity and Dynamic Island, home-screen widgets, low/high alerts with custom thresholds, quiet hours and a stronger alarm for very low glucose, logbook (carbs, insulin, glucose, quick slider), trends over 7/14/30/90 days (time in range, average, GMI), followers by invite link with nudges and a one-tap "I'm OK" reply, revocable anytime.
+- Live today: FreeStyle Libre 2, 2 Plus, 3 and 3 Plus via LibreLinkUp, Apple Health (reads glucose, insulin and carbs; from 1.0.7 it can also save glucose), Apple Watch app with complications, Lock Screen Live Activity and Dynamic Island, home-screen widgets, low/high alerts with custom thresholds, quiet hours and a stronger alarm for very low glucose, logbook (carbs, insulin, glucose, quick slider), trends over 7/14/30/90 days (time in range, average, GMI), followers by invite link (no follower limit since 2026-11-10) with nudges and a one-tap "I'm OK" reply, revocable anytime, NFC smart insulin pens (NovoPen 6, NovoPen Echo Plus; free), the CarPlay and Apple Watch Smart Stack card (iOS 26, Pro), pet mode (1.0.7).
 - Live since 1.0.4 (2026-10-27): Dexcom G6, G7 and ONE+ via Dexcom Share.
-- Coming, not live: Nightscout, Android (waitlist only).
+- Live since 1.0.6 (2026-11-05): Medtronic Simplera, Guardian, Instinct and MiniMed 780G via CareLink, and Nightscout (read only).
+- Not live: Android (waitlist only).
 - The app UI is available in Spanish, English, German, French, Italian, Dutch, Finnish, Swedish, Danish, Norwegian, Russian and Georgian (the last seven from 1.0.6). The site is English at `/` and Spanish, German, French and Italian at `/es`, `/de`, `/fr`, `/it` (Spanish was at `/` until 2026-11-03). Finnish (`/fi`) and Dutch (`/nl`) since 2026-11-04: site text, calculators, setup and status pages, plus the guides translated so far; their legal pages show the English text (noindex). Norwegian (`/nb`), Swedish (`/sv`) and Russian (`/ru`) the same way since 2026-11-05 (no guides translated yet). First visits to pages without a per-language slug follow the browser language.
 - Pricing: free download; Dulce Pro (Apple Watch, family sharing and more) with a 14-day free trial. Do not state Pro prices on the site.
-- Requires iPhone with iOS 17 or later; Dynamic Island needs iPhone 14 Pro or later.
+- The app runs on iOS 17 or later, but widgets and the Live Activity live in an extension built for iOS 18 (dulce-app `targets/GlucoseWidget`, deploymentTarget 18.0), so on iOS 17 there are no widgets or Live Activity. Dynamic Island needs iPhone 14 Pro or later; the CarPlay / Smart Stack card needs iOS 26 (checked 2026-11-10).
 - Not a medical device. It does not diagnose, treat or replace the CGM's own alarms or the care team's judgment.
 - The site is one landing page plus the functional routes that must keep working: `/setup`, `/legal/*`, `/f/<code>`, `/.well-known/*`, `/partners`. Retired marketing routes redirect into sections of the landing page.
 

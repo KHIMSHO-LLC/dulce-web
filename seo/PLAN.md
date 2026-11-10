@@ -16,26 +16,31 @@ language the site and app speak (es, en, de, fr, it), to "how do I see my Libre 
 Screen / widget", "how do I follow my child's glucose", "LibreLinkUp not working" and the everyday diabetes
 questions around them. Being the best answer means the product actually does it and the page says so accurately.
 
-## Ground truth (checked in code 2026-10-22; re-check before claiming anything)
+## Ground truth (re-checked against dulce-app `main` 2026-11-10; re-check before claiming anything)
 
-- Released (treated as live from 2026-10-25 by owner decision, 1.0.4): FreeStyle Libre 2/3 via LibreLinkUp, and
-  Dexcom G6/G7/ONE+ via Dexcom Share (the wearer's own Dexcom account, Share on, at least one follower; region
-  US / Japan / outside the US; a reading every 5 minutes; sensor expiry reminders stay in the Dexcom app).
-  Dulce shows one person per LibreLinkUp account (the first connection). **Nightscout is not released**; Android
-  not released. If 1.0.4 is rejected or slips, revert the Dexcom and fr/it claims.
-- Family: up to 3 followers by link/code (Pro for the wearer, free for followers); followers get their own alerts,
-  quiet hours and Live Activity; "messages" are short notifications ("Are you OK?", custom text) answered with a
-  one-tap "I'm OK". **Not a chat**, never tied to insulin dosing.
-- Apple Health is read-only (glucose, insulin, carbs; Pro). Logbook and Trends are free. Pro = monthly/yearly
-  subscription with a 14-day trial.
-- App languages: es-ES, es-MX, en, de, ka; fr and it from the release carrying dulce-app branch `i18n/fr-it`.
-  Device languages the app doesn't support fall back to **English** from 1.0.4 (Spanish-speaking regions get es-MX).
-- App Store name: **Dulce: Glucose at a Glance**, id 6770694596. From 1.0.4 the de/fr/it listings have localized
-  names (Dulce: Blutzucker im Blick / Dulce : Glycémie en direct / Dulce: Glicemia sott'occhio).
-- CarPlay: there is no CarPlay app, but on iOS 26 the Live Activity (Pro) shows on the CarPlay dashboard. True
-  since 1.0.3; 1.0.4 has a bigger, glanceable layout there.
-- 1.0.4 (submitted 2026-10-25, build 69): Dexcom, the app in French and Italian, mmol/L everywhere, the new
-  design. The owner decided on 2026-10-25 to present it as live on the website ahead of approval.
+- Live on the App Store: **1.0.7** (1.0.9 is in TestFlight; 1.0.8 was never released). Describe 1.0.7, not
+  TestFlight builds (e.g. the Dexcom "keep me signed in" password copy on the relay is NOT live yet).
+- Sensors (all free to connect; full list and steps on `/sensors`): FreeStyle Libre 2, 2 Plus, 3, 3 Plus via
+  LibreLinkUp (about one reading a minute; one person per LibreLinkUp account, the first connection); Dexcom G6/G7/ONE+
+  via Dexcom Share (the wearer's own account, Share on, at least one follower; region US / Japan / outside the US; every
+  5 minutes; sensor expiry reminders stay in the Dexcom app); Medtronic Simplera, Guardian, Instinct, MiniMed 780G via
+  CareLink (since 1.0.6; sign-in on Medtronic's page, care partner accounts work, every 5 minutes, unofficial
+  connection Medtronic can change); Nightscout (since 1.0.6; https only, read-only token or API secret, reads glucose
+  only). Android not released (waitlist only).
+- Family: **no follower limit** for Pro (since 2026-11-10; never write "up to 3"); free for followers; followers get
+  their own alerts, quiet hours and Live Activity; "messages" are short notifications ("Are you OK?", custom text)
+  answered with a one-tap "I'm OK". **Not a chat**, never tied to insulin dosing.
+- Apple Health: reads glucose, insulin, carbs (Pro); from 1.0.7 it can also save glucose to Health. Logbook and
+  Trends are free. NFC smart insulin pens (NovoPen 6, NovoPen Echo Plus) are free. Pro = monthly/yearly subscription
+  with a 14-day trial; no prices on the site.
+- iOS: the app runs on iOS 17+, but widgets and the Live Activity need **iOS 18** (widget extension deploymentTarget
+  18.0). Dynamic Island = iPhone 14 Pro or later.
+- App languages (from 1.0.6/1.0.7): es-ES, es-MX, en, de, fr, it, fi, da, nb, sv, nl, ru, ja, ko, ka. Device
+  languages the app doesn't support fall back to English.
+- App Store name: **Dulce: Glucose at a Glance**, id 6770694596 (localized names per listing, see `seo/aso.md`).
+- CarPlay: there is no CarPlay app; on iOS 26 the Live Activity's small card (Pro) shows on the CarPlay dashboard
+  and in the Apple Watch Smart Stack.
+- Pet mode (1.0.7): Settings › "Who is Dulce for?" › A pet (vet's range and critical level).
 
 ## Rejected ideas from external briefs (don't re-adopt)
 
