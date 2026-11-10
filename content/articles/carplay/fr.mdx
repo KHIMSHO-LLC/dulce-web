@@ -1,0 +1,79 @@
+Quand tu conduis, le moment où tu as le plus besoin de connaître ta glycémie est souvent celui où tu ne peux pas prendre ton téléphone. Dulce n'a pas d'app CarPlay, et ce n'est pas nécessaire : depuis **iOS 26**, CarPlay peut afficher l'**Activité en direct** d'une app sur le Dashboard. Celle de Dulce a une petite carte pensée pour cet endroit, avec un chiffre assez grand pour être lu d'un coup d'œil.
+
+Ce guide t'explique ce que tu vois, ce qu'il te faut, comment l'activer et quelle carte choisir.
+
+## Comment ça marche
+
+Sur l'iPhone, l'Activité en direct de Dulce, c'est l'encadré avec ta glycémie sur l'écran verrouillé et dans la Dynamic Island (vois le <ArticleLink to="lock-screen">guide de l'écran verrouillé</ArticleLink>). Avec iOS 26, quand ton iPhone est connecté à CarPlay, cette même Activité en direct s'affiche sur le **Dashboard CarPlay**. D'après Apple, si le Dashboard n'est pas à l'écran à ce moment-là, CarPlay la montre sous forme de notification en bas de l'écran. Dans CarPlay, les Activités en direct se regardent seulement : on ne peut pas toucher dessus.
+
+CarPlay n'utilise pas le grand design de l'écran verrouillé, mais une **petite carte**, de la même taille que celle qu'Apple utilise pour les Activités en direct dans la **Pile intelligente de l'Apple Watch**. iOS n'a qu'une seule petite carte pour les deux endroits : ce que tu choisis pour CarPlay vaut donc aussi pour ta montre.
+
+La carte affiche :
+
+- **Ta glycémie et la flèche de tendance**, en grand.
+- **L'heure de la mesure.** Quand la mesure commence à dater, tu vois plutôt il y a combien de minutes elle a été prise. Si elle est trop ancienne, le chiffre devient gris, barré, avec un avertissement et une durée qui continue de défiler, pour qu'une vieille valeur ne passe jamais pour une valeur actuelle.
+- Selon le style, une **courbe** des dernières heures ou ton **temps dans la cible**.
+- Si tu suis quelqu'un, **son prénom**, pour savoir à qui est la glycémie.
+
+## Ce qu'il te faut
+
+- Un **iPhone sous iOS 26** et une voiture compatible **CarPlay** (filaire ou sans fil). Les widgets et l'Activité en direct de Dulce demandent déjà iOS 18 ; la carte CarPlay demande iOS 26.
+- **Dulce connecté à ta glycémie.** Un FreeStyle Libre 2, 2 Plus, 3 ou 3 Plus via LibreLinkUp, un Dexcom G6, G7 ou ONE+ via Dexcom Share, Medtronic CareLink ou Nightscout : la carte affiche la mesure qui arrive dans Dulce. La liste complète est sur la <PageLink to="/sensors">page des capteurs</PageLink>.
+- **L'Activité en direct activée.** C'est une fonction de <PageLink to="/pro">Dulce Pro</PageLink>, avec 14 jours d'essai gratuit. Si tu suis quelqu'un, ton Activité en direct fonctionne avec le Pro de cette personne.
+
+## Comment l'activer
+
+<Steps>
+<Step title="Connecte Dulce">
+Si ce n'est pas encore fait, suis le <PageLink to="/setup">guide de configuration</PageLink> pour te connecter avec ton compte LibreLinkUp, ou connecte Dexcom, Medtronic ou Nightscout.
+</Step>
+<Step title="Active l'Activité en direct">
+Dans Dulce, va dans **Réglages** et active **Activité en direct et Dynamic Island**. C'est là que tu peux commencer l'essai de Pro.
+</Step>
+<Step title="Autorise les Activités en direct dans iOS">
+Dans l'app **Réglages** de l'iPhone, ouvre **Dulce** et vérifie que les **Activités en direct** sont autorisées.
+</Step>
+<Step title="Connecte-toi à CarPlay">
+Branche ou connecte ton iPhone sans fil comme d'habitude et ouvre le Dashboard CarPlay. La carte apparaît tant que l'Activité en direct tourne.
+</Step>
+</Steps>
+
+<AppCta title="Ta glycémie sur le Dashboard CarPlay" />
+
+## Choisis ta carte CarPlay
+
+Dans Dulce, ouvre **Réglages → Style de l'Activité en direct** et touche l'onglet **CarPlay** en haut. Sous **CarPlay et Apple Watch**, tu trouves ces styles, avec un aperçu au-dessus de la liste :
+
+| Style | Ce qu'il montre |
+| --- | --- |
+| Chiffre et courbe | La mesure, la flèche et une petite courbe sur une carte à la couleur de ta plage |
+| Grand chiffre | Seulement la mesure et la flèche, le plus grand possible, sur une carte à la couleur de ta plage |
+| Chiffre et temps dans la cible | La mesure avec ton temps dans la cible à la place de la courbe |
+| Nuit (sombre) | Une carte sombre, plus douce pour les yeux la nuit |
+| Comme mon écran verrouillé | La petite version de ton design d'écran verrouillé (proposée avec Espresso, Porcelain, Aurora et Monolith) |
+
+Pour les styles avec courbe, tu choisis aussi la **Période** affichée : 3, 6, 12 ou 24 heures.
+
+<Figure src="/guides/live-activity-styles.jpg" alt="L'écran Style de l'Activité en direct de Dulce avec un aperçu, à côté d'une Apple Watch qui affiche une petite carte de glycémie" caption="L'écran de style de l'Activité en direct (une version antérieure : l'app actuelle a en haut les onglets Écran verrouillé, Dynamic Island et CarPlay)." />
+
+Le bon choix dépend de toi. Sur un Dashboard chargé, **Grand chiffre** laisse le plus de place aux chiffres. **Chiffre et courbe** te dit tout de suite si tu montes ou si tu descends. **Nuit (sombre)** évite un bloc de couleur vive à l'écran quand tu roules de nuit.
+
+## Aussi sur ton Apple Watch
+
+La même carte apparaît en haut de la **Pile intelligente** d'une Apple Watch sous watchOS 11 ou plus récent, tant que l'Activité en direct tourne sur ton iPhone. C'est indépendant de l'app Apple Watch de Dulce et de ses complications, que tu configures comme expliqué dans le <ArticleLink to="apple-watch">guide Apple Watch</ArticleLink>.
+
+## Les limites à connaître
+
+- **Seulement pendant que l'Activité en direct tourne.** Si iOS l'a arrêtée (Apple limite la durée pendant laquelle une Activité en direct reste active), la carte disparaît aussi de CarPlay. Ouvre Dulce et elle revient.
+- **Le chiffre est aussi frais que sa source.** Avec Dulce Pro, le serveur de Dulce met à jour l'Activité en direct chaque minute avec un Libre ; Dexcom et Medtronic donnent une nouvelle mesure toutes les 5 minutes. Si le téléphone qui lit ton capteur perd sa connexion, tu vois l'âge de la mesure augmenter.
+- **Le mode Économie d'énergie** réduit les mises à jour en arrière-plan.
+- Sans Activité en direct, pas de carte CarPlay. Les <ArticleLink to="widgets">widgets de glycémie</ArticleLink>, gratuits, affichent quand même ton chiffre sur l'écran verrouillé et l'écran d'accueil de l'iPhone.
+
+<Callout type="warning">
+Ne regarde la carte que lorsque c'est sans danger, comme tu jetterais un œil au compteur, et respecte le code de la route de ton pays. La carte ne remplace ni les alarmes de ton capteur ni les alertes de Dulce, et ne sert pas à décider d'un traitement. Si tu te sens en hypo, arrête-toi dans un endroit sûr, vérifie avec ton capteur ou une glycémie capillaire et suis le plan convenu avec ton équipe soignante. Dulce n'est pas un dispositif médical.
+</Callout>
+
+## Sources
+
+- Apple Developer. *Turbocharge your app for CarPlay*, WWDC25 (Activités en direct sur le Dashboard CarPlay avec iOS 26, la petite carte, notification quand le Dashboard n'est pas affiché). [developer.apple.com](https://developer.apple.com/videos/play/wwdc2025/216/)
+- Apple Developer. *Bring your Live Activity to Apple Watch*, WWDC24 (Activités en direct de l'iPhone dans la Pile intelligente de watchOS 11). [developer.apple.com](https://developer.apple.com/videos/play/wwdc2024/10068/)

@@ -160,7 +160,8 @@ export function PageLink({
     | "/tools/time-in-range-calculator"
     | "/tools/gmi-calculator"
     | "/tools/cgm-glossary"
-    | "/sensors";
+    | "/sensors"
+    | "/pro";
   children: ReactNode;
 }) {
   return (

@@ -320,7 +320,7 @@ export const ARTICLES: readonly Article[] = [
     category: "guide",
     author: "giorgi",
     datePublished: "2026-10-19",
-    dateModified: "2026-11-05",
+    dateModified: "2026-11-10",
     slug: {
       es: "glucosa-libre-en-pantalla-de-bloqueo-iphone",
       en: "libre-glucose-on-iphone-lock-screen",
@@ -3500,6 +3500,89 @@ export const ARTICLES: readonly Article[] = [
         }
       ]
     }
+  },
+  {
+    id: "carplay",
+    category: "guide",
+    author: "giorgi",
+    datePublished: "2026-11-10",
+    dateModified: "2026-11-10",
+    slug: {
+      es: "glucosa-en-carplay-iphone",
+      en: "glucose-on-carplay-iphone",
+      de: "glukose-in-carplay-iphone",
+      fr: "glycemie-sur-carplay-iphone",
+      it: "glicemia-su-carplay-iphone",
+    },
+    title: {
+      es: "Glucosa en CarPlay: tu Libre o Dexcom en la pantalla del coche",
+      en: "Glucose on CarPlay: your Libre or Dexcom on the car screen",
+      de: "Glukose in CarPlay: dein Libre oder Dexcom auf dem Autodisplay",
+      fr: "Glycémie sur CarPlay : ton Libre ou Dexcom sur l'écran de la voiture",
+      it: "Glicemia su CarPlay: il tuo Libre o Dexcom sullo schermo dell'auto",
+    },
+    description: {
+      es: "Con iOS 26, la Live Activity de Dulce aparece en el panel de CarPlay: tu glucosa, la flecha y la hora de la lectura. Qué necesitas, cómo activarla y qué tarjeta elegir.",
+      en: "With iOS 26, Dulce's Live Activity shows on the CarPlay Dashboard: your glucose, trend arrow and reading time. What you need, how to turn it on, which card to pick.",
+      de: "Mit iOS 26 erscheint Dulces Live-Aktivität im CarPlay-Dashboard: Glukosewert, Trendpfeil und Uhrzeit. Was du brauchst, wie du sie einschaltest, welche Karte passt.",
+      fr: "Avec iOS 26, l'Activité en direct de Dulce s'affiche sur le Dashboard CarPlay : ta glycémie, la flèche et l'heure. Ce qu'il faut et quelle carte choisir.",
+      it: "Con iOS 26 l'Attività in tempo reale di Dulce compare nella Dashboard di CarPlay: glicemia, freccia e ora. Cosa serve e quale scheda scegliere.",
+    },
+    summary: {
+      es: "Dulce no tiene app de CarPlay, pero con iOS 26 su Live Activity aparece en el panel de CarPlay: tu glucosa, la flecha de tendencia y la hora de la lectura en una tarjeta pensada para verse de un vistazo. Solo se ve mientras la Live Activity está activa, que es una función de Dulce Pro (14 días de prueba gratis), y la misma tarjeta sale en la pila inteligente del Apple Watch. En Ajustes, Estilo de Live Activity, pestaña CarPlay, eliges entre número grande, número y gráfica, número y tiempo en rango o noche.",
+      en: "Dulce has no CarPlay app, but with iOS 26 its Live Activity shows on the CarPlay Dashboard: your glucose, trend arrow and the time of the reading on a card made to be read at a glance. It only shows while the Live Activity runs, which is a Dulce Pro feature (14-day free trial), and the same card appears in the Apple Watch Smart Stack. In Settings, Live Activity style, CarPlay tab, you pick big number, number and chart, number and time in range, or night.",
+      de: "Dulce hat keine CarPlay-App, aber mit iOS 26 erscheint seine Live-Aktivität im CarPlay-Dashboard: dein Glukosewert, der Trendpfeil und die Uhrzeit des Werts auf einer Karte, die man mit einem Blick liest. Sie ist nur sichtbar, solange die Live-Aktivität läuft, eine Funktion von Dulce Pro (14 Tage kostenlos testen), und dieselbe Karte zeigt der Smart Stack der Apple Watch. Unter Einstellungen, Stil der Live-Aktivität, Tab CarPlay wählst du große Zahl, Zahl und Verlauf, Zahl und Zeit im Zielbereich oder Nacht.",
+      fr: "Dulce n'a pas d'app CarPlay, mais avec iOS 26 son Activité en direct s'affiche sur le Dashboard CarPlay : ta glycémie, la flèche de tendance et l'heure de la mesure sur une carte faite pour être lue d'un coup d'œil. Elle n'apparaît que pendant que l'Activité en direct tourne, une fonction de Dulce Pro (14 jours d'essai gratuit), et la même carte s'affiche dans la Pile intelligente de l'Apple Watch. Dans Réglages, Style de l'Activité en direct, onglet CarPlay, tu choisis grand chiffre, chiffre et courbe, chiffre et temps dans la cible, ou nuit.",
+      it: "Dulce non ha un'app per CarPlay, ma con iOS 26 la sua Attività in tempo reale compare nella Dashboard di CarPlay: glicemia, freccia di tendenza e ora della lettura in una scheda pensata per un'occhiata. Si vede solo mentre l'Attività in tempo reale è attiva, una funzione di Dulce Pro (14 giorni di prova gratuita), e la stessa scheda appare nella Pila smart di Apple Watch. In Impostazioni, Stile dell'Attività in tempo reale, scheda CarPlay, scegli numero grande, numero e grafico, numero e tempo nel range oppure notte.",
+    },
+    keywords: {
+      es: ["glucosa en carplay", "libre carplay", "dexcom carplay", "freestyle libre carplay", "carplay live activity glucosa", "carplay ios 26 glucosa"],
+      en: ["glucose carplay", "libre carplay", "dexcom carplay", "freestyle libre carplay", "carplay live activities glucose", "blood sugar carplay", "carplay ios 26 glucose"],
+      de: ["glukose carplay", "libre carplay", "dexcom carplay", "freestyle libre carplay", "blutzucker carplay", "carplay live aktivität glukose"],
+      fr: ["glycémie carplay", "libre carplay", "dexcom carplay", "freestyle libre carplay", "carplay activité en direct glycémie"],
+      it: ["glicemia carplay", "libre carplay", "dexcom carplay", "freestyle libre carplay", "carplay attività in tempo reale glicemia"],
+    },
+    image: "/guides/live-activity-styles.jpg",
+    imageAlt: {
+      es: "Pantalla de estilo de Live Activity de Dulce y la tarjeta pequeña de glucosa en un Apple Watch",
+      en: "Dulce's Live Activity style screen and the small glucose card on an Apple Watch",
+      de: "Dulces Bildschirm für den Stil der Live-Aktivität und die kleine Glukosekarte auf einer Apple Watch",
+      fr: "L'écran Style de l'Activité en direct de Dulce et la petite carte de glycémie sur une Apple Watch",
+      it: "La schermata Stile dell'Attività in tempo reale di Dulce e la piccola scheda della glicemia su un Apple Watch",
+    },
+    related: ["lock-screen", "apple-watch", "widgets"],
+    faq: {
+      es: [
+        { q: "¿Hay una app de Dulce para CarPlay?", a: "No. Con iOS 26, CarPlay muestra la Live Activity de Dulce en el panel sin necesidad de una app de CarPlay." },
+        { q: "¿Qué necesito para ver mi glucosa en CarPlay?", a: "Un iPhone con iOS 26 conectado a un coche con CarPlay, Dulce conectado a tu sensor y la Live Activity activada, que es de Dulce Pro con 14 días de prueba gratis.", link: "lock-screen" },
+        { q: "¿Funciona con Dexcom?", a: "Sí. La tarjeta de CarPlay muestra la lectura que llega a Dulce, sea de un FreeStyle Libre por LibreLinkUp, de un Dexcom por Dexcom Share, de Medtronic CareLink o de Nightscout.", link: "dexcom" },
+        { q: "¿Por qué la tarjeta de CarPlay es igual a la del Apple Watch?", a: "Porque iOS usa una sola tarjeta pequeña para el panel de CarPlay y la pila inteligente del Apple Watch, así que el estilo que eliges vale para los dos.", link: "apple-watch" },
+      ],
+      en: [
+        { q: "Is there a Dulce app for CarPlay?", a: "No. With iOS 26, CarPlay shows Dulce's Live Activity on the Dashboard without a CarPlay app." },
+        { q: "What do I need to see my glucose on CarPlay?", a: "An iPhone on iOS 26 connected to a car with CarPlay, Dulce connected to your sensor, and the Live Activity turned on, which is part of Dulce Pro with a 14-day free trial.", link: "lock-screen" },
+        { q: "Does it work with Dexcom?", a: "Yes. The CarPlay card shows whatever reading reaches Dulce, whether from a FreeStyle Libre via LibreLinkUp, a Dexcom via Dexcom Share, Medtronic CareLink or Nightscout.", link: "dexcom" },
+        { q: "Why does the CarPlay card look like the Apple Watch one?", a: "Because iOS uses one small card for both the CarPlay Dashboard and the Apple Watch Smart Stack, so the style you choose applies to both.", link: "apple-watch" },
+      ],
+      de: [
+        { q: "Gibt es eine Dulce-App für CarPlay?", a: "Nein. Mit iOS 26 zeigt CarPlay Dulces Live-Aktivität im Dashboard, ganz ohne CarPlay-App." },
+        { q: "Was brauche ich, um meine Glukose in CarPlay zu sehen?", a: "Ein iPhone mit iOS 26, verbunden mit einem Auto mit CarPlay, Dulce mit deinem Sensor verbunden und die Live-Aktivität eingeschaltet. Sie gehört zu Dulce Pro, mit 14 Tagen kostenlosem Test.", link: "lock-screen" },
+        { q: "Funktioniert das mit Dexcom?", a: "Ja. Die CarPlay-Karte zeigt den Wert, der bei Dulce ankommt, ob von einem FreeStyle Libre über LibreLinkUp, einem Dexcom über Dexcom Share, Medtronic CareLink oder Nightscout.", link: "dexcom" },
+        { q: "Warum sieht die CarPlay-Karte aus wie die auf der Apple Watch?", a: "Weil iOS eine einzige kleine Karte für das CarPlay-Dashboard und den Smart Stack der Apple Watch nutzt. Der Stil, den du wählst, gilt also für beide.", link: "apple-watch" },
+      ],
+      fr: [
+        { q: "Existe-t-il une app Dulce pour CarPlay ?", a: "Non. Avec iOS 26, CarPlay affiche l'Activité en direct de Dulce sur le Dashboard, sans app CarPlay." },
+        { q: "Que faut-il pour voir ma glycémie sur CarPlay ?", a: "Un iPhone sous iOS 26 connecté à une voiture compatible CarPlay, Dulce connecté à ton capteur et l'Activité en direct activée, qui fait partie de Dulce Pro avec 14 jours d'essai gratuit.", link: "lock-screen" },
+        { q: "Est-ce que ça marche avec Dexcom ?", a: "Oui. La carte CarPlay affiche la mesure qui arrive dans Dulce, qu'elle vienne d'un FreeStyle Libre via LibreLinkUp, d'un Dexcom via Dexcom Share, de Medtronic CareLink ou de Nightscout.", link: "dexcom" },
+        { q: "Pourquoi la carte CarPlay ressemble à celle de l'Apple Watch ?", a: "Parce qu'iOS utilise une seule petite carte pour le Dashboard CarPlay et la Pile intelligente de l'Apple Watch : le style que tu choisis vaut pour les deux.", link: "apple-watch" },
+      ],
+      it: [
+        { q: "Esiste un'app Dulce per CarPlay?", a: "No. Con iOS 26 CarPlay mostra l'Attività in tempo reale di Dulce nella Dashboard, senza bisogno di un'app per CarPlay." },
+        { q: "Cosa serve per vedere la glicemia su CarPlay?", a: "Un iPhone con iOS 26 collegato a un'auto con CarPlay, Dulce collegato al tuo sensore e l'Attività in tempo reale attiva, che fa parte di Dulce Pro con 14 giorni di prova gratuita.", link: "lock-screen" },
+        { q: "Funziona con Dexcom?", a: "Sì. La scheda di CarPlay mostra la lettura che arriva a Dulce, che venga da un FreeStyle Libre tramite LibreLinkUp, da un Dexcom tramite Dexcom Share, da Medtronic CareLink o da Nightscout.", link: "dexcom" },
+        { q: "Perché la scheda di CarPlay è uguale a quella di Apple Watch?", a: "Perché iOS usa una sola scheda piccola per la Dashboard di CarPlay e la Pila smart di Apple Watch, quindi lo stile che scegli vale per entrambe.", link: "apple-watch" },
+      ],
+    },
   },
 ];
 

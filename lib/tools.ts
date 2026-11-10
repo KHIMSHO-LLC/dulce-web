@@ -486,7 +486,7 @@ export const TOOLS: readonly Tool[] = [
     path: "/tools/sensor-end-date",
     name: "sensor-end-date",
     dateModified: "2026-10-23",
-    guides: ["librelinkup-not-working", "libre-signal-loss", "apple-watch", "apple-watch-glucose", "lock-screen", "widgets", "diabetes-at-work"],
+    guides: ["librelinkup-not-working", "libre-signal-loss", "apple-watch", "apple-watch-glucose", "lock-screen", "widgets", "diabetes-at-work", "carplay"],
   },
   {
     path: "/tools/time-in-range-calculator",

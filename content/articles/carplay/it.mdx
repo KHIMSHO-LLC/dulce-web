@@ -1,0 +1,79 @@
+Quando guidi, il momento in cui vorresti di più sapere la tua glicemia è spesso proprio quello in cui non puoi prendere il telefono. Dulce non ha un'app per CarPlay, e non serve: da **iOS 26** CarPlay può mostrare l'**Attività in tempo reale** di un'app nella Dashboard. Quella di Dulce ha una scheda piccola pensata proprio per quel posto, con il numero abbastanza grande da leggerlo con un'occhiata.
+
+In questa guida vedi cosa compare, cosa ti serve, come attivarla e quale scheda scegliere.
+
+## Come funziona
+
+Sull'iPhone, l'Attività in tempo reale di Dulce è il riquadro con la tua glicemia sulla schermata di blocco e nella Dynamic Island (lo spieghiamo nella <ArticleLink to="lock-screen">guida alla schermata di blocco</ArticleLink>). Con iOS 26, quando l'iPhone è collegato a CarPlay, la stessa Attività in tempo reale compare nella **Dashboard di CarPlay**. Secondo Apple, se in quel momento la Dashboard non è sullo schermo, CarPlay la mostra come notifica nella parte bassa del display. Su CarPlay le Attività in tempo reale si guardano soltanto: non si toccano.
+
+CarPlay non usa il design grande della schermata di blocco, ma una **scheda piccola**, della stessa misura che Apple usa per le Attività in tempo reale nella **Pila smart di Apple Watch**. iOS ha una sola scheda piccola per entrambi i posti, quindi quello che scegli per CarPlay vale anche per l'orologio.
+
+La scheda mostra:
+
+- **La tua glicemia e la freccia di tendenza**, in grande.
+- **L'ora della lettura.** Quando la lettura inizia a invecchiare, vedi invece quanti minuti fa è stata presa. Se è troppo vecchia, il numero diventa grigio, barrato, con un avviso e un tempo che continua a scorrere, così un valore vecchio non passa mai per uno attuale.
+- A seconda dello stile, un **grafico** delle ultime ore o il tuo **tempo nel range**.
+- Se segui qualcuno, **il suo nome**, così sai di chi è la glicemia.
+
+## Cosa ti serve
+
+- Un **iPhone con iOS 26** e un'auto con **CarPlay** (con cavo o wireless). I widget e l'Attività in tempo reale di Dulce richiedono già iOS 18; la scheda di CarPlay richiede iOS 26.
+- **Dulce collegato alla tua glicemia.** Un FreeStyle Libre 2, 2 Plus, 3 o 3 Plus tramite LibreLinkUp, un Dexcom G6, G7 o ONE+ tramite Dexcom Share, Medtronic CareLink o Nightscout: la scheda mostra la lettura che arriva a Dulce. L'elenco completo è nella <PageLink to="/sensors">pagina dei sensori</PageLink>.
+- **L'Attività in tempo reale attiva.** È una funzione di <PageLink to="/pro">Dulce Pro</PageLink> con 14 giorni di prova gratuita. Se segui qualcuno, la tua Attività in tempo reale funziona con il Pro di quella persona.
+
+## Come attivarla
+
+<Steps>
+<Step title="Collega Dulce">
+Se non l'hai ancora fatto, segui la <PageLink to="/setup">guida alla configurazione</PageLink> per accedere con il tuo account LibreLinkUp, oppure collega Dexcom, Medtronic o Nightscout.
+</Step>
+<Step title="Attiva l'Attività in tempo reale">
+In Dulce vai in **Impostazioni** e attiva **Attività in tempo reale e Dynamic Island**. Da qui puoi iniziare la prova di Pro.
+</Step>
+<Step title="Consenti le Attività in tempo reale in iOS">
+Nell'app **Impostazioni** dell'iPhone apri **Dulce** e controlla che le **Attività in tempo reale** siano consentite.
+</Step>
+<Step title="Collegati a CarPlay">
+Collega l'iPhone come al solito, con il cavo o senza, e apri la Dashboard di CarPlay. La scheda compare finché l'Attività in tempo reale è attiva.
+</Step>
+</Steps>
+
+<AppCta title="La tua glicemia nella Dashboard di CarPlay" />
+
+## Scegli la tua scheda di CarPlay
+
+In Dulce apri **Impostazioni → Stile dell'Attività in tempo reale** e tocca la scheda **CarPlay** in alto. Sotto **CarPlay e Apple Watch** trovi questi stili, con un'anteprima sopra l'elenco:
+
+| Stile | Cosa mostra |
+| --- | --- |
+| Numero e grafico | La lettura, la freccia e un piccolo grafico su una scheda del colore del tuo range |
+| Numero grande | Solo la lettura e la freccia, il più grandi possibile, su una scheda del colore del tuo range |
+| Numero e tempo nel range | La lettura con il tuo tempo nel range al posto del grafico |
+| Notte (scuro) | Una scheda scura che di notte affatica meno gli occhi |
+| Come la mia schermata di blocco | La versione piccola del tuo design della schermata di blocco (con Espresso, Porcelain, Aurora e Monolith) |
+
+Negli stili con grafico scegli anche il **Periodo** mostrato: 3, 6, 12 o 24 ore.
+
+<Figure src="/guides/live-activity-styles.jpg" alt="La schermata Stile dell'Attività in tempo reale di Dulce con un'anteprima, accanto a un Apple Watch con una piccola scheda della glicemia" caption="La schermata dello stile dell'Attività in tempo reale (una versione precedente: l'app attuale ha in alto le schede Schermata di blocco, Dynamic Island e CarPlay)." />
+
+Quale scegliere dipende da te. Su una Dashboard piena, **Numero grande** lascia più spazio alle cifre. **Numero e grafico** ti dice subito se stai salendo o scendendo. **Notte (scuro)** evita un blocco di colore acceso sullo schermo quando guidi al buio.
+
+## Anche sul tuo Apple Watch
+
+La stessa scheda compare in cima alla **Pila smart** di un Apple Watch con watchOS 11 o successivo, finché l'Attività in tempo reale è attiva sull'iPhone. È separata dall'app di Dulce per Apple Watch e dalle sue complicazioni, che imposti come spiegato nella <ArticleLink to="apple-watch">guida Apple Watch</ArticleLink>.
+
+## Limiti da conoscere
+
+- **Solo finché l'Attività in tempo reale è attiva.** Se iOS l'ha chiusa (Apple limita per quanto tempo un'Attività in tempo reale può restare attiva), la scheda sparisce anche da CarPlay. Apri Dulce e torna.
+- **Il numero è aggiornato quanto la sua fonte.** Con Dulce Pro, il server di Dulce aggiorna l'Attività in tempo reale ogni minuto con un Libre; Dexcom e Medtronic danno una nuova lettura ogni 5 minuti. Se il telefono che legge il sensore perde la connessione, vedi l'età della lettura aumentare.
+- **La modalità Risparmio energetico** riduce gli aggiornamenti in background.
+- Senza l'Attività in tempo reale non c'è la scheda su CarPlay. I <ArticleLink to="widgets">widget della glicemia</ArticleLink>, gratuiti, mettono comunque il tuo numero sulla schermata di blocco e sulla Home dell'iPhone.
+
+<Callout type="warning">
+Guarda la scheda solo quando è sicuro farlo, come daresti un'occhiata al tachimetro, e rispetta il codice della strada del tuo paese. La scheda non sostituisce gli allarmi del sensore né gli avvisi di Dulce, e non è una base per decidere una terapia. Se ti senti in ipoglicemia, fermati in un posto sicuro, controlla con il sensore o con un prelievo dal dito e segui il piano concordato con il tuo team di cura. Dulce non è un dispositivo medico.
+</Callout>
+
+## Fonti
+
+- Apple Developer. *Turbocharge your app for CarPlay*, WWDC25 (Attività in tempo reale nella Dashboard di CarPlay con iOS 26, la scheda piccola, notifica quando la Dashboard non è visibile). [developer.apple.com](https://developer.apple.com/videos/play/wwdc2025/216/)
+- Apple Developer. *Bring your Live Activity to Apple Watch*, WWDC24 (Attività in tempo reale dell'iPhone nella Pila smart di watchOS 11). [developer.apple.com](https://developer.apple.com/videos/play/wwdc2024/10068/)

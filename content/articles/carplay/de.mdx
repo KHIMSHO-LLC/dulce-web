@@ -1,0 +1,79 @@
+Beim Autofahren willst du deinen Glukosewert oft genau dann wissen, wenn du nicht zum Handy greifen kannst. Für Dulce gibt es keine CarPlay-App, und du brauchst auch keine: Seit **iOS 26** kann CarPlay die **Live-Aktivität** einer App im Dashboard anzeigen. Dulces Live-Aktivität hat dafür eine eigene kleine Karte, mit einer Zahl, die groß genug ist, um sie mit einem Blick zu lesen.
+
+Hier erfährst du, was du siehst, was du brauchst, wie du es einschaltest und welche Karte zu dir passt.
+
+## So funktioniert es
+
+Auf dem iPhone ist Dulces Live-Aktivität das Feld mit deinem Glukosewert auf dem Sperrbildschirm und in der Dynamic Island (siehe <ArticleLink to="lock-screen">Ratgeber zum Sperrbildschirm</ArticleLink>). Mit iOS 26 erscheint dieselbe Live-Aktivität im **CarPlay-Dashboard**, sobald dein iPhone mit CarPlay verbunden ist. Laut Apple zeigt CarPlay sie als Mitteilung unten auf dem Display, wenn das Dashboard gerade nicht zu sehen ist. Live-Aktivitäten in CarPlay sind nur zum Ansehen da: Tippen kannst du darauf nicht.
+
+CarPlay nutzt nicht das große Design vom Sperrbildschirm, sondern eine **kleine Karte**, in derselben Größe, die Apple für Live-Aktivitäten im **Smart Stack der Apple Watch** verwendet. iOS hat für beide Orte nur eine kleine Karte. Was du für CarPlay wählst, gilt also auch für deine Uhr.
+
+Die Karte zeigt:
+
+- **Deinen Glukosewert und den Trendpfeil**, groß.
+- **Die Uhrzeit des Werts.** Wird der Wert älter, siehst du stattdessen, vor wie vielen Minuten er gemessen wurde. Ist er zu alt, wird die Zahl grau, durchgestrichen und mit einer Warnung und einer weiterlaufenden Zeitangabe gezeigt. So kann ein alter Wert nie als aktueller durchgehen.
+- Je nach Stil einen **Verlauf** der letzten Stunden oder deine **Zeit im Zielbereich**.
+- Wenn du jemandem folgst, **den Namen der Person**, damit klar ist, wessen Wert das ist.
+
+## Was du brauchst
+
+- Ein **iPhone mit iOS 26** und ein Auto mit **CarPlay** (per Kabel oder kabellos). Dulces Widgets und Live-Aktivität brauchen schon iOS 18, die CarPlay-Karte braucht iOS 26.
+- **Dulce mit deinen Werten verbunden.** Ein FreeStyle Libre 2, 2 Plus, 3 oder 3 Plus über LibreLinkUp, ein Dexcom G6, G7 oder ONE+ über Dexcom Share, Medtronic CareLink oder Nightscout: Die Karte zeigt den Wert, der bei Dulce ankommt. Die komplette Liste steht auf der <PageLink to="/sensors">Sensoren-Seite</PageLink>.
+- **Die Live-Aktivität eingeschaltet.** Sie ist eine Funktion von <PageLink to="/pro">Dulce Pro</PageLink>, mit 14 Tagen kostenlosem Test. Wenn du jemandem folgst, läuft deine Live-Aktivität über das Pro dieser Person.
+
+## So schaltest du es ein
+
+<Steps>
+<Step title="Dulce verbinden">
+Falls noch nicht geschehen, folge der <PageLink to="/setup">Einrichtungsanleitung</PageLink> und melde dich mit deinem LibreLinkUp-Konto an, oder verbinde Dexcom, Medtronic oder Nightscout.
+</Step>
+<Step title="Live-Aktivität einschalten">
+Geh in Dulce zu **Einstellungen** und schalte **Live-Aktivität** ein. Hier kannst du auch den Pro-Test starten.
+</Step>
+<Step title="Live-Aktivitäten in iOS erlauben">
+Öffne in der **Einstellungen**-App des iPhone den Eintrag **Dulce** und prüfe, ob **Live-Aktivitäten** erlaubt sind.
+</Step>
+<Step title="Mit CarPlay verbinden">
+Verbinde das iPhone wie gewohnt per Kabel oder kabellos und öffne das CarPlay-Dashboard. Die Karte erscheint, solange die Live-Aktivität läuft.
+</Step>
+</Steps>
+
+<AppCta title="Dein Glukosewert im CarPlay-Dashboard" />
+
+## Wähle deine CarPlay-Karte
+
+Öffne in Dulce **Einstellungen → Stil der Live-Aktivität** und tippe oben auf den Tab **CarPlay**. Unter **CarPlay & Apple Watch** findest du diese Stile, mit einer Live-Vorschau über der Liste:
+
+| Stil | Was er zeigt |
+| --- | --- |
+| Zahl und Verlauf | Wert, Pfeil und einen kleinen Verlauf auf einer Karte in der Farbe deines Bereichs |
+| Große Zahl | Nur Wert und Pfeil, so groß wie möglich, auf einer Karte in der Farbe deines Bereichs |
+| Zahl und Zeit im Zielbereich | Den Wert mit deiner Zeit im Zielbereich statt eines Verlaufs |
+| Nacht (dunkel) | Eine dunkle Karte, die nachts die Augen schont |
+| Wie mein Sperrbildschirm | Die kleine Version deines Sperrbildschirm-Designs (bei Espresso, Porcelain, Aurora und Monolith) |
+
+Bei Stilen mit Verlauf wählst du außerdem den **Zeitraum**: 3, 6, 12 oder 24 Stunden.
+
+<Figure src="/guides/live-activity-styles.jpg" alt="Dulces Bildschirm für den Stil der Live-Aktivität mit Vorschau, daneben eine Apple Watch mit einer kleinen Glukosekarte" caption="Der Bildschirm für den Stil der Live-Aktivität (eine frühere Version: Die aktuelle App hat oben die Tabs Sperrbildschirm, Dynamic Island und CarPlay)." />
+
+Welcher Stil passt, ist Geschmackssache. Auf einem vollen Dashboard lässt **Große Zahl** den Ziffern am meisten Platz. **Zahl und Verlauf** zeigt dir sofort, ob es nach oben oder unten geht. **Nacht (dunkel)** vermeidet einen hellen Farbblock auf dem Display, wenn du im Dunkeln fährst.
+
+## Auch auf deiner Apple Watch
+
+Dieselbe Karte erscheint oben im **Smart Stack** einer Apple Watch mit watchOS 11 oder neuer, solange die Live-Aktivität auf dem iPhone läuft. Das ist unabhängig von Dulces eigener Apple-Watch-App und ihren Komplikationen, die du wie im <ArticleLink to="apple-watch">Ratgeber zur Apple Watch</ArticleLink> beschrieben einrichtest.
+
+## Grenzen, die du kennen solltest
+
+- **Nur solange die Live-Aktivität läuft.** Hat iOS sie beendet (Apple begrenzt, wie lange eine Live-Aktivität aktiv bleiben kann), verschwindet die Karte auch aus CarPlay. Öffne Dulce, dann kommt sie zurück.
+- **Der Wert ist so aktuell wie seine Quelle.** Mit Dulce Pro aktualisiert Dulces Server die Live-Aktivität bei einem Libre jede Minute; Dexcom und Medtronic liefern alle 5 Minuten einen neuen Wert. Verliert das Handy, das deinen Sensor liest, die Verbindung, siehst du, wie das Alter des Werts steigt.
+- **Der Stromsparmodus** bremst Aktualisierungen im Hintergrund.
+- Ohne Live-Aktivität gibt es keine CarPlay-Karte. Die kostenlosen <ArticleLink to="widgets">Glukose-Widgets</ArticleLink> bringen deinen Wert trotzdem auf Sperr- und Home-Bildschirm des iPhone.
+
+<Callout type="warning">
+Schau nur auf die Karte, wenn es sicher ist, so wie auf den Tacho, und halte dich an die Verkehrsregeln deines Landes. Die Karte ersetzt weder die Alarme deines Sensors noch die Warnungen von Dulce und ist keine Grundlage für Therapieentscheidungen. Fühlst du dich unterzuckert, halte an einer sicheren Stelle, prüfe den Wert mit deinem Sensor oder einer Blutzuckermessung und folge dem Plan, den du mit deinem Behandlungsteam vereinbart hast. Dulce ist kein Medizinprodukt.
+</Callout>
+
+## Quellen
+
+- Apple Developer. *Turbocharge your app for CarPlay*, WWDC25 (Live-Aktivitäten im CarPlay-Dashboard ab iOS 26, die kleine Karte, Mitteilung, wenn das Dashboard nicht angezeigt wird). [developer.apple.com](https://developer.apple.com/videos/play/wwdc2025/216/)
+- Apple Developer. *Bring your Live Activity to Apple Watch*, WWDC24 (Live-Aktivitäten vom iPhone im Smart Stack von watchOS 11). [developer.apple.com](https://developer.apple.com/videos/play/wwdc2024/10068/)
