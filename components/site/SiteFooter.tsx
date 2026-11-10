@@ -84,6 +84,9 @@ export async function SiteFooter() {
             <Link href="/blog" className={linkClass}>
               {nav("guides")}
             </Link>
+            <a href={guideHref("glucose-apps-compared", locale as AppLocale)} className={linkClass}>
+              {t("compare")}
+            </a>
             <Link href="/tools/glucose-converter" className={linkClass}>
               {TOOL_COPY["/tools/glucose-converter"][locale as AppLocale].title}
             </Link>
