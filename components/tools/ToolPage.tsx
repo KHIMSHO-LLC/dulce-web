@@ -22,11 +22,21 @@ export async function ToolPage({
   path,
   name,
   calculator,
+  schema,
+  extraComponents,
+  eyebrow,
 }: {
   locale: AppLocale;
   path: ToolPath;
   name: string;
+  /** The interactive part under the title. The glossary puts its term index here. */
   calculator: ReactNode;
+  /** Replaces the calculator's WebApplication JSON-LD (the glossary emits a DefinedTermSet). */
+  schema?: Record<string, unknown>;
+  /** MDX components only this page uses. */
+  extraComponents?: Record<string, unknown>;
+  /** Label above the title (default "Calculators"). */
+  eyebrow?: string;
 }) {
   const t = await getTranslations({ locale, namespace: "blog" });
   const copy = TOOL_COPY[path][locale];
@@ -45,18 +55,22 @@ export async function ToolPage({
     GlucoseTable: (p: { from: "mgdl" | "mmol" }) => <GlucoseTable locale={locale} {...p} />,
     A1cTable: () => <A1cTable locale={locale} />,
     GmiTable: () => <GmiTable locale={locale} />,
+    ...extraComponents,
   };
 
   return (
     <>
       <JsonLd
-        data={toolSchema({
-          url: absoluteUrl(localizedPath(locale, path)),
-          name: copy.title,
-          description: copy.description,
-          locale,
-          dateModified: tool.dateModified,
-        })}
+        data={
+          schema ??
+          toolSchema({
+            url: absoluteUrl(localizedPath(locale, path)),
+            name: copy.title,
+            description: copy.description,
+            locale,
+            dateModified: tool.dateModified,
+          })
+        }
       />
       <JsonLd
         data={breadcrumbSchema([
@@ -67,7 +81,7 @@ export async function ToolPage({
       <ReadingSurface>
       <div className="px-5 pb-14 pt-12 sm:px-8 md:px-14 md:pb-20 md:pt-16">
         <header className="max-w-3xl">
-          <p className="text-label uppercase tracking-wide text-ember">{t("toolsTitle")}</p>
+          <p className="text-label uppercase tracking-wide text-ember">{eyebrow ?? t("toolsTitle")}</p>
           <h1 className="type-display mt-4 text-[clamp(2.2rem,4.8vw,4rem)] text-ink">{copy.title}</h1>
           <p className="mt-5 max-w-[60ch] text-[1.125rem] leading-relaxed text-soft">{copy.description}</p>
           {/* The calculators are the founder's (formulas and sources in lib/tools.ts). */}

@@ -458,6 +458,8 @@
     "read": "Lire",
     "allArticles": "Tous les guides",
     "toolsTitle": "Calculateurs",
+    "toolsLabel": "Outils",
+    "glossaryLabel": "Glossaire",
     "relatedGuides": "Guides associés",
     "usefulLinks": "Outils et configuration",
     "setupLink": "Connecter Dulce : LibreLink ou LibreLinkUp",

@@ -458,6 +458,8 @@
     "read": "Читать",
     "allArticles": "Все руководства",
     "toolsTitle": "Калькуляторы",
+    "toolsLabel": "Инструменты",
+    "glossaryLabel": "Глоссарий",
     "relatedGuides": "Похожие руководства",
     "usefulLinks": "Инструменты и настройка",
     "setupLink": "Подключение Dulce: LibreLink или LibreLinkUp",

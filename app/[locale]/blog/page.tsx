@@ -76,10 +76,10 @@ export default async function BlogIndex({ params }: PageProps<"/[locale]/blog">)
 
         <section className="mt-20" aria-labelledby="tools-title">
           <h2 id="tools-title" className="text-[1.6rem] font-light tracking-[-0.02em] text-ink">
-            {t("toolsTitle")}
+            {t("toolsLabel")}
           </h2>
           <ul className="mt-6 grid gap-4 md:grid-cols-3">
-            {(["/tools/glucose-converter", "/tools/a1c-calculator", "/tools/time-in-range-calculator", "/tools/gmi-calculator", "/tools/sensor-end-date"] as const).map((href) => (
+            {(["/tools/glucose-converter", "/tools/a1c-calculator", "/tools/time-in-range-calculator", "/tools/gmi-calculator", "/tools/sensor-end-date", "/tools/cgm-glossary"] as const).map((href) => (
               <li key={href}>
                 <Link
                   href={href}

@@ -180,6 +180,18 @@ export const routing = defineRouting({
       sv: "/verktyg/gmi-kalkylator",
       ru: "/tools/kalkulyator-gmi",
     },
+    "/tools/cgm-glossary": {
+      es: "/herramientas/glosario-cgm",
+      en: "/tools/cgm-glossary",
+      de: "/tools/cgm-glossar",
+      fr: "/outils/glossaire-cgm",
+      it: "/strumenti/glossario-cgm",
+      fi: "/tyokalut/cgm-sanasto",
+      nl: "/tools/cgm-woordenlijst",
+      nb: "/verktoy/cgm-ordliste",
+      sv: "/verktyg/cgm-ordlista",
+      ru: "/tools/glossariy-cgm",
+    },
   },
 });
 

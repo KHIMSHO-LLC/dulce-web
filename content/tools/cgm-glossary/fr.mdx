@@ -1,0 +1,150 @@
+Des définitions courtes et claires des mots que tu croises avec un capteur de glucose en continu (CGM) : le système du capteur, les chiffres, les rapports et les endroits où tu vois ta glycémie. Chaque entrée décrit ce que signifie un terme. Le nom de chaque terme renvoie vers sa propre entrée.
+
+<Callout>
+C'est une référence, pas un conseil. Ce qu'une mesure ou un rapport signifie pour toi, et ce qu'il faut en faire, c'est à voir avec ton équipe soignante.
+</Callout>
+
+## Le système du capteur
+
+<Term id="cgm" name="CGM (mesure continue du glucose)">
+Un dispositif porté sur le corps qui mesure le glucose jour et nuit et donne une nouvelle mesure à intervalles réguliers, au lieu d'une seule valeur au bout du doigt. Les capteurs FreeStyle Libre, Dexcom et Medtronic sont des CGM.
+</Term>
+
+<Term id="sensor" name="Capteur">
+La partie du CGM portée sur le corps : un filament fin sous la peau qui mesure le glucose. Un capteur fonctionne un nombre de jours fixe, puis il faut le remplacer ; combien de jours dépend du modèle. Pour FreeStyle Libre, le <PageLink to="/tools/sensor-end-date">calculateur de fin de capteur</PageLink> calcule quand le tien se termine.
+</Term>
+
+<Term id="transmitter" name="Transmetteur">
+La petite pièce électronique qui capte le signal du capteur et envoie les mesures vers un téléphone ou un lecteur, en général par Bluetooth. Sur certains systèmes, c'est une pièce séparée fixée au capteur ; sur d'autres, elle est intégrée au capteur.
+</Term>
+
+<Term id="reader" name="Lecteur">
+Un appareil portable conçu pour un CGM, qui affiche les mesures à la place d'une app sur téléphone ou en plus. Certaines marques l'appellent récepteur. Certains systèmes en proposent un ; avec d'autres, le téléphone est le seul écran.
+</Term>
+
+<Term id="interstitial-glucose" name="Glucose interstitiel">
+Le glucose du fin liquide qui se trouve entre les cellules du corps, et c'est ce que mesure un CGM. Il suit le glucose sanguin, mais pas au même instant : une mesure du capteur et une valeur au bout du doigt peuvent donc différer.
+</Term>
+
+<Term id="sensor-lag" name="Décalage du capteur">
+Le délai entre une variation du glucose sanguin et le moment où elle apparaît dans la mesure du capteur, car le glucose met du temps à atteindre le liquide interstitiel. Il se voit surtout quand la glycémie monte ou descend vite.
+</Term>
+
+<Term id="warm-up" name="Période de préchauffage">
+Le temps qui suit la pose d'un nouveau capteur, pendant lequel il ne peut pas encore afficher de mesures. Sa durée dépend du capteur.
+</Term>
+
+<Term id="calibration" name="Étalonnage">
+Saisir dans le système CGM une glycémie mesurée au bout du doigt pour qu'il ajuste ses mesures. Certains capteurs le demandent, d'autres sont étalonnés en usine et non. Cela dépend du capteur.
+</Term>
+
+## Lire les chiffres
+
+<Term id="trend-arrow" name="Flèche de tendance">
+La flèche à côté d'une mesure, qui montre où va le glucose et à peu près à quelle vitesse : stable, en hausse, en baisse, ou en hausse ou en baisse rapide. Chaque marque de capteur définit ses propres flèches.
+</Term>
+
+<Term id="rate-of-change" name="Vitesse de variation">
+La vitesse à laquelle le glucose bouge, en général exprimée en mg/dL ou en mmol/L par minute. Une flèche de tendance en est une façon simplifiée de l'afficher.
+</Term>
+
+<Term id="mg-dl" name="mg/dL">
+Milligrammes par décilitre, l'une des deux unités du glucose. Elle est utilisée aux États-Unis et dans de nombreux autres pays. Pour passer en mmol/L, divise par 18.
+</Term>
+
+<Term id="mmol-l" name="mmol/L">
+Millimoles par litre, l'autre unité du glucose. Elle est utilisée au Royaume-Uni, au Canada, en Australie, dans les pays nordiques et ailleurs. 1 mmol/L vaut 18 mg/dL (arrondi, comme le font la plupart des lecteurs et l'app Dulce). Le <PageLink to="/tools/glucose-converter">convertisseur de glycémie</PageLink> fonctionne dans les deux sens.
+</Term>
+
+## Plages et rapports
+
+<Term id="tir" name="Temps dans la cible (TIR)">
+La part du temps que le glucose passe dans une plage cible, calculée à partir des mesures du CGM. Le consensus international sur le temps dans la cible retient 70 à 180 mg/dL (3,9 à 10,0 mmol/L) comme plage standard ; l'équipe soignante peut fixer une autre plage pour une personne. Essaie le <PageLink to="/tools/time-in-range-calculator">calculateur de temps dans la cible</PageLink> ou lis le <ArticleLink to="time-in-range">guide du temps dans la cible</ArticleLink>.
+</Term>
+
+<Term id="time-below-range" name="Temps sous la cible (TBR)">
+La part du temps que le glucose passe sous la limite basse de la plage. Le consensus compte les mesures sous 70 mg/dL (3,9 mmol/L) et présente à part celles sous 54 mg/dL (3,0 mmol/L).
+</Term>
+
+<Term id="time-above-range" name="Temps au-dessus de la cible (TAR)">
+La part du temps que le glucose passe au-dessus de la limite haute de la plage. Le consensus compte les mesures au-dessus de 180 mg/dL (10,0 mmol/L) et présente à part celles au-dessus de 250 mg/dL (13,9 mmol/L).
+</Term>
+
+<Term id="gmi" name="GMI (indicateur de gestion du glucose)">
+Une estimation de l'HbA1c calculée à partir du glucose moyen des mesures du CGM, avec une formule publiée (Bergenstal et al., 2018). C'est un calcul à partir de données du capteur, pas une prise de sang : il peut donc différer de l'HbA1c du laboratoire. Le <PageLink to="/tools/gmi-calculator">calculateur de GMI</PageLink> montre la formule et un tableau.
+</Term>
+
+<Term id="a1c" name="HbA1c">
+Une analyse de sang qui montre quelle part de l'hémoglobine s'est liée au glucose, ce qui reflète le glucose moyen des trois derniers mois environ. Elle s'exprime en % (NGSP) ou en mmol/mol (IFCC). Le <PageLink to="/tools/a1c-calculator">calculateur d'HbA1c</PageLink> convertit entre les unités, et le <ArticleLink to="hba1c">guide de l'HbA1c</ArticleLink> explique l'analyse.
+</Term>
+
+<Term id="estimated-a1c" name="HbA1c estimée">
+Une valeur d'HbA1c calculée à partir des mesures du capteur au lieu d'être mesurée en laboratoire. Son nom actuel est GMI. Une autre formule, plus ancienne (ADAG, Nathan et al., 2008), va dans l'autre sens : d'une HbA1c de laboratoire à une glycémie moyenne estimée (eAG). L'une comme l'autre peut différer du résultat du laboratoire.
+</Term>
+
+<Term id="cv" name="Variabilité glycémique (CV)">
+L'ampleur des écarts du glucose autour de sa moyenne. La mesure habituelle est le coefficient de variation (CV) : l'écart type divisé par la moyenne, en pourcentage. Deux personnes qui ont la même moyenne peuvent avoir une variabilité très différente. Le <PageLink to="/tools/time-in-range-calculator">calculateur de temps dans la cible</PageLink> l'affiche à côté des plages.
+</Term>
+
+## Hypos, hypers et trous
+
+<Term id="hypoglycemia" name="Hypoglycémie (glucose bas)">
+Un glucose sous la plage. Dans les tranches du consensus, sous 70 mg/dL (3,9 mmol/L) c'est bas et sous 54 mg/dL (3,0 mmol/L) c'est très bas. Ce qu'une hypoglycémie signifie pour toi, c'est à confirmer avec ton capteur et ton équipe soignante.
+</Term>
+
+<Term id="hyperglycemia" name="Hyperglycémie (glucose élevé)">
+Un glucose au-dessus de la plage. Dans les tranches du consensus, au-dessus de 180 mg/dL (10,0 mmol/L) c'est élevé et au-dessus de 250 mg/dL (13,9 mmol/L) c'est très élevé. Ce qu'une hyperglycémie signifie pour toi, c'est à confirmer avec ton capteur et ton équipe soignante.
+</Term>
+
+<Term id="compression-low" name="Hypoglycémie de compression (compression low)">
+Une mesure qui tombe sous le glucose réel parce que la pression sur le capteur, par exemple quand tu dors sur ce bras, limite temporairement le liquide qui l'atteint. Les consignes du fabricant du capteur indiquent comment confirmer une mesure.
+</Term>
+
+<Term id="signal-loss" name="Perte de signal">
+Un trou dans les mesures parce que le capteur et le téléphone ou le lecteur ont cessé d'échanger des données, par exemple hors de portée ou à cause d'un problème du capteur ou du téléphone. Le <ArticleLink to="libre-signal-loss">guide de la perte de signal</ArticleLink> traite le cas de FreeStyle Libre.
+</Term>
+
+## Partage et lieux où tu vois le chiffre
+
+<Term id="follower" name="Abonné / app de suivi">
+Une personne qui voit le glucose de quelqu'un d'autre sur son propre téléphone, ou l'app qui le permet. LibreLinkUp, Dexcom Follow et le partage en famille de Dulce fonctionnent ainsi. Dans Dulce, les abonnés rejoignent par un lien d'invitation et la personne qui porte le capteur peut les retirer à tout moment. Vois le <ArticleLink to="family-sharing">guide du partage en famille</ArticleLink>.
+</Term>
+
+<Term id="nightscout" name="Nightscout">
+Une application web open source qui stocke et affiche des données de CGM sur un site que tu héberges toi-même, alimenté par un uploader. Dulce peut lire le glucose d'un site Nightscout et n'y écrit jamais. Vois la <PageLink to="/sensors">liste des capteurs avec lesquels Dulce fonctionne</PageLink>.
+</Term>
+
+<Term id="live-activity" name="Activité en direct">
+Une fonction de l'iPhone qui garde des informations en direct sur l'écran verrouillé, et dans la Dynamic Island sur les modèles qui en ont une, et qui se met à jour même quand l'app est fermée. Dulce l'utilise pour afficher le glucose actuel, la tendance et un graphique. Vois le <ArticleLink to="lock-screen">guide de l'écran verrouillé</ArticleLink>.
+</Term>
+
+<Term id="dynamic-island" name="Dynamic Island">
+La zone en forme de pilule en haut de certains modèles d'iPhone où iOS affiche les Activités en direct sous forme compacte. Dulce y affiche le chiffre de glucose.
+</Term>
+
+<Term id="widget" name="Widget">
+Un petit panneau sur l'écran d'accueil, l'écran verrouillé ou en StandBy qui affiche des informations d'une app sans l'ouvrir. Les widgets de Dulce affichent le glucose actuel. Vois le <ArticleLink to="widgets">guide des widgets</ArticleLink>.
+</Term>
+
+<Term id="complication" name="Complication">
+Un petit élément du cadran de l'Apple Watch qui affiche d'un coup d'œil des informations d'une app. La complication de Dulce met le glucose sur le cadran. Vois le <ArticleLink to="apple-watch">guide de l'Apple Watch</ArticleLink>.
+</Term>
+
+## Les mots de l'insuline
+
+<Term id="basal-bolus" name="Basale et bolus">
+Deux mots pour désigner l'insuline selon son rôle. La basale est l'insuline de fond qui couvre le corps entre les repas et la nuit ; le bolus est l'insuline prise pour un repas ou pour faire baisser une glycémie élevée. Le Journal de Dulce enregistre les entrées d'insuline comme l'un de ces deux types. La quantité à prendre, c'est ton équipe soignante qui la décide.
+</Term>
+
+## Où voir ces chiffres dans Dulce
+
+Dulce affiche le chiffre que donne ton capteur sur l'écran verrouillé, dans les widgets et sur l'Apple Watch, et son onglet Tendances calcule le temps dans la cible, la glycémie moyenne et le GMI sur 7, 14, 30 ou 90 jours. Le <ArticleLink to="trends">guide des Tendances</ArticleLink> explique chacun.
+
+<AppCta />
+
+## Sources
+
+- Battelino T. et al. *Clinical Targets for Continuous Glucose Monitoring Data Interpretation: Recommendations From the International Consensus on Time in Range*. Diabetes Care 2019;42:1593-1603. [doi.org/10.2337/dci19-0028](https://doi.org/10.2337/dci19-0028) (les plages et les tranches)
+- Bergenstal R. M. et al. *Glucose Management Indicator (GMI): A New Term for Estimating A1C From Continuous Glucose Monitoring*. Diabetes Care 2018;41:2275-2280. [doi.org/10.2337/dc18-1581](https://doi.org/10.2337/dc18-1581)
+- Nathan D. M. et al. *Translating the A1C Assay Into Estimated Average Glucose Values*. Diabetes Care 2008;31:1473-1478. [doi.org/10.2337/dc08-0545](https://doi.org/10.2337/dc08-0545)
+- Le facteur 18 entre mg/dL et mmol/L est la masse molaire arrondie du glucose (180,16 g/mol), comme expliqué sur la page du <PageLink to="/tools/glucose-converter">convertisseur de glycémie</PageLink>.

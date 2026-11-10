@@ -458,6 +458,8 @@
     "read": "Läs",
     "allArticles": "Alla guider",
     "toolsTitle": "Kalkylatorer",
+    "toolsLabel": "Verktyg",
+    "glossaryLabel": "Ordlista",
     "relatedGuides": "Relaterade guider",
     "usefulLinks": "Verktyg och konfiguration",
     "setupLink": "Anslut Dulce: LibreLink eller LibreLinkUp",

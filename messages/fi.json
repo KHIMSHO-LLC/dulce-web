@@ -458,6 +458,8 @@
     "read": "Lue",
     "allArticles": "Kaikki oppaat",
     "toolsTitle": "Laskurit",
+    "toolsLabel": "Työkalut",
+    "glossaryLabel": "Sanasto",
     "relatedGuides": "Aiheeseen liittyvät oppaat",
     "usefulLinks": "Työkalut ja käyttöönotto",
     "setupLink": "Yhdistä Dulce: LibreLink vai LibreLinkUp",

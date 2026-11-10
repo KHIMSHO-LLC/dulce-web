@@ -102,6 +102,9 @@ export async function SiteFooter() {
             <Link href="/tools/sensor-end-date" className={linkClass}>
               {TOOL_COPY["/tools/sensor-end-date"][locale as AppLocale].title}
             </Link>
+            <Link href="/tools/cgm-glossary" className={linkClass}>
+              {TOOL_COPY["/tools/cgm-glossary"][locale as AppLocale].title}
+            </Link>
           </nav>
 
           <div className="grid content-start gap-2 text-label">
