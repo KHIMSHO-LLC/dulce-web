@@ -878,7 +878,7 @@
     ],
     "missing": {
       "title": "Finner du ikke sensoren din?",
-      "body": "Trykk på «Sensoren min står ikke på listen» på sensorskjermen i Dulce og fortell oss hvilken du bruker. De mest etterspurte sensorene kommer først."
+      "body": "Trykk på «Sensoren min står ikke på listen» på sensorskjermen i Dulce og fortell oss hvilken du bruker. Vi leser alle forespørsler. Dulce kan bare legge til sensorer der produsenten tilbyr en delings- eller følgertjeneste."
     },
     "faq": [
       {
@@ -899,6 +899,7 @@
       "subtitle": "Dulce er gratis i App Store, for iPhone og Apple Watch."
     },
     "fromSetup": "Bruker du Dexcom, Medtronic eller Nightscout? Se alle sensorer som virker med Dulce",
-    "disclaimer": "FreeStyle Libre, LibreLink og LibreLinkUp er varemerker for Abbott. Dexcom, G6, G7 og ONE+ er varemerker for Dexcom, Inc. Medtronic, CareLink, Simplera, Guardian og MiniMed er varemerker for Medtronic. Dulce er uavhengig og ikke tilknyttet dem. Dulce er ikke medisinsk utstyr og erstatter ikke alarmene til sensoren din."
+    "disclaimer": "FreeStyle Libre, LibreLink og LibreLinkUp er varemerker for Abbott. Dexcom, G6, G7 og ONE+ er varemerker for Dexcom, Inc. Medtronic, CareLink, Simplera, Guardian og MiniMed er varemerker for Medtronic. Dulce er uavhengig og ikke tilknyttet dem. Dulce er ikke medisinsk utstyr og erstatter ikke alarmene til sensoren din.",
+    "troubleshoot": "Hvis det ikke kobler til: feilsøking"
   }
 }

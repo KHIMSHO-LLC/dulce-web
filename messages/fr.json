@@ -878,7 +878,7 @@
     ],
     "missing": {
       "title": "Ton capteur n'est pas là ?",
-      "body": "Dans Dulce, touche « Mon capteur n'est pas dans la liste » sur l'écran des capteurs et dis-nous lequel tu utilises. Les capteurs les plus demandés passent en premier."
+      "body": "Dans Dulce, touche « Mon capteur n'est pas dans la liste » sur l'écran des capteurs et dis-nous lequel tu utilises. Nous lisons chaque demande. Dulce ne peut ajouter que des capteurs dont le fabricant propose un service de partage ou de suivi."
     },
     "faq": [
       {
@@ -899,6 +899,7 @@
       "subtitle": "Dulce est gratuit sur l'App Store, pour iPhone et Apple Watch."
     },
     "fromSetup": "Tu utilises Dexcom, Medtronic ou Nightscout ? Voir tous les capteurs compatibles avec Dulce",
-    "disclaimer": "FreeStyle Libre, LibreLink et LibreLinkUp sont des marques d'Abbott. Dexcom, G6, G7 et ONE+ sont des marques de Dexcom, Inc. Medtronic, CareLink, Simplera, Guardian et MiniMed sont des marques de Medtronic. Dulce est indépendant et sans lien avec eux. Dulce n'est pas un dispositif médical et ne remplace pas les alarmes de ton capteur."
+    "disclaimer": "FreeStyle Libre, LibreLink et LibreLinkUp sont des marques d'Abbott. Dexcom, G6, G7 et ONE+ sont des marques de Dexcom, Inc. Medtronic, CareLink, Simplera, Guardian et MiniMed sont des marques de Medtronic. Dulce est indépendant et sans lien avec eux. Dulce n'est pas un dispositif médical et ne remplace pas les alarmes de ton capteur.",
+    "troubleshoot": "Si la connexion échoue : dépannage"
   }
 }

@@ -12,7 +12,8 @@ import { Split } from "@/components/motion/Split";
 import { breadcrumbSchema, faqSchema, howToSchema } from "@/lib/schema";
 import { seoFor, localizedPath } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
-import type { SensorItem } from "@/lib/sensors";
+import { guideHref } from "@/components/landing/Audience";
+import { SENSOR_TROUBLESHOOT, type SensorItem } from "@/lib/sensors";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/sensors">): Promise<Metadata> {
   const { locale } = await params;
@@ -183,6 +184,24 @@ export default async function SensorsPage({ params }: PageProps<"/[locale]/senso
                   </Link>
                 </p>
               ) : null}
+              <p data-fade className="mt-4">
+                {(() => {
+                  const target = SENSOR_TROUBLESHOOT[item.id];
+                  const cls = "inline-flex items-center gap-2 text-body text-ink underline decoration-ember/60 underline-offset-4";
+                  const arrow = <ArrowRight className="h-4 w-4 text-ember" aria-hidden />;
+                  return target.kind === "article" ? (
+                    <a href={guideHref(target.id, loc)} className={cls}>
+                      {t("troubleshoot")}
+                      {arrow}
+                    </a>
+                  ) : (
+                    <Link href={{ pathname: "/help/[slug]", params: { slug: target.id } }} className={cls}>
+                      {t("troubleshoot")}
+                      {arrow}
+                    </Link>
+                  );
+                })()}
+              </p>
             </section>
           </Reveal>
         ))}

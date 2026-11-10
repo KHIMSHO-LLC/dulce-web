@@ -14,6 +14,18 @@ export const SENSOR_STRIP: { id: SensorId; label: string }[] = [
   { id: "nightscout", label: "Nightscout" },
 ];
 
+/**
+ * Where each sensor's "If it doesn't connect" link goes: a troubleshooting guide (article id)
+ * or the help-centre page `sensor` (content/help/sensor, covers all four ways in).
+ * Label is the shared message `sensors.troubleshoot`.
+ */
+export const SENSOR_TROUBLESHOOT: Record<SensorId, { kind: "article"; id: string } | { kind: "help"; id: "sensor" }> = {
+  "freestyle-libre": { kind: "article", id: "librelinkup-not-working" },
+  dexcom: { kind: "article", id: "dexcom" },
+  medtronic: { kind: "help", id: "sensor" },
+  nightscout: { kind: "help", id: "sensor" },
+};
+
 export type SensorItem = {
   id: SensorId;
   name: string;
