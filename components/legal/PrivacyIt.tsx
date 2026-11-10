@@ -61,7 +61,7 @@ export function PrivacyIt() {
           (Abbott) o Dexcom Share. La password è conservata nel portachiavi sicuro del tuo
           dispositivo e non viene inviata a Dulce. L&apos;app la usa per collegarsi al fornitore;
           quando il tuo CGM è collegato, al relay viene inviato un token di sessione del
-          fornitore (non la password), come spiegato sotto. Con Medtronic CareLink inserisci la password sulla pagina di Medtronic, quindi Dulce non la vede mai, e Dulce riceve token di accesso da Medtronic. Con Nightscout inserisci l’indirizzo del tuo sito e un token di accesso o secret API (Dulce conserva solo l’impronta SHA-1 del secret).
+          fornitore (non la password), come spiegato sotto. Con Medtronic CareLink inserisci la password sulla pagina di Medtronic, quindi Dulce non la vede mai, e Dulce riceve token di accesso da Medtronic. Con Nightscout inserisci l’indirizzo del tuo sito e un token di accesso o secret API (Dulce conserva solo l’impronta SHA-1 del secret). Eccezione per Dexcom: finché «Resta connesso» è attivo (Impostazioni › Sensore, attivo per impostazione predefinita), l&apos;app invia una volta anche la tua password Dexcom al relay, perché Dexcom chiude le sessioni ogni 24 ore; vedi sotto.
         </li>
         <li>
           <strong>Le letture della glicemia</strong> recuperate da LibreLinkUp, Dexcom Share, Medtronic CareLink o Nightscout,
@@ -91,7 +91,7 @@ export function PrivacyIt() {
       <ul>
         <li>
           <strong>Un token di sessione del fornitore</strong> (non la password): un token
-          LibreLinkUp o un ID di sessione Dexcom Share, per recuperare le letture per tuo conto. Con Medtronic CareLink, il relay conserva i tuoi token di accesso CareLink. Con Nightscout, conserva l’indirizzo del tuo sito e il token di accesso o l’impronta SHA-1 del tuo secret API.
+          LibreLinkUp o un ID di sessione Dexcom Share, per recuperare le letture per tuo conto. Con Medtronic CareLink, il relay conserva i tuoi token di accesso CareLink. Con Nightscout, conserva l’indirizzo del tuo sito e il token di accesso o l’impronta SHA-1 del tuo secret API. Con Dexcom, finché «Resta connesso» è attivo, il relay conserva anche la tua password Dexcom cifrata (AES-256-GCM, con la chiave conservata a parte nell’archivio dei segreti di Cloudflare) e la usa solo per accedere di nuovo a Dexcom Share quando la sessione scade. Non viene mai registrata nei log né condivisa e viene eliminata quando disattivi l’opzione, esci o elimini l’account.
         </li>
         <li>
           <strong>Un ID casuale dell&apos;installazione e un identificativo dell&apos;account CGM</strong>

@@ -59,7 +59,7 @@ export function PrivacyEn() {
           (Abbott) or Dexcom Share account. Your sign-in password is stored in your device’s
           secure keychain and is not sent to Dulce. The app uses it to connect to the provider;
           when your CGM is connected, a provider session token (not your password) is sent
-          to the relay as described below. For Medtronic CareLink, you enter your password on Medtronic’s own page, so Dulce never sees it, and Dulce receives sign-in tokens from Medtronic. For Nightscout, you enter your site address and an access token or API secret (Dulce keeps only the secret’s SHA-1 fingerprint).
+          to the relay as described below. For Medtronic CareLink, you enter your password on Medtronic’s own page, so Dulce never sees it, and Dulce receives sign-in tokens from Medtronic. For Nightscout, you enter your site address and an access token or API secret (Dulce keeps only the secret’s SHA-1 fingerprint). Exception for Dexcom: while “Keep me signed in” is on (Settings › Sensor, on by default), the app also sends your Dexcom password to the relay once, because Dexcom ends sessions every 24 hours; see below.
         </li>
         <li>
           <strong>Glucose readings</strong> fetched from LibreLinkUp, Dexcom Share, Medtronic CareLink or Nightscout, stored
@@ -113,7 +113,7 @@ export function PrivacyEn() {
       <ul>
         <li>
           <strong>A provider session token</strong> (not your password): a LibreLinkUp token
-          or a Dexcom Share session ID, so it can fetch readings on your behalf. For Medtronic CareLink, the relay holds your CareLink sign-in tokens. For Nightscout, it holds your site address and your access token or the SHA-1 fingerprint of your API secret.
+          or a Dexcom Share session ID, so it can fetch readings on your behalf. For Medtronic CareLink, the relay holds your CareLink sign-in tokens. For Nightscout, it holds your site address and your access token or the SHA-1 fingerprint of your API secret. For Dexcom, while “Keep me signed in” is on, the relay also stores your Dexcom password, encrypted (AES-256-GCM, with the key kept separately in Cloudflare’s secret store), and uses it only to sign in to Dexcom Share again when your session expires. It is never logged or shared, and it is deleted when you turn the option off, sign out or delete your account.
         </li>
         <li>
           <strong>A random installation ID and provider account identifier</strong> to associate

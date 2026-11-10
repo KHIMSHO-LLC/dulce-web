@@ -60,7 +60,7 @@ export function PrivacyEs() {
           LibreLinkUp (Abbott) o Dexcom Share. La contraseña se guarda en el llavero seguro de
           tu dispositivo y no se envía a Dulce. La app la usa para conectarse al proveedor;
           cuando conectas tu CGM, se envía al relay un token de sesión del proveedor
-          (no tu contraseña), como se explica a continuación. Con Medtronic CareLink, escribes tu contraseña en la propia página de Medtronic, por lo que Dulce nunca la ve, y Dulce recibe tokens de acceso de Medtronic. Con Nightscout, introduces la dirección de tu sitio y un token de acceso o secreto de API (Dulce solo guarda la huella SHA-1 del secreto).
+          (no tu contraseña), como se explica a continuación. Con Medtronic CareLink, escribes tu contraseña en la propia página de Medtronic, por lo que Dulce nunca la ve, y Dulce recibe tokens de acceso de Medtronic. Con Nightscout, introduces la dirección de tu sitio y un token de acceso o secreto de API (Dulce solo guarda la huella SHA-1 del secreto). Excepción para Dexcom: mientras «Mantener la sesión iniciada» está activado (Ajustes › Sensor, activado por defecto), la app envía además tu contraseña de Dexcom al relay una vez, porque Dexcom cierra la sesión cada 24 horas; ver más abajo.
         </li>
         <li>
           <strong>Lecturas de glucosa</strong> obtenidas de LibreLinkUp, Dexcom Share, Medtronic CareLink o Nightscout,
@@ -115,7 +115,7 @@ export function PrivacyEs() {
       <ul>
         <li>
           <strong>Un token de sesión del proveedor</strong> (no tu contraseña): un token de
-          LibreLinkUp o un ID de sesión de Dexcom Share, para obtener lecturas en tu nombre. Con Medtronic CareLink, el relay guarda tus tokens de acceso de CareLink. Con Nightscout, guarda la dirección de tu sitio y tu token de acceso o la huella SHA-1 de tu secreto de API.
+          LibreLinkUp o un ID de sesión de Dexcom Share, para obtener lecturas en tu nombre. Con Medtronic CareLink, el relay guarda tus tokens de acceso de CareLink. Con Nightscout, guarda la dirección de tu sitio y tu token de acceso o la huella SHA-1 de tu secreto de API. Con Dexcom, mientras «Mantener la sesión iniciada» está activado, el relay guarda también tu contraseña de Dexcom cifrada (AES-256-GCM, con la clave guardada aparte en el almacén de secretos de Cloudflare) y solo la usa para volver a iniciar sesión en Dexcom Share cuando caduca tu sesión. Nunca se registra en logs ni se comparte, y se borra al desactivar la opción, cerrar sesión o eliminar tu cuenta.
         </li>
         <li>
           <strong>Un ID aleatorio de instalación y un identificador de tu cuenta CGM</strong>

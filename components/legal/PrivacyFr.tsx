@@ -63,7 +63,7 @@ export function PrivacyFr() {
           ton appareil et n&apos;est pas envoyé à Dulce. L&apos;app l&apos;utilise pour joindre
           le fournisseur ; si tu actives des fonctions du relais, un jeton de session du
           fournisseur (pas ton mot de passe) est envoyé au relais quand ton CGM est connecté,
-          comme expliqué ci-dessous. Avec Medtronic CareLink, tu saisis ton mot de passe sur la page de Medtronic : Dulce ne le voit jamais et reçoit des jetons de connexion de Medtronic. Avec Nightscout, tu saisis l’adresse de ton site et un jeton d’accès ou secret API (Dulce ne conserve que l’empreinte SHA-1 du secret).
+          comme expliqué ci-dessous. Avec Medtronic CareLink, tu saisis ton mot de passe sur la page de Medtronic : Dulce ne le voit jamais et reçoit des jetons de connexion de Medtronic. Avec Nightscout, tu saisis l’adresse de ton site et un jeton d’accès ou secret API (Dulce ne conserve que l’empreinte SHA-1 du secret). Exception pour Dexcom : tant que « Rester connecté » est activé (Réglages › Capteur, activé par défaut), l&apos;app envoie aussi une fois ton mot de passe Dexcom au relais, car Dexcom met fin aux sessions toutes les 24 heures ; voir plus bas.
         </li>
         <li>
           <strong>Les mesures de glycémie</strong> récupérées depuis LibreLinkUp, Dexcom Share, Medtronic CareLink ou Nightscout,
@@ -93,7 +93,7 @@ export function PrivacyFr() {
       <ul>
         <li>
           <strong>Un jeton de session du fournisseur</strong> (pas ton mot de passe) : un jeton
-          LibreLinkUp ou un identifiant de session Dexcom Share, pour récupérer les mesures à ta place. Avec Medtronic CareLink, le relais conserve tes jetons de connexion CareLink. Avec Nightscout, il conserve l’adresse de ton site et ton jeton d’accès ou l’empreinte SHA-1 de ton secret API.
+          LibreLinkUp ou un identifiant de session Dexcom Share, pour récupérer les mesures à ta place. Avec Medtronic CareLink, le relais conserve tes jetons de connexion CareLink. Avec Nightscout, il conserve l’adresse de ton site et ton jeton d’accès ou l’empreinte SHA-1 de ton secret API. Pour Dexcom, tant que « Rester connecté » est activé, le relais conserve aussi ton mot de passe Dexcom, chiffré (AES-256-GCM, la clé étant conservée à part dans le coffre de secrets de Cloudflare), et ne l&apos;utilise que pour te reconnecter à Dexcom Share quand ta session expire. Il n&apos;est jamais journalisé ni partagé, et il est supprimé quand tu désactives l&apos;option, te déconnectes ou supprimes ton compte.
         </li>
         <li>
           <strong>Un identifiant d&apos;installation aléatoire et un identifiant de compte CGM</strong>

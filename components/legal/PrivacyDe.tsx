@@ -62,7 +62,7 @@ Missbrauch.
           (Abbott) oder Dexcom-Share-Konto an. Dein Passwort wird im sicheren Schlüsselbund
           deines Geräts gespeichert und nicht an Dulce gesendet. Die App nutzt es, um den
           Anbieter aufzurufen. Wenn dein CGM verbunden ist, wird wie unten beschrieben
-          ein Sitzungstoken des Anbieters (nicht dein Passwort) an das Relay gesendet. Bei Medtronic CareLink gibst du dein Passwort auf der Seite von Medtronic ein, Dulce sieht es also nie, und Dulce erhält Anmelde-Tokens von Medtronic. Bei Nightscout gibst du deine Website-Adresse und ein Zugriffstoken oder API-Secret ein (Dulce speichert nur den SHA-1-Fingerabdruck des Secrets).
+          ein Sitzungstoken des Anbieters (nicht dein Passwort) an das Relay gesendet. Bei Medtronic CareLink gibst du dein Passwort auf der Seite von Medtronic ein, Dulce sieht es also nie, und Dulce erhält Anmelde-Tokens von Medtronic. Bei Nightscout gibst du deine Website-Adresse und ein Zugriffstoken oder API-Secret ein (Dulce speichert nur den SHA-1-Fingerabdruck des Secrets). Ausnahme bei Dexcom: Solange „Angemeldet bleiben“ an ist (Einstellungen › Sensor, standardmäßig an), sendet die App dein Dexcom-Passwort zusätzlich einmal an das Relay, weil Dexcom Sitzungen alle 24 Stunden beendet; siehe unten.
         </li>
         <li>
           <strong>Glukosewerte</strong> aus LibreLinkUp, Dexcom Share, Medtronic CareLink oder Nightscout, gespeichert in einer
@@ -93,7 +93,7 @@ Missbrauch.
         <li>
           <strong>Ein Sitzungstoken des Anbieters</strong> (nicht dein Passwort): ein
           LibreLinkUp-Token oder eine Dexcom-Share-Sitzungs-ID, damit das Relay Werte in deinem
-          Namen abrufen kann. Bei Medtronic CareLink speichert das Relay deine CareLink-Anmelde-Tokens. Bei Nightscout speichert es deine Website-Adresse und dein Zugriffstoken oder den SHA-1-Fingerabdruck deines API-Secrets.
+          Namen abrufen kann. Bei Medtronic CareLink speichert das Relay deine CareLink-Anmelde-Tokens. Bei Nightscout speichert es deine Website-Adresse und dein Zugriffstoken oder den SHA-1-Fingerabdruck deines API-Secrets. Bei Dexcom speichert das Relay, solange „Angemeldet bleiben“ an ist, außerdem dein Dexcom-Passwort verschlüsselt (AES-256-GCM, der Schlüssel liegt getrennt im Secret-Speicher von Cloudflare) und nutzt es nur, um dich bei Dexcom Share neu anzumelden, wenn deine Sitzung abläuft. Es wird nie protokolliert oder weitergegeben und gelöscht, wenn du die Option ausschaltest, dich abmeldest oder dein Konto löschst.
         </li>
         <li>
           <strong>Eine zufällige Installations-ID und eine CGM-Konto-Kennung</strong>, um
