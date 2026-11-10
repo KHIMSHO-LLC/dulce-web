@@ -71,6 +71,13 @@ questions around them. Being the best answer means the product actually does it 
 
 ## Done
 
+- [x] 2026-11-11: Search Console check (data 11/6): 145 indexed, 113 not (63 discovered, 17 redirects = expected,
+      14 crawled-not-indexed = old /en/* and assets, 12 404s, 7 noindex = old de/fr/it legal, now indexable).
+      The 404s were article URLs with another language's slug (`/fr/blog/libre-widget-for-iphone`); proxy.ts now
+      308s them to the right article. Sitemap resubmitted (Google read 375 URLs), IndexNow sent, indexing
+      requested for 7 English guides (Apple Watch CGM, Dexcom watch, blood sugar chart, can Apple Watch measure,
+      Libre + Apple Health, Dexcom Follow alternative, logbook). Next: validate the 404 fix after deploy, request
+      the other "discovered" guides a few per day (quota ~10/day).
 - [x] 2026-11-10: Guide `carplay` (glucose on the CarPlay Dashboard, iOS 26, Pro) in 5 languages, linked from `lock-screen` (web plan W4, `seo/queue.md`). Cover pending in `seo/covers-needed.md`.
 - [x] 2026-11-06: `lada-diabetes` translated into nl, fi, sv, nb, ru (first of the 6 segment guides, see `seo/queue.md`); hub links now point at the translations.
 - [x] 2026-11-05: Audience segmentation (owner request). Hub `/who-is-dulce-for` (10 languages), home section `Audience`, 2 home FAQs, JSON-LD audience, /llms.txt section, 6 guides in 5 languages (`lada-diabetes`, `newly-diagnosed`, `older-adults-cgm`, `diabetes-at-work`, `diabetes-at-school`, `type-2-cgm`). App Store draft 1.0.7 re-segmented. Everything is explained in `seo/segments.md`, including what can't be said in the App Store.
