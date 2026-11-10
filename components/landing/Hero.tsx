@@ -14,6 +14,8 @@ import { LanguageSwitcher } from "@/components/site/LanguageSwitcher";
 import { QrButton } from "@/components/site/QrButton";
 import { SECTION } from "@/lib/site";
 import { screenLocale } from "@/components/screens/strings";
+import { SENSOR_STRIP } from "@/lib/sensors";
+import { localizedPath } from "@/lib/seo";
 
 /**
  * First viewport, composed like the reference: headline top-left, wordmark
@@ -25,6 +27,8 @@ export async function Hero() {
   const siteLocale = (await getLocale()) as AppLocale;
   const locale = screenLocale(siteLocale);
   const t = await getTranslations("home.hero");
+  const st = await getTranslations("sensors.strip");
+  const sensorsPath = localizedPath(siteLocale, "/sensors");
   const headline = `${t("line1")}\n${t("line2")}`;
   const glyphAfter = Number(t.raw("glyphAfter"));
 
@@ -70,6 +74,32 @@ export async function Hero() {
             <div className="flex items-center gap-3">
               <DownloadButton label={t("cta")} campaign="web_hero" />
               <QrButton openLabel={t("qrOpen")} caption={t("qrCaption")} className="hidden md:block" />
+            </div>
+            {/* "Does it work with my sensor?" answered in the first viewport; each name opens its set-up section. */}
+            {/* Phones: one short line (the hero has no room for models). */}
+            <p className="text-caption text-soft md:hidden">
+              <a href={sensorsPath} className="underline-offset-4 hover:underline">
+                <span className="text-mute">{st("label")}</span>{" "}
+                <span translate="no" className="text-ink">
+                  Libre · Dexcom · Medtronic · Nightscout
+                </span>
+              </a>
+            </p>
+            <div className="hidden max-w-[40ch] text-caption leading-relaxed md:block">
+              <p className="text-soft">
+                <a href={sensorsPath} className="text-mute underline-offset-4 hover:text-ink hover:underline">
+                  {st("label")}
+                </a>{" "}
+                {SENSOR_STRIP.map((s, i) => (
+                  <span key={s.id}>
+                    {i > 0 ? <span aria-hidden className="text-mute"> / </span> : null}
+                    <a href={`${sensorsPath}#${s.id}`} translate="no" className="text-ink underline-offset-4 hover:underline">
+                      {s.label}
+                    </a>
+                  </span>
+                ))}
+              </p>
+              <p className="mt-1 text-mute">{st("notAffiliated")}</p>
             </div>
           </div>
 

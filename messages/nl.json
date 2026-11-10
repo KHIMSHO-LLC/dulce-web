@@ -585,7 +585,7 @@
       },
       {
         "q": "Wat voegt Dulce Pro toe?",
-        "a": "De Live Activity op het toegangsscherm en in het Dynamic Island, de Apple Watch-app, delen met familie met onbeperkt volgers, gegevens uit Apple Gezondheid, en meldingen die elke minuut worden gecontroleerd in plaats van elke 5 minuten."
+        "a": "De Live Activity op het toegangsscherm en in het Dynamic Island, de Apple Watch-app, de glucosekaart in CarPlay, delen met familie met onbeperkt volgers, gegevens uit Apple Gezondheid, en meldingen die elke minuut worden gecontroleerd in plaats van elke 5 minuten."
       },
       {
         "q": "Hebben mijn volgers Pro nodig?",
@@ -749,5 +749,153 @@
     "englishNotice": "Deze pagina is voorlopig alleen in het Engels.",
     "medical": "Dulce is geen medisch hulpmiddel. Het vervangt de alarmen van je sensor en het advies van je zorgteam niet.",
     "home": "Home"
+  },
+  "sensors": {
+    "nav": "Sensoren",
+    "title": "Sensoren die werken met Dulce: FreeStyle Libre, Dexcom, Medtronic, Nightscout",
+    "description": "Welke glucosesensoren werken met Dulce, hoe elke sensor verbindt, wat je eerst nodig hebt en hoe vaak er een meting komt. FreeStyle Libre 2 en 3, Dexcom G6, G7 en ONE+, Medtronic Simplera en MiniMed 780G, Nightscout.",
+    "headline": "Werkt met jouw sensor.",
+    "lead": "Dulce praat niet met de sensor zelf. Het leest de metingen die de app van je sensor al deelt, dus je sensor, de app en de alarmen werken precies zoals eerst. Zoek de jouwe hieronder en volg de stappen.",
+    "strip": {
+      "label": "Werkt met",
+      "all": "Alle sensoren",
+      "notAffiliated": "Niet verbonden aan Abbott, Dexcom of Medtronic."
+    },
+    "table": {
+      "title": "In één oogopslag",
+      "sensor": "Sensor",
+      "via": "Hoe Dulce verbindt",
+      "need": "Wat je eerst nodig hebt",
+      "cadence": "Nieuwe meting"
+    },
+    "stepsTitle": "Instellen",
+    "items": [
+      {
+        "id": "freestyle-libre",
+        "name": "FreeStyle Libre",
+        "models": "Libre 2, Libre 2 Plus, Libre 3 en Libre 3 Plus",
+        "via": "LibreLinkUp, de deel-app van Abbott",
+        "need": "Een LibreLinkUp-account waarmee je LibreLink-app deelt",
+        "cadence": "Ongeveer elke minuut",
+        "intro": "Dulce logt in met LibreLinkUp, de app die gedeelde metingen ontvangt. Niet met LibreLink, de app waarmee je scant. Dat zijn twee apps met twee verschillende accounts.",
+        "steps": [
+          {
+            "title": "Maak een LibreLinkUp-account",
+            "body": "Installeer LibreLinkUp en meld je aan met een e-mailadres. Onthoud dat adres en wachtwoord: die vul je in Dulce in."
+          },
+          {
+            "title": "Deel vanuit LibreLink",
+            "body": "Nodig in het deelgedeelte van de LibreLink-app waarmee je scant je LibreLinkUp-e-mailadres uit."
+          },
+          {
+            "title": "Accepteer de uitnodiging",
+            "body": "Open LibreLinkUp en accepteer de uitnodiging die net binnenkwam."
+          },
+          {
+            "title": "Log in bij Dulce",
+            "body": "Kies in Dulce FreeStyle Libre en log in met het e-mailadres en wachtwoord van LibreLinkUp."
+          }
+        ],
+        "more": "LibreLink of LibreLinkUp? De volledige uitleg"
+      },
+      {
+        "id": "dexcom",
+        "name": "Dexcom",
+        "models": "G6, G7 en ONE+",
+        "via": "Dexcom Share",
+        "need": "Share aan in de Dexcom-app, met minstens één volger",
+        "cadence": "Elke 5 minuten",
+        "intro": "Dulce leest de metingen die je Dexcom-app via Dexcom Share deelt. Je logt in met je eigen Dexcom-account, niet dat van een volger.",
+        "steps": [
+          {
+            "title": "Zet Share aan",
+            "body": "Ga in de Dexcom-app op de telefoon die met de sensor verbonden is naar Verbindingen, dan Share, en zet Share aan."
+          },
+          {
+            "title": "Nodig één volger uit",
+            "body": "Nodig minstens één volger uit. Dat mag een tweede e-mailadres van jezelf zijn."
+          },
+          {
+            "title": "Kies je regio",
+            "body": "Kies in Dulce Dexcom en de regio waar je je Dexcom-account hebt aangemaakt: Verenigde Staten, Japan of Buiten de VS. Een verkeerde regio lijkt op een verkeerd wachtwoord."
+          },
+          {
+            "title": "Log in",
+            "body": "Gebruik dezelfde gebruikersnaam en hetzelfde wachtwoord als in de Dexcom-app."
+          }
+        ]
+      },
+      {
+        "id": "medtronic",
+        "name": "Medtronic",
+        "models": "Simplera, Guardian, Instinct en MiniMed 780G",
+        "via": "CareLink",
+        "need": "Je Simplera- of MiniMed-app die naar CareLink uploadt",
+        "cadence": "Elke 5 minuten",
+        "intro": "Dulce leest je sensorglucose uit CareLink. Je logt in op de eigen CareLink-pagina van Medtronic, dus Dulce ziet je wachtwoord nooit. Een care partner-account werkt ook.",
+        "steps": [
+          {
+            "title": "Controleer of CareLink je gegevens krijgt",
+            "body": "Je Simplera- of MiniMed-app moet naar CareLink uploaden."
+          },
+          {
+            "title": "Kies Medtronic in Dulce",
+            "body": "Geef aan waar je CareLink-account is: Verenigde Staten of Buiten de VS."
+          },
+          {
+            "title": "Log in met CareLink",
+            "body": "Tik op Log in met CareLink. De pagina van Medtronic opent; log daar in met je CareLink-account of je care partner-account."
+          }
+        ],
+        "note": "De verbinding gebruikt CareLink, dat Medtronic op elk moment kan veranderen."
+      },
+      {
+        "id": "nightscout",
+        "name": "Nightscout",
+        "models": "Je eigen Nightscout-site, met elke uploader",
+        "via": "Het adres van je site, alleen lezen",
+        "need": "Een https-adres, en een toegangstoken als je site niet open is",
+        "cadence": "Zo vaak als je site metingen krijgt",
+        "intro": "Komen je metingen al op je eigen Nightscout-site binnen, dan kan Dulce ze daar lezen. Dulce leest alleen glucose: het schrijft nooit naar je site en negeert behandelingen.",
+        "steps": [
+          {
+            "title": "Maak een leestoken",
+            "body": "Open in Nightscout de Admin Tools en maak een toegangstoken met de rol ‘readable’. Sla dit over als je site open is."
+          },
+          {
+            "title": "Kies Nightscout in Dulce",
+            "body": "Vul het https-adres in waarmee je je site opent."
+          },
+          {
+            "title": "Plak het token en verbind",
+            "body": "Plak het toegangstoken (of je API-geheim) en tik op Verbind."
+          }
+        ]
+      }
+    ],
+    "missing": {
+      "title": "Staat jouw sensor er niet bij?",
+      "body": "Tik in Dulce op het sensorscherm op ‘Mijn sensor staat er niet bij’ en vertel ons welke je gebruikt. De meest gevraagde sensoren komen als eerste."
+    },
+    "faq": [
+      {
+        "q": "Vervangt Dulce de app van mijn sensor?",
+        "a": "Nee. Houd de app van je sensor geïnstalleerd en ingelogd: die praat met de sensor, uploadt de metingen en heeft zijn eigen alarmen. Dulce leest wat die app deelt."
+      },
+      {
+        "q": "Is Dulce gemaakt door Abbott, Dexcom of Medtronic?",
+        "a": "Nee. Dulce is een onafhankelijke app, niet verbonden aan of goedgekeurd door Abbott, Dexcom of Medtronic. Productnamen staan hier alleen om uit te leggen hoe je verbindt."
+      },
+      {
+        "q": "Heb ik Dulce Pro nodig om mijn sensor te verbinden?",
+        "a": "Nee. Elk van deze sensoren verbinden is gratis. Dulce Pro voegt de Live Activity op het toegangsscherm, de Apple Watch-app en delen met familie toe."
+      }
+    ],
+    "cta": {
+      "title": "Je sensor gevonden?",
+      "subtitle": "Dulce is gratis in de App Store, voor iPhone en Apple Watch."
+    },
+    "fromSetup": "Gebruik je Dexcom, Medtronic of Nightscout? Bekijk alle sensoren die met Dulce werken",
+    "disclaimer": "FreeStyle Libre, LibreLink en LibreLinkUp zijn handelsmerken van Abbott. Dexcom, G6, G7 en ONE+ zijn handelsmerken van Dexcom, Inc. Medtronic, CareLink, Simplera, Guardian en MiniMed zijn handelsmerken van Medtronic. Dulce is onafhankelijk en niet aan hen verbonden. Dulce is geen medisch hulpmiddel en vervangt de alarmen van je sensor niet."
   }
 }

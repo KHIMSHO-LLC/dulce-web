@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
+import { Link } from "@/i18n/navigation";
 import { Byline } from "@/components/article/Byline";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/motion/Reveal";
@@ -31,6 +32,7 @@ export default async function SetupPage({ params }: PageProps<"/[locale]/setup">
   setRequestLocale(locale);
   const loc = locale as AppLocale;
   const t = await getTranslations({ locale: loc, namespace: "setup" });
+  const sensorsT = await getTranslations({ locale: loc, namespace: "sensors" });
 
   const faq = faqSchema(
     ["1", "2", "3"].map((n) => ({ question: t(`faq.q${n}`), answer: t(`faq.a${n}`) })),
@@ -64,6 +66,12 @@ export default async function SetupPage({ params }: PageProps<"/[locale]/setup">
           <Split as="h1" text={t("hero.headline")} className="type-display max-w-[18ch] text-[clamp(2.6rem,6vw,5.8rem)] text-ink" />
           <p data-fade className="mt-8 max-w-[52ch] text-[1.125rem] leading-relaxed text-soft">
             {t("hero.subheadline")}
+          </p>
+          <p data-fade className="mt-4">
+            <Link href="/sensors" className="inline-flex items-center gap-2 text-body text-ink underline decoration-ember/60 underline-offset-4">
+              {sensorsT("fromSetup")}
+              <ArrowRight className="h-4 w-4 text-ember" aria-hidden />
+            </Link>
           </p>
           <div data-fade>
             <Byline locale={loc} author="giorgi" dateModified={dateModified} />

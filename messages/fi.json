@@ -585,7 +585,7 @@
       },
       {
         "q": "Mitä Dulce Pro tuo lisää?",
-        "a": "Live Activityn lukitusnäytöllä ja Dynamic Islandissa, Apple Watch -sovelluksen, perheen seurannan rajattomalle määrälle seuraajia, Apple Terveys -tiedot ja hälytysten tarkistuksen minuutin välein 5 minuutin sijaan."
+        "a": "Live Activityn lukitusnäytöllä ja Dynamic Islandissa, Apple Watch -sovelluksen, glukoosikortin CarPlayssa, perheen seurannan rajattomalle määrälle seuraajia, Apple Terveys -tiedot ja hälytysten tarkistuksen minuutin välein 5 minuutin sijaan."
       },
       {
         "q": "Tarvitsevatko seuraajani Pron?",
@@ -749,5 +749,153 @@
     "englishNotice": "Tämä sivu on toistaiseksi vain englanniksi.",
     "medical": "Dulce ei ole lääkinnällinen laite. Se ei korvaa sensorisi hälytyksiä eikä hoitotiimisi neuvoja.",
     "home": "Etusivu"
+  },
+  "sensors": {
+    "nav": "Sensorit",
+    "title": "Dulcen kanssa toimivat sensorit: FreeStyle Libre, Dexcom, Medtronic, Nightscout",
+    "description": "Mitkä glukoosisensorit toimivat Dulcen kanssa, miten kukin yhdistetään, mitä tarvitset ensin ja kuinka usein lukema tulee. FreeStyle Libre 2 ja 3, Dexcom G6, G7 ja ONE+, Medtronic Simplera ja MiniMed 780G, Nightscout.",
+    "headline": "Toimii sensorisi kanssa.",
+    "lead": "Dulce ei keskustele sensorin kanssa. Se lukee lukemat, jotka sensorisi oma sovellus jo jakaa, joten sensori, sen sovellus ja hälytykset toimivat kuten ennenkin. Etsi omasi alta ja seuraa vaiheita.",
+    "strip": {
+      "label": "Toimii näiden kanssa:",
+      "all": "Kaikki sensorit",
+      "notAffiliated": "Ei yhteyttä Abbottiin, Dexcomiin tai Medtroniciin."
+    },
+    "table": {
+      "title": "Yhdellä silmäyksellä",
+      "sensor": "Sensori",
+      "via": "Miten Dulce yhdistää",
+      "need": "Mitä tarvitset ensin",
+      "cadence": "Uusi lukema"
+    },
+    "stepsTitle": "Käyttöönotto",
+    "items": [
+      {
+        "id": "freestyle-libre",
+        "name": "FreeStyle Libre",
+        "models": "Libre 2, Libre 2 Plus, Libre 3 ja Libre 3 Plus",
+        "via": "LibreLinkUp, Abbottin jakosovellus",
+        "need": "LibreLinkUp-tili, jolle LibreLink-sovelluksesi jakaa",
+        "cadence": "Noin minuutin välein",
+        "intro": "Dulce kirjautuu LibreLinkUpilla, sovelluksella joka vastaanottaa jaetut lukemat. Ei LibreLinkillä, jolla skannaat. Ne ovat kaksi sovellusta, joilla on eri tunnukset.",
+        "steps": [
+          {
+            "title": "Luo LibreLinkUp-tili",
+            "body": "Asenna LibreLinkUp ja rekisteröidy sähköpostilla. Pidä sähköposti ja salasana tallessa: ne kirjoitat Dulceen."
+          },
+          {
+            "title": "Jaa LibreLinkistä",
+            "body": "Kutsu LibreLink-sovelluksen jakamisosiossa LibreLinkUp-sähköpostiosoitteesi."
+          },
+          {
+            "title": "Hyväksy kutsu",
+            "body": "Avaa LibreLinkUp ja hyväksy juuri saapunut kutsu."
+          },
+          {
+            "title": "Kirjaudu Dulceen",
+            "body": "Valitse Dulcessa FreeStyle Libre ja kirjaudu LibreLinkUpin sähköpostilla ja salasanalla."
+          }
+        ],
+        "more": "LibreLink vai LibreLinkUp? Koko opas"
+      },
+      {
+        "id": "dexcom",
+        "name": "Dexcom",
+        "models": "G6, G7 ja ONE+",
+        "via": "Dexcom Share",
+        "need": "Share päällä Dexcom-sovelluksessa ja vähintään yksi seuraaja",
+        "cadence": "5 minuutin välein",
+        "intro": "Dulce lukee lukemat, jotka Dexcom-sovelluksesi jakaa Dexcom Sharen kautta. Kirjaudut omalla Dexcom-tililläsi, et seuraajan tilillä.",
+        "steps": [
+          {
+            "title": "Ota Share käyttöön",
+            "body": "Siirry sensoriin yhdistetyn puhelimen Dexcom-sovelluksessa kohtaan Yhteydet, sitten Share, ja ota Share käyttöön."
+          },
+          {
+            "title": "Kutsu yksi seuraaja",
+            "body": "Kutsu vähintään yksi seuraaja. Se voi olla oma toinen sähköpostiosoitteesi."
+          },
+          {
+            "title": "Valitse alue",
+            "body": "Valitse Dulcessa Dexcom ja alue, jolla loit Dexcom-tilisi: Yhdysvallat, Japani tai USA:n ulkopuolella. Väärä alue näyttää väärältä salasanalta."
+          },
+          {
+            "title": "Kirjaudu",
+            "body": "Käytä samaa käyttäjätunnusta ja salasanaa kuin Dexcom-sovelluksessa."
+          }
+        ]
+      },
+      {
+        "id": "medtronic",
+        "name": "Medtronic",
+        "models": "Simplera, Guardian, Instinct ja MiniMed 780G",
+        "via": "CareLink",
+        "need": "Simplera- tai MiniMed-sovelluksesi lähettää tiedot CareLinkiin",
+        "cadence": "5 minuutin välein",
+        "intro": "Dulce lukee sensorin glukoosin CareLinkistä. Kirjaudut Medtronicin omalla CareLink-sivulla, joten Dulce ei koskaan näe salasanaasi. Myös hoitokumppanin (care partner) tili käy.",
+        "steps": [
+          {
+            "title": "Tarkista, että CareLink saa tiedot",
+            "body": "Simplera- tai MiniMed-sovelluksesi täytyy lähettää tiedot CareLinkiin."
+          },
+          {
+            "title": "Valitse Dulcessa Medtronic",
+            "body": "Valitse, missä CareLink-tilisi on: Yhdysvallat tai Yhdysvaltojen ulkopuolella."
+          },
+          {
+            "title": "Kirjaudu CareLinkillä",
+            "body": "Napauta Kirjaudu CareLinkillä. Medtronicin sivu avautuu; kirjaudu siellä CareLink-tililläsi tai hoitokumppanin tililläsi."
+          }
+        ],
+        "note": "Yhteys käyttää CareLinkiä, jota Medtronic voi muuttaa milloin tahansa."
+      },
+      {
+        "id": "nightscout",
+        "name": "Nightscout",
+        "models": "Oma Nightscout-sivustosi, millä tahansa lähettäjällä",
+        "via": "Sivustosi osoite, vain luku",
+        "need": "https-osoite ja käyttötunnus, jos sivustosi ei ole avoin",
+        "cadence": "Niin usein kuin sivustosi saa lukemia",
+        "intro": "Jos lukemasi tulevat jo omalle Nightscout-sivustollesi, Dulce voi lukea ne sieltä. Dulce lukee vain glukoosin: se ei koskaan kirjoita sivustollesi ja ohittaa hoitomerkinnät.",
+        "steps": [
+          {
+            "title": "Luo lukuoikeudellinen tunnus",
+            "body": "Avaa Nightscoutissa Admin Tools ja luo käyttötunnus roolilla \"readable\". Ohita tämä, jos sivustosi on avoin."
+          },
+          {
+            "title": "Valitse Dulcessa Nightscout",
+            "body": "Kirjoita https-osoite, jolla avaat sivustosi."
+          },
+          {
+            "title": "Liitä tunnus ja yhdistä",
+            "body": "Liitä käyttötunnus (tai API-salaisuus) ja napauta Yhdistä."
+          }
+        ]
+      }
+    ],
+    "missing": {
+      "title": "Eikö sensoriasi löydy?",
+      "body": "Napauta Dulcen sensorinäytössä ”Sensoriani ei ole listalla” ja kerro, mitä käytät. Toivotuimmat sensorit tehdään seuraavaksi."
+    },
+    "faq": [
+      {
+        "q": "Korvaako Dulce sensorini sovelluksen?",
+        "a": "Ei. Pidä sensorisi oma sovellus asennettuna ja kirjautuneena: se keskustelee sensorin kanssa, lähettää lukemat ja hoitaa omat hälytyksensä. Dulce lukee sen, mitä sovellus jakaa."
+      },
+      {
+        "q": "Onko Dulce Abbottin, Dexcomin tai Medtronicin tekemä?",
+        "a": "Ei. Dulce on itsenäinen sovellus, jolla ei ole yhteyttä Abbottiin, Dexcomiin tai Medtroniciin eivätkä ne ole hyväksyneet sitä. Tuotenimiä käytetään vain yhdistämisen selittämiseen."
+      },
+      {
+        "q": "Tarvitsenko Dulce Pron sensorin yhdistämiseen?",
+        "a": "Et. Minkä tahansa näistä sensoreista voi yhdistää ilmaiseksi. Dulce Pro tuo Live Activityn lukitusnäytölle, Apple Watch -sovelluksen ja jakamisen perheelle."
+      }
+    ],
+    "cta": {
+      "title": "Löytyikö sensorisi?",
+      "subtitle": "Dulce on ilmainen App Storessa iPhonelle ja Apple Watchille."
+    },
+    "fromSetup": "Käytätkö Dexcomia, Medtronicia tai Nightscoutia? Katso kaikki Dulcen kanssa toimivat sensorit",
+    "disclaimer": "FreeStyle Libre, LibreLink ja LibreLinkUp ovat Abbottin tavaramerkkejä. Dexcom, G6, G7 ja ONE+ ovat Dexcom, Inc:n tavaramerkkejä. Medtronic, CareLink, Simplera, Guardian ja MiniMed ovat Medtronicin tavaramerkkejä. Dulce on itsenäinen eikä liity niihin. Dulce ei ole lääkinnällinen laite eikä korvaa sensorisi hälytyksiä."
   }
 }

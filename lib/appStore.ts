@@ -24,6 +24,8 @@ export type StoreCampaign =
   | "web_audience"
   | "web_tool"
   | "web_status"
+  /** /sensors page. */
+  | "web_sensors"
   /** Markdown copies for AI assistants (/llms-full.txt, /md/...). */
   | "web_llms"
   /** One campaign per article (`blog_<article id>`), so installs can be traced to the page. */

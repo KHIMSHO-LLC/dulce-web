@@ -73,6 +73,7 @@ Dulce never asks what type of diabetes someone has: it shows what a supported se
 
 ## Help
 
+- [Sensors](${url("en", "/sensors")}): every sensor Dulce works with (FreeStyle Libre 2/3 via LibreLinkUp, Dexcom G6/G7/ONE+ via Dexcom Share, Medtronic Simplera/Guardian/Instinct/MiniMed 780G via CareLink, Nightscout), how each connects, what you need first, how often a reading arrives, and the set-up steps (Spanish: ${url("es", "/sensors")})
 - [Set up LibreLinkUp](${url("en", "/setup")}): LibreLink vs LibreLinkUp and the 4 steps to connect Dulce (Spanish: ${url("es", "/setup")})
 - [LibreLinkUp status](${url("en", "/librelinkup-status")}): whether LibreLinkUp is working right now, measured by Dulce's server (Spanish: ${url("es", "/librelinkup-status")})
 - [Free vs Pro](${url("en", "/pro")}): what each plan includes and how the trial works

@@ -1,5 +1,5 @@
 /**
- * /llms-full.txt: the setup guide, home FAQ, Free vs Pro page, calculators and
+ * /llms-full.txt: the setup guide, sensors page, home FAQ, Free vs Pro page, calculators and
  * every guide in full, as Markdown, grouped by language, so an AI assistant can
  * answer from the whole site in one fetch. Built from the same messages and
  * content files the pages render. /llms.txt is the short index; this is the
@@ -25,7 +25,7 @@ export async function GET() {
   );
   const body = `# Dulce: full site text
 
-> The setup guide, FAQ, Free vs Pro page, free calculators and every Dulce guide in full, in English, Spanish, German, French and Italian. Short summary and key facts: ${absoluteUrl("/llms.txt")}
+> The setup guide, sensors page, FAQ, Free vs Pro page, free calculators and every Dulce guide in full, in English, Spanish, German, French and Italian. Short summary and key facts: ${absoluteUrl("/llms.txt")}
 
 ${sections.join("\n\n")}
 `;

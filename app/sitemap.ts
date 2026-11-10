@@ -30,6 +30,7 @@ const SOURCES: Partial<Record<AppPathname, string[]>> = {
   "/": ["app/[locale]/page.tsx", "components/landing", MESSAGES],
   "/setup": ["app/[locale]/setup", MESSAGES],
   "/pro": ["app/[locale]/pro", MESSAGES],
+  "/sensors": ["app/[locale]/sensors", "lib/sensors.ts", MESSAGES],
   "/who-is-dulce-for": ["app/[locale]/who-is-dulce-for", MESSAGES],
   "/help": ["app/[locale]/help/page.tsx", "content/help.ts", MESSAGES],
   "/legal/privacy": ["app/[locale]/legal/privacy", "components/legal/PrivacyEs.tsx", "components/legal/PrivacyEn.tsx"],

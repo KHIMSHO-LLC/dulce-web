@@ -585,7 +585,7 @@
       },
       {
         "q": "Hva legger Dulce Pro til?",
-        "a": "Live-aktiviteten på låseskjermen og Dynamic Island, Apple Watch-appen, familiedeling med ubegrenset antall følgere, data fra Apple Helse og alarmer som sjekkes hvert minutt i stedet for hvert 5. minutt."
+        "a": "Live-aktiviteten på låseskjermen og Dynamic Island, Apple Watch-appen, glukosekortet i CarPlay, familiedeling med ubegrenset antall følgere, data fra Apple Helse og alarmer som sjekkes hvert minutt i stedet for hvert 5. minutt."
       },
       {
         "q": "Trenger følgerne mine Pro?",
@@ -749,5 +749,153 @@
     "englishNotice": "Denne siden finnes foreløpig bare på engelsk.",
     "medical": "Dulce er ikke medisinsk utstyr. Det erstatter ikke alarmene fra sensoren eller rådene fra behandlingsteamet ditt.",
     "home": "Hjem"
+  },
+  "sensors": {
+    "nav": "Sensorer",
+    "title": "Sensorer som virker med Dulce: FreeStyle Libre, Dexcom, Medtronic, Nightscout",
+    "description": "Hvilke glukosesensorer som virker med Dulce, hvordan hver av dem kobles til, hva du trenger først og hvor ofte en måling kommer. FreeStyle Libre 2 og 3, Dexcom G6, G7 og ONE+, Medtronic Simplera og MiniMed 780G, Nightscout.",
+    "headline": "Virker med sensoren din.",
+    "lead": "Dulce snakker ikke med selve sensoren. Den leser målingene som sensorens egen app allerede deler, så sensoren, appen og alarmene virker akkurat som før. Finn din nedenfor og følg trinnene.",
+    "strip": {
+      "label": "Virker med",
+      "all": "Alle sensorer",
+      "notAffiliated": "Ikke tilknyttet Abbott, Dexcom eller Medtronic."
+    },
+    "table": {
+      "title": "Kort oversikt",
+      "sensor": "Sensor",
+      "via": "Slik kobler Dulce seg til",
+      "need": "Hva du trenger først",
+      "cadence": "Ny måling"
+    },
+    "stepsTitle": "Slik setter du det opp",
+    "items": [
+      {
+        "id": "freestyle-libre",
+        "name": "FreeStyle Libre",
+        "models": "Libre 2, Libre 2 Plus, Libre 3 og Libre 3 Plus",
+        "via": "LibreLinkUp, Abbotts delingsapp",
+        "need": "En LibreLinkUp-konto som LibreLink-appen din deler med",
+        "cadence": "Omtrent hvert minutt",
+        "intro": "Dulce logger på med LibreLinkUp, appen som mottar delte målinger. Ikke med LibreLink, appen du skanner med. Det er to apper med to forskjellige kontoer.",
+        "steps": [
+          {
+            "title": "Lag en LibreLinkUp-konto",
+            "body": "Installer LibreLinkUp og registrer deg med en e-postadresse. Husk e-post og passord: det er dem du skriver inn i Dulce."
+          },
+          {
+            "title": "Del fra LibreLink",
+            "body": "Inviter LibreLinkUp-e-posten din i delingsdelen av LibreLink-appen du skanner med."
+          },
+          {
+            "title": "Godta invitasjonen",
+            "body": "Åpne LibreLinkUp og godta invitasjonen som nettopp kom."
+          },
+          {
+            "title": "Logg på Dulce",
+            "body": "Velg FreeStyle Libre i Dulce og logg på med e-post og passord fra LibreLinkUp."
+          }
+        ],
+        "more": "LibreLink eller LibreLinkUp? Hele veiledningen"
+      },
+      {
+        "id": "dexcom",
+        "name": "Dexcom",
+        "models": "G6, G7 og ONE+",
+        "via": "Dexcom Share",
+        "need": "Share slått på i Dexcom-appen, med minst én følger",
+        "cadence": "Hvert 5. minutt",
+        "intro": "Dulce leser målingene Dexcom-appen din deler gjennom Dexcom Share. Du logger på med din egen Dexcom-konto, ikke en følgers.",
+        "steps": [
+          {
+            "title": "Slå på Share",
+            "body": "I Dexcom-appen på telefonen som er koblet til sensoren, gå til Tilkoblinger og deretter Share, og slå på Share."
+          },
+          {
+            "title": "Inviter én følger",
+            "body": "Inviter minst én følger. Det kan være en annen e-postadresse du selv har."
+          },
+          {
+            "title": "Velg region",
+            "body": "Velg Dexcom i Dulce og regionen der du opprettet Dexcom-kontoen: USA, Japan eller Utenfor USA. Feil region ser ut som feil passord."
+          },
+          {
+            "title": "Logg på",
+            "body": "Bruk samme brukernavn og passord som i Dexcom-appen."
+          }
+        ]
+      },
+      {
+        "id": "medtronic",
+        "name": "Medtronic",
+        "models": "Simplera, Guardian, Instinct og MiniMed 780G",
+        "via": "CareLink",
+        "need": "Simplera- eller MiniMed-appen din laster opp til CareLink",
+        "cadence": "Hvert 5. minutt",
+        "intro": "Dulce leser sensorglukosen din fra CareLink. Du logger på på Medtronics egen CareLink-side, så Dulce ser aldri passordet ditt. En care partner-konto virker også.",
+        "steps": [
+          {
+            "title": "Sjekk at CareLink får dataene",
+            "body": "Simplera- eller MiniMed-appen din må laste opp til CareLink."
+          },
+          {
+            "title": "Velg Medtronic i Dulce",
+            "body": "Velg hvor CareLink-kontoen din er: USA eller Utenfor USA."
+          },
+          {
+            "title": "Logg på med CareLink",
+            "body": "Trykk på Logg på med CareLink. Medtronics side åpnes; logg på der med CareLink-kontoen eller care partner-kontoen din."
+          }
+        ],
+        "note": "Tilkoblingen bruker CareLink, som Medtronic kan endre når som helst."
+      },
+      {
+        "id": "nightscout",
+        "name": "Nightscout",
+        "models": "Din egen Nightscout-side, fra hvilken som helst opplaster",
+        "via": "Adressen til siden din, bare lesing",
+        "need": "En https-adresse, og et tilgangstoken hvis siden ikke er åpen",
+        "cadence": "Så ofte som siden din får målinger",
+        "intro": "Hvis målingene dine allerede kommer til din egen Nightscout-side, kan Dulce lese dem derfra. Dulce leser bare glukose: den skriver aldri til siden din og ser bort fra behandlinger.",
+        "steps": [
+          {
+            "title": "Lag et lesetoken",
+            "body": "Åpne Admin Tools i Nightscout og lag et tilgangstoken med rollen «readable». Hopp over dette hvis siden din er åpen."
+          },
+          {
+            "title": "Velg Nightscout i Dulce",
+            "body": "Skriv inn https-adressen du åpner siden din med."
+          },
+          {
+            "title": "Lim inn token og koble til",
+            "body": "Lim inn tilgangstokenet (eller API-hemmeligheten) og trykk på Koble til."
+          }
+        ]
+      }
+    ],
+    "missing": {
+      "title": "Finner du ikke sensoren din?",
+      "body": "Trykk på «Sensoren min står ikke på listen» på sensorskjermen i Dulce og fortell oss hvilken du bruker. De mest etterspurte sensorene kommer først."
+    },
+    "faq": [
+      {
+        "q": "Erstatter Dulce appen til sensoren min?",
+        "a": "Nei. Behold sensorens egen app installert og pålogget: den snakker med sensoren, laster opp målingene og har sine egne alarmer. Dulce leser det appen deler."
+      },
+      {
+        "q": "Er Dulce laget av Abbott, Dexcom eller Medtronic?",
+        "a": "Nei. Dulce er en uavhengig app, ikke tilknyttet eller godkjent av Abbott, Dexcom eller Medtronic. Produktnavnene brukes bare for å forklare tilkoblingen."
+      },
+      {
+        "q": "Trenger jeg Dulce Pro for å koble til sensoren?",
+        "a": "Nei. Det er gratis å koble til hvilken som helst av disse sensorene. Dulce Pro gir deg live-aktiviteten på låseskjermen, Apple Watch-appen og deling med familien."
+      }
+    ],
+    "cta": {
+      "title": "Fant du sensoren din?",
+      "subtitle": "Dulce er gratis i App Store, for iPhone og Apple Watch."
+    },
+    "fromSetup": "Bruker du Dexcom, Medtronic eller Nightscout? Se alle sensorer som virker med Dulce",
+    "disclaimer": "FreeStyle Libre, LibreLink og LibreLinkUp er varemerker for Abbott. Dexcom, G6, G7 og ONE+ er varemerker for Dexcom, Inc. Medtronic, CareLink, Simplera, Guardian og MiniMed er varemerker for Medtronic. Dulce er uavhengig og ikke tilknyttet dem. Dulce er ikke medisinsk utstyr og erstatter ikke alarmene til sensoren din."
   }
 }
