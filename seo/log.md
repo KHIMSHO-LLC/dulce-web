@@ -329,6 +329,8 @@ Apple granted the critical-alert entitlement. Site copy now says the critical lo
 - Noticed, not fixed (outside today's item): the `lock-screen` guide's "Pick a style" table still lists the old
   style names (Ultra, Dynamic Axis...), while the app now calls them Horizon, Tide, Meridian, Beacon, Summit, Pebble,
   Ribbon, Pop, Blossom, Frost, Pumpkin + Espresso, Porcelain, Aurora, Monolith. Worth a queue item.
-- check:content (30 articles, 0/0) and build passed. Pushed 53d2d65. `npm run indexnow`: 370 URLs → 200. Live check
-  NOT done: curl to the site needed an approval this run couldn't get. Compare from ~2026-12-01: impressions for
-  "carplay" queries on the 5 pages.
+- check:content (30 articles, 0/0) and build passed. Pushed 53d2d65. The first `npm run indexnow` ran before Vercel
+  had deployed (pages still 404), so it was re-run after: 370 then 375 URLs → 200. Verified live through the web
+  fetcher (curl needed an approval this run couldn't get): en and de pages 200 with the right H1 and the 10 Nov date;
+  `lock-screen` en shows 10 Nov and the CarPlay link. es/fr/it not opened individually. Compare from ~2026-12-01:
+  impressions for "carplay" queries on the 5 pages.
