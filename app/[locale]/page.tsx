@@ -14,7 +14,8 @@ import { ReadingsCounter } from "@/components/landing/ReadingsCounter";
 import { Family } from "@/components/landing/Family";
 import { DayAccordion } from "@/components/landing/DayAccordion";
 import { MoreBento } from "@/components/landing/MoreBento";
-import { Audience } from "@/components/landing/Audience";
+import { Audience, guideHref } from "@/components/landing/Audience";
+import { GuideLink } from "@/components/landing/GuideLink";
 import { Founder } from "@/components/landing/Founder";
 import { Faq, type FaqItem } from "@/components/landing/Faq";
 import { DownloadCta } from "@/components/landing/DownloadCta";
@@ -217,6 +218,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   const faqItems = t.raw("faq.items") as FaqItem[];
   const dayItems = t.raw("day.items") as Array<{ key: ScreenName; title: string; body: string }>;
   const lockTags = t.raw("lock.tags") as string[];
+  const guideLabel = t("guideLink");
 
   return (
     <>
@@ -239,11 +241,14 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           screen="lock"
           screenAlt={t("lock.alt")}
           extra={
-            <ul className="flex flex-wrap gap-x-6 gap-y-2 text-label text-soft">
-              {lockTags.map((tag) => (
-                <li key={tag}>{tag}</li>
-              ))}
-            </ul>
+            <>
+              <ul className="flex flex-wrap gap-x-6 gap-y-2 text-label text-soft">
+                {lockTags.map((tag) => (
+                  <li key={tag}>{tag}</li>
+                ))}
+              </ul>
+              <GuideLink href={guideHref("lock-screen", loc)} label={guideLabel} className="mt-4" />
+            </>
           }
         />
         <Chapter
@@ -256,7 +261,12 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           screen="alerts"
           screenAlt={t("alerts.alt")}
           progress={1}
-          extra={<p className="text-label text-soft">{t("alerts.note")}</p>}
+          extra={
+            <>
+              <p className="text-label text-soft">{t("alerts.note")}</p>
+              <GuideLink href={guideHref("alerts", loc)} label={guideLabel} className="mt-4" />
+            </>
+          }
         />
         <Chapter
           id={SECTION.standby}
@@ -279,10 +289,12 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         body={t("watch.body")}
         pro={t("watch.pro")}
         alt={t("watch.alt")}
+        guideHref={guideHref("apple-watch", loc)}
+        guideLabel={guideLabel}
       />
 
       <ReadingsCounter />
-      <Family />
+      <Family guideHref={guideHref("family-sharing", loc)} guideLabel={guideLabel} />
 
       <section id={SECTION.day} data-mood="amber" aria-labelledby="day-title" className="relative z-10 py-16 md:py-24">
         <Reveal className="container-page">

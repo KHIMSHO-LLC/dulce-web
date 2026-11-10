@@ -7,6 +7,7 @@ import type { ScreenName } from "@/components/screens/draw";
 import { screenLocale } from "@/components/screens/strings";
 import { SECTION } from "@/lib/site";
 import { DragCarousel } from "./DragCarousel";
+import { GuideLink } from "./GuideLink";
 
 type Card = { title: string; body: string; screen: ScreenName; alt: string };
 
@@ -19,7 +20,7 @@ const FIELDS = [
 ];
 
 /** Who Dulce is for, read as one sentence, then thrown sideways as cards. */
-export async function Family() {
+export async function Family({ guideHref, guideLabel }: { guideHref: string; guideLabel: string }) {
   const locale = screenLocale(await getLocale());
   const t = await getTranslations("home.family");
   const cards = t.raw("cards") as Card[];
@@ -56,6 +57,7 @@ export async function Family() {
         </DragCarousel>
         </Parallax>
         <p className="mt-6 max-w-[60ch] pr-5 text-label text-soft">{t("pro")}</p>
+        <GuideLink href={guideHref} label={guideLabel} className="mt-4" />
       </div>
     </section>
   );

@@ -8,6 +8,7 @@ import { TOOL_COPY } from "@/lib/tools";
 import { DropMark } from "./DropMark";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { CookieSettingsLink } from "@/components/analytics/ConsentBanner";
+import { guideHref } from "@/components/landing/Audience";
 
 /**
  * The close: QR hand-off, every section, help and legal, the honest small
@@ -21,6 +22,7 @@ export async function SiteFooter() {
   const pro = await getTranslations("pro");
   const audience = await getTranslations("audience");
   const helpT = await getTranslations("help");
+  const sensorsT = await getTranslations("sensors");
   const year = new Date().getFullYear();
   const home = (id: string) => homeSection(locale as AppLocale, id);
 
@@ -30,6 +32,15 @@ export async function SiteFooter() {
     { id: SECTION.watch, label: nav("sections.watch") },
     { id: SECTION.family, label: nav("sections.family") },
     { id: SECTION.faq, label: nav("sections.faq") },
+  ];
+
+  // Feature guides: the article in this language, or its English page while it isn't translated.
+  const features = [
+    { id: "lock-screen", label: nav("sections.lockScreen") },
+    { id: "apple-watch", label: nav("sections.watch") },
+    { id: "widgets", label: t("widgets") },
+    { id: "alerts", label: nav("sections.alerts") },
+    { id: "family-sharing", label: nav("sections.family") },
   ];
 
   const linkClass = "text-soft transition-colors duration-200 hover:text-ink";
@@ -46,14 +57,24 @@ export async function SiteFooter() {
             <p className="max-w-[22ch] pt-1 text-label text-soft">{t("scan")}</p>
           </div>
 
-          <nav aria-label={t("onPage")} className="grid content-start gap-2 text-label">
-            <p className="mb-1 text-mute">{t("onPage")}</p>
-            {onPage.map((s) => (
-              <a key={s.id} href={home(s.id)} className={linkClass}>
-                {s.label}
-              </a>
-            ))}
-          </nav>
+          <div className="grid content-start gap-8 md:gap-10">
+            <nav aria-label={t("onPage")} className="grid content-start gap-2 text-label">
+              <p className="mb-1 text-mute">{t("onPage")}</p>
+              {onPage.map((s) => (
+                <a key={s.id} href={home(s.id)} className={linkClass}>
+                  {s.label}
+                </a>
+              ))}
+            </nav>
+            <nav aria-label={t("features")} className="grid content-start gap-2 text-label">
+              <p className="mb-1 text-mute">{t("features")}</p>
+              {features.map((f) => (
+                <a key={f.id} href={guideHref(f.id, locale as AppLocale)} className={linkClass}>
+                  {f.label}
+                </a>
+              ))}
+            </nav>
+          </div>
 
           <nav aria-label={t("learn")} className="grid content-start gap-2 text-label">
             <p className="mb-1 text-mute">{t("learn")}</p>
@@ -84,6 +105,9 @@ export async function SiteFooter() {
             <p className="mb-1 text-mute">{t("help")}</p>
             <Link href="/help" className={linkClass}>
               {helpT("nav")}
+            </Link>
+            <Link href="/sensors" className={linkClass}>
+              {sensorsT("nav")}
             </Link>
             <Link href="/setup" className={linkClass}>
               {nav("setup")}

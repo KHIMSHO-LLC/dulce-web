@@ -20,8 +20,8 @@ if (ids.size !== ARTICLES.length) errors.push("duplicate article ids");
 
 const inbound = new Map<string, number>([...ids].map((id) => [id, 0]));
 
-// Phrases that would describe features the released app doesn't have.
-const UNRELEASED = [/nightscout[^.\n]*(funciona|works|support|unterstützt)/i, /android app/i];
+// Phrases that would describe features the released app doesn't have. (Nightscout is released since 1.0.6.)
+const UNRELEASED = [/android app/i];
 
 for (const locale of LOCALES) {
   const slugs = new Set<string>();

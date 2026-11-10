@@ -2,6 +2,19 @@
 
 Owner-requested jobs. The daily run does the top unchecked item, one per run, then ticks it here.
 
+- [ ] **"See your glucose on CarPlay" guide** (web plan W4, `DULCE/plans/2026-11-10-web-plan.md`; DO THIS FIRST:
+  CarPlay is in the closest competitor's headline and we have no page for it). id `carplay`, 5 core languages (fi/nl/nb/
+  sv/ru optional). Facts (dulce-app `main`, live since 1.0.6; re-check `src/locales/en/common.json` `liveActivityStyle.small`):
+  there is NO CarPlay app; on **iOS 26** the Live Activity's small card shows on the **CarPlay Dashboard** and in the
+  **Apple Watch Smart Stack**, only **while the Live Activity runs**, and it is **Dulce Pro** (14-day trial). iOS uses one
+  card for both places, so the choice applies to both. Where: Settings › Live Activity style › Customise › "CarPlay &
+  Apple Watch" with the styles "Match my Lock Screen design", "Big number", "Number and chart", "Number and time in
+  range", "Night (dark)", and a chart window. Widgets/Live Activity need iOS 18+, CarPlay card iOS 26. Use the app's
+  exact labels per language (`dulce-app/src/locales/<lang>/common.json`). Safety: glance only when parked or safe,
+  follow local driving laws, a low alert still comes as a notification; never suggest driving decisions from a number;
+  "confirm with your sensor". Links: `lock-screen`, `apple-watch`, `widgets`, `/pro`; link back from `lock-screen`.
+  Cover: real CarPlay/Smart Stack card screens only (add to `seo/covers-needed.md` if the writer can't render).
+
 - [ ] **Translate the 6 segment guides into nl, fi, sv, nb, ru** (owner request 2026-11-05, `seo/segments.md`): `lada-diabetes`, `newly-diagnosed`, `older-adults-cgm`, `diabetes-at-work`, `diabetes-at-school`, `type-2-cgm`. One guide into all 5 languages per run, LADA first (demand in every market). The hub links to the English page until each is translated. Done: `lada-diabetes` (2026-11-06). Next: `newly-diagnosed`.
 - [ ] **Gestational diabetes and CGM** (autocomplete 2026-11-05: "gestational diabetes cgm targets", "schwangerschaftsdiabetes sensor", "diabete gestationnel capteur", "diabetes gestacional sensor"). Pregnancy targets need a primary source. 5 languages. Link from the hub's `types` row in `messages/*.json`.
 - [ ] **Partner of someone with type 1** (autocomplete 2026-11-05: "partner with type 1 diabetes", "spouse type 1 diabetes"). Practical, not medical; link `family-sharing`, `night-lows`.

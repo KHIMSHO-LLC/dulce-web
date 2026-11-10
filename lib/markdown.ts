@@ -187,7 +187,21 @@ export async function sitePagesMarkdown(locale: AppLocale): Promise<string> {
     `### ${p.trialTitle}\n\n${p.trial.map((x) => `- ${x}`).join("\n")}`,
     qa(p.faq),
   ];
-  return [setup, faq, pro].map((part) => part.join("\n\n")).join("\n\n");
+  const z = m.sensors;
+  const sensors = [
+    `## ${z.title}`,
+    `URL: ${absoluteUrl(localizedPath(locale, "/sensors"))}`,
+    z.lead,
+    `| ${z.table.sensor} | ${z.table.via} | ${z.table.need} | ${z.table.cadence} |\n|---|---|---|---|\n${z.items.map((i) => `| ${i.name} (${i.models}) | ${i.via} | ${i.need} | ${i.cadence} |`).join("\n")}`,
+    ...z.items.map(
+      (i) =>
+        `### ${i.name}: ${i.models}\n\n${i.intro}\n\n${i.steps.map((st, n) => `${n + 1}. **${st.title}.** ${st.body}`).join("\n")}${i.note ? `\n\n${i.note}` : ""}`,
+    ),
+    `### ${z.missing.title}\n\n${z.missing.body}`,
+    qa(z.faq),
+    z.disclaimer,
+  ];
+  return [setup, sensors, faq, pro].map((part) => part.join("\n\n")).join("\n\n");
 }
 
 /** One calculator page (title, description, explanation) as Markdown. */

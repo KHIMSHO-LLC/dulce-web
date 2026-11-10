@@ -265,7 +265,8 @@
       "sub": "Gratis en el App Store. Dulce Pro, con 14 días de prueba.",
       "qr": "Escanéalo con tu iPhone",
       "android": "¿Tienes Android? Te avisamos cuando esté lista."
-    }
+    },
+    "guideLink": "Leer la guía"
   },
   "footer": {
     "scan": "Escanea el código para descargar Dulce en tu iPhone.",
@@ -278,7 +279,9 @@
     "top": "Volver arriba",
     "wordmark": "dulce",
     "learn": "Aprender",
-    "group": "Comunidad Dulce"
+    "group": "Comunidad Dulce",
+    "features": "Funciones",
+    "widgets": "Widgets"
   },
   "waitlist": {
     "email": {
@@ -585,7 +588,7 @@
       },
       {
         "q": "¿Qué añade Dulce Pro?",
-        "a": "La Live Activity en la pantalla de bloqueo y la Dynamic Island, la app del Apple Watch, compartir con seguidores sin límite, los datos de Apple Salud y avisos revisados cada minuto en vez de cada 5."
+        "a": "La Live Activity en la pantalla de bloqueo y la Dynamic Island, la app del Apple Watch, la tarjeta de glucosa en CarPlay, compartir con seguidores sin límite, los datos de Apple Salud y avisos revisados cada minuto en vez de cada 5."
       },
       {
         "q": "¿Mis seguidores necesitan Pro?",
@@ -749,5 +752,154 @@
     "englishNotice": "Esta página solo está en inglés por ahora.",
     "medical": "Dulce no es un dispositivo médico. No sustituye las alarmas de tu sensor ni el consejo de tu equipo médico.",
     "home": "Inicio"
+  },
+  "sensors": {
+    "nav": "Sensores",
+    "title": "Sensores compatibles con Dulce: FreeStyle Libre, Dexcom, Medtronic, Nightscout",
+    "description": "Qué sensores de glucosa funcionan con Dulce, cómo se conecta cada uno, qué necesitas antes y cada cuánto llega una lectura. FreeStyle Libre 2 y 3, Dexcom G6, G7 y ONE+, Medtronic Simplera y MiniMed 780G, Nightscout.",
+    "headline": "Funciona con tu sensor.",
+    "lead": "Dulce no habla con el sensor. Lee las lecturas que ya comparte la app de tu sensor, así que el sensor, su app y sus alarmas siguen funcionando igual que antes. Busca el tuyo y sigue los pasos.",
+    "strip": {
+      "label": "Funciona con",
+      "all": "Todos los sensores",
+      "notAffiliated": "Sin relación con Abbott, Dexcom ni Medtronic."
+    },
+    "table": {
+      "title": "De un vistazo",
+      "sensor": "Sensor",
+      "via": "Cómo se conecta Dulce",
+      "need": "Qué necesitas antes",
+      "cadence": "Lectura nueva"
+    },
+    "stepsTitle": "Configúralo",
+    "items": [
+      {
+        "id": "freestyle-libre",
+        "name": "FreeStyle Libre",
+        "models": "Libre 2, Libre 2 Plus, Libre 3 y Libre 3 Plus",
+        "via": "LibreLinkUp, la app de Abbott para compartir",
+        "need": "Una cuenta de LibreLinkUp con la que comparta tu app LibreLink",
+        "cadence": "Más o menos cada minuto",
+        "intro": "Dulce inicia sesión con LibreLinkUp, la app que recibe las lecturas compartidas. No con LibreLink, la app con la que escaneas. Son dos apps con dos cuentas distintas.",
+        "steps": [
+          {
+            "title": "Crea una cuenta de LibreLinkUp",
+            "body": "Instala LibreLinkUp y regístrate con un correo. Guarda ese correo y la contraseña: son los que escribes en Dulce."
+          },
+          {
+            "title": "Comparte desde LibreLink",
+            "body": "En la app LibreLink con la que escaneas tu sensor, ve a su sección de compartir e invita tu correo de LibreLinkUp."
+          },
+          {
+            "title": "Acepta la invitación",
+            "body": "Abre LibreLinkUp y acepta la invitación que acaba de llegar."
+          },
+          {
+            "title": "Inicia sesión en Dulce",
+            "body": "En Dulce, elige FreeStyle Libre e inicia sesión con el correo y la contraseña de LibreLinkUp."
+          }
+        ],
+        "more": "¿LibreLink o LibreLinkUp? La guía completa"
+      },
+      {
+        "id": "dexcom",
+        "name": "Dexcom",
+        "models": "G6, G7 y ONE+",
+        "via": "Dexcom Share",
+        "need": "Compartir activado en la app de Dexcom, con al menos un seguidor",
+        "cadence": "Cada 5 minutos",
+        "intro": "Dulce lee las lecturas que comparte tu app de Dexcom a través de Dexcom Share. Inicias sesión con tu propia cuenta de Dexcom, no con la de un seguidor.",
+        "steps": [
+          {
+            "title": "Activa Compartir",
+            "body": "En la app de Dexcom del teléfono conectado al sensor, ve a Conexiones, luego Compartir, y activa Compartir."
+          },
+          {
+            "title": "Invita a un seguidor",
+            "body": "Invita al menos a un seguidor. Puede ser otro email tuyo."
+          },
+          {
+            "title": "Elige tu región",
+            "body": "En Dulce, elige Dexcom y la región donde creaste la cuenta: Estados Unidos, Japón o Fuera de EE. UU. Una región equivocada parece una contraseña equivocada."
+          },
+          {
+            "title": "Inicia sesión",
+            "body": "Usa el mismo usuario y contraseña que en la app de Dexcom."
+          }
+        ]
+      },
+      {
+        "id": "medtronic",
+        "name": "Medtronic",
+        "models": "Simplera, Guardian, Instinct y MiniMed 780G",
+        "via": "CareLink",
+        "need": "Tu app de Simplera o MiniMed subiendo datos a CareLink",
+        "cadence": "Cada 5 minutos",
+        "intro": "Dulce lee la glucosa del sensor desde CareLink. Inicias sesión en la propia página de CareLink de Medtronic, así que Dulce nunca ve tu contraseña. También sirve una cuenta de cuidador (care partner).",
+        "steps": [
+          {
+            "title": "Comprueba que CareLink recibe tus datos",
+            "body": "Tu app de Simplera o MiniMed debe estar subiendo datos a CareLink."
+          },
+          {
+            "title": "Elige Medtronic en Dulce",
+            "body": "Indica dónde está tu cuenta de CareLink: Estados Unidos o Fuera de EE. UU."
+          },
+          {
+            "title": "Inicia sesión con CareLink",
+            "body": "Toca Iniciar sesión con CareLink. Se abre la página de Medtronic: entra con tu cuenta de CareLink o con tu cuenta de cuidador."
+          }
+        ],
+        "note": "La conexión usa CareLink, que Medtronic puede cambiar en cualquier momento."
+      },
+      {
+        "id": "nightscout",
+        "name": "Nightscout",
+        "models": "Tu propio sitio de Nightscout, con cualquier uploader",
+        "via": "La dirección de tu sitio, solo lectura",
+        "need": "Una dirección https y un token de acceso si tu sitio no es abierto",
+        "cadence": "Tan a menudo como lleguen lecturas a tu sitio",
+        "intro": "Si tus lecturas ya llegan a tu sitio de Nightscout, Dulce puede leerlas desde ahí. Dulce solo lee la glucosa: nunca escribe en tu sitio e ignora los tratamientos.",
+        "steps": [
+          {
+            "title": "Crea un token de solo lectura",
+            "body": "En Nightscout, abre Admin Tools y crea un token de acceso con el rol \"readable\". Sáltate este paso si tu sitio es abierto."
+          },
+          {
+            "title": "Elige Nightscout en Dulce",
+            "body": "Escribe la dirección https con la que abres tu sitio."
+          },
+          {
+            "title": "Pega el token y conecta",
+            "body": "Pega el token de acceso (o tu API secret) y toca Conectar."
+          }
+        ]
+      }
+    ],
+    "missing": {
+      "title": "¿No está tu sensor?",
+      "body": "En Dulce, toca «Mi sensor no está en la lista» en la pantalla de sensores y dinos cuál usas. Leemos todas las peticiones. Dulce solo puede añadir sensores cuyo fabricante ofrezca un servicio para compartir datos o seguir a alguien."
+    },
+    "faq": [
+      {
+        "q": "¿Dulce sustituye a la app de mi sensor?",
+        "a": "No. Mantén instalada y con la sesión iniciada la app de tu sensor: es la que habla con el sensor, sube las lecturas y tiene sus alarmas. Dulce lee lo que esa app comparte."
+      },
+      {
+        "q": "¿Dulce es de Abbott, Dexcom o Medtronic?",
+        "a": "No. Dulce es una app independiente, sin relación ni respaldo de Abbott, Dexcom ni Medtronic. Los nombres de producto se usan solo para explicar cómo conectar."
+      },
+      {
+        "q": "¿Necesito Dulce Pro para conectar mi sensor?",
+        "a": "No. Conectar cualquiera de estos sensores es gratis. Dulce Pro añade la Live Activity en la pantalla de bloqueo, la app del Apple Watch y compartir con la familia."
+      }
+    ],
+    "cta": {
+      "title": "¿Has encontrado tu sensor?",
+      "subtitle": "Dulce es gratis en el App Store para iPhone y Apple Watch."
+    },
+    "fromSetup": "¿Usas Dexcom, Medtronic o Nightscout? Mira todos los sensores compatibles con Dulce",
+    "disclaimer": "FreeStyle Libre, LibreLink y LibreLinkUp son marcas de Abbott. Dexcom, G6, G7 y ONE+ son marcas de Dexcom, Inc. Medtronic, CareLink, Simplera, Guardian y MiniMed son marcas de Medtronic. Dulce es independiente y no tiene relación con ellas. Dulce no es un producto sanitario y no sustituye las alarmas de tu sensor.",
+    "troubleshoot": "Si no se conecta: solución de problemas"
   }
 }
