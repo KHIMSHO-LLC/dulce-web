@@ -83,6 +83,45 @@ function preferredLocale(request: NextRequest): AppLocale | null {
   return null;
 }
 
+/**
+ * Article slugs are per language, so `/fr/blog/<english slug>` or `/blog/<german slug>`
+ * is a 404 (Search Console found 12 of them, linked before the 2026-11-03 locale move).
+ * Send such a URL to the same article in the asked-for language, or in the slug's own
+ * language when it isn't translated.
+ */
+const BLOG_PATH = new RegExp(`^(?:/(${locales.join("|")}))?/blog/([^/]+)/?$`);
+const ARTICLE_SLUGS = new Map<string, { slugs: Partial<Record<AppLocale, string>>; own: AppLocale }>();
+for (const a of ARTICLES) {
+  const slugs = a.slug as Partial<Record<AppLocale, string>>;
+  for (const l of locales) {
+    const s = slugs[l];
+    if (s && !ARTICLE_SLUGS.has(`${l}:${s}`)) ARTICLE_SLUGS.set(`${l}:${s}`, { slugs, own: l });
+  }
+}
+const ANY_SLUG = new Map<string, { slugs: Partial<Record<AppLocale, string>>; own: AppLocale }>();
+for (const [key, v] of ARTICLE_SLUGS) {
+  const slug = key.slice(key.indexOf(":") + 1);
+  if (!ANY_SLUG.has(slug)) ANY_SLUG.set(slug, v);
+}
+
+function misplacedArticle(path: string): string | null {
+  const m = BLOG_PATH.exec(path);
+  if (!m) return null;
+  const locale = (m[1] ?? defaultLocale) as AppLocale;
+  let slug: string;
+  try {
+    slug = decodeURIComponent(m[2]);
+  } catch {
+    return null;
+  }
+  if (ARTICLE_SLUGS.has(`${locale}:${slug}`)) return null;
+  const found = ANY_SLUG.get(slug);
+  if (!found) return null;
+  const target = found.slugs[locale] ? locale : found.own;
+  const targetSlug = encodeURIComponent(found.slugs[target]!);
+  return target === defaultLocale ? `/blog/${targetSlug}` : `/${target}/blog/${targetSlug}`;
+}
+
 function redirect(request: NextRequest, pathname: string, status: 307 | 308): NextResponse {
   const url = request.nextUrl.clone();
   url.pathname = pathname;
@@ -98,6 +137,9 @@ function redirect(request: NextRequest, pathname: string, status: 307 | 308): Ne
  */
 export default function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname;
+
+  const article = isOldSpanish(path) ? null : misplacedArticle(path);
+  if (article && article !== path) return redirect(request, article, 308);
 
   if (!PREFIXED.test(path)) {
     if (isOldSpanish(path)) return redirect(request, `/es${path}`, 308);
