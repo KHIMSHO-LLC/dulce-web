@@ -298,3 +298,37 @@ Apple granted the critical-alert entitlement. Site copy now says the critical lo
   and `BASE=https://dulceglucosa.com` needed an approval this run couldn't get), so the weekly workflow is the first
   JSON-LD check of these pages. Pushed f42f1a0; all 5 pages verified live (200, H1 correct, updated 6 Nov). `npm run
   indexnow`: 290 URLs → 200. Compare from ~2026-11-27: impressions for LADA queries on these 5 pages.
+
+## 2026-11-10 (daily run, Mac, queue item: `carplay` guide, web plan W4)
+
+- Queue: top item, so step 1 topic picking was skipped (no `seo:gaps` run). Target queries (registry keywords, not
+  measured): "glucose carplay", "libre carplay", "dexcom carplay", "freestyle libre carplay", "blutzucker carplay",
+  "glicemia/glycémie carplay". Search Console (gum OK, 2026-10-11 to 11-08, queries containing "carplay"): 0 rows,
+  so no baseline; the case is the owner's (CarPlay is in the closest competitor's headline).
+- Published: `content/articles/carplay/{es,en,de,fr,it}.mdx` + registry entry (author giorgi, guide). Slugs:
+  glucosa-en-carplay-iphone / glucose-on-carplay-iphone / glukose-in-carplay-iphone / glycemie-sur-carplay-iphone /
+  glicemia-su-carplay-iphone. Back-link from `lock-screen` (all 5, dateModified 2026-11-10); added to the
+  sensor-end-date `guides`. Links: lock-screen, apple-watch, widgets, dexcom (FAQ), /setup, /sensors, /pro.
+- Outside content/ and seo/ (the queue item asks for a `/pro` link): `PageLink` type in `components/article/MdxParts.tsx`
+  and the allowed list in `scripts/check-content.mts` now accept `/pro` (an existing route).
+- App facts on dulce-app main (969b53e), each dated against releases: CarPlay picker 56c3bf0 (2026-11-03, 1.0.6); chart
+  window and follower name on the card 41731e5 (11-04, before the 1.0.7 bump on 11-06, so live). Labels from each
+  locale's common.json (`settings.liveActivityStyle.small.*`, `tabs.small` = "CarPlay", `chart.window`). Gating
+  (`live-activity-style.tsx`, `liveActivityWire.ts`): turning the Live Activity on asks for Pro; picking a non-default
+  card or window asks for Pro; followers run on the patient's Pro. "Match my Lock Screen design" is listed only with
+  the 4 premium designs (`PREMIUM_LA_VARIANTS`); with others "Number and chart" is the default. Stale card: grey,
+  struck through, ⚠︎ + self-updating age (`GlucoseLiveActivity.swift`, `LiveActivitySmallViews.swift`). Card works
+  for every source (relay registration sends any `cgm.provider`).
+- External facts: WWDC25 session 216 (iOS 26, Dashboard, notification at the bottom when the Dashboard isn't shown,
+  non-interactive, small family shared with the Smart Stack); WWDC24 10068 + Apple newsroom (watchOS 11 Smart Stack).
+  The Apple Support page "View Live Activities in CarPlay" didn't render for the fetcher, so no Settings path for
+  turning CarPlay Live Activities off is given. Deleted before publishing: a claim that Dulce's widgets don't show
+  on CarPlay (couldn't verify). No driving numbers (e.g. "5 to drive") given; safety callout only.
+- Images: no CarPlay screenshot exists. Card image and inline figure are `live-activity-styles.jpg` (older version
+  of the style screen, said so in the caption). Cover + a current CarPlay-tab screenshot queued in `seo/covers-needed.md`.
+- Noticed, not fixed (outside today's item): the `lock-screen` guide's "Pick a style" table still lists the old
+  style names (Ultra, Dynamic Axis...), while the app now calls them Horizon, Tide, Meridian, Beacon, Summit, Pebble,
+  Ribbon, Pop, Blossom, Frost, Pumpkin + Espresso, Porcelain, Aurora, Monolith. Worth a queue item.
+- check:content (30 articles, 0/0) and build passed. Pushed 53d2d65. `npm run indexnow`: 370 URLs → 200. Live check
+  NOT done: curl to the site needed an approval this run couldn't get. Compare from ~2026-12-01: impressions for
+  "carplay" queries on the 5 pages.

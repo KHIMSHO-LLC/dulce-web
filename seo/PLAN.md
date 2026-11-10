@@ -71,6 +71,7 @@ questions around them. Being the best answer means the product actually does it 
 
 ## Done
 
+- [x] 2026-11-10: Guide `carplay` (glucose on the CarPlay Dashboard, iOS 26, Pro) in 5 languages, linked from `lock-screen` (web plan W4, `seo/queue.md`). Cover pending in `seo/covers-needed.md`.
 - [x] 2026-11-06: `lada-diabetes` translated into nl, fi, sv, nb, ru (first of the 6 segment guides, see `seo/queue.md`); hub links now point at the translations.
 - [x] 2026-11-05: Audience segmentation (owner request). Hub `/who-is-dulce-for` (10 languages), home section `Audience`, 2 home FAQs, JSON-LD audience, /llms.txt section, 6 guides in 5 languages (`lada-diabetes`, `newly-diagnosed`, `older-adults-cgm`, `diabetes-at-work`, `diabetes-at-school`, `type-2-cgm`). App Store draft 1.0.7 re-segmented. Everything is explained in `seo/segments.md`, including what can't be said in the App Store.
 - [x] 2026-11-06: Pets (owner request). Guide `pet-glucose` (CGM for dogs and cats) in 5 languages, hub card + FAQ in 10, llms.txt. Pushed to main 2026-11-06 (owner: publish now, ahead of 1.0.7). App Store keywords/description/promo text for 1.0.8 in `seo/pets.md` (1.0.7 was already in review).

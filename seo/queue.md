@@ -2,7 +2,7 @@
 
 Owner-requested jobs. The daily run does the top unchecked item, one per run, then ticks it here.
 
-- [ ] **"See your glucose on CarPlay" guide** (web plan W4, `DULCE/plans/2026-11-10-web-plan.md`; DO THIS FIRST:
+- [x] **"See your glucose on CarPlay" guide** (done 2026-11-10, 53d2d65) (web plan W4, `DULCE/plans/2026-11-10-web-plan.md`; DO THIS FIRST:
   CarPlay is in the closest competitor's headline and we have no page for it). id `carplay`, 5 core languages (fi/nl/nb/
   sv/ru optional). Facts (dulce-app `main`, live since 1.0.6; re-check `src/locales/en/common.json` `liveActivityStyle.small`):
   there is NO CarPlay app; on **iOS 26** the Live Activity's small card shows on the **CarPlay Dashboard** and in the
