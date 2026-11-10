@@ -63,3 +63,20 @@ Enter your site's https address and, if your site isn't open, a read-only **acce
 ## If it doesn't connect
 
 The sign-in screen says what went wrong. The most common causes: the wrong account (LibreLink instead of LibreLinkUp), the wrong Dexcom region, or sharing not turned on yet. Readings stopped later? See <HelpLink to="not-updating">readings not updating</HelpLink>.
+
+<h2 id="medtronic">Medtronic (CareLink): what the messages mean</h2>
+
+If Dulce can't connect, it shows one of these. Fix the cause, then tap **Sign in with CareLink** again.
+
+- **We couldn't sign you in**: CareLink didn't accept the sign-in. Check the region on the sign-in screen (Outside the US or United States, wherever your CareLink account is) and try again.
+- **No one to follow yet**: you signed in with a care partner account that isn't linked to anyone. Accept the invitation in CareLink first.
+- **Signed in, but no readings yet**: CareLink has no sensor readings from the last few hours. Check that your Medtronic app (Simplera or MiniMed) is uploading to CareLink.
+- **No connection**: Dulce couldn't reach Medtronic. Check your internet connection and try again.
+- **Sign-in closed**: Medtronic's page was closed before you finished. Tap the button to open it again.
+
+<h2 id="nightscout">Nightscout: what the messages mean</h2>
+
+- **That address doesn't work**: use the https address you open Nightscout with, like yoursite.herokuapp.com. Dulce only connects over https.
+- **Access denied**: your site needs an access token, or the one you entered is wrong. In Nightscout open Admin Tools and create one with the "readable" role. Leave it empty only if your site is open.
+- **Connected, but no readings**: your site has no glucose readings from the last 24 hours. Check your uploader.
+- **No connection**: Dulce couldn't reach your site. Check the address and your internet connection.

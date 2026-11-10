@@ -63,3 +63,20 @@ Inserisci l'indirizzo https del tuo sito e, se non è aperto, un **token di acce
 ## Se non si collega
 
 La schermata di accesso dice cosa non ha funzionato. Le cause più comuni: l'account sbagliato (LibreLink invece di LibreLinkUp), la regione Dexcom sbagliata o la condivisione non ancora attiva. I valori si sono fermati dopo? Vedi <HelpLink to="not-updating">i valori non si aggiornano</HelpLink>.
+
+<h2 id="medtronic">Medtronic (CareLink): cosa significano i messaggi</h2>
+
+Se Dulce non riesce a collegarsi, mostra uno di questi messaggi. Risolvi la causa, poi tocca di nuovo **Accedi con CareLink**.
+
+- **Accesso non riuscito**: CareLink non ha accettato l'accesso. Controlla la regione nella schermata di accesso (Fuori dagli Stati Uniti o Stati Uniti, a seconda di dove si trova il tuo account CareLink) e riprova.
+- **Ancora nessuno da seguire**: hai effettuato l'accesso con un account di care partner che non è collegato a nessuno. Accetta prima l'invito in CareLink.
+- **Accesso eseguito, ma nessuna lettura**: CareLink non ha letture del sensore nelle ultime ore. Controlla che la tua app Medtronic (Simplera o MiniMed) stia caricando i dati su CareLink.
+- **Nessuna connessione**: Dulce non è riuscita a raggiungere Medtronic. Controlla la connessione a internet e riprova.
+- **Accesso chiuso**: la pagina di Medtronic è stata chiusa prima di finire. Tocca il pulsante per riaprirla.
+
+<h2 id="nightscout">Nightscout: cosa significano i messaggi</h2>
+
+- **Questo indirizzo non funziona**: usa l'indirizzo https con cui apri Nightscout, come tuosito.herokuapp.com. Dulce si collega solo tramite https.
+- **Accesso negato**: il tuo sito richiede un token di accesso, oppure quello inserito non è corretto. In Nightscout apri Admin Tools e creane uno con il ruolo "readable". Lascia il campo vuoto solo se il tuo sito è aperto.
+- **Collegato, ma nessuna lettura**: il tuo sito non ha letture di glicemia nelle ultime 24 ore. Controlla il tuo uploader.
+- **Nessuna connessione**: Dulce non è riuscita a raggiungere il tuo sito. Controlla l'indirizzo e la connessione a internet.

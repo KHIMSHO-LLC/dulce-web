@@ -63,3 +63,20 @@ Escribe la dirección https de tu sitio y, si no es abierto, un **token de acces
 ## Si no conecta
 
 La pantalla de inicio de sesión dice qué ha fallado. Las causas más comunes: la cuenta equivocada (LibreLink en vez de LibreLinkUp), la región de Dexcom equivocada o el uso compartido aún sin activar. ¿Las lecturas se pararon después? Mira <HelpLink to="not-updating">las lecturas no se actualizan</HelpLink>.
+
+<h2 id="medtronic">Medtronic (CareLink): qué significan los mensajes</h2>
+
+Si Dulce no consigue conectar, muestra uno de estos. Corrige la causa y vuelve a pulsar **Iniciar sesión con CareLink**.
+
+- **No pudimos iniciar sesión**: CareLink no aceptó el inicio de sesión. Revisa la región de la pantalla de inicio de sesión (Fuera de EE. UU. o Estados Unidos, donde esté tu cuenta de CareLink) e inténtalo de nuevo.
+- **Todavía no sigues a nadie**: has entrado con una cuenta de cuidador que no está vinculada a nadie. Acepta primero la invitación en CareLink.
+- **Sesión iniciada, pero sin lecturas**: CareLink no tiene lecturas del sensor de las últimas horas. Comprueba que tu app de Medtronic (Simplera o MiniMed) está subiendo datos a CareLink.
+- **Sin conexión**: Dulce no pudo llegar a Medtronic. Revisa tu conexión a internet e inténtalo de nuevo.
+- **Inicio de sesión cerrado**: la página de Medtronic se cerró antes de terminar. Pulsa el botón para abrirla otra vez.
+
+<h2 id="nightscout">Nightscout: qué significan los mensajes</h2>
+
+- **Esa dirección no funciona**: usa la dirección https con la que abres Nightscout, como tusitio.herokuapp.com. Dulce solo conecta por https.
+- **Acceso denegado**: tu sitio necesita un token de acceso, o el que has puesto no es correcto. En Nightscout abre Admin Tools y crea uno con el rol "readable". Déjalo vacío solo si tu sitio es abierto.
+- **Conectado, pero sin lecturas**: tu sitio no tiene lecturas de glucosa de las últimas 24 horas. Revisa tu uploader.
+- **Sin conexión**: Dulce no pudo llegar a tu sitio. Revisa la dirección y tu conexión a internet.
