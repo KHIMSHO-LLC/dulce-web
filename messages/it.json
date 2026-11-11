@@ -137,7 +137,7 @@
         {
           "key": "health",
           "title": "Salute di Apple",
-          "body": "Dulce legge i tuoi dati dell'app Salute per avere tutto in un unico posto. Sola lettura."
+          "body": "Dulce legge i tuoi dati dell'app Salute per avere tutto in un unico posto e può salvarci la glicemia del tuo sensore."
         }
       ],
       "alt": "Schermata di Dulce: {name}"

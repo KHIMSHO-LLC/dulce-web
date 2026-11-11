@@ -137,7 +137,7 @@
         {
           "key": "health",
           "title": "Apple Santé",
-          "body": "Dulce lit tes données Apple Santé pour tout réunir au même endroit. En lecture seule."
+          "body": "Dulce lit tes données Apple Santé pour tout réunir au même endroit, et peut y enregistrer la glycémie de ton capteur."
         }
       ],
       "alt": "Écran de Dulce : {name}"

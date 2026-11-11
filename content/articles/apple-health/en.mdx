@@ -8,13 +8,15 @@ Which apps write there depends on your sensor, your country and each app's versi
 
 ## What Dulce does with Apple Health
 
-Dulce **only reads**. It never writes anything to Apple Health. It can read three things, and you choose which:
+Dulce **reads** three things, and you choose which:
 
 - **Glucose**: for example, readings from a Bluetooth meter that saves its data to Health.
 - **Insulin**: for example, from a smart pen or another app where you log it.
 - **Carbs**: for example, from a nutrition app.
 
 That data appears in the <ArticleLink to="logbook">Logbook</ArticleLink> and in <ArticleLink to="trends">Trends</ArticleLink> next to your sensor readings, marked "from Apple Health". So what used to be spread across several apps sits in one place.
+
+Dulce also **saves one thing**: your sensor glucose, every 5 minutes, so your readings sit in Apple Health too. Insulin and carbs are only read, never written.
 
 ## How to turn it on
 
@@ -23,10 +25,10 @@ That data appears in the <ArticleLink to="logbook">Logbook</ArticleLink> and in 
 In Dulce, go to **Settings** and find the **Apple Health** section. You can also start from the "See your Apple Health data in Dulce" card in the Trends tab.
 </Step>
 <Step title="Choose what to read">
-Turn on Glucose, Insulin or Carbs. It's a Dulce Pro feature, with a 14-day free trial.
+Turn on Glucose, Insulin or Carbs. Turning on Glucose also saves your sensor readings to Apple Health. It's a Dulce Pro feature, with a 14-day free trial.
 </Step>
 <Step title="Grant permission in iOS">
-iOS shows its Health permission screen. Tick the categories you want to share with Dulce and tap **Allow**.
+iOS shows its Health permission screen. Tick the categories you want to share with Dulce, including glucose under "Allow Dulce to write" if you want your readings saved, and tap **Allow**.
 </Step>
 </Steps>
 
@@ -40,4 +42,4 @@ You can revoke it any time from your iPhone: in the Health app, tap your profile
 
 ## Privacy
 
-Data Dulce reads from Apple Health is used to show it to you in the app. Dulce has no ads and doesn't sell data. The details are in our privacy policy.
+Data Dulce reads from Apple Health is used to show it to you in the app. Dulce writes only your sensor glucose to Apple Health, and only if you turn Glucose on. Dulce has no ads and doesn't sell data. The details are in our privacy policy.
