@@ -88,6 +88,16 @@ export function openGraphFor(locale: AppLocale, url: string, fields: OgFields): 
   } as OpenGraph;
 }
 
+/**
+ * A page's <title>. The layout appends " · Dulce"; skip it when the title already
+ * names Dulce ("Sensors that work with Dulce … · Dulce") or when it would push the
+ * title past what search results show (~60 characters). Google shows the site
+ * name on its own.
+ */
+export function pageTitle(title: string): Metadata["title"] {
+  return /\bDulce\b/.test(title) || title.length > 52 ? { absolute: title } : title;
+}
+
 /** Canonical, hreflang and OpenGraph of a page from its public path in each locale. */
 export function seoFromPaths(
   locale: AppLocale,

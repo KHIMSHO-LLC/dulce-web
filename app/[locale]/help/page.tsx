@@ -10,7 +10,7 @@ import { ReadingSurface } from "@/components/article/ReadingSurface";
 import { HELP_ICONS } from "@/components/help/HelpParts";
 import { HELP, helpLocale } from "@/content/help";
 import { breadcrumbSchema } from "@/lib/schema";
-import { absoluteUrl, localizedPath, seoFromPaths } from "@/lib/seo";
+import { absoluteUrl, localizedPath, seoFromPaths, pageTitle } from "@/lib/seo";
 import { CONTACT_EMAIL } from "@/lib/site";
 
 const isCore = (l: AppLocale) => (CORE_LOCALES as readonly string[]).includes(l);
@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/help">):
   const og = { title: t("title"), description: t("description") };
   return {
     ...og,
+    title: pageTitle(og.title),
     ...seoFromPaths(loc, paths, og),
     // Other languages list the English pages: keep them out of search results.
     ...(isCore(loc) ? {} : { robots: { index: false, follow: true } }),

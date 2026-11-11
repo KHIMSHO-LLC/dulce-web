@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -25,6 +25,25 @@ const archivo = Archivo({
   variable: "--font-archivo",
   display: "swap",
 });
+
+/**
+ * Only what client components translate goes to the browser: without `messages`,
+ * NextIntlClientProvider ships the whole locale file (~45–65 KB) inside every page.
+ * Add a namespace here when a "use client" component starts using it.
+ */
+async function clientMessages() {
+  const all = (await getMessages()) as Record<string, Record<string, unknown>>;
+  return {
+    nav: all.nav,
+    preloader: all.preloader,
+    languageSwitcher: all.languageSwitcher,
+    consent: all.consent,
+    waitlist: all.waitlist,
+    contact: { form: all.contact.form },
+    help: { nav: all.help.nav },
+    sensors: { nav: all.sensors.nav },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -105,7 +124,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
         >
           {t("skipToContent")}
         </a>
-        <NextIntlClientProvider>
+        <NextIntlClientProvider messages={await clientMessages()}>
           <Atmosphere />
           <SmoothScroll />
           <main id="main" className="relative">

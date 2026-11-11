@@ -19,7 +19,7 @@ import { AnswerFirst, Byline } from "@/components/article/Byline";
 import { TOOL_COPY, toolsForArticle } from "@/lib/tools";
 import { breadcrumbSchema, articleSchema, authorPerson, faqSchema, howToSchema } from "@/lib/schema";
 import { howToSteps, markdownPath, mdxSource } from "@/lib/markdown";
-import { absoluteUrl, seoFromPaths, localizedPath } from "@/lib/seo";
+import { absoluteUrl, seoFromPaths, localizedPath, pageTitle } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -43,8 +43,6 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/blog/[sl
   const { article } = found;
   const loc = found.locale;
   const paths = Object.fromEntries(articleLocales(article).map((l) => [l, articlePath(article, l)]));
-  // Google shows the site name on its own; drop the " · Dulce" suffix when it
-  // would push the title past what search results display (~60 characters).
   const headline = pick(article.title, loc);
   const seo = seoFromPaths(loc, paths, {
     type: "article",
@@ -55,7 +53,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/blog/[sl
     images: [{ url: article.image, alt: pick(article.imageAlt, loc) }],
   });
   return {
-    title: headline.length > 52 ? { absolute: headline } : headline,
+    title: pageTitle(headline),
     description: pick(article.description, loc),
     openGraph: seo.openGraph,
     alternates: {

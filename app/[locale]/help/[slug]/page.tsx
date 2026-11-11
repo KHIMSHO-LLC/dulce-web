@@ -14,7 +14,7 @@ import { Cons, HELP_ICONS, Option, Path, Pros } from "@/components/help/HelpPart
 import { HELP, getHelp, helpLocale } from "@/content/help";
 import { formatDate } from "@/lib/dates";
 import { breadcrumbSchema } from "@/lib/schema";
-import { absoluteUrl, localizedPath, seoFromPaths } from "@/lib/seo";
+import { absoluteUrl, localizedPath, seoFromPaths, pageTitle } from "@/lib/seo";
 import { CONTACT_EMAIL } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/help/[sl
   const og = { title: help.title[text], description: help.description[text] };
   return {
     ...og,
+    title: pageTitle(og.title),
     ...seoFromPaths(loc, paths, og),
     ...(isCore(loc) ? {} : { robots: { index: false, follow: true } }),
   };

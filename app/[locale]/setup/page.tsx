@@ -11,7 +11,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/motion/Reveal";
 import { Split } from "@/components/motion/Split";
 import { faqSchema, breadcrumbSchema, howToSchema } from "@/lib/schema";
-import { seoFor, localizedPath } from "@/lib/seo";
+import { seoFor, localizedPath, pageTitle } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/setup">): Promise<Metadata> {
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/setup">)
   const safeLocale = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as AppLocale;
   const t = await getTranslations({ locale: safeLocale, namespace: "setup" });
   const og = { title: t("title"), description: t("description") };
-  return { ...og, ...seoFor(safeLocale, "/setup", og) };
+  return { ...og, title: pageTitle(og.title), ...seoFor(safeLocale, "/setup", og) };
 }
 
 /**

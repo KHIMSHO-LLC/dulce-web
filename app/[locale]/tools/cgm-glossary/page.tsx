@@ -8,7 +8,7 @@ import { routing, type AppLocale } from "@/i18n/routing";
 import { ToolPage } from "@/components/tools/ToolPage";
 import { Term, termsFromSource } from "@/components/tools/GlossaryTerm";
 import { definedTermSetSchema } from "@/lib/schema";
-import { absoluteUrl, localizedPath, seoFor } from "@/lib/seo";
+import { absoluteUrl, localizedPath, pageTitle, seoFor } from "@/lib/seo";
 import { TOOL_COPY, toolByPath } from "@/lib/tools";
 
 const PATH = "/tools/cgm-glossary" as const;
@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/tools/cg
   const { locale } = await params;
   const loc = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as AppLocale;
   const copy = TOOL_COPY[PATH][loc];
-  return { title: copy.title, description: copy.description, ...seoFor(loc, PATH, copy) };
+  return { title: pageTitle(copy.title), description: copy.description, ...seoFor(loc, PATH, copy) };
 }
 
 /**

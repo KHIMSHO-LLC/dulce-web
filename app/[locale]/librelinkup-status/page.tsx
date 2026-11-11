@@ -10,7 +10,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { getArticle, isTranslated, pick } from "@/content/articles";
 import { fetchLluStatus, utcTime, type LluState } from "@/lib/lluStatus";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
-import { seoFor, localizedPath } from "@/lib/seo";
+import { seoFor, localizedPath, pageTitle } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
 /** Re-render at most once a minute; the relay updates once a minute too. */
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/librelin
   const safeLocale = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as AppLocale;
   const t = await getTranslations({ locale: safeLocale, namespace: "llustatus" });
   return {
-    title: t("title"),
+    title: pageTitle(t("title")),
     description: t("description"),
     ...seoFor(safeLocale, "/librelinkup-status", { title: t("title"), description: t("description") }),
   };

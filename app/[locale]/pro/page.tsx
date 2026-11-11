@@ -8,7 +8,7 @@ import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/motion/Reveal";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
-import { seoFor, localizedPath } from "@/lib/seo";
+import { seoFor, localizedPath, pageTitle } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/pro">): Promise<Metadata> {
@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/pro">): 
   const safeLocale = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as AppLocale;
   const t = await getTranslations({ locale: safeLocale, namespace: "pro" });
   const og = { title: t("title"), description: t("description") };
-  return { ...og, ...seoFor(safeLocale, "/pro", og) };
+  return { ...og, title: pageTitle(og.title), ...seoFor(safeLocale, "/pro", og) };
 }
 
 type Faq = { q: string; a: string };

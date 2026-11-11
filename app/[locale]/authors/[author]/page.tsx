@@ -10,7 +10,7 @@ import { ArticleCard } from "@/components/article/ArticleCard";
 import { articlesNewestFirst, isTranslated, pick } from "@/content/articles";
 import { AUTHORS, authorBySlug } from "@/content/authors";
 import { articleUrl } from "@/lib/articles";
-import { absoluteUrl, seoFor, localizedPath } from "@/lib/seo";
+import { absoluteUrl, seoFor, localizedPath, pageTitle } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/authors/
   if (!author || !hasLocale(routing.locales, locale)) return {};
   // The role makes each language's title distinct (the name alone repeats).
   return {
-    title: `${author.name}: ${author.role[locale].split(",")[0]}`,
+    title: pageTitle(`${author.name}: ${author.role[locale].split(",")[0]}`),
     // First sentence of the bio: the whole bio runs past what search shows.
     description: author.bio[locale].split(/(?<=\.)\s/)[0],
     ...seoFor(

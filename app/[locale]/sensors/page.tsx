@@ -10,7 +10,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/motion/Reveal";
 import { Split } from "@/components/motion/Split";
 import { breadcrumbSchema, faqSchema, howToSchema } from "@/lib/schema";
-import { seoFor, localizedPath } from "@/lib/seo";
+import { seoFor, localizedPath, pageTitle } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 import { guideHref } from "@/components/landing/Audience";
 import { SENSOR_TROUBLESHOOT, type SensorItem } from "@/lib/sensors";
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/sensors"
   const safeLocale = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as AppLocale;
   const t = await getTranslations({ locale: safeLocale, namespace: "sensors" });
   const og = { title: t("title"), description: t("description") };
-  return { ...og, ...seoFor(safeLocale, "/sensors", og) };
+  return { ...og, title: pageTitle(og.title), ...seoFor(safeLocale, "/sensors", og) };
 }
 
 type Faq = { q: string; a: string };

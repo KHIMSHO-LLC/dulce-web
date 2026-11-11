@@ -71,6 +71,11 @@ questions around them. Being the best answer means the product actually does it 
 
 ## Done
 
+- [x] 2026-11-11: speed + titles. Lighthouse mobile (live): home perf 54, guide 84, a11y 96/100, SEO 100. Every page
+  shipped the whole locale file to the browser (NextIntlClientProvider without `messages`): now only the client
+  namespaces (`clientMessages()` in the locale layout), pages 36–57 KB smaller (/de/setup −30 %). `pageTitle()` in
+  lib/seo.ts drops " · Dulce" when the title already names Dulce or is > 52 chars (46 titles said Dulce twice).
+  Language buttons' accessible name starts with the visible code. Not changed: home descriptions run ~200 chars.
 - [x] 2026-11-11: Search Console check (data 11/6): 145 indexed, 113 not (63 discovered, 17 redirects = expected,
       14 crawled-not-indexed = old /en/* and assets, 12 404s, 7 noindex = old de/fr/it legal, now indexable).
       The 404s were article URLs with another language's slug (`/fr/blog/libre-widget-for-iphone`); proxy.ts now

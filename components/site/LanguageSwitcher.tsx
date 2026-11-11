@@ -49,7 +49,8 @@ export function LanguageSwitcher({ className, tone = "dark" }: { className?: str
             onClick={() => onChange(l)}
             disabled={pending}
             aria-pressed={active}
-            aria-label={t(l)}
+            // Starts with the visible code so voice control ("click DE") finds it.
+            aria-label={`${l.toUpperCase()}, ${t(l)}`}
             className={cn(
               "h-9 min-w-9 rounded-full px-2.5 text-label font-semibold uppercase tracking-wide transition-colors duration-200",
               tone === "dark"

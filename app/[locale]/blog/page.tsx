@@ -10,7 +10,7 @@ import { ArticleCard } from "@/components/article/ArticleCard";
 import { articlesNewestFirst, isTranslated, type ArticleCategory } from "@/content/articles";
 import { articleUrl } from "@/lib/articles";
 import { TOOL_COPY } from "@/lib/tools";
-import { absoluteUrl, localizedPath, seoFor } from "@/lib/seo";
+import { absoluteUrl, localizedPath, seoFor, pageTitle } from "@/lib/seo";
 import { ORG_ID, WEBSITE_ID, breadcrumbSchema } from "@/lib/schema";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/blog">): Promise<Metadata> {
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/blog">):
   const loc = (hasLocale(routing.locales, locale) ? locale : routing.defaultLocale) as AppLocale;
   const t = await getTranslations({ locale: loc, namespace: "blog" });
   const og = { title: t("title"), description: t("description") };
-  return { ...og, ...seoFor(loc, "/blog", og) };
+  return { ...og, title: pageTitle(og.title), ...seoFor(loc, "/blog", og) };
 }
 
 const ORDER: ArticleCategory[] = ["guide", "help", "health"];
