@@ -60,15 +60,20 @@ export function PrivacyEs() {
           LibreLinkUp (Abbott) o Dexcom Share. La contraseña se guarda en el llavero seguro de
           tu dispositivo y no se envía a Dulce. La app la usa para conectarse al proveedor;
           cuando conectas tu CGM, se envía al relay un token de sesión del proveedor
-          (no tu contraseña), como se explica a continuación. Con Medtronic CareLink, escribes tu contraseña en la propia página de Medtronic, por lo que Dulce nunca la ve, y Dulce recibe tokens de acceso de Medtronic. Con Nightscout, introduces la dirección de tu sitio y un token de acceso o secreto de API (Dulce solo guarda la huella SHA-1 del secreto). Excepción para Dexcom: mientras «Mantener la sesión iniciada» está activado (Ajustes › Sensor, activado por defecto), la app envía además tu contraseña de Dexcom al relay una vez, porque Dexcom cierra la sesión cada 24 horas; ver más abajo.
+          (no tu contraseña), como se explica a continuación. Con Medtronic CareLink, escribes tu contraseña en la propia página de Medtronic, por lo que Dulce nunca la ve, y Dulce recibe tokens de acceso de Medtronic. Con Nightscout, introduces la dirección de tu sitio y un token de acceso o secreto de API (Dulce solo guarda la huella SHA-1 del secreto). Excepción para Dexcom: mientras «Mantener la sesión iniciada» está activado (Ajustes › Sensor, activado por defecto), la app envía además tu contraseña de Dexcom al relay una vez, porque Dexcom cierra la sesión cada 24 horas; ver más abajo. Si usas el historial guardado de la gráfica y aceptaste que se siga recogiendo mientras no estás, la contraseña también permite al relay seguir recogiendo tu historial después de que cierres sesión (ver 2.6).
         </li>
         <li>
           <strong>Lecturas de glucosa</strong> obtenidas de LibreLinkUp, Dexcom Share, Medtronic CareLink o Nightscout,
-          guardadas en una base de datos local en tu dispositivo.
+          guardadas en una base de datos local en tu dispositivo (y, para los suscriptores de Dulce
+          Pro que aceptan el historial guardado de la gráfica, también en el relay; ver 2.6).
         </li>
         <li>
-          <strong>Tu diario</strong>: carbohidratos, insulina, entradas manuales de glucosa y
-          notas. Almacenado localmente.
+          <strong>Tu diario</strong>: carbohidratos, insulina (incluidas las dosis leídas de una
+          pluma de insulina inteligente), ejercicio, entradas manuales de glucosa y notas. Se
+          guarda en tu dispositivo. Si usas el historial guardado de la gráfica y compartes tu
+          diario con tu familia (activado por defecto; puedes desactivarlo), las entradas desde el
+          día en que activaste el uso compartido, incluidas las notas de texto libre, también se
+          guardan en el relay (ver 2.6).
         </li>
         <li>
           <strong>Datos de Apple Salud</strong> (iPhone) o de <strong>Health Connect</strong>{" "}
@@ -138,7 +143,7 @@ export function PrivacyEs() {
       <ul>
         <li>
           <strong>Un token de sesión del proveedor</strong> (no tu contraseña): un token de
-          LibreLinkUp o un ID de sesión de Dexcom Share, para obtener lecturas en tu nombre. Con Medtronic CareLink, el relay guarda tus tokens de acceso de CareLink. Con Nightscout, guarda la dirección de tu sitio y tu token de acceso o la huella SHA-1 de tu secreto de API. Con Dexcom, mientras «Mantener la sesión iniciada» está activado, el relay guarda también tu contraseña de Dexcom cifrada (AES-256-GCM, con la clave guardada aparte en el almacén de secretos de Cloudflare) y solo la usa para volver a iniciar sesión en Dexcom Share cuando caduca tu sesión. Nunca se registra en logs ni se comparte, y se borra al desactivar la opción, cerrar sesión o eliminar tu cuenta.
+          LibreLinkUp o un ID de sesión de Dexcom Share, para obtener lecturas en tu nombre. Con Medtronic CareLink, el relay guarda tus tokens de acceso de CareLink. Con Nightscout, guarda la dirección de tu sitio y tu token de acceso o la huella SHA-1 de tu secreto de API. Con Dexcom, mientras «Mantener la sesión iniciada» está activado, el relay guarda también tu contraseña de Dexcom cifrada (AES-256-GCM, con la clave guardada aparte en el almacén de secretos de Cloudflare) y solo la usa para volver a iniciar sesión en Dexcom Share cuando caduca tu sesión. Nunca se registra en logs ni se comparte, y se borra al desactivar la opción o eliminar tu cuenta. Al cerrar sesión también se borra, salvo que Dulce siga recogiendo tu historial guardado de la gráfica mientras no estás (ver 2.6): en ese caso se conserva, cifrada, solo mientras dure esa recogida, y se borra en el momento en que termina por cualquier motivo. Si al cerrar sesión eliges «Parar y borrar», se borra de inmediato.
         </li>
         <li>
           <strong>Un ID aleatorio de instalación y un identificador de tu cuenta CGM</strong>
@@ -151,8 +156,10 @@ export function PrivacyEs() {
         <li>
           <strong>Tus lecturas de glucosa más recientes</strong>, incluidos el valor y la hora,
           guardadas como una ventana corta y rotativa para mostrar la Live Activity, el reloj y
-          las vistas de tus seguidores. El relay no es un archivo histórico de tu salud — eso
-          se queda en tu dispositivo.
+          las vistas de tus seguidores. Si eres suscriptor de Dulce Pro y aceptas el historial
+          guardado de la gráfica en la app, el relay también conserva el historial de tu gráfica
+          durante un máximo de 1 año (ver 2.6). Si no, tu historial a largo plazo se queda solo en
+          tu dispositivo.
         </li>
         <li>
           <strong>Ajustes y datos técnicos del dispositivo y la app</strong> necesarios para el
@@ -172,9 +179,12 @@ export function PrivacyEs() {
         </li>
       </ul>
       <p>
-        Puedes detener este tratamiento desconectando tu CGM o usando «Eliminar cuenta» en
-        Ajustes. La app solicita al relay que elimine los registros activos del dispositivo,
-        tokens y datos de seguimiento. Después se conserva un ID mínimo de instalación y la
+        Puedes detener este tratamiento usando «Eliminar cuenta» en Ajustes. Cerrar sesión de tu
+        cuenta del sensor en Dulce detiene las actualizaciones en tiempo real y las alertas; si
+        usas el historial guardado de la gráfica, tú decides si Dulce sigue recogiendo tu
+        historial mientras tienes la sesión cerrada (ver 2.6). «Eliminar cuenta» solicita al relay
+        que elimine los registros activos del dispositivo, tokens, datos de seguimiento e
+        historial guardado. Después se conserva un ID mínimo de instalación y la
         fecha del primer registro para reconocer una instalación que vuelve y no contarla como
         nueva en las métricas internas. Este marcador no tiene caducidad automática. Escríbenos
         si también quieres que lo borremos.
@@ -182,9 +192,13 @@ export function PrivacyEs() {
 
       <h3>2.4 Seguimiento familiar</h3>
       <p>
-        Si invitas a alguien a seguirte, el relay entrega tus lecturas recientes y tus
-        alertas a su dispositivo desde el momento en que acepta — el historial anterior no se
-        comparte. Los mensajes entre tú y tus seguidores, incluido el texto que escribas, pasan por el relay y por el servicio de notificaciones de Apple o Google para llegar a sus dispositivos. El relay no guarda el texto de los mensajes ni un historial. Puedes revocar el acceso de un
+        Si invitas a alguien a seguirte, el relay entrega tus lecturas y tus alertas a su
+        dispositivo desde el momento en que acepta. Sin el historial guardado de la gráfica, el
+        historial anterior no se comparte. Si usas el historial guardado de la gráfica (Dulce Pro),
+        tus seguidores también pueden ver el historial guardado de tu gráfica, incluidas las
+        lecturas de antes de que aceptaran y, mientras el uso compartido del diario esté activado,
+        tu diario compartido, incluidas las notas de texto libre; dejan de verlo cuando revocas su
+        acceso o pausas el uso compartido (ver 2.6). Los mensajes entre tú y tus seguidores, incluido el texto que escribas, pasan por el relay y por el servicio de notificaciones de Apple o Google para llegar a sus dispositivos. El relay no guarda el texto de los mensajes ni un historial. Puedes revocar el acceso de un
         seguidor en cualquier momento y desactivar por completo esos mensajes.
       </p>
 
@@ -203,6 +217,170 @@ export function PrivacyEs() {
         de salud; la decisión la toma siempre Apple o Google.
       </p>
 
+      <h3>2.6 Historial guardado de la gráfica (Dulce Pro)</h3>
+      <p>
+        <strong>Qué es.</strong> Si tienes Dulce Pro y lo aceptas en la app, nuestro relay guarda
+        tu historial de glucosa para que tu gráfica y la de tus seguidores sean la misma y no
+        tengan huecos, y para que tu historial siga ahí después de cerrar sesión, reinstalar Dulce
+        o cambiar de iPhone. Si no tienes Dulce Pro, o no lo aceptas, no se guarda nada y tu
+        historial se queda solo en tu dispositivo.
+      </p>
+      <p>
+        <strong>Qué se guarda.</strong>
+      </p>
+      <ul>
+        <li>
+          Tus lecturas de glucosa, cada una con su hora, valor y flecha de tendencia: el historial
+          que devuelve el propio servicio de tu sensor (LibreLinkUp, Dexcom Share, Medtronic
+          CareLink o Nightscout), las lecturas que obtiene el relay y, una sola vez al aceptarlo,
+          el historial que ya está en tu teléfono (hasta 90 días).
+        </li>
+        <li>
+          Tu diario, si lo compartes con tu familia (activado por defecto mientras el historial
+          guardado de la gráfica esté activado; puedes desactivarlo por separado). Se comparte todo
+          lo que hay en el diario: carbohidratos, insulina (incluidas las dosis leídas de una pluma
+          de insulina inteligente y las dosis de purgado), ejercicio, mediciones manuales de
+          glucosa y notas de texto libre, cada una con su hora y cantidad. Solo se comparten las
+          entradas desde el día en que activas el uso compartido del diario; las anteriores no.
+        </li>
+        <li>
+          No se guarda con él: el correo de tu cuenta del sensor, tu nombre, el texto de los
+          mensajes entre tú y tus seguidores, ni los datos de Apple Salud o Health Connect.
+        </li>
+      </ul>
+      <p>
+        <strong>Para qué.</strong> Solo para prestar esta función: la misma gráfica completa para
+        ti y para los familiares que invitaste, conservada aunque cierres sesión, reinstales o
+        cambies de teléfono. No lo usamos para publicidad, elaboración de perfiles ni venta, y no
+        lo compartimos con Meta ni con ningún servicio de analítica.
+      </p>
+      <p>
+        <strong>Base jurídica.</strong> Tu consentimiento explícito (art. 9.2.a RGPD), porque los
+        datos de glucosa son datos de salud. La app te lo pregunta antes de empezar a guardar, por
+        separado para cada cuenta del sensor: si inicias sesión con otra cuenta del sensor, vuelve
+        a preguntarte. No se guarda nada antes de que respondas, y las versiones de la app que no
+        lo preguntan no guardan nada. Puedes retirar tu consentimiento en cualquier momento en
+        Ajustes: el guardado se detiene y la copia guardada en el relay se borra de inmediato. La
+        retirada no afecta a la licitud del guardado realizado antes. Dulce Pro no depende de este
+        consentimiento: sin él, Dulce Pro funciona sin historial guardado.
+      </p>
+      <p>
+        <strong>Dónde.</strong> En el relay de Dulce, en una base de datos de nuestro proveedor de
+        alojamiento Cloudflare, que la trata por nuestra cuenta y puede tratar datos en la UE y en
+        otros países con sus garantías estándar (ver el apartado 8). El mismo historial también se
+        queda en la base de datos local de la app en tu teléfono.
+      </p>
+      <p>
+        <strong>Cuánto tiempo.</strong> Mientras tu suscripción a Dulce Pro (incluida una prueba
+        gratuita) esté activa, conservamos como máximo 1 año de historial aproximadamente; los días
+        más antiguos se eliminan automáticamente. Si tu suscripción termina o se reembolsa, el
+        guardado se detiene y el historial guardado (lecturas y diario compartido) se borra 90
+        días después; si vuelves a suscribirte dentro de esos 90 días, sigue ahí.
+      </p>
+      <p>
+        <strong>Recogida mientras tienes la sesión cerrada o la app está eliminada.</strong> Si lo
+        aceptaste (la app te lo indica en la pantalla de consentimiento, en un aviso único o al
+        cerrar sesión), el relay sigue recogiendo el historial de tu sensor después de que cierres
+        sesión de tu cuenta del sensor en Dulce o elimines la app, unas cuantas veces al día en
+        lugar de cada minuto, con la credencial del sensor que ya tiene:
+      </p>
+      <ul>
+        <li>
+          LibreLinkUp: el token de sesión. Nightscout: la dirección de tu sitio y tu token de acceso
+          o la huella de tu secreto de API.
+        </li>
+        <li>
+          Medtronic CareLink: los tokens de acceso que Medtronic emitió para Dulce (nunca tu
+          contraseña), que el relay renueva como exige Medtronic.
+        </li>
+        <li>
+          Dexcom Share: si «Mantener la sesión iniciada» está activado, tu contraseña de Dexcom,
+          cifrada como se explica en 2.3. Si está desactivado, la recogida se detiene
+          aproximadamente un día después de tu último inicio de sesión, porque Dexcom cierra la
+          sesión.
+        </li>
+      </ul>
+      <p>
+        La recogida mientras no estás termina con lo primero que ocurra de lo siguiente: vuelves a
+        iniciar sesión en Dulce con la misma cuenta del sensor; la desactivas en Ajustes o eliges
+        «Parar y borrar» al cerrar sesión; desactivas el historial guardado de la gráfica o usas
+        «Eliminar cuenta»; termina tu suscripción a Dulce Pro; el servicio de tu sensor rechaza el
+        inicio de sesión o sigue fallando durante aproximadamente una semana; o ha pasado 1 año.
+        Cuando termina, se borra la credencial conservada para ella. El historial ya guardado se
+        conserva hasta que lo borres o venza el plazo indicado arriba, salvo que hayas elegido
+        borrarlo. Si eliminas la app sin cerrar sesión, la app no puede preguntarte en ese
+        momento: la recogida solo continúa si ya la habías aceptado; para detenerla, escríbenos
+        (ver «Cómo desactivarlo y borrarlo» más abajo). Mientras tienes la sesión cerrada o no
+        estás, tus seguidores no reciben lecturas en tiempo real, alertas ni historial nuevo.
+      </p>
+      <p>
+        <strong>Puede tener huecos o perderse.</strong> El historial guardado es una comodidad: no
+        es un historial médico ni una copia de seguridad. Puede tener huecos o perderse, por
+        ejemplo cuando caduca la sesión de tu sensor o cambias la contraseña del sensor, cuando
+        Dexcom cierra la sesión y «Mantener la sesión iniciada» está desactivado, cuando el
+        servicio de tu sensor tiene una interrupción o aún no ha recibido datos de tu teléfono,
+        cuando termina tu suscripción, cuando reinstalas Dulce en Android o pasas a un iPhone sin
+        tu Llavero de iCloud, cuando usas «Eliminar cuenta», cuando un fabricante de sensores
+        cambia o cierra su servicio, o por un fallo por nuestra parte. Conserva los registros que
+        necesite tu médico en la app oficial del fabricante de tu sensor.
+      </p>
+      <p>
+        <strong>Quién puede verlo.</strong> Tú y los seguidores que invitaste mientras compartas
+        con ellos: ven el historial guardado de tu gráfica (incluidas las lecturas de antes de que
+        aceptaran) y, mientras el uso compartido del diario esté activado, tu diario compartido,
+        incluidas las notas de texto libre. Dejan de verlo cuando revocas su acceso, cuando se
+        pausa el uso compartido o cuando borras tu historial. Desactivar el uso compartido del
+        diario borra la copia compartida en el relay; tu diario en el teléfono se queda. Tus
+        seguidores pueden leer las notas que compartes, así que no escribas información sobre
+        otras personas en las notas que compartas. Quien haya iniciado sesión con la misma cuenta
+        del sensor en su propio teléfono no recibe tu historial guardado a través de Dulce. El
+        relay trata estos datos de forma automática para entregarlos; no miramos el historial ni
+        las notas de un usuario concreto, salvo cuando sea necesario para resolver un problema que
+        nos comuniques, para mantener la seguridad del servicio o cuando lo exija la ley.
+      </p>
+      <p>
+        <strong>Cómo reconocemos tu historial sin una cuenta.</strong> Dulce no tiene cuentas de
+        usuario. Tu historial está vinculado a una «clave de historial» secreta y aleatoria creada
+        en tu teléfono, combinada con un identificador del paciente de tu cuenta del sensor (un
+        número o nombre de usuario asignado por el servicio de tu sensor, o una huella de tu
+        dirección de Nightscout), nunca con el correo de tu sensor. En iPhone, si usas el Llavero
+        de iCloud, la clave de historial se sincroniza a través de tu propio Llavero de iCloud, por
+        lo que tus otros iPhone con la misma cuenta de Apple comparten el mismo historial; por el
+        mismo motivo, desactivar el guardado en uno de ellos lo desactiva en los demás. «Eliminar
+        cuenta» borra la clave de tu Llavero de iCloud, así que Dulce empezará un historial nuevo
+        en tus otros iPhone. Si inicias sesión con otra cuenta del sensor en el mismo teléfono,
+        los historiales no se mezclan.
+      </p>
+      <p>
+        <strong>Cómo desactivarlo y borrarlo.</strong>
+      </p>
+      <ul>
+        <li>
+          En la app, desactiva «Guardar historial de la gráfica» en Ajustes y confirma «Dejar y
+          borrar»: la copia guardada en el relay se borra de inmediato.
+        </li>
+        <li>
+          En la app, desactiva «Seguir recogiendo si cierro sesión o elimino la app»: Dulce deja de
+          recoger después de que cierres sesión o elimines la app, y no conserva ninguna credencial
+          del sensor para ello.
+        </li>
+        <li>
+          En la app, desactiva «Compartir mi diario con la familia»: se borra la copia del diario
+          compartido en el relay.
+        </li>
+        <li>Al cerrar sesión, elige «Parar y borrar» (o «Borrarlo»).</li>
+        <li>
+          Usa Ajustes → Eliminar cuenta: se borra todo, como se explica en el apartado 9.
+        </li>
+        <li>
+          Sin la app, escribe a{" "}
+          <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Como no hay cuenta, te
+          pediremos información que nos permita encontrar tus datos (por ejemplo, el servicio de tu
+          sensor y cuándo usaste Dulce por última vez); solo podemos actuar sobre los datos que
+          podamos identificar, y te avisaremos si no podemos.
+        </li>
+      </ul>
+
       <h2 id="purpose">3. Para qué usamos tus datos</h2>
       <ul>
         <li>
@@ -210,6 +388,11 @@ export function PrivacyEs() {
           seguidores.
         </li>
         <li>Entregarte las alertas que configuras.</li>
+        <li>
+          Conservar el historial de tu gráfica para que tu gráfica y la de tus seguidores sean la
+          misma, también después de cerrar sesión, reinstalar o cambiar de teléfono, y compartir tu diario
+          con la familia que invitaste (Dulce Pro, con tu consentimiento; apartado 2.6).
+        </li>
         <li>Validar tu suscripción y desbloquear las funciones Pro.</li>
         <li>Avisarte cuando Dulce esté disponible (lista de espera).</li>
         <li>Responder a las consultas enviadas mediante el formulario de contacto.</li>
@@ -223,11 +406,18 @@ export function PrivacyEs() {
         <li>
           <strong>Consentimiento explícito</strong> (art. 9.2.a RGPD): el tratamiento de tus
           datos de salud cuando decides conectar tu CGM y usar las funciones relacionadas.
-          Desconectar tu CGM detiene el tratamiento en el relay; también puedes retirar el
-          consentimiento escribiéndonos. Durante el onboarding, la app enlaza esta política,
+          Desconectar tu CGM detiene el tratamiento en el relay (salvo la recogida de tu historial
+          guardado de la gráfica mientras no estás, si la aceptaste; apartado 2.6); también puedes
+          retirar el consentimiento escribiéndonos. Durante el onboarding, la app enlaza esta política,
           pero actualmente no muestra una casilla separada para consentir el tratamiento de datos
           de salud. Estamos pidiendo a asesoría española que confirme si el aviso y el flujo de
           conexión actuales cumplen el estándar de consentimiento explícito.
+        </li>
+        <li>
+          <strong>Consentimiento explícito</strong> (art. 9.2.a RGPD) para el historial guardado
+          de la gráfica, la recogida mientras tienes la sesión cerrada o la app está eliminada, y
+          el uso compartido del diario: se pide en la app, para cada cuenta del sensor, antes de
+          empezar a guardar, y puedes retirarlo en cualquier momento en Ajustes (apartado 2.6).
         </li>
         <li>
           <strong>Contrato</strong> (art. 6.1.b RGPD): prestarte la app y las funciones a las
@@ -259,12 +449,15 @@ export function PrivacyEs() {
         <li>
           Tu historial de glucosa a largo plazo, tu diario y los datos de Apple Salud o Health
           Connect se procesan y almacenan en tu dispositivo. El relay también procesa las lecturas recientes como se
-          explica arriba.
+          explica arriba. Si usas Dulce Pro y aceptas el historial guardado de la gráfica, tu
+          historial de glucosa, y tu diario mientras lo compartas con tu familia, también se
+          guardan en el relay (apartado 2.6).
         </li>
         <li>
           Cuando conectas tu CGM, el relay procesa las lecturas recientes necesarias para las
-          funciones en segundo plano y de seguimiento que uses; conserva una ventana breve,
-          no tu historial de glucosa a largo plazo.
+          funciones en segundo plano y de seguimiento que uses; conserva una ventana breve y,
+          solo para los suscriptores de Dulce Pro que lo aceptan, el historial guardado de la
+          gráfica descrito en 2.6.
         </li>
         <li>Siempre van cifrados en tránsito (TLS).</li>
         <li>
@@ -280,6 +473,19 @@ export function PrivacyEs() {
           continuamente en una ventana corta. Los tokens de sesión del proveedor y de
           notificación se conservan mientras los necesite el dispositivo conectado y se
           eliminan al desconectarlo o darlo de baja, cerrar sesión o usar Ajustes → Eliminar cuenta.
+          Excepción: mientras Dulce siga recogiendo tu historial guardado de la gráfica después de
+          que cierres sesión o elimines la app (apartado 2.6), la credencial del sensor necesaria
+          para ello (token de sesión de LibreLinkUp, token del sitio de Nightscout, tokens de
+          acceso de Medtronic CareLink o la contraseña cifrada de Dexcom) se conserva solo para eso
+          y se borra cuando termina la recogida, como muy tarde al cabo de 1 año.
+        </li>
+        <li>
+          <strong>Historial guardado de la gráfica y diario compartido (Dulce Pro):</strong>{" "}
+          mientras tu suscripción esté activa, como máximo 1 año aproximadamente; los días más
+          antiguos se eliminan automáticamente. Se borran de inmediato cuando desactivas el
+          guardado, eliges «Parar y borrar» al cerrar sesión o usas Eliminar cuenta (el diario
+          compartido, también cuando desactivas el uso compartido del diario); se borran 90 días
+          después de que tu suscripción termine o se reembolse.
         </li>
         <li>
           <strong>Datos de la app en tu dispositivo:</strong> hasta que los borres o
@@ -326,11 +532,14 @@ export function PrivacyEs() {
       </p>
       <ul>
         <li>
-          <strong>Cloudflare</strong> — aloja el relay de Dulce descrito arriba.
+          <strong>Cloudflare</strong> — aloja el relay de Dulce descrito arriba y guarda el
+          historial guardado de la gráfica y el diario compartido (apartado 2.6), como encargado
+          del tratamiento.
         </li>
         <li>
           <strong>Apple</strong> — notificaciones push (APNs), Live Activities, Apple Salud
-          (en el dispositivo) y pagos.
+          (en el dispositivo), pagos y, si usas el Llavero de iCloud, la conservación de tu clave
+          de historial en tu propio Llavero de iCloud (apartado 2.6).
         </li>
         <li>
           <strong>Google Firebase</strong> — notificaciones push en Android.
@@ -393,6 +602,11 @@ export function PrivacyEs() {
         consultar los detalles y obtener copia de las garantías aplicables en{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
+      <p>
+        El historial guardado de la gráfica y las entradas del diario compartido se guardan en una
+        base de datos de nuestro proveedor de alojamiento Cloudflare, que puede tratar datos en la
+        UE y en otros países con las garantías descritas arriba.
+      </p>
 
       <h2 id="rights">9. Tus derechos</h2>
       <p>Según el RGPD y sujeto a sus condiciones, tienes derecho a:</p>
@@ -406,7 +620,13 @@ export function PrivacyEs() {
       </ul>
       <p>
         Usa <strong>Ajustes → Eliminar cuenta</strong> en la app para borrar los datos locales y
-        los registros activos del relay. El marcador mínimo de instalación descrito arriba
+        los registros activos del relay, incluidos tu historial guardado de la gráfica y tu
+        diario compartido; también borra la clave de historial de Dulce de tu Llavero de iCloud,
+        así que Dulce empezará un historial nuevo en tus otros iPhone. También puedes desactivar
+        el historial guardado de la gráfica en Ajustes, lo que borra la copia guardada de
+        inmediato, y desactivar por separado el uso compartido del diario, lo que borra la copia
+        del diario compartido. La app no tiene un botón para exportar el historial guardado; para
+        recibir una copia, escríbenos. El marcador mínimo de instalación descrito arriba
         permanece hasta que solicites su borrado. Puedes ejercer cualquiera de estos derechos
         escribiendo a{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Respondemos en el
@@ -426,7 +646,9 @@ export function PrivacyEs() {
       <h2 id="minors">10. Menores</h2>
       <p>
         Dulce no está dirigida a menores de 14 años. En Android, Dulce está pensada para adultos de 18 años o más. Un padre, madre o tutor legal puede usar
-        Dulce para seguir la glucosa de un menor bajo su propia responsabilidad. Si crees que
+        Dulce para seguir la glucosa de un menor bajo su propia responsabilidad; en ese caso, es
+        el padre, la madre o el tutor quien da o niega el consentimiento para el historial
+        guardado de la gráfica y el uso compartido del diario. Si crees que
         un menor a tu cargo nos ha facilitado datos sin tu consentimiento, contáctanos y los
         eliminaremos.
       </p>
