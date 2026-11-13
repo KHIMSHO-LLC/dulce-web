@@ -33,8 +33,9 @@ export function TermsEs() {
       </p>
       <ul>
         <li>
-          Ver los datos de glucosa de FreeStyle Libre a través de LibreLinkUp (Abbott), o de
-          Dexcom G6, G7 y ONE+ a través de Dexcom Share.
+          Ver los datos de glucosa de FreeStyle Libre a través de LibreLinkUp (Abbott), de
+          Dexcom G6, G7 y ONE+ a través de Dexcom Share, de sistemas de Medtronic a través de
+          Medtronic CareLink, o de un sitio de Nightscout.
         </li>
         <li>
           Mostrar tu glucosa en la pantalla de bloqueo del iPhone (Live Activity), la Dynamic
@@ -46,6 +47,11 @@ export function TermsEs() {
         <li>
           Compartir tu glucosa en tiempo real con los seguidores que invites (seguimiento
           familiar).
+        </li>
+        <li>
+          Guardar tu historial de glucosa y compartir tu diario con los seguidores que invites,
+          para que tu gráfica y la suya sean la misma (Dulce Pro, con tu consentimiento; ver
+          sección 8.1).
         </li>
       </ul>
       <p>
@@ -73,6 +79,11 @@ export function TermsEs() {
         garantizarse. Mantén activas las alarmas de la app oficial de tu sistema CGM. Dulce
         es una app complementaria y no sustituye la app oficial del fabricante.
       </p>
+      <p>
+        El historial guardado de la gráfica, el diario compartido, las estadísticas y las
+        gráficas de Dulce no son un historial médico. No los uses, ni ninguna otra parte de
+        Dulce, para tomar decisiones de tratamiento.
+      </p>
 
       <h2 id="eligibility">4. Requisitos</h2>
       <p>
@@ -84,11 +95,18 @@ export function TermsEs() {
       <h2 id="accounts">5. Cuentas y credenciales</h2>
       <p>
         Dulce se conecta a tus datos de CGM a través de tu cuenta de{" "}
-        <strong>LibreLinkUp</strong> para FreeStyle Libre o <strong>Dexcom Share</strong> para
-        Dexcom. Eres responsable de la confidencialidad de esas
-        credenciales. Dulce las guarda en el llavero seguro de tu dispositivo; no podemos
-        recuperar credenciales perdidas en nombre del proveedor de tu CGM. Debes tener derecho a usar la
-        cuenta que conectas.
+        <strong>LibreLinkUp</strong> para FreeStyle Libre, <strong>Dexcom Share</strong> para
+        Dexcom o <strong>Medtronic CareLink</strong> para Medtronic, o a un sitio de{" "}
+        <strong>Nightscout</strong>. Eres responsable de la confidencialidad de esas
+        credenciales. Dulce las guarda en el llavero seguro de tu dispositivo, con estas
+        excepciones, explicadas en la{" "}
+        <Link href="/legal/privacy">Política de Privacidad</Link>: con Dexcom y “Mantener la
+        sesión iniciada”, tu contraseña también se guarda, cifrada, en nuestro relay; con
+        Medtronic CareLink, nuestro relay guarda los tokens de acceso que emite Medtronic, nunca
+        tu contraseña; y mientras Dulce siga recogiendo tu historial guardado de la gráfica
+        después de que cierres sesión o elimines la app (sección 8.1), nuestro relay conserva la
+        credencial del sensor necesaria para ello. No podemos recuperar credenciales perdidas en
+        nombre del proveedor de tu CGM. Debes tener derecho a usar la cuenta que conectas.
       </p>
 
       <h2 id="sharing">6. Seguimiento familiar</h2>
@@ -97,7 +115,10 @@ export function TermsEs() {
         de elegir a tus seguidores y puedes revocar su acceso en cualquier momento. Los
         seguidores no deben usar Dulce como sistema de monitorización de emergencias: la
         entrega de lecturas y alertas a seguidores está sujeta a las mismas limitaciones de
-        la sección 3.
+        la sección 3. El historial guardado de la gráfica puede tener huecos, y los seguidores
+        pueden ver menos que tú. Si compartes tu diario, tus seguidores ven todo lo que contiene,
+        incluidas tus notas de texto libre; no escribas información sobre otras personas en las
+        notas que compartas.
       </p>
 
       <h2 id="license">7. Licencia</h2>
@@ -110,7 +131,8 @@ export function TermsEs() {
       <p>
         La app es gratuita de descargar y usar con sus funciones básicas. Algunas funciones
         (como la Live Activity de la pantalla de bloqueo, las actualizaciones en tiempo real
-        del Apple Watch, las alertas de glucosa y el seguimiento familiar) requieren una
+        del Apple Watch, las alertas de glucosa, el seguimiento familiar y el historial
+        guardado de la gráfica) requieren una
         suscripción auto-renovable <strong>Dulce Pro</strong>:
       </p>
       <ul>
@@ -138,6 +160,53 @@ export function TermsEs() {
         </li>
       </ul>
 
+      <h3>8.1 Historial guardado de la gráfica (Dulce Pro)</h3>
+      <p>
+        El historial guardado de la gráfica forma parte de Dulce Pro. Solo se usa si lo aceptas
+        en la app, y puedes desactivarlo en cualquier momento. Nuestra{" "}
+        <Link href="/legal/privacy">Política de Privacidad</Link> (apartado 2.6) explica qué se
+        guarda, quién puede verlo y cómo borrarlo.
+      </p>
+      <p>
+        Intentamos guardar tu historial de forma completa, pero no garantizamos que esté completo,
+        sea continuo, sea correcto o esté siempre disponible. Depende de la sesión de tu sensor y
+        de terceros (el servicio del fabricante de tu sensor, Apple, Google y nuestro proveedor de
+        alojamiento), y puede tener huecos o perderse. No es un historial médico ni una copia de
+        seguridad: no confíes en él para ninguna decisión de tratamiento, y conserva los registros
+        que necesites en la app oficial del fabricante de tu sensor. La sección 3 se le aplica
+        íntegramente.
+      </p>
+      <p>
+        Conservamos como máximo 1 año de historial aproximadamente. Si tu suscripción termina o se
+        reembolsa, el guardado se detiene y tu historial guardado se borra 90 días después; si
+        vuelves a suscribirte dentro de ese plazo, vuelve a estar disponible. Las funciones
+        gratuitas siguen funcionando con los datos de tu dispositivo.
+      </p>
+      <p>
+        Cerrar sesión o eliminar la app no borra por sí solo tu historial guardado. Si lo
+        aceptaste, Dulce sigue recogiendo tu historial mientras tienes la sesión cerrada o la app
+        está eliminada, y conserva la credencial del sensor necesaria para ello (con Dexcom y
+        “Mantener la sesión iniciada”, tu contraseña, cifrada) hasta que termina la recogida. La
+        recogida termina cuando vuelves a iniciar sesión, la desactivas, eliges “Parar y borrar”
+        al cerrar sesión, usas Eliminar cuenta, termina tu suscripción, el servicio de tu sensor
+        rechaza el inicio de sesión o sigue fallando, o ha pasado 1 año.
+      </p>
+      <p>
+        Si compartes tu diario, tus seguidores ven todo lo que contiene, incluidas las notas de
+        texto libre. Eres responsable de lo que escribes en las notas que compartes, incluida la
+        información sobre otras personas. Puedes desactivar el uso compartido en cualquier
+        momento, lo que borra la copia compartida.
+      </p>
+      <p>
+        Podemos cambiar, limitar o suspender esta función, por ejemplo para proteger el Servicio,
+        por motivos legales, para controlar su coste o porque el servicio de un fabricante de
+        sensores ya no lo permite. Si la suspendemos, te avisaremos en la app con al menos 30 días
+        de antelación, salvo que un motivo de seguridad, legal o de un tercero ajeno a nuestro
+        control lo impida; durante ese plazo tu historial guardado seguirá visible en la app y
+        podrás pedirnos una copia por correo. Lo que te corresponde en ese caso se describe en la
+        sección 10.
+      </p>
+
       <h2 id="prohibited">9. Conductas prohibidas</h2>
       <p>No puedes:</p>
       <ul>
@@ -150,14 +219,44 @@ export function TermsEs() {
         <li>Automatizar envíos masivos de formularios o hacer spam a nuestra infraestructura.</li>
       </ul>
 
-      <h2 id="third-parties">10. Servicios de terceros</h2>
+      <h2 id="third-parties">10. Servicios de terceros y conexiones con sensores</h2>
       <p>
         Dulce se conecta a servicios de terceros que tú eliges o que son necesarios para
-        funcionar (Abbott LibreLinkUp, Dexcom Share; Apple — incluidos Apple Salud, notificaciones y pagos
-        — y RevenueCat para la validación de suscripciones). El uso de esos servicios se rige
-        por sus propios términos y políticas. No somos responsables de su disponibilidad,
-        exactitud o cambios. Dulce es un producto independiente y no está afiliado, avalado
-        ni patrocinado por Abbott, Dexcom ni Apple.
+        funcionar: los servicios de los fabricantes de sensores LibreLinkUp (Abbott), Dexcom
+        Share y Medtronic CareLink, y los sitios de Nightscout gestionados por ti o por quien tú
+        elijas; Apple (incluidos Apple Salud, notificaciones y pagos); Google (notificaciones y
+        pagos en Android); Cloudflare, que aloja nuestro relay; y RevenueCat para la validación
+        de suscripciones. El uso de esos servicios se rige por sus propios términos y políticas.
+        No somos responsables de su disponibilidad, exactitud o cambios.
+      </p>
+      <p>
+        Dulce lee tus datos de glucosa a través de los propios servicios en línea de los
+        fabricantes de sensores. Algunas de estas conexiones usan interfaces que no son
+        oficiales, no están documentadas o no se ofrecen para apps como Dulce (por ejemplo,
+        Medtronic CareLink). Las empresas que las gestionan pueden cambiarlas, limitarlas,
+        bloquearlas o cerrarlas en cualquier momento, sin avisarnos a nosotros ni a ti. Si eso
+        ocurre, Dulce puede dejar de funcionar, en todo o en parte, para ese sensor, de forma
+        temporal o definitiva: lecturas en tiempo real, alertas, la pantalla de bloqueo, widgets
+        y reloj, seguimiento familiar, historial guardado de la gráfica y recogida mientras no
+        estás. No podemos evitarlo, y puede que no podamos solucionarlo ni recuperar los datos
+        que falten. Haremos esfuerzos razonables para restablecer la conexión y avisarte en la
+        app, pero no podemos prometer que lo consigamos.
+      </p>
+      <p>
+        En ese caso: Dulce Pro lo factura Apple (o Google Play, si te suscribiste en Android), y
+        los reembolsos los deciden ellos según sus normas; nosotros no podemos emitir reembolsos.
+        Puedes cancelar en cualquier momento en los ajustes de suscripción del App Store o de
+        Google Play para que la suscripción no se renueve, y puedes pedir un reembolso a Apple o
+        a Google. Nada de esta sección limita los derechos imperativos del consumidor que te
+        correspondan, incluidas las medidas correctoras previstas por la ley cuando un servicio
+        digital de pago no funciona según lo acordado (contenidos o servicios digitales no
+        conformes).
+      </p>
+      <p>
+        Dulce es un producto independiente y no está afiliado, avalado ni patrocinado por
+        Abbott, Dexcom, Medtronic, el proyecto Nightscout, Apple ni Google. Sus nombres y los
+        nombres de sus productos son marcas de sus respectivos titulares y se usan solo para
+        describir la compatibilidad.
       </p>
 
       <h2 id="ip">11. Propiedad intelectual</h2>
@@ -170,19 +269,56 @@ export function TermsEs() {
       <h2 id="disclaimers">12. Exclusión de garantías</h2>
       <p>
         El Servicio se presta “tal cual” y “según disponibilidad”. En la máxima medida
-        permitida por la ley, no garantizamos que sea ininterrumpido, esté libre de errores,
-        sea 100 % seguro o cumpla expectativas concretas. Esto es especialmente relevante
-        para los datos de servicios de CGM de terceros: cualquier retraso, error o ausencia
-        de datos del proveedor original puede reflejarse en Dulce.
+        permitida por la legislación aplicable, no garantizamos que el Servicio ni ninguna de
+        sus partes (incluidas las lecturas, alertas, Live Activities, widgets, actualizaciones
+        del reloj, historial guardado de la gráfica, seguimiento familiar y uso compartido del
+        diario) sea ininterrumpido, puntual, completo, esté libre de errores o sea 100 % seguro,
+        que no se pierdan datos, ni que cumpla expectativas concretas. Esto es especialmente
+        relevante para los datos de servicios de CGM de terceros: cualquier retraso, error o
+        ausencia de datos del proveedor original puede reflejarse en Dulce. Esto no afecta a
+        los derechos que la ley te reconoce como consumidor.
       </p>
 
       <h2 id="liability">13. Limitación de responsabilidad</h2>
       <p>
-        En la máxima medida permitida por la ley, Dulce no será responsable de daños
-        indirectos, consecuenciales, lucro cesante o pérdida de datos derivados del uso o la
-        imposibilidad de uso del Servicio. Nada en estos términos limita nuestra
-        responsabilidad por dolo o negligencia grave, daños a la salud causados por
-        negligencia, o cualquier responsabilidad que no pueda excluirse por ley.
+        Dulce es un complemento de tu sistema CGM, no un dispositivo médico. En la máxima medida
+        permitida por la legislación aplicable:
+      </p>
+      <ul>
+        <li>
+          No somos responsables de los daños o pérdidas derivados de decisiones sobre insulina,
+          medicación, alimentación, actividad física o atención médica tomadas a partir de la
+          información que muestra Dulce, ni de confiar en Dulce en lugar de tu sistema CGM, su app
+          oficial y sus alarmas, un medidor de glucosa en sangre o tu equipo médico.
+        </li>
+        <li>
+          No somos responsables de que las lecturas, alertas, Live Activities, widgets,
+          actualizaciones del reloj, el historial guardado de la gráfica, el seguimiento familiar
+          o el uso compartido del diario lleguen tarde, estén incompletos, sean incorrectos, no
+          estén disponibles o se pierdan cuando ello se deba a las causas descritas en las
+          secciones 3, 8.1 y 10 (incluidos tu dispositivo, tu red y tu sistema operativo, y los
+          servicios del fabricante de tu sensor, Apple o Google) o a otras circunstancias fuera
+          de nuestro control razonable.
+        </li>
+        <li>
+          No somos responsables de daños indirectos o consecuenciales, lucro cesante ni pérdida
+          de datos. El historial guardado de la gráfica no es una copia de seguridad.
+        </li>
+        <li>
+          En todos los demás casos, nuestra responsabilidad total por todas las reclamaciones
+          relacionadas con el Servicio se limita al importe que hayas pagado por Dulce Pro en los
+          12 meses anteriores al hecho que dio lugar a la reclamación.
+        </li>
+      </ul>
+      <p>
+        Ninguna de estas limitaciones se aplica a nuestra responsabilidad, y nada en estos
+        términos la excluye ni la limita, por dolo o culpa grave; por muerte o daños personales
+        causados por negligencia; por fraude; conforme a la normativa imperativa de
+        responsabilidad por productos defectuosos; ni a cualquier otra responsabilidad, o
+        cualquier derecho del consumidor (incluidos los derechos que la ley te reconoce ante
+        contenidos o servicios digitales no conformes), que no pueda excluirse ni limitarse
+        conforme a la ley que te sea aplicable. Cuando esa ley solo permita una limitación en
+        parte, esta se aplica únicamente en esa medida.
       </p>
 
       <h2 id="indemnity">14. Indemnización</h2>
@@ -201,7 +337,9 @@ export function TermsEs() {
       <h2 id="termination">16. Terminación</h2>
       <p>
         Puedes dejar de usar el Servicio en cualquier momento y borrar tus datos desde{" "}
-        <strong>Ajustes → Eliminar cuenta</strong>. Podemos suspender o cancelar tu acceso si
+        <strong>Ajustes → Eliminar cuenta</strong>. Cerrar sesión o eliminar la app no borra
+        por sí solo tu historial guardado de la gráfica ni, si lo aceptaste, impide que Dulce lo
+        siga recogiendo (sección 8.1). Podemos suspender o cancelar tu acceso si
         incumples estos términos o comprometes la seguridad o legalidad del Servicio.
       </p>
 
