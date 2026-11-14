@@ -1,89 +1,74 @@
 # dulce-web
 
-Marketing website for [Dulce](https://dulceglucosa.com) — the CGM companion app.
+The website for [Dulce](https://dulceglucosa.com), the CGM companion app: the landing page, guides (`/blog`), help, calculators, legal pages, the `/partners` dashboard, invite links (`/f/<code>`) and the app-link files in `.well-known`.
 
-Built with **Next.js 16** (App Router) + **next-intl** (es / en / de / fr / it) + **Supabase** + **Tailwind 4**. Deployed to Vercel.
+Next.js 16 (App Router), next-intl, Tailwind 4, Supabase, Resend. Deployed on Vercel from `main`.
+
+**Docs:** [docs/README.md](docs/README.md) lists every doc in this repo and what it's for. Before content or SEO work, read `seo/PLAN.md` and `content/README.md` (as `AGENTS.md` says). All three Dulce repositories at a glance: [PROJECT-MAP.md in dulce-app](https://github.com/KHIMSHO-LLC/dulce-app/blob/main/docs/PROJECT-MAP.md).
+
+## Languages
+
+10 site languages (`i18n/routing.ts`): English at `/` (default), and `/es`, `/de`, `/fr`, `/it`, `/fi`, `/nl`, `/nb`, `/sv`, `/ru`. Every article and calculator is written in the five core languages (en, es, de, fr, it); the other five get articles as they are translated. Site text is in `messages/<locale>.json`.
 
 ## Running locally
 
 ```bash
 npm install
-cp .env.example .env.local   # fill in Supabase + (optional) Resend keys
-npm run dev
+npm run dev        # http://localhost:3000
 ```
 
-Open <http://localhost:3000>. English (default) at `/`, the other languages at `/es`, `/de`, `/fr`, `/it`.
+Create `.env.local` for what you need (there is no `.env.example`):
+
+- `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`: waitlist forms (server only)
+- `RESEND_API_KEY` (optional), `RESEND_FROM` (optional): email
+- `RATELIMIT_SALT`: IP hashing salt
+- `NEXT_PUBLIC_GA_ID` (optional): Google Analytics
+- `NEXT_PUBLIC_RELAY_URL` (optional): another relay, for example `http://localhost:8787`
+- The retention cron's variables are in `supabase/README.md`.
 
 ## Scripts
 
-```bash
-npm run dev       # next dev (Turbopack)
-npm run build     # next build
-npm run start     # production server
-npm run lint      # eslint
-npm run typecheck # tsc --noEmit
-```
+| Command | What it does |
+| --- | --- |
+| `npm run dev` / `build` / `start` | Next.js |
+| `npm run lint`, `npm run typecheck` | ESLint, TypeScript |
+| `npm run check:content` | Checks the articles and their registry. Run before committing content. |
+| `npm run check:jsonld`, `npm run check:crawl` | Structured data and a crawl of the site (also run weekly by GitHub Actions) |
+| `npm run indexnow` | Tells search engines about changed URLs (also run after each production deploy) |
+| `npm run seo:gaps` | Keyword gap report |
 
-## Project layout
+## Layout
 
 ```
 app/
-├── [locale]/                 # all visitor-facing pages live here
-│   ├── layout.tsx            # html/body, header, footer, providers
-│   ├── page.tsx              # home
-│   ├── features/page.tsx     # /caracteristicas (es) | /en/features
-│   ├── beta/page.tsx
-│   ├── about/page.tsx        # /sobre | /en/about
-│   ├── contact/page.tsx      # /contacto | /en/contact
-│   └── legal/{privacy,terms,cookies}/page.tsx
-├── actions/                  # "use server" handlers for forms
-│   ├── waitlist.ts
-│   └── beta.ts
-├── not-found.tsx             # root fallback
-├── sitemap.ts
-└── robots.ts
-components/
-├── sections/                 # Hero, FeatureGrid, IntegrationsRow, ...
-├── forms/                    # WaitlistForm, BetaForm
-├── legal/                    # bilingual legal content + LegalLayout
-└── ui/                       # Button, Card
-i18n/
-├── routing.ts                # defineRouting (pathnames + localePrefix)
-├── request.ts                # getRequestConfig (loads messages/*.json)
-└── navigation.ts             # typed Link, useRouter, redirect
-lib/
-├── supabase/server.ts        # service-role admin client (server-only)
-├── email/resend.ts           # transactional email
-├── utils/{cn,hash,ratelimit,getRequestIp}.ts
-└── env.ts
-messages/
-├── es.json
-└── en.json
-supabase/
-├── migrations/0001_init_lists.sql
-└── README.md                 # bootstrap & GDPR notes
-proxy.ts                      # next-intl middleware (Next 16 file convention)
+├── [locale]/          visitor pages: landing page, blog, help, tools, legal, setup, pro, sensors,
+│                      who-is-dulce-for, authors, librelinkup-status, f/<code>
+├── partners/          admin dashboard and partner stats (talks to the relay)
+├── api/cron/          retention cleanup (Vercel cron, vercel.json)
+├── actions/           server actions for the forms
+├── .well-known/       apple-app-site-association, assetlinks.json
+└── llms.txt, llms-full.txt, md/, og/
+components/            UI by area (landing, article, legal, tools, ...)
+content/               articles, help and tool texts (MDX) and their registry; rules in content/README.md
+messages/              site text per language
+lib/                   SEO, schema, tools, relay client, Supabase, email
+seo/                   SEO plan, log, queue and the daily-article prompt
+scripts/               content and SEO checks, cover rendering, the daily SEO job
+supabase/              database migrations and setup
+proxy.ts               language detection and old-URL redirects (Next 16's middleware file)
 ```
 
-## Privacy & GDPR
+## Privacy
 
-- Forms hit Server Actions with the service-role Supabase client — the key is never bundled into the browser.
-- IPs are SHA-256 hashed with a daily-rotating salt before storage (see `lib/utils/hash.ts`).
-- Analytics: Vercel Analytics (anonymous, cookieless — no banner required).
-- Right-to-erasure: delete rows by email in Supabase Studio.
-
-> ⚠️ The bundled Privacy Policy and Terms of Use are drafted templates. **Have them reviewed by a Spanish data-protection lawyer before public launch.** Each legal file has a `TODO` comment marker at the top.
-
-## Deploying
-
-1. Push to a Git remote.
-2. Import the project on Vercel.
-3. Add env vars from `.env.example`.
-4. Add the domain `dulceglucosa.com` and the WWW redirect.
-5. Resend: verify the sending domain (`dulceglucosa.com`) with SPF / DKIM / DMARC records.
+- Forms go through server actions with the service-role Supabase key, which is never sent to the browser.
+- IPs are stored only as a salted SHA-256 hash (`lib/utils/hash.ts`).
+- Analytics: Vercel Analytics, and Google Analytics when `NEXT_PUBLIC_GA_ID` is set.
+- Data deletion and retention: `supabase/README.md`.
+- The legal pages still wait for a lawyer's review (`TODO` markers at the top of the files in `components/legal/`). Open questions for counsel: `docs/privacy-and-seo-followups.md`.
 
 ## Next.js 16 notes
 
-- `proxy.ts` (formerly `middleware.ts`) is the file convention.
-- Page/layout `params` and `searchParams` are Promises — always `await`.
-- `next lint` is removed; use the ESLint CLI directly (`npm run lint`).
+- `proxy.ts` replaces `middleware.ts`.
+- Page and layout `params` and `searchParams` are Promises: always `await` them.
+- `next lint` is gone; `npm run lint` runs ESLint directly.
+- APIs differ from older Next.js: read `node_modules/next/dist/docs/` before changing framework code (`AGENTS.md`).

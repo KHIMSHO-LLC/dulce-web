@@ -174,7 +174,7 @@ function appSchema(locale: AppLocale, description: string) {
     "@type": "MobileApplication",
     "@id": APP_ID,
     name: "Dulce",
-    // App Store names (seo/aso.md, live 2026-11-07), plus the YouTube channel's "Dulce: Glucose Tracker"
+    // App Store names (seo/archive/aso.md, live 2026-11-07), plus the YouTube channel's "Dulce: Glucose Tracker"
     // (also an earlier App Store name that Google still shows).
     alternateName: [
       "Dulce: Glucose Tracker",
