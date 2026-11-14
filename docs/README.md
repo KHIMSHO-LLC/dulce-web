@@ -35,10 +35,10 @@ Many docs here sit outside `docs/` on purpose: scripts, agents and code comments
 | `log.md` | One entry per writer run or SEO session. |
 | `covers-needed.md` | Articles waiting for a cover image. |
 | `segments.md` | Audience segments, and the current App Store listing text (1.0.7 draft). |
-| `aso.md` | Older App Store metadata drafts; its rules still apply, its words are replaced by `segments.md`. |
 | `pets.md` | Pet mode (dogs and cats): demand, copy rules, App Store notes. |
-| `keyword-volumes.md`, `keyword-research-2026-10-31.md` | Measured search volumes and a keyword-list review. |
-| `growth-audit-2026-10-29.md`, `backlinks-2026-11-03.md` | A one-time growth audit and the backlink plan. |
+| `keyword-volumes.md` | Measured search volumes. |
+| `backlinks-2026-11-03.md` | The backlink plan. |
+| `archive/` | Finished notes: older App Store drafts (`aso.md`, replaced by `segments.md`), the 2026-10-29 growth audit, the 2026-10-31 keyword review. |
 
 ## Docs in the other repos that matter here
 

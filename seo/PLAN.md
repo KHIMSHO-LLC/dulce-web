@@ -4,7 +4,7 @@ Read this before any SEO, App Store metadata, content or localization work. It r
 done, what is left for Claude, and what only the owner (Giorgi) can do. Update the boxes when something ships.
 
 Daily article runs follow `seo/daily-article.md`; content rules are in `content/README.md`; the log is `seo/log.md`;
-App Store copy is in `seo/aso.md`.
+App Store copy is in `seo/archive/aso.md`.
 
 **If Giorgi asks "what do I have to do?", answer from the "For Giorgi" list at the bottom, open items first.**
 
@@ -37,7 +37,7 @@ questions around them. Being the best answer means the product actually does it 
   18.0). Dynamic Island = iPhone 14 Pro or later.
 - App languages (from 1.0.6/1.0.7): es-ES, es-MX, en, de, fr, it, fi, da, nb, sv, nl, ru, ja, ko, ka. Device
   languages the app doesn't support fall back to English.
-- App Store name: **Dulce: Glucose at a Glance**, id 6770694596 (localized names per listing, see `seo/aso.md`).
+- App Store name: **Dulce: Glucose at a Glance**, id 6770694596 (localized names per listing, see `seo/archive/aso.md`).
 - CarPlay: there is no CarPlay app; on iOS 26 the Live Activity's small card (Pro) shows on the CarPlay dashboard
   and in the Apple Watch Smart Stack.
 - Pet mode (1.0.7): Settings › "Who is Dulce for?" › A pet (vet's range and critical level).
@@ -92,7 +92,7 @@ questions around them. Being the best answer means the product actually does it 
 - [x] 2026-10-22: "Quick questions" + FAQPage JSON-LD on every article (`faq` in `content/articles.ts`).
 - [x] 2026-10-22: Article `child-glucose` (parents/caregivers).
 - [x] 2026-10-22: Home JSON-LD (featureList, audience, @ids, WebSite) and `/llms.txt` for AI assistants.
-- [x] 2026-10-22: App Store metadata for en, es-ES, es-MX, de, fr, it in `seo/aso.md` (measured, no trademarks).
+- [x] 2026-10-22: App Store metadata for en, es-ES, es-MX, de, fr, it in `seo/archive/aso.md` (measured, no trademarks).
 - [x] 2026-10-22: Website in French and Italian (`/fr`, `/it`): all pages, 11 guides, calculators, FAQ, schema,
       sitemap, hreflang. Legal pages show English, noindexed, like German. Branch `i18n/fr-it` (dulce-web).
 - [x] 2026-10-22: App in French and Italian (UI, widget/Live Activity, watch, complications) and Settings →
@@ -183,7 +183,7 @@ questions around them. Being the best answer means the product actually does it 
 
 - [x] 2026-10-31: Reviewed Giorgi's ~1,000-keyword list against autocomplete in each market (US/CA included); kept
       only measured clusters. Dexcom widget/watch sections, Libre 3 Plus/Dexcom widget FAQ, Canada vs US units, brand
-      alternateName schema. Findings, rejected phrases and the open new-language decision: `seo/keyword-research-2026-10-31.md`.
+      alternateName schema. Findings, rejected phrases and the open new-language decision: `seo/archive/keyword-research-2026-10-31.md`.
 - [x] 2026-10-31: Article `apple-watch-glucose` (can Apple Watch measure blood sugar; Apple's reported plans, FDA warning on
       "glucose" watches/rings, how to see a CGM on the watch today), 5 languages, author Giorgi.
 
@@ -267,7 +267,7 @@ questions around them. Being the best answer means the product actually does it 
    byline, emit `reviewedBy` in the article JSON-LD. Never invent credentials.
 4. Weekly: crawl the built site (every sitemap URL + internal link must be 200, self-canonical); check Search
    Console indexing and queries (on the Mac); improve titles/descriptions where CTR is low.
-5. Keep `/llms.txt`, the home `featureList` and `seo/aso.md` in sync with what ships.
+5. Keep `/llms.txt`, the home `featureList` and `seo/archive/aso.md` in sync with what ships.
 6. Funnel: every App Store link already carries a campaign token per placement (`ct=blog_<id>`, `web_hero`, ...).
    Read App Store Connect → Analytics → Campaigns with Giorgi monthly; never send glucose or health data to
    marketing analytics.
@@ -349,7 +349,7 @@ Done:
 - [x] Merge PR #3 (redirect fix, quick answers, caregiver guide): merged 2026-10-22.
 - [x] 2026-10-29: completed a code/content audit against the supplied 28-day GSC and October GA4 snapshots. Kept
       the strongest widget guide URL and body; shortened its English/German titles, refreshed `dateModified`, and
-      documented the five-language query map and 30-day acquisition plan in `seo/growth-audit-2026-10-29.md`.
+      documented the five-language query map and 30-day acquisition plan in `seo/archive/growth-audit-2026-10-29.md`.
 - [x] 2026-10-29: App Store campaign tokens now enforce Apple's 30-character limit without silent truncation;
       `app_store_click` includes campaign, CTA placement, page path and language, and a successful Android
       waitlist submission sends a PII-free GA4 `sign_up` event.
