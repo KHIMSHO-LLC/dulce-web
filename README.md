@@ -62,7 +62,9 @@ proxy.ts               language detection and old-URL redirects (Next 16's middl
 
 - Forms go through server actions with the service-role Supabase key, which is never sent to the browser.
 - IPs are stored only as a salted SHA-256 hash (`lib/utils/hash.ts`).
-- Data deletion and retention: `supabase/README.md`. Open questions for counsel: `docs/privacy-and-seo-followups.md`.
+- Analytics: Vercel Analytics, and Google Analytics when `NEXT_PUBLIC_GA_ID` is set.
+- Data deletion and retention: `supabase/README.md`.
+- The legal pages still wait for a lawyer's review (`TODO` markers at the top of the files in `components/legal/`). Open questions for counsel: `docs/privacy-and-seo-followups.md`.
 
 ## Next.js 16 notes
 
