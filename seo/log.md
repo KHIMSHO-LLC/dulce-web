@@ -334,3 +334,34 @@ Apple granted the critical-alert entitlement. Site copy now says the critical lo
   fetcher (curl needed an approval this run couldn't get): en and de pages 200 with the right H1 and the 10 Nov date;
   `lock-screen` en shows 10 Nov and the CarPlay link. es/fr/it not opened individually. Compare from ~2026-12-01:
   impressions for "carplay" queries on the 5 pages.
+
+## 2026-11-13 (daily run, Mac, queue item: feature guides in fi/nl/nb/sv/ru, `dexcom`)
+
+- Queue: top unchecked item, guide 1 of 6, so step 1 topic picking was skipped (no `seo:gaps`). The item stays
+  unticked with a progress note (Done: `dexcom`; Next: `lock-screen`).
+- Search Console (gum OK, 2026-10-14 to 11-11, queries containing "dexcom"): 3 rows, 1 impression each ("dexcom widget
+  apple watch" de pos 7, "dexcom and apple watch" es pos 38, "alternatives à dexcom" fr pos 10). No baseline in the new
+  languages. Registry keywords for fi/nl/nb/sv/ru are natural equivalents of the core ones, NOT measured queries.
+- Published: `content/articles/dexcom/{fi,nl,nb,sv,ru}.mdx` + registry slug, title, description, summary, keywords,
+  imageAlt, faq (dateModified 2026-11-13). Slugs: fi `dexcom-apple-watch-lukitusnaytto`, nl
+  `dexcom-op-apple-watch-en-toegangsscherm`, nb `dexcom-pa-apple-watch-og-laseskjermen`, sv
+  `dexcom-pa-apple-watch-och-lasskarmen`, ru `dexcom-na-apple-watch-i-ekrane-blokirovki`. Links to lock-screen,
+  apple-watch, widgets, alerts, family-sharing, carplay, dexcom-follow-alternative, glucose-apps-compared all go to
+  English, marked. FAQ 5's "read more" (`apple-watch`) is English and unmarked, as in `lada-diabetes`.
+  `apple-watch-glucose` fi/nl/nb/sv/ru dropped the English marker on its Dexcom link (dateModified 2026-11-13). No
+  glossary or messages/ link to `dexcom` needed changing.
+- App facts (dulce-app main 0826a88; working tree = main for src/, checked with `git diff main`): labels from each
+  locale's common.json (`dexcom.*` sign-in, region and error titles, `dexcom.help.step2` for the Dexcom app's
+  Connections/Share path, onboarding "Which sensor do you use?", Settings › Sensor › "Connect a different sensor",
+  Live Activity name: fi/nl/ru "Live Activity", nb/sv "Live-aktivitet"; alerts section nl "Alarmen", nb "Alarmer",
+  sv "Larm", ru "Оповещения"). Two deliberate differences from the core-language text: family sharing marked (Pro)
+  (`followers.proRequired`), and the CarPlay bullet says the Live Activity card shows on the CarPlay Dashboard while
+  it runs (`liveActivityStyle.small` footer) instead of "a large number".
+- NOT described: Dexcom "keep me signed in" (3daf2e9, 2026-11-10, first in 1.0.10). PLAN says 1.0.7 is live. The new
+  pages say only "your password is stored encrypted on your iPhone" (true before and after). **When 1.0.10 ships, the
+  es/en/de/fr/it bodies' "only goes to Dexcom" sentence becomes wrong**: the app then keeps an encrypted copy on
+  Dulce's server (`dexcom.reassurance`). Worth a queue item.
+- Translations are mine, not reviewed by native speakers. check:content (30 articles, 0/0) and build passed (the 5
+  pages generated). Pushed df57b6b. First live check was before Vercel finished (404). Re-checked through the web fetcher:
+  all 5 pages 200, right H1, "updated 13 Nov". `npm run indexnow`: 380 URLs → 200. Compare from ~2026-12-04:
+  impressions for dexcom queries on the 5 new pages.
