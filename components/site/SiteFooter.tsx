@@ -7,6 +7,7 @@ import { WordmarkRise } from "@/components/motion/WordmarkRise";
 import { TOOL_COPY } from "@/lib/tools";
 import { DropMark } from "./DropMark";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { PreferredSourceLink } from "./PreferredSource";
 import { CookieSettingsLink } from "@/components/analytics/ConsentBanner";
 import { guideHref } from "@/components/landing/Audience";
 
@@ -130,6 +131,7 @@ export async function SiteFooter() {
             <a href={COMMUNITY_GROUP_URL} target="_blank" rel="noopener noreferrer" className={linkClass}>
               {t("group")}
             </a>
+            <PreferredSourceLink compact />
             <div className="-ml-2.5 mt-1 flex gap-0.5">
               {SOCIAL.map((s) => (
                 <a

@@ -904,5 +904,9 @@
     "fromSetup": "Käytätkö Dexcomia, Medtronicia tai Nightscoutia? Katso kaikki Dulcen kanssa toimivat sensorit",
     "disclaimer": "FreeStyle Libre, LibreLink ja LibreLinkUp ovat Abbottin tavaramerkkejä. Dexcom, G6, G7 ja ONE+ ovat Dexcom, Inc:n tavaramerkkejä. Medtronic, CareLink, Simplera, Guardian ja MiniMed ovat Medtronicin tavaramerkkejä. Dulce on itsenäinen eikä liity niihin. Dulce ei ole lääkinnällinen laite eikä korvaa sensorisi hälytyksiä.",
     "troubleshoot": "Jos yhteys ei toimi: vianmääritys"
+  },
+  "preferredSource": {
+    "cta": "Lisää Dulce suosikkilähteeksi Googlessa",
+    "short": "Suosikkilähde Googlessa"
   }
 }

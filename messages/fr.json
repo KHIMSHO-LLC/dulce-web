@@ -904,5 +904,9 @@
     "fromSetup": "Tu utilises Dexcom, Medtronic ou Nightscout ? Voir tous les capteurs compatibles avec Dulce",
     "disclaimer": "FreeStyle Libre, LibreLink et LibreLinkUp sont des marques d'Abbott. Dexcom, G6, G7 et ONE+ sont des marques de Dexcom, Inc. Medtronic, CareLink, Simplera, Guardian et MiniMed sont des marques de Medtronic. Dulce est indépendant et sans lien avec eux. Dulce n'est pas un dispositif médical et ne remplace pas les alarmes de ton capteur.",
     "troubleshoot": "Si la connexion échoue : dépannage"
+  },
+  "preferredSource": {
+    "cta": "Ajouter Dulce comme source préférée sur Google",
+    "short": "Source préférée sur Google"
   }
 }

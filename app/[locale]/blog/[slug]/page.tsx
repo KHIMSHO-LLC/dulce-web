@@ -15,6 +15,7 @@ import { ARTICLES, CATEGORY_LABEL, articleBySlug, articleLocales, getArticle, is
 import { AUTHORS } from "@/content/authors";
 import { articlePath, articleUrl, authorPath, readingMinutes } from "@/lib/articles";
 import { Calculator, Link2 } from "lucide-react";
+import { PreferredSourceLink } from "@/components/site/PreferredSource";
 import { AnswerFirst, Byline } from "@/components/article/Byline";
 import { TOOL_COPY, toolsForArticle } from "@/lib/tools";
 import { breadcrumbSchema, articleSchema, authorPerson, faqSchema, howToSchema } from "@/lib/schema";
@@ -222,6 +223,10 @@ export default async function ArticlePage({ params }: PageProps<"/[locale]/blog/
           </div>
           <p className="mt-4 text-label leading-relaxed text-soft">{author.bio[loc]}</p>
         </section>
+
+        <div className="mt-8 max-w-[68ch]">
+          <PreferredSourceLink />
+        </div>
 
         <section className="mt-14 max-w-[68ch]" aria-labelledby="links-title">
           <h2 id="links-title" className="text-[1.6rem] font-light tracking-[-0.02em] text-ink">
