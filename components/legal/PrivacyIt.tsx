@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* Translation of the Spanish/English policy. TODO: review local legal terminology; Spanish counsel review remains outstanding. */}
+{/* Traduzione del testo spagnolo, che prevale. Decisioni di redazione e punti aperti: DULCE/plans/legal-answers-2026-11-16.md (in inglese). */}
 export function PrivacyIt() {
   return (
     <>
@@ -358,11 +358,45 @@ export function PrivacyIt() {
         <li>
           Senza l&apos;app, scrivi a{" "}
           <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Poiché non esiste un
-          account, ti chiederemo informazioni che ci permettano di trovare i tuoi dati (ad esempio
-          il servizio del tuo sensore e quando hai usato Dulce l&apos;ultima volta); possiamo
+          account, indica il tuo ID assistenza (nell&apos;app: Impostazioni › Account › ID
+          assistenza) o l&apos;email di contatto che hai salvato (sezione 2.7), se li hai; altrimenti
+          ti chiederemo informazioni che ci permettano di trovare i tuoi dati (ad esempio il
+          servizio del tuo sensore e quando hai usato Dulce l&apos;ultima volta). Possiamo
           intervenire solo sui dati che riusciamo a identificare e ti diremo se non ci riusciamo.
         </li>
       </ul>
+
+      <h3>2.7 Email di contatto (facoltativa)</h3>
+      <p>
+        Dulce funziona senza un indirizzo email. Se vuoi, puoi salvare un&apos;email di contatto
+        nell&apos;app. La conserviamo sul relay di Dulce, collegata alla tua installazione (l&apos;ID
+        assistenza mostrato nell&apos;app), e la usiamo solo per:
+      </p>
+      <ul>
+        <li>rispondere alle tue richieste di assistenza e trovare la tua installazione quando ci scrivi;</li>
+        <li>
+          scriverti riguardo alla tua installazione di Dulce o al tuo abbonamento, ad esempio un
+          problema con il collegamento del sensore, una modifica a questa informativa o ai termini,
+          o un mese gratuito che ti offriamo.
+        </li>
+      </ul>
+      <p>
+        Non la usiamo per marketing o newsletter, salvo che tu acconsenta separatamente, e non la
+        condividiamo con Meta, con servizi di analisi né con nessun altro, tranne il nostro
+        fornitore di hosting Cloudflare, che la conserva per noi. Non viene mai scritta nei log.
+        Poiché è collegata alla tua installazione, ci permette di sapere a chi appartiene
+        l&apos;installazione quando ti aiutiamo (ad esempio lo stato dell&apos;abbonamento o se usi
+        il monitoraggio da parte della famiglia); l&apos;assistenza non vede le tue letture di glicemia.
+      </p>
+      <p>
+        <strong>Base giuridica:</strong> il tuo consenso (art. 6, par. 1, lett. a) GDPR). Darlo è
+        facoltativo e puoi modificarlo o rimuoverlo nell&apos;app in qualsiasi momento; rimuoverlo
+        lo elimina dal relay.{" "}
+        <strong>Per quanto tempo:</strong> finché non lo rimuovi, usi «Elimina account» o ci chiedi
+        di cancellarlo. Resta quando esci dall&apos;account del sensore, così che possiamo
+        continuare ad aiutarti. Le email che ci invii sono trattate come descritto per i messaggi
+        di contatto nella sezione 6.
+      </p>
 
       <h2 id="purpose">3. Perché usiamo i tuoi dati</h2>
       <ul>
@@ -375,6 +409,10 @@ export function PrivacyIt() {
           tuo consenso; sezione 2.6).
         </li>
         <li>Verificare l&apos;abbonamento e sbloccare le funzioni Pro.</li>
+        <li>
+          Se hai salvato un&apos;email di contatto, rispondere alle tue richieste di assistenza e
+          scriverti riguardo alla tua installazione o al tuo abbonamento (sezione 2.7).
+        </li>
         <li>Avvisarti quando Dulce è disponibile (lista d&apos;attesa).</li>
         <li>Rispondere alle richieste inviate tramite il modulo di contatto.</li>
         <li>Proteggere il sito dagli abusi (hash dell&apos;IP, limitazione).</li>
@@ -386,13 +424,13 @@ export function PrivacyIt() {
       <ul>
         <li>
           <strong>Consenso esplicito</strong> (art. 9, par. 2, lett. a) GDPR): trattamento dei
-          dati sanitari quando scegli di collegare il CGM e usare le relative funzioni.
-          Scollegando il CGM si interrompe il trattamento tramite il relay (tranne la raccolta della tua cronologia del grafico salvata mentre sei via, se l&apos;hai accettata; sezione 2.6); puoi anche revocare
-          il consenso contattandoci. Durante l&apos;onboarding, l&apos;app rimanda a questa policy,
-          ma al momento non mostra una casella separata per acconsentire al trattamento dei dati
-          sanitari. Stiamo chiedendo a un consulente spagnolo per la privacy di verificare se
-          l&apos;informativa e il flusso di collegamento attuali soddisfano il requisito del consenso
-          esplicito.
+          dati sanitari quando colleghi il sensore nell&apos;app e usi le relative funzioni (letture
+          in tempo reale, avvisi, Attività in tempo reale, widget, orologio e monitoraggio da parte
+          della famiglia). Lo dai collegando il sensore, dopo che l&apos;app ti ha spiegato cosa
+          fa Dulce e ti ha rimandato a questa informativa. Puoi revocarlo in qualsiasi momento
+          uscendo dall&apos;account del sensore in Dulce, il che interrompe il trattamento tramite
+          il relay (tranne la raccolta della tua cronologia del grafico salvata mentre sei via, se
+          l&apos;hai accettata; sezione 2.6), usando «Elimina account» o scrivendoci.
         </li>
         <li>
           <strong>Consenso esplicito</strong> (art. 9, par. 2, lett. a) GDPR) per la cronologia del
@@ -415,10 +453,15 @@ export function PrivacyIt() {
           momento in Impostazioni.
         </li>
         <li>
+          <strong>Consenso</strong> (art. 6, par. 1, lett. a) GDPR): per l&apos;email di contatto
+          facoltativa della sezione 2.7; puoi rimuoverla in qualsiasi momento nell&apos;app.
+        </li>
+        <li>
           <strong>Legittimo interesse</strong> (art. 6, par. 1, lett. f) GDPR): sicurezza di base
-          del sito e risposta alle richieste inviate tramite il modulo di contatto. La base
-          giuridica delle analisi dipende dal servizio e dalle norme regionali descritte nella
-          Cookie Policy; deve essere confermata con un consulente per la privacy.
+          del sito e risposta alle richieste che ci invii tramite il modulo di contatto o per
+          email. Analisi del sito: il tuo consenso dove la nostra Cookie Policy lo richiede (nel
+          SEE, nel Regno Unito e in Svizzera, o quando non possiamo sapere dove ti trovi) e,
+          altrove, il nostro legittimo interesse a capire come viene usato il sito.
         </li>
       </ul>
 
@@ -499,6 +542,15 @@ export function PrivacyIt() {
           <strong>Log operativi:</strong> i Cloudflare Workers Logs vengono eliminati dopo 7 giorni.
         </li>
         <li>
+          <strong>Email di contatto:</strong> finché non la rimuovi nell&apos;app, usi «Elimina
+          account» o ci chiedi di cancellarla (sezione 2.7).
+        </li>
+        <li>
+          <strong>Backup:</strong> i dati eliminati dal relay possono restare fino a 30 giorni nei
+          backup automatici del database del nostro fornitore di hosting; poi vengono
+          sovrascritti. Usiamo questi backup solo per riprenderci da un guasto.
+        </li>
+        <li>
           <strong>Indicatore dell&apos;installazione:</strong> l&apos;ID casuale e la data della
           prima registrazione restano dopo la cancellazione dei dati del relay. Puoi chiederci
           di cancellare anche questo indicatore, che non ha scadenza automatica.
@@ -514,8 +566,8 @@ export function PrivacyIt() {
       <ul>
         <li>
           <strong>Cloudflare</strong>: ospita il relay di Dulce descritto sopra e conserva la
-          cronologia del grafico salvata e il diario condiviso (sezione 2.6), come nostro
-          responsabile del trattamento.
+          cronologia del grafico salvata e il diario condiviso (sezione 2.6) e l&apos;email di
+          contatto facoltativa (sezione 2.7), come nostro responsabile del trattamento.
         </li>
         <li>
           <strong>Apple</strong>: notifiche push (APNs), Attività in tempo reale, Salute di Apple
@@ -603,13 +655,22 @@ export function PrivacyIt() {
         quindi Dulce sugli altri tuoi iPhone inizia una nuova cronologia. Puoi anche disattivare
         la cronologia del grafico salvata in Impostazioni, il che elimina subito la copia salvata,
         e disattivare separatamente la condivisione del diario, il che elimina la copia del diario
-        condiviso. L&apos;app non ha un pulsante di esportazione della cronologia salvata; per
-        riceverne una copia, scrivici. L&apos;indicatore minimo dell&apos;installazione descritto
-        sopra resta finché non ne chiedi la cancellazione. Puoi esercitare ciascuno di questi
-        diritti scrivendo a{" "}
-        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Rispondiamo entro un
-        mese. Se la richiesta è complessa o le richieste sono numerose, il GDPR consente una
-        proroga fino a due mesi aggiuntivi; ti informeremo della proroga entro il primo mese.
+        condiviso. L&apos;app non ha un pulsante di esportazione della cronologia salvata; scrivici e
+        ti invieremo una copia in un formato elettronico di uso comune (ad esempio CSV).
+        L&apos;indicatore minimo dell&apos;installazione descritto sopra resta finché non ne chiedi
+        la cancellazione. Puoi esercitare ciascuno di questi diritti scrivendo a{" "}
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Poiché Dulce non ha
+        account, indica il tuo ID assistenza (nell&apos;app: Impostazioni › Account › ID
+        assistenza) o l&apos;email di contatto che hai salvato, se li hai; altrimenti ti
+        chiederemo altre informazioni che ci permettano di trovare i tuoi dati, e possiamo
+        intervenire solo sui dati che riusciamo a identificare. Rispondiamo entro un mese. Se la
+        richiesta è complessa o le richieste sono numerose, il GDPR consente una proroga fino a
+        due mesi aggiuntivi; ti informeremo della proroga entro il primo mese.
+      </p>
+      <p>
+        Se un utente di Dulce è deceduto, un familiare stretto o un erede può chiederci di
+        cancellare i suoi dati e di interrompere qualsiasi raccolta della sua cronologia; ti
+        chiederemo una prova ragionevole.
       </p>
       <p>
         Se ritieni che il nostro trattamento non sia conforme alla legge, puoi presentare reclamo
@@ -626,7 +687,9 @@ export function PrivacyIt() {
         Dulce non è rivolta ai minori di 14 anni. Su Android, Dulce è destinata agli adulti dai 18 anni in su. Un genitore o tutore legale può usare Dulce per
         seguire la glicemia di un minore sotto la propria responsabilità; in tal caso è il
         genitore o tutore a dare o negare il consenso per la cronologia del grafico salvata e per
-        la condivisione del diario. Se pensi che un minore
+        la condivisione del diario. Se hai tra 14 e 18 anni, per usare Dulce ti serve il consenso di un
+        genitore o tutore legale (Termini d&apos;uso, sezione 4), e questo comprende la cronologia
+        del grafico salvata, la condivisione del diario e l&apos;email di contatto. Se pensi che un minore
         a tuo carico ci abbia fornito dati senza il tuo consenso, contattaci e li cancelleremo.
       </p>
 
@@ -640,8 +703,15 @@ export function PrivacyIt() {
 
       <h2 id="changes">12. Modifiche a questa informativa</h2>
       <p>
-        In caso di modifiche rilevanti avviseremo gli utenti interessati via email o nell&apos;app
-        e pubblicheremo la nuova versione, con la data di revisione, su questa pagina.
+        In caso di modifiche rilevanti ti avvisiamo prima che si applichino: nell&apos;app (nella
+        nota «Novità» dell&apos;aggiornamento che le porta e in un avviso che rimanda a questa
+        pagina) e, se hai salvato un&apos;email di contatto, via email. Questa pagina mostra la
+        data della versione attuale, un breve riepilogo di ciò che cambia e un link alla versione
+        precedente. Se una modifica richiede il tuo consenso, ad esempio un nuovo uso dei tuoi dati
+        sanitari, l&apos;app te lo chiede prima e non succede nulla di nuovo finché non rispondi;
+        le versioni dell&apos;app che non lo chiedono continuano a funzionare come prima. Le
+        modifiche alla cronologia del grafico salvata che ti tolgono qualcosa vengono annunciate
+        nell&apos;app con almeno 30 giorni di anticipo (Termini d&apos;uso, sezioni 8.1 e 15).
       </p>
 
       <h2 id="contact">13. Contatti</h2>

@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* Translation of the Spanish/English terms. TODO: review local legal terminology; Spanish counsel review remains outstanding. */}
+{/* Übersetzung des spanischen Textes, der Vorrang hat. Entscheidungen zur Formulierung und offene Punkte: DULCE/plans/legal-answers-2026-11-16.md (auf Englisch). */}
 export function TermsDe() {
   return (
     <>
@@ -81,6 +81,12 @@ export function TermsDe() {
         Netz und deinen Geräteeinstellungen ab und kann nicht garantiert werden. Lass die
         Alarmfunktionen deiner offiziellen CGM-App eingeschaltet. Dulce ergänzt die offizielle
         App deines CGM-Herstellers.
+      </p>
+      <p>
+        Das gilt für jede Warnung in Dulce, auch für Warnungen, die sich wiederholen, solange ein
+        Wert außerhalb des Bereichs bleibt, und für die Warnung, dass keine neuen Werte ankommen.
+        Wenn Dulce dich nicht warnt, dass keine Werte mehr ankommen, heißt das nicht, dass dein
+        Sensor oder seine Verbindung funktioniert.
       </p>
       <p>
         Der gespeicherte Kurvenverlauf, das geteilte Logbuch, Statistiken und Diagramme in Dulce
@@ -201,7 +207,8 @@ export function TermsDe() {
       <p>
         Wir können diese Funktion ändern, einschränken oder einstellen, zum Beispiel um den Dienst
         zu schützen, aus rechtlichen Gründen, um ihre Kosten zu kontrollieren oder weil der Dienst
-        eines Sensorherstellers sie nicht mehr erlaubt. Wenn wir sie einstellen, teilen wir dir das
+        eines Sensorherstellers sie nicht mehr erlaubt. Wenn wir sie einstellen oder so ändern, dass dir
+        etwas weggenommen wird (zum Beispiel ein kürzerer Verlauf), teilen wir dir das
         mindestens 30 Tage vorher in der App mit, es sei denn, ein Sicherheits-, Rechts- oder
         Drittgrund außerhalb unserer Kontrolle macht das unmöglich; in dieser Zeit bleibt dein
         gespeicherter Verlauf in der App sichtbar, und du kannst uns per E-Mail um eine Kopie
@@ -272,7 +279,8 @@ export function TermsDe() {
       <p>
         Der Dienst wird „wie besehen“ und „wie verfügbar“ bereitgestellt. Soweit nach geltendem
         Recht zulässig, garantieren wir nicht, dass der Dienst oder ein Teil davon (einschließlich
-        Werte, Warnungen, Live-Aktivitäten, Widgets, Updates auf der Uhr, gespeicherter
+        Werte, Warnungen, wiederholte Warnungen, die Warnung bei ausbleibenden Werten,
+        Live-Aktivitäten, Widgets, Updates auf der Uhr, gespeicherter
         Kurvenverlauf, Folgen durch die Familie und Teilen des Logbuchs) ununterbrochen,
         rechtzeitig, vollständig, fehlerfrei oder zu 100 % sicher ist, dass keine Daten verloren
         gehen oder dass er bestimmte Erwartungen erfüllt. Das gilt besonders für Daten von
@@ -295,7 +303,8 @@ export function TermsDe() {
           Behandlungsteam verlässt.
         </li>
         <li>
-          Wir haften nicht dafür, dass Werte, Warnungen, Live-Aktivitäten, Widgets, Updates auf der
+          Wir haften nicht dafür, dass Werte, Warnungen (auch wiederholte Warnungen und die Warnung
+          bei ausbleibenden Werten), Live-Aktivitäten, Widgets, Updates auf der
           Uhr, gespeicherter Kurvenverlauf, Folgen durch die Familie oder Teilen des Logbuchs
           verspätet, unvollständig, falsch, nicht verfügbar oder verloren sind, wenn dies auf die
           in den Abschnitten 3, 8.1 und 10 beschriebenen Ursachen (einschließlich deines Geräts,
@@ -332,8 +341,23 @@ export function TermsDe() {
       <h2 id="changes">15. Änderungen des Dienstes oder dieser Bedingungen</h2>
       <p>
         Wir können den Dienst und diese Bedingungen ändern, um neue Funktionen, rechtliche
-        Anforderungen oder Sicherheitsaspekte zu berücksichtigen. Bei wesentlichen Änderungen
-        informieren wir dich per E-Mail oder im Dienst.
+        Anforderungen oder Sicherheitsaspekte zu berücksichtigen. Wenn eine Änderung wesentlich
+        ist, informieren wir dich, bevor sie gilt: in der App (in der Notiz „Neuerungen“ des
+        App-Updates und in einem Hinweis, der auf den neuen Text verlinkt) und, wenn du eine
+        Kontakt-E-Mail gespeichert hast, per E-Mail. Diese Seite zeigt das Datum, eine kurze
+        Zusammenfassung der Änderungen und einen Link zur vorherigen Fassung.
+      </p>
+      <p>
+        Änderungen, die Dulce Pro etwas wegnehmen, einschließlich des gespeicherten
+        Kurvenverlaufs, werden in der App mindestens 30 Tage vorher angekündigt, es sei denn, ein
+        Sicherheits-, Rechts- oder Drittgrund außerhalb unserer Kontrolle macht das unmöglich
+        (Abschnitt 8.1). Wenn dich eine solche Änderung mehr als nur geringfügig betrifft, kannst
+        du dein Abonnement innerhalb von 30 Tagen nach der Änderung oder nach unserer Mitteilung,
+        je nachdem, was später eintritt, kostenlos beenden: Kündige es in den
+        Abo-Einstellungen von App Store oder Google Play und bitte Apple oder Google um Erstattung
+        des nicht genutzten Zeitraums; wenn sie ablehnen, schreib uns. Wenn du Dulce nach einer
+        Änderung weiter nutzt, verzichtest du damit nicht auf Rechte, die dir das zwingende
+        Verbraucherrecht gibt.
       </p>
 
       <h2 id="termination">16. Beendigung</h2>

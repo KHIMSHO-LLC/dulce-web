@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* Legal review remains outstanding: validate the health-data legal basis, app consent flow, retention and transfer details with Spanish counsel. */}
+{/* Translation of the Spanish policy, which prevails. Drafting decisions and open points: DULCE/plans/legal-answers-2026-11-16.md. */}
 export function PrivacyEn() {
   return (
     <>
@@ -360,11 +360,43 @@ export function PrivacyEn() {
         <li>
           Without the app, write to{" "}
           <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Because there is no
-          account, we will ask you for information that lets us find your data (for example your
-          sensor service and when you last used Dulce); we can only act on data we can identify, and
-          we will tell you if we cannot.
+          account, include your Support ID (in the app: Settings › Account › Support ID) or the
+          contact email you saved (section 2.7) if you have them; otherwise we will ask you for
+          information that lets us find your data (for example your sensor service and when you
+          last used Dulce). We can only act on data we can identify, and we will tell you if we
+          cannot.
         </li>
       </ul>
+
+      <h3>2.7 Contact email (optional)</h3>
+      <p>
+        Dulce works without an email address. If you want, you can save a contact email in the app.
+        We store it on the Dulce relay, linked to your installation (the Support ID shown in the
+        app), and use it only to:
+      </p>
+      <ul>
+        <li>answer your support requests and find your installation when you write to us;</li>
+        <li>
+          write to you about your Dulce installation or subscription, for example a problem with
+          your sensor connection, a change to this policy or the terms, or a free month we offer
+          you.
+        </li>
+      </ul>
+      <p>
+        We do not use it for marketing or newsletters unless you agree to that separately, and we
+        do not share it with Meta, analytics services or anyone else, except our hosting provider
+        Cloudflare, which stores it for us. It is never written to logs. Because it is linked to
+        your installation, it lets us see who the installation belongs to when we help you (for
+        example your subscription status or whether you use family sharing); support does not see
+        your glucose readings.
+      </p>
+      <p>
+        <strong>Legal basis:</strong> your consent (Art. 6(1)(a) GDPR). Giving it is optional, and
+        you can change or remove it in the app at any time; removing it deletes it from the relay.{" "}
+        <strong>How long:</strong> until you remove it, use Delete account or ask us to delete it.
+        It stays when you sign out of your sensor account, so that we can still help you then.
+        Emails you send us are handled as described for contact messages in section 6.
+      </p>
 
       <h2 id="purpose">3. Why we use your data</h2>
       <ul>
@@ -376,6 +408,10 @@ export function PrivacyEn() {
           (Dulce Pro, with your consent; section 2.6).
         </li>
         <li>Validate your subscription and unlock Pro features.</li>
+        <li>
+          If you saved a contact email, answer your support requests and write to you about your
+          installation or subscription (section 2.7).
+        </li>
         <li>Let you know when Dulce is available (waitlist).</li>
         <li>Respond to questions submitted through the contact form.</li>
         <li>Protect the site from abuse (IP hash, rate limit).</li>
@@ -387,10 +423,12 @@ export function PrivacyEn() {
       <ul>
         <li>
           <strong>Explicit consent</strong> (Art. 9(2)(a) GDPR): processing your health data
-          when you choose to connect your CGM and use the related features. Disconnecting your CGM stops the relay processing (except collecting your saved chart history while you are away, if you accepted it; section 2.6); you can also withdraw consent by contacting us. The
-          app links to this policy during onboarding but does not currently show a separate
-          health-data consent checkbox. We are asking Spanish privacy counsel to verify whether
-          the current notice and connection flow meet the explicit-consent standard.
+          when you connect your sensor in the app and use the related features (live readings,
+          alerts, Live Activity, widgets, watch and family following). You give it by connecting
+          your sensor after the app has explained what Dulce does and linked to this policy. You
+          can withdraw it at any time by signing out of your sensor account in Dulce, which stops
+          the relay processing (except collecting your saved chart history while you are away, if
+          you accepted it; section 2.6), by using Delete account, or by writing to us.
         </li>
         <li>
           <strong>Explicit consent</strong> (Art. 9(2)(a) GDPR) for saved chart history,
@@ -410,10 +448,15 @@ export function PrivacyEn() {
           described in section 2.2.2; you can withdraw it at any time in Settings.
         </li>
         <li>
+          <strong>Consent</strong> (Art. 6(1)(a) GDPR): for the optional contact email in section
+          2.7; you can remove it at any time in the app.
+        </li>
+        <li>
           <strong>Legitimate interest</strong> (Art. 6(1)(f) GDPR): site security and answering
-          questions you send through the contact form. The lawful
-          basis for analytics depends on the service and regional rules described in our Cookie
-          Policy; this requires confirmation with privacy counsel.
+          questions you send us through the contact form or by email. Website analytics: your
+          consent where our Cookie Policy asks for it (in the EEA, the UK and Switzerland, or when
+          we cannot tell where you are), and elsewhere our legitimate interest in understanding how
+          the site is used.
         </li>
       </ul>
 
@@ -461,6 +504,15 @@ export function PrivacyEn() {
           after your subscription ends or is refunded.
         </li>
         <li>
+          <strong>Contact email:</strong> until you remove it in the app, use Delete account or ask
+          us to delete it (section 2.7).
+        </li>
+        <li>
+          <strong>Backups:</strong> data deleted from the relay can remain in our hosting
+          provider&apos;s automatic database backups for up to 30 days, after which it is
+          overwritten. We use these backups only to recover from a fault.
+        </li>
+        <li>
           <strong>App data on your device:</strong> until you delete it or uninstall the app.
         </li>
         <li>
@@ -503,7 +555,8 @@ export function PrivacyEn() {
       <ul>
         <li>
           <strong>Cloudflare</strong> — hosts the Dulce relay described above and stores the saved
-          chart history and shared logbook (section 2.6), as our processor.
+          chart history and shared logbook (section 2.6) and the optional contact email (section
+          2.7), as our processor.
         </li>
         <li>
           <strong>Apple</strong> — push notifications (APNs), Live Activities, Apple Health
@@ -592,13 +645,21 @@ export function PrivacyEn() {
           removes Dulce’s history key from your iCloud Keychain, so Dulce on your other iPhones
           starts a fresh history. You can also turn off saved chart history in Settings, which
           deletes the saved copy at once, and switch off logbook sharing separately, which deletes
-          the shared logbook copy. The app has no export button for saved history; to receive a
-          copy, write to us. The minimal installation marker described above remains until
-          you request its erasure. You can exercise any of these rights by writing to{" "}
-        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. We respond within
-        one month. If a request is complex or we receive many requests, the GDPR permits an
-        extension of up to two further months; we will explain any extension within the first
+          the shared logbook copy. The app has no export button for saved history; write to us
+          and we will send you a copy in a common electronic format (for example CSV). The
+          minimal installation marker described above remains until you request its erasure.
+          You can exercise any of these rights by writing to{" "}
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Because Dulce has no
+        accounts, include your Support ID (in the app: Settings › Account › Support ID) or the
+        contact email you saved, if you have them; otherwise we will ask for other information
+        that lets us find your data, and we can only act on data we can identify. We respond
+        within one month. If a request is complex or we receive many requests, the GDPR permits
+        an extension of up to two further months; we will explain any extension within the first
         month.
+      </p>
+      <p>
+        If a Dulce user has died, a close relative or heir can ask us to delete their data and stop
+        any collecting of their history; we will ask for reasonable proof.
       </p>
       <p>
         If you believe our processing does not comply with the law, you have the right to file
@@ -613,7 +674,10 @@ export function PrivacyEn() {
       <p>
         Dulce is not directed at children under the age of 14. On Android, Dulce is intended for adults aged 18 and over. A parent or legal guardian may
         use Dulce to follow a minor’s glucose under their own responsibility; in that case the parent
-        or guardian gives or refuses the consent for saved chart history and logbook sharing. If you believe a
+        or guardian gives or refuses the consent for saved chart history and logbook sharing. If
+        you are between 14 and 18, you need a parent&apos;s or legal guardian&apos;s consent to use
+        Dulce (Terms of Use, section 4), and this includes saved chart history, logbook sharing
+        and the contact email. If you believe a
         minor in your care has provided us with data without your consent, contact us and we
         will delete it.
       </p>
@@ -628,8 +692,14 @@ export function PrivacyEn() {
 
       <h2 id="changes">12. Changes to this policy</h2>
       <p>
-        If we make material changes, we will notify affected users by email or inside the app
-        and publish the updated version with its revision date on this page.
+        If we make material changes, we tell you before they apply: in the app (in the “What’s
+        new” note of the app update that brings them, and in a notice that links to this page)
+        and, if you saved a contact email, by email. This page shows the date of the current
+        version, a short summary of what changed and a link to the previous version. Where a
+        change needs your consent, for example a new use of your health data, the app asks you
+        first and nothing new happens until you answer; app versions that do not ask keep working
+        as before. Changes to saved chart history that take something away from you are announced
+        in the app at least 30 days beforehand (Terms of Use, sections 8.1 and 15).
       </p>
 
       <h2 id="contact">13. Contact</h2>

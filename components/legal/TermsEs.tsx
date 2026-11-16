@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* Sigue pendiente la revisión legal: pedir a asesoría española que valide consumo, suscripciones y desistimiento. */}
+{/* Texto que prevalece. Decisiones de redacción y puntos abiertos: DULCE/plans/legal-answers-2026-11-16.md. */}
 export function TermsEs() {
   return (
     <>
@@ -78,6 +78,11 @@ export function TermsEs() {
         fabricante de tu CGM, de tu red y de los ajustes de tu dispositivo, y no puede
         garantizarse. Mantén activas las alarmas de la app oficial de tu sistema CGM. Dulce
         es una app complementaria y no sustituye la app oficial del fabricante.
+      </p>
+      <p>
+        Esto se aplica a todas las alertas de Dulce, también a las que se repiten mientras un valor
+        sigue fuera de rango y al aviso de que no llegan lecturas nuevas. Que Dulce no te avise de
+        que las lecturas se han detenido no significa que tu sensor o su conexión funcionen.
       </p>
       <p>
         El historial guardado de la gráfica, el diario compartido, las estadísticas y las
@@ -200,7 +205,8 @@ export function TermsEs() {
       <p>
         Podemos cambiar, limitar o suspender esta función, por ejemplo para proteger el Servicio,
         por motivos legales, para controlar su coste o porque el servicio de un fabricante de
-        sensores ya no lo permite. Si la suspendemos, te avisaremos en la app con al menos 30 días
+        sensores ya no lo permite. Si la suspendemos, o la cambiamos de forma que te quite algo
+        (por ejemplo, un historial más corto), te avisaremos en la app con al menos 30 días
         de antelación, salvo que un motivo de seguridad, legal o de un tercero ajeno a nuestro
         control lo impida; durante ese plazo tu historial guardado seguirá visible en la app y
         podrás pedirnos una copia por correo. Lo que te corresponde en ese caso se describe en la
@@ -270,7 +276,8 @@ export function TermsEs() {
       <p>
         El Servicio se presta “tal cual” y “según disponibilidad”. En la máxima medida
         permitida por la legislación aplicable, no garantizamos que el Servicio ni ninguna de
-        sus partes (incluidas las lecturas, alertas, Live Activities, widgets, actualizaciones
+        sus partes (incluidas las lecturas, alertas, alertas repetidas, el aviso de que no llegan
+        lecturas, Live Activities, widgets, actualizaciones
         del reloj, historial guardado de la gráfica, seguimiento familiar y uso compartido del
         diario) sea ininterrumpido, puntual, completo, esté libre de errores o sea 100 % seguro,
         que no se pierdan datos, ni que cumpla expectativas concretas. Esto es especialmente
@@ -292,7 +299,8 @@ export function TermsEs() {
           oficial y sus alarmas, un medidor de glucosa en sangre o tu equipo médico.
         </li>
         <li>
-          No somos responsables de que las lecturas, alertas, Live Activities, widgets,
+          No somos responsables de que las lecturas, alertas (también las repetidas y el aviso de
+          que no llegan lecturas), Live Activities, widgets,
           actualizaciones del reloj, el historial guardado de la gráfica, el seguimiento familiar
           o el uso compartido del diario lleguen tarde, estén incompletos, sean incorrectos, no
           estén disponibles o se pierdan cuando ello se deba a las causas descritas en las
@@ -330,8 +338,21 @@ export function TermsEs() {
       <h2 id="changes">15. Cambios en el Servicio o en estos términos</h2>
       <p>
         Podemos modificar el Servicio y estos términos para reflejar nuevas funciones,
-        requisitos legales o consideraciones de seguridad. Te avisaremos por correo o dentro
-        del Servicio cuando los cambios sean sustanciales.
+        requisitos legales o consideraciones de seguridad. Cuando un cambio sea sustancial, te
+        avisamos antes de que se aplique: en la app (en la nota «Novedades» de la actualización y
+        en un aviso que enlaza el texto nuevo) y, si guardaste un email de contacto, por email.
+        Esta página muestra la fecha, un breve resumen de lo que cambia y un enlace a la versión
+        anterior.
+      </p>
+      <p>
+        Los cambios que quiten algo a Dulce Pro, incluido el historial guardado de la gráfica, se
+        anuncian en la app con al menos 30 días de antelación, salvo que un motivo de seguridad,
+        legal o de un tercero ajeno a nuestro control lo impida (apartado 8.1). Si un cambio así te
+        afecta de forma más que leve, puedes terminar tu suscripción sin coste en los 30 días
+        siguientes al cambio o a nuestro aviso, lo que ocurra más tarde: cancélala en los ajustes
+        de suscripción de App Store o Google Play y pide a Apple o a Google el reembolso del
+        periodo no usado; si te lo niegan, escríbenos. Seguir usando Dulce después de un cambio no
+        significa que renuncies a ningún derecho que te reconozca la normativa de consumo.
       </p>
 
       <h2 id="termination">16. Terminación</h2>

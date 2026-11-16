@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* Sigue pendiente la revisión legal: validar con asesoría española la base jurídica, el consentimiento en la app, la conservación y las transferencias. */}
+{/* Texto que prevalece. Decisiones de redacción y puntos abiertos: DULCE/plans/legal-answers-2026-11-16.md. */}
 export function PrivacyEs() {
   return (
     <>
@@ -374,12 +374,45 @@ export function PrivacyEs() {
         </li>
         <li>
           Sin la app, escribe a{" "}
-          <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Como no hay cuenta, te
-          pediremos información que nos permita encontrar tus datos (por ejemplo, el servicio de tu
-          sensor y cuándo usaste Dulce por última vez); solo podemos actuar sobre los datos que
-          podamos identificar, y te avisaremos si no podemos.
+          <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Como no hay cuenta,
+          incluye tu ID de soporte (en la app: Ajustes › Cuenta › ID de soporte) o el email de
+          contacto que guardaste (apartado 2.7), si los tienes; si no, te pediremos información que
+          nos permita encontrar tus datos (por ejemplo, el servicio de tu sensor y cuándo usaste
+          Dulce por última vez). Solo podemos actuar sobre los datos que podamos identificar, y te
+          avisaremos si no podemos.
         </li>
       </ul>
+
+      <h3>2.7 Email de contacto (opcional)</h3>
+      <p>
+        Dulce funciona sin dirección de email. Si quieres, puedes guardar un email de contacto en
+        la app. Lo guardamos en el relay de Dulce, vinculado a tu instalación (el ID de soporte que
+        muestra la app), y lo usamos solo para:
+      </p>
+      <ul>
+        <li>responder a tus consultas de soporte y encontrar tu instalación cuando nos escribes;</li>
+        <li>
+          escribirte sobre tu instalación de Dulce o tu suscripción, por ejemplo un problema con la
+          conexión de tu sensor, un cambio en esta política o en los términos, o un mes gratis que
+          te ofrezcamos.
+        </li>
+      </ul>
+      <p>
+        No lo usamos para marketing ni boletines salvo que lo aceptes por separado, y no lo
+        compartimos con Meta, con servicios de analítica ni con nadie más, salvo con nuestro
+        proveedor de alojamiento Cloudflare, que lo guarda por nosotros. Nunca se escribe en los
+        registros. Como está vinculado a tu instalación, nos permite saber de quién es esa
+        instalación cuando te ayudamos (por ejemplo, el estado de tu suscripción o si usas el
+        seguimiento familiar); el soporte no ve tus lecturas de glucosa.
+      </p>
+      <p>
+        <strong>Base jurídica:</strong> tu consentimiento (art. 6.1.a RGPD). Darlo es opcional y
+        puedes cambiarlo o quitarlo en la app cuando quieras; al quitarlo se borra del relay.{" "}
+        <strong>Plazo:</strong> hasta que lo quites, uses Eliminar cuenta o nos pidas que lo
+        borremos. Se conserva cuando cierras sesión en tu cuenta del sensor, para que podamos
+        seguir ayudándote. Los emails que nos envías se tratan como se describe para los mensajes
+        de contacto en el apartado 6.
+      </p>
 
       <h2 id="purpose">3. Para qué usamos tus datos</h2>
       <ul>
@@ -394,6 +427,10 @@ export function PrivacyEs() {
           con la familia que invitaste (Dulce Pro, con tu consentimiento; apartado 2.6).
         </li>
         <li>Validar tu suscripción y desbloquear las funciones Pro.</li>
+        <li>
+          Si guardaste un email de contacto, responder a tus consultas de soporte y escribirte sobre
+          tu instalación o tu suscripción (apartado 2.7).
+        </li>
         <li>Avisarte cuando Dulce esté disponible (lista de espera).</li>
         <li>Responder a las consultas enviadas mediante el formulario de contacto.</li>
         <li>Proteger el sitio del abuso (hash de IP, límite de peticiones).</li>
@@ -405,13 +442,13 @@ export function PrivacyEs() {
       <ul>
         <li>
           <strong>Consentimiento explícito</strong> (art. 9.2.a RGPD): el tratamiento de tus
-          datos de salud cuando decides conectar tu CGM y usar las funciones relacionadas.
-          Desconectar tu CGM detiene el tratamiento en el relay (salvo la recogida de tu historial
-          guardado de la gráfica mientras no estás, si la aceptaste; apartado 2.6); también puedes
-          retirar el consentimiento escribiéndonos. Durante el onboarding, la app enlaza esta política,
-          pero actualmente no muestra una casilla separada para consentir el tratamiento de datos
-          de salud. Estamos pidiendo a asesoría española que confirme si el aviso y el flujo de
-          conexión actuales cumplen el estándar de consentimiento explícito.
+          datos de salud cuando conectas tu sensor en la app y usas las funciones relacionadas
+          (lecturas en directo, alertas, Actividad en directo, widgets, reloj y seguimiento
+          familiar). Lo das al conectar tu sensor, después de que la app te haya explicado qué hace
+          Dulce y enlazado esta política. Puedes retirarlo cuando quieras cerrando sesión en tu
+          cuenta del sensor en Dulce, lo que detiene el tratamiento en el relay (salvo la recogida
+          de tu historial guardado de la gráfica mientras no estás, si la aceptaste; apartado 2.6),
+          usando Eliminar cuenta o escribiéndonos.
         </li>
         <li>
           <strong>Consentimiento explícito</strong> (art. 9.2.a RGPD) para el historial guardado
@@ -433,10 +470,15 @@ export function PrivacyEs() {
           Ajustes.
         </li>
         <li>
+          <strong>Consentimiento</strong> (art. 6.1.a RGPD): para el email de contacto opcional
+          del apartado 2.7; puedes quitarlo cuando quieras en la app.
+        </li>
+        <li>
           <strong>Interés legítimo</strong> (art. 6.1.f RGPD): seguridad básica del sitio y
-          respuesta a las consultas que envías mediante el formulario de contacto. La base
-          jurídica de la analítica depende del servicio y de las normas regionales descritas en
-          la Política de Cookies; debe confirmarse con asesoría de privacidad.
+          respuesta a las consultas que nos envías mediante el formulario de contacto o por email.
+          Analítica web: tu consentimiento donde nuestra Política de Cookies lo pide (en el EEE, el
+          Reino Unido y Suiza, o cuando no podemos saber dónde estás) y, en otros lugares, nuestro
+          interés legítimo en entender cómo se usa el sitio.
         </li>
       </ul>
 
@@ -488,6 +530,16 @@ export function PrivacyEs() {
           después de que tu suscripción termine o se reembolse.
         </li>
         <li>
+          <strong>Email de contacto:</strong> hasta que lo quites en la app, uses Eliminar cuenta
+          o nos pidas que lo borremos (apartado 2.7).
+        </li>
+        <li>
+          <strong>Copias de seguridad:</strong> los datos borrados del relay pueden permanecer
+          hasta 30 días en las copias de seguridad automáticas de la base de datos de nuestro
+          proveedor de alojamiento; después se sobrescriben. Solo usamos esas copias para
+          recuperarnos de un fallo.
+        </li>
+        <li>
           <strong>Datos de la app en tu dispositivo:</strong> hasta que los borres o
           desinstales la app.
         </li>
@@ -533,8 +585,8 @@ export function PrivacyEs() {
       <ul>
         <li>
           <strong>Cloudflare</strong> — aloja el relay de Dulce descrito arriba y guarda el
-          historial guardado de la gráfica y el diario compartido (apartado 2.6), como encargado
-          del tratamiento.
+          historial guardado de la gráfica y el diario compartido (apartado 2.6) y el email de
+          contacto opcional (apartado 2.7), como encargado del tratamiento.
         </li>
         <li>
           <strong>Apple</strong> — notificaciones push (APNs), Live Activities, Apple Salud
@@ -625,14 +677,22 @@ export function PrivacyEs() {
         así que Dulce empezará un historial nuevo en tus otros iPhone. También puedes desactivar
         el historial guardado de la gráfica en Ajustes, lo que borra la copia guardada de
         inmediato, y desactivar por separado el uso compartido del diario, lo que borra la copia
-        del diario compartido. La app no tiene un botón para exportar el historial guardado; para
-        recibir una copia, escríbenos. El marcador mínimo de instalación descrito arriba
-        permanece hasta que solicites su borrado. Puedes ejercer cualquiera de estos derechos
-        escribiendo a{" "}
-        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Respondemos en el
-        plazo de un mes. Si la solicitud es compleja o recibimos muchas solicitudes, el RGPD
-        permite ampliarlo hasta dos meses más; te explicaremos cualquier ampliación durante el
-        primer mes.
+        del diario compartido. La app no tiene un botón para exportar el historial guardado;
+        escríbenos y te enviaremos una copia en un formato electrónico de uso común (por ejemplo,
+        CSV). El marcador mínimo de instalación descrito arriba permanece hasta que solicites su
+        borrado. Puedes ejercer cualquiera de estos derechos escribiendo a{" "}
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Como Dulce no tiene
+        cuentas, incluye tu ID de soporte (en la app: Ajustes › Cuenta › ID de soporte) o el email
+        de contacto que guardaste, si los tienes; si no, te pediremos otra información que nos
+        permita encontrar tus datos, y solo podemos actuar sobre los datos que podamos
+        identificar. Respondemos en el plazo de un mes. Si la solicitud es compleja o recibimos
+        muchas solicitudes, el RGPD permite ampliarlo hasta dos meses más; te explicaremos
+        cualquier ampliación durante el primer mes.
+      </p>
+      <p>
+        Si un usuario de Dulce ha fallecido, un familiar cercano o un heredero puede pedirnos que
+        borremos sus datos y detengamos cualquier recogida de su historial; le pediremos una
+        prueba razonable.
       </p>
       <p>
         Si crees que nuestro tratamiento no cumple la ley, tienes derecho a presentar una
@@ -648,7 +708,10 @@ export function PrivacyEs() {
         Dulce no está dirigida a menores de 14 años. En Android, Dulce está pensada para adultos de 18 años o más. Un padre, madre o tutor legal puede usar
         Dulce para seguir la glucosa de un menor bajo su propia responsabilidad; en ese caso, es
         el padre, la madre o el tutor quien da o niega el consentimiento para el historial
-        guardado de la gráfica y el uso compartido del diario. Si crees que
+        guardado de la gráfica y el uso compartido del diario. Si tienes entre 14 y 18 años,
+        necesitas el consentimiento de tu padre, madre o tutor legal para usar Dulce (Términos de
+        uso, apartado 4), y eso incluye el historial guardado de la gráfica, el uso compartido del
+        diario y el email de contacto. Si crees que
         un menor a tu cargo nos ha facilitado datos sin tu consentimiento, contáctanos y los
         eliminaremos.
       </p>
@@ -663,9 +726,15 @@ export function PrivacyEs() {
 
       <h2 id="changes">12. Cambios en esta política</h2>
       <p>
-        Si hacemos cambios sustanciales, avisaremos a los usuarios afectados por correo o
-        dentro de la app y publicaremos la versión actualizada con su fecha de revisión en
-        esta página.
+        Si hacemos cambios sustanciales, te avisamos antes de que se apliquen: en la app (en la
+        nota «Novedades» de la actualización que los trae y en un aviso que enlaza esta página) y,
+        si guardaste un email de contacto, por email. Esta página muestra la fecha de la versión
+        actual, un breve resumen de lo que cambia y un enlace a la versión anterior. Si un cambio
+        necesita tu consentimiento, por ejemplo un nuevo uso de tus datos de salud, la app te lo
+        pide primero y no pasa nada nuevo hasta que respondas; las versiones de la app que no lo
+        piden siguen funcionando como antes. Los cambios en el historial guardado de la gráfica
+        que te quiten algo se anuncian en la app con al menos 30 días de antelación (Términos de
+        uso, apartados 8.1 y 15).
       </p>
 
       <h2 id="contact">13. Contacto</h2>

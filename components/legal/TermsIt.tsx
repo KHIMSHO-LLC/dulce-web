@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* Translation of the Spanish/English terms. TODO: review local legal terminology; Spanish counsel review remains outstanding. */}
+{/* Traduzione del testo spagnolo, che prevale. Decisioni di redazione e punti aperti: DULCE/plans/legal-answers-2026-11-16.md (in inglese). */}
 export function TermsIt() {
   return (
     <>
@@ -77,6 +77,12 @@ export function TermsIt() {
         dal fornitore del CGM, dalla rete e dalle impostazioni del dispositivo e non può essere garantita. Tieni
         attivi gli allarmi dell&apos;app ufficiale del tuo sistema CGM. Dulce è un&apos;app
         complementare e non sostituisce l&apos;app ufficiale del produttore.
+      </p>
+      <p>
+        Questo vale per tutti gli avvisi di Dulce, anche per quelli che si ripetono finché un
+        valore resta fuori intervallo e per l&apos;avviso che ti segnala che non arrivano nuove
+        letture. Se Dulce non ti avverte che le letture si sono interrotte, ciò non significa che
+        il tuo sensore o il suo collegamento funzionino.
       </p>
       <p>
         La cronologia del grafico salvata, il diario condiviso, le statistiche e i grafici di
@@ -198,7 +204,8 @@ export function TermsIt() {
       <p>
         Possiamo modificare, limitare o interrompere questa funzione, ad esempio per proteggere il
         Servizio, per motivi legali, per controllarne il costo o perché il servizio del produttore
-        di un sensore non la consente più. Se la interrompiamo, te lo comunicheremo nell&apos;app
+        di un sensore non la consente più. Se la interrompiamo, o la modifichiamo in modo che ti tolga
+        qualcosa (ad esempio una cronologia più breve), te lo comunicheremo nell&apos;app
         con almeno 30 giorni di anticipo, salvo che un motivo di sicurezza, legale o legato a terzi
         al di fuori del nostro controllo lo renda impossibile; durante quel periodo la tua
         cronologia salvata resta visibile nell&apos;app e puoi chiederci una copia via email. Ciò a
@@ -267,7 +274,8 @@ export function TermsIt() {
       <p>
         Il Servizio è fornito «così com&apos;è» e «come disponibile». Nella misura massima
         consentita dalla legge applicabile, non garantiamo che il Servizio o una sua parte
-        (comprese letture, avvisi, Attività in tempo reale, widget, aggiornamenti sull&apos;orologio,
+        (comprese letture, avvisi, avvisi ripetuti, l&apos;avviso quando non arrivano letture,
+        Attività in tempo reale, widget, aggiornamenti sull&apos;orologio,
         cronologia del grafico salvata, monitoraggio da parte della famiglia e condivisione del
         diario) sia ininterrotto, tempestivo, completo, privo di errori o sicuro al 100%, che i
         dati non vadano persi o che soddisfi aspettative specifiche. Questo vale in particolare per
@@ -289,7 +297,8 @@ export function TermsIt() {
           sua app ufficiale e sui suoi allarmi, su un glucometro o sul tuo team sanitario.
         </li>
         <li>
-          Non rispondiamo del fatto che letture, avvisi, Attività in tempo reale, widget,
+          Non rispondiamo del fatto che letture, avvisi (compresi gli avvisi ripetuti e
+          l&apos;avviso quando non arrivano letture), Attività in tempo reale, widget,
           aggiornamenti sull&apos;orologio, cronologia del grafico salvata, monitoraggio da parte
           della famiglia o condivisione del diario siano in ritardo, incompleti, errati,
           non disponibili o persi, quando ciò deriva dalle cause descritte nelle sezioni 3, 8.1 e 10
@@ -326,8 +335,23 @@ export function TermsIt() {
       <h2 id="changes">15. Modifiche al Servizio o a questi termini</h2>
       <p>
         Possiamo modificare il Servizio e questi termini per riflettere nuove funzioni, requisiti
-        di legge o esigenze di sicurezza. Ti avviseremo via email o nel Servizio quando le
-        modifiche sono rilevanti.
+        di legge o esigenze di sicurezza. Quando una modifica è rilevante, ti avvisiamo prima che
+        si applichi: nell&apos;app (nella nota «Novità» dell&apos;aggiornamento e in un avviso che
+        rimanda al nuovo testo) e, se hai salvato un&apos;email di contatto, via email. Questa
+        pagina mostra la data, un breve riepilogo di ciò che cambia e un link alla versione
+        precedente.
+      </p>
+      <p>
+        Le modifiche che tolgono qualcosa a Dulce Pro, compresa la cronologia del grafico salvata,
+        vengono annunciate nell&apos;app con almeno 30 giorni di anticipo, salvo che un motivo di
+        sicurezza, legale o legato a terzi al di fuori del nostro controllo lo renda impossibile
+        (sezione 8.1). Se una modifica di questo tipo ti riguarda più che marginalmente, puoi
+        porre fine all&apos;abbonamento senza costi entro 30 giorni dalla modifica o dal nostro
+        avviso, a seconda di quale data sia successiva: disdicilo nelle impostazioni degli
+        abbonamenti di App Store o Google Play e chiedi ad Apple o a Google il rimborso del
+        periodo non utilizzato; se rifiutano, scrivici. Continuare a usare Dulce dopo una modifica
+        non significa rinunciare ai diritti che ti riconosce la normativa inderogabile a tutela
+        dei consumatori.
       </p>
 
       <h2 id="termination">16. Cessazione</h2>

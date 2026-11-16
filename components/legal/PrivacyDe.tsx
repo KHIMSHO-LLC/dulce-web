@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* Translation of the Spanish/English policy. TODO: review local legal terminology; Spanish counsel review remains outstanding. */}
+{/* Übersetzung des spanischen Textes, der Vorrang hat. Entscheidungen zur Formulierung und offene Punkte: DULCE/plans/legal-answers-2026-11-16.md (auf Englisch). */}
 export function PrivacyDe() {
   return (
     <>
@@ -359,12 +359,46 @@ Missbrauch.
         <li>
           Ohne die App schreib an{" "}
           <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Da es kein Konto gibt,
+          gib deine Support-ID (in der App: Einstellungen › Konto › Support-ID) oder die
+          Kontakt-E-Mail an, die du gespeichert hast (Abschnitt 2.7), falls du sie hast; sonst
           fragen wir dich nach Angaben, mit denen wir deine Daten finden können (zum Beispiel
-          deinen Sensordienst und wann du Dulce zuletzt genutzt hast); wir können nur auf Daten
+          deinen Sensordienst und wann du Dulce zuletzt genutzt hast). Wir können nur auf Daten
           reagieren, die wir identifizieren können, und sagen dir Bescheid, wenn wir das nicht
           können.
         </li>
       </ul>
+
+      <h3>2.7 Kontakt-E-Mail (optional)</h3>
+      <p>
+        Dulce funktioniert ohne E-Mail-Adresse. Wenn du willst, kannst du in der App eine
+        Kontakt-E-Mail speichern. Wir speichern sie auf dem Dulce-Relay, verknüpft mit deiner
+        Installation (der Support-ID, die die App anzeigt), und verwenden sie nur, um:
+      </p>
+      <ul>
+        <li>deine Supportanfragen zu beantworten und deine Installation zu finden, wenn du uns schreibst;</li>
+        <li>
+          dir zu deiner Dulce-Installation oder deinem Abonnement zu schreiben, zum Beispiel bei
+          einem Problem mit der Verbindung deines Sensors, einer Änderung dieser Erklärung oder der
+          Nutzungsbedingungen oder einem Gratismonat, den wir dir anbieten.
+        </li>
+      </ul>
+      <p>
+        Wir verwenden sie nicht für Marketing oder Newsletter, außer du stimmst dem gesondert zu,
+        und wir geben sie nicht an Meta, Analysedienste oder sonst jemanden weiter, außer an
+        unseren Hosting-Anbieter Cloudflare, der sie für uns speichert. Sie wird nie in Protokolle
+        geschrieben. Weil sie mit deiner Installation verknüpft ist, sehen wir damit, wem die
+        Installation gehört, wenn wir dir helfen (zum Beispiel Abo-Status oder ob du das Folgen
+        durch die Familie nutzt); der Support sieht deine Glukosewerte nicht.
+      </p>
+      <p>
+        <strong>Rechtsgrundlage:</strong> deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie ist
+        freiwillig, und du kannst sie in der App jederzeit ändern oder entfernen; beim Entfernen
+        wird sie vom Relay gelöscht.{" "}
+        <strong>Wie lange:</strong> bis du sie entfernst, „Konto löschen“ nutzt oder uns um
+        Löschung bittest. Sie bleibt erhalten, wenn du dich von deinem Sensorkonto abmeldest,
+        damit wir dir dann weiter helfen können. E-Mails, die du uns schickst, behandeln wir wie
+        die Kontaktanfragen in Abschnitt 6.
+      </p>
 
       <h2 id="purpose">3. Wofür wir deine Daten verwenden</h2>
       <ul>
@@ -377,6 +411,10 @@ Missbrauch.
           Abschnitt 2.6).
         </li>
         <li>Dein Abonnement prüfen und Pro-Funktionen freischalten.</li>
+        <li>
+          Wenn du eine Kontakt-E-Mail gespeichert hast, deine Supportanfragen beantworten und dir
+          zu deiner Installation oder deinem Abonnement schreiben (Abschnitt 2.7).
+        </li>
         <li>Dir mitteilen, wann Dulce verfügbar ist (Warteliste).</li>
         <li>Fragen beantworten, die du über das Kontaktformular sendest.</li>
         <li>Die Website vor Missbrauch schützen (IP-Hash, Begrenzung).</li>
@@ -388,15 +426,14 @@ Missbrauch.
       <ul>
         <li>
           <strong>Ausdrückliche Einwilligung</strong> (Art. 9 Abs. 2 lit. a DSGVO): Verarbeitung
-          deiner Gesundheitsdaten, wenn du dein CGM verbindest und die zugehörigen Funktionen
-          nutzt. Wenn du dein CGM trennst, endet die Verarbeitung über das Relay (außer dem Sammeln
-          deines gespeicherten Kurvenverlaufs während deiner Abwesenheit, wenn du es akzeptiert
-          hast; Abschnitt 2.6); du kannst
-          deine Einwilligung auch widerrufen, indem du uns kontaktierst. Beim Onboarding verlinkt
-          die App diese Richtlinie, zeigt derzeit aber kein separates Kontrollkästchen für die
-          Einwilligung in die Verarbeitung von Gesundheitsdaten. Wir lassen mit spanischer
-          Datenschutzberatung prüfen, ob der aktuelle Hinweis und Verbindungsablauf den Maßstab
-          für eine ausdrückliche Einwilligung erfüllen.
+          deiner Gesundheitsdaten, wenn du in der App deinen Sensor verbindest und die zugehörigen
+          Funktionen nutzt (Live-Werte, Warnungen, Live-Aktivität, Widgets, Uhr und Folgen durch
+          die Familie). Du erteilst sie, indem du deinen Sensor verbindest, nachdem die App erklärt
+          hat, was Dulce tut, und auf diese Erklärung verlinkt hat. Du kannst sie jederzeit
+          widerrufen, indem du dich in Dulce von deinem Sensorkonto abmeldest, wodurch die
+          Verarbeitung über das Relay endet (außer dem Sammeln deines gespeicherten Kurvenverlaufs
+          während deiner Abwesenheit, wenn du es akzeptiert hast; Abschnitt 2.6), indem du
+          „Konto löschen“ nutzt oder uns schreibst.
         </li>
         <li>
           <strong>Ausdrückliche Einwilligung</strong> (Art. 9 Abs. 2 lit. a DSGVO) für den
@@ -419,10 +456,16 @@ Missbrauch.
           widerrufen.
         </li>
         <li>
+          <strong>Einwilligung</strong> (Art. 6 Abs. 1 lit. a DSGVO): für die optionale
+          Kontakt-E-Mail nach Abschnitt 2.7; du kannst sie jederzeit in der App entfernen.
+        </li>
+        <li>
           <strong>Berechtigtes Interesse</strong> (Art. 6 Abs. 1 lit. f DSGVO): grundlegende
-          Sicherheit der Website und Beantwortung deiner Kontaktanfragen. Die Rechtsgrundlage
-          für Analysen hängt vom Dienst und den in unserer Cookie-Richtlinie beschriebenen
-          regionalen Regeln ab und muss mit Datenschutzberatung bestätigt werden.
+          Sicherheit der Website und Beantwortung der Anfragen, die du uns über das
+          Kontaktformular oder per E-Mail schickst. Website-Analyse: deine Einwilligung, wo unsere
+          Cookie-Richtlinie sie verlangt (im EWR, im Vereinigten Königreich und in der Schweiz oder
+          wenn wir nicht erkennen können, wo du bist), sonst unser berechtigtes Interesse daran zu
+          verstehen, wie die Website genutzt wird.
         </li>
       </ul>
 
@@ -503,6 +546,15 @@ Missbrauch.
           <strong>Betriebsprotokolle:</strong> Cloudflare Workers Logs werden nach 7 Tagen gelöscht.
         </li>
         <li>
+          <strong>Kontakt-E-Mail:</strong> bis du sie in der App entfernst, „Konto löschen“ nutzt
+          oder uns um Löschung bittest (Abschnitt 2.7).
+        </li>
+        <li>
+          <strong>Backups:</strong> Vom Relay gelöschte Daten können bis zu 30 Tage in den
+          automatischen Datenbank-Backups unseres Hosting-Anbieters bleiben und werden danach
+          überschrieben. Wir nutzen diese Backups nur, um uns von einer Störung zu erholen.
+        </li>
+        <li>
           <strong>Installationsmarker:</strong> Die zufällige ID und der Zeitpunkt der ersten
           Registrierung bleiben nach dem Löschen der Relay-Daten erhalten. Du kannst auch die
           Löschung dieses Markers anfragen. Er läuft nicht automatisch ab.
@@ -519,7 +571,7 @@ Missbrauch.
         <li>
           <strong>Cloudflare</strong>: hostet das oben beschriebene Dulce-Relay und speichert als
           unser Auftragsverarbeiter den gespeicherten Kurvenverlauf und das geteilte Logbuch
-          (Abschnitt 2.6).
+          (Abschnitt 2.6) sowie die optionale Kontakt-E-Mail (Abschnitt 2.7).
         </li>
         <li>
           <strong>Apple</strong>: Push-Mitteilungen (APNs), Live-Aktivitäten, Apple Health (auf
@@ -607,13 +659,22 @@ Missbrauch.
         beginnt. Du kannst den gespeicherten Kurvenverlauf auch in den Einstellungen ausschalten,
         wodurch die gespeicherte Kopie sofort gelöscht wird, und das Teilen des Logbuchs separat
         ausschalten, wodurch die geteilte Kopie des Logbuchs gelöscht wird. Die App hat keine
-        Export-Schaltfläche für den gespeicherten Verlauf; um eine Kopie zu erhalten, schreib uns.
-        Der oben beschriebene minimale Installationsmarker
-        bleibt bestehen, bis du seine Löschung beantragst. Du kannst jedes dieser Rechte auch
-        per E-Mail an <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a> ausüben. Wir
-        antworten innerhalb eines Monats. Bei komplexen oder zahlreichen Anfragen erlaubt die
-        DSGVO eine Verlängerung um bis zu zwei weitere Monate; über eine Verlängerung informieren
-        wir dich innerhalb des ersten Monats.
+        Export-Schaltfläche für den gespeicherten Verlauf; schreib uns, dann senden wir dir eine
+        Kopie in einem gängigen elektronischen Format (zum Beispiel CSV). Der oben beschriebene
+        minimale Installationsmarker bleibt bestehen, bis du seine Löschung beantragst. Du kannst
+        jedes dieser Rechte auch per E-Mail an{" "}
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a> ausüben. Da Dulce keine
+        Konten hat, gib deine Support-ID (in der App: Einstellungen › Konto › Support-ID) oder die
+        Kontakt-E-Mail an, die du gespeichert hast, falls du sie hast; sonst fragen wir nach
+        anderen Angaben, mit denen wir deine Daten finden können, und wir können nur auf Daten
+        reagieren, die wir identifizieren können. Wir antworten innerhalb eines Monats. Bei
+        komplexen oder zahlreichen Anfragen erlaubt die DSGVO eine Verlängerung um bis zu zwei
+        weitere Monate; über eine Verlängerung informieren wir dich innerhalb des ersten Monats.
+      </p>
+      <p>
+        Wenn ein Dulce-Nutzer verstorben ist, können ein naher Angehöriger oder ein Erbe uns bitten,
+        seine Daten zu löschen und jedes Sammeln seines Verlaufs zu beenden; wir verlangen dafür
+        einen angemessenen Nachweis.
       </p>
       <p>
         Wenn du meinst, dass unsere Verarbeitung nicht dem Gesetz entspricht, kannst du dich bei
@@ -629,8 +690,11 @@ Missbrauch.
         Dulce richtet sich nicht an Kinder unter 14 Jahren. Unter Android richtet sich Dulce an Erwachsene ab 18 Jahren. Eltern oder gesetzliche Vertreter
         können Dulce in eigener Verantwortung nutzen, um die Glukose eines Kindes zu verfolgen;
         in diesem Fall erteilen oder verweigern die Eltern oder der gesetzliche Vertreter die
-        Einwilligung in den gespeicherten Kurvenverlauf und das Teilen des Logbuchs.
-        Wenn du glaubst, dass ein Kind in deiner Obhut uns ohne deine Einwilligung Daten gegeben
+        Einwilligung in den gespeicherten Kurvenverlauf und das Teilen des Logbuchs. Wenn du
+        zwischen 14 und 18 bist, brauchst du für die Nutzung von Dulce die Einwilligung deiner
+        Eltern oder deines gesetzlichen Vertreters (Nutzungsbedingungen, Abschnitt 4); das
+        schließt den gespeicherten Kurvenverlauf, das Teilen des Logbuchs und die Kontakt-E-Mail
+        ein. Wenn du glaubst, dass ein Kind in deiner Obhut uns ohne deine Einwilligung Daten gegeben
         hat, melde dich bei uns und wir löschen sie.
       </p>
 
@@ -644,8 +708,15 @@ Missbrauch.
 
       <h2 id="changes">12. Änderungen dieser Erklärung</h2>
       <p>
-        Bei wesentlichen Änderungen informieren wir betroffene Nutzer per E-Mail oder in der App
-        und veröffentlichen die neue Fassung mit Datum auf dieser Seite.
+        Bei wesentlichen Änderungen informieren wir dich, bevor sie gelten: in der App (in der
+        Notiz „Neuerungen“ des App-Updates, das sie bringt, und in einem Hinweis, der auf diese
+        Seite verlinkt) und, wenn du eine Kontakt-E-Mail gespeichert hast, per E-Mail. Diese Seite
+        zeigt das Datum der aktuellen Fassung, eine kurze Zusammenfassung der Änderungen und einen
+        Link zur vorherigen Fassung. Wenn eine Änderung deine Einwilligung braucht, zum Beispiel
+        eine neue Nutzung deiner Gesundheitsdaten, fragt die App dich zuerst, und nichts Neues
+        geschieht, bis du antwortest; App-Versionen, die nicht fragen, funktionieren wie bisher.
+        Änderungen am gespeicherten Kurvenverlauf, die dir etwas wegnehmen, werden in der App
+        mindestens 30 Tage vorher angekündigt (Nutzungsbedingungen, Abschnitte 8.1 und 15).
       </p>
 
       <h2 id="contact">13. Kontakt</h2>

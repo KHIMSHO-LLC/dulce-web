@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* Legal review remains outstanding: have Spanish counsel verify consumer, subscription and withdrawal wording. */}
+{/* Translation of the Spanish terms, which prevail. Drafting decisions and open points: DULCE/plans/legal-answers-2026-11-16.md. */}
 export function TermsEn() {
   return (
     <>
@@ -74,6 +74,12 @@ export function TermsEn() {
         network and your device settings, and cannot be guaranteed. Keep the alarm features
         of your official CGM app active. Dulce is a companion app and does not replace the
         official app from your CGM manufacturer.
+      </p>
+      <p>
+        This applies to every alert in Dulce, including alerts that repeat while a value stays out
+        of range and the alert that tells you no new readings have arrived. If Dulce does not warn
+        you that readings have stopped, that does not mean your sensor or its connection is
+        working.
       </p>
       <p>
         Saved chart history, the shared logbook, statistics and charts in Dulce are not a medical
@@ -185,7 +191,8 @@ export function TermsEn() {
       <p>
         We may change, limit or stop this feature, for example to protect the Service, for legal
         reasons, to control its cost, or because a sensor maker&apos;s service no longer allows
-        it. If we stop it, we will tell you in the app at least 30 days beforehand, unless a
+        it. If we stop it, or change it in a way that takes something away from you (for example
+        a shorter history), we will tell you in the app at least 30 days beforehand, unless a
         security, legal or third-party reason outside our control makes that impossible; during
         that time your saved history stays visible in the app and you can ask us by email for a
         copy. What you are entitled to in that case is described in section 10.
@@ -249,7 +256,7 @@ export function TermsEn() {
       <p>
         The Service is provided “as is” and “as available”. To the fullest extent permitted by
         applicable law, we do not warrant that the Service or any part of it (including readings,
-        alerts, Live Activities, widgets, watch updates, saved chart history, family following and
+        alerts, repeat alerts, the alert when no readings arrive, Live Activities, widgets, watch updates, saved chart history, family following and
         logbook sharing) will be uninterrupted, on time, complete, error-free or 100% secure, that
         data will not be lost, or that it will meet specific expectations. This is especially
         relevant for data from third-party CGM services: any delay, error or absence of data from
@@ -270,7 +277,8 @@ export function TermsEn() {
           glucose meter or your healthcare team.
         </li>
         <li>
-          We are not liable for readings, alerts, Live Activities, widgets, watch updates, saved
+          We are not liable for readings, alerts (including repeat alerts and the alert when no
+          readings arrive), Live Activities, widgets, watch updates, saved
           chart history, family following or logbook sharing being late, incomplete, incorrect,
           unavailable or lost where this results from the causes described in sections 3, 8.1 and
           10 (including your device, network and operating system, and the services of your sensor
@@ -305,8 +313,20 @@ export function TermsEn() {
       <h2 id="changes">15. Changes to the Service or these terms</h2>
       <p>
         We may modify the Service and these terms to reflect new features, legal requirements
-        or security considerations. We will let you know by email or inside the Service when
-        the changes are material.
+        or security considerations. When a change is material, we tell you before it applies: in
+        the app (in the “What’s new” note of the app update and in a notice that links to the new
+        text) and, if you saved a contact email, by email. This page shows the date, a short
+        summary of what changed and a link to the previous version.
+      </p>
+      <p>
+        Changes that take something away from Dulce Pro, including saved chart history, are
+        announced in the app at least 30 days beforehand, unless a security, legal or third-party
+        reason outside our control makes that impossible (section 8.1). If such a change affects
+        you more than slightly, you can end your subscription free of charge within 30 days of
+        the change or of being told about it, whichever is later: cancel it in your App Store or
+        Google Play subscription settings and ask Apple or Google for a refund of the unused
+        period; if they refuse, write to us. Continuing to use Dulce after a change does not mean
+        you give up any right you have under mandatory consumer law.
       </p>
 
       <h2 id="termination">16. Termination</h2>

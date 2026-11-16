@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* Translation of the Spanish/English terms. TODO: review local legal terminology; Spanish counsel review remains outstanding. */}
+{/* Traduction du texte espagnol, qui prévaut. Décisions de rédaction et points ouverts : DULCE/plans/legal-answers-2026-11-16.md (en anglais). */}
 export function TermsFr() {
   return (
     <>
@@ -81,6 +81,12 @@ export function TermsFr() {
         d&apos;Apple, de ton fournisseur CGM, de ton réseau et des réglages de ton appareil, et ne peut pas
         être garantie. Garde actives les alarmes de l&apos;app officielle de ton système CGM.
         Dulce est une app complémentaire et ne remplace pas l&apos;app officielle du fabricant.
+      </p>
+      <p>
+        Cela vaut pour toutes les alertes de Dulce, y compris celles qui se répètent tant qu&apos;une
+        valeur reste hors de la plage et l&apos;alerte qui te prévient qu&apos;aucune nouvelle
+        mesure n&apos;arrive. Si Dulce ne t&apos;avertit pas que les mesures se sont arrêtées, cela
+        ne signifie pas que ton capteur ou sa connexion fonctionnent.
       </p>
       <p>
         L&apos;historique de courbe enregistré, le journal partagé, les statistiques et les
@@ -205,8 +211,9 @@ export function TermsFr() {
       <p>
         Nous pouvons modifier, limiter ou arrêter cette fonction, par exemple pour protéger le
         Service, pour des raisons légales, pour en maîtriser le coût ou parce que le service du
-        fabricant d&apos;un capteur ne l&apos;autorise plus. Si nous l&apos;arrêtons, nous te le
-        dirons dans l&apos;app au moins 30 jours à l&apos;avance, sauf si une raison de sécurité,
+        fabricant d&apos;un capteur ne l&apos;autorise plus. Si nous l&apos;arrêtons, ou si nous la modifions
+        d&apos;une façon qui te retire quelque chose (par exemple un historique plus court), nous
+        te le dirons dans l&apos;app au moins 30 jours à l&apos;avance, sauf si une raison de sécurité,
         une raison légale ou liée à un tiers, indépendante de notre volonté, l&apos;en empêche ;
         pendant ce délai, ton historique enregistré reste visible dans l&apos;app et tu peux nous
         en demander une copie par e-mail. Ce à quoi tu as droit dans ce cas est décrit à la
@@ -277,7 +284,8 @@ export function TermsFr() {
       <p>
         Le Service est fourni « en l&apos;état » et « selon disponibilité ». Dans toute la mesure
         permise par la loi applicable, nous ne garantissons pas que le Service ou une partie de
-        celui-ci (y compris les mesures, les alertes, les Activités en direct, les widgets, les
+        celui-ci (y compris les mesures, les alertes, les alertes répétées, l&apos;alerte en
+        l&apos;absence de nouvelles mesures, les Activités en direct, les widgets, les
         mises à jour de la montre, l&apos;historique de courbe enregistré, le suivi par la famille
         et le partage du journal) sera ininterrompu, ponctuel, complet, exempt d&apos;erreurs ou
         sûr à 100 %, que les données ne seront pas perdues, ou qu&apos;il répondra à des attentes
@@ -301,7 +309,8 @@ export function TermsFr() {
         </li>
         <li>
           Nous ne sommes pas responsables du retard, du caractère incomplet, de l&apos;inexactitude,
-          de l&apos;indisponibilité ou de la perte des mesures, alertes, Activités en direct,
+          de l&apos;indisponibilité ou de la perte des mesures, alertes (y compris les alertes
+          répétées et l&apos;alerte en l&apos;absence de nouvelles mesures), Activités en direct,
           widgets, mises à jour de la montre, de l&apos;historique de courbe enregistré, du suivi
           par la famille ou du partage du journal lorsque cela résulte des causes décrites aux
           sections 3, 8.1 et 10 (y compris ton appareil, ton réseau et ton système
@@ -339,8 +348,23 @@ export function TermsFr() {
       <h2 id="changes">15. Modifications du Service ou de ces conditions</h2>
       <p>
         Nous pouvons modifier le Service et ces conditions pour tenir compte de nouvelles
-        fonctions, d&apos;exigences légales ou de considérations de sécurité. Nous te
-        préviendrons par e-mail ou dans le Service si les changements sont importants.
+        fonctions, d&apos;exigences légales ou de considérations de sécurité. Quand un changement
+        est important, nous te prévenons avant qu&apos;il s&apos;applique : dans l&apos;app (dans
+        la note « Nouveautés » de la mise à jour et dans un avis qui renvoie vers le nouveau
+        texte) et, si tu as enregistré un e-mail de contact, par e-mail. Cette page indique la
+        date, un bref résumé de ce qui change et un lien vers la version précédente.
+      </p>
+      <p>
+        Les changements qui retirent quelque chose à Dulce Pro, y compris l&apos;historique de
+        courbe enregistré, sont annoncés dans l&apos;app au moins 30 jours à l&apos;avance, sauf si
+        une raison de sécurité, une raison légale ou liée à un tiers, indépendante de notre
+        volonté, l&apos;en empêche (section 8.1). Si un tel changement t&apos;affecte plus
+        qu&apos;à peine, tu peux mettre fin à ton abonnement sans frais dans les 30 jours suivant
+        le changement ou notre avis, selon la date la plus tardive : résilie-le dans les réglages
+        d&apos;abonnement de l&apos;App Store ou de Google Play et demande à Apple ou à Google le
+        remboursement de la période non utilisée ; s&apos;ils refusent, écris-nous. Continuer à
+        utiliser Dulce après un changement ne signifie pas que tu renonces aux droits que te
+        reconnaît le droit impératif de la consommation.
       </p>
 
       <h2 id="termination">16. Résiliation</h2>
