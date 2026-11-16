@@ -421,6 +421,102 @@ export async function fetchCancelFeedback(adminKey: string): Promise<CancelAnswe
   return data.answers;
 }
 
+/** One device found by contact email or Support ID (relay routes/contact lookup). */
+export interface ContactLookupRow {
+  supportId: string;
+  logTag: string;
+  email: string | null;
+  emailSource: string | null;
+  emailUpdatedAt: number | null;
+  registered: boolean;
+  platform: string | null;
+  appVersion: string | null;
+  appBuild: string | null;
+  tier: string | null;
+  cgmProvider: string | null;
+  firstSeenAt: number | null;
+  lastPolledAt: number | null;
+  lastReadingAt: number | null;
+  consecutiveFailures: number | null;
+  lastError: string | null;
+  followers: number;
+  rcAppUserId: string | null;
+  refundedAt: number | null;
+  lapsedAt: number | null;
+  referralCode: string | null;
+  cancelReason: string | null;
+  /** End of a support grant (promotional Pro) still on the device. Optional: older relays omit it. */
+  promoUntil?: number | null;
+  /** Latest support grant the relay gave this device. */
+  lastGrant?: { at: number; months: number; expiresAt: number; note: string | null } | null;
+}
+
+export const GRANT_MONTHS = [1, 3, 6, 12] as const;
+export type GrantMonths = (typeof GRANT_MONTHS)[number];
+
+/**
+ * POST /ref/admin/grant: N free months of Pro (RevenueCat promotional
+ * entitlement) for the customer behind this Support ID. Returns the new end
+ * (epoch ms). Throws ApiError with the relay's message on failure.
+ */
+export async function grantFreeMonths(
+  adminKey: string,
+  supportId: string,
+  months: GrantMonths,
+  note: string,
+): Promise<number> {
+  try {
+    const data = await request<{ ok: boolean; expiresAt: number }>(adminKey, "/ref/admin/grant", {
+      method: "POST",
+      body: JSON.stringify({ supportId, months, ...(note.trim() ? { note: note.trim() } : {}) }),
+    });
+    return data.expiresAt;
+  } catch (err) {
+    if (err instanceof ApiError && err.status !== 0) {
+      let parsed: { error?: string; message?: string } = {};
+      try {
+        parsed = JSON.parse(err.message) as typeof parsed;
+      } catch {
+        // not JSON: keep the raw text
+      }
+      if (err.status === 404 && !parsed.error) {
+        throw new ApiError(404, "This relay has no /ref/admin/grant yet (not deployed).");
+      }
+      throw new ApiError(err.status, parsed.message ?? parsed.error ?? err.message);
+    }
+    throw err;
+  }
+}
+
+/** An "@" means email, anything else is a Support ID. Throws ApiError(400) on a bad value. */
+export async function fetchContact(adminKey: string, query: string): Promise<ContactLookupRow[]> {
+  const q = query.trim();
+  const param = q.includes("@") ? "email" : "supportId";
+  try {
+    const data = await request<{ devices: ContactLookupRow[] }>(
+      adminKey,
+      `/ref/admin/contact?${param}=${encodeURIComponent(q)}`,
+    );
+    return data.devices;
+  } catch (err) {
+    if (err instanceof ApiError && err.status === 400) {
+      let code = "";
+      try {
+        code = (JSON.parse(err.message) as { error?: string }).error ?? "";
+      } catch {
+        // not JSON: show the raw text
+      }
+      const text: Record<string, string> = {
+        bad_email: "That does not look like an email address.",
+        bad_support_id: "That does not look like a Support ID.",
+        missing_query: "Type an email or a Support ID.",
+      };
+      throw new ApiError(400, text[code] ?? (code || err.message));
+    }
+    throw err;
+  }
+}
+
 export async function fetchRcOverview(
   adminKey: string,
 ): Promise<RcResult<{ metrics: RcOverviewMetric[]; currency: string }>> {
