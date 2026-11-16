@@ -908,5 +908,12 @@
   "preferredSource": {
     "cta": "Aggiungi Dulce come fonte preferita su Google",
     "short": "Fonte preferita su Google"
+  },
+  "supportMail": {
+    "subject": "Assistenza Dulce",
+    "supportId": "ID assistenza (nell’app: Impostazioni › Account › ID assistenza): ",
+    "device": "Telefono e versione dell’app: ",
+    "what": "Cosa è successo: ",
+    "appHint": "Scrivere dall’app è più veloce: Impostazioni › Aiuto e privacy › Contatta l’assistenza aggiunge il tuo ID assistenza al posto tuo."
   }
 }

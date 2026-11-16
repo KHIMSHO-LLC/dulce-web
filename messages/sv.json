@@ -908,5 +908,12 @@
   "preferredSource": {
     "cta": "Lägg till Dulce som föredragen källa på Google",
     "short": "Föredragen källa på Google"
+  },
+  "supportMail": {
+    "subject": "Dulce-support",
+    "supportId": "Support-ID (i appen: Inställningar › Konto › Support-ID): ",
+    "device": "Telefon och appversion: ",
+    "what": "Vad hände: ",
+    "appHint": "Det går snabbare att skriva från appen: Inställningar › Hjälp och integritet › Kontakta supporten lägger till ditt support-ID åt dig."
   }
 }

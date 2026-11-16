@@ -908,5 +908,12 @@
   "preferredSource": {
     "cta": "Lisää Dulce suosikkilähteeksi Googlessa",
     "short": "Suosikkilähde Googlessa"
+  },
+  "supportMail": {
+    "subject": "Dulce-tuki",
+    "supportId": "Tuen tunniste (sovelluksessa: Asetukset › Tili › Tuen tunniste): ",
+    "device": "Puhelin ja sovelluksen versio: ",
+    "what": "Mitä tapahtui: ",
+    "appHint": "Kirjoittaminen sovelluksesta on nopeampaa: Asetukset › Ohje ja tietosuoja › Ota yhteyttä tukeen lisää tuen tunnisteesi puolestasi."
   }
 }
