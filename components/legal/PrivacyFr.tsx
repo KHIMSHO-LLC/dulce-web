@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* Translation of the Spanish/English policy. TODO: review local legal terminology; Spanish counsel review remains outstanding. */}
+{/* Traduction du texte espagnol, qui prévaut. Décisions de rédaction et points ouverts : DULCE/plans/legal-answers-2026-11-16.md (en anglais). */}
 export function PrivacyFr() {
   return (
     <>
@@ -63,15 +63,20 @@ export function PrivacyFr() {
           ton appareil et n&apos;est pas envoyé à Dulce. L&apos;app l&apos;utilise pour joindre
           le fournisseur ; si tu actives des fonctions du relais, un jeton de session du
           fournisseur (pas ton mot de passe) est envoyé au relais quand ton CGM est connecté,
-          comme expliqué ci-dessous. Avec Medtronic CareLink, tu saisis ton mot de passe sur la page de Medtronic : Dulce ne le voit jamais et reçoit des jetons de connexion de Medtronic. Avec Nightscout, tu saisis l’adresse de ton site et un jeton d’accès ou secret API (Dulce ne conserve que l’empreinte SHA-1 du secret). Exception pour Dexcom : tant que « Rester connecté » est activé (Réglages › Capteur, activé par défaut), l&apos;app envoie aussi une fois ton mot de passe Dexcom au relais, car Dexcom met fin aux sessions toutes les 24 heures ; voir plus bas.
+          comme expliqué ci-dessous. Avec Medtronic CareLink, tu saisis ton mot de passe sur la page de Medtronic : Dulce ne le voit jamais et reçoit des jetons de connexion de Medtronic. Avec Nightscout, tu saisis l’adresse de ton site et un jeton d’accès ou secret API (Dulce ne conserve que l’empreinte SHA-1 du secret). Exception pour Dexcom : tant que « Rester connecté » est activé (Réglages › Capteur, activé par défaut), l&apos;app envoie aussi une fois ton mot de passe Dexcom au relais, car Dexcom met fin aux sessions toutes les 24 heures ; voir plus bas. Si tu utilises l&apos;historique de courbe enregistré et que tu as accepté la collecte pendant ton absence, cela permet aussi au relais de continuer à collecter ton historique après ta déconnexion (voir 2.6).
         </li>
         <li>
           <strong>Les mesures de glycémie</strong> récupérées depuis LibreLinkUp, Dexcom Share, Medtronic CareLink ou Nightscout,
-          stockées dans une base de données locale sur ton appareil.
+          stockées dans une base de données locale sur ton appareil (et, pour les abonnés Dulce Pro
+          qui acceptent l&apos;historique de courbe enregistré, aussi sur le relais ; voir 2.6).
         </li>
         <li>
-          <strong>Ton journal</strong> : glucides, insuline, glycémies saisies à la main et
-          notes. Stocké localement.
+          <strong>Ton journal</strong> : glucides, insuline (y compris les doses lues depuis un
+          stylo à insuline connecté), exercice, glycémies saisies à la main et notes. Stocké sur
+          ton appareil. Si tu utilises l&apos;historique de courbe enregistré et que tu partages
+          ton journal avec ta famille (activé par défaut, tu peux le désactiver), les entrées à
+          partir du jour où tu as activé le partage, y compris les notes en texte libre, sont aussi
+          stockées sur le relais (voir 2.6).
         </li>
         <li>
           <strong>Les données d&apos;Apple Santé</strong> (iPhone) ou de <strong>Health Connect</strong> (Android), si tu donnes
@@ -119,7 +124,7 @@ export function PrivacyFr() {
       <ul>
         <li>
           <strong>Un jeton de session du fournisseur</strong> (pas ton mot de passe) : un jeton
-          LibreLinkUp ou un identifiant de session Dexcom Share, pour récupérer les mesures à ta place. Avec Medtronic CareLink, le relais conserve tes jetons de connexion CareLink. Avec Nightscout, il conserve l’adresse de ton site et ton jeton d’accès ou l’empreinte SHA-1 de ton secret API. Pour Dexcom, tant que « Rester connecté » est activé, le relais conserve aussi ton mot de passe Dexcom, chiffré (AES-256-GCM, la clé étant conservée à part dans le coffre de secrets de Cloudflare), et ne l&apos;utilise que pour te reconnecter à Dexcom Share quand ta session expire. Il n&apos;est jamais journalisé ni partagé, et il est supprimé quand tu désactives l&apos;option, te déconnectes ou supprimes ton compte.
+          LibreLinkUp ou un identifiant de session Dexcom Share, pour récupérer les mesures à ta place. Avec Medtronic CareLink, le relais conserve tes jetons de connexion CareLink. Avec Nightscout, il conserve l’adresse de ton site et ton jeton d’accès ou l’empreinte SHA-1 de ton secret API. Pour Dexcom, tant que « Rester connecté » est activé, le relais conserve aussi ton mot de passe Dexcom, chiffré (AES-256-GCM, la clé étant conservée à part dans le coffre de secrets de Cloudflare), et ne l&apos;utilise que pour te reconnecter à Dexcom Share quand ta session expire. Il n&apos;est jamais journalisé ni partagé, et il est supprimé quand tu désactives l&apos;option ou supprimes ton compte. Quand tu te déconnectes, il est supprimé aussi, sauf si Dulce continue de collecter l&apos;historique de ta courbe pendant ton absence (voir 2.6) : il reste alors, chiffré, uniquement tant que cette collecte continue, et il est supprimé dès qu&apos;elle prend fin, quelle qu&apos;en soit la raison. Si tu choisis « Arrêter et supprimer » en te déconnectant, il est supprimé immédiatement.
         </li>
         <li>
           <strong>Un identifiant d&apos;installation aléatoire et un identifiant de compte CGM</strong>
@@ -132,8 +137,10 @@ export function PrivacyFr() {
         <li>
           <strong>Tes mesures les plus récentes</strong>, avec leur valeur et leur date, sous
           forme d&apos;une courte fenêtre glissante nécessaire à l&apos;Activité en direct, à la montre
-          et à la vue des abonnés. Le relais n&apos;est pas un stockage à long terme de ton
-          historique de santé ; celui-ci reste sur ton appareil.
+          et à la vue des abonnés. Si tu es abonné Dulce Pro et que tu acceptes l&apos;historique
+          de courbe enregistré dans l&apos;app, le relais conserve aussi l&apos;historique de ta
+          courbe jusqu&apos;à 1 an (voir 2.6). Sans cela, ton historique à long terme reste
+          uniquement sur ton appareil.
         </li>
         <li>
           <strong>Les réglages et données techniques de l&apos;appareil et de l&apos;app</strong>
@@ -154,9 +161,12 @@ export function PrivacyFr() {
         </li>
       </ul>
       <p>
-        Tu peux arrêter ce traitement en déconnectant ton CGM ou en utilisant « Supprimer le
-        compte » dans les Réglages. L&apos;app demande au relais de supprimer les données actives
-        de l&apos;appareil, les jetons et les données de partage. Un identifiant d&apos;installation
+        Tu peux arrêter ce traitement en utilisant « Supprimer le compte » dans les Réglages. Te
+        déconnecter de ton compte capteur dans Dulce arrête les mises à jour en direct et les
+        alertes ; si tu utilises l&apos;historique de courbe enregistré, c&apos;est toi qui choisis
+        si Dulce continue de collecter ton historique pendant ta déconnexion (voir 2.6). « Supprimer
+        le compte » demande au relais de supprimer les données actives de l&apos;appareil, les
+        jetons, les données de partage et l&apos;historique enregistré. Un identifiant d&apos;installation
         minimal et la date de première inscription sont conservés pour reconnaître une
         installation qui revient dans nos statistiques internes. Ce marqueur n&apos;expire pas
         automatiquement. Écris-nous si tu veux aussi le faire effacer.
@@ -164,9 +174,14 @@ export function PrivacyFr() {
 
       <h3>2.4 Suivi par la famille</h3>
       <p>
-        Si tu invites quelqu&apos;un à te suivre, le relais transmet tes mesures récentes et tes
-        alertes à son appareil à partir du moment où il accepte ; l&apos;historique antérieur
-        n&apos;est pas partagé. Les messages entre toi et tes abonnés, y compris le texte que tu écris, passent par le relais et par le service de notification d&apos;Apple ou de Google pour atteindre leurs appareils. Le relais ne conserve ni le texte des messages ni d&apos;historique. Tu peux
+        Si tu invites quelqu&apos;un à te suivre, le relais transmet tes mesures et tes alertes à
+        son appareil à partir du moment où il accepte. Sans historique de courbe enregistré,
+        l&apos;historique antérieur n&apos;est pas partagé. Si tu utilises l&apos;historique de
+        courbe enregistré (Dulce Pro), tes abonnés peuvent aussi voir l&apos;historique enregistré
+        de ta courbe, y compris les mesures d&apos;avant leur acceptation, et, tant que le partage
+        du journal est activé, ton journal partagé, y compris les notes en texte libre ; ils
+        cessent de le voir quand tu retires leur accès ou que tu mets le partage en pause (voir
+        2.6). Les messages entre toi et tes abonnés, y compris le texte que tu écris, passent par le relais et par le service de notification d&apos;Apple ou de Google pour atteindre leurs appareils. Le relais ne conserve ni le texte des messages ni d&apos;historique. Tu peux
         retirer l&apos;accès d&apos;un abonné à tout moment et désactiver complètement ces messages.
       </p>
 
@@ -186,11 +201,235 @@ export function PrivacyFr() {
         toujours à Apple ou Google.
       </p>
 
+      <h3>2.6 Historique de courbe enregistré (Dulce Pro)</h3>
+      <p>
+        <strong>De quoi il s&apos;agit.</strong> Si tu as Dulce Pro et que tu l&apos;acceptes dans
+        l&apos;app, notre relais enregistre ton historique de glycémie pour que ta courbe et celle
+        de tes abonnés soient identiques et sans trous, et pour que ton historique soit toujours
+        là après une déconnexion, une réinstallation de Dulce ou un changement d&apos;iPhone. Si tu
+        n&apos;as pas Dulce Pro ou que tu ne l&apos;acceptes pas, rien n&apos;est enregistré et ton
+        historique reste uniquement sur ton appareil.
+      </p>
+      <p>
+        <strong>Ce qui est enregistré.</strong>
+      </p>
+      <ul>
+        <li>
+          Tes mesures de glycémie, chacune avec son heure, sa valeur et sa flèche de tendance :
+          l&apos;historique que renvoie le service de ton capteur (LibreLinkUp, Dexcom Share,
+          Medtronic CareLink ou Nightscout), les mesures que le relais récupère et, une seule fois
+          quand tu acceptes, l&apos;historique déjà présent sur ton téléphone (jusqu&apos;à 90
+          jours).
+        </li>
+        <li>
+          Ton journal, si tu le partages avec ta famille (activé par défaut tant que
+          l&apos;historique de courbe enregistré est activé ; tu peux le désactiver séparément).
+          Tout le journal est partagé : glucides, insuline (y compris les doses lues depuis un
+          stylo à insuline connecté et les doses d&apos;amorçage), exercice, glycémies saisies à
+          la main et notes en texte libre, chacun avec son heure et sa quantité. Seules les
+          entrées à partir du jour où tu actives le partage du journal sont partagées ; les plus
+          anciennes ne le sont pas.
+        </li>
+        <li>
+          Non enregistrés avec cela : l&apos;e-mail de ton compte capteur, ton nom, le texte des
+          messages entre toi et tes abonnés, ni les données d&apos;Apple Santé ou de Health
+          Connect.
+        </li>
+      </ul>
+      <p>
+        <strong>Pourquoi.</strong> Uniquement pour fournir cette fonction : la même courbe,
+        complète, pour toi et les membres de ta famille que tu as invités, conservée après une
+        déconnexion, une réinstallation et un changement de téléphone. Nous ne l&apos;utilisons pas
+        pour la publicité, le profilage ou la vente, et nous ne la partageons ni avec Meta ni avec
+        aucun service de statistiques.
+      </p>
+      <p>
+        <strong>Base juridique.</strong> Ton consentement explicite (art. 9, par. 2, point a) du
+        RGPD), car les données de glycémie sont des données de santé. L&apos;app te le demande
+        avant que l&apos;enregistrement commence, séparément pour chaque compte capteur : si tu te
+        connectes avec un autre compte capteur, elle te le demande à nouveau. Rien n&apos;est
+        enregistré avant ta réponse, et les versions de l&apos;app qui ne posent pas la question
+        n&apos;enregistrent rien. Tu peux retirer ton consentement à tout moment dans les
+        Réglages : l&apos;enregistrement s&apos;arrête et la copie enregistrée sur le relais est
+        supprimée immédiatement. Le retrait n&apos;affecte pas la licéité de l&apos;enregistrement
+        effectué avant. Dulce Pro ne dépend pas de ce consentement : sans lui, Dulce Pro
+        fonctionne sans historique enregistré.
+      </p>
+      <p>
+        <strong>Où.</strong> Sur le relais Dulce, dans une base de données de notre hébergeur
+        Cloudflare, qui la traite pour notre compte et peut traiter des données dans l&apos;UE et
+        dans d&apos;autres pays avec ses garanties standard (voir section 8). Le même historique
+        reste aussi dans la base de données locale de l&apos;app sur ton téléphone.
+      </p>
+      <p>
+        <strong>Combien de temps.</strong> Tant que ton abonnement Dulce Pro (y compris un essai
+        gratuit) est actif, nous conservons au maximum environ 1 an d&apos;historique ; les jours
+        plus anciens sont supprimés automatiquement. Si ton abonnement prend fin ou est remboursé,
+        l&apos;enregistrement s&apos;arrête et l&apos;historique enregistré (mesures et journal
+        partagé) est supprimé 90 jours plus tard ; si tu te réabonnes pendant ces 90 jours, il est
+        toujours là.
+      </p>
+      <p>
+        <strong>Collecte pendant que tu es déconnecté ou que l&apos;app est supprimée.</strong> Si
+        tu l&apos;as accepté (l&apos;app te l&apos;indique sur l&apos;écran de consentement, dans
+        un avis unique ou quand tu te déconnectes), le relais continue de collecter l&apos;historique
+        de ton capteur après ta déconnexion de ton compte capteur dans Dulce ou la suppression de
+        l&apos;app, quelques fois par jour plutôt que chaque minute, à l&apos;aide de
+        l&apos;identifiant du capteur qu&apos;il détient déjà :
+      </p>
+      <ul>
+        <li>
+          LibreLinkUp : le jeton de session. Nightscout : l&apos;adresse de ton site et ton jeton
+          d&apos;accès ou l&apos;empreinte de ton secret API.
+        </li>
+        <li>
+          Medtronic CareLink : les jetons de connexion que Medtronic a émis pour Dulce (jamais ton
+          mot de passe), que le relais renouvelle comme Medtronic l&apos;exige.
+        </li>
+        <li>
+          Dexcom Share : si « Rester connecté » est activé, ton mot de passe Dexcom, chiffré comme
+          décrit en 2.3. S&apos;il est désactivé, la collecte s&apos;arrête environ un jour après
+          ta dernière connexion, car Dexcom met fin à la session.
+        </li>
+      </ul>
+      <p>
+        La collecte pendant ton absence prend fin au premier de ces événements : tu te reconnectes
+        à Dulce avec le même compte capteur ; tu la désactives dans les Réglages ou tu choisis
+        « Arrêter et supprimer » en te déconnectant ; tu désactives l&apos;historique de courbe
+        enregistré ou tu utilises « Supprimer le compte » ; ton abonnement Dulce Pro prend fin ; le
+        service de ton capteur refuse la connexion ou échoue de façon répétée pendant environ une
+        semaine ; ou 1 an s&apos;est écoulé. Quand elle prend fin, l&apos;identifiant conservé pour
+        elle est supprimé. L&apos;historique déjà enregistré reste jusqu&apos;à ce que tu le
+        supprimes ou que la durée ci-dessus s&apos;écoule, sauf si tu as choisi de le supprimer. Si
+        tu supprimes l&apos;app sans te déconnecter, l&apos;app ne peut pas te poser la question à
+        ce moment-là : la collecte continue uniquement si tu l&apos;avais déjà acceptée ; pour
+        l&apos;arrêter, écris-nous (voir « Comment le désactiver et le supprimer » ci-dessous).
+        Tant que tu es déconnecté ou absent, tes abonnés ne reçoivent ni mesures en direct, ni
+        alertes, ni nouvel historique.
+      </p>
+      <p>
+        <strong>Il peut y avoir des trous ou des pertes.</strong> L&apos;historique enregistré est
+        une commodité : ce n&apos;est ni un dossier médical ni une sauvegarde. Il peut présenter des
+        trous ou être perdu, par exemple quand la session de ton capteur expire ou que tu changes le
+        mot de passe de ton capteur, quand Dexcom met fin à la session et que « Rester connecté »
+        est désactivé, quand le service de ton capteur subit une panne ou n&apos;a pas encore reçu
+        de données de ton téléphone, quand ton abonnement prend fin, quand tu réinstalles Dulce sur
+        Android ou que tu passes à un iPhone sans ton trousseau iCloud, quand tu utilises
+        « Supprimer le compte », quand un fabricant de capteur modifie ou ferme son service, ou à
+        cause d&apos;une défaillance de notre côté. Conserve les données dont ton médecin a besoin
+        dans l&apos;app officielle du fabricant de ton capteur.
+      </p>
+      <p>
+        <strong>Qui peut le voir.</strong> Toi, et les abonnés que tu as invités tant que tu
+        partages avec eux : ils voient l&apos;historique enregistré de ta courbe (y compris les
+        mesures d&apos;avant leur acceptation) et, tant que le partage du journal est activé, ton
+        journal partagé, notes en texte libre comprises. Ils cessent de le voir quand tu retires
+        leur accès, quand le partage est mis en pause ou quand tu supprimes ton historique.
+        Désactiver le partage du journal supprime la copie partagée sur le relais ; ton journal sur
+        ton téléphone reste. Les notes que tu partages peuvent être lues par tes abonnés : n&apos;y
+        écris donc aucune information sur d&apos;autres personnes. Une personne connectée au même
+        compte capteur sur son propre téléphone ne reçoit pas ton historique enregistré via Dulce.
+        Le relais traite ces données automatiquement pour les transmettre ; nous ne consultons ni
+        l&apos;historique ni les notes d&apos;un utilisateur en particulier, sauf si c&apos;est
+        nécessaire pour résoudre un problème que tu nous signales, pour garantir la sécurité du
+        service ou si la loi l&apos;exige.
+      </p>
+      <p>
+        <strong>Comment nous reconnaissons ton historique sans compte.</strong> Dulce n&apos;a pas
+        de compte utilisateur. Ton historique est lié à une « clé d&apos;historique » secrète
+        aléatoire créée sur ton téléphone, combinée à un identifiant du patient de ton compte
+        capteur (un numéro ou un nom d&apos;utilisateur fourni par le service de ton capteur, ou
+        une empreinte de l&apos;adresse de ton Nightscout), jamais l&apos;e-mail de ton capteur.
+        Sur iPhone, si tu utilises le trousseau iCloud, la clé d&apos;historique est synchronisée
+        via ton propre trousseau iCloud : tes autres iPhone avec le même compte Apple partagent donc
+        le même historique ; pour la même raison, désactiver l&apos;enregistrement sur l&apos;un
+        d&apos;eux le désactive sur les autres. « Supprimer le compte » retire la clé de ton
+        trousseau iCloud : Dulce sur tes autres iPhone repart alors d&apos;un nouvel historique. Si
+        tu te connectes avec un autre compte capteur sur le même téléphone, les historiques ne sont
+        pas mélangés.
+      </p>
+      <p>
+        <strong>Comment le désactiver et le supprimer.</strong>
+      </p>
+      <ul>
+        <li>
+          Dans l&apos;app, désactive « Enregistrer l&apos;historique » dans les Réglages et
+          confirme « Arrêter et supprimer » : la copie enregistrée sur le relais est supprimée
+          immédiatement.
+        </li>
+        <li>
+          Dans l&apos;app, désactive « Continuer la collecte si je suis déconnecté ou si l&apos;app
+          est supprimée » : Dulce ne collecte plus après ta déconnexion ou la suppression de
+          l&apos;app, et ne conserve aucun identifiant de capteur pour cela.
+        </li>
+        <li>
+          Dans l&apos;app, désactive « Partager mon journal avec ma famille » : la copie du journal
+          partagé sur le relais est supprimée.
+        </li>
+        <li>Quand tu te déconnectes, choisis « Arrêter et supprimer » (ou « Le supprimer »).</li>
+        <li>
+          Utilise Réglages → Supprimer le compte : tout est supprimé, comme décrit à la section 9.
+        </li>
+        <li>
+          Sans l&apos;app, écris à{" "}
+          <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Comme il n&apos;y a pas
+          de compte, indique ton ID de support (dans l&apos;app : Réglages › Compte › ID de
+          support) ou l&apos;e-mail de contact que tu as enregistré (section 2.7), si tu les as ;
+          sinon, nous te demanderons des informations qui nous permettent de retrouver tes données
+          (par exemple ton service de capteur et la date de ta dernière utilisation de Dulce).
+          Nous ne pouvons agir que sur des données que nous pouvons identifier, et nous te dirons
+          si ce n&apos;est pas possible.
+        </li>
+      </ul>
+
+      <h3>2.7 E-mail de contact (facultatif)</h3>
+      <p>
+        Dulce fonctionne sans adresse e-mail. Si tu le souhaites, tu peux enregistrer un e-mail de
+        contact dans l&apos;app. Nous le conservons sur le relais Dulce, lié à ton installation
+        (l&apos;ID de support affiché dans l&apos;app), et nous l&apos;utilisons uniquement pour :
+      </p>
+      <ul>
+        <li>répondre à tes demandes d&apos;assistance et retrouver ton installation quand tu nous écris ;</li>
+        <li>
+          t&apos;écrire au sujet de ton installation Dulce ou de ton abonnement, par exemple un
+          problème de connexion de ton capteur, une modification de cette politique ou des
+          conditions, ou un mois gratuit que nous te proposons.
+        </li>
+      </ul>
+      <p>
+        Nous ne l&apos;utilisons ni pour du marketing ni pour des newsletters, sauf si tu y
+        consens séparément, et nous ne le partageons ni avec Meta, ni avec des services
+        d&apos;analyse, ni avec personne d&apos;autre, sauf notre hébergeur Cloudflare, qui le
+        conserve pour nous. Il n&apos;est jamais écrit dans les journaux. Comme il est lié à ton
+        installation, il nous permet de savoir à qui appartient l&apos;installation quand nous
+        t&apos;aidons (par exemple l&apos;état de ton abonnement ou si tu utilises le suivi par la
+        famille) ; le support ne voit pas tes mesures de glycémie.
+      </p>
+      <p>
+        <strong>Base juridique :</strong> ton consentement (art. 6, par. 1, point a) du RGPD). Le
+        donner est facultatif, et tu peux le modifier ou le retirer dans l&apos;app à tout moment ;
+        le retirer le supprime du relais.{" "}
+        <strong>Durée :</strong> jusqu&apos;à ce que tu le retires, que tu utilises « Supprimer le
+        compte » ou que tu nous demandes de le supprimer. Il est conservé quand tu te déconnectes
+        de ton compte capteur, pour que nous puissions continuer à t&apos;aider. Les e-mails que
+        tu nous envoies sont traités comme les messages de contact décrits à la section 6.
+      </p>
+
       <h2 id="purpose">3. Pourquoi nous utilisons tes données</h2>
       <ul>
         <li>Afficher ta glycémie sur tes appareils et, si tu le choisis, sur ceux de tes abonnés.</li>
         <li>Envoyer les alertes que tu configures.</li>
+        <li>
+          Conserver l&apos;historique de ta courbe pour que toi et tes abonnés voyiez la même
+          courbe, même après une déconnexion, une réinstallation ou un changement de téléphone, et
+          partager ton journal avec la famille que tu as invitée (Dulce Pro, avec ton
+          consentement ; section 2.6).
+        </li>
         <li>Valider ton abonnement et débloquer les fonctions Pro.</li>
+        <li>
+          Si tu as enregistré un e-mail de contact, répondre à tes demandes d&apos;assistance et
+          t&apos;écrire au sujet de ton installation ou de ton abonnement (section 2.7).
+        </li>
         <li>Te prévenir quand Dulce est disponible (liste d&apos;attente).</li>
         <li>Répondre aux demandes envoyées par le formulaire de contact.</li>
         <li>Protéger le site contre les abus (hachage IP, limitation).</li>
@@ -202,13 +441,21 @@ export function PrivacyFr() {
       <ul>
         <li>
           <strong>Consentement explicite</strong> (art. 9, par. 2, point a) du RGPD) : traitement
-          de tes données de santé quand tu choisis de connecter ton CGM et d&apos;utiliser les
-          fonctions associées. Déconnecter ton CGM arrête le traitement par le relais ; tu peux
-          aussi retirer ton consentement en nous contactant. Lors de l&apos;onboarding, l&apos;app
-          renvoie vers cette politique, mais ne présente actuellement pas de case distincte pour
-          consentir au traitement des données de santé. Nous demandons à un conseil espagnol en
-          protection des données de vérifier si l&apos;information et le parcours actuels satisfont
-          au standard du consentement explicite.
+          de tes données de santé quand tu connectes ton capteur dans l&apos;app et utilises les
+          fonctions associées (mesures en direct, alertes, Activité en direct, widgets, montre et
+          suivi par la famille). Tu le donnes en connectant ton capteur, après que l&apos;app t&apos;a
+          expliqué ce que fait Dulce et renvoyé vers cette politique. Tu peux le retirer à tout
+          moment en te déconnectant de ton compte capteur dans Dulce, ce qui arrête le traitement
+          par le relais (sauf la collecte de ton historique de courbe enregistré pendant ton
+          absence, si tu l&apos;as acceptée ; section 2.6), en utilisant « Supprimer le compte » ou
+          en nous écrivant.
+        </li>
+        <li>
+          <strong>Consentement explicite</strong> (art. 9, par. 2, point a) du RGPD) pour
+          l&apos;historique de courbe enregistré, la collecte pendant que tu es déconnecté ou que
+          l&apos;app est supprimée, et le partage du journal : demandé dans l&apos;app, pour chaque
+          compte capteur, avant que l&apos;enregistrement commence, et révocable à tout moment dans
+          les Réglages (section 2.6).
         </li>
         <li>
           <strong>Contrat</strong> (art. 6, par. 1, point b) du RGPD) : fourniture de l&apos;app
@@ -224,11 +471,16 @@ export function PrivacyFr() {
           dans Réglages.
         </li>
         <li>
+          <strong>Consentement</strong> (art. 6, par. 1, point a) du RGPD) : pour l&apos;e-mail de
+          contact facultatif de la section 2.7 ; tu peux le retirer à tout moment dans l&apos;app.
+        </li>
+        <li>
           <strong>Intérêt légitime</strong> (art. 6, par. 1, point f) du RGPD) : sécurité de base
-          du site et réponse aux demandes que tu envoies par le formulaire de contact. La base
-          juridique des statistiques dépend du service et des règles régionales décrites dans
-          notre politique relative aux cookies ; elle doit être confirmée avec un conseil en
-          protection des données.
+          du site et réponse aux demandes que tu nous envoies par le formulaire de contact ou par
+          e-mail. Statistiques du site : ton consentement là où notre politique relative aux
+          cookies le demande (dans l&apos;EEE, au Royaume-Uni et en Suisse, ou quand nous ne
+          pouvons pas savoir où tu es) et, ailleurs, notre intérêt légitime à comprendre comment le
+          site est utilisé.
         </li>
       </ul>
 
@@ -241,12 +493,15 @@ export function PrivacyFr() {
         <li>
           Ton historique de glycémie à long terme, ton journal et tes données Apple Santé sont
           traités et stockés sur ton appareil. Le relais traite aussi les mesures récentes comme
-          décrit plus haut.
+          décrit plus haut. Si tu utilises Dulce Pro et que tu acceptes l&apos;historique de
+          courbe enregistré, ton historique de glycémie, et ton journal tant que tu le partages
+          avec ta famille, sont aussi stockés sur le relais (section 2.6).
         </li>
         <li>
           Quand ton CGM est connecté, le relais traite les mesures récentes nécessaires aux
           fonctions en arrière-plan et de partage que tu utilises. Il conserve une courte
-          fenêtre glissante, pas ton historique de glycémie à long terme.
+          fenêtre glissante et, uniquement pour les abonnés Dulce Pro qui l&apos;acceptent,
+          l&apos;historique de courbe enregistré décrit en 2.6.
         </li>
         <li>Elles sont toujours chiffrées pendant le transfert (TLS).</li>
         <li>
@@ -262,7 +517,20 @@ export function PrivacyFr() {
           continu dans une courte fenêtre. Les jetons de session du fournisseur et de
           notification sont conservés tant que l&apos;appareil connecté en a besoin, puis supprimés
           lorsque tu le déconnectes ou le désenregistres, te déconnectes ou utilises Réglages →
-          Supprimer le compte.
+          Supprimer le compte. Exception : tant que Dulce continue de collecter l&apos;historique
+          de ta courbe après ta déconnexion ou la suppression de l&apos;app (section 2.6),
+          l&apos;identifiant du capteur nécessaire pour cela (jeton de session LibreLinkUp, jeton
+          du site Nightscout, jetons de connexion Medtronic CareLink ou mot de passe Dexcom
+          chiffré) n&apos;est conservé que pour cela et supprimé quand la collecte prend fin, au
+          plus tard après 1 an.
+        </li>
+        <li>
+          <strong>Historique de courbe enregistré et journal partagé (Dulce Pro) :</strong> tant
+          que ton abonnement est actif, au maximum environ 1 an, les jours plus anciens étant
+          supprimés automatiquement. Supprimés immédiatement quand tu désactives l&apos;enregistrement,
+          que tu choisis « Arrêter et supprimer » à la déconnexion ou que tu utilises « Supprimer le
+          compte » (le journal partagé aussi quand tu désactives son partage) ; supprimés 90 jours
+          après la fin ou le remboursement de ton abonnement.
         </li>
         <li>
           <strong>Données de l&apos;app sur ton appareil :</strong> jusqu&apos;à ce que tu les
@@ -294,6 +562,17 @@ export function PrivacyFr() {
           <strong>Journaux opérationnels :</strong> Cloudflare Workers Logs sont supprimés au bout de 7 jours.
         </li>
         <li>
+          <strong>E-mail de contact :</strong> jusqu&apos;à ce que tu le retires dans l&apos;app,
+          que tu utilises « Supprimer le compte » ou que tu nous demandes de le supprimer
+          (section 2.7).
+        </li>
+        <li>
+          <strong>Sauvegardes :</strong> les données supprimées du relais peuvent rester jusqu&apos;à
+          30 jours dans les sauvegardes automatiques de la base de données de notre hébergeur,
+          puis sont écrasées. Nous n&apos;utilisons ces sauvegardes que pour nous remettre
+          d&apos;une panne.
+        </li>
+        <li>
           <strong>Marqueur d&apos;installation :</strong> l&apos;identifiant aléatoire et la date
           de première inscription restent après la suppression des données du relais. Tu peux
           demander l&apos;effacement de ce marqueur, qui n&apos;expire pas automatiquement.
@@ -308,11 +587,14 @@ export function PrivacyFr() {
       </p>
       <ul>
         <li>
-          <strong>Cloudflare</strong> : héberge le relais Dulce décrit plus haut.
+          <strong>Cloudflare</strong> : héberge le relais Dulce décrit plus haut et stocke
+          l&apos;historique de courbe enregistré et le journal partagé (section 2.6) ainsi que
+          l&apos;e-mail de contact facultatif (section 2.7), en tant que notre sous-traitant.
         </li>
         <li>
           <strong>Apple</strong> : notifications (APNs), Activités en direct, Apple Santé (sur
-          l&apos;appareil) et paiements.
+          l&apos;appareil), paiements et, si tu utilises le trousseau iCloud, conservation de ta
+          clé d&apos;historique dans ton propre trousseau iCloud (section 2.6).
         </li>
         <li>
           <strong>Google Firebase</strong> : notifications sur Android.
@@ -372,6 +654,11 @@ export function PrivacyFr() {
         Contacte-nous pour connaître les détails et obtenir une copie des garanties applicables :{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
+      <p>
+        L&apos;historique de courbe enregistré et les entrées du journal partagé sont stockés dans
+        une base de données de notre hébergeur Cloudflare, qui peut traiter des données dans
+        l&apos;UE et dans d&apos;autres pays avec les garanties décrites plus haut.
+      </p>
 
       <h2 id="rights">9. Tes droits</h2>
       <p>En vertu du RGPD et sous réserve de ses conditions, tu as le droit :</p>
@@ -385,13 +672,29 @@ export function PrivacyFr() {
       </ul>
       <p>
         Utilise <strong>Réglages → Supprimer le compte</strong> dans l&apos;app pour effacer les
-        données locales et les données actives du relais. Le marqueur minimal d&apos;installation
-        décrit plus haut reste jusqu&apos;à ce que tu demandes son effacement. Tu peux exercer
-        chacun de ces droits en écrivant à{" "}
-        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Nous répondons dans
+        données locales et les données actives du relais, y compris ton historique de courbe
+        enregistré et ton journal partagé ; cela retire aussi la clé d&apos;historique de Dulce de
+        ton trousseau iCloud : Dulce sur tes autres iPhone repart alors d&apos;un nouvel
+        historique. Tu peux aussi désactiver l&apos;historique de courbe enregistré dans les
+        Réglages, ce qui supprime immédiatement la copie enregistrée, et désactiver séparément le
+        partage du journal, ce qui supprime la copie du journal partagé. L&apos;app n&apos;a pas
+        de bouton d&apos;export de l&apos;historique enregistré ; écris-nous et nous t&apos;enverrons
+        une copie dans un format électronique courant (par exemple CSV). Le marqueur minimal
+        d&apos;installation décrit plus haut reste jusqu&apos;à ce que tu demandes son effacement.
+        Tu peux exercer chacun de ces droits en écrivant à{" "}
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Comme Dulce n&apos;a pas
+        de comptes, indique ton ID de support (dans l&apos;app : Réglages › Compte › ID de
+        support) ou l&apos;e-mail de contact que tu as enregistré, si tu les as ; sinon, nous te
+        demanderons d&apos;autres informations qui nous permettent de retrouver tes données, et
+        nous ne pouvons agir que sur des données que nous pouvons identifier. Nous répondons dans
         un délai d&apos;un mois. Pour une demande complexe ou de nombreuses demandes, le RGPD permet
         une prolongation maximale de deux mois supplémentaires ; nous t&apos;en informerons au
         cours du premier mois.
+      </p>
+      <p>
+        Si un utilisateur de Dulce est décédé, un proche ou un héritier peut nous demander de
+        supprimer ses données et d&apos;arrêter toute collecte de son historique ; nous demanderons
+        une preuve raisonnable.
       </p>
       <p>
         Si tu estimes que notre traitement n&apos;est pas conforme à la loi, tu peux déposer une
@@ -406,7 +709,11 @@ export function PrivacyFr() {
       <p>
         Dulce ne s&apos;adresse pas aux enfants de moins de 14 ans. Sur Android, Dulce est destiné aux adultes de 18 ans et plus. Un parent ou un représentant
         légal peut utiliser Dulce pour suivre la glycémie d&apos;un mineur sous sa propre
-        responsabilité. Si tu penses qu&apos;un mineur dont tu as la charge nous a fourni des
+        responsabilité ; dans ce cas, le parent ou le représentant légal donne ou refuse le
+        consentement à l&apos;historique de courbe enregistré et au partage du journal. Si tu as entre
+        14 et 18 ans, tu as besoin du consentement de tes parents ou de ton représentant légal pour
+        utiliser Dulce (conditions d&apos;utilisation, section 4), ce qui inclut l&apos;historique de
+        courbe enregistré, le partage du journal et l&apos;e-mail de contact. Si tu penses qu&apos;un mineur dont tu as la charge nous a fourni des
         données sans ton accord, contacte-nous et nous les supprimerons.
       </p>
 
@@ -420,8 +727,17 @@ export function PrivacyFr() {
 
       <h2 id="changes">12. Modifications de cette politique</h2>
       <p>
-        En cas de changement important, nous préviendrons les utilisateurs concernés par e-mail
-        ou dans l&apos;app et publierons la nouvelle version, avec sa date, sur cette page.
+        En cas de changement important, nous te prévenons avant qu&apos;il s&apos;applique : dans
+        l&apos;app (dans la note « Nouveautés » de la mise à jour qui l&apos;apporte et dans un
+        avis qui renvoie vers cette page) et, si tu as enregistré un e-mail de contact, par
+        e-mail. Cette page indique la date de la version actuelle, un bref résumé de ce qui change
+        et un lien vers la version précédente. Quand un changement nécessite ton consentement, par
+        exemple un nouvel usage de tes données de santé, l&apos;app te le demande d&apos;abord et
+        rien de nouveau ne se passe tant que tu n&apos;as pas répondu ; les versions de l&apos;app
+        qui ne le demandent pas continuent de fonctionner comme avant. Les changements de
+        l&apos;historique de courbe enregistré qui te retirent quelque chose sont annoncés dans
+        l&apos;app au moins 30 jours à l&apos;avance (conditions d&apos;utilisation, sections 8.1
+        et 15).
       </p>
 
       <h2 id="contact">13. Contact</h2>

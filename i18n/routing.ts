@@ -67,6 +67,9 @@ export const routing = defineRouting({
       ru: "/legal/disclaimer",
     },
     "/legal/cookies": "/legal/cookies",
+    // Earlier versions of the privacy policy and terms (lib/legalVersions.ts), noindex, not in the sitemap.
+    "/legal/privacy/[version]": "/legal/privacy/[version]",
+    "/legal/terms/[version]": "/legal/terms/[version]",
     // Unlocalized on purpose: the app deep-links here with a fixed `/setup`
     // path (see dulce-app `constants/links.ts`), so both locales must resolve
     // the same slug.

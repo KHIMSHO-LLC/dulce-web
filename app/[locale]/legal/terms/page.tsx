@@ -4,6 +4,8 @@ import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { ENGLISH_LEGAL_LOCALES, TRANSLATED_LEGAL_LOCALES, routing, type AppLocale } from "@/i18n/routing";
 import { seoFor } from "@/lib/seo";
+import { TERMS_UPDATED as LAST_UPDATED } from "@/lib/legalVersions";
+import { LegalChanges } from "@/components/legal/LegalChanges";
 import { LegalLayout } from "@/components/legal/LegalLayout";
 import { TermsEs } from "@/components/legal/TermsEs";
 import { TermsEn } from "@/components/legal/TermsEn";
@@ -14,7 +16,6 @@ import { TermsIt } from "@/components/legal/TermsIt";
 /** The Spanish text prevails; the others are translations of it. */
 const DOC: Record<AppLocale, () => React.JSX.Element> = { es: TermsEs, en: TermsEn, de: TermsDe, fr: TermsFr, it: TermsIt, fi: TermsEn, nl: TermsEn, nb: TermsEn, sv: TermsEn, ru: TermsEn };
 
-const LAST_UPDATED = "2026-11-05";
 
 export async function generateMetadata({
   params,
@@ -47,6 +48,7 @@ export default async function TermsPage({
       {TRANSLATED_LEGAL_LOCALES.includes(locale as AppLocale) || ENGLISH_LEGAL_LOCALES.includes(locale as AppLocale) ? (
         <p>{t("translationNotice")}</p>
       ) : null}
+      <LegalChanges doc="terms" locale={locale as AppLocale} />
       {(() => {
         const Doc = DOC[locale as AppLocale];
         return <Doc />;

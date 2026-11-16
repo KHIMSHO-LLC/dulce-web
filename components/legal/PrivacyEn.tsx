@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* Legal review remains outstanding: validate the health-data legal basis, app consent flow, retention and transfer details with Spanish counsel. */}
+{/* Translation of the Spanish policy, which prevails. Drafting decisions and open points: DULCE/plans/legal-answers-2026-11-16.md. */}
 export function PrivacyEn() {
   return (
     <>
@@ -59,15 +59,19 @@ export function PrivacyEn() {
           (Abbott) or Dexcom Share account. Your sign-in password is stored in your device’s
           secure keychain and is not sent to Dulce. The app uses it to connect to the provider;
           when your CGM is connected, a provider session token (not your password) is sent
-          to the relay as described below. For Medtronic CareLink, you enter your password on Medtronic’s own page, so Dulce never sees it, and Dulce receives sign-in tokens from Medtronic. For Nightscout, you enter your site address and an access token or API secret (Dulce keeps only the secret’s SHA-1 fingerprint). Exception for Dexcom: while “Keep me signed in” is on (Settings › Sensor, on by default), the app also sends your Dexcom password to the relay once, because Dexcom ends sessions every 24 hours; see below.
+          to the relay as described below. For Medtronic CareLink, you enter your password on Medtronic’s own page, so Dulce never sees it, and Dulce receives sign-in tokens from Medtronic. For Nightscout, you enter your site address and an access token or API secret (Dulce keeps only the secret’s SHA-1 fingerprint). Exception for Dexcom: while “Keep me signed in” is on (Settings › Sensor, on by default), the app also sends your Dexcom password to the relay once, because Dexcom ends sessions every 24 hours; see below. If you use saved chart history and accepted collecting while you are away, it also lets the relay keep collecting your history after you sign out (see 2.6).
         </li>
         <li>
           <strong>Glucose readings</strong> fetched from LibreLinkUp, Dexcom Share, Medtronic CareLink or Nightscout, stored
-          in a local database on your device.
+          in a local database on your device (and, for Dulce Pro subscribers who accept saved chart
+          history, also on the relay; see 2.6).
         </li>
         <li>
-          <strong>Your logbook</strong>: carbohydrates, insulin, manual glucose entries and
-          notes. Stored locally.
+          <strong>Your logbook</strong>: carbohydrates, insulin (including doses read from a smart
+          insulin pen), exercise, manual glucose entries and notes. Stored on your device. If you use
+          saved chart history and share your logbook with your family (on by default, you can switch
+          it off), the entries from the day you switched sharing on, including free-text notes, are
+          also stored on the relay (see 2.6).
         </li>
         <li>
           <strong>Apple Health data</strong> (iPhone) or <strong>Health Connect data</strong>{" "}
@@ -136,7 +140,7 @@ export function PrivacyEn() {
       <ul>
         <li>
           <strong>A provider session token</strong> (not your password): a LibreLinkUp token
-          or a Dexcom Share session ID, so it can fetch readings on your behalf. For Medtronic CareLink, the relay holds your CareLink sign-in tokens. For Nightscout, it holds your site address and your access token or the SHA-1 fingerprint of your API secret. For Dexcom, while “Keep me signed in” is on, the relay also stores your Dexcom password, encrypted (AES-256-GCM, with the key kept separately in Cloudflare’s secret store), and uses it only to sign in to Dexcom Share again when your session expires. It is never logged or shared, and it is deleted when you turn the option off, sign out or delete your account.
+          or a Dexcom Share session ID, so it can fetch readings on your behalf. For Medtronic CareLink, the relay holds your CareLink sign-in tokens. For Nightscout, it holds your site address and your access token or the SHA-1 fingerprint of your API secret. For Dexcom, while “Keep me signed in” is on, the relay also stores your Dexcom password, encrypted (AES-256-GCM, with the key kept separately in Cloudflare’s secret store), and uses it only to sign in to Dexcom Share again when your session expires. It is never logged or shared, and it is deleted when you turn the option off or delete your account. When you sign out, it is deleted too, unless Dulce keeps collecting your saved chart history while you are away (see 2.6): then it stays, encrypted, only for as long as that collecting continues, and is deleted the moment it ends for any reason. If you choose “Stop and delete” when you sign out, it is deleted at once.
         </li>
         <li>
           <strong>A random installation ID and provider account identifier</strong> to associate
@@ -148,8 +152,10 @@ export function PrivacyEn() {
         </li>
         <li>
           <strong>Your latest glucose readings</strong>, including the value and timestamp,
-          kept as a short rolling window for Live Activity, watch and follower views. The relay
-          is not a long-term store of your health history — that stays on your device.
+          kept as a short rolling window for Live Activity, watch and follower views. If you are a
+          Dulce Pro subscriber and you accept saved chart history in the app, the relay also keeps
+          your chart history for up to 1 year (see 2.6). Without it, your long-term history stays
+          on your device only.
         </li>
         <li>
           <strong>Settings and technical device/app details</strong> needed to provide the
@@ -169,8 +175,11 @@ export function PrivacyEn() {
         </li>
       </ul>
       <p>
-        You can stop this processing by disconnecting your CGM or using Delete Account in
-        Settings. The app asks the relay to delete its active device, token and sharing records.
+        You can stop this processing by using Delete account in Settings. Signing out of your
+        sensor account in Dulce stops live updates and alerts; if you use saved chart history,
+        whether Dulce keeps collecting your history while you are signed out is your choice (see
+        2.6). Delete account asks the relay to delete its active device, token, sharing and
+        saved-history records.
         A minimal installation ID and first-registration timestamp are retained after deletion
         so a returning installation is not counted as new in internal connection metrics. This
         marker has no automatic expiry; email us if you want it erased too.
@@ -178,8 +187,12 @@ export function PrivacyEn() {
 
       <h3>2.4 Family following</h3>
       <p>
-        If you invite someone to follow you, the relay delivers your recent readings and
-        alerts to their device from the moment they accept — earlier history is not shared.
+        If you invite someone to follow you, the relay delivers your readings and alerts to their
+        device from the moment they accept. Without saved chart history, earlier history is not
+        shared. If you use saved chart history (Dulce Pro), your followers can also see your saved
+        chart history, including readings from before they accepted, and, while logbook sharing is
+        on, your shared logbook, including free-text notes; they stop seeing it when you revoke them
+        or pause sharing (see 2.6).
         Messages between you and your followers, including text you write, pass through the relay and Apple’s or Google’s push service to reach their devices. The relay doesn’t keep the message text or a message history. You can revoke a follower’s access at any time, and you can turn off
         follower messages entirely.
       </p>
@@ -198,11 +211,207 @@ export function PrivacyEn() {
         makes the decision.
       </p>
 
+      <h3>2.6 Saved chart history (Dulce Pro)</h3>
+      <p>
+        <strong>What it is.</strong> If you have Dulce Pro and you accept it in the app, our relay
+        saves your glucose history so that your chart and your followers’ chart are the same and
+        have no holes, and so that your history is still there after you sign out, reinstall Dulce
+        or change iPhone. If you do not have Dulce Pro, or you do not accept it, nothing is saved
+        and your history stays on your device only.
+      </p>
+      <p>
+        <strong>What is saved.</strong>
+      </p>
+      <ul>
+        <li>
+          Your glucose readings, each with its time, value and trend arrow: the history your
+          sensor’s own service returns (LibreLinkUp, Dexcom Share, Medtronic CareLink or
+          Nightscout), the readings the relay fetches, and, once when you accept, the history
+          already on your phone (up to 90 days).
+        </li>
+        <li>
+          Your logbook, if you share it with your family (on by default while saved chart history
+          is on; you can switch it off separately). Everything in the logbook is shared:
+          carbohydrates, insulin (including doses read from a smart insulin pen and priming doses),
+          exercise, manual glucose checks and free-text notes, each with its time and amount. Only
+          entries from the day you switch logbook sharing on are shared; older entries are not.
+        </li>
+        <li>
+          Not saved with it: your sensor account email, your name, the text of messages between you
+          and your followers, and Apple Health or Health Connect data.
+        </li>
+      </ul>
+      <p>
+        <strong>Why.</strong> Only to provide this feature: the same, complete chart for you and the
+        family members you invited, kept across sign-out, reinstall and a new phone. We do not use
+        it for advertising, profiling or sale, and we do not share it with Meta or any analytics
+        service.
+      </p>
+      <p>
+        <strong>Legal basis.</strong> Your explicit consent (Art. 9(2)(a) GDPR), because glucose
+        data is health data. The app asks before saving starts, separately for each sensor account:
+        if you sign in with a different sensor account, it asks again. Nothing is saved before you
+        answer, and app versions that do not ask save nothing. You can withdraw your consent at any
+        time in Settings: saving stops and the saved copy on the relay is deleted at once.
+        Withdrawing does not affect the lawfulness of the saving done before. Dulce Pro does not
+        depend on this consent: without it, Dulce Pro works without saved history.
+      </p>
+      <p>
+        <strong>Where.</strong> On the Dulce relay, in a database of our hosting provider
+        Cloudflare, which processes it for us and may process data in the EU and other countries
+        under its standard safeguards (see section 8). The same history also stays in the app’s
+        local database on your phone.
+      </p>
+      <p>
+        <strong>How long.</strong> While your Dulce Pro subscription (including a free trial) is
+        active, we keep at most about 1 year of history; older days are removed automatically. If
+        your subscription ends or is refunded, saving stops and the saved history (readings and
+        shared logbook) is deleted 90 days later; if you subscribe again within those 90 days, it
+        is still there.
+      </p>
+      <p>
+        <strong>Collecting while you are signed out or the app is removed.</strong> If you accepted
+        it (the app tells you on the consent screen, in a one-time notice, or when you sign out),
+        the relay keeps collecting your sensor history after you sign out of your sensor account in
+        Dulce or remove the app, a few times a day rather than every minute, using the sensor
+        credential it already holds:
+      </p>
+      <ul>
+        <li>
+          LibreLinkUp: the session token. Nightscout: your site address and your access token or
+          the fingerprint of your API secret.
+        </li>
+        <li>
+          Medtronic CareLink: the sign-in tokens Medtronic issued to Dulce (never your password),
+          which the relay refreshes as Medtronic requires.
+        </li>
+        <li>
+          Dexcom Share: if “Keep me signed in” is on, your Dexcom password, encrypted as described in
+          2.3. If it is off, collecting stops about a day after your last sign-in, because Dexcom
+          ends the session.
+        </li>
+      </ul>
+      <p>
+        Collecting while you are away ends at the first of these: you sign in to Dulce again with
+        the same sensor account; you turn it off in Settings or choose “Stop and delete” when you
+        sign out; you turn off saved chart history or use Delete account; your Dulce Pro
+        subscription ends; your sensor’s service refuses the sign-in or keeps failing for about a
+        week; or 1 year has passed. When it ends, the credential kept for it is deleted. The
+        history already saved stays until you delete it or the period above runs out, unless you
+        chose to delete it. If you remove the app without signing out, the app cannot ask you at
+        that moment: collecting continues only if you had already accepted it; to stop it, write
+        to us (see “How to turn it off and delete it” below). While you are signed out or away,
+        your followers get no live readings, alerts or new history.
+      </p>
+      <p>
+        <strong>It can have gaps or be lost.</strong> Saved history is a convenience: it is not a
+        medical record and not a backup. It can have gaps or be lost, for example when your sensor
+        session expires or you change your sensor password, when Dexcom ends the session and “Keep
+        me signed in” is off, when your sensor’s service has an outage or has not received data from
+        your phone yet, when your subscription ends, when you reinstall Dulce on Android or move to
+        an iPhone without your iCloud Keychain, when you use Delete account, when a sensor maker
+        changes or closes its service, or because of a fault on our side. Keep the records your
+        doctor needs in your sensor manufacturer’s official app.
+      </p>
+      <p>
+        <strong>Who can see it.</strong> You, and the followers you invited while you share with
+        them: they see your saved chart history (including readings from before they accepted)
+        and, while logbook sharing is on, your shared logbook including free-text notes. They stop
+        seeing it when you revoke them, when sharing is paused, or when you delete your history.
+        Switching logbook sharing off deletes the shared copy on the relay; your logbook on your
+        phone stays. Notes you share can be read by your followers, so do not write information
+        about other people in notes you share. Someone signed in to the same sensor account on their
+        own phone does not get your saved history through Dulce. The relay processes this data
+        automatically to deliver it; we do not look at an individual user’s history or notes, except
+        where needed to fix a problem you report to us, to keep the service secure, or where the law
+        requires it.
+      </p>
+      <p>
+        <strong>How we recognise your history without an account.</strong> Dulce has no user
+        account. Your history is linked to a random secret “history key” created on your phone,
+        combined with an identifier of your sensor account’s patient (a number or username given by
+        your sensor’s service, or a fingerprint of your Nightscout address), never your sensor
+        email. On iPhone, if you use iCloud Keychain, the history key is synced through your own
+        iCloud Keychain, so your other iPhones on the same Apple Account share the same history; for
+        the same reason, turning saving off on one of them turns it off on the others. Delete account
+        removes the key from your iCloud Keychain, so Dulce on your other iPhones starts a fresh
+        history. If you sign in with a different sensor account on the same phone, the histories are
+        not mixed.
+      </p>
+      <p>
+        <strong>How to turn it off and delete it.</strong>
+      </p>
+      <ul>
+        <li>
+          In the app, turn off “Save chart history” in Settings and confirm “Stop and delete”: the
+          saved copy on the relay is deleted at once.
+        </li>
+        <li>
+          In the app, turn off “Keep collecting when I’m signed out or the app is removed”: Dulce
+          no longer collects after you sign out or remove the app, and keeps no sensor credential
+          for it.
+        </li>
+        <li>
+          In the app, turn off “Share my logbook with family”: the shared logbook copy on the relay
+          is deleted.
+        </li>
+        <li>When you sign out, choose “Stop and delete” (or “Delete it”).</li>
+        <li>Use Settings → Delete account: everything is deleted, as described in section 9.</li>
+        <li>
+          Without the app, write to{" "}
+          <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Because there is no
+          account, include your Support ID (in the app: Settings › Account › Support ID) or the
+          contact email you saved (section 2.7) if you have them; otherwise we will ask you for
+          information that lets us find your data (for example your sensor service and when you
+          last used Dulce). We can only act on data we can identify, and we will tell you if we
+          cannot.
+        </li>
+      </ul>
+
+      <h3>2.7 Contact email (optional)</h3>
+      <p>
+        Dulce works without an email address. If you want, you can save a contact email in the app.
+        We store it on the Dulce relay, linked to your installation (the Support ID shown in the
+        app), and use it only to:
+      </p>
+      <ul>
+        <li>answer your support requests and find your installation when you write to us;</li>
+        <li>
+          write to you about your Dulce installation or subscription, for example a problem with
+          your sensor connection, a change to this policy or the terms, or a free month we offer
+          you.
+        </li>
+      </ul>
+      <p>
+        We do not use it for marketing or newsletters unless you agree to that separately, and we
+        do not share it with Meta, analytics services or anyone else, except our hosting provider
+        Cloudflare, which stores it for us. It is never written to logs. Because it is linked to
+        your installation, it lets us see who the installation belongs to when we help you (for
+        example your subscription status or whether you use family sharing); support does not see
+        your glucose readings.
+      </p>
+      <p>
+        <strong>Legal basis:</strong> your consent (Art. 6(1)(a) GDPR). Giving it is optional, and
+        you can change or remove it in the app at any time; removing it deletes it from the relay.{" "}
+        <strong>How long:</strong> until you remove it, use Delete account or ask us to delete it.
+        It stays when you sign out of your sensor account, so that we can still help you then.
+        Emails you send us are handled as described for contact messages in section 6.
+      </p>
+
       <h2 id="purpose">3. Why we use your data</h2>
       <ul>
         <li>Show your glucose on your devices and, if you choose, your followers’ devices.</li>
         <li>Deliver the alerts you configure.</li>
+        <li>
+          Keep your chart history so that you and your followers see the same chart, also after you
+          sign out, reinstall or change phone, and share your logbook with the family you invited
+          (Dulce Pro, with your consent; section 2.6).
+        </li>
         <li>Validate your subscription and unlock Pro features.</li>
+        <li>
+          If you saved a contact email, answer your support requests and write to you about your
+          installation or subscription (section 2.7).
+        </li>
         <li>Let you know when Dulce is available (waitlist).</li>
         <li>Respond to questions submitted through the contact form.</li>
         <li>Protect the site from abuse (IP hash, rate limit).</li>
@@ -214,11 +423,18 @@ export function PrivacyEn() {
       <ul>
         <li>
           <strong>Explicit consent</strong> (Art. 9(2)(a) GDPR): processing your health data
-          when you choose to connect your CGM and use the related features. Disconnecting your
-          CGM stops the relay processing; you can also withdraw consent by contacting us. The
-          app links to this policy during onboarding but does not currently show a separate
-          health-data consent checkbox. We are asking Spanish privacy counsel to verify whether
-          the current notice and connection flow meet the explicit-consent standard.
+          when you connect your sensor in the app and use the related features (live readings,
+          alerts, Live Activity, widgets, watch and family following). You give it by connecting
+          your sensor after the app has explained what Dulce does and linked to this policy. You
+          can withdraw it at any time by signing out of your sensor account in Dulce, which stops
+          the relay processing (except collecting your saved chart history while you are away, if
+          you accepted it; section 2.6), by using Delete account, or by writing to us.
+        </li>
+        <li>
+          <strong>Explicit consent</strong> (Art. 9(2)(a) GDPR) for saved chart history,
+          collecting while you are signed out or the app is removed, and logbook sharing: asked in
+          the app, for each sensor account, before saving starts, and withdrawable at any time in
+          Settings (section 2.6).
         </li>
         <li>
           <strong>Contract</strong> (Art. 6(1)(b) GDPR): providing the app and the features
@@ -232,10 +448,15 @@ export function PrivacyEn() {
           described in section 2.2.2; you can withdraw it at any time in Settings.
         </li>
         <li>
+          <strong>Consent</strong> (Art. 6(1)(a) GDPR): for the optional contact email in section
+          2.7; you can remove it at any time in the app.
+        </li>
+        <li>
           <strong>Legitimate interest</strong> (Art. 6(1)(f) GDPR): site security and answering
-          questions you send through the contact form. The lawful
-          basis for analytics depends on the service and regional rules described in our Cookie
-          Policy; this requires confirmation with privacy counsel.
+          questions you send us through the contact form or by email. Website analytics: your
+          consent where our Cookie Policy asks for it (in the EEA, the UK and Switzerland, or when
+          we cannot tell where you are), and elsewhere our legitimate interest in understanding how
+          the site is used.
         </li>
       </ul>
 
@@ -247,12 +468,14 @@ export function PrivacyEn() {
       <ul>
         <li>
           Your long-term glucose history, logbook and Apple Health or Health Connect data are
-          processed and stored on your device. Recent readings are also processed by the relay as described above.
+          processed and stored on your device. Recent readings are also processed by the relay as described above. If you use Dulce
+          Pro and accept saved chart history, your glucose history, and your logbook while you share
+          it with family, are also stored on the relay (section 2.6).
         </li>
         <li>
           When your CGM is connected, the relay processes recent readings needed for the
-          background and sharing features you use; it keeps a short rolling window, not your
-          long-term glucose history.
+          background and sharing features you use; it keeps a short rolling window and, only for
+          Dulce Pro subscribers who accept it, the saved chart history described in 2.6.
         </li>
         <li>They are always encrypted in transit (TLS).</li>
         <li>
@@ -267,7 +490,27 @@ export function PrivacyEn() {
           <strong>Active relay data:</strong> recent readings are continuously replaced in a
           short rolling window. Provider session and push tokens are kept while needed for your
           connected device and deleted when you disconnect or deregister it, sign out, or use
-          Settings → Delete account.
+          Settings → Delete account. Exception: while Dulce keeps collecting your saved chart
+          history after you sign out or remove the app (section 2.6), the sensor credential needed
+          for it (LibreLinkUp session token, Nightscout site token, Medtronic CareLink sign-in
+          tokens or the encrypted Dexcom password) is kept only for that and deleted when collecting
+          ends, at the latest after 1 year.
+        </li>
+        <li>
+          <strong>Saved chart history and shared logbook (Dulce Pro):</strong> while your
+          subscription is active, at most about 1 year, older days removed automatically. Deleted
+          at once when you turn saving off, choose “Stop and delete” at sign-out or use Delete
+          account (the shared logbook also when you switch logbook sharing off); deleted 90 days
+          after your subscription ends or is refunded.
+        </li>
+        <li>
+          <strong>Contact email:</strong> until you remove it in the app, use Delete account or ask
+          us to delete it (section 2.7).
+        </li>
+        <li>
+          <strong>Backups:</strong> data deleted from the relay can remain in our hosting
+          provider&apos;s automatic database backups for up to 30 days, after which it is
+          overwritten. We use these backups only to recover from a fault.
         </li>
         <li>
           <strong>App data on your device:</strong> until you delete it or uninstall the app.
@@ -311,11 +554,14 @@ export function PrivacyEn() {
       </p>
       <ul>
         <li>
-          <strong>Cloudflare</strong> — hosts the Dulce relay described above.
+          <strong>Cloudflare</strong> — hosts the Dulce relay described above and stores the saved
+          chart history and shared logbook (section 2.6) and the optional contact email (section
+          2.7), as our processor.
         </li>
         <li>
           <strong>Apple</strong> — push notifications (APNs), Live Activities, Apple Health
-          (on-device), and payments.
+          (on-device), payments, and, if you use iCloud Keychain, keeping your history key in your
+          own iCloud Keychain (section 2.6).
         </li>
         <li>
           <strong>Google Firebase</strong> — push notifications on Android.
@@ -377,6 +623,11 @@ export function PrivacyEn() {
         safeguards at{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
+      <p>
+        Saved chart history and shared logbook entries are stored in a database of our hosting
+        provider Cloudflare, which may process data in the EU and other countries under the
+        safeguards described above.
+      </p>
 
       <h2 id="rights">9. Your rights</h2>
       <p>Under the GDPR, and subject to its conditions, you have the right to:</p>
@@ -390,12 +641,25 @@ export function PrivacyEn() {
       </ul>
       <p>
           Use <strong>Settings → Delete account</strong> in the app to delete local app data and
-          active relay records. The minimal installation marker described above remains until
-          you request its erasure. You can exercise any of these rights by writing to{" "}
-        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. We respond within
-        one month. If a request is complex or we receive many requests, the GDPR permits an
-        extension of up to two further months; we will explain any extension within the first
+          active relay records, including your saved chart history and shared logbook; it also
+          removes Dulce’s history key from your iCloud Keychain, so Dulce on your other iPhones
+          starts a fresh history. You can also turn off saved chart history in Settings, which
+          deletes the saved copy at once, and switch off logbook sharing separately, which deletes
+          the shared logbook copy. The app has no export button for saved history; write to us
+          and we will send you a copy in a common electronic format (for example CSV). The
+          minimal installation marker described above remains until you request its erasure.
+          You can exercise any of these rights by writing to{" "}
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Because Dulce has no
+        accounts, include your Support ID (in the app: Settings › Account › Support ID) or the
+        contact email you saved, if you have them; otherwise we will ask for other information
+        that lets us find your data, and we can only act on data we can identify. We respond
+        within one month. If a request is complex or we receive many requests, the GDPR permits
+        an extension of up to two further months; we will explain any extension within the first
         month.
+      </p>
+      <p>
+        If a Dulce user has died, a close relative or heir can ask us to delete their data and stop
+        any collecting of their history; we will ask for reasonable proof.
       </p>
       <p>
         If you believe our processing does not comply with the law, you have the right to file
@@ -409,7 +673,11 @@ export function PrivacyEn() {
       <h2 id="minors">10. Children</h2>
       <p>
         Dulce is not directed at children under the age of 14. On Android, Dulce is intended for adults aged 18 and over. A parent or legal guardian may
-        use Dulce to follow a minor’s glucose under their own responsibility. If you believe a
+        use Dulce to follow a minor’s glucose under their own responsibility; in that case the parent
+        or guardian gives or refuses the consent for saved chart history and logbook sharing. If
+        you are between 14 and 18, you need a parent&apos;s or legal guardian&apos;s consent to use
+        Dulce (Terms of Use, section 4), and this includes saved chart history, logbook sharing
+        and the contact email. If you believe a
         minor in your care has provided us with data without your consent, contact us and we
         will delete it.
       </p>
@@ -424,8 +692,14 @@ export function PrivacyEn() {
 
       <h2 id="changes">12. Changes to this policy</h2>
       <p>
-        If we make material changes, we will notify affected users by email or inside the app
-        and publish the updated version with its revision date on this page.
+        If we make material changes, we tell you before they apply: in the app (in the “What’s
+        new” note of the app update that brings them, and in a notice that links to this page)
+        and, if you saved a contact email, by email. This page shows the date of the current
+        version, a short summary of what changed and a link to the previous version. Where a
+        change needs your consent, for example a new use of your health data, the app asks you
+        first and nothing new happens until you answer; app versions that do not ask keep working
+        as before. Changes to saved chart history that take something away from you are announced
+        in the app at least 30 days beforehand (Terms of Use, sections 8.1 and 15).
       </p>
 
       <h2 id="contact">13. Contact</h2>

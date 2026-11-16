@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* Translation of the Spanish/English terms. TODO: review local legal terminology; Spanish counsel review remains outstanding. */}
+{/* Übersetzung des spanischen Textes, der Vorrang hat. Entscheidungen zur Formulierung und offene Punkte: DULCE/plans/legal-answers-2026-11-16.md (auf Englisch). */}
 export function TermsDe() {
   return (
     <>
@@ -34,8 +34,9 @@ export function TermsDe() {
       </p>
       <ul>
         <li>
-          Glukosedaten von FreeStyle Libre über LibreLinkUp (Abbott) oder von Dexcom G6, G7
-          und ONE+ über Dexcom Share anzuzeigen.
+          Glukosedaten von FreeStyle Libre über LibreLinkUp (Abbott), von Dexcom G6, G7 und
+          ONE+ über Dexcom Share, von Medtronic-Systemen über Medtronic CareLink oder von einer
+          Nightscout-Website anzuzeigen.
         </li>
         <li>
           Deine Glukose auf dem Sperrbildschirm des iPhone (Live-Aktivität), in der Dynamic
@@ -48,6 +49,11 @@ export function TermsDe() {
         <li>
           Deine Glukose in Echtzeit mit Followern zu teilen, die du einlädst (Folgen durch die
           Familie).
+        </li>
+        <li>
+          Deinen Glukoseverlauf zu speichern und dein Logbuch mit den Followern zu teilen, die du
+          einlädst, damit du und sie dieselbe Kurve sehen (Dulce Pro, mit deiner Einwilligung;
+          siehe Abschnitt 8.1).
         </li>
       </ul>
       <p>
@@ -76,6 +82,16 @@ export function TermsDe() {
         Alarmfunktionen deiner offiziellen CGM-App eingeschaltet. Dulce ergänzt die offizielle
         App deines CGM-Herstellers.
       </p>
+      <p>
+        Das gilt für jede Warnung in Dulce, auch für Warnungen, die sich wiederholen, solange ein
+        Wert außerhalb des Bereichs bleibt, und für die Warnung, dass keine neuen Werte ankommen.
+        Wenn Dulce dich nicht warnt, dass keine Werte mehr ankommen, heißt das nicht, dass dein
+        Sensor oder seine Verbindung funktioniert.
+      </p>
+      <p>
+        Der gespeicherte Kurvenverlauf, das geteilte Logbuch, Statistiken und Diagramme in Dulce
+        sind keine Krankenakte. Nutze sie und alles andere in Dulce nicht, um Behandlungsentscheidungen zu treffen.
+      </p>
 
       <h2 id="eligibility">4. Voraussetzungen</h2>
       <p>
@@ -87,11 +103,18 @@ export function TermsDe() {
 
       <h2 id="accounts">5. Konten und Zugangsdaten</h2>
       <p>
-        Dulce verbindet sich mit FreeStyle-Libre-Daten über <strong>LibreLinkUp</strong> und
-        mit Dexcom-Daten über <strong>Dexcom Share</strong>.
+        Dulce verbindet sich mit FreeStyle-Libre-Daten über <strong>LibreLinkUp</strong>, mit
+        Dexcom-Daten über <strong>Dexcom Share</strong>, mit Medtronic-Daten über{" "}
+        <strong>Medtronic CareLink</strong> oder mit einer <strong>Nightscout</strong>-Website.
         Du bist für die Vertraulichkeit dieser Zugangsdaten verantwortlich. Dulce speichert sie im
-        sicheren Schlüsselbund deines Geräts; verlorene Zugangsdaten können wir nicht für deinen
-        CGM-Anbieter wiederherstellen. Du musst berechtigt sein, das verbundene Konto zu nutzen.
+        sicheren Schlüsselbund deines Geräts, mit diesen Ausnahmen, die in der{" "}
+        <Link href="/legal/privacy">Datenschutzerklärung</Link> erklärt werden: Bei Dexcom mit
+        „Angemeldet bleiben“ wird dein Passwort zusätzlich verschlüsselt auf unserem Relay
+        gespeichert; bei Medtronic CareLink hält unser Relay die Anmelde-Tokens, die Medtronic
+        ausstellt, nie dein Passwort; und solange Dulce deinen gespeicherten Kurvenverlauf weiter
+        sammelt, nachdem du dich abgemeldet oder die App entfernt hast (Abschnitt 8.1), behält
+        unser Relay die dafür nötige Sensor-Zugangskennung. Verlorene Zugangsdaten können wir
+        nicht für deinen CGM-Anbieter wiederherstellen. Du musst berechtigt sein, das verbundene Konto zu nutzen.
       </p>
 
       <h2 id="sharing">6. Folgen durch die Familie</h2>
@@ -100,7 +123,10 @@ export function TermsDe() {
         für die Wahl deiner Follower verantwortlich und kannst ihnen den Zugang jederzeit
         entziehen. Follower dürfen Dulce nicht als Notfall-Überwachungssystem nutzen: Die
         Zustellung von Werten und Warnungen an Follower unterliegt denselben Grenzen wie in
-        Abschnitt 3 beschrieben.
+        Abschnitt 3 beschrieben. Der gespeicherte Kurvenverlauf kann Lücken haben, und Follower
+        sehen möglicherweise weniger als du. Wenn du dein Logbuch teilst, sehen deine Follower
+        alles darin, auch deine Freitext-Notizen; schreib keine Angaben über andere Personen in
+        Notizen, die du teilst.
       </p>
 
       <h2 id="license">7. Lizenz</h2>
@@ -114,7 +140,8 @@ export function TermsDe() {
       <p>
         Die App ist kostenlos herunterzuladen und mit ihren Grundfunktionen zu nutzen. Einige
         Funktionen (etwa die Live-Aktivität auf dem Sperrbildschirm, Echtzeit-Updates auf der
-        Apple Watch, Glukosewarnungen und das Folgen durch die Familie) setzen ein sich
+        Apple Watch, Glukosewarnungen, das Folgen durch die Familie und der gespeicherte
+        Kurvenverlauf) setzen ein sich
         automatisch verlängerndes <strong>Dulce Pro</strong> Abonnement voraus:
       </p>
       <ul>
@@ -140,6 +167,54 @@ export function TermsDe() {
         </li>
       </ul>
 
+      <h3>8.1 Gespeicherter Kurvenverlauf (Dulce Pro)</h3>
+      <p>
+        Der gespeicherte Kurvenverlauf gehört zu Dulce Pro. Er wird nur verwendet, wenn du ihn in
+        der App akzeptierst, und du kannst ihn jederzeit ausschalten. Unsere{" "}
+        <Link href="/legal/privacy">Datenschutzerklärung</Link> (Abschnitt 2.6) erklärt, was
+        gespeichert wird, wer es sehen kann und wie du es löschst.
+      </p>
+      <p>
+        Wir bemühen uns, deinen Verlauf vollständig zu speichern, garantieren aber nicht, dass er
+        vollständig, lückenlos, korrekt oder immer verfügbar ist. Er hängt von deiner
+        Sensorsitzung und von Dritten ab (dem Dienst deines Sensorherstellers, Apple, Google und
+        unserem Hosting-Anbieter) und kann Lücken haben oder verloren gehen. Er ist keine
+        Krankenakte und kein Backup: Verlass dich für keine Behandlungsentscheidung darauf und
+        bewahre die Aufzeichnungen, die du brauchst, in der offiziellen App deines
+        Sensorherstellers auf. Abschnitt 3 gilt dafür uneingeschränkt.
+      </p>
+      <p>
+        Wir bewahren höchstens etwa 1 Jahr Verlauf auf. Wenn dein Abonnement endet oder erstattet
+        wird, endet das Speichern, und dein gespeicherter Verlauf wird 90 Tage später gelöscht;
+        wenn du innerhalb dieser Zeit erneut abonnierst, ist er wieder verfügbar. Kostenlose
+        Funktionen arbeiten weiter mit den Daten auf deinem Gerät.
+      </p>
+      <p>
+        Das Abmelden oder Entfernen der App löscht deinen gespeicherten Verlauf nicht von selbst.
+        Wenn du es akzeptiert hast, sammelt Dulce deinen Verlauf weiter, während du abgemeldet bist
+        oder die App entfernt ist, und behält die dafür nötige Sensor-Zugangskennung (bei Dexcom mit
+        „Angemeldet bleiben“ dein Passwort, verschlüsselt), bis das Sammeln endet. Das Sammeln
+        endet, wenn du dich wieder anmeldest, es ausschaltest, beim Abmelden „Beenden und löschen“
+        wählst, „Konto löschen“ nutzt, dein Abonnement endet, der Dienst deines Sensors die
+        Anmeldung verweigert oder immer wieder fehlschlägt oder 1 Jahr vergangen ist.
+      </p>
+      <p>
+        Wenn du dein Logbuch teilst, sehen deine Follower alles darin, auch Freitext-Notizen. Du
+        bist für das verantwortlich, was du in Notizen schreibst, die du teilst, auch für Angaben
+        über andere Personen. Du kannst das Teilen jederzeit ausschalten, wodurch die geteilte
+        Kopie gelöscht wird.
+      </p>
+      <p>
+        Wir können diese Funktion ändern, einschränken oder einstellen, zum Beispiel um den Dienst
+        zu schützen, aus rechtlichen Gründen, um ihre Kosten zu kontrollieren oder weil der Dienst
+        eines Sensorherstellers sie nicht mehr erlaubt. Wenn wir sie einstellen oder so ändern, dass dir
+        etwas weggenommen wird (zum Beispiel ein kürzerer Verlauf), teilen wir dir das
+        mindestens 30 Tage vorher in der App mit, es sei denn, ein Sicherheits-, Rechts- oder
+        Drittgrund außerhalb unserer Kontrolle macht das unmöglich; in dieser Zeit bleibt dein
+        gespeicherter Verlauf in der App sichtbar, und du kannst uns per E-Mail um eine Kopie
+        bitten. Worauf du in diesem Fall Anspruch hast, beschreibt Abschnitt 10.
+      </p>
+
       <h2 id="prohibited">9. Unzulässiges Verhalten</h2>
       <p>Du darfst nicht:</p>
       <ul>
@@ -152,14 +227,45 @@ export function TermsDe() {
         <li>Formulare massenhaft automatisiert absenden oder unsere Infrastruktur mit Spam belasten.</li>
       </ul>
 
-      <h2 id="third-parties">10. Dienste Dritter</h2>
+      <h2 id="third-parties">10. Dienste Dritter und Sensor-Verbindungen</h2>
       <p>
         Dulce verbindet sich mit Diensten Dritter, die du wählst oder die für den Betrieb nötig
-        sind (Abbott LibreLinkUp, Dexcom Share, Apple, einschließlich Apple Health, Mitteilungen und Zahlungen,
-        sowie RevenueCat zur Prüfung von Abonnements). Für deren Nutzung gelten ihre eigenen
-        Bedingungen und Richtlinien. Für ihre Verfügbarkeit, Richtigkeit oder Änderungen sind wir
-        nicht verantwortlich. Dulce ist ein unabhängiges Produkt und steht in keiner Verbindung zu
-        Abbott, Dexcom oder Apple, die es weder unterstützen noch sponsern.
+        sind: den Diensten der Sensorhersteller LibreLinkUp (Abbott), Dexcom Share und Medtronic
+        CareLink sowie Nightscout-Websites, die du oder jemand, den du wählst, betreibt; Apple
+        (einschließlich Apple Health, Mitteilungen und Zahlungen); Google (Mitteilungen und
+        Zahlungen unter Android); Cloudflare, das unser Relay hostet; und RevenueCat zur Prüfung
+        von Abonnements. Für die Nutzung dieser Dienste gelten ihre eigenen Bedingungen und
+        Richtlinien. Für ihre Verfügbarkeit, Richtigkeit oder Änderungen sind wir nicht
+        verantwortlich.
+      </p>
+      <p>
+        Dulce liest deine Glukosedaten über die eigenen Online-Dienste der Sensorhersteller. Einige
+        dieser Verbindungen nutzen Schnittstellen, die nicht offiziell, nicht dokumentiert oder
+        nicht für Apps wie Dulce vorgesehen sind (zum Beispiel Medtronic CareLink). Die Unternehmen,
+        die sie betreiben, können sie jederzeit ohne Mitteilung an uns oder an dich ändern,
+        einschränken, sperren oder einstellen. Wenn das geschieht, können Teile von Dulce oder ganz
+        Dulce für diesen Sensor vorübergehend oder dauerhaft nicht mehr funktionieren: Live-Werte,
+        Warnungen, Sperrbildschirm, Widgets und Uhr, das Folgen durch die Familie, der gespeicherte
+        Kurvenverlauf und das Sammeln, während du weg bist. Wir können das nicht verhindern, und
+        möglicherweise können wir es nicht beheben oder fehlende Daten nicht wiederherstellen. Wir
+        bemühen uns in angemessenem Umfang, die Verbindung wiederherzustellen und dich in der App
+        zu informieren, können aber nicht versprechen, dass uns das gelingt.
+      </p>
+      <p>
+        Wenn das geschieht: Dulce Pro wird von Apple abgerechnet (oder von Google Play, wenn du
+        unter Android abonniert hast), und über Erstattungen entscheiden sie nach ihren Regeln; wir
+        können selbst keine Erstattungen vornehmen. Du kannst jederzeit in den Abo-Einstellungen
+        deines App Store oder von Google Play kündigen, damit sich das Abonnement nicht verlängert,
+        und du kannst Apple oder Google um eine Erstattung bitten. Nichts in diesem Abschnitt
+        schränkt zwingende Verbraucherrechte ein, die dir zustehen, einschließlich deiner
+        gesetzlichen Rechte, wenn eine kostenpflichtige digitale Dienstleistung nicht wie
+        vereinbart funktioniert.
+      </p>
+      <p>
+        Dulce ist ein unabhängiges Produkt und steht in keiner Verbindung zu Abbott, Dexcom,
+        Medtronic, dem Nightscout-Projekt, Apple oder Google, die es weder unterstützen noch
+        sponsern. Ihre Namen und Produktnamen sind Marken ihrer Inhaber und werden nur verwendet,
+        um die Kompatibilität zu beschreiben.
       </p>
 
       <h2 id="ip">11. Geistiges Eigentum</h2>
@@ -171,20 +277,59 @@ export function TermsDe() {
 
       <h2 id="disclaimers">12. Gewährleistungsausschluss</h2>
       <p>
-        Der Dienst wird „wie besehen“ und „wie verfügbar“ bereitgestellt. Soweit gesetzlich
-        zulässig, garantieren wir nicht, dass er ununterbrochen, fehlerfrei oder zu 100 % sicher
-        ist oder bestimmte Erwartungen erfüllt. Das gilt besonders für Daten von CGM-Diensten
-        Dritter: Jede Verzögerung, jeder Fehler oder fehlende Daten beim ursprünglichen Anbieter
-        können sich in Dulce zeigen.
+        Der Dienst wird „wie besehen“ und „wie verfügbar“ bereitgestellt. Soweit nach geltendem
+        Recht zulässig, garantieren wir nicht, dass der Dienst oder ein Teil davon (einschließlich
+        Werte, Warnungen, wiederholte Warnungen, die Warnung bei ausbleibenden Werten,
+        Live-Aktivitäten, Widgets, Updates auf der Uhr, gespeicherter
+        Kurvenverlauf, Folgen durch die Familie und Teilen des Logbuchs) ununterbrochen,
+        rechtzeitig, vollständig, fehlerfrei oder zu 100 % sicher ist, dass keine Daten verloren
+        gehen oder dass er bestimmte Erwartungen erfüllt. Das gilt besonders für Daten von
+        CGM-Diensten Dritter: Jede Verzögerung, jeder Fehler oder fehlende Daten beim
+        ursprünglichen Anbieter können sich in Dulce zeigen. Deine gesetzlichen Rechte als
+        Verbraucher bleiben unberührt.
       </p>
 
       <h2 id="liability">13. Haftungsbeschränkung</h2>
       <p>
-        Soweit gesetzlich zulässig, haftet Dulce nicht für mittelbare Schäden, Folgeschäden,
-        entgangenen Gewinn oder Datenverlust, die aus der Nutzung oder der Unmöglichkeit der
-        Nutzung des Dienstes entstehen. Nichts in diesen Bedingungen beschränkt unsere Haftung für
-        Vorsatz oder grobe Fahrlässigkeit, für fahrlässig verursachte Gesundheitsschäden oder für
-        jede Haftung, die gesetzlich nicht ausgeschlossen werden kann.
+        Dulce ist eine Begleitung zu deinem CGM-System, kein Medizinprodukt. Soweit nach geltendem
+        Recht zulässig:
+      </p>
+      <ul>
+        <li>
+          Wir haften nicht für Schäden oder Verluste, die daraus entstehen, dass du Entscheidungen
+          über Insulin, Medikamente, Essen, körperliche Aktivität oder medizinische Versorgung auf
+          Grundlage von in Dulce angezeigten Informationen triffst oder dich auf Dulce statt auf
+          dein CGM-System, dessen offizielle App und Alarme, ein Blutzuckermessgerät oder dein
+          Behandlungsteam verlässt.
+        </li>
+        <li>
+          Wir haften nicht dafür, dass Werte, Warnungen (auch wiederholte Warnungen und die Warnung
+          bei ausbleibenden Werten), Live-Aktivitäten, Widgets, Updates auf der
+          Uhr, gespeicherter Kurvenverlauf, Folgen durch die Familie oder Teilen des Logbuchs
+          verspätet, unvollständig, falsch, nicht verfügbar oder verloren sind, wenn dies auf die
+          in den Abschnitten 3, 8.1 und 10 beschriebenen Ursachen (einschließlich deines Geräts,
+          Netzes und Betriebssystems sowie der Dienste deines Sensorherstellers, von Apple oder
+          Google) oder auf andere Umstände außerhalb unserer zumutbaren Kontrolle zurückgeht.
+        </li>
+        <li>
+          Wir haften nicht für mittelbare Schäden oder Folgeschäden, entgangenen Gewinn oder
+          Datenverlust. Der gespeicherte Kurvenverlauf ist kein Backup.
+        </li>
+        <li>
+          In allen anderen Fällen ist unsere Gesamthaftung für alle Ansprüche im Zusammenhang mit
+          dem Dienst auf den Betrag begrenzt, den du in den 12 Monaten vor dem Ereignis, das den
+          Anspruch begründet, für Dulce Pro bezahlt hast.
+        </li>
+      </ul>
+      <p>
+        Keine dieser Beschränkungen gilt für, und nichts in diesen Bedingungen schließt aus oder
+        beschränkt, unsere Haftung für Vorsatz oder grobe Fahrlässigkeit; für die Verletzung des
+        Lebens, des Körpers oder der Gesundheit; bei Betrug; nach dem Produkthaftungsgesetz bzw.
+        nach zwingender Produkthaftung; oder jede andere Haftung oder jedes Verbraucherrecht
+        (einschließlich deiner gesetzlichen Rechte bei nicht vertragsgemäßen digitalen Inhalten
+        oder Dienstleistungen), das nach dem für dich geltenden Recht nicht ausgeschlossen oder
+        beschränkt werden kann. Wenn dieses Recht eine Beschränkung nur teilweise zulässt, gilt sie
+        nur in diesem Umfang.
       </p>
 
       <h2 id="indemnity">14. Freistellung</h2>
@@ -196,14 +341,31 @@ export function TermsDe() {
       <h2 id="changes">15. Änderungen des Dienstes oder dieser Bedingungen</h2>
       <p>
         Wir können den Dienst und diese Bedingungen ändern, um neue Funktionen, rechtliche
-        Anforderungen oder Sicherheitsaspekte zu berücksichtigen. Bei wesentlichen Änderungen
-        informieren wir dich per E-Mail oder im Dienst.
+        Anforderungen oder Sicherheitsaspekte zu berücksichtigen. Wenn eine Änderung wesentlich
+        ist, informieren wir dich, bevor sie gilt: in der App (in der Notiz „Neuerungen“ des
+        App-Updates und in einem Hinweis, der auf den neuen Text verlinkt) und, wenn du eine
+        Kontakt-E-Mail gespeichert hast, per E-Mail. Diese Seite zeigt das Datum, eine kurze
+        Zusammenfassung der Änderungen und einen Link zur vorherigen Fassung.
+      </p>
+      <p>
+        Änderungen, die Dulce Pro etwas wegnehmen, einschließlich des gespeicherten
+        Kurvenverlaufs, werden in der App mindestens 30 Tage vorher angekündigt, es sei denn, ein
+        Sicherheits-, Rechts- oder Drittgrund außerhalb unserer Kontrolle macht das unmöglich
+        (Abschnitt 8.1). Wenn dich eine solche Änderung mehr als nur geringfügig betrifft, kannst
+        du dein Abonnement innerhalb von 30 Tagen nach der Änderung oder nach unserer Mitteilung,
+        je nachdem, was später eintritt, kostenlos beenden: Kündige es in den
+        Abo-Einstellungen von App Store oder Google Play und bitte Apple oder Google um Erstattung
+        des nicht genutzten Zeitraums; wenn sie ablehnen, schreib uns. Wenn du Dulce nach einer
+        Änderung weiter nutzt, verzichtest du damit nicht auf Rechte, die dir das zwingende
+        Verbraucherrecht gibt.
       </p>
 
       <h2 id="termination">16. Beendigung</h2>
       <p>
         Du kannst die Nutzung jederzeit beenden und deine Daten unter{" "}
-        <strong>Einstellungen → Konto löschen</strong> entfernen. Wir können deinen Zugang
+        <strong>Einstellungen → Konto löschen</strong> entfernen. Das Abmelden oder Entfernen der
+        App löscht deinen gespeicherten Kurvenverlauf nicht von selbst und beendet, wenn du es
+        akzeptiert hast, auch nicht das Sammeln durch Dulce (Abschnitt 8.1). Wir können deinen Zugang
         aussetzen oder beenden, wenn du gegen diese Bedingungen verstößt oder die Sicherheit oder
         Rechtmäßigkeit des Dienstes gefährdest.
       </p>

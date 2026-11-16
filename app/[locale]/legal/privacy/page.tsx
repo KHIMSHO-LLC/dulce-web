@@ -4,6 +4,8 @@ import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { ENGLISH_LEGAL_LOCALES, TRANSLATED_LEGAL_LOCALES, routing, type AppLocale } from "@/i18n/routing";
 import { seoFor } from "@/lib/seo";
+import { PRIVACY_UPDATED as LAST_UPDATED } from "@/lib/legalVersions";
+import { LegalChanges } from "@/components/legal/LegalChanges";
 import { LegalLayout } from "@/components/legal/LegalLayout";
 import { PrivacyEs } from "@/components/legal/PrivacyEs";
 import { PrivacyEn } from "@/components/legal/PrivacyEn";
@@ -14,7 +16,6 @@ import { PrivacyIt } from "@/components/legal/PrivacyIt";
 /** The Spanish text prevails; the others are translations of it. */
 const DOC: Record<AppLocale, () => React.JSX.Element> = { es: PrivacyEs, en: PrivacyEn, de: PrivacyDe, fr: PrivacyFr, it: PrivacyIt, fi: PrivacyEn, nl: PrivacyEn, nb: PrivacyEn, sv: PrivacyEn, ru: PrivacyEn };
 
-const LAST_UPDATED = "2026-11-10";
 
 export async function generateMetadata({
   params,
@@ -47,6 +48,7 @@ export default async function PrivacyPage({
       {TRANSLATED_LEGAL_LOCALES.includes(locale as AppLocale) || ENGLISH_LEGAL_LOCALES.includes(locale as AppLocale) ? (
         <p>{t("translationNotice")}</p>
       ) : null}
+      <LegalChanges doc="privacy" locale={locale as AppLocale} />
       {(() => {
         const Doc = DOC[locale as AppLocale];
         return <Doc />;

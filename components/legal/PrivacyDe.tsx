@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-{/* Translation of the Spanish/English policy. TODO: review local legal terminology; Spanish counsel review remains outstanding. */}
+{/* Übersetzung des spanischen Textes, der Vorrang hat. Entscheidungen zur Formulierung und offene Punkte: DULCE/plans/legal-answers-2026-11-16.md (auf Englisch). */}
 export function PrivacyDe() {
   return (
     <>
@@ -62,15 +62,20 @@ Missbrauch.
           (Abbott) oder Dexcom-Share-Konto an. Dein Passwort wird im sicheren Schlüsselbund
           deines Geräts gespeichert und nicht an Dulce gesendet. Die App nutzt es, um den
           Anbieter aufzurufen. Wenn dein CGM verbunden ist, wird wie unten beschrieben
-          ein Sitzungstoken des Anbieters (nicht dein Passwort) an das Relay gesendet. Bei Medtronic CareLink gibst du dein Passwort auf der Seite von Medtronic ein, Dulce sieht es also nie, und Dulce erhält Anmelde-Tokens von Medtronic. Bei Nightscout gibst du deine Website-Adresse und ein Zugriffstoken oder API-Secret ein (Dulce speichert nur den SHA-1-Fingerabdruck des Secrets). Ausnahme bei Dexcom: Solange „Angemeldet bleiben“ an ist (Einstellungen › Sensor, standardmäßig an), sendet die App dein Dexcom-Passwort zusätzlich einmal an das Relay, weil Dexcom Sitzungen alle 24 Stunden beendet; siehe unten.
+          ein Sitzungstoken des Anbieters (nicht dein Passwort) an das Relay gesendet. Bei Medtronic CareLink gibst du dein Passwort auf der Seite von Medtronic ein, Dulce sieht es also nie, und Dulce erhält Anmelde-Tokens von Medtronic. Bei Nightscout gibst du deine Website-Adresse und ein Zugriffstoken oder API-Secret ein (Dulce speichert nur den SHA-1-Fingerabdruck des Secrets). Ausnahme bei Dexcom: Solange „Angemeldet bleiben“ an ist (Einstellungen › Sensor, standardmäßig an), sendet die App dein Dexcom-Passwort zusätzlich einmal an das Relay, weil Dexcom Sitzungen alle 24 Stunden beendet; siehe unten. Wenn du den gespeicherten Kurvenverlauf nutzt und das Sammeln während deiner Abwesenheit akzeptiert hast, erlaubt es dem Relay außerdem, deinen Verlauf auch nach dem Abmelden weiter zu sammeln (siehe 2.6).
         </li>
         <li>
           <strong>Glukosewerte</strong> aus LibreLinkUp, Dexcom Share, Medtronic CareLink oder Nightscout, gespeichert in einer
-          lokalen Datenbank auf deinem Gerät.
+          lokalen Datenbank auf deinem Gerät (und, bei Abonnenten von Dulce Pro, die den
+          gespeicherten Kurvenverlauf akzeptieren, auch auf dem Relay; siehe 2.6).
         </li>
         <li>
-          <strong>Dein Logbuch</strong>: Kohlenhydrate, Insulin, manuelle Glukoseeinträge und
-          Notizen. Lokal gespeichert.
+          <strong>Dein Logbuch</strong>: Kohlenhydrate, Insulin (auch von einem smarten
+          Insulinpen ausgelesene Dosen), Bewegung, manuelle Glukoseeinträge und Notizen. Auf deinem
+          Gerät gespeichert. Wenn du den gespeicherten Kurvenverlauf nutzt und dein Logbuch mit
+          deiner Familie teilst (standardmäßig an, du kannst es ausschalten), werden die Einträge ab
+          dem Tag, an dem du das Teilen eingeschaltet hast, einschließlich Freitext-Notizen, auch
+          auf dem Relay gespeichert (siehe 2.6).
         </li>
         <li>
           <strong>Daten aus Apple Health</strong> (iPhone) oder <strong>Health Connect</strong> (Android), wenn du die Berechtigung erteilst. Auf Android liest Dulce nur. Auf dem iPhone kann Dulce ab Version 1.0.7 außerdem deine Sensorwerte in Apple Health speichern, höchstens einen alle 5 Minuten, wenn du Glukose in Dulce aktivierst und es erlaubst. Du kannst das in den Einstellungen von Dulce oder in der Health-App beenden. Dort gespeicherte Werte bleiben in Apple Health, und andere Apps, denen du es erlaubst, können sie lesen.
@@ -116,7 +121,7 @@ Missbrauch.
         <li>
           <strong>Ein Sitzungstoken des Anbieters</strong> (nicht dein Passwort): ein
           LibreLinkUp-Token oder eine Dexcom-Share-Sitzungs-ID, damit das Relay Werte in deinem
-          Namen abrufen kann. Bei Medtronic CareLink speichert das Relay deine CareLink-Anmelde-Tokens. Bei Nightscout speichert es deine Website-Adresse und dein Zugriffstoken oder den SHA-1-Fingerabdruck deines API-Secrets. Bei Dexcom speichert das Relay, solange „Angemeldet bleiben“ an ist, außerdem dein Dexcom-Passwort verschlüsselt (AES-256-GCM, der Schlüssel liegt getrennt im Secret-Speicher von Cloudflare) und nutzt es nur, um dich bei Dexcom Share neu anzumelden, wenn deine Sitzung abläuft. Es wird nie protokolliert oder weitergegeben und gelöscht, wenn du die Option ausschaltest, dich abmeldest oder dein Konto löschst.
+          Namen abrufen kann. Bei Medtronic CareLink speichert das Relay deine CareLink-Anmelde-Tokens. Bei Nightscout speichert es deine Website-Adresse und dein Zugriffstoken oder den SHA-1-Fingerabdruck deines API-Secrets. Bei Dexcom speichert das Relay, solange „Angemeldet bleiben“ an ist, außerdem dein Dexcom-Passwort verschlüsselt (AES-256-GCM, der Schlüssel liegt getrennt im Secret-Speicher von Cloudflare) und nutzt es nur, um dich bei Dexcom Share neu anzumelden, wenn deine Sitzung abläuft. Es wird nie protokolliert oder weitergegeben und gelöscht, wenn du die Option ausschaltest oder dein Konto löschst. Auch wenn du dich abmeldest, wird es gelöscht, es sei denn, Dulce sammelt deinen gespeicherten Kurvenverlauf während deiner Abwesenheit weiter (siehe 2.6): Dann bleibt es verschlüsselt gespeichert, nur so lange, wie das Sammeln andauert, und wird gelöscht, sobald dieses aus irgendeinem Grund endet. Wenn du beim Abmelden „Beenden und löschen“ wählst, wird es sofort gelöscht.
         </li>
         <li>
           <strong>Eine zufällige Installations-ID und eine CGM-Konto-Kennung</strong>, um
@@ -129,8 +134,9 @@ Missbrauch.
         <li>
           <strong>Deine neuesten Glukosewerte</strong>, einschließlich Wert und Zeitpunkt, als
           kurzes, laufend überschriebenes Zeitfenster für Live-Aktivität, Uhr und
-          Follower-Ansicht. Das Relay ist kein Langzeitspeicher deines Gesundheitsverlaufs; der
-          bleibt auf deinem Gerät.
+          Follower-Ansicht. Wenn du Dulce Pro hast und in der App den gespeicherten
+          Kurvenverlauf akzeptierst, bewahrt das Relay außerdem deinen Kurvenverlauf bis zu
+          1 Jahr auf (siehe 2.6). Ohne ihn bleibt dein langfristiger Verlauf nur auf deinem Gerät.
         </li>
         <li>
           <strong>Einstellungen und technische Geräte-/App-Daten</strong>, die für den Dienst
@@ -150,9 +156,12 @@ Missbrauch.
         </li>
       </ul>
       <p>
-        Du kannst diese Verarbeitung beenden, indem du dein CGM trennst oder in den
-        Einstellungen „Konto löschen“ nutzt. Die App fordert das Relay auf, aktive Geräte-,
-        Token- und Freigabedaten zu löschen. Eine minimale Installations-ID und der Zeitpunkt
+        Du kannst diese Verarbeitung beenden, indem du in den Einstellungen „Konto löschen“
+        nutzt. Wenn du dich in Dulce von deinem Sensorkonto abmeldest, enden Live-Updates und
+        Warnungen; wenn du den gespeicherten Kurvenverlauf nutzt, entscheidest du selbst, ob
+        Dulce deinen Verlauf weiter sammelt, während du abgemeldet bist (siehe 2.6). „Konto
+        löschen“ fordert das Relay auf, aktive Geräte-, Token-, Freigabe- und
+        Verlaufsdaten zu löschen. Eine minimale Installations-ID und der Zeitpunkt
         der ersten Registrierung bleiben erhalten, damit eine wiederkehrende Installation in
         internen Verbindungsmetriken nicht als neu zählt. Dieser Marker läuft nicht automatisch
         ab. Schreib uns, wenn auch er gelöscht werden soll.
@@ -161,8 +170,12 @@ Missbrauch.
       <h3>2.4 Folgen durch die Familie</h3>
       <p>
         Wenn du jemanden einlädst, dir zu folgen, liefert das Relay ab dem Moment der Annahme
-        deine neuesten Werte und Warnungen an dessen Gerät; frühere Verläufe werden nicht
-        geteilt. Nachrichten zwischen dir und deinen Followern, auch selbst geschriebener Text, laufen über das Relay und den Push-Dienst von Apple oder Google, um ihre Geräte zu erreichen. Das Relay speichert weder den Nachrichtentext noch einen Nachrichtenverlauf. Du kannst einem Follower den Zugang jederzeit
+        deine Werte und Warnungen an dessen Gerät. Ohne gespeicherten Kurvenverlauf werden
+        frühere Verläufe nicht geteilt. Wenn du den gespeicherten Kurvenverlauf nutzt (Dulce Pro),
+        können deine Follower auch deinen gespeicherten Kurvenverlauf sehen, einschließlich
+        Werten aus der Zeit vor der Annahme, und, solange das Teilen des Logbuchs an ist, dein
+        geteiltes Logbuch, einschließlich Freitext-Notizen; sie sehen ihn nicht mehr, sobald du
+        ihnen den Zugang entziehst oder das Teilen pausierst (siehe 2.6). Nachrichten zwischen dir und deinen Followern, auch selbst geschriebener Text, laufen über das Relay und den Push-Dienst von Apple oder Google, um ihre Geräte zu erreichen. Das Relay speichert weder den Nachrichtentext noch einen Nachrichtenverlauf. Du kannst einem Follower den Zugang jederzeit
         entziehen und Follower-Nachrichten ganz ausschalten.
       </p>
 
@@ -181,11 +194,227 @@ Missbrauch.
         Gesundheitsdaten geben wir nie weiter; die Entscheidung trifft immer Apple oder Google.
       </p>
 
+      <h3>2.6 Gespeicherter Kurvenverlauf (Dulce Pro)</h3>
+      <p>
+        <strong>Was das ist.</strong> Wenn du Dulce Pro hast und es in der App akzeptierst,
+        speichert unser Relay deinen Glukoseverlauf, damit deine Kurve und die Kurve deiner
+        Follower dieselbe ist und keine Lücken hat und damit dein Verlauf nach dem Abmelden, einer
+        Neuinstallation von Dulce oder einem iPhone-Wechsel noch da ist. Wenn du Dulce Pro nicht
+        hast oder es nicht akzeptierst, wird nichts gespeichert, und dein Verlauf bleibt nur auf
+        deinem Gerät.
+      </p>
+      <p>
+        <strong>Was gespeichert wird.</strong>
+      </p>
+      <ul>
+        <li>
+          Deine Glukosewerte, jeweils mit Zeitpunkt, Wert und Trendpfeil: den Verlauf, den der
+          Dienst deines Sensors (LibreLinkUp, Dexcom Share, Medtronic CareLink oder Nightscout)
+          liefert, die Werte, die das Relay abruft, und, einmalig bei deiner Zustimmung, den
+          Verlauf, der bereits auf deinem Telefon ist (bis zu 90 Tage).
+        </li>
+        <li>
+          Dein Logbuch, wenn du es mit deiner Familie teilst (standardmäßig an, solange der
+          gespeicherte Kurvenverlauf an ist; du kannst es separat ausschalten). Alles im Logbuch
+          wird geteilt: Kohlenhydrate, Insulin (auch von einem smarten Insulinpen ausgelesene Dosen
+          und Vorab-Dosen zum Entlüften), Bewegung, manuelle Glukosemessungen und Freitext-Notizen,
+          jeweils mit Zeitpunkt und Menge. Geteilt werden nur Einträge ab dem Tag, an dem du das
+          Teilen des Logbuchs einschaltest; ältere Einträge nicht.
+        </li>
+        <li>
+          Nicht mitgespeichert werden: die E-Mail-Adresse deines Sensorkontos, dein Name, der Text
+          der Nachrichten zwischen dir und deinen Followern sowie Daten aus Apple Health oder
+          Health Connect.
+        </li>
+      </ul>
+      <p>
+        <strong>Wozu.</strong> Nur um diese Funktion bereitzustellen: dieselbe, vollständige Kurve
+        für dich und die Familienmitglieder, die du eingeladen hast, erhalten über Abmelden,
+        Neuinstallation und ein neues Telefon hinweg. Wir verwenden sie nicht für Werbung,
+        Profiling oder Verkauf und geben sie weder an Meta noch an einen Analysedienst weiter.
+      </p>
+      <p>
+        <strong>Rechtsgrundlage.</strong> Deine ausdrückliche Einwilligung (Art. 9 Abs. 2 lit. a
+        DSGVO), weil Glukosedaten Gesundheitsdaten sind. Die App fragt, bevor das Speichern
+        beginnt, getrennt für jedes Sensorkonto: Wenn du dich mit einem anderen Sensorkonto
+        anmeldest, fragt sie erneut. Vor deiner Antwort wird nichts gespeichert, und App-Versionen,
+        die nicht fragen, speichern nichts. Du kannst deine Einwilligung jederzeit in den
+        Einstellungen widerrufen: Das Speichern endet, und die gespeicherte Kopie auf dem Relay
+        wird sofort gelöscht. Der Widerruf berührt nicht die Rechtmäßigkeit des bis dahin
+        erfolgten Speicherns. Dulce Pro hängt nicht von dieser Einwilligung ab: Ohne sie
+        funktioniert Dulce Pro ohne gespeicherten Verlauf.
+      </p>
+      <p>
+        <strong>Wo.</strong> Auf dem Dulce-Relay, in einer Datenbank unseres Hosting-Anbieters
+        Cloudflare, der sie für uns verarbeitet und Daten in der EU und in anderen Ländern unter
+        seinen Standardgarantien verarbeiten kann (siehe Abschnitt 8). Derselbe Verlauf bleibt
+        außerdem in der lokalen Datenbank der App auf deinem Telefon.
+      </p>
+      <p>
+        <strong>Wie lange.</strong> Solange dein Dulce-Pro-Abonnement (einschließlich eines
+        Gratis-Tests) aktiv ist, bewahren wir höchstens etwa 1 Jahr Verlauf auf; ältere Tage
+        werden automatisch entfernt. Wenn dein Abonnement endet oder erstattet wird, endet das
+        Speichern, und der gespeicherte Verlauf (Werte und geteiltes Logbuch) wird 90 Tage später
+        gelöscht; wenn du innerhalb dieser 90 Tage erneut abonnierst, ist er noch da.
+      </p>
+      <p>
+        <strong>Sammeln, während du abgemeldet bist oder die App entfernt ist.</strong> Wenn du es
+        akzeptiert hast (die App sagt es dir auf dem Zustimmungsbildschirm, in einem einmaligen
+        Hinweis oder beim Abmelden), sammelt das Relay deinen Sensorverlauf weiter, nachdem du
+        dich in Dulce von deinem Sensorkonto abgemeldet oder die App entfernt hast, einige Male am
+        Tag statt jede Minute, mit der Sensor-Zugangskennung, die es bereits besitzt:
+      </p>
+      <ul>
+        <li>
+          LibreLinkUp: das Sitzungstoken. Nightscout: deine Website-Adresse und dein Zugriffstoken
+          oder der Fingerabdruck deines API-Secrets.
+        </li>
+        <li>
+          Medtronic CareLink: die Anmelde-Tokens, die Medtronic für Dulce ausgestellt hat (nie dein
+          Passwort), die das Relay so erneuert, wie Medtronic es verlangt.
+        </li>
+        <li>
+          Dexcom Share: wenn „Angemeldet bleiben“ an ist, dein Dexcom-Passwort, verschlüsselt wie in
+          2.3 beschrieben. Wenn es aus ist, endet das Sammeln etwa einen Tag nach deiner letzten
+          Anmeldung, weil Dexcom die Sitzung beendet.
+        </li>
+      </ul>
+      <p>
+        Das Sammeln während deiner Abwesenheit endet mit dem ersten dieser Ereignisse: Du meldest
+        dich mit demselben Sensorkonto wieder in Dulce an; du schaltest es in den Einstellungen aus
+        oder wählst beim Abmelden „Beenden und löschen“; du schaltest den gespeicherten
+        Kurvenverlauf aus oder nutzt „Konto löschen“; dein Dulce-Pro-Abonnement endet; der Dienst
+        deines Sensors verweigert die Anmeldung oder schlägt etwa eine Woche lang immer wieder
+        fehl; oder 1 Jahr ist vergangen. Wenn es endet, wird die dafür aufbewahrte Zugangskennung
+        gelöscht. Der bereits gespeicherte Verlauf bleibt, bis du ihn löschst oder der oben
+        genannte Zeitraum abläuft, es sei denn, du hast dich für das Löschen entschieden. Wenn du
+        die App entfernst, ohne dich abzumelden, kann die App dich in diesem Moment nicht fragen:
+        Das Sammeln läuft nur weiter, wenn du es bereits akzeptiert hattest; um es zu beenden,
+        schreib uns (siehe „So schaltest du es aus und löschst es“ unten). Solange du abgemeldet
+        oder weg bist, erhalten deine Follower keine Live-Werte, keine Warnungen und keinen neuen
+        Verlauf.
+      </p>
+      <p>
+        <strong>Er kann Lücken haben oder verloren gehen.</strong> Der gespeicherte Verlauf ist
+        eine Komfortfunktion: Er ist keine Krankenakte und kein Backup. Er kann Lücken haben oder
+        verloren gehen, zum Beispiel wenn deine Sensorsitzung abläuft oder du dein Sensor-Passwort
+        änderst, wenn Dexcom die Sitzung beendet und „Angemeldet bleiben“ aus ist, wenn der Dienst
+        deines Sensors gestört ist oder noch keine Daten von deinem Telefon erhalten hat, wenn
+        dein Abonnement endet, wenn du Dulce unter Android neu installierst oder ohne deinen iCloud-Schlüsselbund auf ein
+        iPhone wechselst, wenn du „Konto löschen“ nutzt, wenn ein Sensorhersteller seinen Dienst
+        ändert oder einstellt, oder wegen eines Fehlers auf unserer Seite. Bewahre die
+        Aufzeichnungen, die deine Ärztin oder dein Arzt braucht, in der offiziellen App deines
+        Sensorherstellers auf.
+      </p>
+      <p>
+        <strong>Wer ihn sehen kann.</strong> Du und die Follower, die du eingeladen hast, solange
+        du mit ihnen teilst: Sie sehen deinen gespeicherten Kurvenverlauf (auch Werte aus der Zeit
+        vor der Annahme) und, solange das Teilen des Logbuchs an ist, dein geteiltes Logbuch
+        einschließlich Freitext-Notizen. Sie sehen ihn nicht mehr, wenn du ihnen den Zugang
+        entziehst, das Teilen pausiert wird oder du deinen Verlauf löschst. Wenn du das Teilen des
+        Logbuchs ausschaltest, wird die geteilte Kopie auf dem Relay gelöscht; dein Logbuch auf
+        deinem Telefon bleibt. Notizen, die du teilst, können deine Follower lesen; schreib
+        deshalb keine Angaben über andere Personen in Notizen, die du teilst. Wer auf dem eigenen
+        Telefon mit demselben Sensorkonto angemeldet ist, erhält deinen gespeicherten Verlauf nicht
+        über Dulce. Das Relay verarbeitet diese Daten automatisch, um sie zuzustellen; wir sehen
+        uns den Verlauf oder die Notizen einzelner Nutzer nicht an, außer wenn es nötig ist, um
+        ein von dir gemeldetes Problem zu beheben, den Dienst sicher zu halten oder wenn das
+        Gesetz es verlangt.
+      </p>
+      <p>
+        <strong>Wie wir deinen Verlauf ohne Konto erkennen.</strong> Dulce hat kein Nutzerkonto.
+        Dein Verlauf ist mit einem zufälligen geheimen „Verlaufsschlüssel“ verknüpft, der auf
+        deinem Telefon erzeugt wird, kombiniert mit einer Kennung des Patienten deines
+        Sensorkontos (eine Nummer oder ein Benutzername, die der Dienst deines Sensors vergibt,
+        oder ein Fingerabdruck deiner Nightscout-Adresse), nie mit der E-Mail-Adresse deines
+        Sensors. Auf dem iPhone wird der Verlaufsschlüssel, wenn du den iCloud-Schlüsselbund
+        nutzt, über deinen eigenen iCloud-Schlüsselbund synchronisiert, sodass deine anderen
+        iPhones mit demselben Apple-Account denselben Verlauf teilen; aus demselben Grund schaltet
+        das Ausschalten des Speicherns auf einem davon es auf den anderen ebenfalls aus. „Konto
+        löschen“ entfernt den Schlüssel aus deinem iCloud-Schlüsselbund, sodass Dulce auf deinen
+        anderen iPhones einen neuen Verlauf beginnt. Wenn du dich auf demselben Telefon mit einem
+        anderen Sensorkonto anmeldest, werden die Verläufe nicht vermischt.
+      </p>
+      <p>
+        <strong>So schaltest du es aus und löschst es.</strong>
+      </p>
+      <ul>
+        <li>
+          Schalte in der App in den Einstellungen „Kurvenverlauf speichern“ aus und bestätige
+          „Beenden und löschen“: Die gespeicherte Kopie auf dem Relay wird sofort gelöscht.
+        </li>
+        <li>
+          Schalte in der App „Weiter sammeln, wenn ich abgemeldet bin oder die App entfernt ist“
+          aus: Dulce sammelt nach dem Abmelden oder Entfernen der App nicht mehr und behält dafür
+          keine Sensor-Zugangskennung.
+        </li>
+        <li>
+          Schalte in der App „Mein Logbuch mit der Familie teilen“ aus: Die geteilte Kopie des
+          Logbuchs auf dem Relay wird gelöscht.
+        </li>
+        <li>Wähle beim Abmelden „Beenden und löschen“ (oder „Löschen“).</li>
+        <li>
+          Nutze Einstellungen → Konto löschen: Alles wird gelöscht, wie in Abschnitt 9 beschrieben.
+        </li>
+        <li>
+          Ohne die App schreib an{" "}
+          <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>. Da es kein Konto gibt,
+          gib deine Support-ID (in der App: Einstellungen › Konto › Support-ID) oder die
+          Kontakt-E-Mail an, die du gespeichert hast (Abschnitt 2.7), falls du sie hast; sonst
+          fragen wir dich nach Angaben, mit denen wir deine Daten finden können (zum Beispiel
+          deinen Sensordienst und wann du Dulce zuletzt genutzt hast). Wir können nur auf Daten
+          reagieren, die wir identifizieren können, und sagen dir Bescheid, wenn wir das nicht
+          können.
+        </li>
+      </ul>
+
+      <h3>2.7 Kontakt-E-Mail (optional)</h3>
+      <p>
+        Dulce funktioniert ohne E-Mail-Adresse. Wenn du willst, kannst du in der App eine
+        Kontakt-E-Mail speichern. Wir speichern sie auf dem Dulce-Relay, verknüpft mit deiner
+        Installation (der Support-ID, die die App anzeigt), und verwenden sie nur, um:
+      </p>
+      <ul>
+        <li>deine Supportanfragen zu beantworten und deine Installation zu finden, wenn du uns schreibst;</li>
+        <li>
+          dir zu deiner Dulce-Installation oder deinem Abonnement zu schreiben, zum Beispiel bei
+          einem Problem mit der Verbindung deines Sensors, einer Änderung dieser Erklärung oder der
+          Nutzungsbedingungen oder einem Gratismonat, den wir dir anbieten.
+        </li>
+      </ul>
+      <p>
+        Wir verwenden sie nicht für Marketing oder Newsletter, außer du stimmst dem gesondert zu,
+        und wir geben sie nicht an Meta, Analysedienste oder sonst jemanden weiter, außer an
+        unseren Hosting-Anbieter Cloudflare, der sie für uns speichert. Sie wird nie in Protokolle
+        geschrieben. Weil sie mit deiner Installation verknüpft ist, sehen wir damit, wem die
+        Installation gehört, wenn wir dir helfen (zum Beispiel Abo-Status oder ob du das Folgen
+        durch die Familie nutzt); der Support sieht deine Glukosewerte nicht.
+      </p>
+      <p>
+        <strong>Rechtsgrundlage:</strong> deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie ist
+        freiwillig, und du kannst sie in der App jederzeit ändern oder entfernen; beim Entfernen
+        wird sie vom Relay gelöscht.{" "}
+        <strong>Wie lange:</strong> bis du sie entfernst, „Konto löschen“ nutzt oder uns um
+        Löschung bittest. Sie bleibt erhalten, wenn du dich von deinem Sensorkonto abmeldest,
+        damit wir dir dann weiter helfen können. E-Mails, die du uns schickst, behandeln wir wie
+        die Kontaktanfragen in Abschnitt 6.
+      </p>
+
       <h2 id="purpose">3. Wofür wir deine Daten verwenden</h2>
       <ul>
         <li>Deine Glukose auf deinen Geräten und, wenn du willst, auf denen deiner Follower anzeigen.</li>
         <li>Die Warnungen zustellen, die du einrichtest.</li>
+        <li>
+          Deinen Kurvenverlauf aufbewahren, damit du und deine Follower dieselbe Kurve sehen, auch
+          nach dem Abmelden, einer Neuinstallation oder einem Telefonwechsel, und dein Logbuch mit
+          der Familie teilen, die du eingeladen hast (Dulce Pro, mit deiner Einwilligung;
+          Abschnitt 2.6).
+        </li>
         <li>Dein Abonnement prüfen und Pro-Funktionen freischalten.</li>
+        <li>
+          Wenn du eine Kontakt-E-Mail gespeichert hast, deine Supportanfragen beantworten und dir
+          zu deiner Installation oder deinem Abonnement schreiben (Abschnitt 2.7).
+        </li>
         <li>Dir mitteilen, wann Dulce verfügbar ist (Warteliste).</li>
         <li>Fragen beantworten, die du über das Kontaktformular sendest.</li>
         <li>Die Website vor Missbrauch schützen (IP-Hash, Begrenzung).</li>
@@ -197,13 +426,21 @@ Missbrauch.
       <ul>
         <li>
           <strong>Ausdrückliche Einwilligung</strong> (Art. 9 Abs. 2 lit. a DSGVO): Verarbeitung
-          deiner Gesundheitsdaten, wenn du dein CGM verbindest und die zugehörigen Funktionen
-          nutzt. Wenn du dein CGM trennst, endet die Verarbeitung über das Relay; du kannst
-          deine Einwilligung auch widerrufen, indem du uns kontaktierst. Beim Onboarding verlinkt
-          die App diese Richtlinie, zeigt derzeit aber kein separates Kontrollkästchen für die
-          Einwilligung in die Verarbeitung von Gesundheitsdaten. Wir lassen mit spanischer
-          Datenschutzberatung prüfen, ob der aktuelle Hinweis und Verbindungsablauf den Maßstab
-          für eine ausdrückliche Einwilligung erfüllen.
+          deiner Gesundheitsdaten, wenn du in der App deinen Sensor verbindest und die zugehörigen
+          Funktionen nutzt (Live-Werte, Warnungen, Live-Aktivität, Widgets, Uhr und Folgen durch
+          die Familie). Du erteilst sie, indem du deinen Sensor verbindest, nachdem die App erklärt
+          hat, was Dulce tut, und auf diese Erklärung verlinkt hat. Du kannst sie jederzeit
+          widerrufen, indem du dich in Dulce von deinem Sensorkonto abmeldest, wodurch die
+          Verarbeitung über das Relay endet (außer dem Sammeln deines gespeicherten Kurvenverlaufs
+          während deiner Abwesenheit, wenn du es akzeptiert hast; Abschnitt 2.6), indem du
+          „Konto löschen“ nutzt oder uns schreibst.
+        </li>
+        <li>
+          <strong>Ausdrückliche Einwilligung</strong> (Art. 9 Abs. 2 lit. a DSGVO) für den
+          gespeicherten Kurvenverlauf, das Sammeln, während du abgemeldet bist oder die App
+          entfernt ist, und das Teilen des Logbuchs: in der App für jedes Sensorkonto erfragt,
+          bevor das Speichern beginnt, und jederzeit in den Einstellungen widerrufbar
+          (Abschnitt 2.6).
         </li>
         <li>
           <strong>Vertrag</strong> (Art. 6 Abs. 1 lit. b DSGVO): Bereitstellung der App und der
@@ -219,10 +456,16 @@ Missbrauch.
           widerrufen.
         </li>
         <li>
+          <strong>Einwilligung</strong> (Art. 6 Abs. 1 lit. a DSGVO): für die optionale
+          Kontakt-E-Mail nach Abschnitt 2.7; du kannst sie jederzeit in der App entfernen.
+        </li>
+        <li>
           <strong>Berechtigtes Interesse</strong> (Art. 6 Abs. 1 lit. f DSGVO): grundlegende
-          Sicherheit der Website und Beantwortung deiner Kontaktanfragen. Die Rechtsgrundlage
-          für Analysen hängt vom Dienst und den in unserer Cookie-Richtlinie beschriebenen
-          regionalen Regeln ab und muss mit Datenschutzberatung bestätigt werden.
+          Sicherheit der Website und Beantwortung der Anfragen, die du uns über das
+          Kontaktformular oder per E-Mail schickst. Website-Analyse: deine Einwilligung, wo unsere
+          Cookie-Richtlinie sie verlangt (im EWR, im Vereinigten Königreich und in der Schweiz oder
+          wenn wir nicht erkennen können, wo du bist), sonst unser berechtigtes Interesse daran zu
+          verstehen, wie die Website genutzt wird.
         </li>
       </ul>
 
@@ -235,12 +478,15 @@ Missbrauch.
         <li>
           Dein langfristiger Glukoseverlauf, dein Logbuch und deine Apple-Health-Daten werden auf
           deinem Gerät verarbeitet und gespeichert. Aktuelle Werte verarbeitet außerdem das oben
-          beschriebene Relay.
+          beschriebene Relay. Wenn du Dulce Pro nutzt und den gespeicherten Kurvenverlauf
+          akzeptierst, werden dein Glukoseverlauf und, solange du es mit deiner Familie teilst,
+          dein Logbuch ebenfalls auf dem Relay gespeichert (Abschnitt 2.6).
         </li>
         <li>
           Wenn dein CGM verbunden ist, verarbeitet das Relay aktuelle Werte, die für die
           genutzten Hintergrund- und Freigabefunktionen nötig sind. Es speichert ein kurzes,
-          laufend überschriebenes Zeitfenster, nicht deinen langfristigen Glukoseverlauf.
+          laufend überschriebenes Zeitfenster und, nur für Dulce-Pro-Abonnenten, die es
+          akzeptieren, den in 2.6 beschriebenen gespeicherten Kurvenverlauf.
         </li>
         <li>Bei der Übertragung sind sie immer verschlüsselt (TLS).</li>
         <li>
@@ -255,7 +501,20 @@ Missbrauch.
           <strong>Aktive Relay-Daten:</strong> Aktuelle Werte werden in einem kurzen Zeitfenster
           laufend ersetzt. Sitzungs- und Push-Tokens bleiben gespeichert, solange dein
           verbundenes Gerät sie benötigt, und werden gelöscht, wenn du es trennst oder
-          deregistrierst, dich abmeldest oder Einstellungen → Konto löschen nutzt.
+          deregistrierst, dich abmeldest oder Einstellungen → Konto löschen nutzt. Ausnahme:
+          Solange Dulce deinen gespeicherten Kurvenverlauf weiter sammelt, nachdem du dich
+          abgemeldet oder die App entfernt hast (Abschnitt 2.6), wird die dafür nötige
+          Sensor-Zugangskennung (LibreLinkUp-Sitzungstoken, Nightscout-Website-Token,
+          Medtronic-CareLink-Anmelde-Tokens oder das verschlüsselte Dexcom-Passwort) nur dafür
+          aufbewahrt und gelöscht, wenn das Sammeln endet, spätestens nach 1 Jahr.
+        </li>
+        <li>
+          <strong>Gespeicherter Kurvenverlauf und geteiltes Logbuch (Dulce Pro):</strong> solange
+          dein Abonnement aktiv ist, höchstens etwa 1 Jahr, ältere Tage werden automatisch
+          entfernt. Sofort gelöscht, wenn du das Speichern ausschaltest, beim Abmelden „Beenden
+          und löschen“ wählst oder „Konto löschen“ nutzt (das geteilte Logbuch auch, wenn du das
+          Teilen des Logbuchs ausschaltest); 90 Tage nach Ende oder Erstattung deines Abonnements
+          gelöscht.
         </li>
         <li>
           <strong>App-Daten auf deinem Gerät:</strong> bis du sie löschst oder die App
@@ -287,6 +546,15 @@ Missbrauch.
           <strong>Betriebsprotokolle:</strong> Cloudflare Workers Logs werden nach 7 Tagen gelöscht.
         </li>
         <li>
+          <strong>Kontakt-E-Mail:</strong> bis du sie in der App entfernst, „Konto löschen“ nutzt
+          oder uns um Löschung bittest (Abschnitt 2.7).
+        </li>
+        <li>
+          <strong>Backups:</strong> Vom Relay gelöschte Daten können bis zu 30 Tage in den
+          automatischen Datenbank-Backups unseres Hosting-Anbieters bleiben und werden danach
+          überschrieben. Wir nutzen diese Backups nur, um uns von einer Störung zu erholen.
+        </li>
+        <li>
           <strong>Installationsmarker:</strong> Die zufällige ID und der Zeitpunkt der ersten
           Registrierung bleiben nach dem Löschen der Relay-Daten erhalten. Du kannst auch die
           Löschung dieses Markers anfragen. Er läuft nicht automatisch ab.
@@ -301,11 +569,14 @@ Missbrauch.
       </p>
       <ul>
         <li>
-          <strong>Cloudflare</strong>: hostet das oben beschriebene Dulce-Relay.
+          <strong>Cloudflare</strong>: hostet das oben beschriebene Dulce-Relay und speichert als
+          unser Auftragsverarbeiter den gespeicherten Kurvenverlauf und das geteilte Logbuch
+          (Abschnitt 2.6) sowie die optionale Kontakt-E-Mail (Abschnitt 2.7).
         </li>
         <li>
           <strong>Apple</strong>: Push-Mitteilungen (APNs), Live-Aktivitäten, Apple Health (auf
-          dem Gerät) und Zahlungen.
+          dem Gerät), Zahlungen und, wenn du den iCloud-Schlüsselbund nutzt, das Aufbewahren
+          deines Verlaufsschlüssels in deinem eigenen iCloud-Schlüsselbund (Abschnitt 2.6).
         </li>
         <li>
           <strong>Google Firebase</strong>: Push-Mitteilungen auf Android.
@@ -364,6 +635,11 @@ Missbrauch.
         Einzelheiten und Kopien der geltenden Garantien schreibe an{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a> anfordern.
       </p>
+      <p>
+        Gespeicherter Kurvenverlauf und Einträge des geteilten Logbuchs werden in einer Datenbank
+        unseres Hosting-Anbieters Cloudflare gespeichert, der Daten in der EU und in anderen
+        Ländern unter den oben beschriebenen Garantien verarbeiten kann.
+      </p>
 
       <h2 id="rights">9. Deine Rechte</h2>
       <p>Nach der DSGVO und vorbehaltlich ihrer Bedingungen hast du das Recht auf:</p>
@@ -377,12 +653,28 @@ Missbrauch.
       </ul>
       <p>
         Unter <strong>Einstellungen → Konto löschen</strong> kannst du lokale App-Daten und
-        aktive Relay-Datensätze löschen. Der oben beschriebene minimale Installationsmarker
-        bleibt bestehen, bis du seine Löschung beantragst. Du kannst jedes dieser Rechte auch
-        per E-Mail an <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a> ausüben. Wir
-        antworten innerhalb eines Monats. Bei komplexen oder zahlreichen Anfragen erlaubt die
-        DSGVO eine Verlängerung um bis zu zwei weitere Monate; über eine Verlängerung informieren
-        wir dich innerhalb des ersten Monats.
+        aktive Relay-Datensätze löschen, einschließlich deines gespeicherten Kurvenverlaufs und
+        des geteilten Logbuchs; außerdem entfernt es Dulces Verlaufsschlüssel aus deinem
+        iCloud-Schlüsselbund, sodass Dulce auf deinen anderen iPhones einen neuen Verlauf
+        beginnt. Du kannst den gespeicherten Kurvenverlauf auch in den Einstellungen ausschalten,
+        wodurch die gespeicherte Kopie sofort gelöscht wird, und das Teilen des Logbuchs separat
+        ausschalten, wodurch die geteilte Kopie des Logbuchs gelöscht wird. Die App hat keine
+        Export-Schaltfläche für den gespeicherten Verlauf; schreib uns, dann senden wir dir eine
+        Kopie in einem gängigen elektronischen Format (zum Beispiel CSV). Der oben beschriebene
+        minimale Installationsmarker bleibt bestehen, bis du seine Löschung beantragst. Du kannst
+        jedes dieser Rechte auch per E-Mail an{" "}
+        <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a> ausüben. Da Dulce keine
+        Konten hat, gib deine Support-ID (in der App: Einstellungen › Konto › Support-ID) oder die
+        Kontakt-E-Mail an, die du gespeichert hast, falls du sie hast; sonst fragen wir nach
+        anderen Angaben, mit denen wir deine Daten finden können, und wir können nur auf Daten
+        reagieren, die wir identifizieren können. Wir antworten innerhalb eines Monats. Bei
+        komplexen oder zahlreichen Anfragen erlaubt die DSGVO eine Verlängerung um bis zu zwei
+        weitere Monate; über eine Verlängerung informieren wir dich innerhalb des ersten Monats.
+      </p>
+      <p>
+        Wenn ein Dulce-Nutzer verstorben ist, können ein naher Angehöriger oder ein Erbe uns bitten,
+        seine Daten zu löschen und jedes Sammeln seines Verlaufs zu beenden; wir verlangen dafür
+        einen angemessenen Nachweis.
       </p>
       <p>
         Wenn du meinst, dass unsere Verarbeitung nicht dem Gesetz entspricht, kannst du dich bei
@@ -396,8 +688,13 @@ Missbrauch.
       <h2 id="minors">10. Kinder</h2>
       <p>
         Dulce richtet sich nicht an Kinder unter 14 Jahren. Unter Android richtet sich Dulce an Erwachsene ab 18 Jahren. Eltern oder gesetzliche Vertreter
-        können Dulce in eigener Verantwortung nutzen, um die Glukose eines Kindes zu verfolgen.
-        Wenn du glaubst, dass ein Kind in deiner Obhut uns ohne deine Einwilligung Daten gegeben
+        können Dulce in eigener Verantwortung nutzen, um die Glukose eines Kindes zu verfolgen;
+        in diesem Fall erteilen oder verweigern die Eltern oder der gesetzliche Vertreter die
+        Einwilligung in den gespeicherten Kurvenverlauf und das Teilen des Logbuchs. Wenn du
+        zwischen 14 und 18 bist, brauchst du für die Nutzung von Dulce die Einwilligung deiner
+        Eltern oder deines gesetzlichen Vertreters (Nutzungsbedingungen, Abschnitt 4); das
+        schließt den gespeicherten Kurvenverlauf, das Teilen des Logbuchs und die Kontakt-E-Mail
+        ein. Wenn du glaubst, dass ein Kind in deiner Obhut uns ohne deine Einwilligung Daten gegeben
         hat, melde dich bei uns und wir löschen sie.
       </p>
 
@@ -411,8 +708,15 @@ Missbrauch.
 
       <h2 id="changes">12. Änderungen dieser Erklärung</h2>
       <p>
-        Bei wesentlichen Änderungen informieren wir betroffene Nutzer per E-Mail oder in der App
-        und veröffentlichen die neue Fassung mit Datum auf dieser Seite.
+        Bei wesentlichen Änderungen informieren wir dich, bevor sie gelten: in der App (in der
+        Notiz „Neuerungen“ des App-Updates, das sie bringt, und in einem Hinweis, der auf diese
+        Seite verlinkt) und, wenn du eine Kontakt-E-Mail gespeichert hast, per E-Mail. Diese Seite
+        zeigt das Datum der aktuellen Fassung, eine kurze Zusammenfassung der Änderungen und einen
+        Link zur vorherigen Fassung. Wenn eine Änderung deine Einwilligung braucht, zum Beispiel
+        eine neue Nutzung deiner Gesundheitsdaten, fragt die App dich zuerst, und nichts Neues
+        geschieht, bis du antwortest; App-Versionen, die nicht fragen, funktionieren wie bisher.
+        Änderungen am gespeicherten Kurvenverlauf, die dir etwas wegnehmen, werden in der App
+        mindestens 30 Tage vorher angekündigt (Nutzungsbedingungen, Abschnitte 8.1 und 15).
       </p>
 
       <h2 id="contact">13. Kontakt</h2>
