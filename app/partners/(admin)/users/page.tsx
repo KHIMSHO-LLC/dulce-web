@@ -73,6 +73,52 @@ function addMonths(from: number, months: number): number {
   return d.getTime();
 }
 
+/** Plain-language facts about where a device's Pro comes from (works against relays without proSource). */
+function proFacts(d: ContactLookupRow): { source: string; gift: string | null } {
+  const gift = d.promoUntil && d.promoUntil > Date.now() ? `until ${shortDay(d.promoUntil)}` : null;
+  const plan = d.storePlan;
+  let source: string;
+  switch (d.proSource) {
+    case "store": {
+      const kind = plan?.period ? `${plan.period} ` : "";
+      const ends = plan?.endsAt ? `${plan.willRenew === false ? "ends" : "renews"} ${shortDay(plan.endsAt)}` : "";
+      source = `Paid: ${kind}store subscription${ends ? `, ${ends}` : ""}`;
+      break;
+    }
+    case "trial":
+      source = plan?.state === "paid" ? "Trial: store free trial" : "Trial";
+      break;
+    case "gift":
+      source = "Paid by a gift only (no store subscription)";
+      break;
+    case "free":
+      source = "Free";
+      break;
+    case "unknown":
+      source =
+        d.storePlan?.state === "unknown"
+          ? "Pro, but the store plan could not be checked"
+          : "Pro, source unclear";
+      break;
+    default:
+      // Relay without the store-plan check: only tier + promoUntil are known.
+      source = d.tier === "free" ? "Free" : d.tier === "trial" ? "Trial" : "Pro (store plan not checked, relay not updated)";
+  }
+  return { source, gift };
+}
+
+/** Warning shown before a gift when a store plan already pays (null = none needed). */
+function paidWarning(d: ContactLookupRow): string | null {
+  if (d.proSource !== "store" && !(d.proSource === "trial" && d.storePlan?.state === "paid")) return null;
+  const plan = d.storePlan;
+  const kind = plan?.period ? `${plan.period}, ` : "";
+  const when = plan?.endsAt
+    ? `${plan.willRenew === false ? "ends" : "renews"} ${shortDay(plan.endsAt)}`
+    : "end date unknown";
+  const verb = d.proSource === "trial" ? "is on a free store trial of Pro" : "already pays for Pro";
+  return `This person ${verb} (${kind}${when}). A gift runs alongside the paid plan: it adds nothing unless their plan ends before the gift does.`;
+}
+
 const inputClass =
   "h-10 px-3 rounded-[var(--radius-button-sm)] border border-border-subtle bg-card text-foreground";
 const buttonClass =
@@ -85,6 +131,9 @@ function GiveFreeMonths({ d }: { d: ContactLookupRow }) {
   /** Set when "Give free months" is clicked: the end date the confirm step shows. */
   const [preview, setPreview] = useState<{ end: number; stacked: boolean } | null>(null);
   const [busy, setBusy] = useState(false);
+  /** Extra confirmation when a paid plan already exists. */
+  const [ack, setAck] = useState(false);
+  const warning = paidWarning(d);
   const [result, setResult] = useState<{ ok: boolean; text: string } | null>(null);
   const [promoUntil, setPromoUntil] = useState<number | null>(d.promoUntil ?? null);
 
@@ -98,6 +147,7 @@ function GiveFreeMonths({ d }: { d: ContactLookupRow }) {
   }
 
   function openConfirm(): void {
+    setAck(false);
     const now = Date.now();
     const stacked = promoUntil !== null && promoUntil > now;
     setPreview({ end: addMonths(stacked ? promoUntil : now, months), stacked });
@@ -126,6 +176,19 @@ function GiveFreeMonths({ d }: { d: ContactLookupRow }) {
   return (
     <div>
       <p className="text-caption uppercase tracking-wide text-muted">Give free months</p>
+      {warning ? (
+        <p
+          role="alert"
+          className="mt-2 rounded-[var(--radius-card)] border border-[var(--color-high)]/50 bg-[var(--color-high)]/10 p-3 text-label text-foreground"
+        >
+          <strong>Already paying.</strong> {warning}
+        </p>
+      ) : d.proSource === "unknown" && d.storePlan?.state === "unknown" ? (
+        <p className="mt-2 text-caption text-muted">
+          Could not check the store plan (RevenueCat did not answer). If this person pays, a gift adds nothing
+          unless their plan ends first.
+        </p>
+      ) : null}
       {preview ? (
         <div className="mt-2 rounded-[var(--radius-card)] border border-border-subtle bg-accent-soft/40 p-3 text-label text-foreground">
           <p>
@@ -140,8 +203,24 @@ function GiveFreeMonths({ d }: { d: ContactLookupRow }) {
             alongside, it is not extended or refunded.
           </p>
           {note.trim() ? <p className="mt-1 text-caption text-muted">Note: {note.trim()}</p> : null}
+          {warning ? (
+            <label className="mt-3 flex items-start gap-2 text-label text-foreground">
+              <input
+                type="checkbox"
+                checked={ack}
+                onChange={(e) => setAck(e.target.checked)}
+                className="mt-1"
+              />
+              <span>They already pay. Give the free months anyway.</span>
+            </label>
+          ) : null}
           <div className="mt-3 flex gap-2">
-            <button type="button" disabled={busy} onClick={() => void give()} className={buttonClass}>
+            <button
+              type="button"
+              disabled={busy || (warning !== null && !ack)}
+              onClick={() => void give()}
+              className={buttonClass}
+            >
               {busy ? "Giving…" : "Confirm"}
             </button>
             <button type="button" disabled={busy} onClick={() => setPreview(null)} className={buttonClass}>
@@ -225,6 +304,10 @@ function DeviceCard({ d }: { d: ContactLookupRow }) {
           {d.appBuild ? ` (${d.appBuild})` : ""}
         </Field>
         <Field label="Tier">{d.tier ?? "—"}</Field>
+        <Field label="Pro comes from">{proFacts(d).source}</Field>
+        <Field label="Gift (free months)">
+          {proFacts(d).gift ?? (d.promoUntil ? `ended ${shortDay(d.promoUntil)}` : "none")}
+        </Field>
         <Field label="CGM source">{d.cgmProvider ?? "—"}</Field>
         <Field label="First seen">{day(d.firstSeenAt)}</Field>
         <Field label="Last reading">

@@ -449,6 +449,19 @@ export interface ContactLookupRow {
   promoUntil?: number | null;
   /** Latest support grant the relay gave this device. */
   lastGrant?: { at: number; months: number; expiresAt: number; note: string | null } | null;
+  /** Where Pro comes from. Optional: relays older than the store-plan check omit it. */
+  proSource?: "store" | "gift" | "trial" | "free" | "unknown";
+  /** The RevenueCat read behind proSource (state "unknown" = RevenueCat could not be read). */
+  storePlan?: {
+    state: "paid" | "none" | "unknown";
+    productId?: string | null;
+    store?: string | null;
+    period?: "monthly" | "yearly" | null;
+    status?: string | null;
+    endsAt?: number | null;
+    willRenew?: boolean | null;
+    trialing?: boolean;
+  };
 }
 
 export const GRANT_MONTHS = [1, 3, 6, 12] as const;
