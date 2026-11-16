@@ -12,6 +12,7 @@ import { HELP, helpLocale } from "@/content/help";
 import { breadcrumbSchema } from "@/lib/schema";
 import { absoluteUrl, localizedPath, seoFromPaths, pageTitle } from "@/lib/seo";
 import { CONTACT_EMAIL } from "@/lib/site";
+import { supportMailto } from "@/lib/supportMailto";
 
 const isCore = (l: AppLocale) => (CORE_LOCALES as readonly string[]).includes(l);
 
@@ -40,6 +41,7 @@ export default async function HelpIndex({ params }: PageProps<"/[locale]/help">)
   const t = await getTranslations({ locale: loc, namespace: "help" });
   const nav = await getTranslations({ locale: loc, namespace: "nav" });
   const status = await getTranslations({ locale: loc, namespace: "llustatus" });
+  const mail = await getTranslations({ locale: loc, namespace: "supportMail" });
 
   return (
     <>
@@ -109,10 +111,11 @@ export default async function HelpIndex({ params }: PageProps<"/[locale]/help">)
             <section className="rounded-[24px] border border-white/8 p-6">
               <h2 className="text-[1.15rem] font-medium text-ink">{t("stuckTitle")}</h2>
               <p className="mt-2 text-label leading-relaxed text-soft">{t("stuckBody")}</p>
-              <a href={`mailto:${CONTACT_EMAIL}`} className="mt-3 inline-flex items-center gap-2 text-label text-ember hover:text-ember-hi">
+              <a href={supportMailto(mail)} className="mt-3 inline-flex items-center gap-2 text-label text-ember hover:text-ember-hi">
                 <Mail className="h-4 w-4" aria-hidden />
                 {CONTACT_EMAIL}
               </a>
+              <p className="mt-3 text-label leading-relaxed text-soft">{mail("appHint")}</p>
             </section>
           </div>
         </div>

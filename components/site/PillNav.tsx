@@ -4,8 +4,9 @@ import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState } from
 import { useLocale, useTranslations } from "next-intl";
 import { X } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
+import { supportMailto } from "@/lib/supportMailto";
 import { appStoreUrl } from "@/lib/appStore";
-import { CONTACT_EMAIL, SECTION, homeSection } from "@/lib/site";
+import { SECTION, homeSection } from "@/lib/site";
 import type { AppLocale } from "@/i18n/routing";
 import { cn } from "@/lib/utils/cn";
 import { gsap, prefersReducedMotion } from "@/components/motion/gsap";
@@ -27,6 +28,7 @@ const useIsoLayoutEffect = typeof window === "undefined" ? useEffect : useLayout
 export function PillNav() {
   const t = useTranslations("nav");
   const helpT = useTranslations("help");
+  const mailT = useTranslations("supportMail");
   const sensorsT = useTranslations("sensors");
   const locale = useLocale();
   const pathname = usePathname();
@@ -259,7 +261,7 @@ export function PillNav() {
                 <Link href="/setup" className={smallClass}>
                   {t("setup")}
                 </Link>
-                <a href={`mailto:${CONTACT_EMAIL}`} className={smallClass}>
+                <a href={supportMailto(mailT)} className={smallClass}>
                   {t("contact")}
                 </a>
               </div>

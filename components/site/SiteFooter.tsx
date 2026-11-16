@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { COMMUNITY_GROUP_URL, CONTACT_EMAIL, SECTION, SOCIAL, homeSection } from "@/lib/site";
+import { supportMailto } from "@/lib/supportMailto";
 import { SocialIcon } from "./SocialIcon";
 import type { AppLocale } from "@/i18n/routing";
 import { WordmarkRise } from "@/components/motion/WordmarkRise";
@@ -18,6 +19,7 @@ import { guideHref } from "@/components/landing/Audience";
 export async function SiteFooter() {
   const locale = await getLocale();
   const t = await getTranslations("footer");
+  const mail = await getTranslations("supportMail");
   const nav = await getTranslations("nav");
   const status = await getTranslations("llustatus");
   const pro = await getTranslations("pro");
@@ -125,7 +127,7 @@ export async function SiteFooter() {
             <Link href="/pro" className={linkClass}>
               {pro("nav")}
             </Link>
-            <a href={`mailto:${CONTACT_EMAIL}`} className={linkClass}>
+            <a href={supportMailto(mail)} className={linkClass}>
               {CONTACT_EMAIL}
             </a>
             <a href={COMMUNITY_GROUP_URL} target="_blank" rel="noopener noreferrer" className={linkClass}>

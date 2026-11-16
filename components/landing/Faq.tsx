@@ -3,6 +3,7 @@ import { Plus } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/motion/Reveal";
 import { COMMUNITY_GROUP_URL, CONTACT_EMAIL, SECTION, SOCIAL } from "@/lib/site";
+import { supportMailto } from "@/lib/supportMailto";
 import { SocialIcon } from "@/components/site/SocialIcon";
 import { ContactDisclosure } from "./ContactDisclosure";
 import { Marquee } from "./Marquee";
@@ -12,6 +13,7 @@ export type FaqItem = { q: string; a: string; link?: string };
 /** Questions, with the contact form folded in for anything left over. */
 export async function Faq() {
   const t = await getTranslations("home.faq");
+  const mail = await getTranslations("supportMail");
   const items = t.raw("items") as FaqItem[];
 
   return (
@@ -31,7 +33,7 @@ export async function Faq() {
           </div>
           <p data-fade className="text-label text-soft">
             {t("emailLabel")}{" "}
-            <a href={`mailto:${CONTACT_EMAIL}`} className="text-soft underline decoration-white/25 transition-colors hover:text-ink">
+            <a href={supportMailto(mail)} className="text-soft underline decoration-white/25 transition-colors hover:text-ink">
               {CONTACT_EMAIL}
             </a>
           </p>

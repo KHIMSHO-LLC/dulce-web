@@ -908,5 +908,12 @@
   "preferredSource": {
     "cta": "Voeg Dulce toe als voorkeursbron in Google",
     "short": "Voorkeursbron in Google"
+  },
+  "supportMail": {
+    "subject": "Dulce-support",
+    "supportId": "Support-ID (in de app: Instellingen › Account › Support-ID): ",
+    "device": "Telefoon en app-versie: ",
+    "what": "Wat er gebeurde: ",
+    "appHint": "Mailen vanuit de app is sneller: Instellingen › Hulp en privacy › Neem contact op met support voegt je support-ID automatisch toe."
   }
 }

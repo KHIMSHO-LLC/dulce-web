@@ -16,6 +16,7 @@ import { formatDate } from "@/lib/dates";
 import { breadcrumbSchema } from "@/lib/schema";
 import { absoluteUrl, localizedPath, seoFromPaths, pageTitle } from "@/lib/seo";
 import { CONTACT_EMAIL } from "@/lib/site";
+import { supportMailto } from "@/lib/supportMailto";
 
 export const dynamicParams = false;
 
@@ -50,6 +51,7 @@ export default async function HelpPage({ params }: PageProps<"/[locale]/help/[sl
   const loc = locale as AppLocale;
   const text = helpLocale(loc);
   const t = await getTranslations({ locale: loc, namespace: "help" });
+  const mail = await getTranslations({ locale: loc, namespace: "supportMail" });
 
   const { default: Body } = (await import(`@/content/help/${help.id}/${text}.mdx`)) as {
     default: (props: { components: Record<string, unknown> }) => ReactNode;
@@ -106,7 +108,7 @@ export default async function HelpPage({ params }: PageProps<"/[locale]/help/[sl
           <section className="mt-14 max-w-[68ch] rounded-[24px] border border-white/8 bg-glass p-6">
             <h2 className="text-[1.15rem] font-medium text-ink">{t("stuckTitle")}</h2>
             <p className="mt-2 text-label leading-relaxed text-soft">{t("stuckBody")}</p>
-            <a href={`mailto:${CONTACT_EMAIL}`} className="mt-3 inline-flex items-center gap-2 text-label text-ember hover:text-ember-hi">
+            <a href={supportMailto(mail)} className="mt-3 inline-flex items-center gap-2 text-label text-ember hover:text-ember-hi">
               <Mail className="h-4 w-4" aria-hidden />
               {CONTACT_EMAIL}
             </a>
