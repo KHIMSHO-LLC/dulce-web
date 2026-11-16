@@ -1,0 +1,37 @@
+CareLink allows one active sign-in per login. If you use the same CareLink login in Medtronic's app and in Dulce, one of them can get signed out. The fix is a second login just for Dulce: a CareLink care partner login that you add as a care partner. Then both apps keep working.
+
+<Steps>
+<Step title="Know who needs what">
+You keep your own CareLink login (the patient login) in Medtronic's app. Dulce gets a second login: a care partner login. It can be yours or someone else's, but it must not be the one your Medtronic app uses.
+</Step>
+<Step title="Create the care partner login">
+Medtronic's care partner app is called **CareLink Connect**. Install it, tap **Sign Up** and create a care partner account. You can also create it on the CareLink website for your country. A care partner account is separate from a patient account, so you can't reuse your patient login.
+</Step>
+<Step title="Add it as a care partner in your Medtronic app">
+In CareLink Connect, the care partner enters the patient's CareLink username and sends a request (on some versions the button is called **Request to Follow** or **Follow another person**). You need to know your own CareLink username for this. The patient then opens the menu in the MiniMed Mobile app, goes to **Sync to CareLink** and **Manage Care Partners**. Other Medtronic apps (Simplera, InPen) may use different menus, so the names can differ by app version and country.
+</Step>
+<Step title="Accept the request">
+The patient has to accept: Medtronic says the request is open for 24 hours, and no data is shared until it is accepted. If it expires, send a new one. A patient can have up to 5 care partners.
+</Step>
+<Step title="Sign in to Dulce with the care partner login">
+In Dulce, go to <Path>Settings › Sensor › Connect a different sensor</Path>, choose Medtronic and pick the region where your CareLink account is (**Outside the US** or **United States**). Tap **Sign in with CareLink**: Medtronic's own page opens and you sign in there with the care partner login. Dulce never sees your password.
+</Step>
+<Step title="Keep using your own login in Medtronic's app">
+Stay signed in to Medtronic's app with your own patient login. Dulce now reads the same data through the care partner login, so the two no longer get in each other's way.
+</Step>
+</Steps>
+
+## Which login goes where
+
+| Where | Which login |
+|---|---|
+| Medtronic's app (MiniMed Mobile, Simplera, etc.) | Your own patient login |
+| Dulce | The care partner login |
+
+## If Dulce says sign-in has stopped
+
+If Dulce shows a notice that your sign-in has stopped, sign in again with **Sign in with CareLink**. If it keeps happening, check that Dulce and another app aren't using the same login. If so, switch Dulce to a care partner login as above. If Dulce says **No one to follow yet**, the care partner login isn't linked to a patient: the patient still needs to accept the request. More messages are explained in <HelpLink to="sensor">connect your sensor</HelpLink>, and for old numbers see <HelpLink to="not-updating">readings not updating</HelpLink>.
+
+<Callout type="warning">
+Dulce is independent and not affiliated with or endorsed by Medtronic. It uses CareLink, which isn't an official connection for other apps, so Medtronic can change it at any time. Medtronic's app and your device alarms stay your main source: always confirm with your device before acting on a number.
+</Callout>

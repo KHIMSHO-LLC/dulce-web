@@ -13,7 +13,7 @@ import { CORE_LOCALES } from "@/i18n/routing";
  * "What Dulce can do" explainers, by id (dulce-app `src/constants/links.ts` `helpUrl`).
  * Never rename an id: installed app versions link to it.
  */
-export type HelpId = "apple-watch" | "iphone-glance" | "alerts" | "family" | "sensor" | "not-updating";
+export type HelpId = "apple-watch" | "iphone-glance" | "alerts" | "family" | "sensor" | "not-updating" | "carelink";
 
 export type HelpIcon = "watch" | "lock" | "bell" | "users" | "plug" | "refresh";
 
@@ -119,7 +119,7 @@ export const HELP: readonly HelpArticle[] = [
       fr: "FreeStyle Libre, Dexcom, Medtronic ou Nightscout : ce qu'il faut pour chaque connexion et sa fréquence.",
       it: "FreeStyle Libre, Dexcom, Medtronic o Nightscout: cosa serve per ogni collegamento e ogni quanto si aggiorna.",
     },
-    dateModified: "2026-11-10",
+    dateModified: "2026-11-16",
   },
   {
     id: "not-updating",
@@ -139,6 +139,25 @@ export const HELP: readonly HelpArticle[] = [
       it: "Valore vecchio sulla schermata di blocco, sull'orologio o in un widget? Controlla questi punti in ordine.",
     },
     dateModified: "2026-11-09",
+  },
+  {
+    id: "carelink",
+    icon: "plug",
+    title: {
+      en: "Use Medtronic CareLink in Dulce and in Medtronic's app at the same time",
+      es: "Usar Medtronic CareLink en Dulce y en la app de Medtronic a la vez",
+      de: "Medtronic CareLink in Dulce und in der Medtronic-App gleichzeitig nutzen",
+      fr: "Utiliser Medtronic CareLink dans Dulce et dans l'app Medtronic en même temps",
+      it: "Usare Medtronic CareLink in Dulce e nell'app Medtronic contemporaneamente",
+    },
+    description: {
+      en: "Why one CareLink login can't be used in two apps, and how to set up a separate care partner login for Dulce.",
+      es: "Por qué una cuenta de CareLink no sirve para dos apps a la vez y cómo crear una cuenta de cuidador para Dulce.",
+      de: "Warum ein CareLink-Konto nicht in zwei Apps gleichzeitig funktioniert und wie du ein eigenes Betreuerkonto für Dulce einrichtest.",
+      fr: "Pourquoi un même compte CareLink ne marche pas dans deux apps, et comment créer un compte d'aidant pour Dulce.",
+      it: "Perché un solo account CareLink non basta per due app e come creare un account di care partner per Dulce.",
+    },
+    dateModified: "2026-11-16",
   },
 ];
 
