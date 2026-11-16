@@ -5,10 +5,20 @@
  * typed in the app, or by the Support ID from their support email.
  *
  * Calls GET /ref/admin/contact (relay) and lists the matching device rows.
+ * Each card can give free months of Pro (POST /ref/admin/grant, a RevenueCat
+ * promotional entitlement that runs alongside any paid plan).
  */
 
 import { useState } from "react";
-import { ApiError, UnauthorizedError, fetchContact, type ContactLookupRow } from "../../api";
+import {
+  ApiError,
+  GRANT_MONTHS,
+  UnauthorizedError,
+  fetchContact,
+  grantFreeMonths,
+  type ContactLookupRow,
+  type GrantMonths,
+} from "../../api";
 import { useAdmin } from "../../AdminGate";
 import { dateTime, shortDay } from "../../format";
 
@@ -51,6 +61,128 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 }
 
 const day = (ms: number | null) => (ms === null ? "—" : shortDay(ms));
+
+/** Same rule as the relay (lib/rcGrant.ts addMonths): calendar months, day clamped to the month end. */
+function addMonths(from: number, months: number): number {
+  const d = new Date(from);
+  const dayOfMonth = d.getUTCDate();
+  d.setUTCDate(1);
+  d.setUTCMonth(d.getUTCMonth() + months);
+  const last = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 0)).getUTCDate();
+  d.setUTCDate(Math.min(dayOfMonth, last));
+  return d.getTime();
+}
+
+const inputClass =
+  "h-10 px-3 rounded-[var(--radius-button-sm)] border border-border-subtle bg-card text-foreground";
+const buttonClass =
+  "h-10 px-4 rounded-[var(--radius-button-sm)] border border-border-subtle bg-card text-foreground font-semibold hover:bg-accent-soft disabled:opacity-50 transition-colors";
+
+function GiveFreeMonths({ d }: { d: ContactLookupRow }) {
+  const { adminKey, onUnauthorized } = useAdmin();
+  const [months, setMonths] = useState<GrantMonths>(1);
+  const [note, setNote] = useState("");
+  /** Set when "Give free months" is clicked: the end date the confirm step shows. */
+  const [preview, setPreview] = useState<{ end: number; stacked: boolean } | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [result, setResult] = useState<{ ok: boolean; text: string } | null>(null);
+  const [promoUntil, setPromoUntil] = useState<number | null>(d.promoUntil ?? null);
+
+  if (!d.rcAppUserId) {
+    return (
+      <p className="text-caption text-muted">
+        Free months: not possible, this device never reported a RevenueCat id (app older than 1.0.5 or never
+        opened the paywall).
+      </p>
+    );
+  }
+
+  function openConfirm(): void {
+    const now = Date.now();
+    const stacked = promoUntil !== null && promoUntil > now;
+    setPreview({ end: addMonths(stacked ? promoUntil : now, months), stacked });
+  }
+
+  async function give(): Promise<void> {
+    setBusy(true);
+    setResult(null);
+    try {
+      const expiresAt = await grantFreeMonths(adminKey, d.supportId, months, note);
+      setPromoUntil(expiresAt);
+      setResult({ ok: true, text: `Done: Pro until ${dateTime(expiresAt)}.` });
+      setNote("");
+    } catch (err) {
+      if (err instanceof UnauthorizedError) {
+        onUnauthorized();
+        return;
+      }
+      setResult({ ok: false, text: err instanceof Error ? err.message : "Unknown error." });
+    } finally {
+      setBusy(false);
+      setPreview(null);
+    }
+  }
+
+  return (
+    <div>
+      <p className="text-caption uppercase tracking-wide text-muted">Give free months</p>
+      {preview ? (
+        <div className="mt-2 rounded-[var(--radius-card)] border border-border-subtle bg-accent-soft/40 p-3 text-label text-foreground">
+          <p>
+            Give <strong>{months} {months === 1 ? "month" : "months"}</strong> of Pro to{" "}
+            <strong>{d.email ?? "this device"}</strong>
+            <br />
+            <span className="font-mono text-caption">Support ID {d.supportId}</span>
+          </p>
+          <p className="mt-1">
+            Pro until about <strong>{shortDay(preview.end)}</strong>
+            {preview.stacked ? " (added after the current free period)" : ""}. A paid plan keeps running
+            alongside, it is not extended or refunded.
+          </p>
+          {note.trim() ? <p className="mt-1 text-caption text-muted">Note: {note.trim()}</p> : null}
+          <div className="mt-3 flex gap-2">
+            <button type="button" disabled={busy} onClick={() => void give()} className={buttonClass}>
+              {busy ? "Giving…" : "Confirm"}
+            </button>
+            <button type="button" disabled={busy} onClick={() => setPreview(null)} className={buttonClass}>
+              Cancel
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div className="mt-2 flex flex-wrap gap-2">
+          <select
+            value={months}
+            onChange={(e) => setMonths(Number(e.target.value) as GrantMonths)}
+            aria-label="Months"
+            className={inputClass}
+          >
+            {GRANT_MONTHS.map((m) => (
+              <option key={m} value={m}>
+                {m} {m === 1 ? "month" : "months"}
+              </option>
+            ))}
+          </select>
+          <input
+            type="text"
+            value={note}
+            onChange={(e) => setNote(e.target.value)}
+            maxLength={200}
+            placeholder="Note (optional, e.g. sensor outage)"
+            aria-label="Note"
+            className={`${inputClass} min-w-[220px] flex-1`}
+          />
+          <button type="button" onClick={openConfirm} className={buttonClass}>
+            Give free months
+          </button>
+        </div>
+      )}
+      {result ? (
+        <p className={`mt-2 text-label ${result.ok ? "text-foreground" : "text-state-low"}`}>{result.text}</p>
+      ) : null}
+    </div>
+  );
+}
 
 function DeviceCard({ d }: { d: ContactLookupRow }) {
   return (
@@ -107,6 +239,16 @@ function DeviceCard({ d }: { d: ContactLookupRow }) {
         <Field label="Lapsed">{day(d.lapsedAt)}</Field>
         <Field label="Referral code">{d.referralCode ?? "—"}</Field>
         <Field label="Cancel reason">{d.cancelReason ?? "—"}</Field>
+        <Field label="Free Pro until">
+          {d.promoUntil ? dateTime(d.promoUntil) : "—"}
+          {d.lastGrant
+            ? ` · last grant ${d.lastGrant.months} mo on ${shortDay(d.lastGrant.at)}${d.lastGrant.note ? ` (${d.lastGrant.note})` : ""}`
+            : ""}
+        </Field>
+      </div>
+
+      <div className="mt-5 border-t border-border-subtle pt-4">
+        <GiveFreeMonths d={d} />
       </div>
     </div>
   );

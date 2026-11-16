@@ -445,6 +445,47 @@ export interface ContactLookupRow {
   lapsedAt: number | null;
   referralCode: string | null;
   cancelReason: string | null;
+  /** End of a support grant (promotional Pro) still on the device. Optional: older relays omit it. */
+  promoUntil?: number | null;
+  /** Latest support grant the relay gave this device. */
+  lastGrant?: { at: number; months: number; expiresAt: number; note: string | null } | null;
+}
+
+export const GRANT_MONTHS = [1, 3, 6, 12] as const;
+export type GrantMonths = (typeof GRANT_MONTHS)[number];
+
+/**
+ * POST /ref/admin/grant: N free months of Pro (RevenueCat promotional
+ * entitlement) for the customer behind this Support ID. Returns the new end
+ * (epoch ms). Throws ApiError with the relay's message on failure.
+ */
+export async function grantFreeMonths(
+  adminKey: string,
+  supportId: string,
+  months: GrantMonths,
+  note: string,
+): Promise<number> {
+  try {
+    const data = await request<{ ok: boolean; expiresAt: number }>(adminKey, "/ref/admin/grant", {
+      method: "POST",
+      body: JSON.stringify({ supportId, months, ...(note.trim() ? { note: note.trim() } : {}) }),
+    });
+    return data.expiresAt;
+  } catch (err) {
+    if (err instanceof ApiError && err.status !== 0) {
+      let parsed: { error?: string; message?: string } = {};
+      try {
+        parsed = JSON.parse(err.message) as typeof parsed;
+      } catch {
+        // not JSON: keep the raw text
+      }
+      if (err.status === 404 && !parsed.error) {
+        throw new ApiError(404, "This relay has no /ref/admin/grant yet (not deployed).");
+      }
+      throw new ApiError(err.status, parsed.message ?? parsed.error ?? err.message);
+    }
+    throw err;
+  }
 }
 
 /** An "@" means email, anything else is a Support ID. Throws ApiError(400) on a bad value. */
