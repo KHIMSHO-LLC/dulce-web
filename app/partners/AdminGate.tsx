@@ -39,6 +39,7 @@ const TABS = [
   { href: "/partners/referrals", label: "Partners" },
   { href: "/partners/usage", label: "Usage" },
   { href: "/partners/cancellations", label: "Cancellations" },
+  { href: "/partners/users", label: "Users" },
 ] as const;
 
 function Nav({ onLogout }: { onLogout: () => void }) {

@@ -421,6 +421,61 @@ export async function fetchCancelFeedback(adminKey: string): Promise<CancelAnswe
   return data.answers;
 }
 
+/** One device found by contact email or Support ID (relay routes/contact lookup). */
+export interface ContactLookupRow {
+  supportId: string;
+  logTag: string;
+  email: string | null;
+  emailSource: string | null;
+  emailUpdatedAt: number | null;
+  registered: boolean;
+  platform: string | null;
+  appVersion: string | null;
+  appBuild: string | null;
+  tier: string | null;
+  cgmProvider: string | null;
+  firstSeenAt: number | null;
+  lastPolledAt: number | null;
+  lastReadingAt: number | null;
+  consecutiveFailures: number | null;
+  lastError: string | null;
+  followers: number;
+  rcAppUserId: string | null;
+  refundedAt: number | null;
+  lapsedAt: number | null;
+  referralCode: string | null;
+  cancelReason: string | null;
+}
+
+/** An "@" means email, anything else is a Support ID. Throws ApiError(400) on a bad value. */
+export async function fetchContact(adminKey: string, query: string): Promise<ContactLookupRow[]> {
+  const q = query.trim();
+  const param = q.includes("@") ? "email" : "supportId";
+  try {
+    const data = await request<{ devices: ContactLookupRow[] }>(
+      adminKey,
+      `/ref/admin/contact?${param}=${encodeURIComponent(q)}`,
+    );
+    return data.devices;
+  } catch (err) {
+    if (err instanceof ApiError && err.status === 400) {
+      let code = "";
+      try {
+        code = (JSON.parse(err.message) as { error?: string }).error ?? "";
+      } catch {
+        // not JSON: show the raw text
+      }
+      const text: Record<string, string> = {
+        bad_email: "That does not look like an email address.",
+        bad_support_id: "That does not look like a Support ID.",
+        missing_query: "Type an email or a Support ID.",
+      };
+      throw new ApiError(400, text[code] ?? (code || err.message));
+    }
+    throw err;
+  }
+}
+
 export async function fetchRcOverview(
   adminKey: string,
 ): Promise<RcResult<{ metrics: RcOverviewMetric[]; currency: string }>> {
