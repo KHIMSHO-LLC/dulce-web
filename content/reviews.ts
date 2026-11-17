@@ -30,6 +30,40 @@ export type Review = {
 
 export const REVIEWS: readonly Review[] = [
   {
+    id: "sebastian-fb",
+    quote:
+      "Jag har nu testat appen i några dagar (PRO versionen) och måste säga att jag är sjukt nöjd! Alla widgets ser bra ut och funkar toppen! Jag gillar översikten från att appen öppnas för att snabbt få den informationen jag vill ha och även möjligheten att dyka djupare i varje metric! Följarfunktionen funkar även den perfekt, min sambo har nu stenkoll … Snyggt jobbat!",
+    lang: "sv",
+    translations: {
+      en: "I've been testing the app for a few days now (the PRO version) and I have to say I'm super happy! All the widgets look good and work great! I like the overview when the app opens, so I quickly get the information I want, and also being able to dig deeper into each metric! The follower feature works perfectly too, my partner now has full control … Nice work!",
+      es: "Llevo unos días probando la app (la versión PRO) y tengo que decir que estoy contentísimo. Todos los widgets se ven bien y funcionan genial. Me gusta el resumen al abrir la app para tener rápido la información que quiero, y también poder profundizar en cada métrica. La función de seguidores también funciona perfecta, mi pareja ahora lo tiene todo controlado … ¡Buen trabajo!",
+      de: "Ich teste die App jetzt seit ein paar Tagen (die PRO-Version) und muss sagen, ich bin mega zufrieden! Alle Widgets sehen gut aus und funktionieren super! Ich mag die Übersicht beim Öffnen der App, damit ich schnell die Infos bekomme, die ich will, und auch die Möglichkeit, bei jedem Wert tiefer einzutauchen! Die Follower-Funktion klappt auch perfekt, meine Partnerin hat jetzt alles im Blick … Super gemacht!",
+      fr: "Ça fait quelques jours que je teste l'app (la version PRO) et je dois dire que je suis super content ! Tous les widgets sont beaux et marchent très bien ! J'aime l'aperçu à l'ouverture de l'app pour avoir vite l'info que je veux, et aussi pouvoir creuser chaque indicateur ! La fonction abonnés marche parfaitement aussi, ma compagne a maintenant tout sous contrôle … Beau travail !",
+      it: "Sto provando l'app da qualche giorno (la versione PRO) e devo dire che sono contentissimo! Tutti i widget sono belli e funzionano benissimo! Mi piace la panoramica all'apertura dell'app per avere subito le informazioni che voglio, e anche poter approfondire ogni dato! Anche la funzione follower va alla perfezione, la mia compagna ora ha tutto sotto controllo … Bel lavoro!",
+      fi: "Olen nyt testannut sovellusta muutaman päivän (PRO-versiota) ja pakko sanoa, että olen tosi tyytyväinen! Kaikki widgetit näyttävät hyviltä ja toimivat loistavasti! Tykkään yleisnäkymästä, kun sovellus aukeaa, niin saan nopeasti haluamani tiedon, ja myös siitä, että jokaiseen mittariin voi syventyä! Seuraajatoiminto toimii myös täydellisesti, puolisollani on nyt kaikki hallussa … Hienoa työtä!",
+      nl: "Ik test de app nu een paar dagen (de PRO-versie) en ik moet zeggen dat ik super tevreden ben! Alle widgets zien er goed uit en werken top! Ik vind het overzicht bij het openen van de app fijn om snel de info te krijgen die ik wil, en ook dat je dieper in elke waarde kunt duiken! De volgfunctie werkt ook perfect, mijn partner heeft nu alles onder controle … Goed gedaan!",
+      nb: "Jeg har testet appen i noen dager nå (PRO-versjonen) og må si at jeg er kjempefornøyd! Alle widgetene ser bra ut og fungerer topp! Jeg liker oversikten når appen åpnes, så jeg raskt får informasjonen jeg vil ha, og også muligheten til å gå dypere inn i hver måling! Følgerfunksjonen fungerer også perfekt, samboeren min har nå full kontroll … Bra jobba!",
+      ru: "Я уже несколько дней тестирую приложение (версию PRO) и должен сказать, что очень доволен! Все виджеты выглядят хорошо и отлично работают! Нравится обзор при открытии приложения, чтобы быстро получить нужную информацию, и возможность подробнее разобраться в каждом показателе! Функция наблюдателей тоже работает идеально, теперь моя партнёрша всё держит под контролем … Отличная работа!",
+    },
+    name: "Sebastian",
+    country: "SE",
+    context: {
+      en: "Type 1, Dulce Pro",
+      es: "Tipo 1, Dulce Pro",
+      de: "Typ 1, Dulce Pro",
+      fr: "Type 1, Dulce Pro",
+      it: "Tipo 1, Dulce Pro",
+      fi: "Tyyppi 1, Dulce Pro",
+      nl: "Type 1, Dulce Pro",
+      nb: "Type 1, Dulce Pro",
+      sv: "Typ 1, Dulce Pro",
+      ru: "1 тип, Dulce Pro",
+    },
+    source: "facebook",
+    date: "2026-11",
+    consent: "2026-11-17",
+  },
+  {
     id: "aaron-cat",
     quote: "This is helping me track my cat's glucose tremendously. I grabbed the Pro plan and love it!",
     lang: "en",
