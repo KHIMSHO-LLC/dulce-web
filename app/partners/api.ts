@@ -425,6 +425,85 @@ export async function fetchCancelFeedback(adminKey: string): Promise<CancelAnswe
   return data.answers;
 }
 
+/** Banner (service notice) admin: relay routes /ref/admin/notice[/auto]. */
+export type BannerLevel = "notice" | "maintenance";
+
+export interface ManualBanner {
+  id: string;
+  level: BannerLevel;
+  messages: Record<string, string>;
+  startsAt?: number | null;
+  endsAt?: number | null;
+  regions?: string[];
+  updatedAt: number;
+}
+
+export interface AbbottWindow {
+  id: string;
+  name: string;
+  startsAt: number;
+  endsAt: number;
+  regions: string[];
+  hidden: boolean;
+}
+
+export interface NoticeState {
+  manual: ManualBanner | null;
+  auto: boolean;
+  maintenances: AbbottWindow[];
+}
+
+export interface NoticeInput {
+  level: BannerLevel;
+  messages: Record<string, string>;
+  startsAt?: number | null;
+  endsAt?: number | null;
+  regions?: string[];
+}
+
+/** Relay may answer `{ok:false, error}` with a 4xx; surface that text. */
+async function noticeCall<T extends { ok: boolean; error?: string }>(
+  adminKey: string,
+  path: string,
+  init?: RequestInit,
+): Promise<T> {
+  let data: T;
+  try {
+    data = await request<T>(adminKey, path, init);
+  } catch (err) {
+    if (err instanceof ApiError) {
+      try {
+        const j = JSON.parse(err.message) as { error?: string };
+        if (j.error) throw new ApiError(err.status, j.error);
+      } catch (inner) {
+        if (inner instanceof ApiError) throw inner;
+      }
+    }
+    throw err;
+  }
+  if (data && data.ok === false) throw new ApiError(400, data.error ?? "The relay refused the request.");
+  return data;
+}
+
+export async function fetchNotice(adminKey: string): Promise<NoticeState> {
+  return noticeCall<NoticeState & { ok: boolean }>(adminKey, "/ref/admin/notice");
+}
+
+export async function putNotice(adminKey: string, body: NoticeInput): Promise<void> {
+  await noticeCall(adminKey, "/ref/admin/notice", { method: "PUT", body: JSON.stringify(body) });
+}
+
+export async function deleteNotice(adminKey: string): Promise<void> {
+  await noticeCall(adminKey, "/ref/admin/notice", { method: "DELETE" });
+}
+
+export async function setNoticeAuto(
+  adminKey: string,
+  body: { auto?: boolean; hide?: string; unhide?: string },
+): Promise<void> {
+  await noticeCall(adminKey, "/ref/admin/notice/auto", { method: "POST", body: JSON.stringify(body) });
+}
+
 /** One device found by contact email or Support ID (relay routes/contact lookup). */
 export interface ContactLookupRow {
   supportId: string;
