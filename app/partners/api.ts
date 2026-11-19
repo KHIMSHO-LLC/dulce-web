@@ -432,11 +432,22 @@ export interface ManualBanner {
   id: string;
   level: BannerLevel;
   messages: Record<string, string>;
+  titles?: Record<string, string>;
+  providers?: string[];
+  roles?: string[];
   startsAt?: number | null;
   endsAt?: number | null;
   regions?: string[];
   updatedAt: number;
 }
+
+/** Editable text of the automatic Abbott banner (per language). */
+export interface AbbottText {
+  title?: string;
+  body?: string;
+  bodyNow?: string;
+}
+export type AbbottTexts = Record<string, AbbottText>;
 
 export interface AbbottWindow {
   id: string;
@@ -450,12 +461,16 @@ export interface AbbottWindow {
 export interface NoticeState {
   manual: ManualBanner | null;
   auto: boolean;
+  texts?: AbbottTexts | null;
   maintenances: AbbottWindow[];
 }
 
 export interface NoticeInput {
   level: BannerLevel;
   messages: Record<string, string>;
+  titles?: Record<string, string>;
+  providers?: string[];
+  roles?: string[];
   startsAt?: number | null;
   endsAt?: number | null;
   regions?: string[];
@@ -499,7 +514,7 @@ export async function deleteNotice(adminKey: string): Promise<void> {
 
 export async function setNoticeAuto(
   adminKey: string,
-  body: { auto?: boolean; hide?: string; unhide?: string },
+  body: { auto?: boolean; hide?: string; unhide?: string; texts?: AbbottTexts | null },
 ): Promise<void> {
   await noticeCall(adminKey, "/ref/admin/notice/auto", { method: "POST", body: JSON.stringify(body) });
 }

@@ -16,6 +16,7 @@ import {
   fetchNotice,
   putNotice,
   setNoticeAuto,
+  type AbbottTexts,
   type BannerLevel,
   type NoticeState,
 } from "../../api";
@@ -42,6 +43,36 @@ const LANGS: { id: string; label: string }[] = [
 const LANG_LABEL = new Map(LANGS.map((l) => [l.id, l.label]));
 const ALWAYS = ["en", "es"];
 const MAX_LEN = 300;
+const MAX_TITLE = 80;
+
+const PROVIDERS: { id: string; label: string; who: string }[] = [
+  { id: "libre", label: "Libre", who: "Libre users" },
+  { id: "dexcom", label: "Dexcom", who: "Dexcom users" },
+  { id: "nightscout", label: "Nightscout", who: "Nightscout users" },
+  { id: "carelink", label: "CareLink", who: "CareLink users" },
+];
+const ROLES: { id: string; label: string; who: string }[] = [
+  { id: "patient", label: "People with their own sensor", who: "people with their own sensor" },
+  { id: "follower", label: "Followers", who: "followers" },
+];
+
+function reachText(providers: string[], roles: string[], regions: string[]): string {
+  const parts: string[] = [];
+  if (providers.length) parts.push(PROVIDERS.filter((p) => providers.includes(p.id)).map((p) => p.who).join(", "));
+  if (roles.length) parts.push(ROLES.filter((r) => roles.includes(r.id)).map((r) => r.who).join(", "));
+  if (regions.length) parts.push(`regions ${regions.join(", ")}`);
+  return parts.length ? parts.join(", ") : "everyone";
+}
+
+const DEFAULT_ABBOTT = {
+  title: "LibreLinkUp maintenance",
+  body: "Readings may pause {day}, {start}–{end}.",
+  bodyNow: "Readings may pause until {end}.",
+};
+const SAMPLE = { day: "Thu 17 Dec", start: "17:00", end: "18:00" };
+function fill(t: string): string {
+  return t.replace(/\{day\}/g, SAMPLE.day).replace(/\{start\}/g, SAMPLE.start).replace(/\{end\}/g, SAMPLE.end);
+}
 
 const REGIONS: { id: string; label: string }[] = [
   { id: "eu", label: "Europe (eu)" },
@@ -117,6 +148,14 @@ export default function BannersPage() {
   const [start, setStart] = useState("");
   const [end, setEnd] = useState("");
   const [regions, setRegions] = useState<string[]>([]);
+  const [titles, setTitles] = useState<Record<string, string>>({});
+  const [providers, setProviders] = useState<string[]>([]);
+  const [roles, setRoles] = useState<string[]>([]);
+
+  // Abbott text editor
+  const [abbott, setAbbott] = useState<AbbottTexts>({});
+  const [abbottLoaded, setAbbottLoaded] = useState<unknown>(null);
+  const [abbottExtra, setAbbottExtra] = useState<string[]>([]);
 
   const fail = useCallback(
     (err: unknown) => {
@@ -166,6 +205,15 @@ export default function BannersPage() {
     }
   };
 
+  // Sync the editor when the relay's texts change (load, save, reset).
+  if (state && abbottLoaded !== state.texts) {
+    setAbbottLoaded(state.texts);
+    const t = state.texts ?? {};
+    setAbbott(JSON.parse(JSON.stringify(t)) as AbbottTexts);
+    setAbbottExtra(Object.keys(t).filter((l) => !ALWAYS.includes(l)));
+  }
+
+  const showRegions = providers.length === 0 || providers.includes("libre");
   const shownLangs = [...ALWAYS, ...extra];
   const available = LANGS.filter((l) => !shownLangs.includes(l.id));
   const messages: Record<string, string> = {};
@@ -173,7 +221,15 @@ export default function BannersPage() {
     const t = (texts[l] ?? "").trim();
     if (t) messages[l] = t;
   }
-  const tooLong = Object.values(messages).some((t) => t.length > MAX_LEN);
+  const cleanTitles: Record<string, string> = {};
+  for (const l of shownLangs) {
+    const t = (titles[l] ?? "").trim();
+    if (t) cleanTitles[l] = t;
+  }
+  const tooLong =
+    Object.values(messages).some((t) => t.length > MAX_LEN) ||
+    Object.values(cleanTitles).some((t) => t.length > MAX_TITLE);
+  const effRegions = showRegions ? regions : [];
   const startMs = localToMs(start);
   const endMs = localToMs(end);
   const badWindow = startMs !== null && endMs !== null && endMs <= startMs;
@@ -185,9 +241,12 @@ export default function BannersPage() {
       putNotice(adminKey, {
         level,
         messages,
+        titles: cleanTitles,
+        providers,
+        roles,
         startsAt: startMs,
         endsAt: endMs,
-        regions,
+        regions: effRegions,
       }),
     );
     if (ok) {
@@ -196,8 +255,33 @@ export default function BannersPage() {
       setStart("");
       setEnd("");
       setRegions([]);
+      setTitles({});
+      setProviders([]);
+      setRoles([]);
     }
   };
+
+  // Abbott text helpers
+  const abbottLangs = [...ALWAYS, ...abbottExtra];
+  const abbottAvail = LANGS.filter((l) => !abbottLangs.includes(l.id));
+  const setAb = (lang: string, key: "title" | "body" | "bodyNow", v: string) =>
+    setAbbott((a) => ({ ...a, [lang]: { ...(a[lang] ?? {}), [key]: v } }));
+  const cleanAbbott = (): AbbottTexts | null => {
+    const out: AbbottTexts = {};
+    for (const l of abbottLangs) {
+      const t = abbott[l] ?? {};
+      const e: { title?: string; body?: string; bodyNow?: string } = {};
+      if (t.title?.trim()) e.title = t.title.trim();
+      if (t.body?.trim()) e.body = t.body.trim();
+      if (t.bodyNow?.trim()) e.bodyNow = t.bodyNow.trim();
+      if (Object.keys(e).length) out[l] = e;
+    }
+    return Object.keys(out).length ? out : null;
+  };
+  const abbottBad = abbottLangs.some((l) => {
+    const t = abbott[l] ?? {};
+    return (t.title ?? "").length > MAX_TITLE || (t.body ?? "").length > MAX_LEN || (t.bodyNow ?? "").length > MAX_LEN;
+  });
 
   const remove = async () => {
     if (!window.confirm("Remove the current banner? Phones stop showing it on next app open.")) return;
@@ -238,7 +322,10 @@ export default function BannersPage() {
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <p>
                     <span className="font-semibold">{LEVEL_TITLE[manual.level]}</span>
-                    <span className="text-muted"> · for {regionText(manual.regions)}</span>
+                    <span className="text-muted">
+                      {" "}
+                      · for {reachText(manual.providers ?? [], manual.roles ?? [], manual.regions ?? [])}
+                    </span>
                   </p>
                   <button type="button" onClick={() => void remove()} disabled={busy} className={btnCls}>
                     Remove
@@ -248,11 +335,19 @@ export default function BannersPage() {
                   From {whenText(manual.startsAt)} to {whenText(manual.endsAt)} · updated{" "}
                   {dateTime(manual.updatedAt)}
                 </p>
+                <p className="text-caption text-muted">
+                  Sensors: {manual.providers?.length ? manual.providers.join(", ") : "all"} · Roles:{" "}
+                  {manual.roles?.length ? manual.roles.join(", ") : "all"} · Regions:{" "}
+                  {regionText(manual.regions)}
+                </p>
                 <ul className="grid gap-1.5">
                   {Object.entries(manual.messages).map(([lang, text]) => (
                     <li key={lang} className="text-caption">
                       <span className="font-semibold uppercase">{lang}</span>
                       <span className="text-muted"> {LANG_LABEL.get(lang) ?? ""}</span>
+                      {manual.titles?.[lang] ? (
+                        <span className="block text-label font-semibold">{manual.titles[lang]}</span>
+                      ) : null}
                       <span className="block text-label">{text}</span>
                     </li>
                   ))}
@@ -301,6 +396,7 @@ export default function BannersPage() {
                               onClick={() => {
                                 setExtra(extra.filter((x) => x !== l));
                                 setTexts((t) => ({ ...t, [l]: "" }));
+                                setTitles((t) => ({ ...t, [l]: "" }));
                               }}
                             >
                               remove
@@ -308,6 +404,14 @@ export default function BannersPage() {
                           ) : null}
                         </span>
                       </span>
+                      <input
+                        type="text"
+                        value={titles[l] ?? ""}
+                        placeholder={`Title (optional, default "${LEVEL_TITLE[level]}")`}
+                        aria-label={`Title (${l})`}
+                        onChange={(e) => setTitles((t) => ({ ...t, [l]: e.target.value }))}
+                        className={`${inputCls} ${(titles[l] ?? "").length > MAX_TITLE ? "border-state-low" : ""}`}
+                      />
                       <textarea
                         rows={2}
                         value={texts[l] ?? ""}
@@ -358,34 +462,81 @@ export default function BannersPage() {
                   <p className="text-caption text-state-low">The end must be after the start.</p>
                 ) : null}
 
-                <fieldset>
-                  <legend className="text-caption text-muted">Regions (none checked = everyone)</legend>
-                  <div className="mt-2 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-                    {REGIONS.map((r) => (
-                      <label key={r.id} className="flex items-center gap-2 text-label text-foreground">
-                        <input
-                          type="checkbox"
-                          checked={regions.includes(r.id)}
-                          onChange={(e) =>
-                            setRegions(
-                              e.target.checked ? [...regions, r.id] : regions.filter((x) => x !== r.id),
-                            )
-                          }
-                        />
-                        {r.label}
-                      </label>
-                    ))}
-                  </div>
-                  <p className="mt-2 text-caption text-muted">
-                    Region banners reach only Libre users on app 1.0.11+ with the latest update.
+                <div className="grid gap-4 rounded-[var(--radius-card)] border border-border-subtle p-4">
+                  <p className="text-label font-bold text-foreground">Who sees it</p>
+                  <fieldset>
+                    <legend className="text-caption text-muted">Sensor (none checked = all)</legend>
+                    <div className="mt-2 flex flex-wrap gap-x-5 gap-y-2">
+                      {PROVIDERS.map((p) => (
+                        <label key={p.id} className="flex items-center gap-2 text-label text-foreground">
+                          <input
+                            type="checkbox"
+                            checked={providers.includes(p.id)}
+                            onChange={(e) =>
+                              setProviders(
+                                e.target.checked ? [...providers, p.id] : providers.filter((x) => x !== p.id),
+                              )
+                            }
+                          />
+                          {p.label}
+                        </label>
+                      ))}
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend className="text-caption text-muted">Role (none checked = all)</legend>
+                    <div className="mt-2 flex flex-wrap gap-x-5 gap-y-2">
+                      {ROLES.map((r) => (
+                        <label key={r.id} className="flex items-center gap-2 text-label text-foreground">
+                          <input
+                            type="checkbox"
+                            checked={roles.includes(r.id)}
+                            onChange={(e) =>
+                              setRoles(e.target.checked ? [...roles, r.id] : roles.filter((x) => x !== r.id))
+                            }
+                          />
+                          {r.label}
+                        </label>
+                      ))}
+                    </div>
+                  </fieldset>
+                  {showRegions ? (
+                    <fieldset>
+                      <legend className="text-caption text-muted">
+                        Libre regions (none checked = all). Regions limit the banner to Libre users.
+                      </legend>
+                      <div className="mt-2 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                        {REGIONS.map((r) => (
+                          <label key={r.id} className="flex items-center gap-2 text-label text-foreground">
+                            <input
+                              type="checkbox"
+                              checked={regions.includes(r.id)}
+                              onChange={(e) =>
+                                setRegions(
+                                  e.target.checked ? [...regions, r.id] : regions.filter((x) => x !== r.id),
+                                )
+                              }
+                            />
+                            {r.label}
+                          </label>
+                        ))}
+                      </div>
+                    </fieldset>
+                  ) : null}
+                  <p className="text-label text-foreground">
+                    Reaches: {reachText(providers, roles, effRegions)}
                   </p>
-                </fieldset>
+                  <p className="text-caption text-muted">
+                    Targeted banners reach only app 1.0.11+ with the latest update; banners for everyone also
+                    reach older versions.
+                  </p>
+                </div>
               </div>
 
               <div className="grid content-start gap-3">
                 <p className="text-caption uppercase tracking-wide text-muted">Preview</p>
                 <div className="rounded-[var(--radius-card)] border border-border-subtle bg-accent-soft p-4">
-                  <p className="text-label font-bold text-foreground">{LEVEL_TITLE[level]}</p>
+                  <p className="text-label font-bold text-foreground">{cleanTitles.en ?? LEVEL_TITLE[level]}</p>
                   <p className="mt-1 text-label text-foreground">
                     {messages.en ?? <span className="text-muted">Your English text appears here.</span>}
                   </p>
@@ -411,6 +562,129 @@ export default function BannersPage() {
               />
               Show Abbott maintenance banners automatically
             </label>
+            <div className="mt-5 rounded-[var(--radius-card)] border border-border-subtle p-4">
+              <p className="text-label font-bold text-foreground">Edit text</p>
+              <p className="mt-0.5 text-caption text-muted">
+                Empty fields use the app&apos;s built-in text ({state.texts ? "custom text is set" : "no custom text"}).
+                Placeholders: {"{day} {start} {end}"}.
+              </p>
+              <div className="mt-3 grid gap-5 lg:grid-cols-[3fr_2fr]">
+                <div className="grid gap-4">
+                  {abbottLangs.map((l) => {
+                    const t = abbott[l] ?? {};
+                    return (
+                      <div key={l} className="grid gap-1.5">
+                        <span className="flex items-center justify-between text-caption text-muted">
+                          <span>
+                            {LANG_LABEL.get(l)} ({l})
+                          </span>
+                          {!ALWAYS.includes(l) ? (
+                            <button
+                              type="button"
+                              className="underline"
+                              onClick={() => {
+                                setAbbottExtra(abbottExtra.filter((x) => x !== l));
+                                setAbbott((a) => {
+                                  const n = { ...a };
+                                  delete n[l];
+                                  return n;
+                                });
+                              }}
+                            >
+                              remove
+                            </button>
+                          ) : null}
+                        </span>
+                        <input
+                          type="text"
+                          value={t.title ?? ""}
+                          placeholder={DEFAULT_ABBOTT.title}
+                          aria-label={`Abbott title (${l})`}
+                          onChange={(e) => setAb(l, "title", e.target.value)}
+                          className={inputCls}
+                        />
+                        <textarea
+                          rows={2}
+                          value={t.body ?? ""}
+                          placeholder={`Before: ${DEFAULT_ABBOTT.body}`}
+                          aria-label={`Abbott before text (${l})`}
+                          onChange={(e) => setAb(l, "body", e.target.value)}
+                          className={inputCls}
+                        />
+                        <textarea
+                          rows={2}
+                          value={t.bodyNow ?? ""}
+                          placeholder={`During: ${DEFAULT_ABBOTT.bodyNow}`}
+                          aria-label={`Abbott during text (${l})`}
+                          onChange={(e) => setAb(l, "bodyNow", e.target.value)}
+                          className={inputCls}
+                        />
+                      </div>
+                    );
+                  })}
+                  {abbottAvail.length ? (
+                    <select
+                      value=""
+                      onChange={(e) => e.target.value && setAbbottExtra([...abbottExtra, e.target.value])}
+                      className={`${inputCls} w-fit`}
+                      aria-label="Add Abbott language"
+                    >
+                      <option value="">Add language…</option>
+                      {abbottAvail.map((l) => (
+                        <option key={l.id} value={l.id}>
+                          {l.label} ({l.id})
+                        </option>
+                      ))}
+                    </select>
+                  ) : null}
+                  {abbottBad ? (
+                    <p className="text-caption text-state-low">
+                      Titles are up to {MAX_TITLE} characters, texts up to {MAX_LEN}.
+                    </p>
+                  ) : null}
+                  <div className="flex flex-wrap gap-3">
+                    <button
+                      type="button"
+                      disabled={busy || abbottBad}
+                      onClick={() => void run(() => setNoticeAuto(adminKey, { texts: cleanAbbott() }))}
+                      className={primaryCls}
+                    >
+                      Save text
+                    </button>
+                    <button
+                      type="button"
+                      disabled={busy}
+                      onClick={() => {
+                        if (window.confirm("Go back to the app's built-in Abbott text?"))
+                          void run(() => setNoticeAuto(adminKey, { texts: null }));
+                      }}
+                      className={btnCls}
+                    >
+                      Reset to app default
+                    </button>
+                  </div>
+                </div>
+                <div className="grid content-start gap-3">
+                  <p className="text-caption uppercase tracking-wide text-muted">
+                    Preview (sample: {SAMPLE.day}, {SAMPLE.start}–{SAMPLE.end})
+                  </p>
+                  {["en", "es"].map((l) => {
+                    const t = abbott[l] ?? {};
+                    return (
+                      <div key={l} className="rounded-[var(--radius-card)] border border-border-subtle bg-accent-soft p-4">
+                        <p className="text-label font-bold text-foreground">
+                          {t.title?.trim() || DEFAULT_ABBOTT.title}
+                        </p>
+                        <p className="mt-1 text-label text-foreground">{fill(t.body?.trim() || DEFAULT_ABBOTT.body)}</p>
+                        <p className="mt-1 text-caption text-muted">
+                          During: {fill(t.bodyNow?.trim() || DEFAULT_ABBOTT.bodyNow)}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
             {state.maintenances.length ? (
               <div className="mt-4 overflow-x-auto">
                 <table className="w-full text-left text-label">
