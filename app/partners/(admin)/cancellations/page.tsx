@@ -104,6 +104,42 @@ function periodLabel(a: CancelAnswer): string {
   return "—";
 }
 
+const SENSOR_LABEL: Record<string, string> = {
+  libre: "FreeStyle Libre",
+  dexcom: "Dexcom",
+  carelink: "Medtronic CareLink",
+  nightscout: "Nightscout",
+};
+
+function sensorLabel(a: CancelAnswer): string {
+  return a.sensor ? (SENSOR_LABEL[a.sensor] ?? a.sensor) : "Unknown";
+}
+
+/** Install → cancel answer, in ms; null when either end is unknown. */
+function speedMs(a: CancelAnswer): number | null {
+  return a.installedAt ? Math.max(0, a.at - a.installedAt) : null;
+}
+
+const HOUR = 3600_000;
+const SPEED_BUCKETS: { id: string; label: string; max: number }[] = [
+  { id: "h1", label: "Within 1 hour", max: HOUR },
+  { id: "d1", label: "Within 1 day", max: 24 * HOUR },
+  { id: "d3", label: "1–3 days", max: 72 * HOUR },
+  { id: "d7", label: "3–7 days", max: 168 * HOUR },
+  { id: "more", label: "Over 7 days", max: Infinity },
+];
+
+function speedBucket(ms: number): string {
+  return (SPEED_BUCKETS.find((b) => ms < b.max) ?? SPEED_BUCKETS[SPEED_BUCKETS.length - 1]).id;
+}
+
+function speedLabel(ms: number | null): string {
+  if (ms === null) return "—";
+  if (ms < HOUR) return `${Math.max(1, Math.round(ms / 60000))} min`;
+  if (ms < 48 * HOUR) return `${Math.round(ms / HOUR)} h`;
+  return `${Math.round(ms / (24 * HOUR))} days`;
+}
+
 function planLabel(product: string | null): string {
   if (!product) return "—";
   if (/year|annual/i.test(product)) return "Yearly";
@@ -188,6 +224,29 @@ export default function CancellationsPage() {
     return [...m.entries()].sort((a, b) => b[1] - a[1]);
   }, [filtered]);
   const maxCount = counts[0]?.[1] ?? 0;
+  // Sensor × reason, and how soon after install people cancelled.
+  const bySensor = useMemo(() => {
+    const m = new Map<string, { n: number; reasons: Map<string, number> }>();
+    for (const a of filtered) {
+      const k = sensorLabel(a);
+      const e = m.get(k) ?? { n: 0, reasons: new Map<string, number>() };
+      e.n += 1;
+      const r = normalizeReason(a.reason);
+      e.reasons.set(r, (e.reasons.get(r) ?? 0) + 1);
+      m.set(k, e);
+    }
+    return [...m.entries()].sort((a, b) => b[1].n - a[1].n);
+  }, [filtered]);
+  const bySpeed = useMemo(() => {
+    const m = new Map<string, number>();
+    let unknown = 0;
+    for (const a of filtered) {
+      const ms = speedMs(a);
+      if (ms === null) unknown += 1;
+      else m.set(speedBucket(ms), (m.get(speedBucket(ms)) ?? 0) + 1);
+    }
+    return { m, unknown };
+  }, [filtered]);
 
   const last30 = now ? all.filter((a) => now - a.at <= 30 * 24 * 60 * 60 * 1000).length : 0;
   const trials = all.filter(isTrial).length;
@@ -321,6 +380,51 @@ export default function CancellationsPage() {
             </Card>
           </div>
 
+          <div className="mt-6 grid gap-4 lg:grid-cols-2">
+            <Card title="By sensor" subtitle="Which CGM they use, and what they said">
+              {bySensor.length === 0 ? (
+                <p className="py-6 text-center text-label text-muted">No answers yet.</p>
+              ) : (
+                <ul className="space-y-3">
+                  {bySensor.map(([name, e]) => {
+                    const top = [...e.reasons.entries()].sort((a, b) => b[1] - a[1])[0];
+                    return (
+                      <li key={name} className="flex items-baseline justify-between gap-3 text-label">
+                        <span className="text-foreground">{name}</span>
+                        <span className="text-right tabular-nums text-muted">
+                          {e.n} · {pct(e.n, filtered.length)}
+                          {top ? ` · most: ${LABEL.get(top[0]) ?? top[0]}` : ""}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </Card>
+            <Card
+              title="How fast they cancel"
+              subtitle="From the first time the phone reached Dulce to the cancel answer"
+            >
+              <ul className="space-y-3">
+                {SPEED_BUCKETS.map((b) => {
+                  const n = bySpeed.m.get(b.id) ?? 0;
+                  return (
+                    <li key={b.id} className="flex items-baseline justify-between gap-3 text-label">
+                      <span className="text-foreground">{b.label}</span>
+                      <span className="tabular-nums text-muted">{n}</span>
+                    </li>
+                  );
+                })}
+                {bySpeed.unknown > 0 ? (
+                  <li className="flex items-baseline justify-between gap-3 text-label">
+                    <span className="text-muted">Unknown (device gone)</span>
+                    <span className="tabular-nums text-muted">{bySpeed.unknown}</span>
+                  </li>
+                ) : null}
+              </ul>
+            </Card>
+          </div>
+
           <div className="mt-6">
             <Card title="Every answer" subtitle="Newest first">
               {filtered.length === 0 ? (
@@ -334,6 +438,8 @@ export default function CancellationsPage() {
                         <th className="py-2 pr-4 font-semibold">Reason</th>
                         <th className="py-2 pr-4 font-semibold">Stage</th>
                         <th className="py-2 pr-4 font-semibold">Plan</th>
+                        <th className="py-2 pr-4 font-semibold">Sensor</th>
+                        <th className="py-2 pr-4 font-semibold">After install</th>
                         <th className="py-2 pr-4 font-semibold">Store</th>
                         <th className="py-2 pr-4 font-semibold">Language</th>
                         <th className="py-2 pr-4 font-semibold">Asked in</th>
@@ -350,6 +456,8 @@ export default function CancellationsPage() {
                           </td>
                           <td className="py-2 pr-4">{periodLabel(a)}</td>
                           <td className="py-2 pr-4">{planLabel(a.product)}</td>
+                          <td className="py-2 pr-4">{sensorLabel(a)}</td>
+                          <td className="py-2 pr-4 tabular-nums">{speedLabel(speedMs(a))}</td>
                           <td className="py-2 pr-4">
                             {a.store === "APP_STORE" ? "App Store" : a.store === "PLAY_STORE" ? "Google Play" : (a.store ?? "—")}
                           </td>

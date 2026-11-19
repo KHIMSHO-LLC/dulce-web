@@ -325,6 +325,10 @@ export interface CancelAnswer {
   store: string | null;
   locale: string | null;
   at: number;
+  /** CGM source (libre, dexcom, carelink, nightscout); null when the device is gone. */
+  sensor?: string | null;
+  /** When the device first reached the relay (ms); null when unknown. */
+  installedAt?: number | null;
   /** First 8 chars of the device id. */
   device: string;
 }
