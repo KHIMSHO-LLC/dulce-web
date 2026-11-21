@@ -191,8 +191,16 @@ const FUNNEL_STEPS: { step: FunnelStep; label: string }[] = [
   { step: "ob_login", label: "Reached sensor sign-in" },
   { step: "ob_login_submit", label: "Tapped Connect" },
   { step: "ob_connected", label: "Connected a sensor" },
+  { step: "ob_success_cta", label: "Tapped Continue on success" },
+  { step: "ob_email_done", label: "Gave a contact email" },
+  { step: "ob_email_skip", label: "Skipped the email ask" },
+  { step: "ob_permissions", label: "Finished permissions" },
   { step: "ob_offer", label: "Saw the Pro offer" },
-  { step: "ob_purchase", label: "Started trial / bought" },
+  { step: "ob_purchase", label: "Started trial / bought (old builds)" },
+  { step: "ob_trial", label: "Started a free trial" },
+  { step: "ob_paid", label: "Paid straight away" },
+  { step: "ob_widget", label: "First widget added" },
+  { step: "ob_la", label: "First Live Activity" },
 ];
 
 /** One labelled bar per count, scaled to `base` (or the largest value). */
@@ -248,6 +256,8 @@ const FEATURE_ROWS: { step: FunnelStep; label: string }[] = [
 ];
 const PAYWALL_ROWS: { step: FunnelStep; label: string }[] = [
   { step: "pw_view", label: "Saw the paywall" },
+  { step: "pw_view_onboarding", label: "  of which from onboarding" },
+  { step: "pw_view_other", label: "  of which elsewhere" },
   { step: "pw_plan_monthly", label: "Tapped monthly" },
   { step: "pw_plan_yearly", label: "Tapped yearly" },
   { step: "pw_buy_tap", label: "Tapped the buy button" },
