@@ -22,6 +22,7 @@ import {
 } from "../../api";
 import { useAdmin } from "../../AdminGate";
 import { dateTime } from "../../format";
+import { TargetedNotices } from "./TargetedNotices";
 
 const LANGS: { id: string; label: string }[] = [
   { id: "en", label: "English" },
@@ -316,6 +317,7 @@ export default function BannersPage() {
         </div>
       ) : (
         <div className="mt-8 grid gap-4">
+          <TargetedNotices adminKey={adminKey} onUnauthorized={onUnauthorized} />
           <Card title="Current banner">
             {manual ? (
               <div className="grid gap-3 text-label text-foreground">

@@ -529,6 +529,79 @@ export async function setNoticeAuto(
   await noticeCall(adminKey, "/ref/admin/notice/auto", { method: "POST", body: JSON.stringify(body) });
 }
 
+/** Targeted notices (relay /ref/admin/notices, dulce-app #98). */
+export type TargetedLevel = "info" | "maintenance" | "action";
+export interface NoticeTarget {
+  providers?: string[];
+  regions?: string[];
+  tiers?: string[];
+  roles?: string[];
+  platforms?: string[];
+  minVersion?: string;
+  maxVersion?: string;
+  devices?: string[];
+}
+export interface NoticeButton {
+  type: "support" | "url";
+  url?: string;
+  label?: Record<string, string>;
+}
+export interface TargetedNotice {
+  id: string;
+  level: TargetedLevel;
+  startsAt: number | null;
+  endsAt: number | null;
+  messages: Record<string, { title?: string; body: string }>;
+  action?: NoticeButton;
+  target?: NoticeTarget;
+  legacy?: boolean;
+  createdAt: number;
+  updatedAt: number;
+  pushedAt?: number;
+  pushedCount?: number;
+}
+export type TargetedNoticeInput = Omit<TargetedNotice, "id" | "createdAt" | "updatedAt" | "pushedAt" | "pushedCount"> & {
+  replaces?: string;
+};
+export interface NoticePushCount {
+  dryRun: boolean;
+  ios: number;
+  android: number;
+  total: number;
+  noToken: number;
+  pushedAt: number | null;
+}
+
+export async function fetchTargetedNotices(adminKey: string): Promise<TargetedNotice[]> {
+  const d = await noticeCall<{ ok: boolean; notices: TargetedNotice[] }>(adminKey, "/ref/admin/notices");
+  return d.notices ?? [];
+}
+
+export async function putTargetedNotice(adminKey: string, body: TargetedNoticeInput): Promise<TargetedNotice> {
+  const d = await noticeCall<{ ok: boolean; notice: TargetedNotice }>(adminKey, "/ref/admin/notices", {
+    method: "PUT",
+    body: JSON.stringify(body),
+  });
+  return d.notice;
+}
+
+export async function deleteTargetedNotice(adminKey: string, id: string): Promise<void> {
+  await noticeCall(adminKey, `/ref/admin/notices?id=${encodeURIComponent(id)}`, { method: "DELETE" });
+}
+
+/** Dry run unless `send` (then `force` re-sends a notice that was pushed before). */
+export async function pushTargetedNotice(
+  adminKey: string,
+  id: string,
+  send = false,
+  force = false,
+): Promise<NoticePushCount> {
+  return noticeCall<NoticePushCount & { ok: boolean }>(adminKey, "/ref/admin/notices/push", {
+    method: "POST",
+    body: JSON.stringify({ id, dryRun: !send, ...(force ? { force: true } : {}) }),
+  });
+}
+
 /** One device found by contact email or Support ID (relay routes/contact lookup). */
 export interface ContactLookupRow {
   supportId: string;
