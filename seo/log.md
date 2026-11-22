@@ -365,3 +365,23 @@ Apple granted the critical-alert entitlement. Site copy now says the critical lo
   pages generated). Pushed df57b6b. First live check was before Vercel finished (404). Re-checked through the web fetcher:
   all 5 pages 200, right H1, "updated 13 Nov". `npm run indexnow`: 380 URLs → 200. Compare from ~2026-12-04:
   impressions for dexcom queries on the 5 new pages.
+
+## 2026-11-22 (interactive, owner asked: improve LibreView + night lows)
+
+- Search Console (gum OK, 2026-10-23 to 11-19): site 221 clicks / 22k impressions; last 14 days +28 % clicks vs the
+  14 before. URL Inspection over all 385 sitemap URLs: 306 indexed, 52 unknown, 21 discovered-not-indexed (new
+  languages, tools, help, legal), 4 old Spanish root URLs = redirect/duplicate (expected after the /es move), 0 errors.
+- `libreview`: ~9.8k impressions, ~14 clicks (0.1 %), position 9-10, almost all "libreview login" (en 2,025 imp,
+  it 464, es "iniciar sesión" 170, fr "connexion" 97). Body already answers the login first, so only the titles
+  changed (en/es/it/fr/de/nl): "LibreView login not working? The official link + 5 fixes" etc., aimed at the
+  searchers still scanning past Abbott's own result. fi/nb/sv/ru unchanged (no traffic). Compare CTR from ~2026-12-06.
+- `night-lows`: es "como evitar hipoglucemia nocturna" 49 imp, 8 clicks, position ~37 (high CTR, ranks too low);
+  the article never answered "how to avoid". Added "Cómo evitar la hipoglucemia nocturna" (+ en/de/fr/it) after
+  "Por qué la noche es distinta": bedtime check + night checks if suspected (Diabetes UK), exercise up to 24 h
+  (NIDDK) + late-day exercise (Riddell 2017, moved from the patterns section), alcohol with food / masks symptoms
+  (NIDDK, NHS), hypo treatment by the bed (Diabetes UK), CGM alarm (NIDDK), recurring → care team (NHS, Diabetes
+  UK). No bedtime snack: none of the three sources supports it. Signs section now credits NIDDK + Diabetes UK.
+  New titles ("cómo evitarla"), descriptions, summaries (prevention first) and a first FAQ "¿Cómo se evita…?".
+  Sources added: Diabetes UK (reviewed 2024-11-06), NIDDK (2021-07), NHS (2023-08); the ADA consumer page 404'd.
+  Compare position for "como evitar hipoglucemia nocturna" / "nocturnal hypoglycemia" from ~2026-12-06.
+- check:content 0/0, build passed. check:jsonld not run (needs a running server).
