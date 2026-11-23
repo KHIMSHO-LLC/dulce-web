@@ -70,6 +70,14 @@ export function DisclaimerEn() {
         are changing: it is indicative, can be wrong, and does not replace your CGM
         system&apos;s alarms or its instructions about when to use a blood glucose meter.
       </p>
+      <p>
+        Carbohydrate numbers from “Estimate carbs from a photo” are produced by an AI model. They
+        are estimates, they can be wrong, and you should check them before you save them or rely
+        on them. They are information about the food in the photo, which you save as your own
+        logbook entry; Dulce does not give dietary, dosing or treatment advice. The feature has a
+        daily limit on photos that depends on your plan, and it may be unavailable in some
+        countries or at some times.
+      </p>
 
       <h2 id="emergencies">7. Emergencies</h2>
       <p>

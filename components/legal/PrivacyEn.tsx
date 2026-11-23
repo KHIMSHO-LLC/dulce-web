@@ -163,6 +163,11 @@ export function PrivacyEn() {
           version).
         </li>
         <li>
+          <strong>Meal photos</strong>, only if you use “Estimate carbs from a photo”: passed on to
+          Anthropic to estimate the carbohydrates, without being stored by the relay, and a daily
+          count of the photos used (see 2.8).
+        </li>
+        <li>
           <strong>Usage events:</strong> setup, connection, subscription, paywall and feature-use events, plus any feedback option you tap, linked to the random installation ID and used to measure and improve the service. They don’t include glucose readings or message text.
         </li>
         <li>
@@ -398,6 +403,50 @@ export function PrivacyEn() {
         Emails you send us are handled as described for contact messages in section 6.
       </p>
 
+      <h3>2.8 Carb estimate from a photo (optional)</h3>
+      <p>
+        In the add-entry sheet you can use “Estimate carbs from a photo”. Dulce takes a meal photo
+        only when you choose to use it. Using it is optional, and the app asks you before your
+        first photo. The feature is not offered in some countries.
+      </p>
+      <ul>
+        <li>
+          <strong>Where the photo goes.</strong> The app sends the photo through the Dulce relay to
+          Anthropic (Anthropic, PBC, United States), an AI service provider, which processes it on
+          our behalf to estimate the carbohydrates in the food.
+        </li>
+        <li>
+          <strong>What is sent with it.</strong> Only the app&apos;s language, so that food names
+          come back in that language. Nothing else: no name, email, device identifier, glucose
+          readings or other health data. Before sending, the app shrinks and re-encodes the photo,
+          which removes location and camera metadata.
+        </li>
+        <li>
+          <strong>What Dulce keeps.</strong> Dulce does not store the photo or the result on its
+          servers. The relay keeps only a count of how many photos your device has used that day,
+          to apply the daily limit; the count is deleted after two days.
+        </li>
+        <li>
+          <strong>What you save.</strong> The estimate is put into the carbs field. What you save is
+          a normal logbook entry, handled like any other logbook entry (sections 2.2 and 2.6).
+        </li>
+        <li>
+          <strong>What Anthropic keeps.</strong> Anthropic deletes API inputs and outputs within 30
+          days. If its automated safety systems flag a request as a possible violation of its usage
+          policy, it may keep that input and output for up to 2 years and the safety classification
+          scores for up to 7 years. Anthropic does not use this data to train its models.
+        </li>
+      </ul>
+      <p>
+        Photograph only your food, not people or documents.
+      </p>
+      <p>
+        <strong>Legal basis:</strong> your consent (Art. 6(1)(a) GDPR) and, where a photo could
+        reveal information about your health, your explicit consent (Art. 9(2)(a) GDPR), which the
+        app asks for before your first photo. You can withdraw it at any time by simply no longer
+        using the feature. Anthropic processes the photo in the United States (section 8).
+      </p>
+
       <h2 id="purpose">3. Why we use your data</h2>
       <ul>
         <li>Show your glucose on your devices and, if you choose, your followers’ devices.</li>
@@ -406,6 +455,10 @@ export function PrivacyEn() {
           Keep your chart history so that you and your followers see the same chart, also after you
           sign out, reinstall or change phone, and share your logbook with the family you invited
           (Dulce Pro, with your consent; section 2.6).
+        </li>
+        <li>
+          If you choose to, estimate the carbohydrates in a meal from a photo you take (section
+          2.8).
         </li>
         <li>Validate your subscription and unlock Pro features.</li>
         <li>
@@ -452,6 +505,12 @@ export function PrivacyEn() {
           2.7; you can remove it at any time in the app.
         </li>
         <li>
+          <strong>Consent</strong> (Art. 6(1)(a) GDPR) and, where a photo could reveal information
+          about your health, <strong>explicit consent</strong> (Art. 9(2)(a) GDPR): for the optional
+          carb estimate from a photo in section 2.8, asked in the app before your first photo; you
+          can withdraw it at any time by no longer using the feature.
+        </li>
+        <li>
           <strong>Legitimate interest</strong> (Art. 6(1)(f) GDPR): site security and answering
           questions you send us through the contact form or by email. Website analytics: your
           consent where our Cookie Policy asks for it (in the EEA, the UK and Switzerland, or when
@@ -476,6 +535,11 @@ export function PrivacyEn() {
           When your CGM is connected, the relay processes recent readings needed for the
           background and sharing features you use; it keeps a short rolling window and, only for
           Dulce Pro subscribers who accept it, the saved chart history described in 2.6.
+        </li>
+        <li>
+          If you use the carb estimate from a photo, the meal photo goes through the relay to
+          Anthropic only to produce the estimate, without your glucose readings or other health
+          data (section 2.8).
         </li>
         <li>They are always encrypted in transit (TLS).</li>
         <li>
@@ -506,6 +570,11 @@ export function PrivacyEn() {
         <li>
           <strong>Contact email:</strong> until you remove it in the app, use Delete account or ask
           us to delete it (section 2.7).
+        </li>
+        <li>
+          <strong>Carb estimate from a photo:</strong> Dulce does not store the photo or the result
+          on its servers; the daily photo count is deleted after two days. Anthropic deletes the
+          photo and the result within 30 days, except as described in section 2.8.
         </li>
         <li>
           <strong>Backups:</strong> data deleted from the relay can remain in our hosting
@@ -557,6 +626,11 @@ export function PrivacyEn() {
           <strong>Cloudflare</strong> — hosts the Dulce relay described above and stores the saved
           chart history and shared logbook (section 2.6) and the optional contact email (section
           2.7), as our processor.
+        </li>
+        <li>
+          <strong>Anthropic (Anthropic, PBC, United States)</strong> — AI service provider that
+          estimates the carbohydrates in a meal photo when you use “Estimate carbs from a photo”
+          (section 2.8), as our processor.
         </li>
         <li>
           <strong>Apple</strong> — push notifications (APNs), Live Activities, Apple Health
@@ -614,8 +688,8 @@ export function PrivacyEn() {
 
       <h2 id="transfers">8. International transfers</h2>
       <p>
-        Some providers and services we use (Cloudflare, RevenueCat, Resend, Vercel, Meta, Apple and
-        Google) may process data in the US or other countries. Where GDPR transfer safeguards
+        Some providers and services we use (Cloudflare, Anthropic, RevenueCat, Resend, Vercel, Meta,
+        Apple and Google) may process data in the US or other countries. Where GDPR transfer safeguards
         are required, the applicable mechanism depends on the provider and service and may
         include an adequacy decision or the European Commission’s Standard Contractual Clauses
         (SCCs). Google LLC is listed as active under the EU-US Data Privacy Framework, within
@@ -627,6 +701,11 @@ export function PrivacyEn() {
         Saved chart history and shared logbook entries are stored in a database of our hosting
         provider Cloudflare, which may process data in the EU and other countries under the
         safeguards described above.
+      </p>
+      <p>
+        Meal photos you send for a carb estimate (section 2.8) are processed by Anthropic in the
+        United States under its Data Processing Addendum, which includes the European
+        Commission’s Standard Contractual Clauses and the UK addendum to them.
       </p>
 
       <h2 id="rights">9. Your rights</h2>
@@ -677,7 +756,9 @@ export function PrivacyEn() {
         or guardian gives or refuses the consent for saved chart history and logbook sharing. If
         you are between 14 and 18, you need a parent&apos;s or legal guardian&apos;s consent to use
         Dulce (Terms of Use, section 4), and this includes saved chart history, logbook sharing
-        and the contact email. If you believe a
+        and the contact email. The carb estimate from a photo (section 2.8) is available to
+        everyone who may use Dulce under the Terms of Use, including users between 14 and 18 on
+        iPhone who have that consent. If you believe a
         minor in your care has provided us with data without your consent, contact us and we
         will delete it.
       </p>

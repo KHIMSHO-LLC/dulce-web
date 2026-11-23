@@ -145,6 +145,11 @@ export function PrivacyIt() {
           piattaforma e versione dell&apos;app).
         </li>
         <li>
+          <strong>Foto dei pasti</strong>, solo se usi «Stima i carboidrati da una foto»: il relay le
+          inoltra ad Anthropic per stimare i carboidrati, senza conservarle, e tiene un conteggio
+          giornaliero delle foto usate (vedi 2.8).
+        </li>
+        <li>
           <strong>Eventi di utilizzo:</strong> eventi relativi a configurazione, connessione, abbonamento, pagina di pagamento e uso delle funzioni, oltre a ogni opzione di feedback che tocchi, associati all&apos;ID casuale dell&apos;installazione per misurare e migliorare il servizio. Non includono letture della glicemia né il testo dei messaggi.
         </li>
         <li>
@@ -398,6 +403,55 @@ export function PrivacyIt() {
         di contatto nella sezione 6.
       </p>
 
+      <h3>2.8 Stima dei carboidrati da una foto (facoltativa)</h3>
+      <p>
+        Quando aggiungi una voce puoi usare «Stima i carboidrati da una foto». Dulce scatta una foto
+        del tuo pasto solo quando scegli di usare questa funzione. Il suo uso è facoltativo e
+        l&apos;app ti chiede il consenso prima di scattare la prima foto. La funzione non è offerta in alcuni Paesi.
+      </p>
+      <ul>
+        <li>
+          <strong>Dove va la foto.</strong> L&apos;app invia la foto, tramite il relay di Dulce, ad
+          Anthropic (Anthropic, PBC, Stati Uniti), un fornitore di servizi di intelligenza
+          artificiale che la tratta per nostro conto per stimare i carboidrati del cibo.
+        </li>
+        <li>
+          <strong>Cosa viene inviato insieme.</strong> Solo la lingua dell&apos;app, così che i nomi
+          degli alimenti tornino in quella lingua. Nient&apos;altro: né nome, né email, né
+          identificativi del dispositivo, né letture glicemiche o altri dati sanitari. Prima
+          dell&apos;invio, l&apos;app riduce e ricodifica la foto, eliminando così i metadati di
+          posizione e della fotocamera.
+        </li>
+        <li>
+          <strong>Cosa conserva Dulce.</strong> Dulce non conserva la foto né il risultato sui
+          propri server. Il relay conserva solo il conteggio delle foto usate dal tuo dispositivo
+          in quel giorno, per applicare il limite giornaliero; il conteggio viene cancellato dopo
+          due giorni.
+        </li>
+        <li>
+          <strong>Cosa salvi tu.</strong> La stima viene inserita nel campo dei carboidrati. Ciò che
+          salvi è una normale voce del diario, trattata come qualsiasi altra voce del diario
+          (sezioni 2.2 e 2.6).
+        </li>
+        <li>
+          <strong>Cosa conserva Anthropic.</strong> Anthropic cancella gli input e gli output della
+          sua API entro 30 giorni. Se i suoi sistemi di sicurezza automatici segnalano una
+          richiesta come possibile violazione della sua politica di utilizzo, può conservare
+          quell&apos;input e quell&apos;output fino a 2 anni e i punteggi di classificazione di
+          sicurezza fino a 7 anni. Anthropic non usa questi dati per addestrare i propri modelli.
+        </li>
+      </ul>
+      <p>
+        Fotografa solo il tuo cibo, non persone né documenti.
+      </p>
+      <p>
+        <strong>Base giuridica:</strong> il tuo consenso (art. 6, par. 1, lett. a) GDPR) e, se una
+        foto può rivelare informazioni sulla tua salute, il tuo consenso esplicito (art. 9, par. 2,
+        lett. a) GDPR), che l&apos;app ti chiede prima di scattare la prima foto. Puoi revocarlo in qualsiasi
+        momento semplicemente smettendo di usare la funzione. Anthropic tratta la foto negli Stati
+        Uniti (sezione 8).
+      </p>
+
       <h2 id="purpose">3. Perché usiamo i tuoi dati</h2>
       <ul>
         <li>Mostrare la glicemia sui tuoi dispositivi e, se lo scegli, su quelli dei tuoi follower.</li>
@@ -407,6 +461,10 @@ export function PrivacyIt() {
           grafico, anche dopo l&apos;uscita dall&apos;account, la reinstallazione o il cambio di
           telefono, e condividere il tuo diario con la famiglia che hai invitato (Dulce Pro, con il
           tuo consenso; sezione 2.6).
+        </li>
+        <li>
+          Se lo scegli, stimare i carboidrati di un pasto a partire da una foto che scatti (sezione
+          2.8).
         </li>
         <li>Verificare l&apos;abbonamento e sbloccare le funzioni Pro.</li>
         <li>
@@ -457,6 +515,13 @@ export function PrivacyIt() {
           facoltativa della sezione 2.7; puoi rimuoverla in qualsiasi momento nell&apos;app.
         </li>
         <li>
+          <strong>Consenso</strong> (art. 6, par. 1, lett. a) GDPR) e, se una foto può rivelare
+          informazioni sulla tua salute, <strong>consenso esplicito</strong> (art. 9, par. 2, lett.
+          a) GDPR): per la stima facoltativa dei carboidrati da una foto della sezione 2.8;
+          richiesto nell&apos;app prima di scattare la prima foto, puoi revocarlo in qualsiasi momento
+          smettendo di usare la funzione.
+        </li>
+        <li>
           <strong>Legittimo interesse</strong> (art. 6, par. 1, lett. f) GDPR): sicurezza di base
           del sito e risposta alle richieste che ci invii tramite il modulo di contatto o per
           email. Analisi del sito: il tuo consenso dove la nostra Cookie Policy lo richiede (nel
@@ -483,6 +548,11 @@ export function PrivacyIt() {
           funzioni in background e di condivisione che usi. Conserva una breve finestra mobile e,
           solo per gli abbonati a Dulce Pro che lo accettano, la cronologia del grafico salvata
           descritta in 2.6.
+        </li>
+        <li>
+          Se usi la stima dei carboidrati da una foto, la foto del pasto passa dal relay ad
+          Anthropic solo per ottenere la stima, senza le tue letture glicemiche né altri dati
+          sanitari (sezione 2.8).
         </li>
         <li>Sono sempre cifrati durante la trasmissione (TLS).</li>
         <li>
@@ -546,6 +616,12 @@ export function PrivacyIt() {
           account» o ci chiedi di cancellarla (sezione 2.7).
         </li>
         <li>
+          <strong>Stima dei carboidrati da una foto:</strong> Dulce non conserva la foto né il
+          risultato sui propri server; il conteggio giornaliero delle foto viene cancellato dopo
+          due giorni. Anthropic cancella la foto e il risultato entro 30 giorni, salvo nei casi
+          descritti nella sezione 2.8.
+        </li>
+        <li>
           <strong>Backup:</strong> i dati eliminati dal relay possono restare fino a 30 giorni nei
           backup automatici del database del nostro fornitore di hosting; poi vengono
           sovrascritti. Usiamo questi backup solo per riprenderci da un guasto.
@@ -568,6 +644,12 @@ export function PrivacyIt() {
           <strong>Cloudflare</strong>: ospita il relay di Dulce descritto sopra e conserva la
           cronologia del grafico salvata e il diario condiviso (sezione 2.6) e l&apos;email di
           contatto facoltativa (sezione 2.7), come nostro responsabile del trattamento.
+        </li>
+        <li>
+          <strong>Anthropic (Anthropic, PBC, Stati Uniti)</strong>: fornitore di servizi di
+          intelligenza artificiale che stima i carboidrati in una foto di un pasto quando usi
+          «Stima i carboidrati da una foto» (sezione 2.8), come nostro responsabile del
+          trattamento.
         </li>
         <li>
           <strong>Apple</strong>: notifiche push (APNs), Attività in tempo reale, Salute di Apple
@@ -623,8 +705,8 @@ export function PrivacyIt() {
 
       <h2 id="transfers">8. Trasferimenti internazionali</h2>
       <p>
-        Alcuni fornitori e servizi che usiamo (Cloudflare, RevenueCat, Resend, Vercel, Meta, Apple e
-        Google) possono trattare dati negli Stati Uniti o in altri Paesi. Quando il GDPR richiede
+        Alcuni fornitori e servizi che usiamo (Cloudflare, Anthropic, RevenueCat, Resend, Vercel,
+        Meta, Apple e Google) possono trattare dati negli Stati Uniti o in altri Paesi. Quando il GDPR richiede
         garanzie per un trasferimento, il meccanismo applicabile dipende dal fornitore e dal
         servizio e può includere una decisione di adeguatezza o le clausole contrattuali tipo
         della Commissione europea. Google LLC risulta attivo nel Data Privacy Framework UE-USA,
@@ -636,6 +718,12 @@ export function PrivacyIt() {
         La cronologia del grafico salvata e le voci del diario condivise sono conservate in un
         database del nostro fornitore di hosting Cloudflare, che può trattare dati nell&apos;UE e
         in altri Paesi con le garanzie descritte sopra.
+      </p>
+      <p>
+        Le foto dei pasti che invii per una stima dei carboidrati (sezione 2.8) sono trattate da
+        Anthropic negli Stati Uniti in base al suo accordo sul trattamento dei dati (Data
+        Processing Addendum), che comprende le clausole contrattuali tipo della Commissione europea
+        e il relativo addendum per il Regno Unito.
       </p>
 
       <h2 id="rights">9. I tuoi diritti</h2>
@@ -689,7 +777,10 @@ export function PrivacyIt() {
         genitore o tutore a dare o negare il consenso per la cronologia del grafico salvata e per
         la condivisione del diario. Se hai tra 14 e 18 anni, per usare Dulce ti serve il consenso di un
         genitore o tutore legale (Termini d&apos;uso, sezione 4), e questo comprende la cronologia
-        del grafico salvata, la condivisione del diario e l&apos;email di contatto. Se pensi che un minore
+        del grafico salvata, la condivisione del diario e l&apos;email di contatto. La stima dei
+        carboidrati da una foto (sezione 2.8) è disponibile per tutte le persone che possono usare
+        Dulce secondo i Termini d&apos;uso, compresi gli utenti tra 14 e 18 anni su iPhone che hanno
+        questo consenso. Se pensi che un minore
         a tuo carico ci abbia fornito dati senza il tuo consenso, contattaci e li cancelleremo.
       </p>
 

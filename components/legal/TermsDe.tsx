@@ -45,6 +45,11 @@ export function TermsDe() {
         </li>
         <li>Einstellbare Glukosewarnungen zu erhalten.</li>
         <li>Ein manuelles Logbuch für Essen, Insulin, Glukose und Notizen zu führen.</li>
+        <li>
+          Die Kohlenhydrate einer Mahlzeit anhand eines Fotos zu schätzen, das du aufnimmst, damit
+          du den Wert prüfst, bei Bedarf änderst und in deinem Logbuch speicherst (siehe
+          Abschnitt 3).
+        </li>
         <li>Trends und Statistiken auf Basis deiner eigenen Daten anzuzeigen.</li>
         <li>
           Deine Glukose in Echtzeit mit Followern zu teilen, die du einlädst (Folgen durch die
@@ -59,6 +64,10 @@ export function TermsDe() {
       <p>
         Einige Funktionen setzen ein <strong>Dulce Pro</strong> Abonnement voraus (siehe
         Abschnitt 8).
+      </p>
+      <p>
+        Für „Kohlenhydrate per Foto schätzen“ gilt ein tägliches Fotolimit, das von deinem Tarif
+        abhängt. Die Funktion kann in einigen Ländern oder zeitweise nicht verfügbar sein.
       </p>
 
       <h2 id="medical">3. Medizinischer Hinweis</h2>
@@ -91,6 +100,13 @@ export function TermsDe() {
       <p>
         Der gespeicherte Kurvenverlauf, das geteilte Logbuch, Statistiken und Diagramme in Dulce
         sind keine Krankenakte. Nutze sie und alles andere in Dulce nicht, um Behandlungsentscheidungen zu treffen.
+      </p>
+      <p>
+        Die Kohlenhydratwerte aus „Kohlenhydrate per Foto schätzen“ werden von einem KI-Modell
+        erzeugt. Sie sind Schätzungen und können falsch sein: Prüfe sie, bevor du sie speicherst
+        oder dich auf sie verlässt. Sie sind Informationen über das Essen auf dem Foto, die du als
+        deinen eigenen Logbucheintrag speicherst. Dulce gibt keine Ernährungs-, Dosierungs- oder
+        Behandlungsempfehlungen und berechnet keine Insulindosen.
       </p>
 
       <h2 id="eligibility">4. Voraussetzungen</h2>
@@ -233,7 +249,9 @@ export function TermsDe() {
         sind: den Diensten der Sensorhersteller LibreLinkUp (Abbott), Dexcom Share und Medtronic
         CareLink sowie Nightscout-Websites, die du oder jemand, den du wählst, betreibt; Apple
         (einschließlich Apple Health, Mitteilungen und Zahlungen); Google (Mitteilungen und
-        Zahlungen unter Android); Cloudflare, das unser Relay hostet; und RevenueCat zur Prüfung
+        Zahlungen unter Android); Cloudflare, das unser Relay hostet; Anthropic, das die
+        Kohlenhydrate in Fotos von Mahlzeiten schätzt, wenn du diese Funktion nutzt; und
+        RevenueCat zur Prüfung
         von Abonnements. Für die Nutzung dieser Dienste gelten ihre eigenen Bedingungen und
         Richtlinien. Für ihre Verfügbarkeit, Richtigkeit oder Änderungen sind wir nicht
         verantwortlich.
@@ -281,7 +299,8 @@ export function TermsDe() {
         Recht zulässig, garantieren wir nicht, dass der Dienst oder ein Teil davon (einschließlich
         Werte, Warnungen, wiederholte Warnungen, die Warnung bei ausbleibenden Werten,
         Live-Aktivitäten, Widgets, Updates auf der Uhr, gespeicherter
-        Kurvenverlauf, Folgen durch die Familie und Teilen des Logbuchs) ununterbrochen,
+        Kurvenverlauf, Folgen durch die Familie, Teilen des Logbuchs und
+        Kohlenhydrat-Schätzungen per Foto) ununterbrochen,
         rechtzeitig, vollständig, fehlerfrei oder zu 100 % sicher ist, dass keine Daten verloren
         gehen oder dass er bestimmte Erwartungen erfüllt. Das gilt besonders für Daten von
         CGM-Diensten Dritter: Jede Verzögerung, jeder Fehler oder fehlende Daten beim

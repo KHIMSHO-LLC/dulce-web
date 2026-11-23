@@ -71,6 +71,15 @@ export function DisclaimerDe() {
         letzten Werte ändern: Sie ist eine Orientierung, kann falsch liegen und ersetzt weder die
         Alarme deines CGM-Systems noch dessen Hinweise, wann du ein Blutzuckermessgerät verwenden sollst.
       </p>
+      <p>
+        Die Kohlenhydratwerte aus „Kohlenhydrate per Foto schätzen“ werden von einem KI-Modell
+        erzeugt. Sie sind Schätzungen, können falsch sein und sollten von dir geprüft werden, bevor
+        du sie speicherst oder dich auf sie verlässt. Sie sind Informationen über das Essen auf dem
+        Foto, die du als deinen eigenen Logbucheintrag speicherst; Dulce gibt keine Ernährungs-,
+        Dosierungs- oder Behandlungsempfehlungen. Für die Funktion gilt ein tägliches Fotolimit,
+        das von deinem Tarif abhängt, und sie kann in einigen Ländern oder zeitweise nicht
+        verfügbar sein.
+      </p>
 
       <h2 id="emergencies">7. Notfälle</h2>
       <p>
