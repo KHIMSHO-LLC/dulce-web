@@ -168,6 +168,9 @@ export async function SiteFooter() {
             <Link href="/legal/cookies" className={linkClass}>
               {nav("cookies")}
             </Link>
+            <Link href="/legal/impressum" className={linkClass}>
+              Impressum
+            </Link>
             <CookieSettingsLink className={`${linkClass} text-left`} />
           </div>
         </div>

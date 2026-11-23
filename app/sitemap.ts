@@ -41,6 +41,7 @@ const SOURCES: Partial<Record<AppPathname, string[]>> = {
     "components/legal/DisclaimerEn.tsx",
   ],
   "/legal/cookies": ["app/[locale]/legal/cookies", "components/legal/CookiesEs.tsx", "components/legal/CookiesEn.tsx"],
+  "/legal/impressum": ["app/[locale]/legal/impressum"],
   "/tools/glucose-converter": [
     "app/[locale]/tools/glucose-converter",
     "content/tools/glucose-converter",

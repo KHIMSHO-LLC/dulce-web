@@ -67,6 +67,8 @@ export const routing = defineRouting({
       ru: "/legal/disclaimer",
     },
     "/legal/cookies": "/legal/cookies",
+    // Legal notice (German Impressum), one bilingual page for every locale.
+    "/legal/impressum": "/legal/impressum",
     // Earlier versions of the privacy policy and terms (lib/legalVersions.ts), noindex, not in the sitemap.
     "/legal/privacy/[version]": "/legal/privacy/[version]",
     "/legal/terms/[version]": "/legal/terms/[version]",

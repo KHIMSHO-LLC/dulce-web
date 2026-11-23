@@ -12,7 +12,7 @@ export function PrivacyFr() {
 
       <h2 id="controller">1. Responsable du traitement</h2>
       <p>
-        Le responsable du traitement est <strong>Giorgio Khimshiashvili</strong>, entrepreneur
+        Le responsable du traitement est <strong>Giorgi Khimshiashvili</strong>, entrepreneur
         individuel. Pour toute question sur tes données, écris-nous à{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>

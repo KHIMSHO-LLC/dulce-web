@@ -12,7 +12,7 @@ export function PrivacyDe() {
 
       <h2 id="controller">1. Verantwortlicher</h2>
       <p>
-        Verantwortlicher ist <strong>Giorgio Khimshiashvili</strong>, tätig als
+        Verantwortlicher ist <strong>Giorgi Khimshiashvili</strong>, tätig als
         Einzelunternehmer. Bei allen Fragen zu deinen Daten erreichst du uns unter{" "}
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
