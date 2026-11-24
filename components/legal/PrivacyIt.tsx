@@ -70,11 +70,14 @@ export function PrivacyIt() {
         </li>
         <li>
           <strong>Il tuo diario</strong>: carboidrati, insulina (comprese le dosi lette da una penna
-          da insulina intelligente), attività fisica, glicemie inserite a mano e note. Salvato sul
-          tuo dispositivo. Se usi la cronologia del grafico salvata e condividi il diario con la
-          tua famiglia (attivo per impostazione predefinita, puoi disattivarlo), anche le voci dal
-          giorno in cui hai attivato la condivisione, comprese le note a testo libero, vengono
-          salvate sul relay (vedi 2.6).
+          da insulina intelligente o riportate da un microinfusore), attività fisica, glicemie
+          inserite a mano, peso, farmaci, proteine, grassi e calorie (compresi i valori di una
+          scansione di foto del pasto), etichette e note. Salvato sul tuo dispositivo. Se usi la
+          cronologia del grafico salvata (Dulce Pro), il tuo diario ne fa parte e viene salvato
+          anche sul relay, per intero, comprese le note a testo libero, a meno che tu non
+          disattivi «Salva il mio diario». Se i tuoi follower possono vederlo lo decide
+          separatamente «Condividi il mio diario con la famiglia» (attivo per impostazione
+          predefinita, puoi disattivarlo); vedi 2.6.
         </li>
         <li>
           <strong>I dati di Salute di Apple</strong> (iPhone) o di <strong>Health Connect</strong> (Android), se dai il permesso. Su Android, Dulce legge soltanto. Su iPhone, dalla versione 1.0.7, Dulce può anche salvare le letture del sensore in Salute, al massimo una ogni 5 minuti, se attivi la glicemia in Dulce e lo consenti. Puoi interrompere il salvataggio nelle impostazioni di Dulce o nell’app Salute. Le letture salvate restano in Salute e le altre app a cui lo consenti possono leggerle.
@@ -180,7 +183,8 @@ export function PrivacyIt() {
         storico precedente non viene condiviso. Se usi la cronologia del grafico salvata (Dulce
         Pro), i tuoi follower possono vedere anche la cronologia salvata del tuo grafico, comprese
         le letture precedenti alla loro accettazione e, finché la condivisione del diario è
-        attiva, il tuo diario condiviso, comprese le note a testo libero; smettono di vederla
+        attiva, il tuo diario condiviso, comprese le note a testo libero (attivando la condivisione
+        vedono il diario salvato degli ultimi 90 giorni); smettono di vederla
         quando li revochi o metti in pausa la condivisione (vedi 2.6).
         I messaggi tra te e i tuoi follower, compreso il testo che scrivi, passano dal relay e dal servizio di notifiche di Apple o Google per raggiungere i loro dispositivi. Il relay non conserva il testo dei messaggi né una cronologia. Puoi revocare l&apos;accesso a un follower in qualsiasi momento
         e disattivare del tutto questi messaggi.
@@ -220,13 +224,27 @@ export function PrivacyIt() {
           la cronologia già presente sul tuo telefono (fino a 90 giorni).
         </li>
         <li>
-          Il tuo diario, se lo condividi con la tua famiglia (attivo per impostazione predefinita
-          finché la cronologia del grafico salvata è attiva; puoi disattivarlo separatamente). Tutto
-          ciò che c&apos;è nel diario viene condiviso: carboidrati, insulina (comprese le dosi lette
-          da una penna da insulina intelligente e le dosi di priming), attività fisica, controlli
-          manuali della glicemia e note a testo libero, ciascuno con orario e quantità. Vengono
-          condivise solo le voci dal giorno in cui attivi la condivisione del diario; quelle
-          precedenti no.
+          Il tuo diario, che fa parte della cronologia del grafico salvata. Ogni voce del diario
+          viene salvata con tutti i suoi campi: carboidrati, insulina (comprese le dosi lette da
+          una penna da insulina intelligente o riportate da un microinfusore, e le dosi di
+          priming), attività fisica, controlli manuali della glicemia, peso, farmaci, proteine,
+          grassi e calorie (compresi i valori di una scansione di foto del pasto), etichette e
+          note a testo libero, ciascuno con orario e quantità. Quando attivi la cronologia del
+          grafico salvata, l&apos;app ti dice che il tuo diario ne fa parte e viene salvato
+          anch&apos;esso. Se hai accettato la cronologia del grafico salvata prima di questa
+          versione, il tuo diario non viene salvato finché non dai il tuo consenso nell&apos;app
+          (un avviso una tantum con «Attiva» o «Non ora»). Puoi cambiarlo in qualsiasi momento con
+          l&apos;interruttore «Salva il mio diario» nelle impostazioni della cronologia del
+          grafico.
+        </li>
+        <li>
+          Il tuo diario per la famiglia: l&apos;interruttore «Condividi il mio diario con la
+          famiglia» (attivo per impostazione predefinita finché la cronologia del grafico salvata è
+          attiva) decide soltanto se i tuoi follower possono vedere il tuo diario. Vedono le voci
+          condivise (carboidrati, insulina, attività fisica, controlli manuali della glicemia e
+          note a testo libero, ciascuno con orario e quantità), mai la copia completa che solo tu
+          puoi leggere. Attivando la condivisione, le persone che ti seguono vedono il diario
+          salvato degli ultimi 90 giorni.
         </li>
         <li>
           Non vengono salvati insieme a essa: l&apos;email del tuo account del sensore, il tuo
@@ -237,7 +255,8 @@ export function PrivacyIt() {
       <p>
         <strong>Perché.</strong> Solo per fornire questa funzione: lo stesso grafico completo per
         te e per i familiari che hai invitato, conservato dopo l&apos;uscita dall&apos;account, la
-        reinstallazione e il cambio di telefono. Non lo usiamo per pubblicità, profilazione o
+        reinstallazione e il cambio di telefono, e il tuo diario torna dopo una reinstallazione o
+        su un nuovo telefono, come le tue letture. Non lo usiamo per pubblicità, profilazione o
         vendita e non lo condividiamo con Meta né con alcun servizio di analisi.
       </p>
       <p>
@@ -247,21 +266,24 @@ export function PrivacyIt() {
         account del sensore, te lo chiede di nuovo. Prima della tua risposta non viene salvato
         nulla e le versioni dell&apos;app che non lo chiedono non salvano nulla. Puoi revocare il
         consenso in qualsiasi momento in Impostazioni: il salvataggio si interrompe e la copia
-        salvata sul relay viene eliminata subito. La revoca non pregiudica la liceità del
-        salvataggio effettuato prima. Dulce Pro non dipende da questo consenso: senza di esso,
-        Dulce Pro funziona senza cronologia salvata.
+        salvata sul relay (letture e diario) viene eliminata subito. La revoca non pregiudica la
+        liceità del salvataggio effettuato prima. Dulce Pro non dipende da questo consenso: senza
+        di esso, Dulce Pro funziona senza cronologia salvata. Il consenso alla cronologia del
+        grafico salvata comprende anche il tuo diario: l&apos;app te lo dice quando la attivi e,
+        se hai accettato prima di questa versione, il tuo diario viene salvato solo dopo che dai
+        il tuo consenso nell&apos;app.
       </p>
       <p>
         <strong>Dove.</strong> Sul relay di Dulce, in un database del nostro fornitore di hosting
         Cloudflare, che lo tratta per nostro conto e può trattare dati nell&apos;UE e in altri Paesi
-        con le proprie garanzie standard (vedi sezione 8). La stessa cronologia resta anche nel
+        con le proprie garanzie standard (vedi sezione 8). La stessa cronologia e lo stesso diario restano anche nel
         database locale dell&apos;app sul tuo telefono.
       </p>
       <p>
         <strong>Per quanto tempo.</strong> Finché il tuo abbonamento Dulce Pro (compresa una prova
-        gratuita) è attivo, conserviamo al massimo circa 1 anno di cronologia; i giorni più vecchi
-        vengono rimossi automaticamente. Se l&apos;abbonamento termina o viene rimborsato, il
-        salvataggio si interrompe e la cronologia salvata (letture e diario condiviso) viene
+        gratuita) è attivo, conserviamo al massimo circa 1 anno di cronologia e diario; i giorni più
+        vecchi vengono rimossi automaticamente. Se l&apos;abbonamento termina o viene rimborsato, il
+        salvataggio si interrompe e la cronologia salvata (letture e diario) viene
         eliminata 90 giorni dopo; se ti abboni di nuovo entro questi 90 giorni, è ancora lì.
       </p>
       <p>
@@ -317,8 +339,10 @@ export function PrivacyIt() {
         loro: vedono la cronologia salvata del tuo grafico (comprese le letture precedenti alla
         loro accettazione) e, finché la condivisione del diario è attiva, il tuo diario condiviso,
         comprese le note a testo libero. Smettono di vederla quando li revochi, quando la
-        condivisione è in pausa o quando elimini la tua cronologia. Disattivando la condivisione
-        del diario si elimina la copia condivisa sul relay; il diario sul tuo telefono resta. Le
+        condivisione è in pausa o quando elimini la tua cronologia. Non vedono mai la copia
+        completa del diario che solo tu puoi leggere. Attivando la condivisione vedono il diario
+        salvato degli ultimi 90 giorni. Il diario sul tuo telefono resta se disattivi la
+        condivisione. Le
         note che condividi possono essere lette dai tuoi follower, quindi non scrivere informazioni
         su altre persone nelle note che condividi. Chi ha effettuato l&apos;accesso allo stesso
         account del sensore sul proprio telefono non riceve la tua cronologia salvata tramite
@@ -345,7 +369,12 @@ export function PrivacyIt() {
       <ul>
         <li>
           Nell&apos;app, disattiva «Salva cronologia del grafico» in Impostazioni e conferma «Smetti
-          ed elimina»: la copia salvata sul relay viene eliminata subito.
+          ed elimina»: la copia salvata sul relay (letture e diario) viene eliminata subito.
+        </li>
+        <li>
+          Nell&apos;app, disattiva «Salva il mio diario» nelle impostazioni della cronologia del
+          grafico: finché la condivisione del diario è disattivata, il diario salvato sul relay
+          viene eliminato. Le tue letture restano salvate.
         </li>
         <li>
           Nell&apos;app, disattiva «Continua a raccogliere se esco o se l&apos;app viene rimossa»:
@@ -353,8 +382,9 @@ export function PrivacyIt() {
           alcuna credenziale del sensore a tale scopo.
         </li>
         <li>
-          Nell&apos;app, disattiva «Condividi il mio diario con la famiglia»: la copia del diario
-          condiviso sul relay viene eliminata.
+          Nell&apos;app, disattiva «Condividi il mio diario con la famiglia»: i tuoi follower non
+          possono più vedere il tuo diario. La copia salvata resta sul relay per te finché «Salva
+          il mio diario» è attivo, e viene eliminata se è disattivato.
         </li>
         <li>Quando esci dall&apos;account, scegli «Interrompi ed elimina» (o «Eliminala»).</li>
         <li>
@@ -459,7 +489,7 @@ export function PrivacyIt() {
         <li>
           Conservare la cronologia del tuo grafico così che tu e i tuoi follower vediate lo stesso
           grafico, anche dopo l&apos;uscita dall&apos;account, la reinstallazione o il cambio di
-          telefono, e condividere il tuo diario con la famiglia che hai invitato (Dulce Pro, con il
+          telefono, conservare il tuo diario e condividerlo con la famiglia che hai invitato (Dulce Pro, con il
           tuo consenso; sezione 2.6).
         </li>
         <li>
@@ -492,7 +522,7 @@ export function PrivacyIt() {
         </li>
         <li>
           <strong>Consenso esplicito</strong> (art. 9, par. 2, lett. a) GDPR) per la cronologia del
-          grafico salvata, per la raccolta mentre sei uscito dall&apos;account o l&apos;app è stata
+          grafico salvata (che comprende il tuo diario), per la raccolta mentre sei uscito dall&apos;account o l&apos;app è stata
           rimossa e per la condivisione del diario: richiesto nell&apos;app, per ogni account del
           sensore, prima che il salvataggio inizi, e revocabile in qualsiasi momento in
           Impostazioni (sezione 2.6).
@@ -540,7 +570,7 @@ export function PrivacyIt() {
           La tua cronologia glicemica a lungo termine, il diario e i dati di Salute di Apple sono
           trattati e conservati sul tuo dispositivo. Il relay tratta anche le letture recenti,
           come descritto sopra. Se usi Dulce Pro e accetti la cronologia del grafico salvata, la
-          tua cronologia glicemica e il tuo diario, finché lo condividi con la famiglia, sono
+          tua cronologia glicemica e il tuo diario sono
           conservati anche sul relay (sezione 2.6).
         </li>
         <li>
@@ -575,11 +605,11 @@ export function PrivacyIt() {
           1 anno.
         </li>
         <li>
-          <strong>Cronologia del grafico salvata e diario condiviso (Dulce Pro):</strong> finché
+          <strong>Cronologia del grafico salvata e diario (Dulce Pro):</strong> finché
           il tuo abbonamento è attivo, al massimo circa 1 anno, con i giorni più vecchi rimossi
           automaticamente. Eliminati subito quando disattivi il salvataggio, scegli «Interrompi ed
-          elimina» all&apos;uscita dall&apos;account o usi «Elimina account» (il diario condiviso
-          anche quando disattivi la condivisione del diario); eliminati 90 giorni dopo la fine o il
+          elimina» all&apos;uscita dall&apos;account o usi «Elimina account» (il solo diario anche quando
+          disattivi «Salva il mio diario» mentre la condivisione del diario è disattivata); eliminati 90 giorni dopo la fine o il
           rimborso del tuo abbonamento.
         </li>
         <li>
@@ -642,7 +672,7 @@ export function PrivacyIt() {
       <ul>
         <li>
           <strong>Cloudflare</strong>: ospita il relay di Dulce descritto sopra e conserva la
-          cronologia del grafico salvata e il diario condiviso (sezione 2.6) e l&apos;email di
+          cronologia del grafico salvata e il diario (sezione 2.6) e l&apos;email di
           contatto facoltativa (sezione 2.7), come nostro responsabile del trattamento.
         </li>
         <li>
@@ -715,7 +745,7 @@ export function PrivacyIt() {
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
       <p>
-        La cronologia del grafico salvata e le voci del diario condivise sono conservate in un
+        La cronologia del grafico salvata e le voci del diario sono conservate in un
         database del nostro fornitore di hosting Cloudflare, che può trattare dati nell&apos;UE e
         in altri Paesi con le garanzie descritte sopra.
       </p>
@@ -738,12 +768,12 @@ export function PrivacyIt() {
       </ul>
       <p>
         Usa <strong>Impostazioni → Elimina account</strong> nell&apos;app per cancellare i dati
-        locali e i record attivi del relay, compresi la cronologia del grafico salvata e il diario
-        condiviso; rimuove anche la chiave della cronologia di Dulce dal tuo Portachiavi iCloud,
+        locali e i record attivi del relay, compresi la cronologia del grafico salvata e il diario;
+        rimuove anche la chiave della cronologia di Dulce dal tuo Portachiavi iCloud,
         quindi Dulce sugli altri tuoi iPhone inizia una nuova cronologia. Puoi anche disattivare
-        la cronologia del grafico salvata in Impostazioni, il che elimina subito la copia salvata,
-        e disattivare separatamente la condivisione del diario, il che elimina la copia del diario
-        condiviso. L&apos;app non ha un pulsante di esportazione della cronologia salvata; scrivici e
+        la cronologia del grafico salvata in Impostazioni, il che elimina subito la copia salvata (letture e diario),
+        e disattivare separatamente «Salva il mio diario», il che elimina il diario salvato
+        finché la condivisione del diario è disattivata. L&apos;app non ha un pulsante di esportazione della cronologia salvata; scrivici e
         ti invieremo una copia in un formato elettronico di uso comune (ad esempio CSV).
         L&apos;indicatore minimo dell&apos;installazione descritto sopra resta finché non ne chiedi
         la cancellazione. Puoi esercitare ciascuno di questi diritti scrivendo a{" "}

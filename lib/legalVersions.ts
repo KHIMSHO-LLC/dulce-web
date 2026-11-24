@@ -5,15 +5,21 @@
  * (the "What changed" box and the "Last updated" line use them, and the archived version's
  * "valid until" date is the day before). Spanish text prevails; the others are translations.
  */
-export const PRIVACY_UPDATED = "2026-11-16";
-export const TERMS_UPDATED = "2026-11-16";
+export const PRIVACY_UPDATED = "2026-11-24";
+export const TERMS_UPDATED = "2026-11-24";
 
 export type LegalDoc = "privacy" | "terms";
 
 /** Earlier versions kept online (noindex) at /legal/<doc>/<version>. Newest first. */
 export const LEGAL_ARCHIVE: Record<LegalDoc, readonly { version: string; validFrom: string }[]> = {
-  privacy: [{ version: "2026-11-10", validFrom: "2026-11-10" }],
-  terms: [{ version: "2026-11-05", validFrom: "2026-11-05" }],
+  privacy: [
+    { version: "2026-11-16", validFrom: "2026-11-16" },
+    { version: "2026-11-10", validFrom: "2026-11-10" },
+  ],
+  terms: [
+    { version: "2026-11-16", validFrom: "2026-11-16" },
+    { version: "2026-11-05", validFrom: "2026-11-05" },
+  ],
 };
 
 export const CURRENT_UPDATED: Record<LegalDoc, string> = {

@@ -56,8 +56,8 @@ export function TermsDe() {
           Familie).
         </li>
         <li>
-          Deinen Glukoseverlauf zu speichern und dein Logbuch mit den Followern zu teilen, die du
-          einlädst, damit du und sie dieselbe Kurve sehen (Dulce Pro, mit deiner Einwilligung;
+          Deinen Glukoseverlauf und dein Logbuch zu speichern und dein Logbuch mit den Followern zu
+          teilen, die du einlädst, damit du und sie dieselbe Kurve sehen (Dulce Pro, mit deiner Einwilligung;
           siehe Abschnitt 8.1).
         </li>
       </ul>
@@ -98,7 +98,7 @@ export function TermsDe() {
         Sensor oder seine Verbindung funktioniert.
       </p>
       <p>
-        Der gespeicherte Kurvenverlauf, das geteilte Logbuch, Statistiken und Diagramme in Dulce
+        Der gespeicherte Kurvenverlauf, das gespeicherte und geteilte Logbuch, Statistiken und Diagramme in Dulce
         sind keine Krankenakte. Nutze sie und alles andere in Dulce nicht, um Behandlungsentscheidungen zu treffen.
       </p>
       <p>
@@ -141,7 +141,7 @@ export function TermsDe() {
         Zustellung von Werten und Warnungen an Follower unterliegt denselben Grenzen wie in
         Abschnitt 3 beschrieben. Der gespeicherte Kurvenverlauf kann Lücken haben, und Follower
         sehen möglicherweise weniger als du. Wenn du dein Logbuch teilst, sehen deine Follower
-        alles darin, auch deine Freitext-Notizen; schreib keine Angaben über andere Personen in
+        die geteilten Einträge, auch deine Freitext-Notizen; schreib keine Angaben über andere Personen in
         Notizen, die du teilst.
       </p>
 
@@ -215,10 +215,10 @@ export function TermsDe() {
         Anmeldung verweigert oder immer wieder fehlschlägt oder 1 Jahr vergangen ist.
       </p>
       <p>
-        Wenn du dein Logbuch teilst, sehen deine Follower alles darin, auch Freitext-Notizen. Du
+        Wenn du dein Logbuch teilst, sehen deine Follower die geteilten Einträge, auch Freitext-Notizen. Du
         bist für das verantwortlich, was du in Notizen schreibst, die du teilst, auch für Angaben
-        über andere Personen. Du kannst das Teilen jederzeit ausschalten, wodurch die geteilte
-        Kopie gelöscht wird.
+        über andere Personen. Du kannst das Teilen jederzeit ausschalten, dann können sie es
+        nicht mehr sehen.
       </p>
       <p>
         Wir können diese Funktion ändern, einschränken oder einstellen, zum Beispiel um den Dienst

@@ -69,11 +69,13 @@ export function PrivacyEs() {
         </li>
         <li>
           <strong>Tu diario</strong>: carbohidratos, insulina (incluidas las dosis leídas de una
-          pluma de insulina inteligente), ejercicio, entradas manuales de glucosa y notas. Se
-          guarda en tu dispositivo. Si usas el historial guardado de la gráfica y compartes tu
-          diario con tu familia (activado por defecto; puedes desactivarlo), las entradas desde el
-          día en que activaste el uso compartido, incluidas las notas de texto libre, también se
-          guardan en el relay (ver 2.6).
+          pluma de insulina inteligente o comunicadas por una bomba), ejercicio, entradas manuales
+          de glucosa, peso, medicación, proteínas, grasas y calorías (incluidos los valores de un
+          escaneo de foto de comida), etiquetas y notas. Se guarda en tu dispositivo. Si usas el
+          historial guardado de la gráfica (Dulce Pro), tu diario forma parte de él y también se
+          guarda en el relay, completo, incluidas las notas de texto libre, salvo que desactives
+          «Guardar mi diario». Si tus seguidores pueden verlo se decide por separado con
+          «Compartir mi diario con la familia» (activado por defecto; puedes desactivarlo); ver 2.6.
         </li>
         <li>
           <strong>Datos de Apple Salud</strong> (iPhone) o de <strong>Health Connect</strong>{" "}
@@ -202,7 +204,8 @@ export function PrivacyEs() {
         historial anterior no se comparte. Si usas el historial guardado de la gráfica (Dulce Pro),
         tus seguidores también pueden ver el historial guardado de tu gráfica, incluidas las
         lecturas de antes de que aceptaran y, mientras el uso compartido del diario esté activado,
-        tu diario compartido, incluidas las notas de texto libre; dejan de verlo cuando revocas su
+        tu diario compartido, incluidas las notas de texto libre (al activar el uso compartido
+        verán el diario guardado de los últimos 90 días); dejan de verlo cuando revocas su
         acceso o pausas el uso compartido (ver 2.6). Los mensajes entre tú y tus seguidores, incluido el texto que escribas, pasan por el relay y por el servicio de notificaciones de Apple o Google para llegar a sus dispositivos. El relay no guarda el texto de los mensajes ni un historial. Puedes revocar el acceso de un
         seguidor en cualquier momento y desactivar por completo esos mensajes.
       </p>
@@ -241,12 +244,26 @@ export function PrivacyEs() {
           el historial que ya está en tu teléfono (hasta 90 días).
         </li>
         <li>
-          Tu diario, si lo compartes con tu familia (activado por defecto mientras el historial
-          guardado de la gráfica esté activado; puedes desactivarlo por separado). Se comparte todo
-          lo que hay en el diario: carbohidratos, insulina (incluidas las dosis leídas de una pluma
-          de insulina inteligente y las dosis de purgado), ejercicio, mediciones manuales de
-          glucosa y notas de texto libre, cada una con su hora y cantidad. Solo se comparten las
-          entradas desde el día en que activas el uso compartido del diario; las anteriores no.
+          Tu diario, que forma parte del historial guardado de la gráfica. Cada entrada del diario
+          se guarda con todos sus campos: carbohidratos, insulina (incluidas las dosis leídas de
+          una pluma de insulina inteligente o comunicadas por una bomba, y las dosis de purgado),
+          ejercicio, mediciones manuales de glucosa, peso, medicación, proteínas, grasas y
+          calorías (incluidos los valores de un escaneo de foto de comida), etiquetas y notas de
+          texto libre, cada una con su hora y cantidad. Cuando activas el historial guardado de la
+          gráfica, la app te avisa de que tu diario forma parte de él y también se guarda. Si
+          aceptaste el historial guardado de la gráfica antes de esta versión, tu diario no se
+          guarda hasta que lo aceptes en la app (un aviso único con «Activar» o «Ahora no»).
+          Puedes cambiarlo en cualquier momento con el interruptor «Guardar mi diario» en los
+          ajustes del historial de la gráfica.
+        </li>
+        <li>
+          Tu diario para tu familia: el interruptor «Compartir mi diario con la familia»
+          (activado por defecto mientras el historial guardado de la gráfica esté activado) solo
+          decide si tus seguidores pueden ver tu diario. Ven las entradas compartidas
+          (carbohidratos, insulina, ejercicio, mediciones manuales de glucosa y notas de texto
+          libre, cada una con su hora y cantidad), nunca la copia completa que solo puedes leer
+          tú. Al activar el uso compartido, las personas que te siguen ven el diario guardado de
+          los últimos 90 días.
         </li>
         <li>
           No se guarda con él: el correo de tu cuenta del sensor, tu nombre, el texto de los
@@ -256,7 +273,8 @@ export function PrivacyEs() {
       <p>
         <strong>Para qué.</strong> Solo para prestar esta función: la misma gráfica completa para
         ti y para los familiares que invitaste, conservada aunque cierres sesión, reinstales o
-        cambies de teléfono. No lo usamos para publicidad, elaboración de perfiles ni venta, y no
+        cambies de teléfono, y tu diario vuelve tras reinstalar o en un teléfono nuevo, igual que
+        tus lecturas. No lo usamos para publicidad, elaboración de perfiles ni venta, y no
         lo compartimos con Meta ni con ningún servicio de analítica.
       </p>
       <p>
@@ -265,21 +283,24 @@ export function PrivacyEs() {
         separado para cada cuenta del sensor: si inicias sesión con otra cuenta del sensor, vuelve
         a preguntarte. No se guarda nada antes de que respondas, y las versiones de la app que no
         lo preguntan no guardan nada. Puedes retirar tu consentimiento en cualquier momento en
-        Ajustes: el guardado se detiene y la copia guardada en el relay se borra de inmediato. La
-        retirada no afecta a la licitud del guardado realizado antes. Dulce Pro no depende de este
-        consentimiento: sin él, Dulce Pro funciona sin historial guardado.
+        Ajustes: el guardado se detiene y la copia guardada en el relay (lecturas y diario) se
+        borra de inmediato. La retirada no afecta a la licitud del guardado realizado antes. Dulce
+        Pro no depende de este consentimiento: sin él, Dulce Pro funciona sin historial guardado.
+        El consentimiento para el historial guardado de la gráfica abarca también tu diario: la
+        app te lo indica al activarlo, y si aceptaste antes de esta versión, tu diario solo se
+        guarda después de que lo aceptes en la app.
       </p>
       <p>
         <strong>Dónde.</strong> En el relay de Dulce, en una base de datos de nuestro proveedor de
         alojamiento Cloudflare, que la trata por nuestra cuenta y puede tratar datos en la UE y en
-        otros países con sus garantías estándar (ver el apartado 8). El mismo historial también se
-        queda en la base de datos local de la app en tu teléfono.
+        otros países con sus garantías estándar (ver el apartado 8). El mismo historial y el mismo
+        diario también se quedan en la base de datos local de la app en tu teléfono.
       </p>
       <p>
         <strong>Cuánto tiempo.</strong> Mientras tu suscripción a Dulce Pro (incluida una prueba
-        gratuita) esté activa, conservamos como máximo 1 año de historial aproximadamente; los días
-        más antiguos se eliminan automáticamente. Si tu suscripción termina o se reembolsa, el
-        guardado se detiene y el historial guardado (lecturas y diario compartido) se borra 90
+        gratuita) esté activa, conservamos como máximo 1 año de historial y de diario aproximadamente;
+        los días más antiguos se eliminan automáticamente. Si tu suscripción termina o se
+        reembolsa, el guardado se detiene y el historial guardado (lecturas y diario) se borra 90
         días después; si vuelves a suscribirte dentro de esos 90 días, sigue ahí.
       </p>
       <p>
@@ -334,8 +355,10 @@ export function PrivacyEs() {
         con ellos: ven el historial guardado de tu gráfica (incluidas las lecturas de antes de que
         aceptaran) y, mientras el uso compartido del diario esté activado, tu diario compartido,
         incluidas las notas de texto libre. Dejan de verlo cuando revocas su acceso, cuando se
-        pausa el uso compartido o cuando borras tu historial. Desactivar el uso compartido del
-        diario borra la copia compartida en el relay; tu diario en el teléfono se queda. Tus
+        pausa el uso compartido o cuando borras tu historial. Nunca ven la copia completa del
+        diario que solo puedes leer tú. Al activar el uso compartido ven el diario guardado de
+        los últimos 90 días. Tu diario en el teléfono se queda cuando desactivas el uso
+        compartido. Tus
         seguidores pueden leer las notas que compartes, así que no escribas información sobre
         otras personas en las notas que compartas. Quien haya iniciado sesión con la misma cuenta
         del sensor en su propio teléfono no recibe tu historial guardado a través de Dulce. El
@@ -362,7 +385,12 @@ export function PrivacyEs() {
       <ul>
         <li>
           En la app, desactiva «Guardar historial de la gráfica» en Ajustes y confirma «Dejar y
-          borrar»: la copia guardada en el relay se borra de inmediato.
+          borrar»: la copia guardada en el relay (lecturas y diario) se borra de inmediato.
+        </li>
+        <li>
+          En la app, desactiva «Guardar mi diario» en los ajustes del historial de la gráfica:
+          mientras el uso compartido del diario esté desactivado, se borra el diario guardado en
+          el relay. Tus lecturas siguen guardadas.
         </li>
         <li>
           En la app, desactiva «Seguir recogiendo si cierro sesión o elimino la app»: Dulce deja de
@@ -370,8 +398,9 @@ export function PrivacyEs() {
           del sensor para ello.
         </li>
         <li>
-          En la app, desactiva «Compartir mi diario con la familia»: se borra la copia del diario
-          compartido en el relay.
+          En la app, desactiva «Compartir mi diario con la familia»: tus seguidores dejan de poder
+          ver tu diario. La copia guardada se queda en el relay para ti mientras «Guardar mi
+          diario» esté activado, y se borra si está desactivado.
         </li>
         <li>Al cerrar sesión, elige «Parar y borrar» (o «Borrarlo»).</li>
         <li>
@@ -476,8 +505,8 @@ export function PrivacyEs() {
         <li>Entregarte las alertas que configuras.</li>
         <li>
           Conservar el historial de tu gráfica para que tu gráfica y la de tus seguidores sean la
-          misma, también después de cerrar sesión, reinstalar o cambiar de teléfono, y compartir tu diario
-          con la familia que invitaste (Dulce Pro, con tu consentimiento; apartado 2.6).
+          misma, también después de cerrar sesión, reinstalar o cambiar de teléfono, conservar tu
+          diario y compartirlo con la familia que invitaste (Dulce Pro, con tu consentimiento; apartado 2.6).
         </li>
         <li>
           Si así lo decides, estimar los carbohidratos de una comida a partir de una foto que haces
@@ -509,7 +538,7 @@ export function PrivacyEs() {
         </li>
         <li>
           <strong>Consentimiento explícito</strong> (art. 9.2.a RGPD) para el historial guardado
-          de la gráfica, la recogida mientras tienes la sesión cerrada o la app está eliminada, y
+          de la gráfica (que incluye tu diario), la recogida mientras tienes la sesión cerrada o la app está eliminada, y
           el uso compartido del diario: se pide en la app, para cada cuenta del sensor, antes de
           empezar a guardar, y puedes retirarlo en cualquier momento en Ajustes (apartado 2.6).
         </li>
@@ -555,8 +584,7 @@ export function PrivacyEs() {
           Tu historial de glucosa a largo plazo, tu diario y los datos de Apple Salud o Health
           Connect se procesan y almacenan en tu dispositivo. El relay también procesa las lecturas recientes como se
           explica arriba. Si usas Dulce Pro y aceptas el historial guardado de la gráfica, tu
-          historial de glucosa, y tu diario mientras lo compartas con tu familia, también se
-          guardan en el relay (apartado 2.6).
+          historial de glucosa y tu diario también se guardan en el relay (apartado 2.6).
         </li>
         <li>
           Cuando conectas tu CGM, el relay procesa las lecturas recientes necesarias para las
@@ -590,11 +618,12 @@ export function PrivacyEs() {
           y se borra cuando termina la recogida, como muy tarde al cabo de 1 año.
         </li>
         <li>
-          <strong>Historial guardado de la gráfica y diario compartido (Dulce Pro):</strong>{" "}
+          <strong>Historial guardado de la gráfica y diario (Dulce Pro):</strong>{" "}
           mientras tu suscripción esté activa, como máximo 1 año aproximadamente; los días más
           antiguos se eliminan automáticamente. Se borran de inmediato cuando desactivas el
-          guardado, eliges «Parar y borrar» al cerrar sesión o usas Eliminar cuenta (el diario
-          compartido, también cuando desactivas el uso compartido del diario); se borran 90 días
+          guardado, eliges «Parar y borrar» al cerrar sesión o usas Eliminar cuenta (el diario solo,
+          también cuando desactivas «Guardar mi diario» mientras el uso compartido del diario
+          está desactivado); se borran 90 días
           después de que tu suscripción termine o se reembolse.
         </li>
         <li>
@@ -659,7 +688,7 @@ export function PrivacyEs() {
       <ul>
         <li>
           <strong>Cloudflare</strong> — aloja el relay de Dulce descrito arriba y guarda el
-          historial guardado de la gráfica y el diario compartido (apartado 2.6) y el email de
+          historial guardado de la gráfica y el diario (apartado 2.6) y el email de
           contacto opcional (apartado 2.7), como encargado del tratamiento.
         </li>
         <li>
@@ -734,7 +763,7 @@ export function PrivacyEs() {
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
       <p>
-        El historial guardado de la gráfica y las entradas del diario compartido se guardan en una
+        El historial guardado de la gráfica y las entradas del diario se guardan en una
         base de datos de nuestro proveedor de alojamiento Cloudflare, que puede tratar datos en la
         UE y en otros países con las garantías descritas arriba.
       </p>
@@ -758,11 +787,11 @@ export function PrivacyEs() {
       <p>
         Usa <strong>Ajustes → Eliminar cuenta</strong> en la app para borrar los datos locales y
         los registros activos del relay, incluidos tu historial guardado de la gráfica y tu
-        diario compartido; también borra la clave de historial de Dulce de tu Llavero de iCloud,
+        diario; también borra la clave de historial de Dulce de tu Llavero de iCloud,
         así que Dulce empezará un historial nuevo en tus otros iPhone. También puedes desactivar
         el historial guardado de la gráfica en Ajustes, lo que borra la copia guardada de
-        inmediato, y desactivar por separado el uso compartido del diario, lo que borra la copia
-        del diario compartido. La app no tiene un botón para exportar el historial guardado;
+        inmediato (lecturas y diario), y desactivar por separado «Guardar mi diario», lo que borra
+        el diario guardado mientras el uso compartido del diario esté desactivado. La app no tiene un botón para exportar el historial guardado;
         escríbenos y te enviaremos una copia en un formato electrónico de uso común (por ejemplo,
         CSV). El marcador mínimo de instalación descrito arriba permanece hasta que solicites su
         borrado. Puedes ejercer cualquiera de estos derechos escribiendo a{" "}
