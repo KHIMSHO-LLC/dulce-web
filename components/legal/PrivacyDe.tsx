@@ -71,11 +71,14 @@ Missbrauch.
         </li>
         <li>
           <strong>Dein Logbuch</strong>: Kohlenhydrate, Insulin (auch von einem smarten
-          Insulinpen ausgelesene Dosen), Bewegung, manuelle Glukoseeinträge und Notizen. Auf deinem
-          Gerät gespeichert. Wenn du den gespeicherten Kurvenverlauf nutzt und dein Logbuch mit
-          deiner Familie teilst (standardmäßig an, du kannst es ausschalten), werden die Einträge ab
-          dem Tag, an dem du das Teilen eingeschaltet hast, einschließlich Freitext-Notizen, auch
-          auf dem Relay gespeichert (siehe 2.6).
+          Insulinpen ausgelesene oder von einer Pumpe gemeldete Dosen), Bewegung, manuelle
+          Glukoseeinträge, Gewicht, Medikamente, Eiweiß, Fett und Kalorien (auch Werte aus einem
+          Mahlzeitenfoto-Scan), Labels und Notizen. Auf deinem Gerät gespeichert. Wenn du den
+          gespeicherten Kurvenverlauf nutzt (Dulce Pro), ist dein Logbuch ein Teil davon und wird
+          ebenfalls vollständig auf dem Relay gespeichert, einschließlich Freitext-Notizen, es sei
+          denn, du schaltest „Mein Logbuch speichern“ aus. Ob deine Follower es sehen können,
+          entscheidet separat „Mein Logbuch mit der Familie teilen“ (standardmäßig an, du kannst es
+          ausschalten); siehe 2.6.
         </li>
         <li>
           <strong>Daten aus Apple Health</strong> (iPhone) oder <strong>Health Connect</strong> (Android), wenn du die Berechtigung erteilst. Auf Android liest Dulce nur. Auf dem iPhone kann Dulce ab Version 1.0.7 außerdem deine Sensorwerte in Apple Health speichern, höchstens einen alle 5 Minuten, wenn du Glukose in Dulce aktivierst und es erlaubst. Du kannst das in den Einstellungen von Dulce oder in der Health-App beenden. Dort gespeicherte Werte bleiben in Apple Health, und andere Apps, denen du es erlaubst, können sie lesen.
@@ -179,7 +182,8 @@ Missbrauch.
         frühere Verläufe nicht geteilt. Wenn du den gespeicherten Kurvenverlauf nutzt (Dulce Pro),
         können deine Follower auch deinen gespeicherten Kurvenverlauf sehen, einschließlich
         Werten aus der Zeit vor der Annahme, und, solange das Teilen des Logbuchs an ist, dein
-        geteiltes Logbuch, einschließlich Freitext-Notizen; sie sehen ihn nicht mehr, sobald du
+        geteiltes Logbuch, einschließlich Freitext-Notizen (wenn du das Teilen einschaltest, sehen
+        sie das gespeicherte Logbuch der letzten 90 Tage); sie sehen ihn nicht mehr, sobald du
         ihnen den Zugang entziehst oder das Teilen pausierst (siehe 2.6). Nachrichten zwischen dir und deinen Followern, auch selbst geschriebener Text, laufen über das Relay und den Push-Dienst von Apple oder Google, um ihre Geräte zu erreichen. Das Relay speichert weder den Nachrichtentext noch einen Nachrichtenverlauf. Du kannst einem Follower den Zugang jederzeit
         entziehen und Follower-Nachrichten ganz ausschalten.
       </p>
@@ -219,12 +223,26 @@ Missbrauch.
           Verlauf, der bereits auf deinem Telefon ist (bis zu 90 Tage).
         </li>
         <li>
-          Dein Logbuch, wenn du es mit deiner Familie teilst (standardmäßig an, solange der
-          gespeicherte Kurvenverlauf an ist; du kannst es separat ausschalten). Alles im Logbuch
-          wird geteilt: Kohlenhydrate, Insulin (auch von einem smarten Insulinpen ausgelesene Dosen
-          und Vorab-Dosen zum Entlüften), Bewegung, manuelle Glukosemessungen und Freitext-Notizen,
-          jeweils mit Zeitpunkt und Menge. Geteilt werden nur Einträge ab dem Tag, an dem du das
-          Teilen des Logbuchs einschaltest; ältere Einträge nicht.
+          Dein Logbuch, das Teil des gespeicherten Kurvenverlaufs ist. Jeder Logbucheintrag wird
+          mit allen seinen Feldern gespeichert: Kohlenhydrate, Insulin (auch von einem smarten
+          Insulinpen ausgelesene oder von einer Pumpe gemeldete Dosen und Vorab-Dosen zum
+          Entlüften), Bewegung, manuelle Glukosemessungen, Gewicht, Medikamente, Eiweiß, Fett und
+          Kalorien (auch Werte aus einem Mahlzeitenfoto-Scan), Labels und Freitext-Notizen,
+          jeweils mit Zeitpunkt und Menge. Wenn du den gespeicherten Kurvenverlauf einschaltest,
+          sagt dir die App, dass dein Logbuch ein Teil davon ist und ebenfalls gespeichert wird.
+          Wenn du den gespeicherten Kurvenverlauf vor dieser Version akzeptiert hast, wird dein
+          Logbuch erst gespeichert, wenn du in der App zustimmst (ein einmaliger Hinweis mit
+          „Einschalten“ oder „Nicht jetzt“). Du kannst das jederzeit mit dem Schalter „Mein
+          Logbuch speichern“ in den Einstellungen für den Kurvenverlauf ändern.
+        </li>
+        <li>
+          Dein Logbuch für deine Familie: Der Schalter „Mein Logbuch mit der Familie teilen“
+          (standardmäßig an, solange der gespeicherte Kurvenverlauf an ist) entscheidet nur, ob
+          deine Follower dein Logbuch sehen können. Sie sehen die geteilten Einträge
+          (Kohlenhydrate, Insulin, Bewegung, manuelle Glukosemessungen und Freitext-Notizen,
+          jeweils mit Zeitpunkt und Menge), nie die vollständige Kopie, die nur du lesen kannst.
+          Wenn du das Teilen einschaltest, sehen die Personen, die dir folgen, das gespeicherte
+          Logbuch der letzten 90 Tage.
         </li>
         <li>
           Nicht mitgespeichert werden: die E-Mail-Adresse deines Sensorkontos, dein Name, der Text
@@ -235,7 +253,8 @@ Missbrauch.
       <p>
         <strong>Wozu.</strong> Nur um diese Funktion bereitzustellen: dieselbe, vollständige Kurve
         für dich und die Familienmitglieder, die du eingeladen hast, erhalten über Abmelden,
-        Neuinstallation und ein neues Telefon hinweg. Wir verwenden sie nicht für Werbung,
+        Neuinstallation und ein neues Telefon hinweg, und dein Logbuch ist nach einer
+        Neuinstallation oder auf einem neuen Telefon wieder da, wie deine Werte. Wir verwenden sie nicht für Werbung,
         Profiling oder Verkauf und geben sie weder an Meta noch an einen Analysedienst weiter.
       </p>
       <p>
@@ -245,21 +264,24 @@ Missbrauch.
         anmeldest, fragt sie erneut. Vor deiner Antwort wird nichts gespeichert, und App-Versionen,
         die nicht fragen, speichern nichts. Du kannst deine Einwilligung jederzeit in den
         Einstellungen widerrufen: Das Speichern endet, und die gespeicherte Kopie auf dem Relay
-        wird sofort gelöscht. Der Widerruf berührt nicht die Rechtmäßigkeit des bis dahin
+        (Werte und Logbuch) wird sofort gelöscht. Der Widerruf berührt nicht die Rechtmäßigkeit des bis dahin
         erfolgten Speicherns. Dulce Pro hängt nicht von dieser Einwilligung ab: Ohne sie
-        funktioniert Dulce Pro ohne gespeicherten Verlauf.
+        funktioniert Dulce Pro ohne gespeicherten Verlauf. Die Einwilligung in den gespeicherten
+        Kurvenverlauf umfasst auch dein Logbuch: Die App sagt es dir, wenn du ihn einschaltest,
+        und wenn du vor dieser Version akzeptiert hast, wird dein Logbuch erst gespeichert, wenn
+        du in der App zustimmst.
       </p>
       <p>
         <strong>Wo.</strong> Auf dem Dulce-Relay, in einer Datenbank unseres Hosting-Anbieters
         Cloudflare, der sie für uns verarbeitet und Daten in der EU und in anderen Ländern unter
-        seinen Standardgarantien verarbeiten kann (siehe Abschnitt 8). Derselbe Verlauf bleibt
+        seinen Standardgarantien verarbeiten kann (siehe Abschnitt 8). Derselbe Verlauf und dein Logbuch bleiben
         außerdem in der lokalen Datenbank der App auf deinem Telefon.
       </p>
       <p>
         <strong>Wie lange.</strong> Solange dein Dulce-Pro-Abonnement (einschließlich eines
-        Gratis-Tests) aktiv ist, bewahren wir höchstens etwa 1 Jahr Verlauf auf; ältere Tage
+        Gratis-Tests) aktiv ist, bewahren wir höchstens etwa 1 Jahr Verlauf und Logbuch auf; ältere Tage
         werden automatisch entfernt. Wenn dein Abonnement endet oder erstattet wird, endet das
-        Speichern, und der gespeicherte Verlauf (Werte und geteiltes Logbuch) wird 90 Tage später
+        Speichern, und der gespeicherte Verlauf (Werte und Logbuch) wird 90 Tage später
         gelöscht; wenn du innerhalb dieser 90 Tage erneut abonnierst, ist er noch da.
       </p>
       <p>
@@ -316,9 +338,10 @@ Missbrauch.
         du mit ihnen teilst: Sie sehen deinen gespeicherten Kurvenverlauf (auch Werte aus der Zeit
         vor der Annahme) und, solange das Teilen des Logbuchs an ist, dein geteiltes Logbuch
         einschließlich Freitext-Notizen. Sie sehen ihn nicht mehr, wenn du ihnen den Zugang
-        entziehst, das Teilen pausiert wird oder du deinen Verlauf löschst. Wenn du das Teilen des
-        Logbuchs ausschaltest, wird die geteilte Kopie auf dem Relay gelöscht; dein Logbuch auf
-        deinem Telefon bleibt. Notizen, die du teilst, können deine Follower lesen; schreib
+        entziehst, das Teilen pausiert wird oder du deinen Verlauf löschst. Die vollständige
+        Kopie des Logbuchs, die nur du lesen kannst, sehen sie nie. Wenn du das Teilen
+        einschaltest, sehen sie das gespeicherte Logbuch der letzten 90 Tage. Dein Logbuch auf
+        deinem Telefon bleibt, wenn du das Teilen ausschaltest. Notizen, die du teilst, können deine Follower lesen; schreib
         deshalb keine Angaben über andere Personen in Notizen, die du teilst. Wer auf dem eigenen
         Telefon mit demselben Sensorkonto angemeldet ist, erhält deinen gespeicherten Verlauf nicht
         über Dulce. Das Relay verarbeitet diese Daten automatisch, um sie zuzustellen; wir sehen
@@ -346,7 +369,13 @@ Missbrauch.
       <ul>
         <li>
           Schalte in der App in den Einstellungen „Kurvenverlauf speichern“ aus und bestätige
-          „Beenden und löschen“: Die gespeicherte Kopie auf dem Relay wird sofort gelöscht.
+          „Beenden und löschen“: Die gespeicherte Kopie auf dem Relay (Werte und Logbuch) wird sofort
+          gelöscht.
+        </li>
+        <li>
+          Schalte in der App in den Einstellungen für den Kurvenverlauf „Mein Logbuch speichern“
+          aus: Solange das Teilen des Logbuchs aus ist, wird das gespeicherte Logbuch auf dem Relay
+          gelöscht. Deine Werte bleiben gespeichert.
         </li>
         <li>
           Schalte in der App „Weiter sammeln, wenn ich abgemeldet bin oder die App entfernt ist“
@@ -354,8 +383,9 @@ Missbrauch.
           keine Sensor-Zugangskennung.
         </li>
         <li>
-          Schalte in der App „Mein Logbuch mit der Familie teilen“ aus: Die geteilte Kopie des
-          Logbuchs auf dem Relay wird gelöscht.
+          Schalte in der App „Mein Logbuch mit der Familie teilen“ aus: Deine Follower können dein
+          Logbuch nicht mehr sehen. Die gespeicherte Kopie bleibt für dich auf dem Relay, solange
+          „Mein Logbuch speichern“ an ist, und wird gelöscht, wenn es aus ist.
         </li>
         <li>Wähle beim Abmelden „Beenden und löschen“ (oder „Löschen“).</li>
         <li>
@@ -459,7 +489,7 @@ Missbrauch.
         <li>Die Warnungen zustellen, die du einrichtest.</li>
         <li>
           Deinen Kurvenverlauf aufbewahren, damit du und deine Follower dieselbe Kurve sehen, auch
-          nach dem Abmelden, einer Neuinstallation oder einem Telefonwechsel, und dein Logbuch mit
+          nach dem Abmelden, einer Neuinstallation oder einem Telefonwechsel, dein Logbuch behalten und es mit
           der Familie teilen, die du eingeladen hast (Dulce Pro, mit deiner Einwilligung;
           Abschnitt 2.6).
         </li>
@@ -494,7 +524,7 @@ Missbrauch.
         </li>
         <li>
           <strong>Ausdrückliche Einwilligung</strong> (Art. 9 Abs. 2 lit. a DSGVO) für den
-          gespeicherten Kurvenverlauf, das Sammeln, während du abgemeldet bist oder die App
+          gespeicherten Kurvenverlauf (der dein Logbuch einschließt), das Sammeln, während du abgemeldet bist oder die App
           entfernt ist, und das Teilen des Logbuchs: in der App für jedes Sensorkonto erfragt,
           bevor das Speichern beginnt, und jederzeit in den Einstellungen widerrufbar
           (Abschnitt 2.6).
@@ -543,8 +573,8 @@ Missbrauch.
           Dein langfristiger Glukoseverlauf, dein Logbuch und deine Apple-Health-Daten werden auf
           deinem Gerät verarbeitet und gespeichert. Aktuelle Werte verarbeitet außerdem das oben
           beschriebene Relay. Wenn du Dulce Pro nutzt und den gespeicherten Kurvenverlauf
-          akzeptierst, werden dein Glukoseverlauf und, solange du es mit deiner Familie teilst,
-          dein Logbuch ebenfalls auf dem Relay gespeichert (Abschnitt 2.6).
+          akzeptierst, werden dein Glukoseverlauf und dein Logbuch ebenfalls auf dem Relay
+          gespeichert (Abschnitt 2.6).
         </li>
         <li>
           Wenn dein CGM verbunden ist, verarbeitet das Relay aktuelle Werte, die für die
@@ -578,11 +608,11 @@ Missbrauch.
           aufbewahrt und gelöscht, wenn das Sammeln endet, spätestens nach 1 Jahr.
         </li>
         <li>
-          <strong>Gespeicherter Kurvenverlauf und geteiltes Logbuch (Dulce Pro):</strong> solange
+          <strong>Gespeicherter Kurvenverlauf und Logbuch (Dulce Pro):</strong> solange
           dein Abonnement aktiv ist, höchstens etwa 1 Jahr, ältere Tage werden automatisch
           entfernt. Sofort gelöscht, wenn du das Speichern ausschaltest, beim Abmelden „Beenden
-          und löschen“ wählst oder „Konto löschen“ nutzt (das geteilte Logbuch auch, wenn du das
-          Teilen des Logbuchs ausschaltest); 90 Tage nach Ende oder Erstattung deines Abonnements
+          und löschen“ wählst oder „Konto löschen“ nutzt (das Logbuch allein auch, wenn du „Mein
+          Logbuch speichern“ ausschaltest, während das Teilen des Logbuchs aus ist); 90 Tage nach Ende oder Erstattung deines Abonnements
           gelöscht.
         </li>
         <li>
@@ -645,7 +675,7 @@ Missbrauch.
       <ul>
         <li>
           <strong>Cloudflare</strong>: hostet das oben beschriebene Dulce-Relay und speichert als
-          unser Auftragsverarbeiter den gespeicherten Kurvenverlauf und das geteilte Logbuch
+          unser Auftragsverarbeiter den gespeicherten Kurvenverlauf und das Logbuch
           (Abschnitt 2.6) sowie die optionale Kontakt-E-Mail (Abschnitt 2.7).
         </li>
         <li>
@@ -716,7 +746,7 @@ Missbrauch.
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a> anfordern.
       </p>
       <p>
-        Gespeicherter Kurvenverlauf und Einträge des geteilten Logbuchs werden in einer Datenbank
+        Gespeicherter Kurvenverlauf und Logbucheinträge werden in einer Datenbank
         unseres Hosting-Anbieters Cloudflare gespeichert, der Daten in der EU und in anderen
         Ländern unter den oben beschriebenen Garantien verarbeiten kann.
       </p>
@@ -740,11 +770,12 @@ Missbrauch.
       <p>
         Unter <strong>Einstellungen → Konto löschen</strong> kannst du lokale App-Daten und
         aktive Relay-Datensätze löschen, einschließlich deines gespeicherten Kurvenverlaufs und
-        des geteilten Logbuchs; außerdem entfernt es Dulces Verlaufsschlüssel aus deinem
+        des Logbuchs; außerdem entfernt es Dulces Verlaufsschlüssel aus deinem
         iCloud-Schlüsselbund, sodass Dulce auf deinen anderen iPhones einen neuen Verlauf
         beginnt. Du kannst den gespeicherten Kurvenverlauf auch in den Einstellungen ausschalten,
-        wodurch die gespeicherte Kopie sofort gelöscht wird, und das Teilen des Logbuchs separat
-        ausschalten, wodurch die geteilte Kopie des Logbuchs gelöscht wird. Die App hat keine
+        wodurch die gespeicherte Kopie (Werte und Logbuch) sofort gelöscht wird, und „Mein Logbuch
+        speichern“ separat ausschalten, wodurch das gespeicherte Logbuch gelöscht wird, solange
+        das Teilen des Logbuchs aus ist. Die App hat keine
         Export-Schaltfläche für den gespeicherten Verlauf; schreib uns, dann senden wir dir eine
         Kopie in einem gängigen elektronischen Format (zum Beispiel CSV). Der oben beschriebene
         minimale Installationsmarker bleibt bestehen, bis du seine Löschung beantragst. Du kannst

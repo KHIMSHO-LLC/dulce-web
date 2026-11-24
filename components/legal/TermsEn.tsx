@@ -51,8 +51,9 @@ export function TermsEn() {
           Sharing your glucose in real time with followers you invite (family following).
         </li>
         <li>
-          Saving your glucose history, and sharing your logbook with the followers you invite, so
-          that you and they see the same chart (Dulce Pro, with your consent; see section 8.1).
+          Saving your glucose history and your logbook, and sharing your logbook with the followers
+          you invite, so that you and they see the same chart (Dulce Pro, with your consent; see
+          section 8.1).
         </li>
       </ul>
       <p>
@@ -90,7 +91,7 @@ export function TermsEn() {
         working.
       </p>
       <p>
-        Saved chart history, the shared logbook, statistics and charts in Dulce are not a medical
+        Saved chart history, the saved and shared logbook, statistics and charts in Dulce are not a medical
         record. Do not use them, or anything else in Dulce, to make treatment decisions.
       </p>
       <p>
@@ -129,7 +130,7 @@ export function TermsEn() {
         Followers must not use Dulce as an emergency monitoring system: delivery of readings
         and alerts to followers is subject to the same limitations described in section 3.
         Saved chart history can have gaps, and followers may see less than you do. If you share
-        your logbook, your followers see everything in it, including your free-text notes; do not
+        your logbook, your followers see the shared entries, including your free-text notes; do not
         write information about other people in notes you share.
       </p>
 
@@ -198,9 +199,9 @@ export function TermsEn() {
         year has passed.
       </p>
       <p>
-        If you share your logbook, your followers see everything in it, including free-text notes.
+        If you share your logbook, your followers see the shared entries, including free-text notes.
         You are responsible for what you write in notes you share, including information about
-        other people. You can switch sharing off at any time, which deletes the shared copy.
+        other people. You can switch sharing off at any time, and then they can no longer see it.
       </p>
       <p>
         We may change, limit or stop this feature, for example to protect the Service, for legal

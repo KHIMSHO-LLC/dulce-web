@@ -72,11 +72,14 @@ export function PrivacyFr() {
         </li>
         <li>
           <strong>Ton journal</strong> : glucides, insuline (y compris les doses lues depuis un
-          stylo à insuline connecté), exercice, glycémies saisies à la main et notes. Stocké sur
-          ton appareil. Si tu utilises l&apos;historique de courbe enregistré et que tu partages
-          ton journal avec ta famille (activé par défaut, tu peux le désactiver), les entrées à
-          partir du jour où tu as activé le partage, y compris les notes en texte libre, sont aussi
-          stockées sur le relais (voir 2.6).
+          stylo à insuline connecté ou transmises par une pompe), exercice, glycémies saisies à la
+          main, poids, médicaments, protéines, lipides et calories (y compris les valeurs issues
+          d&apos;une photo de repas), étiquettes et notes. Stocké sur ton appareil. Si tu utilises
+          l&apos;historique de courbe enregistré (Dulce Pro), ton journal en fait partie et est
+          aussi stocké sur le relais, en entier, y compris les notes en texte libre, sauf si tu
+          désactives « Enregistrer mon journal ». Le fait que tes abonnés puissent le voir se
+          décide séparément avec « Partager mon journal avec ma famille » (activé par défaut, tu
+          peux le désactiver) ; voir 2.6.
         </li>
         <li>
           <strong>Les données d&apos;Apple Santé</strong> (iPhone) ou de <strong>Health Connect</strong> (Android), si tu donnes
@@ -183,7 +186,8 @@ export function PrivacyFr() {
         l&apos;historique antérieur n&apos;est pas partagé. Si tu utilises l&apos;historique de
         courbe enregistré (Dulce Pro), tes abonnés peuvent aussi voir l&apos;historique enregistré
         de ta courbe, y compris les mesures d&apos;avant leur acceptation, et, tant que le partage
-        du journal est activé, ton journal partagé, y compris les notes en texte libre ; ils
+        du journal est activé, ton journal partagé, y compris les notes en texte libre (activer le
+        partage leur montre le journal enregistré des 90 derniers jours) ; ils
         cessent de le voir quand tu retires leur accès ou que tu mets le partage en pause (voir
         2.6). Les messages entre toi et tes abonnés, y compris le texte que tu écris, passent par le relais et par le service de notification d&apos;Apple ou de Google pour atteindre leurs appareils. Le relais ne conserve ni le texte des messages ni d&apos;historique. Tu peux
         retirer l&apos;accès d&apos;un abonné à tout moment et désactiver complètement ces messages.
@@ -226,13 +230,27 @@ export function PrivacyFr() {
           jours).
         </li>
         <li>
-          Ton journal, si tu le partages avec ta famille (activé par défaut tant que
-          l&apos;historique de courbe enregistré est activé ; tu peux le désactiver séparément).
-          Tout le journal est partagé : glucides, insuline (y compris les doses lues depuis un
-          stylo à insuline connecté et les doses d&apos;amorçage), exercice, glycémies saisies à
-          la main et notes en texte libre, chacun avec son heure et sa quantité. Seules les
-          entrées à partir du jour où tu actives le partage du journal sont partagées ; les plus
-          anciennes ne le sont pas.
+          Ton journal, qui fait partie de l&apos;historique de courbe enregistré. Chaque entrée
+          du journal est enregistrée avec tous ses champs : glucides, insuline (y compris les
+          doses lues depuis un stylo à insuline connecté ou transmises par une pompe, et les doses
+          d&apos;amorçage), exercice, glycémies saisies à la main, poids, médicaments, protéines,
+          lipides et calories (y compris les valeurs issues d&apos;une photo de repas), étiquettes
+          et notes en texte libre, chacun avec son heure et sa quantité. Quand tu actives
+          l&apos;historique de courbe enregistré, l&apos;app t&apos;indique que ton journal en fait
+          partie et est enregistré aussi. Si tu as accepté l&apos;historique de courbe enregistré
+          avant cette version, ton journal n&apos;est pas enregistré tant que tu ne l&apos;as pas
+          accepté dans l&apos;app (un avis unique avec « Activer » ou « Pas maintenant »). Tu peux
+          le modifier à tout moment avec l&apos;interrupteur « Enregistrer mon journal » dans les
+          réglages de l&apos;historique de courbe.
+        </li>
+        <li>
+          Ton journal pour ta famille : l&apos;interrupteur « Partager mon journal avec ma
+          famille » (activé par défaut tant que l&apos;historique de courbe enregistré est activé)
+          décide seulement si tes abonnés peuvent voir ton journal. Ils voient les entrées
+          partagées (glucides, insuline, exercice, glycémies saisies à la main et notes en texte
+          libre, chacun avec son heure et sa quantité), jamais la copie complète que toi seul peux
+          lire. Activer le partage montre le journal enregistré des 90 derniers jours aux
+          personnes qui te suivent.
         </li>
         <li>
           Non enregistrés avec cela : l&apos;e-mail de ton compte capteur, ton nom, le texte des
@@ -243,7 +261,8 @@ export function PrivacyFr() {
       <p>
         <strong>Pourquoi.</strong> Uniquement pour fournir cette fonction : la même courbe,
         complète, pour toi et les membres de ta famille que tu as invités, conservée après une
-        déconnexion, une réinstallation et un changement de téléphone. Nous ne l&apos;utilisons pas
+        déconnexion, une réinstallation et un changement de téléphone, et ton journal revient
+        après une réinstallation ou sur un nouveau téléphone, comme tes mesures. Nous ne l&apos;utilisons pas
         pour la publicité, le profilage ou la vente, et nous ne la partageons ni avec Meta ni avec
         aucun service de statistiques.
       </p>
@@ -254,23 +273,26 @@ export function PrivacyFr() {
         connectes avec un autre compte capteur, elle te le demande à nouveau. Rien n&apos;est
         enregistré avant ta réponse, et les versions de l&apos;app qui ne posent pas la question
         n&apos;enregistrent rien. Tu peux retirer ton consentement à tout moment dans les
-        Réglages : l&apos;enregistrement s&apos;arrête et la copie enregistrée sur le relais est
-        supprimée immédiatement. Le retrait n&apos;affecte pas la licéité de l&apos;enregistrement
+        Réglages : l&apos;enregistrement s&apos;arrête et la copie enregistrée sur le relais (mesures et
+        journal) est supprimée immédiatement. Le retrait n&apos;affecte pas la licéité de l&apos;enregistrement
         effectué avant. Dulce Pro ne dépend pas de ce consentement : sans lui, Dulce Pro
-        fonctionne sans historique enregistré.
+        fonctionne sans historique enregistré. Le consentement à l&apos;historique de courbe
+        enregistré couvre aussi ton journal : l&apos;app te l&apos;indique quand tu l&apos;actives,
+        et si tu as accepté avant cette version, ton journal n&apos;est enregistré qu&apos;après
+        ton accord dans l&apos;app.
       </p>
       <p>
         <strong>Où.</strong> Sur le relais Dulce, dans une base de données de notre hébergeur
         Cloudflare, qui la traite pour notre compte et peut traiter des données dans l&apos;UE et
-        dans d&apos;autres pays avec ses garanties standard (voir section 8). Le même historique
-        reste aussi dans la base de données locale de l&apos;app sur ton téléphone.
+        dans d&apos;autres pays avec ses garanties standard (voir section 8). Le même historique et le même journal
+        restent aussi dans la base de données locale de l&apos;app sur ton téléphone.
       </p>
       <p>
         <strong>Combien de temps.</strong> Tant que ton abonnement Dulce Pro (y compris un essai
-        gratuit) est actif, nous conservons au maximum environ 1 an d&apos;historique ; les jours
+        gratuit) est actif, nous conservons au maximum environ 1 an d&apos;historique et de journal ; les jours
         plus anciens sont supprimés automatiquement. Si ton abonnement prend fin ou est remboursé,
-        l&apos;enregistrement s&apos;arrête et l&apos;historique enregistré (mesures et journal
-        partagé) est supprimé 90 jours plus tard ; si tu te réabonnes pendant ces 90 jours, il est
+        l&apos;enregistrement s&apos;arrête et l&apos;historique enregistré (mesures et journal)
+        est supprimé 90 jours plus tard ; si tu te réabonnes pendant ces 90 jours, il est
         toujours là.
       </p>
       <p>
@@ -329,8 +351,9 @@ export function PrivacyFr() {
         mesures d&apos;avant leur acceptation) et, tant que le partage du journal est activé, ton
         journal partagé, notes en texte libre comprises. Ils cessent de le voir quand tu retires
         leur accès, quand le partage est mis en pause ou quand tu supprimes ton historique.
-        Désactiver le partage du journal supprime la copie partagée sur le relais ; ton journal sur
-        ton téléphone reste. Les notes que tu partages peuvent être lues par tes abonnés : n&apos;y
+        Ils ne voient jamais la copie complète du journal que toi seul peux lire. Activer le
+        partage leur montre le journal enregistré des 90 derniers jours. Ton journal sur ton
+        téléphone reste quand tu désactives le partage. Les notes que tu partages peuvent être lues par tes abonnés : n&apos;y
         écris donc aucune information sur d&apos;autres personnes. Une personne connectée au même
         compte capteur sur son propre téléphone ne reçoit pas ton historique enregistré via Dulce.
         Le relais traite ces données automatiquement pour les transmettre ; nous ne consultons ni
@@ -358,8 +381,13 @@ export function PrivacyFr() {
       <ul>
         <li>
           Dans l&apos;app, désactive « Enregistrer l&apos;historique » dans les Réglages et
-          confirme « Arrêter et supprimer » : la copie enregistrée sur le relais est supprimée
-          immédiatement.
+          confirme « Arrêter et supprimer » : la copie enregistrée sur le relais (mesures et journal)
+          est supprimée immédiatement.
+        </li>
+        <li>
+          Dans l&apos;app, désactive « Enregistrer mon journal » dans les réglages de
+          l&apos;historique de courbe : tant que le partage du journal est désactivé, le journal
+          enregistré sur le relais est supprimé. Tes mesures restent enregistrées.
         </li>
         <li>
           Dans l&apos;app, désactive « Continuer la collecte si je suis déconnecté ou si l&apos;app
@@ -367,8 +395,9 @@ export function PrivacyFr() {
           l&apos;app, et ne conserve aucun identifiant de capteur pour cela.
         </li>
         <li>
-          Dans l&apos;app, désactive « Partager mon journal avec ma famille » : la copie du journal
-          partagé sur le relais est supprimée.
+          Dans l&apos;app, désactive « Partager mon journal avec ma famille » : tes abonnés ne peuvent
+          plus voir ton journal. La copie enregistrée reste sur le relais pour toi tant que
+          « Enregistrer mon journal » est activé, et elle est supprimée s&apos;il est désactivé.
         </li>
         <li>Quand tu te déconnectes, choisis « Arrêter et supprimer » (ou « Le supprimer »).</li>
         <li>
@@ -475,8 +504,8 @@ export function PrivacyFr() {
         <li>Envoyer les alertes que tu configures.</li>
         <li>
           Conserver l&apos;historique de ta courbe pour que toi et tes abonnés voyiez la même
-          courbe, même après une déconnexion, une réinstallation ou un changement de téléphone, et
-          partager ton journal avec la famille que tu as invitée (Dulce Pro, avec ton
+          courbe, même après une déconnexion, une réinstallation ou un changement de téléphone,
+          conserver ton journal et le partager avec la famille que tu as invitée (Dulce Pro, avec ton
           consentement ; section 2.6).
         </li>
         <li>
@@ -510,7 +539,7 @@ export function PrivacyFr() {
         </li>
         <li>
           <strong>Consentement explicite</strong> (art. 9, par. 2, point a) du RGPD) pour
-          l&apos;historique de courbe enregistré, la collecte pendant que tu es déconnecté ou que
+          l&apos;historique de courbe enregistré (qui inclut ton journal), la collecte pendant que tu es déconnecté ou que
           l&apos;app est supprimée, et le partage du journal : demandé dans l&apos;app, pour chaque
           compte capteur, avant que l&apos;enregistrement commence, et révocable à tout moment dans
           les Réglages (section 2.6).
@@ -559,8 +588,7 @@ export function PrivacyFr() {
           Ton historique de glycémie à long terme, ton journal et tes données Apple Santé sont
           traités et stockés sur ton appareil. Le relais traite aussi les mesures récentes comme
           décrit plus haut. Si tu utilises Dulce Pro et que tu acceptes l&apos;historique de
-          courbe enregistré, ton historique de glycémie, et ton journal tant que tu le partages
-          avec ta famille, sont aussi stockés sur le relais (section 2.6).
+          courbe enregistré, ton historique de glycémie et ton journal sont aussi stockés sur le relais (section 2.6).
         </li>
         <li>
           Quand ton CGM est connecté, le relais traite les mesures récentes nécessaires aux
@@ -595,11 +623,12 @@ export function PrivacyFr() {
           plus tard après 1 an.
         </li>
         <li>
-          <strong>Historique de courbe enregistré et journal partagé (Dulce Pro) :</strong> tant
+          <strong>Historique de courbe enregistré et journal (Dulce Pro) :</strong> tant
           que ton abonnement est actif, au maximum environ 1 an, les jours plus anciens étant
           supprimés automatiquement. Supprimés immédiatement quand tu désactives l&apos;enregistrement,
           que tu choisis « Arrêter et supprimer » à la déconnexion ou que tu utilises « Supprimer le
-          compte » (le journal partagé aussi quand tu désactives son partage) ; supprimés 90 jours
+          compte » (le journal seul aussi quand tu désactives « Enregistrer mon journal » alors que le
+          partage du journal est désactivé) ; supprimés 90 jours
           après la fin ou le remboursement de ton abonnement.
         </li>
         <li>
@@ -664,7 +693,7 @@ export function PrivacyFr() {
       <ul>
         <li>
           <strong>Cloudflare</strong> : héberge le relais Dulce décrit plus haut et stocke
-          l&apos;historique de courbe enregistré et le journal partagé (section 2.6) ainsi que
+          l&apos;historique de courbe enregistré et le journal (section 2.6) ainsi que
           l&apos;e-mail de contact facultatif (section 2.7), en tant que notre sous-traitant.
         </li>
         <li>
@@ -737,7 +766,7 @@ export function PrivacyFr() {
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
       <p>
-        L&apos;historique de courbe enregistré et les entrées du journal partagé sont stockés dans
+        L&apos;historique de courbe enregistré et les entrées du journal sont stockés dans
         une base de données de notre hébergeur Cloudflare, qui peut traiter des données dans
         l&apos;UE et dans d&apos;autres pays avec les garanties décrites plus haut.
       </p>
@@ -761,11 +790,12 @@ export function PrivacyFr() {
       <p>
         Utilise <strong>Réglages → Supprimer le compte</strong> dans l&apos;app pour effacer les
         données locales et les données actives du relais, y compris ton historique de courbe
-        enregistré et ton journal partagé ; cela retire aussi la clé d&apos;historique de Dulce de
+        enregistré et ton journal ; cela retire aussi la clé d&apos;historique de Dulce de
         ton trousseau iCloud : Dulce sur tes autres iPhone repart alors d&apos;un nouvel
         historique. Tu peux aussi désactiver l&apos;historique de courbe enregistré dans les
-        Réglages, ce qui supprime immédiatement la copie enregistrée, et désactiver séparément le
-        partage du journal, ce qui supprime la copie du journal partagé. L&apos;app n&apos;a pas
+        Réglages, ce qui supprime immédiatement la copie enregistrée (mesures et journal), et
+        désactiver séparément « Enregistrer mon journal », ce qui supprime le journal enregistré
+        tant que le partage du journal est désactivé. L&apos;app n&apos;a pas
         de bouton d&apos;export de l&apos;historique enregistré ; écris-nous et nous t&apos;enverrons
         une copie dans un format électronique courant (par exemple CSV). Le marqueur minimal
         d&apos;installation décrit plus haut reste jusqu&apos;à ce que tu demandes son effacement.

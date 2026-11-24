@@ -53,7 +53,7 @@ export function TermsEs() {
           familiar).
         </li>
         <li>
-          Guardar tu historial de glucosa y compartir tu diario con los seguidores que invites,
+          Guardar tu historial de glucosa y tu diario, y compartir tu diario con los seguidores que invites,
           para que tu gráfica y la suya sean la misma (Dulce Pro, con tu consentimiento; ver
           sección 8.1).
         </li>
@@ -93,7 +93,7 @@ export function TermsEs() {
         que las lecturas se han detenido no significa que tu sensor o su conexión funcionen.
       </p>
       <p>
-        El historial guardado de la gráfica, el diario compartido, las estadísticas y las
+        El historial guardado de la gráfica, el diario guardado y compartido, las estadísticas y las
         gráficas de Dulce no son un historial médico. No los uses, ni ninguna otra parte de
         Dulce, para tomar decisiones de tratamiento.
       </p>
@@ -136,7 +136,7 @@ export function TermsEs() {
         seguidores no deben usar Dulce como sistema de monitorización de emergencias: la
         entrega de lecturas y alertas a seguidores está sujeta a las mismas limitaciones de
         la sección 3. El historial guardado de la gráfica puede tener huecos, y los seguidores
-        pueden ver menos que tú. Si compartes tu diario, tus seguidores ven todo lo que contiene,
+        pueden ver menos que tú. Si compartes tu diario, tus seguidores ven las entradas compartidas,
         incluidas tus notas de texto libre; no escribas información sobre otras personas en las
         notas que compartas.
       </p>
@@ -212,10 +212,10 @@ export function TermsEs() {
         rechaza el inicio de sesión o sigue fallando, o ha pasado 1 año.
       </p>
       <p>
-        Si compartes tu diario, tus seguidores ven todo lo que contiene, incluidas las notas de
+        Si compartes tu diario, tus seguidores ven las entradas compartidas, incluidas las notas de
         texto libre. Eres responsable de lo que escribes en las notas que compartes, incluida la
         información sobre otras personas. Puedes desactivar el uso compartido en cualquier
-        momento, lo que borra la copia compartida.
+        momento, y entonces dejan de poder verlo.
       </p>
       <p>
         Podemos cambiar, limitar o suspender esta función, por ejemplo para proteger el Servicio,

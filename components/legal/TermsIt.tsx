@@ -53,8 +53,8 @@ export function TermsIt() {
           della famiglia);
         </li>
         <li>
-          salvare la cronologia della tua glicemia e condividere il tuo diario con i follower che
-          inviti, così che tu e loro vediate lo stesso grafico (Dulce Pro, con il tuo consenso;
+          salvare la cronologia della tua glicemia e il tuo diario, e condividere il tuo diario con i
+          follower che inviti, così che tu e loro vediate lo stesso grafico (Dulce Pro, con il tuo consenso;
           vedi sezione 8.1).
         </li>
       </ul>
@@ -93,7 +93,7 @@ export function TermsIt() {
         il tuo sensore o il suo collegamento funzionino.
       </p>
       <p>
-        La cronologia del grafico salvata, il diario condiviso, le statistiche e i grafici di
+        La cronologia del grafico salvata, il diario salvato e condiviso, le statistiche e i grafici di
         Dulce non sono una cartella clinica. Non usarli, né usare altro in Dulce, per prendere
         decisioni terapeutiche.
       </p>
@@ -136,7 +136,7 @@ export function TermsIt() {
         non devono usare Dulce come sistema di monitoraggio di emergenza: la consegna di letture e
         avvisi ai follower è soggetta agli stessi limiti descritti nella sezione 3. La cronologia
         del grafico salvata può avere buchi e i follower possono vedere meno di te. Se condividi il
-        tuo diario, i tuoi follower vedono tutto ciò che contiene, comprese le note a testo
+        tuo diario, i tuoi follower vedono le voci condivise, comprese le note a testo
         libero; non scrivere informazioni su altre persone nelle note che condividi.
       </p>
 
@@ -211,10 +211,10 @@ export function TermsIt() {
         fallire, oppure è trascorso 1 anno.
       </p>
       <p>
-        Se condividi il tuo diario, i tuoi follower vedono tutto ciò che contiene, comprese le note
+        Se condividi il tuo diario, i tuoi follower vedono le voci condivise, comprese le note
         a testo libero. Sei responsabile di ciò che scrivi nelle note che condividi, comprese le
-        informazioni su altre persone. Puoi disattivare la condivisione in qualsiasi momento, il
-        che elimina la copia condivisa.
+        informazioni su altre persone. Puoi disattivare la condivisione in qualsiasi momento, e
+        allora non possono più vederlo.
       </p>
       <p>
         Possiamo modificare, limitare o interrompere questa funzione, ad esempio per proteggere il

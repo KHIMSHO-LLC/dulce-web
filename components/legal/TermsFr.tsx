@@ -55,7 +55,7 @@ export function TermsFr() {
           famille) ;
         </li>
         <li>
-          d&apos;enregistrer l&apos;historique de ta glycémie et de partager ton journal avec les
+          d&apos;enregistrer l&apos;historique de ta glycémie et ton journal, et de partager ton journal avec les
           abonnés que tu invites, pour que toi et eux voyiez la même courbe (Dulce Pro, avec ton
           consentement ; voir section 8.1).
         </li>
@@ -99,7 +99,7 @@ export function TermsFr() {
         ne signifie pas que ton capteur ou sa connexion fonctionnent.
       </p>
       <p>
-        L&apos;historique de courbe enregistré, le journal partagé, les statistiques et les
+        L&apos;historique de courbe enregistré, le journal enregistré et partagé, les statistiques et les
         courbes de Dulce ne constituent pas un dossier médical. Ne les utilise pas, ni rien
         d&apos;autre dans Dulce, pour prendre des décisions de traitement.
       </p>
@@ -143,7 +143,7 @@ export function TermsFr() {
         la transmission des mesures et des alertes aux abonnés est soumise aux mêmes limites que
         celles décrites à la section 3. L&apos;historique de courbe enregistré peut présenter des
         trous, et tes abonnés peuvent voir moins de choses que toi. Si tu partages ton journal, tes
-        abonnés voient tout ce qu&apos;il contient, y compris tes notes en texte libre ;
+        abonnés voient les entrées partagées, y compris tes notes en texte libre ;
         n&apos;écris pas d&apos;informations sur d&apos;autres personnes dans les notes que tu
         partages.
       </p>
@@ -221,10 +221,10 @@ export function TermsFr() {
         refuse la connexion ou échoue de façon répétée, ou que 1 an s&apos;est écoulé.
       </p>
       <p>
-        Si tu partages ton journal, tes abonnés voient tout ce qu&apos;il contient, y compris les
+        Si tu partages ton journal, tes abonnés voient les entrées partagées, y compris les
         notes en texte libre. Tu es responsable de ce que tu écris dans les notes que tu partages,
         y compris les informations sur d&apos;autres personnes. Tu peux désactiver le partage à
-        tout moment, ce qui supprime la copie partagée.
+        tout moment : ils ne peuvent alors plus le voir.
       </p>
       <p>
         Nous pouvons modifier, limiter ou arrêter cette fonction, par exemple pour protéger le

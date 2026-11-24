@@ -68,10 +68,12 @@ export function PrivacyEn() {
         </li>
         <li>
           <strong>Your logbook</strong>: carbohydrates, insulin (including doses read from a smart
-          insulin pen), exercise, manual glucose entries and notes. Stored on your device. If you use
-          saved chart history and share your logbook with your family (on by default, you can switch
-          it off), the entries from the day you switched sharing on, including free-text notes, are
-          also stored on the relay (see 2.6).
+          insulin pen or reported by a pump), exercise, manual glucose entries, weight, medication,
+          protein, fat and calories (including values from a meal photo scan), labels and notes.
+          Stored on your device. If you use saved chart history (Dulce Pro), your logbook is part of
+          it and is also stored on the relay, in full, including free-text notes, unless you switch
+          “Save my logbook” off. Whether your followers can see it is decided separately by “Share
+          my logbook with family” (on by default, you can switch it off); see 2.6.
         </li>
         <li>
           <strong>Apple Health data</strong> (iPhone) or <strong>Health Connect data</strong>{" "}
@@ -195,7 +197,8 @@ export function PrivacyEn() {
         device from the moment they accept. Without saved chart history, earlier history is not
         shared. If you use saved chart history (Dulce Pro), your followers can also see your saved
         chart history, including readings from before they accepted, and, while logbook sharing is
-        on, your shared logbook, including free-text notes; they stop seeing it when you revoke them
+        on, your shared logbook, including free-text notes (turning sharing on shows them the saved
+        logbook of the last 90 days); they stop seeing it when you revoke them
         or pause sharing (see 2.6).
         Messages between you and your followers, including text you write, pass through the relay and Apple’s or Google’s push service to reach their devices. The relay doesn’t keep the message text or a message history. You can revoke a follower’s access at any time, and you can turn off
         follower messages entirely.
@@ -234,11 +237,23 @@ export function PrivacyEn() {
           already on your phone (up to 90 days).
         </li>
         <li>
-          Your logbook, if you share it with your family (on by default while saved chart history
-          is on; you can switch it off separately). Everything in the logbook is shared:
-          carbohydrates, insulin (including doses read from a smart insulin pen and priming doses),
-          exercise, manual glucose checks and free-text notes, each with its time and amount. Only
-          entries from the day you switch logbook sharing on are shared; older entries are not.
+          Your logbook, which is part of saved chart history. Every logbook entry is saved with all
+          its fields: carbohydrates, insulin (including doses read from a smart insulin pen or
+          reported by a pump, and priming doses), exercise, manual glucose checks, weight,
+          medication, protein, fat and calories (including values from a meal photo scan), labels
+          and free-text notes, each with its time and amount. When you turn saved chart history on,
+          the app tells you that your logbook is part of it and is saved too. If you accepted saved
+          chart history before this version, your logbook is not saved until you agree in the app
+          (a one-time notice with “Turn on” or “Not now”). You can change this at any time with the
+          “Save my logbook” switch in the chart history settings.
+        </li>
+        <li>
+          Your logbook for your family: the switch “Share my logbook with family” (on by default
+          while saved chart history is on) only decides whether your followers can see your
+          logbook. They see the shared entries (carbohydrates, insulin, exercise, manual glucose
+          checks and free-text notes, each with its time and amount), never the full copy that only
+          you can read. Turning sharing on shows the saved logbook of the last 90 days to the people
+          who follow you.
         </li>
         <li>
           Not saved with it: your sensor account email, your name, the text of messages between you
@@ -247,7 +262,8 @@ export function PrivacyEn() {
       </ul>
       <p>
         <strong>Why.</strong> Only to provide this feature: the same, complete chart for you and the
-        family members you invited, kept across sign-out, reinstall and a new phone. We do not use
+        family members you invited, kept across sign-out, reinstall and a new phone, and your logbook
+        comes back after a reinstall or on a new phone, like your readings. We do not use
         it for advertising, profiling or sale, and we do not share it with Meta or any analytics
         service.
       </p>
@@ -256,21 +272,24 @@ export function PrivacyEn() {
         data is health data. The app asks before saving starts, separately for each sensor account:
         if you sign in with a different sensor account, it asks again. Nothing is saved before you
         answer, and app versions that do not ask save nothing. You can withdraw your consent at any
-        time in Settings: saving stops and the saved copy on the relay is deleted at once.
+        time in Settings: saving stops and the saved copy on the relay (readings and logbook) is
+        deleted at once.
         Withdrawing does not affect the lawfulness of the saving done before. Dulce Pro does not
-        depend on this consent: without it, Dulce Pro works without saved history.
+        depend on this consent: without it, Dulce Pro works without saved history. The consent for
+        saved chart history covers your logbook too: the app tells you so when you turn it on, and
+        if you accepted before this version, your logbook is saved only after you agree in the app.
       </p>
       <p>
         <strong>Where.</strong> On the Dulce relay, in a database of our hosting provider
         Cloudflare, which processes it for us and may process data in the EU and other countries
-        under its standard safeguards (see section 8). The same history also stays in the app’s
-        local database on your phone.
+        under its standard safeguards (see section 8). The same history and logbook also stay in the
+        app’s local database on your phone.
       </p>
       <p>
         <strong>How long.</strong> While your Dulce Pro subscription (including a free trial) is
-        active, we keep at most about 1 year of history; older days are removed automatically. If
-        your subscription ends or is refunded, saving stops and the saved history (readings and
-        shared logbook) is deleted 90 days later; if you subscribe again within those 90 days, it
+        active, we keep at most about 1 year of history and logbook; older days are removed
+        automatically. If your subscription ends or is refunded, saving stops and the saved
+        history (readings and logbook) is deleted 90 days later; if you subscribe again within those 90 days, it
         is still there.
       </p>
       <p>
@@ -322,8 +341,9 @@ export function PrivacyEn() {
         them: they see your saved chart history (including readings from before they accepted)
         and, while logbook sharing is on, your shared logbook including free-text notes. They stop
         seeing it when you revoke them, when sharing is paused, or when you delete your history.
-        Switching logbook sharing off deletes the shared copy on the relay; your logbook on your
-        phone stays. Notes you share can be read by your followers, so do not write information
+        They never see the full logbook copy that only you can read. Turning sharing on shows
+        them the saved logbook of the last 90 days. Your logbook on your phone stays when
+        you switch sharing off. Notes you share can be read by your followers, so do not write information
         about other people in notes you share. Someone signed in to the same sensor account on their
         own phone does not get your saved history through Dulce. The relay processes this data
         automatically to deliver it; we do not look at an individual user’s history or notes, except
@@ -348,7 +368,11 @@ export function PrivacyEn() {
       <ul>
         <li>
           In the app, turn off “Save chart history” in Settings and confirm “Stop and delete”: the
-          saved copy on the relay is deleted at once.
+          saved copy on the relay (readings and logbook) is deleted at once.
+        </li>
+        <li>
+          In the app, turn off “Save my logbook” in the chart history settings: while logbook
+          sharing is off, the saved logbook on the relay is deleted. Your readings stay saved.
         </li>
         <li>
           In the app, turn off “Keep collecting when I’m signed out or the app is removed”: Dulce
@@ -356,8 +380,9 @@ export function PrivacyEn() {
           for it.
         </li>
         <li>
-          In the app, turn off “Share my logbook with family”: the shared logbook copy on the relay
-          is deleted.
+          In the app, turn off “Share my logbook with family”: your followers can no longer see
+          your logbook. The saved copy stays on the relay for you while “Save my logbook” is on,
+          and is deleted if it is off.
         </li>
         <li>When you sign out, choose “Stop and delete” (or “Delete it”).</li>
         <li>Use Settings → Delete account: everything is deleted, as described in section 9.</li>
@@ -452,7 +477,7 @@ export function PrivacyEn() {
         <li>Deliver the alerts you configure.</li>
         <li>
           Keep your chart history so that you and your followers see the same chart, also after you
-          sign out, reinstall or change phone, and share your logbook with the family you invited
+          sign out, reinstall or change phone, keep your logbook, and share it with the family you invited
           (Dulce Pro, with your consent; section 2.6).
         </li>
         <li>
@@ -483,7 +508,7 @@ export function PrivacyEn() {
           you accepted it; section 2.6), by using Delete account, or by writing to us.
         </li>
         <li>
-          <strong>Explicit consent</strong> (Art. 9(2)(a) GDPR) for saved chart history,
+          <strong>Explicit consent</strong> (Art. 9(2)(a) GDPR) for saved chart history (which includes your logbook),
           collecting while you are signed out or the app is removed, and logbook sharing: asked in
           the app, for each sensor account, before saving starts, and withdrawable at any time in
           Settings (section 2.6).
@@ -527,8 +552,8 @@ export function PrivacyEn() {
         <li>
           Your long-term glucose history, logbook and Apple Health or Health Connect data are
           processed and stored on your device. Recent readings are also processed by the relay as described above. If you use Dulce
-          Pro and accept saved chart history, your glucose history, and your logbook while you share
-          it with family, are also stored on the relay (section 2.6).
+          Pro and accept saved chart history, your glucose history and your logbook are also stored on
+          the relay (section 2.6).
         </li>
         <li>
           When your CGM is connected, the relay processes recent readings needed for the
@@ -560,10 +585,11 @@ export function PrivacyEn() {
           ends, at the latest after 1 year.
         </li>
         <li>
-          <strong>Saved chart history and shared logbook (Dulce Pro):</strong> while your
+          <strong>Saved chart history and logbook (Dulce Pro):</strong> while your
           subscription is active, at most about 1 year, older days removed automatically. Deleted
           at once when you turn saving off, choose “Stop and delete” at sign-out or use Delete
-          account (the shared logbook also when you switch logbook sharing off); deleted 90 days
+          account (the logbook alone also when you switch “Save my logbook” off while logbook
+          sharing is off); deleted 90 days
           after your subscription ends or is refunded.
         </li>
         <li>
@@ -623,7 +649,7 @@ export function PrivacyEn() {
       <ul>
         <li>
           <strong>Cloudflare</strong> — hosts the Dulce relay described above and stores the saved
-          chart history and shared logbook (section 2.6) and the optional contact email (section
+          chart history and logbook (section 2.6) and the optional contact email (section
           2.7), as our processor.
         </li>
         <li>
@@ -697,7 +723,7 @@ export function PrivacyEn() {
         <a href="mailto:hola@dulceglucosa.com">hola@dulceglucosa.com</a>.
       </p>
       <p>
-        Saved chart history and shared logbook entries are stored in a database of our hosting
+        Saved chart history and logbook entries are stored in a database of our hosting
         provider Cloudflare, which may process data in the EU and other countries under the
         safeguards described above.
       </p>
@@ -719,11 +745,11 @@ export function PrivacyEn() {
       </ul>
       <p>
           Use <strong>Settings → Delete account</strong> in the app to delete local app data and
-          active relay records, including your saved chart history and shared logbook; it also
+          active relay records, including your saved chart history and logbook; it also
           removes Dulce’s history key from your iCloud Keychain, so Dulce on your other iPhones
           starts a fresh history. You can also turn off saved chart history in Settings, which
-          deletes the saved copy at once, and switch off logbook sharing separately, which deletes
-          the shared logbook copy. The app has no export button for saved history; write to us
+          deletes the saved copy (readings and logbook) at once, and switch off “Save my logbook”
+          separately, which deletes the saved logbook while logbook sharing is off. The app has no export button for saved history; write to us
           and we will send you a copy in a common electronic format (for example CSV). The
           minimal installation marker described above remains until you request its erasure.
           You can exercise any of these rights by writing to{" "}
