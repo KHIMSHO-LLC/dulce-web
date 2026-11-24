@@ -14,7 +14,8 @@ import { guideHref } from "@/components/landing/Audience";
 
 /**
  * The close: QR hand-off, every section, help and legal, the honest small
- * print, and the wordmark set huge and cropped by the bottom of the page.
+ * print, and the wordmark set huge at the bottom of the page (shown whole: the
+ * cropped version read as a layout bug).
  */
 export async function SiteFooter() {
   const locale = await getLocale();
@@ -186,12 +187,12 @@ export async function SiteFooter() {
         </div>
       </div>
 
-      {/* Wordmark, cropped by the page edge. Decorative: the brand is named above. */}
-      <div aria-hidden data-wordmark className="relative mt-10 flex select-none items-end gap-[3vw] px-[2vw] md:mt-16">
-        <DropMark className="mb-[3.2vw] h-[17vw] shrink-0" />
+      {/* Wordmark, shown whole. Decorative: the brand is named above. */}
+      <div aria-hidden data-wordmark className="relative mt-10 flex select-none items-end gap-[3vw] px-[2vw] pb-[5vw] md:mt-16">
+        <DropMark className="h-[17vw] shrink-0" />
         <WordmarkRise
           text={t("wordmark")}
-          className="block translate-y-[18%] text-[27vw] font-light leading-[0.78] tracking-[-0.06em] text-ink/90"
+          className="block text-[27vw] font-light leading-[0.78] tracking-[-0.06em] text-ink/90"
           style={{ fontVariationSettings: '"wdth" 108' }}
         />
       </div>
