@@ -1,0 +1,53 @@
+Yes, you can see your Medtronic glucose on the iPhone Lock Screen, in widgets and on your Apple Watch with Dulce. Dulce reads your sensor glucose from CareLink, the Medtronic service your Simplera or MiniMed app already uploads to. It works with Simplera, Guardian, Instinct and MiniMed 780G, and you sign in on Medtronic's own page, so Dulce never sees your password.
+
+<Callout>
+Dulce is an independent app, not affiliated with or endorsed by Medtronic. It doesn't replace your Medtronic app or pump alarms and it is not a medical device. Keep your alarms on.
+</Callout>
+
+## How Dulce gets your Medtronic readings
+
+Your Medtronic app uploads sensor readings to **CareLink**. Dulce signs in to CareLink with your account, or with a care partner account, and reads the sensor glucose from there. A new reading arrives **every 5 minutes**, so that is how often Dulce can update.
+
+Two things are good to know before you start:
+
+- **Medtronic's app has to upload.** If your Simplera or MiniMed app is not sending data to CareLink, Dulce has nothing new to show. Gaps in the data are often the phone app not uploading, not Dulce.
+- **The connection is unofficial.** CareLink is not an official connection for other apps, and Medtronic can change it at any time. If that happens, Dulce may stop getting readings until it is updated.
+
+## Connect Medtronic in Dulce
+
+<Steps>
+<Step title="Check that CareLink gets your data">
+Your Simplera or MiniMed app must be uploading to CareLink.
+</Step>
+<Step title="Choose Medtronic in Dulce">
+Download Dulce from the App Store. On "Which sensor do you use?", tap **Medtronic**. Under "Where your CareLink account is", pick **United States** or **Outside the US**.
+</Step>
+<Step title="Sign in with CareLink">
+Tap **Sign in with CareLink**. Medtronic's own CareLink page opens in a sheet. Sign in there with your CareLink account or your care partner account.
+</Step>
+</Steps>
+
+CareLink allows one active sign-in per login, so using the same login in another app can sign Dulce out. For Dulce, create a separate CareLink care partner login, have the patient add it as a care partner, and sign in with that one.
+
+<AppCta title="Connect your Medtronic sensor to Dulce" />
+
+Dulce only gets permission to read your sensor glucose. Dulce's server keeps that permission so your Lock Screen stays up to date, and signing out of Dulce ends it.
+
+## What you see on your iPhone and watch
+
+- **Lock Screen and Dynamic Island** (Pro): a Live Activity with your number, trend arrow and the last hours. Dulce's server updates it with each new reading, even when the app is closed. See the <ArticleLink to="lock-screen">Lock Screen guide</ArticleLink>.
+- **CarPlay** (Pro, iOS 26): the same Live Activity card can show on the CarPlay dashboard. See <ArticleLink to="carplay">glucose on CarPlay</ArticleLink>.
+- **Apple Watch** (Pro): the Dulce watch app and complications. See the <ArticleLink to="apple-watch">Apple Watch guide</ArticleLink>.
+- **Widgets** (free) for the Home Screen, Lock Screen and StandBy. Read the limit below.
+- **Alerts** at your own low and high limits. See the <ArticleLink to="alerts">alerts guide</ArticleLink>.
+- **Family**: followers see your glucose on their own iPhone. See <ArticleLink to="family-sharing">family sharing</ArticleLink>.
+
+Dulce Pro has a 14-day free trial. Connecting Medtronic and the widgets are free.
+
+## Limits to know
+
+- **Widgets are the weakest spot.** For FreeStyle Libre and Dexcom, Dulce's widgets can fetch a reading on their own. For Medtronic they cannot yet, so they show what the app and Dulce's pushes have already delivered, and iOS decides when they refresh. They always show how old the reading is. For a number that follows every reading, use the Live Activity.
+- **Readings come every 5 minutes**, not every minute.
+- **Check the time of the reading** before you rely on any number, and confirm with your Medtronic app or a fingerstick when in doubt.
+
+If Dulce says "Signed in, but no readings yet", CareLink has no sensor readings from the last few hours. Check that your Medtronic app is uploading, then try again. Other messages and fixes are on the <PageLink to="/sensors">sensors page</PageLink>. Using a Libre or Dexcom instead? See <ArticleLink to="dexcom">Dexcom with Dulce</ArticleLink>.

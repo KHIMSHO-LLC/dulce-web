@@ -1,0 +1,53 @@
+Sí, si tus lecturas llegan a tu propio sitio de Nightscout, Dulce puede mostrarlas en la pantalla de bloqueo del iPhone, en widgets y en el Apple Watch. Le das a Dulce la dirección https de tu sitio y, si el sitio no es abierto, un token de acceso de solo lectura. Dulce solo lee glucosa: nunca escribe en tu sitio e ignora los tratamientos.
+
+<Callout>
+Dulce es una app independiente y no es un producto sanitario. No sustituye las alarmas de tu sensor ni las de tu uploader. Déjalas activadas.
+</Callout>
+
+## Para quién es
+
+Nightscout es un sitio que llevas tú, o alguien de tu confianza, alimentado por un uploader desde tu sensor o tu sistema. Si ya abres tus lecturas en el navegador, Dulce puede leer esos mismos datos y ponerlos donde miras: la pantalla de bloqueo, los widgets y la muñeca. Funciona con cualquier sensor o uploader que alimente tu Nightscout.
+
+La frecuencia con la que Dulce puede actualizarse depende de la frecuencia con la que tu sitio recibe lecturas. Si tu uploader envía una cada 5 minutos, ese es el ritmo.
+
+## Qué necesitas
+
+- Un sitio de Nightscout accesible desde internet con una dirección **https**. Dulce solo se conecta por https, y las direcciones que solo funcionan dentro de tu red doméstica no sirven.
+- Un **token de acceso** si tu sitio no es abierto. Créalo en Nightscout, en Admin Tools, con el rol «readable». Un token de solo lectura es más seguro que tu API secret.
+- Lecturas recientes: tu sitio necesita lecturas de glucosa de las últimas 24 horas.
+
+## Conectar Nightscout en Dulce
+
+<Steps>
+<Step title="Crea un token de solo lectura">
+En Nightscout, abre Admin Tools y crea un token de acceso con el rol «readable». Sáltate este paso si tu sitio es abierto.
+</Step>
+<Step title="Elige Nightscout en Dulce">
+Descarga Dulce desde la App Store. En «¿Qué sensor usas?», toca **Nightscout**. Escribe la dirección https con la que abres tu sitio, por ejemplo tusitio.herokuapp.com.
+</Step>
+<Step title="Pega el token y conecta">
+Elige **Token de acceso** y pégalo, o elige **API secret** si prefieres usarlo. Dulce solo guarda la huella SHA-1 del API secret, que es lo que comprueba Nightscout. Después toca **Conectar**.
+</Step>
+</Steps>
+
+<AppCta title="Conecta tu sitio de Nightscout a Dulce" />
+
+Dulce nunca escribe en tu sitio. La dirección y el token se guardan cifrados en tu móvil y en el servidor de Dulce, que mantiene al día tu pantalla de bloqueo.
+
+## Qué ves en el iPhone y en el reloj
+
+- **Pantalla de bloqueo e isla dinámica** (Pro): una Live Activity con tu número, la flecha de tendencia y las últimas horas. El servidor de Dulce la actualiza con cada lectura nueva que encuentra en tu sitio. Mira la <ArticleLink to="lock-screen">guía de la pantalla de bloqueo</ArticleLink>.
+- **Apple Watch** (Pro): la app de Dulce para el reloj y sus complicaciones. Mira la <ArticleLink to="apple-watch">guía del Apple Watch</ArticleLink>.
+- **Widgets** (gratis) para la pantalla de inicio, la de bloqueo y StandBy. Lee el límite más abajo.
+- **Alertas** en tus propios límites de bajo y alto. Mira la <ArticleLink to="alerts">guía de alertas</ArticleLink>.
+- **Familia**: los seguidores ven tu glucosa en su propio iPhone. Mira <ArticleLink to="family-sharing">compartir con la familia</ArticleLink>.
+
+Dulce Pro tiene 14 días de prueba gratis. Conectar Nightscout y los widgets es gratis.
+
+## Límites que conviene conocer
+
+- **Los widgets pueden ir con retraso.** Con FreeStyle Libre y Dexcom, los widgets de Dulce pueden pedir una lectura por su cuenta. Con Nightscout todavía no, así que muestran lo que la app y los avisos de Dulce ya han entregado, y es iOS quien decide cuándo se refrescan. Siempre indican la antigüedad de la lectura. Para un número que siga cada lectura, usa la Live Activity.
+- **Dulce solo puede estar tan al día como tu sitio.** Si tu uploader se para, no llega nada nuevo a Dulce.
+- **Mira la hora de la lectura** antes de fiarte de un número y confirma con tu sensor o con un pinchazo en el dedo si tienes dudas.
+
+Si Dulce dice «Acceso denegado», tu sitio necesita un token de acceso o el que has escrito no es correcto. «Conectado, pero sin lecturas» significa que el sitio no tiene glucosa de las últimas 24 horas, así que revisa tu uploader. Más en la <PageLink to="/sensors">página de sensores</PageLink>. ¿Usas un Libre o un Dexcom? Mira la <ArticleLink to="widgets">guía de widgets</ArticleLink>.

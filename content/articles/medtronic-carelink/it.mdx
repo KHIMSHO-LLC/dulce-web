@@ -1,0 +1,53 @@
+Sì, con Dulce puoi vedere la glicemia del tuo Medtronic sulla schermata di blocco dell'iPhone, nei widget e su Apple Watch. Dulce legge la glicemia del sensore da CareLink, il servizio Medtronic su cui la tua app Simplera o MiniMed carica già i dati. Funziona con Simplera, Guardian, Instinct e MiniMed 780G, e accedi sulla pagina di Medtronic, quindi Dulce non vede mai la tua password.
+
+<Callout>
+Dulce è un'app indipendente, non affiliata a Medtronic né approvata da Medtronic. Non sostituisce l'app Medtronic né gli allarmi del tuo microinfusore e non è un dispositivo medico. Tieni attivi i tuoi allarmi.
+</Callout>
+
+## Come Dulce ottiene le tue letture Medtronic
+
+La tua app Medtronic carica le letture del sensore su **CareLink**. Dulce accede a CareLink con il tuo account, o con un account di assistente, e legge da lì la glicemia del sensore. Una nuova lettura arriva **ogni 5 minuti**, e a questo ritmo Dulce può aggiornarsi.
+
+Due cose da sapere prima di iniziare:
+
+- **L'app Medtronic deve caricare i dati.** Se la tua app Simplera o MiniMed non invia dati a CareLink, Dulce non ha nulla di nuovo da mostrare. I buchi nei dati dipendono spesso dall'app sul telefono che non carica, non da Dulce.
+- **La connessione non è ufficiale.** CareLink non è una connessione ufficiale per altre app e Medtronic può cambiarla in qualsiasi momento. In quel caso Dulce potrebbe smettere di ricevere letture finché non viene aggiornata.
+
+## Collegare Medtronic a Dulce
+
+<Steps>
+<Step title="Controlla che CareLink riceva i tuoi dati">
+La tua app Simplera o MiniMed deve caricare i dati su CareLink.
+</Step>
+<Step title="Scegli Medtronic in Dulce">
+Scarica Dulce dall'App Store. Su «Quale sensore usi?» tocca **Medtronic**. Sotto «Dove si trova il tuo account CareLink» scegli **Stati Uniti** o **Fuori dagli Stati Uniti**.
+</Step>
+<Step title="Accedi con CareLink">
+Tocca **Accedi con CareLink**. Si apre la pagina CareLink di Medtronic in un foglio. Accedi lì con il tuo account CareLink o con il tuo account di assistente.
+</Step>
+</Steps>
+
+CareLink consente un solo accesso attivo per account, quindi usare lo stesso account in un'altra app può disconnettere Dulce. Per Dulce, crea un account assistente CareLink separato, chiedi al paziente di aggiungerlo come assistente e accedi con quello.
+
+<AppCta title="Collega il tuo sensore Medtronic a Dulce" />
+
+Dulce riceve solo il permesso di leggere la glicemia del sensore. Il server di Dulce conserva quel permesso perché la schermata di blocco resti aggiornata, e uscire da Dulce lo termina.
+
+## Cosa vedi su iPhone e orologio
+
+- **Schermata di blocco e Dynamic Island** (Pro): un'Attività in tempo reale con il valore, la freccia di tendenza e le ultime ore. Il server di Dulce la aggiorna a ogni nuova lettura, anche con l'app chiusa. Vedi la <ArticleLink to="lock-screen">guida alla schermata di blocco</ArticleLink>.
+- **CarPlay** (Pro, iOS 26): la scheda dell'Attività in tempo reale può comparire sul dashboard di CarPlay. Vedi <ArticleLink to="carplay">la glicemia su CarPlay</ArticleLink>.
+- **Apple Watch** (Pro): l'app Dulce per l'orologio e le complicazioni. Vedi la <ArticleLink to="apple-watch">guida ad Apple Watch</ArticleLink>.
+- **Widget** (gratis) per la Home, la schermata di blocco e StandBy. Leggi il limite qui sotto.
+- **Avvisi** ai tuoi limiti di basso e alto. Vedi la <ArticleLink to="alerts">guida agli avvisi</ArticleLink>.
+- **Famiglia**: i follower vedono la tua glicemia sul loro iPhone. Vedi <ArticleLink to="family-sharing">la condivisione con la famiglia</ArticleLink>.
+
+Dulce Pro ha 14 giorni di prova gratuita. Collegare Medtronic e i widget è gratis.
+
+## Limiti da conoscere
+
+- **I widget sono il punto debole.** Con FreeStyle Libre e Dexcom, i widget di Dulce possono recuperare una lettura da soli. Con Medtronic non ancora: mostrano ciò che l'app e le notifiche di Dulce hanno già consegnato, e è iOS a decidere quando aggiornarli. Indicano sempre da quanto risale la lettura. Per un numero che segue ogni lettura usa l'Attività in tempo reale.
+- **Le letture arrivano ogni 5 minuti**, non ogni minuto.
+- **Controlla l'ora della lettura** prima di fidarti di un numero e, nel dubbio, conferma con la tua app Medtronic o con una puntura al dito.
+
+Se Dulce mostra «Accesso eseguito, ma nessuna lettura», CareLink non ha letture del sensore delle ultime ore. Controlla che la tua app Medtronic stia caricando i dati e riprova. Gli altri messaggi e le soluzioni sono nella <PageLink to="/sensors">pagina dei sensori</PageLink>. Usi un Libre o un Dexcom? Vedi <ArticleLink to="dexcom">Dexcom con Dulce</ArticleLink>.
