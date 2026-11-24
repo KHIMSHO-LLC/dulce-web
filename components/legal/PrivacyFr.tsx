@@ -148,6 +148,10 @@ export function PrivacyFr() {
           horaire, plateforme et version de l&apos;app).
         </li>
         <li>
+          <strong>Les photos de repas</strong>, uniquement si tu utilises « Estimer les glucides à
+          partir d&apos;une photo » : le relais les transmet à Anthropic pour estimer les glucides et les valeurs nutritionnelles, sans les conserver, et tient un décompte quotidien des photos utilisées (voir 2.8).
+        </li>
+        <li>
           <strong>Événements d&apos;usage :</strong> événements liés à la configuration, à la connexion, à l&apos;abonnement, à la page de paiement et à l&apos;utilisation des fonctions, ainsi que toute option de retour que tu touches, associés à l&apos;identifiant aléatoire d&apos;installation pour mesurer et améliorer le service. Ils ne contiennent ni mesures de glycémie ni texte de message.
         </li>
         <li>
@@ -415,6 +419,56 @@ export function PrivacyFr() {
         tu nous envoies sont traités comme les messages de contact décrits à la section 6.
       </p>
 
+      <h3>2.8 Estimation des glucides à partir d&apos;une photo (facultative)</h3>
+      <p>
+        Quand tu ajoutes une entrée, tu peux utiliser « Estimer les glucides à partir d&apos;une
+        photo ». Dulce ne prend une photo de ton repas que si tu choisis d&apos;utiliser cette
+        fonction. Son utilisation est facultative, et l&apos;app te demande ton accord avant la
+        première photo. La fonction n&apos;est pas proposée dans certains pays.
+      </p>
+      <ul>
+        <li>
+          <strong>Où va la photo.</strong> L&apos;app envoie la photo, via le relais Dulce, à
+          Anthropic (Anthropic, PBC, États-Unis), un fournisseur de services d&apos;intelligence
+          artificielle qui la traite pour notre compte afin d&apos;estimer les glucides du repas et, lorsque l&apos;app les affiche, ses protéines, ses lipides et ses calories.
+        </li>
+        <li>
+          <strong>Ce qui est envoyé avec elle.</strong> Uniquement la langue de l&apos;app, pour que
+          les noms des aliments soient renvoyés dans cette langue. Rien d&apos;autre : ni nom, ni
+          e-mail, ni identifiant d&apos;appareil, ni mesures de glycémie, ni autres données de santé.
+          Avant l&apos;envoi, l&apos;app réduit la photo et la réencode, ce qui supprime les
+          métadonnées de localisation et d&apos;appareil photo.
+        </li>
+        <li>
+          <strong>Ce que Dulce conserve.</strong> Dulce ne conserve ni la photo ni le résultat sur
+          ses serveurs. Le relais conserve uniquement le nombre de photos utilisées par ton appareil
+          dans la journée, pour appliquer la limite quotidienne ; ce décompte est supprimé au bout
+          de deux jours.
+        </li>
+        <li>
+          <strong>Ce que tu enregistres.</strong> L&apos;estimation est placée dans le champ des glucides et les noms des aliments dans la note de l&apos;entrée ; si tu as activé les champs de nutrition facultatifs, les valeurs de protéines, de lipides et de calories y sont placées aussi. Tu peux tout modifier avant d&apos;enregistrer. Ce que tu enregistres est une entrée normale du journal, traitée comme toute
+          autre entrée du journal (sections 2.2 et 2.6).
+        </li>
+        <li>
+          <strong>Ce qu&apos;Anthropic conserve.</strong> Anthropic supprime les entrées et sorties
+          de son API dans un délai de 30 jours. Si ses systèmes de sécurité automatisés signalent
+          une requête comme une violation possible de sa politique d&apos;utilisation, il peut
+          conserver cette entrée et cette sortie jusqu&apos;à 2 ans, et les scores de classification
+          de sécurité jusqu&apos;à 7 ans. Anthropic n&apos;utilise pas ces données pour entraîner ses
+          modèles.
+        </li>
+      </ul>
+      <p>
+        Ne photographie que ton repas, pas des personnes ni des documents.
+      </p>
+      <p>
+        <strong>Base juridique :</strong> ton consentement (art. 6, par. 1, point a) du RGPD) et,
+        lorsqu&apos;une photo pourrait révéler des informations sur ta santé, ton consentement
+        explicite (art. 9, par. 2, point a) du RGPD), que l&apos;app te demande avant la première
+        photo. Tu peux le retirer à tout moment en cessant simplement d&apos;utiliser la fonction.
+        Anthropic traite la photo aux États-Unis (section 8).
+      </p>
+
       <h2 id="purpose">3. Pourquoi nous utilisons tes données</h2>
       <ul>
         <li>Afficher ta glycémie sur tes appareils et, si tu le choisis, sur ceux de tes abonnés.</li>
@@ -424,6 +478,10 @@ export function PrivacyFr() {
           courbe, même après une déconnexion, une réinstallation ou un changement de téléphone, et
           partager ton journal avec la famille que tu as invitée (Dulce Pro, avec ton
           consentement ; section 2.6).
+        </li>
+        <li>
+          Si tu le choisis, estimer les glucides d&apos;un repas à partir d&apos;une photo que tu
+          prends (section 2.8).
         </li>
         <li>Valider ton abonnement et débloquer les fonctions Pro.</li>
         <li>
@@ -475,6 +533,13 @@ export function PrivacyFr() {
           contact facultatif de la section 2.7 ; tu peux le retirer à tout moment dans l&apos;app.
         </li>
         <li>
+          <strong>Consentement</strong> (art. 6, par. 1, point a) du RGPD) et, lorsqu&apos;une photo
+          pourrait révéler des informations sur ta santé, <strong>consentement explicite</strong>{" "}
+          (art. 9, par. 2, point a) du RGPD) : pour l&apos;estimation facultative des glucides à
+          partir d&apos;une photo de la section 2.8 ; demandé dans l&apos;app avant la première photo,
+          tu peux le retirer à tout moment en cessant d&apos;utiliser la fonction.
+        </li>
+        <li>
           <strong>Intérêt légitime</strong> (art. 6, par. 1, point f) du RGPD) : sécurité de base
           du site et réponse aux demandes que tu nous envoies par le formulaire de contact ou par
           e-mail. Statistiques du site : ton consentement là où notre politique relative aux
@@ -502,6 +567,11 @@ export function PrivacyFr() {
           fonctions en arrière-plan et de partage que tu utilises. Il conserve une courte
           fenêtre glissante et, uniquement pour les abonnés Dulce Pro qui l&apos;acceptent,
           l&apos;historique de courbe enregistré décrit en 2.6.
+        </li>
+        <li>
+          Si tu utilises l&apos;estimation des glucides à partir d&apos;une photo, la photo du repas
+          passe par le relais jusqu&apos;à Anthropic uniquement pour obtenir l&apos;estimation, sans
+          tes mesures de glycémie ni d&apos;autres données de santé (section 2.8).
         </li>
         <li>Elles sont toujours chiffrées pendant le transfert (TLS).</li>
         <li>
@@ -567,6 +637,12 @@ export function PrivacyFr() {
           (section 2.7).
         </li>
         <li>
+          <strong>Estimation des glucides à partir d&apos;une photo :</strong> Dulce ne conserve ni
+          la photo ni le résultat sur ses serveurs ; le décompte quotidien des photos est supprimé
+          au bout de deux jours. Anthropic supprime la photo et le résultat dans un délai de 30
+          jours, sauf dans les cas décrits à la section 2.8.
+        </li>
+        <li>
           <strong>Sauvegardes :</strong> les données supprimées du relais peuvent rester jusqu&apos;à
           30 jours dans les sauvegardes automatiques de la base de données de notre hébergeur,
           puis sont écrasées. Nous n&apos;utilisons ces sauvegardes que pour nous remettre
@@ -590,6 +666,12 @@ export function PrivacyFr() {
           <strong>Cloudflare</strong> : héberge le relais Dulce décrit plus haut et stocke
           l&apos;historique de courbe enregistré et le journal partagé (section 2.6) ainsi que
           l&apos;e-mail de contact facultatif (section 2.7), en tant que notre sous-traitant.
+        </li>
+        <li>
+          <strong>Anthropic (Anthropic, PBC, États-Unis)</strong> : fournisseur de services
+          d&apos;intelligence artificielle qui estime les glucides d&apos;une photo de repas quand tu
+          utilises « Estimer les glucides à partir d&apos;une photo » (section 2.8), en tant que
+          notre sous-traitant.
         </li>
         <li>
           <strong>Apple</strong> : notifications (APNs), Activités en direct, Apple Santé (sur
@@ -645,8 +727,8 @@ export function PrivacyFr() {
 
       <h2 id="transfers">8. Transferts internationaux</h2>
       <p>
-        Certains fournisseurs et services que nous utilisons (Cloudflare, RevenueCat, Resend,
-        Vercel, Meta, Apple et Google) peuvent traiter des données aux États-Unis ou dans d&apos;autres
+        Certains fournisseurs et services que nous utilisons (Cloudflare, Anthropic, RevenueCat,
+        Resend, Vercel, Meta, Apple et Google) peuvent traiter des données aux États-Unis ou dans d&apos;autres
         pays. Lorsque le RGPD exige des garanties de transfert, le mécanisme applicable dépend du
         fournisseur et du service ; il peut s&apos;agir d&apos;une décision d&apos;adéquation ou des
         clauses contractuelles types de la Commission européenne. Google LLC figure comme actif
@@ -658,6 +740,12 @@ export function PrivacyFr() {
         L&apos;historique de courbe enregistré et les entrées du journal partagé sont stockés dans
         une base de données de notre hébergeur Cloudflare, qui peut traiter des données dans
         l&apos;UE et dans d&apos;autres pays avec les garanties décrites plus haut.
+      </p>
+      <p>
+        Les photos de repas que tu envoies pour une estimation des glucides (section 2.8) sont
+        traitées par Anthropic aux États-Unis en vertu de son avenant relatif au traitement des
+        données (Data Processing Addendum), qui comprend les clauses contractuelles types de la
+        Commission européenne et leur addendum pour le Royaume-Uni.
       </p>
 
       <h2 id="rights">9. Tes droits</h2>
@@ -713,7 +801,10 @@ export function PrivacyFr() {
         consentement à l&apos;historique de courbe enregistré et au partage du journal. Si tu as entre
         14 et 18 ans, tu as besoin du consentement de tes parents ou de ton représentant légal pour
         utiliser Dulce (conditions d&apos;utilisation, section 4), ce qui inclut l&apos;historique de
-        courbe enregistré, le partage du journal et l&apos;e-mail de contact. Si tu penses qu&apos;un mineur dont tu as la charge nous a fourni des
+        courbe enregistré, le partage du journal et l&apos;e-mail de contact. L&apos;estimation des
+        glucides à partir d&apos;une photo (section 2.8) est accessible à toutes les personnes
+        autorisées à utiliser Dulce selon les conditions d&apos;utilisation, y compris aux
+        utilisateurs de 14 à 18 ans sur iPhone qui disposent de ce consentement. Si tu penses qu&apos;un mineur dont tu as la charge nous a fourni des
         données sans ton accord, contacte-nous et nous les supprimerons.
       </p>
 

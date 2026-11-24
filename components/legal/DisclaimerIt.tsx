@@ -70,6 +70,14 @@ export function DisclaimerIt() {
         letture: è indicativo, può sbagliare e non sostituisce gli allarmi del tuo sistema CGM né
         le sue istruzioni su quando usare un glucometro.
       </p>
+      <p>
+        I valori di carboidrati di «Stima i carboidrati da una foto» e, dove vengono mostrati, quelli di proteine, grassi e calorie sono generati da un modello di
+        intelligenza artificiale. Sono stime, possono essere sbagliati e devi controllarli prima di
+        salvarli o di farvi affidamento. Sono informazioni sul cibo nella foto, che salvi come voce
+        del tuo diario; Dulce non fornisce consigli alimentari, di dosaggio o terapeutici. La
+        funzione ha un limite giornaliero di foto che dipende dal tuo piano e può non essere
+        disponibile in alcuni Paesi o in alcuni momenti.
+      </p>
 
       <h2 id="emergencies">7. Emergenze</h2>
       <p>

@@ -42,6 +42,10 @@ export function TermsEn() {
         </li>
         <li>Receiving configurable glucose alerts.</li>
         <li>Keeping a manual logbook of food, insulin, glucose and notes.</li>
+        <li>
+          Estimating the carbohydrates in a meal from a photo you take, for you to check, edit and
+          save in your logbook (see section 3).
+        </li>
         <li>Showing trends and statistics based on your own data.</li>
         <li>
           Sharing your glucose in real time with followers you invite (family following).
@@ -53,6 +57,10 @@ export function TermsEn() {
       </ul>
       <p>
         Some features require a <strong>Dulce Pro</strong> subscription (see section 8).
+      </p>
+      <p>
+        “Estimate carbs from a photo” has a daily limit on photos that depends on your plan, and it
+        may be unavailable in some countries or at some times.
       </p>
 
       <h2 id="medical">3. Medical notice</h2>
@@ -84,6 +92,12 @@ export function TermsEn() {
       <p>
         Saved chart history, the shared logbook, statistics and charts in Dulce are not a medical
         record. Do not use them, or anything else in Dulce, to make treatment decisions.
+      </p>
+      <p>
+        Carbohydrate numbers from “Estimate carbs from a photo”, and the protein, fat and calorie figures where it shows them, are produced by an AI model. They
+        are estimates and can be wrong: check them before you save them or rely on them. They are
+        information about the food in the photo, which you save as your own logbook entry. Dulce
+        does not give dietary, dosing or treatment advice and does not calculate insulin doses.
       </p>
 
       <h2 id="eligibility">4. Eligibility</h2>
@@ -216,7 +230,8 @@ export function TermsEn() {
         the sensor makers&apos; services LibreLinkUp (Abbott), Dexcom Share and Medtronic
         CareLink, and Nightscout sites run by you or someone you choose; Apple (including Apple
         Health, notifications and payments); Google (notifications and payments on Android);
-        Cloudflare, which hosts our relay; and RevenueCat for subscription validation. Use of those
+        Cloudflare, which hosts our relay; Anthropic, which estimates the carbohydrates in meal
+        photos when you use that feature; and RevenueCat for subscription validation. Use of those
         services is governed by their own terms and policies. We are not responsible for their
         availability, accuracy or changes.
       </p>
@@ -256,8 +271,8 @@ export function TermsEn() {
       <p>
         The Service is provided “as is” and “as available”. To the fullest extent permitted by
         applicable law, we do not warrant that the Service or any part of it (including readings,
-        alerts, repeat alerts, the alert when no readings arrive, Live Activities, widgets, watch updates, saved chart history, family following and
-        logbook sharing) will be uninterrupted, on time, complete, error-free or 100% secure, that
+        alerts, repeat alerts, the alert when no readings arrive, Live Activities, widgets, watch updates, saved chart history, family following,
+        logbook sharing and carb estimates from photos) will be uninterrupted, on time, complete, error-free or 100% secure, that
         data will not be lost, or that it will meet specific expectations. This is especially
         relevant for data from third-party CGM services: any delay, error or absence of data from
         the original provider may be reflected in Dulce. This does not affect your statutory rights

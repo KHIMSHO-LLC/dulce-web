@@ -144,6 +144,11 @@ Missbrauch.
           App-Version).
         </li>
         <li>
+          <strong>Fotos von Mahlzeiten</strong>, nur wenn du „Kohlenhydrate per Foto schätzen“
+          nutzt: Das Relay leitet sie zur Schätzung der Kohlenhydrate und der Nährwerte an Anthropic weiter, ohne sie
+          zu speichern, und zählt die pro Tag genutzten Fotos (siehe 2.8).
+        </li>
+        <li>
           <strong>Nutzungsereignisse:</strong> Ereignisse zu Einrichtung, Verbindung, Abonnement, Bezahlseite und Funktionsnutzung sowie jede Feedback-Option, die du antippst. Sie sind mit der zufälligen Installations-ID verknüpft und dienen dazu, den Dienst zu messen und zu verbessern. Sie enthalten keine Glukosewerte und keinen Nachrichtentext.
         </li>
         <li>
@@ -400,6 +405,54 @@ Missbrauch.
         die Kontaktanfragen in Abschnitt 6.
       </p>
 
+      <h3>2.8 Kohlenhydrat-Schätzung per Foto (optional)</h3>
+      <p>
+        Beim Hinzufügen eines Eintrags kannst du „Kohlenhydrate per Foto schätzen“ nutzen. Dulce
+        nimmt ein Foto deiner Mahlzeit nur auf, wenn du diese Funktion nutzen möchtest. Die Nutzung
+        ist freiwillig, und die App fragt dich vor dem ersten Foto. In einigen Ländern wird die
+        Funktion nicht angeboten.
+      </p>
+      <ul>
+        <li>
+          <strong>Wohin das Foto geht.</strong> Die App sendet das Foto über das Dulce-Relay an
+          Anthropic (Anthropic, PBC, USA), einen Anbieter von KI-Diensten, der es in unserem Auftrag
+          verarbeitet, um die Kohlenhydrate im Essen und, soweit die App sie anzeigt, auch Eiweiß, Fett und Kalorien zu schätzen.
+        </li>
+        <li>
+          <strong>Was mitgesendet wird.</strong> Nur die Sprache der App, damit die Namen der
+          Lebensmittel in dieser Sprache zurückkommen. Sonst nichts: kein Name, keine E-Mail-Adresse,
+          keine Gerätekennung, keine Glukosewerte und keine anderen Gesundheitsdaten. Vor dem
+          Senden verkleinert die App das Foto und codiert es neu; dabei werden Standort- und
+          Kamera-Metadaten entfernt.
+        </li>
+        <li>
+          <strong>Was Dulce speichert.</strong> Dulce speichert weder das Foto noch das Ergebnis
+          auf seinen Servern. Das Relay speichert nur, wie viele Fotos dein Gerät an diesem Tag
+          genutzt hat, um das Tageslimit anzuwenden; dieser Zähler wird nach zwei Tagen gelöscht.
+        </li>
+        <li>
+          <strong>Was du speicherst.</strong> Die Schätzung wird in das Kohlenhydratfeld und die Namen der Lebensmittel in die Notiz des Eintrags eingetragen; wenn du die optionalen Nährwertfelder aktiviert hast, kommen auch die Werte für Eiweiß, Fett und Kalorien in diese Felder. Du kannst alles ändern, bevor du speicherst. Was du speicherst, ist ein normaler Logbucheintrag und wird wie jeder andere
+          Logbucheintrag behandelt (Abschnitte 2.2 und 2.6).
+        </li>
+        <li>
+          <strong>Was Anthropic speichert.</strong> Anthropic löscht Eingaben und Ausgaben seiner
+          API innerhalb von 30 Tagen. Wenn seine automatischen Sicherheitssysteme eine Anfrage als
+          möglichen Verstoß gegen seine Nutzungsrichtlinie markieren, kann es diese Eingabe und
+          Ausgabe bis zu 2 Jahre und die Bewertungen der Sicherheitsklassifizierung bis zu 7 Jahre
+          aufbewahren. Anthropic verwendet diese Daten nicht zum Training seiner Modelle.
+        </li>
+      </ul>
+      <p>
+        Fotografiere nur dein Essen, keine Personen und keine Dokumente.
+      </p>
+      <p>
+        <strong>Rechtsgrundlage:</strong> deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) und,
+        soweit ein Foto Rückschlüsse auf deine Gesundheit zulassen kann, deine ausdrückliche
+        Einwilligung (Art. 9 Abs. 2 lit. a DSGVO), um die dich die App vor dem ersten Foto bittet.
+        Du kannst sie jederzeit widerrufen, indem du die Funktion einfach nicht mehr nutzt.
+        Anthropic verarbeitet das Foto in den USA (Abschnitt 8).
+      </p>
+
       <h2 id="purpose">3. Wofür wir deine Daten verwenden</h2>
       <ul>
         <li>Deine Glukose auf deinen Geräten und, wenn du willst, auf denen deiner Follower anzeigen.</li>
@@ -409,6 +462,10 @@ Missbrauch.
           nach dem Abmelden, einer Neuinstallation oder einem Telefonwechsel, und dein Logbuch mit
           der Familie teilen, die du eingeladen hast (Dulce Pro, mit deiner Einwilligung;
           Abschnitt 2.6).
+        </li>
+        <li>
+          Wenn du es möchtest, die Kohlenhydrate einer Mahlzeit anhand eines Fotos schätzen, das du
+          aufnimmst (Abschnitt 2.8).
         </li>
         <li>Dein Abonnement prüfen und Pro-Funktionen freischalten.</li>
         <li>
@@ -460,6 +517,13 @@ Missbrauch.
           Kontakt-E-Mail nach Abschnitt 2.7; du kannst sie jederzeit in der App entfernen.
         </li>
         <li>
+          <strong>Einwilligung</strong> (Art. 6 Abs. 1 lit. a DSGVO) und, soweit ein Foto
+          Rückschlüsse auf deine Gesundheit zulassen kann, <strong>ausdrückliche
+          Einwilligung</strong> (Art. 9 Abs. 2 lit. a DSGVO): für die optionale
+          Kohlenhydrat-Schätzung per Foto nach Abschnitt 2.8; in der App vor dem ersten Foto
+          erfragt und jederzeit widerrufbar, indem du die Funktion nicht mehr nutzt.
+        </li>
+        <li>
           <strong>Berechtigtes Interesse</strong> (Art. 6 Abs. 1 lit. f DSGVO): grundlegende
           Sicherheit der Website und Beantwortung der Anfragen, die du uns über das
           Kontaktformular oder per E-Mail schickst. Website-Analyse: deine Einwilligung, wo unsere
@@ -487,6 +551,11 @@ Missbrauch.
           genutzten Hintergrund- und Freigabefunktionen nötig sind. Es speichert ein kurzes,
           laufend überschriebenes Zeitfenster und, nur für Dulce-Pro-Abonnenten, die es
           akzeptieren, den in 2.6 beschriebenen gespeicherten Kurvenverlauf.
+        </li>
+        <li>
+          Wenn du die Kohlenhydrat-Schätzung per Foto nutzt, geht das Foto der Mahlzeit über das
+          Relay an Anthropic, nur um die Schätzung zu erstellen, ohne deine Glukosewerte oder
+          andere Gesundheitsdaten (Abschnitt 2.8).
         </li>
         <li>Bei der Übertragung sind sie immer verschlüsselt (TLS).</li>
         <li>
@@ -550,6 +619,12 @@ Missbrauch.
           oder uns um Löschung bittest (Abschnitt 2.7).
         </li>
         <li>
+          <strong>Kohlenhydrat-Schätzung per Foto:</strong> Dulce speichert weder das Foto noch
+          das Ergebnis auf seinen Servern; der tägliche Fotozähler wird nach zwei Tagen gelöscht.
+          Anthropic löscht das Foto und das Ergebnis innerhalb von 30 Tagen, außer in den in
+          Abschnitt 2.8 beschriebenen Fällen.
+        </li>
+        <li>
           <strong>Backups:</strong> Vom Relay gelöschte Daten können bis zu 30 Tage in den
           automatischen Datenbank-Backups unseres Hosting-Anbieters bleiben und werden danach
           überschrieben. Wir nutzen diese Backups nur, um uns von einer Störung zu erholen.
@@ -572,6 +647,11 @@ Missbrauch.
           <strong>Cloudflare</strong>: hostet das oben beschriebene Dulce-Relay und speichert als
           unser Auftragsverarbeiter den gespeicherten Kurvenverlauf und das geteilte Logbuch
           (Abschnitt 2.6) sowie die optionale Kontakt-E-Mail (Abschnitt 2.7).
+        </li>
+        <li>
+          <strong>Anthropic (Anthropic, PBC, USA)</strong>: Anbieter von KI-Diensten, der als unser
+          Auftragsverarbeiter die Kohlenhydrate in einem Foto einer Mahlzeit schätzt, wenn du
+          „Kohlenhydrate per Foto schätzen“ nutzt (Abschnitt 2.8).
         </li>
         <li>
           <strong>Apple</strong>: Push-Mitteilungen (APNs), Live-Aktivitäten, Apple Health (auf
@@ -626,8 +706,8 @@ Missbrauch.
 
       <h2 id="transfers">8. Internationale Übermittlungen</h2>
       <p>
-        Einige von uns genutzte Anbieter und Dienste (Cloudflare, RevenueCat, Resend, Vercel, Meta,
-        Apple und Google) können Daten in den USA oder anderen Ländern verarbeiten. Wenn die
+        Einige von uns genutzte Anbieter und Dienste (Cloudflare, Anthropic, RevenueCat, Resend,
+        Vercel, Meta, Apple und Google) können Daten in den USA oder anderen Ländern verarbeiten. Wenn die
         DSGVO Schutzmaßnahmen für eine Übermittlung verlangt, hängt der geltende Mechanismus
         vom Anbieter und Dienst ab und kann einen Angemessenheitsbeschluss oder die
         Standardvertragsklauseln der Europäischen Kommission umfassen. Google LLC ist im
@@ -639,6 +719,12 @@ Missbrauch.
         Gespeicherter Kurvenverlauf und Einträge des geteilten Logbuchs werden in einer Datenbank
         unseres Hosting-Anbieters Cloudflare gespeichert, der Daten in der EU und in anderen
         Ländern unter den oben beschriebenen Garantien verarbeiten kann.
+      </p>
+      <p>
+        Fotos von Mahlzeiten, die du für eine Kohlenhydrat-Schätzung sendest (Abschnitt 2.8),
+        verarbeitet Anthropic in den USA auf Grundlage seines Data Processing Addendum
+        (Auftragsverarbeitungsvereinbarung), das die Standardvertragsklauseln der Europäischen
+        Kommission und den britischen Zusatz dazu (UK Addendum) enthält.
       </p>
 
       <h2 id="rights">9. Deine Rechte</h2>
@@ -694,7 +780,9 @@ Missbrauch.
         zwischen 14 und 18 bist, brauchst du für die Nutzung von Dulce die Einwilligung deiner
         Eltern oder deines gesetzlichen Vertreters (Nutzungsbedingungen, Abschnitt 4); das
         schließt den gespeicherten Kurvenverlauf, das Teilen des Logbuchs und die Kontakt-E-Mail
-        ein. Wenn du glaubst, dass ein Kind in deiner Obhut uns ohne deine Einwilligung Daten gegeben
+        ein. Die Kohlenhydrat-Schätzung per Foto (Abschnitt 2.8) steht allen offen, die Dulce nach
+        den Nutzungsbedingungen nutzen dürfen, auch Nutzern zwischen 14 und 18 auf dem iPhone,
+        die diese Einwilligung haben. Wenn du glaubst, dass ein Kind in deiner Obhut uns ohne deine Einwilligung Daten gegeben
         hat, melde dich bei uns und wir löschen sie.
       </p>
 

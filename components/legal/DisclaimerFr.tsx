@@ -74,6 +74,16 @@ export function DisclaimerFr() {
         ne remplace ni les alarmes de ton système CGM ni ses consignes sur le moment d&apos;utiliser
         un lecteur de glycémie.
       </p>
+      <p>
+        Les quantités de glucides, ainsi que, lorsqu&apos;elles sont affichées, celles de protéines, de lipides et de calories, fournies par « Estimer les glucides à partir d&apos;une photo »
+        sont produites par un modèle d&apos;intelligence artificielle. Ce sont des estimations,
+        elles peuvent être erronées et tu dois les vérifier avant de les enregistrer ou de
+        t&apos;y fier. Ce sont des informations sur le repas figurant sur la photo, que tu
+        enregistres comme ta propre entrée de journal ; Dulce ne donne aucun conseil alimentaire,
+        posologique ou thérapeutique. La fonction est soumise à une limite quotidienne de photos
+        qui dépend de ta formule, et peut être indisponible dans certains pays ou à certains
+        moments.
+      </p>
 
       <h2 id="emergencies">7. Urgences</h2>
       <p>

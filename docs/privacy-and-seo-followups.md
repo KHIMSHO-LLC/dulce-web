@@ -17,7 +17,12 @@ Please confirm these facts and decisions before treating the legal pages as fina
    withdrawable opt-in and consent record.
 3. **Provider roles and transfers.** Confirm the roles, DPAs, subprocessors, transfer terms,
    and retention settings for Abbott/LibreLinkUp, Dexcom, Cloudflare, Supabase, Vercel, Resend,
-   Google Analytics, Apple, and Google.
+   Google Analytics, Apple, and Google. Added 2026-11-23: Anthropic, which processes meal photos
+   for the carb estimate from a photo (privacy section 2.8, on the `food-photo-carbs` branch, not
+   deployed). The pages name it as a processor in the United States, rely on consent and explicit
+   consent (Art. 6(1)(a) and 9(2)(a) GDPR) asked in the app before the first photo, and state
+   Anthropic's retention (30 days; up to 2 years if flagged). Confirm these, and that the
+   first-use screen is a valid consent record.
 4. **Retention periods and wording.** Confirm the six-month post-Android-launch waitlist window,
    beta-plus-twelve-month window, email-system retention, relay event windows, and Cloudflare log
    retention. Review all five language versions (Spanish, English, German, French, Italian).

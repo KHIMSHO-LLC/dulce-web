@@ -44,6 +44,11 @@ export function TermsFr() {
         </li>
         <li>de recevoir des alertes de glycémie configurables ;</li>
         <li>de tenir un journal manuel des repas, de l&apos;insuline, de la glycémie et de notes ;</li>
+        <li>
+          d&apos;estimer les glucides d&apos;un repas à partir d&apos;une photo que tu prends, pour
+          que tu vérifies la valeur, la modifies si besoin et l&apos;enregistres dans ton journal
+          (voir section 3) ;
+        </li>
         <li>d&apos;afficher des tendances et statistiques basées sur tes propres données ;</li>
         <li>
           de partager ta glycémie en temps réel avec les abonnés que tu invites (suivi par la
@@ -58,6 +63,11 @@ export function TermsFr() {
       <p>
         Certaines fonctions nécessitent un abonnement <strong>Dulce Pro</strong> (voir
         section 8).
+      </p>
+      <p>
+        « Estimer les glucides à partir d&apos;une photo » est soumis à une limite quotidienne de
+        photos qui dépend de ta formule, et peut être indisponible dans certains pays ou à
+        certains moments.
       </p>
 
       <h2 id="medical">3. Avertissement médical</h2>
@@ -92,6 +102,14 @@ export function TermsFr() {
         L&apos;historique de courbe enregistré, le journal partagé, les statistiques et les
         courbes de Dulce ne constituent pas un dossier médical. Ne les utilise pas, ni rien
         d&apos;autre dans Dulce, pour prendre des décisions de traitement.
+      </p>
+      <p>
+        Les quantités de glucides, ainsi que, lorsqu&apos;elles sont affichées, celles de protéines, de lipides et de calories, fournies par « Estimer les glucides à partir d&apos;une photo »
+        sont produites par un modèle d&apos;intelligence artificielle. Ce sont des estimations,
+        qui peuvent être erronées : vérifie-les avant de les enregistrer ou de t&apos;y fier. Ce
+        sont des informations sur le repas figurant sur la photo, que tu enregistres comme ta
+        propre entrée de journal. Dulce ne donne aucun conseil alimentaire, posologique ou
+        thérapeutique et ne calcule pas de doses d&apos;insuline.
       </p>
 
       <h2 id="eligibility">4. Conditions d&apos;accès</h2>
@@ -238,7 +256,8 @@ export function TermsFr() {
         fonctionnement : les services des fabricants de capteurs LibreLinkUp (Abbott), Dexcom
         Share et Medtronic CareLink, et les sites Nightscout gérés par toi ou par une personne que
         tu choisis ; Apple (y compris Apple Santé, les notifications et les paiements) ; Google
-        (notifications et paiements sur Android) ; Cloudflare, qui héberge notre relais ; et
+        (notifications et paiements sur Android) ; Cloudflare, qui héberge notre relais ; Anthropic, qui
+        estime les glucides des photos de repas quand tu utilises cette fonction ; et
         RevenueCat pour la validation des abonnements. Leur utilisation est régie par leurs
         propres conditions et politiques. Nous ne sommes pas responsables de leur disponibilité,
         de leur exactitude ni de leurs changements.
@@ -286,8 +305,8 @@ export function TermsFr() {
         permise par la loi applicable, nous ne garantissons pas que le Service ou une partie de
         celui-ci (y compris les mesures, les alertes, les alertes répétées, l&apos;alerte en
         l&apos;absence de nouvelles mesures, les Activités en direct, les widgets, les
-        mises à jour de la montre, l&apos;historique de courbe enregistré, le suivi par la famille
-        et le partage du journal) sera ininterrompu, ponctuel, complet, exempt d&apos;erreurs ou
+        mises à jour de la montre, l&apos;historique de courbe enregistré, le suivi par la famille,
+        le partage du journal et les estimations de glucides à partir d&apos;une photo) sera ininterrompu, ponctuel, complet, exempt d&apos;erreurs ou
         sûr à 100 %, que les données ne seront pas perdues, ou qu&apos;il répondra à des attentes
         particulières. C&apos;est particulièrement vrai pour les données de services CGM tiers :
         tout retard, toute erreur ou toute absence de données chez le fournisseur d&apos;origine

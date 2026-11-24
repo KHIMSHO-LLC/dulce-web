@@ -72,6 +72,14 @@ export function DisclaimerEs() {
         últimas lecturas: es orientativo, puede fallar y no sustituye a las alarmas de tu sistema
         CGM ni a sus instrucciones sobre cuándo usar un medidor de glucosa.
       </p>
+      <p>
+        Las cifras de carbohidratos de “Estimar carbohidratos con una foto” y, donde se muestran, las de proteínas, grasas y calorías las genera un modelo de
+        inteligencia artificial. Son estimaciones, pueden ser erróneas y debes revisarlas antes de
+        guardarlas o de basarte en ellas. Son información sobre la comida de la foto, que tú
+        guardas como una entrada de tu propio diario; Dulce no da consejos de alimentación, de
+        dosificación ni de tratamiento. La función tiene un límite diario de fotos que depende de
+        tu plan y puede no estar disponible en algunos países o en algunos momentos.
+      </p>
 
       <h2 id="emergencias">7. Emergencias</h2>
       <p>

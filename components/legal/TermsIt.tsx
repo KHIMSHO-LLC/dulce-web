@@ -43,6 +43,10 @@ export function TermsIt() {
         </li>
         <li>ricevere avvisi di glicemia configurabili;</li>
         <li>tenere un diario manuale di cibo, insulina, glicemia e note;</li>
+        <li>
+          stimare i carboidrati di un pasto a partire da una foto che scatti, perché tu possa
+          controllare il valore, modificarlo se serve e salvarlo nel tuo diario (vedi sezione 3);
+        </li>
         <li>vedere andamenti e statistiche basati sui tuoi dati;</li>
         <li>
           condividere la glicemia in tempo reale con i follower che inviti (monitoraggio da parte
@@ -56,6 +60,10 @@ export function TermsIt() {
       </ul>
       <p>
         Alcune funzioni richiedono un abbonamento <strong>Dulce Pro</strong> (vedi sezione 8).
+      </p>
+      <p>
+        «Stima i carboidrati da una foto» ha un limite giornaliero di foto che dipende dal tuo
+        piano e può non essere disponibile in alcuni Paesi o in alcuni momenti.
       </p>
 
       <h2 id="medical">3. Avvertenza medica</h2>
@@ -88,6 +96,13 @@ export function TermsIt() {
         La cronologia del grafico salvata, il diario condiviso, le statistiche e i grafici di
         Dulce non sono una cartella clinica. Non usarli, né usare altro in Dulce, per prendere
         decisioni terapeutiche.
+      </p>
+      <p>
+        I valori di carboidrati di «Stima i carboidrati da una foto» e, dove vengono mostrati, quelli di proteine, grassi e calorie sono generati da un modello di
+        intelligenza artificiale. Sono stime e possono essere sbagliati: controllali prima di
+        salvarli o di farvi affidamento. Sono informazioni sul cibo nella foto, che salvi come voce
+        del tuo diario. Dulce non fornisce consigli alimentari, di dosaggio o terapeutici e non
+        calcola dosi di insulina.
       </p>
 
       <h2 id="eligibility">4. Requisiti</h2>
@@ -230,7 +245,8 @@ export function TermsIt() {
         i servizi dei produttori di sensori LibreLinkUp (Abbott), Dexcom Share e Medtronic
         CareLink, e i siti Nightscout gestiti da te o da qualcuno che scegli; Apple (compresi
         Salute di Apple, notifiche e pagamenti); Google (notifiche e pagamenti su Android);
-        Cloudflare, che ospita il nostro relay; e RevenueCat per la verifica degli abbonamenti. Il
+        Cloudflare, che ospita il nostro relay; Anthropic, che stima i carboidrati nelle foto dei
+        pasti quando usi questa funzione; e RevenueCat per la verifica degli abbonamenti. Il
         loro uso è regolato dai rispettivi termini e informative. Non siamo responsabili della
         loro disponibilità, accuratezza o modifiche.
       </p>
@@ -276,8 +292,8 @@ export function TermsIt() {
         consentita dalla legge applicabile, non garantiamo che il Servizio o una sua parte
         (comprese letture, avvisi, avvisi ripetuti, l&apos;avviso quando non arrivano letture,
         Attività in tempo reale, widget, aggiornamenti sull&apos;orologio,
-        cronologia del grafico salvata, monitoraggio da parte della famiglia e condivisione del
-        diario) sia ininterrotto, tempestivo, completo, privo di errori o sicuro al 100%, che i
+        cronologia del grafico salvata, monitoraggio da parte della famiglia, condivisione del
+        diario e stime dei carboidrati da foto) sia ininterrotto, tempestivo, completo, privo di errori o sicuro al 100%, che i
         dati non vadano persi o che soddisfi aspettative specifiche. Questo vale in particolare per
         i dati di servizi CGM di terzi: qualsiasi ritardo, errore o assenza di dati presso il
         fornitore originale può riflettersi in Dulce. Ciò non pregiudica i tuoi diritti di legge
