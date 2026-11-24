@@ -168,7 +168,7 @@ export function PrivacyEs() {
         </li>
         <li>
           <strong>Fotos de comidas</strong>, solo si usas «Estimar carbohidratos con una foto»: el
-          relay las reenvía a Anthropic para estimar los carbohidratos, sin guardarlas, y lleva un
+          relay las reenvía a Anthropic para estimar los carbohidratos y los valores nutricionales, sin guardarlas, y lleva un
           recuento diario de las fotos usadas (ver 2.8).
         </li>
         <li>
@@ -429,7 +429,7 @@ export function PrivacyEs() {
         <li>
           <strong>Adónde va la foto.</strong> La app envía la foto, a través del relay de Dulce, a
           Anthropic (Anthropic, PBC, Estados Unidos), un proveedor de servicios de inteligencia
-          artificial que la trata por cuenta nuestra para estimar los carbohidratos de la comida.
+          artificial que la trata por cuenta nuestra para estimar los carbohidratos de la comida y, donde la app los muestra, sus proteínas, grasas y calorías.
         </li>
         <li>
           <strong>Qué se envía con ella.</strong> Solo el idioma de la app, para que los nombres de
@@ -444,7 +444,7 @@ export function PrivacyEs() {
           ese día, para aplicar el límite diario; el recuento se borra a los dos días.
         </li>
         <li>
-          <strong>Qué guardas tú.</strong> La estimación se introduce en el campo de carbohidratos.
+          <strong>Qué guardas tú.</strong> La estimación se introduce en el campo de carbohidratos y los nombres de los alimentos en la nota de la entrada; si has activado los campos opcionales de nutrición, los valores de proteínas, grasas y calorías también se introducen en ellos. Puedes cambiarlo todo antes de guardar.
           Lo que guardas es una entrada normal del diario y se trata como cualquier otra entrada
           del diario (apartados 2.2 y 2.6).
         </li>

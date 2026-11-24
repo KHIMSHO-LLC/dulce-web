@@ -71,7 +71,7 @@ export function DisclaimerIt() {
         le sue istruzioni su quando usare un glucometro.
       </p>
       <p>
-        I valori di carboidrati di «Stima i carboidrati da una foto» sono generati da un modello di
+        I valori di carboidrati di «Stima i carboidrati da una foto» e, dove vengono mostrati, quelli di proteine, grassi e calorie sono generati da un modello di
         intelligenza artificiale. Sono stime, possono essere sbagliati e devi controllarli prima di
         salvarli o di farvi affidamento. Sono informazioni sul cibo nella foto, che salvi come voce
         del tuo diario; Dulce non fornisce consigli alimentari, di dosaggio o terapeutici. La

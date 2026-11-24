@@ -73,7 +73,7 @@ export function DisclaimerEs() {
         CGM ni a sus instrucciones sobre cuándo usar un medidor de glucosa.
       </p>
       <p>
-        Las cifras de carbohidratos de “Estimar carbohidratos con una foto” las genera un modelo de
+        Las cifras de carbohidratos de “Estimar carbohidratos con una foto” y, donde se muestran, las de proteínas, grasas y calorías las genera un modelo de
         inteligencia artificial. Son estimaciones, pueden ser erróneas y debes revisarlas antes de
         guardarlas o de basarte en ellas. Son información sobre la comida de la foto, que tú
         guardas como una entrada de tu propio diario; Dulce no da consejos de alimentación, de

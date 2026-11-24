@@ -75,7 +75,7 @@ export function DisclaimerFr() {
         un lecteur de glycémie.
       </p>
       <p>
-        Les quantités de glucides fournies par « Estimer les glucides à partir d&apos;une photo »
+        Les quantités de glucides, ainsi que, lorsqu&apos;elles sont affichées, celles de protéines, de lipides et de calories, fournies par « Estimer les glucides à partir d&apos;une photo »
         sont produites par un modèle d&apos;intelligence artificielle. Ce sont des estimations,
         elles peuvent être erronées et tu dois les vérifier avant de les enregistrer ou de
         t&apos;y fier. Ce sont des informations sur le repas figurant sur la photo, que tu

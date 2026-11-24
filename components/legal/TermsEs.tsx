@@ -98,7 +98,7 @@ export function TermsEs() {
         Dulce, para tomar decisiones de tratamiento.
       </p>
       <p>
-        Las cifras de carbohidratos de “Estimar carbohidratos con una foto” las genera un modelo
+        Las cifras de carbohidratos de “Estimar carbohidratos con una foto” y, donde se muestran, las de proteínas, grasas y calorías las genera un modelo
         de inteligencia artificial. Son estimaciones y pueden ser erróneas: revísalas antes de
         guardarlas o de basarte en ellas. Son información sobre la comida de la foto, que tú
         guardas como una entrada de tu propio diario. Dulce no da consejos de alimentación, de

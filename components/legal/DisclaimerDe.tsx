@@ -72,7 +72,7 @@ export function DisclaimerDe() {
         Alarme deines CGM-Systems noch dessen Hinweise, wann du ein Blutzuckermessgerät verwenden sollst.
       </p>
       <p>
-        Die Kohlenhydratwerte aus „Kohlenhydrate per Foto schätzen“ werden von einem KI-Modell
+        Die Kohlenhydratwerte aus „Kohlenhydrate per Foto schätzen“ sowie, wo sie angezeigt werden, die Werte für Eiweiß, Fett und Kalorien werden von einem KI-Modell
         erzeugt. Sie sind Schätzungen, können falsch sein und sollten von dir geprüft werden, bevor
         du sie speicherst oder dich auf sie verlässt. Sie sind Informationen über das Essen auf dem
         Foto, die du als deinen eigenen Logbucheintrag speicherst; Dulce gibt keine Ernährungs-,

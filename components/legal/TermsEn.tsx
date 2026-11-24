@@ -94,7 +94,7 @@ export function TermsEn() {
         record. Do not use them, or anything else in Dulce, to make treatment decisions.
       </p>
       <p>
-        Carbohydrate numbers from “Estimate carbs from a photo” are produced by an AI model. They
+        Carbohydrate numbers from “Estimate carbs from a photo”, and the protein, fat and calorie figures where it shows them, are produced by an AI model. They
         are estimates and can be wrong: check them before you save them or rely on them. They are
         information about the food in the photo, which you save as your own logbook entry. Dulce
         does not give dietary, dosing or treatment advice and does not calculate insulin doses.

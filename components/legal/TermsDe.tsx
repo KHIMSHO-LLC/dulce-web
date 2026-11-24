@@ -102,7 +102,7 @@ export function TermsDe() {
         sind keine Krankenakte. Nutze sie und alles andere in Dulce nicht, um Behandlungsentscheidungen zu treffen.
       </p>
       <p>
-        Die Kohlenhydratwerte aus „Kohlenhydrate per Foto schätzen“ werden von einem KI-Modell
+        Die Kohlenhydratwerte aus „Kohlenhydrate per Foto schätzen“ sowie, wo sie angezeigt werden, die Werte für Eiweiß, Fett und Kalorien werden von einem KI-Modell
         erzeugt. Sie sind Schätzungen und können falsch sein: Prüfe sie, bevor du sie speicherst
         oder dich auf sie verlässt. Sie sind Informationen über das Essen auf dem Foto, die du als
         deinen eigenen Logbucheintrag speicherst. Dulce gibt keine Ernährungs-, Dosierungs- oder

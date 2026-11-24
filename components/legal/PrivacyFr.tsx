@@ -149,8 +149,7 @@ export function PrivacyFr() {
         </li>
         <li>
           <strong>Les photos de repas</strong>, uniquement si tu utilises « Estimer les glucides à
-          partir d&apos;une photo » : le relais les transmet à Anthropic pour estimer les glucides,
-          sans les conserver, et tient un décompte quotidien des photos utilisées (voir 2.8).
+          partir d&apos;une photo » : le relais les transmet à Anthropic pour estimer les glucides et les valeurs nutritionnelles, sans les conserver, et tient un décompte quotidien des photos utilisées (voir 2.8).
         </li>
         <li>
           <strong>Événements d&apos;usage :</strong> événements liés à la configuration, à la connexion, à l&apos;abonnement, à la page de paiement et à l&apos;utilisation des fonctions, ainsi que toute option de retour que tu touches, associés à l&apos;identifiant aléatoire d&apos;installation pour mesurer et améliorer le service. Ils ne contiennent ni mesures de glycémie ni texte de message.
@@ -431,7 +430,7 @@ export function PrivacyFr() {
         <li>
           <strong>Où va la photo.</strong> L&apos;app envoie la photo, via le relais Dulce, à
           Anthropic (Anthropic, PBC, États-Unis), un fournisseur de services d&apos;intelligence
-          artificielle qui la traite pour notre compte afin d&apos;estimer les glucides du repas.
+          artificielle qui la traite pour notre compte afin d&apos;estimer les glucides du repas et, lorsque l&apos;app les affiche, ses protéines, ses lipides et ses calories.
         </li>
         <li>
           <strong>Ce qui est envoyé avec elle.</strong> Uniquement la langue de l&apos;app, pour que
@@ -447,8 +446,7 @@ export function PrivacyFr() {
           de deux jours.
         </li>
         <li>
-          <strong>Ce que tu enregistres.</strong> L&apos;estimation est placée dans le champ des
-          glucides. Ce que tu enregistres est une entrée normale du journal, traitée comme toute
+          <strong>Ce que tu enregistres.</strong> L&apos;estimation est placée dans le champ des glucides et les noms des aliments dans la note de l&apos;entrée ; si tu as activé les champs de nutrition facultatifs, les valeurs de protéines, de lipides et de calories y sont placées aussi. Tu peux tout modifier avant d&apos;enregistrer. Ce que tu enregistres est une entrée normale du journal, traitée comme toute
           autre entrée du journal (sections 2.2 et 2.6).
         </li>
         <li>

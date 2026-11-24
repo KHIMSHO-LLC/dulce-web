@@ -163,8 +163,7 @@ export function PrivacyEn() {
           version).
         </li>
         <li>
-          <strong>Meal photos</strong>, only if you use “Estimate carbs from a photo”: passed on to
-          Anthropic to estimate the carbohydrates, without being stored by the relay, and a daily
+          <strong>Meal photos</strong>, only if you use “Estimate carbs from a photo”: passed on to Anthropic to estimate the carbohydrates and nutrition values, without being stored by the relay, and a daily
           count of the photos used (see 2.8).
         </li>
         <li>
@@ -413,7 +412,7 @@ export function PrivacyEn() {
         <li>
           <strong>Where the photo goes.</strong> The app sends the photo through the Dulce relay to
           Anthropic (Anthropic, PBC, United States), an AI service provider, which processes it on
-          our behalf to estimate the carbohydrates in the food.
+          our behalf to estimate the carbohydrates in the food and, where the app shows them, its protein, fat and calories.
         </li>
         <li>
           <strong>What is sent with it.</strong> Only the app&apos;s language, so that food names
@@ -427,7 +426,7 @@ export function PrivacyEn() {
           to apply the daily limit; the count is deleted after two days.
         </li>
         <li>
-          <strong>What you save.</strong> The estimate is put into the carbs field. What you save is
+          <strong>What you save.</strong> The estimate is put into the carbs field and the food names into the entry&apos;s note; if you have turned on the optional nutrition fields, the protein, fat and calorie values go into those fields too. You can change all of it before you save. What you save is
           a normal logbook entry, handled like any other logbook entry (sections 2.2 and 2.6).
         </li>
         <li>

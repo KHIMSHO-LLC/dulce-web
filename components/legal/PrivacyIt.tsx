@@ -146,7 +146,7 @@ export function PrivacyIt() {
         </li>
         <li>
           <strong>Foto dei pasti</strong>, solo se usi «Stima i carboidrati da una foto»: il relay le
-          inoltra ad Anthropic per stimare i carboidrati, senza conservarle, e tiene un conteggio
+          inoltra ad Anthropic per stimare i carboidrati e i valori nutrizionali, senza conservarle, e tiene un conteggio
           giornaliero delle foto usate (vedi 2.8).
         </li>
         <li>
@@ -413,7 +413,7 @@ export function PrivacyIt() {
         <li>
           <strong>Dove va la foto.</strong> L&apos;app invia la foto, tramite il relay di Dulce, ad
           Anthropic (Anthropic, PBC, Stati Uniti), un fornitore di servizi di intelligenza
-          artificiale che la tratta per nostro conto per stimare i carboidrati del cibo.
+          artificiale che la tratta per nostro conto per stimare i carboidrati del cibo e, dove l&apos;app li mostra, anche proteine, grassi e calorie.
         </li>
         <li>
           <strong>Cosa viene inviato insieme.</strong> Solo la lingua dell&apos;app, così che i nomi
@@ -429,7 +429,7 @@ export function PrivacyIt() {
           due giorni.
         </li>
         <li>
-          <strong>Cosa salvi tu.</strong> La stima viene inserita nel campo dei carboidrati. Ciò che
+          <strong>Cosa salvi tu.</strong> La stima viene inserita nel campo dei carboidrati e i nomi degli alimenti nella nota della voce; se hai attivato i campi facoltativi di nutrizione, anche i valori di proteine, grassi e calorie vengono inseriti in quei campi. Puoi modificare tutto prima di salvare. Ciò che
           salvi è una normale voce del diario, trattata come qualsiasi altra voce del diario
           (sezioni 2.2 e 2.6).
         </li>

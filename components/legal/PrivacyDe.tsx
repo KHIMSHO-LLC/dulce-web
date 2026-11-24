@@ -145,7 +145,7 @@ Missbrauch.
         </li>
         <li>
           <strong>Fotos von Mahlzeiten</strong>, nur wenn du „Kohlenhydrate per Foto schätzen“
-          nutzt: Das Relay leitet sie zur Schätzung der Kohlenhydrate an Anthropic weiter, ohne sie
+          nutzt: Das Relay leitet sie zur Schätzung der Kohlenhydrate und der Nährwerte an Anthropic weiter, ohne sie
           zu speichern, und zählt die pro Tag genutzten Fotos (siehe 2.8).
         </li>
         <li>
@@ -416,7 +416,7 @@ Missbrauch.
         <li>
           <strong>Wohin das Foto geht.</strong> Die App sendet das Foto über das Dulce-Relay an
           Anthropic (Anthropic, PBC, USA), einen Anbieter von KI-Diensten, der es in unserem Auftrag
-          verarbeitet, um die Kohlenhydrate im Essen zu schätzen.
+          verarbeitet, um die Kohlenhydrate im Essen und, soweit die App sie anzeigt, auch Eiweiß, Fett und Kalorien zu schätzen.
         </li>
         <li>
           <strong>Was mitgesendet wird.</strong> Nur die Sprache der App, damit die Namen der
@@ -431,8 +431,7 @@ Missbrauch.
           genutzt hat, um das Tageslimit anzuwenden; dieser Zähler wird nach zwei Tagen gelöscht.
         </li>
         <li>
-          <strong>Was du speicherst.</strong> Die Schätzung wird in das Kohlenhydratfeld
-          eingetragen. Was du speicherst, ist ein normaler Logbucheintrag und wird wie jeder andere
+          <strong>Was du speicherst.</strong> Die Schätzung wird in das Kohlenhydratfeld und die Namen der Lebensmittel in die Notiz des Eintrags eingetragen; wenn du die optionalen Nährwertfelder aktiviert hast, kommen auch die Werte für Eiweiß, Fett und Kalorien in diese Felder. Du kannst alles ändern, bevor du speicherst. Was du speicherst, ist ein normaler Logbucheintrag und wird wie jeder andere
           Logbucheintrag behandelt (Abschnitte 2.2 und 2.6).
         </li>
         <li>
