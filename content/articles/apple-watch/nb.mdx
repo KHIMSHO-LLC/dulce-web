@@ -1,0 +1,54 @@
+Bruker du FreeStyle Libre 2 eller Libre 3 og har Apple Watch, vil du naturligvis kunne se på håndleddet og få se blodsukkeret ditt. I praksis er det vanskeligere enn det burde være: Abbott-appen som leser sensoren, har svært begrenset støtte for klokken, og LibreLinkUp, appen for følgere, sender stort sett bare varsler videre. Denne guiden forklarer hvor dataene kommer fra, hvordan du får dem på urskiven med Dulce, og hvorfor målingene på klokken av og til «fryser». Selve klokken kan ikke måle glukose: se <ArticleLink to="apple-watch-glucose">kan Apple Watch måle blodsukker?</ArticleLink>.
+
+<Figure src="/guides/apple-watch-1.jpg" alt="Rektangulær Dulce-komplikasjon på Apple Watch som viser 91 mg/dL, en trendpil og en graf" caption="Den rektangulære komplikasjonen i Dulce: verdi, trend og de siste timene." width={422} height={514} />
+
+## Hvor glukosen på klokken kommer fra
+
+Sensoren sender målinger over Bluetooth til Libre-appen på iPhonen din (FreeStyle LibreLink eller FreeStyle Libre 3, avhengig av sensor og land). Den appen laster dem opp til Abbotts sky, og derfra går de videre til **LibreLinkUp**, kontoen som er laget for at familien skal kunne følge glukosen din.
+
+Dulce kobler seg til LibreLinkUp-kontoen din, henter hver nye måling og sender den til iPhonen og Apple Watch. Før du bruker Dulce, må du derfor <PageLink to="/setup">slå på deling i LibreLinkUp</PageLink>. Det tar fire trinn, og du gjør det bare én gang.
+
+## Slik får du glukosen på urskiven
+
+<Steps>
+<Step title="Installer Dulce og koble til LibreLinkUp">
+Last ned Dulce på iPhonen og logg på med e-posten og passordet til **LibreLinkUp** (ikke de til LibreLink).
+</Step>
+<Step title="Slå på Apple Watch i Dulce">
+Åpne **Innstillinger** i Dulce og slå på **Apple Watch**. Det er en Dulce Pro-funksjon, som du kan prøve gratis i 14 dager.
+</Step>
+<Step title="Sjekk at appen ligger på klokken">
+Åpne **Watch**-appen på iPhonen, bla ned til **Tilgjengelige apper** og trykk på **Installer** ved Dulce hvis den ikke ble installert av seg selv.
+</Step>
+<Step title="Legg til komplikasjonen">
+Hold fingeren på urskiven, trykk på **Rediger**, sveip til komplikasjonene, velg en plass og velg **Dulce**.
+</Step>
+</Steps>
+
+Dulce har komplikasjoner i alle de fire watchOS-formene: **rektangulær** (verdi, pil og graf), **rund**, **hjørne** og **linje**. Den rektangulære passer best på urskiver som Modulær eller Infograf modulær, og hjørnet passer på Infograf.
+
+<AppCta title="Glukosen på håndleddet på to minutter" />
+
+## Klokkeappen
+
+Trykker du på komplikasjonen, åpnes Dulce-appen på klokken: det store tallet, trendpilen, endringen siden forrige måling og en graf du kan utvide til hele dagen. Vil du ha en ny måling, trykker du på oppdateringsknappen.
+
+<Figure src="/guides/apple-watch-2.jpg" alt="Dulce-appen på Apple Watch viser 93 mg/dL, +10 mg/dL og en graf for ett døgn" caption="Klokkeappen: verdi, endring og dagens graf." width={422} height={514} />
+
+## Hva med alarmer på klokken?
+
+Alarmene kommer fra iPhonen. Når du har på deg Apple Watch og iPhonen er låst, sender iOS varselet til klokken, og den gir deg et trykk på håndleddet. Bruker du iPhonen, ringer den der. Du får én alarm på riktig sted, ikke to. Alt du kan stille inn, står i <ArticleLink to="alerts">guiden til alarmer</ArticleLink> (på engelsk).
+
+## Hvorfor målingene på klokken av og til fryser
+
+watchOS begrenser hvor mange ganger om dagen en app kan oppdatere komplikasjonen sin, for å spare batteri. Apper som er avhengige av at iPhonen «dytter» hver måling til klokken, bruker opp denne kvoten i løpet av noen timer, og urskiven slutter å endre seg.
+
+Dulce er ikke bare avhengig av det: serveren sender siste måling rett til klokken hvert minutt, også når iPhonen er låst, og klokken lagrer den så snart den kommer. Ser du likevel et tall som ikke endrer seg, sjekk dette:
+
+- **Sensortelefonen har internett.** Klarer ikke Libre-appen å laste opp målinger, får verken LibreLinkUp eller Dulce noe nytt. <ArticleLink to="librelinkup-not-working">Guiden når LibreLinkUp ikke viser data</ArticleLink> går gjennom alle årsakene.
+- **Klokken er tilkoblet** iPhonen over Bluetooth eller er på Wi-Fi.
+- **Strømsparingsmodus på klokken er av**, fordi den stanser oppdateringer i bakgrunnen.
+
+<Callout type="warning">
+Sjekk alltid tidspunktet for siste måling før du tar en beslutning. Er du i tvil, bekreft med sensorappen eller et fingerstikk.
+</Callout>
