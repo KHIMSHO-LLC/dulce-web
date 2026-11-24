@@ -1,0 +1,54 @@
+Har du en FreeStyle Libre 2 eller Libre 3 och en Apple Watch vill du förstås kunna titta på handleden och se ditt blodsocker. I praktiken är det svårare än det borde vara: Abbotts app som läser sensorn har mycket begränsat stöd för klockan, och LibreLinkUp, appen för följare, skickar mest vidare notiser. Den här guiden förklarar varifrån glukosvärdena kommer, hur du lägger dem på urtavlan med Dulce och varför värdena på klockan ibland ”fryser”. Klockan själv kan inte mäta glukos: se <ArticleLink to="apple-watch-glucose">kan Apple Watch mäta blodsocker?</ArticleLink>.
+
+<Figure src="/guides/apple-watch-1.jpg" alt="Dulces rektangulära komplikation på Apple Watch visar 91 mg/dL, en trendpil och ett diagram" caption="Dulces rektangulära komplikation: värde, trend och de senaste timmarna." width={422} height={514} />
+
+## Varifrån glukosen på klockan kommer
+
+Sensorn skickar mätvärden via Bluetooth till Libre-appen på din iPhone (FreeStyle LibreLink eller FreeStyle Libre 3, beroende på sensor och land). Appen laddar upp dem till Abbotts moln, och därifrån når de **LibreLinkUp**, kontot som är gjort för att familjen ska kunna följa din glukos.
+
+Dulce ansluter till ditt LibreLinkUp-konto, hämtar varje nytt mätvärde och skickar det till din iPhone och din Apple Watch. Innan du använder Dulce behöver du därför <PageLink to="/setup">slå på delning i LibreLinkUp</PageLink>. Det tar fyra steg och du gör det bara en gång.
+
+## Så lägger du glukosen på urtavlan
+
+<Steps>
+<Step title="Installera Dulce och anslut LibreLinkUp">
+Ladda ner Dulce på din iPhone och logga in med e-post och lösenord för **LibreLinkUp** (inte dem för LibreLink).
+</Step>
+<Step title="Slå på Apple Watch i Dulce">
+Öppna **Inställningar** i Dulce och slå på **Apple Watch**. Funktionen ingår i Dulce Pro, som du kan prova gratis i 14 dagar.
+</Step>
+<Step title="Kontrollera att appen finns på klockan">
+Öppna appen **Watch** på din iPhone, scrolla ner till **Tillgängliga appar** och tryck på **Installera** bredvid Dulce om den inte installerades av sig själv.
+</Step>
+<Step title="Lägg till komplikationen">
+Håll fingret på urtavlan, tryck på **Redigera**, svep till komplikationerna, välj en plats och välj **Dulce**.
+</Step>
+</Steps>
+
+Dulce har komplikationer i alla fyra watchOS-formerna: **rektangulär** (värde, pil och diagram), **rund**, **hörn** och **rad**. Den rektangulära passar bäst på urtavlor som Modulär eller Infograf modulär, hörnkomplikationen passar Infograf.
+
+<AppCta title="Din glukos på handleden på två minuter" />
+
+## Klockappen
+
+Trycker du på komplikationen öppnas Dulce-appen på klockan: det stora värdet, trendpilen, förändringen sedan förra mätvärdet och ett diagram som du kan vidga till hela dagen. Vill du hämta ett nytt mätvärde trycker du på uppdateringsknappen.
+
+<Figure src="/guides/apple-watch-2.jpg" alt="Dulce-appen på Apple Watch visar 93 mg/dL, +10 mg/dL och ett diagram för en dag" caption="Klockappen: värde, förändring och dagens diagram." width={422} height={514} />
+
+## Hur fungerar larm på klockan?
+
+Larmen kommer från din iPhone. När du har klockan på dig och iPhonen är låst skickar iOS notisen till klockan, som knackar dig på handleden. Använder du iPhonen ringer det där. Du får ett larm på rätt ställe, inte två. Allt du kan ställa in finns i <ArticleLink to="alerts">guiden om larm</ArticleLink> (på engelska).
+
+## Varför värdena på klockan ibland fryser
+
+watchOS begränsar hur många gånger per dag en app får uppdatera sin komplikation, för att spara batteri. Appar som är beroende av att iPhonen ”skickar” varje mätvärde till klockan gör slut på den kvoten på några timmar, och sedan slutar urtavlan att ändras.
+
+Dulce förlitar sig inte bara på det: Dulces server skickar det senaste mätvärdet direkt till klockan varje minut, även när iPhonen är låst, och klockan sparar det så fort det kommer fram. Ser du ändå ett värde som inte ändras, kontrollera att:
+
+- **Sensortelefonen har internet.** Kan Libre-appen inte ladda upp mätvärden får varken LibreLinkUp eller Dulce något nytt. <ArticleLink to="librelinkup-not-working">Guiden om när LibreLinkUp inte visar data</ArticleLink> går igenom alla orsaker.
+- **Klockan är ansluten** till din iPhone via Bluetooth eller till wifi.
+- **Strömsparläget på klockan är av**, eftersom det stänger av uppdateringar i bakgrunden.
+
+<Callout type="warning">
+Titta alltid på tiden för senaste mätvärdet innan du fattar ett beslut. Är du osäker, kontrollera i sensorns app eller med ett blodprov i fingret.
+</Callout>

@@ -1,0 +1,54 @@
+Jos käytät FreeStyle Libre 2:ta tai Libre 3:a ja Apple Watchia, haluat luonnollisesti nähdä verensokerisi vilkaisemalla rannetta. Käytännössä se on vaikeampaa kuin pitäisi: Abbottin sensoria lukevan sovelluksen kellotuki on hyvin rajallinen, ja seuraajille tarkoitettu LibreLinkUp lähinnä välittää ilmoituksia. Tässä oppaassa kerrotaan, mistä tiedot tulevat, miten saat glukoosin Apple Watchin kellotauluun Dulcella ja miksi kellon lukema joskus ”jäätyy”. Kello itse ei pysty mittaamaan glukoosia: katso <ArticleLink to="apple-watch-glucose">voiko Apple Watch mitata verensokeria?</ArticleLink>.
+
+<Figure src="/guides/apple-watch-1.jpg" alt="Dulcen suorakulmainen komplikaatio Apple Watchissa näyttää 91 mg/dL, trendinuolen ja käyrän" caption="Dulcen suorakulmainen komplikaatio: arvo, trendi ja viime tunnit." width={422} height={514} />
+
+## Mistä kellon glukoosilukema tulee
+
+Sensori lähettää lukemat Bluetoothilla iPhonesi Libre-sovellukseen (FreeStyle LibreLink tai FreeStyle Libre 3 sensorin ja maan mukaan). Sovellus lataa ne Abbottin pilveen, ja sieltä ne päätyvät **LibreLinkUpiin**, tiliin, jonka kautta perheenjäsenet voivat seurata glukoosiasi.
+
+Dulce yhdistää LibreLinkUp-tiliisi, hakee jokaisen uuden lukeman ja lähettää sen iPhoneesi ja Apple Watchiisi. Ennen Dulcen käyttöä sinun pitää siis <PageLink to="/setup">ottaa jakaminen käyttöön LibreLinkUpissa</PageLink>. Siinä on neljä vaihetta, ja teet sen vain kerran.
+
+## Näin saat glukoosin kellotauluun
+
+<Steps>
+<Step title="Asenna Dulce ja yhdistä LibreLinkUp">
+Lataa Dulce iPhoneesi ja kirjaudu **LibreLinkUp**-sähköpostillasi ja -salasanallasi (ei LibreLink-tunnuksillasi).
+</Step>
+<Step title="Ota Apple Watch käyttöön Dulcessa">
+Avaa Dulcessa **Asetukset** ja ota **Apple Watch** käyttöön. Se kuuluu Dulce Prohon, jota voit kokeilla 14 päivää ilmaiseksi.
+</Step>
+<Step title="Tarkista, että sovellus on kellossa">
+Avaa iPhonessa **Watch**-appi, vieritä kohtaan **Saatavilla olevat apit** ja napauta Dulcen vieressä **Asenna**, jos se ei asentunut itsestään.
+</Step>
+<Step title="Lisää komplikaatio">
+Paina kellotaulua pitkään, napauta **Muokkaa**, pyyhkäise komplikaatioihin, valitse paikka ja valitse **Dulce**.
+</Step>
+</Steps>
+
+Dulcella on komplikaatiot kaikissa neljässä watchOS-muodossa: **suorakulmainen** (arvo, nuoli ja käyrä), **pyöreä**, **kulma** ja **rivi**. Suorakulmainen toimii parhaiten Modular- tai Infograph Modular -tyyppisissä kellotauluissa, kulma sopii Infographiin.
+
+<AppCta title="Glukoosisi ranteeseen kahdessa minuutissa" />
+
+## Kellosovellus
+
+Komplikaatiota napauttamalla avautuu Dulcen kellosovellus: iso luku, trendinuoli, muutos edellisestä lukemasta ja käyrä, jonka voi laajentaa koko päivään. Uuden lukeman saat päivityspainikkeesta.
+
+<Figure src="/guides/apple-watch-2.jpg" alt="Dulce-sovellus Apple Watchissa näyttää 93 mg/dL, +10 mg/dL ja vuorokauden käyrän" caption="Kellosovellus: arvo, muutos ja päivän käyrä." width={422} height={514} />
+
+## Entä hälytykset kellossa?
+
+Hälytykset tulevat iPhonesta. Kun Apple Watch on ranteessa ja iPhone lukittuna, iOS ohjaa ilmoituksen kelloon, ja se napauttaa rannettasi. Jos käytät iPhonea, hälytys soi siinä. Saat yhden hälytyksen oikeaan paikkaan, et kahta. Kaikki asetukset löytyvät <ArticleLink to="alerts">hälytysten oppaasta</ArticleLink> (englanniksi).
+
+## Miksi kellon lukema joskus jäätyy
+
+watchOS rajoittaa akun säästämiseksi, kuinka monta kertaa päivässä sovellus saa päivittää komplikaatiotaan. Sovellukset, jotka nojaavat siihen, että iPhone ”työntää” jokaisen lukeman kelloon, kuluttavat tämän kiintiön muutamassa tunnissa, ja kellotaulu lakkaa muuttumasta.
+
+Dulce ei nojaa pelkästään siihen: sen palvelin lähettää viimeisimmän lukeman suoraan kelloon joka minuutti, myös kun iPhone on lukittuna, ja kello tallentaa sen heti kun se saapuu. Jos näet silti luvun, joka ei muutu, tarkista:
+
+- **Sensoripuhelimella on internet.** Jos Libre-sovellus ei pysty lataamaan lukemia, LibreLinkUp eikä Dulce saa mitään uutta. <ArticleLink to="librelinkup-not-working">Opas, kun LibreLinkUp ei näytä tietoja</ArticleLink> käy läpi kaikki syyt.
+- **Kello on yhteydessä** iPhoneen Bluetoothilla tai Wi-Fiin.
+- **Kellon virransäästötila on pois päältä**, koska se katkaisee taustapäivitykset.
+
+<Callout type="warning">
+Tarkista aina viimeisimmän lukeman aika ennen kuin teet päätöksiä. Jos olet epävarma, varmista sensorisi sovelluksesta tai sormenpäämittauksella.
+</Callout>

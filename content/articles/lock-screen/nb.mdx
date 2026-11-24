@@ -1,0 +1,81 @@
+Vi sjekker glukosen mange ganger om dagen. Må du låse opp iPhonen, finne appen og vente på at den laster hver gang, ender du opp med å sjekke sjeldnere enn du burde. Den offisielle Libre-appen viser ikke blodsukkeret på låseskjermen, men iPhonen kan gjøre det med en **Live-aktivitet**: en boks som blir liggende på låseskjermen og som også vises i Dynamic Island.
+
+<Figure src="/guides/lock-screen-alerts-watch.jpg" alt="Låseskjermen på iPhone med Dulces Live-aktivitet som viser 120 mg/dL og glukosealarmer under" caption="Dulces Live-aktivitet på låseskjermen, med alarmer under." />
+
+## Dette ser du på låseskjermen
+
+- **Glukosen og trendpilen**, stort.
+- **Tidspunktet for siste måling**, så du straks ser om tallet er ferskt.
+- Avhengig av stilen du velger, **grafen for de siste timene** eller **tiden i målområdet**.
+
+På iPhoner med **Dynamic Island** (iPhone 14 Pro og nyere) står tallet også øverst, ved kameraet, mens du bruker andre apper. Hold fingeren på øya for å se den utvidede visningen.
+
+## Slik slår du det på
+
+<Steps>
+<Step title="Koble Dulce til LibreLinkUp">
+Har du ikke gjort det ennå, følg <PageLink to="/setup">oppsettguiden for LibreLinkUp</PageLink>. Dulce trenger LibreLinkUp-kontoen din, ikke LibreLink-kontoen.
+</Step>
+<Step title="Slå på Live-aktiviteten">
+I Dulce går du til **Innstillinger** og slår på **Live-aktivitet og Dynamic Island**. Det er en Dulce Pro-funksjon: når du slår den på, kan du starte den gratis prøveperioden på 14 dager.
+</Step>
+<Step title="Tillat Live-aktiviteter i iOS">
+I **Innstillinger**-appen på iPhonen åpner du **Dulce** og sjekker at **Live-aktiviteter** er tillatt. Slå samtidig på **Hyppigere oppdateringer**.
+</Step>
+</Steps>
+
+Lås iPhonen, så skal du se glukosen i løpet av noen sekunder.
+
+Trenger du dette mest i arbeidstiden, se <ArticleLink to="diabetes-at-work">type 1-diabetes på jobben</ArticleLink> (på engelsk).
+
+<AppCta title="Blodsukkeret på låseskjermen i dag" />
+
+## Velg en stil
+
+Under **Innstillinger > Stil for Live-aktivitet** kan du endre utseendet uten å røre noe annet. Stilene er delt i grupper:
+
+- **Utvalgte**: Horisont
+- **Graf**: Tidevann, Meridian, Fyrlykt
+- **Enkel**: Topp, Småstein
+- **Flere**: Bånd, Pop
+- **Festlige**: Blomst, Frost, Gresskar
+- **Premium**: flere stiler
+
+<Figure src="/guides/live-activity-styles.jpg" alt="Skjermen for Live-aktivitet i Dulce med en forhåndsvisning og en liste over stiler" caption="Skjermen for stil for Live-aktivitet, med forhåndsvisning." />
+
+Grafstilene (Tidevann, Meridian, Fyrlykt) hjelper når du vil se hvor du er på vei. Topp og Småstein passer når du bare vil ha tallet.
+
+## Hvor ofte den oppdateres
+
+Med Dulce Pro oppdaterer Dulces server Live-aktiviteten hvert minutt, også når iPhonen er låst og appen er lukket. Hvor ferskt tallet er, avhenger av at Libre-appen på sensortelefonen har lastet opp målingen: mister den telefonen internett, ser du at tidspunktet for siste måling blir hengende etter.
+
+## Virker det med FreeStyle Libre 3 Plus?
+
+Ja, på samme måte som med Libre 2, 2 Plus og 3. Dulce snakker aldri med selve sensoren: den leser glukosen din fra **LibreLinkUp**, Abbotts delingstjeneste. Sensormodellen spiller ingen rolle, bare at appen som leser den, deler til LibreLinkUp.
+
+- **Hvilken app som leser 3 Plus.** På iPhone er det Abbotts egen app: FreeStyle Libre 3, eller i noen land den nyere **Libre**-appen, som Abbott tilbyr som én app for alle Libre-sensorer. Begge deler via LibreView og LibreLinkUp. Slå på deling der, og logg så på Dulce med den LibreLinkUp-kontoen (<PageLink to="/setup">oppsettguiden</PageLink> har alle trinnene).
+- **Kompatible telefoner.** Telefonen som leser sensoren, må stå på Abbotts kompatibilitetsliste for landet ditt, som du finner på FreeStyle Libre-nettstedet for landet ditt. Abbott oppdaterer listen når nye iPhoner og iOS-versjoner kommer, så sjekk den før en stor iOS-oppdatering. Dulce har sitt eget, separate krav: appen virker med iOS 17 eller nyere, og Live-aktiviteten og widgetene trenger iOS 18 eller nyere.
+- **Samme iPhone eller en annen.** Fordi Dulce leser fra LibreLinkUp og ikke fra sensoren, kan den kjøre på iPhonen som leser 3 Plus-sensoren din eller på noen andres, for eksempel en forelders. Se <ArticleLink to="family-sharing">del glukosen med familien</ArticleLink> (på engelsk).
+
+Ifølge Abbott varer 3 Plus i **15 dager** (én mer enn Libre 3) og sender en måling **hvert minutt**. Det passer godt med Live-aktiviteten, som Dulce Pro oppdaterer hvert minutt. For å vite nøyaktig dag og klokkeslett for bytte, bruk <PageLink to="/tools/sensor-end-date">kalkulatoren for når sensoren går ut</PageLink>.
+
+## Begrensninger i iOS du bør kjenne til
+
+- **iOS begrenser hvor lenge en Live-aktivitet kan kjøre.** Apple setter et maksimalt antall aktive timer, og så fjerner systemet den. Forsvinner den, åpner du Dulce, så kommer den tilbake. Klarer ikke Dulce å oppdatere låseskjermen på en stund, får du et stille varsel om å åpne appen.
+- **Strømsparingsmodus** stanser oppdateringer i bakgrunnen.
+- **Live-aktiviteter vises ikke på iPad.**
+
+<Callout type="warning">
+Live-aktiviteten er en hjelp til å se raskt. Se alltid på tidspunktet for målingen, og bekreft med sensorappen eller et fingerstikk før du behandler en lav eller høy verdi.
+</Callout>
+
+## Hva med widgeter?
+
+Vil du ikke bruke Live-aktiviteten eller har du ikke Pro, kan du legge en glukose-widget på låseskjermen, Hjem-skjermen eller i StandBy. Vi forklarer det i <ArticleLink to="widgets">guiden til Libre-widget for iPhone</ArticleLink>. For å ha den på håndleddet, se <ArticleLink to="apple-watch">guiden til Apple Watch</ArticleLink>. I bilen kan den samme Live-aktiviteten vises på CarPlay Dashboard: se <ArticleLink to="carplay">glukose på CarPlay</ArticleLink> (på engelsk).
+
+Kommer du fra en annen app, som Sweet Dreams eller Gluroo? Vi sammenligner dem og viser hvordan du bytter på et minutt i <ArticleLink to="glucose-apps-compared">Libre-apper for iPhone sammenlignet</ArticleLink>.
+
+## Kilder
+
+- Abbott. *Meet the FreeStyle Libre 3 Plus sensor* (15-day wear, a reading every minute). [pro.freestyle.abbott](https://pro.freestyle.abbott/ie-en/home/freestyle-portfolio/freestyle-libre-systems/freestyle-libre-3-plus-sensor.html)
+- Abbott. *Libre by Abbott* on the App Store (one app for Libre sensors, sharing through LibreView and LibreLinkUp). [apps.apple.com](https://apps.apple.com/us/app/libre-by-abbott/id6670330506)

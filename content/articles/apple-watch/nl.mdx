@@ -1,0 +1,54 @@
+Draag je een FreeStyle Libre 2 of Libre 3 en een Apple Watch, dan wil je natuurlijk op je pols kijken en je glucose zien. In de praktijk is dat lastiger dan het zou moeten zijn: de app van Abbott die de sensor uitleest, ondersteunt het horloge maar heel beperkt, en LibreLinkUp, de app voor volgers, stuurt vooral meldingen door. In deze gids lees je waar de gegevens vandaan komen, hoe je ze met Dulce op je wijzerplaat zet en waarom metingen op het horloge soms "bevriezen". Het horloge zelf kan geen glucose meten: zie <ArticleLink to="apple-watch-glucose">kan een Apple Watch bloedsuiker meten?</ArticleLink>.
+
+<Figure src="/guides/apple-watch-1.jpg" alt="Rechthoekige complicatie van Dulce op een Apple Watch met 91 mg/dL, een trendpijl en een grafiek" caption="De rechthoekige complicatie van Dulce: waarde, trend en de afgelopen uren." width={422} height={514} />
+
+## Waar de glucose op je horloge vandaan komt
+
+De sensor stuurt metingen via Bluetooth naar de Libre-app op je iPhone (FreeStyle LibreLink of FreeStyle Libre 3, afhankelijk van je sensor en je land). Die app uploadt ze naar de cloud van Abbott, en van daaruit komen ze bij **LibreLinkUp**, het account dat bedoeld is om familieleden je glucose te laten volgen.
+
+Dulce maakt verbinding met je LibreLinkUp-account, haalt elke nieuwe meting op en stuurt die naar je iPhone en je Apple Watch. Voordat je Dulce gebruikt, moet je dus <PageLink to="/setup">delen aanzetten in LibreLinkUp</PageLink>. Dat zijn vier stappen en je doet het maar één keer.
+
+## Zo zet je je glucose op je wijzerplaat
+
+<Steps>
+<Step title="Installeer Dulce en verbind LibreLinkUp">
+Download Dulce op je iPhone en log in met het e-mailadres en wachtwoord van **LibreLinkUp** (niet die van LibreLink).
+</Step>
+<Step title="Zet Apple Watch aan in Dulce">
+Open **Instellingen** in Dulce en zet **Apple Watch** aan. Dat is een functie van Dulce Pro, die je 14 dagen gratis kunt proberen.
+</Step>
+<Step title="Controleer of de app op je horloge staat">
+Open op je iPhone de **Watch**-app, scrol naar **Beschikbare apps** en tik op **Installeer** naast Dulce als de app niet vanzelf is geïnstalleerd.
+</Step>
+<Step title="Voeg de complicatie toe">
+Houd je wijzerplaat ingedrukt, tik op **Wijzig**, veeg naar de complicaties, kies een plek en kies **Dulce**.
+</Step>
+</Steps>
+
+Dulce heeft complicaties in alle vier de vormen van watchOS: **rechthoekig** (waarde, pijl en grafiek), **rond**, **hoek** en **regel**. De rechthoekige werkt het best op wijzerplaten zoals Modulair of Infograaf modulair, de hoekcomplicatie past bij Infograaf.
+
+<AppCta title="Je glucose om je pols in twee minuten" />
+
+## De horloge-app
+
+Tik op de complicatie en de horloge-app van Dulce opent: het grote getal, de trendpijl, de verandering sinds de vorige meting en een grafiek die je kunt uitbreiden tot de hele dag. Wil je een nieuwe meting, tik dan op de verversknop.
+
+<Figure src="/guides/apple-watch-2.jpg" alt="Dulce-app op een Apple Watch met 93 mg/dL, +10 mg/dL en een grafiek van een dag" caption="De horloge-app: waarde, verandering en de grafiek van de dag." width={422} height={514} />
+
+## En alarmen op het horloge?
+
+Alarmen komen van je iPhone. Draag je je Apple Watch en is je iPhone vergrendeld, dan stuurt iOS de melding naar het horloge en voel je een tik op je pols. Gebruik je je iPhone, dan gaat het alarm daar af. Je krijgt één alarm op de juiste plek, niet twee. Alles wat je kunt instellen staat in de <ArticleLink to="alerts">gids over alarmen</ArticleLink> (in het Engels).
+
+## Waarom metingen op het horloge soms bevriezen
+
+watchOS beperkt hoe vaak per dag een app zijn complicatie mag verversen, om de batterij te sparen. Apps die erop rekenen dat de iPhone elke meting naar het horloge "duwt", hebben dat budget binnen een paar uur op, en dan verandert de wijzerplaat niet meer.
+
+Dulce rekent daar niet alleen op: de server van Dulce stuurt elke minuut de laatste meting rechtstreeks naar het horloge, ook als je iPhone vergrendeld is, en het horloge bewaart die zodra hij binnenkomt. Zie je toch een getal dat niet verandert, controleer dan:
+
+- **De sensortelefoon heeft internet.** Kan de Libre-app geen metingen uploaden, dan krijgen LibreLinkUp en Dulce niets nieuws. De <ArticleLink to="librelinkup-not-working">gids als LibreLinkUp geen gegevens toont</ArticleLink> behandelt elke oorzaak.
+- **Het horloge heeft verbinding** met je iPhone via Bluetooth of met wifi.
+- **De energiebesparingsmodus op het horloge staat uit**, want die stopt updates op de achtergrond.
+
+<Callout type="warning">
+Kijk altijd naar de tijd van de laatste meting voordat je een beslissing neemt. Twijfel je, controleer dan met de app van je sensor of een vingerprik.
+</Callout>

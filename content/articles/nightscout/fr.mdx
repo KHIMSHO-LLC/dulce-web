@@ -1,0 +1,53 @@
+Oui, si tes mesures arrivent sur ton propre site Nightscout, Dulce peut les afficher sur l'écran verrouillé de l'iPhone, dans des widgets et sur l'Apple Watch. Tu donnes à Dulce l'adresse https de ton site et, si le site n'est pas ouvert, un jeton d'accès en lecture seule. Dulce lit seulement la glycémie : il n'écrit jamais sur ton site et ignore les traitements.
+
+<Callout>
+Dulce est une app indépendante et n'est pas un dispositif médical. Elle ne remplace ni les alarmes de ton capteur ni celles de ton uploader. Garde-les activées.
+</Callout>
+
+## Pour qui
+
+Nightscout est un site que tu gères, ou qu'une personne de confiance gère, alimenté par un uploader depuis ton capteur ou ton système. Si tu ouvres déjà tes mesures dans un navigateur, Dulce peut lire ces mêmes données et les mettre là où tu regardes : l'écran verrouillé, les widgets et ton poignet. Ça marche avec tout capteur ou uploader qui alimente ton Nightscout.
+
+La fréquence de mise à jour de Dulce dépend de la fréquence à laquelle ton site reçoit des mesures. Si ton uploader en envoie une toutes les 5 minutes, c'est ce rythme.
+
+## Ce qu'il te faut
+
+- Un site Nightscout accessible sur internet avec une adresse **https**. Dulce se connecte uniquement en https, et les adresses qui ne fonctionnent que dans ton réseau domestique ne marchent pas.
+- Un **jeton d'accès** si ton site n'est pas ouvert. Crée-le dans Nightscout, sous Admin Tools, avec le rôle « readable ». Un jeton en lecture seule est plus sûr que ton API secret.
+- Des mesures récentes : ton site doit avoir des mesures de glycémie des dernières 24 heures.
+
+## Connecter Nightscout dans Dulce
+
+<Steps>
+<Step title="Crée un jeton en lecture seule">
+Dans Nightscout, ouvre Admin Tools et crée un jeton d'accès avec le rôle « readable ». Passe cette étape si ton site est ouvert.
+</Step>
+<Step title="Choisis Nightscout dans Dulce">
+Télécharge Dulce sur l'App Store. À « Quel capteur utilises-tu ? », touche **Nightscout**. Saisis l'adresse https avec laquelle tu ouvres ton site, par exemple tonsite.herokuapp.com.
+</Step>
+<Step title="Colle le jeton et connecte">
+Choisis **Jeton d'accès** et colle-le, ou choisis **API secret** si tu préfères l'utiliser. Dulce ne garde que l'empreinte SHA-1 de l'API secret, c'est ce que Nightscout vérifie. Touche ensuite **Connecter**.
+</Step>
+</Steps>
+
+<AppCta title="Connecte ton site Nightscout à Dulce" />
+
+Dulce n'écrit jamais sur ton site. L'adresse et le jeton sont gardés chiffrés sur ton téléphone et sur le serveur de Dulce, qui garde ton écran verrouillé à jour.
+
+## Ce que tu vois sur l'iPhone et la montre
+
+- **Écran verrouillé et Dynamic Island** (Pro) : une Activité en direct avec ta valeur, la flèche de tendance et les dernières heures. Le serveur de Dulce la met à jour à chaque nouvelle mesure qu'il trouve sur ton site. Voir le <ArticleLink to="lock-screen">guide de l'écran verrouillé</ArticleLink>.
+- **Apple Watch** (Pro) : l'app Dulce pour la montre et ses complications. Voir le <ArticleLink to="apple-watch">guide de l'Apple Watch</ArticleLink>.
+- **Widgets** (gratuits) pour l'écran d'accueil, l'écran verrouillé et StandBy. Lis la limite plus bas.
+- **Alertes** à tes propres seuils bas et haut. Voir le <ArticleLink to="alerts">guide des alertes</ArticleLink>.
+- **Famille** (Pro) : les abonnés voient ta glycémie sur leur propre iPhone. Voir <ArticleLink to="family-sharing">le partage en famille</ArticleLink>.
+
+Dulce Pro a 14 jours d'essai gratuit. Connecter Nightscout et les widgets sont gratuits.
+
+## Limites à connaître
+
+- **Les widgets peuvent avoir du retard.** Avec FreeStyle Libre et Dexcom, les widgets de Dulce peuvent aller chercher une mesure seuls. Avec Nightscout, pas encore : ils affichent ce que l'app et les notifications de Dulce ont déjà livré, et c'est iOS qui décide quand les rafraîchir. Ils indiquent toujours l'âge de la mesure. Pour un chiffre qui suit chaque mesure, utilise l'Activité en direct.
+- **Dulce n'est à jour que si ton site l'est.** Si ton uploader s'arrête, rien de nouveau n'arrive dans Dulce.
+- **Regarde l'heure de la mesure** avant de te fier à un chiffre, et confirme avec ton capteur ou une piqûre au doigt en cas de doute.
+
+Si Dulce affiche « Accès refusé », ton site demande un jeton d'accès ou celui que tu as saisi est faux. « Connecté, mais aucune mesure » signifie que le site n'a pas de glycémie des dernières 24 heures : vérifie ton uploader. Plus de détails sur la <PageLink to="/sensors">page des capteurs</PageLink>. Tu utilises un Libre ou un Dexcom ? Voir le <ArticleLink to="widgets">guide des widgets</ArticleLink>.

@@ -1,0 +1,53 @@
+Oui, avec Dulce tu peux voir ta glycémie Medtronic sur l'écran verrouillé de l'iPhone, dans des widgets et sur l'Apple Watch. Dulce lit la glycémie de ton capteur dans CareLink, le service de Medtronic vers lequel ton app Simplera ou MiniMed envoie déjà tes données. Ça marche avec Simplera, Guardian, Instinct et MiniMed 780G, et tu te connectes sur la page propre à Medtronic : Dulce ne voit jamais ton mot de passe.
+
+<Callout>
+Dulce est une app indépendante, sans lien avec Medtronic ni approuvée par elle. Elle ne remplace ni l'app Medtronic ni les alarmes de ta pompe, et ce n'est pas un dispositif médical. Garde tes alarmes activées.
+</Callout>
+
+## Comment Dulce obtient tes mesures Medtronic
+
+Ton app Medtronic envoie les mesures du capteur à **CareLink**. Dulce se connecte à CareLink avec ton compte, ou avec un compte d'aidant, et y lit la glycémie du capteur. Une nouvelle mesure arrive **toutes les 5 minutes**, et c'est le rythme auquel Dulce peut se mettre à jour.
+
+Deux choses à savoir avant de commencer :
+
+- **L'app de Medtronic doit envoyer les données.** Si ton app Simplera ou MiniMed n'envoie rien à CareLink, Dulce n'a rien de nouveau à afficher. Les trous dans les données viennent souvent de l'app du téléphone qui n'envoie pas, pas de Dulce.
+- **La connexion n'est pas officielle.** CareLink n'est pas une connexion officielle pour les autres apps, et Medtronic peut la modifier à tout moment. Si cela arrive, Dulce peut cesser de recevoir des mesures jusqu'à sa mise à jour.
+
+## Connecter Medtronic dans Dulce
+
+<Steps>
+<Step title="Vérifie que CareLink reçoit tes données">
+Ton app Simplera ou MiniMed doit envoyer ses données à CareLink.
+</Step>
+<Step title="Choisis Medtronic dans Dulce">
+Télécharge Dulce sur l'App Store. À « Quel capteur utilises-tu ? », touche **Medtronic**. Sous « Où se trouve ton compte CareLink », choisis **États-Unis** ou **Hors des États-Unis**.
+</Step>
+<Step title="Connecte-toi avec CareLink">
+Touche **Se connecter avec CareLink**. La page CareLink de Medtronic s'ouvre dans une feuille. Connecte-toi-y avec ton compte CareLink ou ton compte d'aidant.
+</Step>
+</Steps>
+
+CareLink n'autorise qu'une seule connexion active par compte : utiliser le même compte dans une autre app peut déconnecter Dulce. Pour Dulce, crée un compte d'aidant CareLink séparé, demande au patient de l'ajouter comme aidant, puis connecte-toi avec lui.
+
+<AppCta title="Connecte ton capteur Medtronic à Dulce" />
+
+Dulce reçoit seulement l'autorisation de lire la glycémie de ton capteur. Le serveur de Dulce garde cette autorisation pour que ton écran verrouillé reste à jour, et se déconnecter de Dulce y met fin.
+
+## Ce que tu vois sur l'iPhone et la montre
+
+- **Écran verrouillé et Dynamic Island** (Pro) : une Activité en direct avec ta valeur, la flèche de tendance et les dernières heures. Le serveur de Dulce la met à jour à chaque nouvelle mesure, même app fermée. Voir le <ArticleLink to="lock-screen">guide de l'écran verrouillé</ArticleLink>.
+- **CarPlay** (Pro, iOS 26) : la carte de l'Activité en direct peut s'afficher sur le tableau de bord CarPlay. Voir <ArticleLink to="carplay">la glycémie dans CarPlay</ArticleLink>.
+- **Apple Watch** (Pro) : l'app Dulce pour la montre et ses complications. Voir le <ArticleLink to="apple-watch">guide de l'Apple Watch</ArticleLink>.
+- **Widgets** (gratuits) pour l'écran d'accueil, l'écran verrouillé et StandBy. Lis la limite plus bas.
+- **Alertes** à tes propres seuils bas et haut. Voir le <ArticleLink to="alerts">guide des alertes</ArticleLink>.
+- **Famille** (Pro) : les abonnés voient ta glycémie sur leur propre iPhone. Voir <ArticleLink to="family-sharing">le partage en famille</ArticleLink>.
+
+Dulce Pro a 14 jours d'essai gratuit. Connecter Medtronic et les widgets sont gratuits.
+
+## Limites à connaître
+
+- **Les widgets sont le point faible.** Avec FreeStyle Libre et Dexcom, les widgets de Dulce peuvent aller chercher une mesure seuls. Avec Medtronic, pas encore : ils affichent ce que l'app et les notifications de Dulce ont déjà livré, et c'est iOS qui décide quand les rafraîchir. Ils indiquent toujours l'âge de la mesure. Pour un chiffre qui suit chaque mesure, utilise l'Activité en direct.
+- **Les mesures arrivent toutes les 5 minutes**, pas chaque minute.
+- **Regarde l'heure de la mesure** avant de te fier à un chiffre, et confirme avec ton app Medtronic ou une piqûre au doigt en cas de doute.
+
+Si Dulce affiche « Connecté, mais pas encore de mesures », CareLink n'a aucune mesure du capteur sur les dernières heures. Vérifie que ton app Medtronic envoie ses données, puis réessaie. Les autres messages et solutions sont sur la <PageLink to="/sensors">page des capteurs</PageLink>. Tu utilises un Libre ou un Dexcom ? Voir <ArticleLink to="dexcom">Dexcom avec Dulce</ArticleLink>.
