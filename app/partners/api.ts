@@ -255,11 +255,22 @@ export interface SensorLevels {
   test?: number;
 }
 
+/** Phones per app version and platform. Older relays omit `versions`. */
+export interface VersionRow {
+  platform: "ios" | "android" | null;
+  /** null = the build sent no version (old builds). */
+  version: string | null;
+  devices: number;
+  pro: number;
+  trial: number;
+}
+
 export interface UsageResponse {
   current: FleetLevels;
   /** Per CGM source (libre, dexcom, carelink, nightscout). Older relays omit it. */
   bySensor?: Record<string, SensorLevels> | null;
   proCheck?: ProCheck | null;
+  versions?: VersionRow[];
   today: { date: string; events: EventCounts };
   history: DailyRollup[];
   firstSeen: FirstSeenBucket[];

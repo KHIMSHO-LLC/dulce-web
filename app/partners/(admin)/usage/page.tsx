@@ -23,6 +23,7 @@ import {
   type RcOverviewMetric,
   type SensorLevels,
   type UsageResponse,
+  type VersionRow,
 } from "../../api";
 import { useAdmin } from "../../AdminGate";
 import { BarChart, LineChart } from "../../charts";
@@ -180,6 +181,96 @@ function SensorTable({ bySensor }: { bySensor: Record<string, SensorLevels> }) {
             </tbody>
           </table>
         </div>
+      </Card>
+    </div>
+  );
+}
+
+/** Numeric compare of "1.0.12"-style versions, highest first. */
+function compareVersionsDesc(a: string, b: string): number {
+  const pa = a.split(".").map((n) => parseInt(n, 10) || 0);
+  const pb = b.split(".").map((n) => parseInt(n, 10) || 0);
+  for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+    const d = (pb[i] ?? 0) - (pa[i] ?? 0);
+    if (d !== 0) return d;
+  }
+  return 0;
+}
+
+const VERSION_PLATFORMS: { key: "ios" | "android"; label: string }[] = [
+  { key: "ios", label: "iPhone" },
+  { key: "android", label: "Android" },
+];
+
+/** Phones per app version, split by platform. */
+function VersionsCard({ versions }: { versions: VersionRow[] }) {
+  const cell = "px-3 py-2 text-right tabular-nums";
+  const groups = VERSION_PLATFORMS.map(({ key, label }) => {
+    const rows = versions.filter((r) => r.platform === key);
+    const known = rows
+      .filter((r) => r.version)
+      .sort((a, b) => compareVersionsDesc(a.version!, b.version!));
+    const none = rows.filter((r) => !r.version);
+    const merged: VersionRow[] = [...known];
+    if (none.length) {
+      merged.push({
+        platform: key,
+        version: null,
+        devices: none.reduce((n, r) => n + r.devices, 0),
+        pro: none.reduce((n, r) => n + r.pro, 0),
+        trial: none.reduce((n, r) => n + r.trial, 0),
+      });
+    }
+    return { key, label, rows: merged, total: merged.reduce((n, r) => n + r.devices, 0) };
+  }).filter((g) => g.total > 0);
+  if (groups.length === 0) return null;
+  return (
+    <div className="mt-6">
+      <Card
+        title="App versions"
+        subtitle="Phones per app version. Pro or trial = paying or on a trial (production, checked with RevenueCat)."
+      >
+        <div className="grid gap-6 lg:grid-cols-2">
+          {groups.map((g) => (
+            <div key={g.key} className="overflow-x-auto">
+              <table className="w-full text-label">
+                <thead className="text-caption uppercase tracking-wide text-muted">
+                  <tr>
+                    <th className="px-3 py-2 text-left">{g.label}</th>
+                    <th className={cell}>Phones</th>
+                    <th className="px-3 py-2 text-left">Share</th>
+                    <th className={cell}>Pro or trial</th>
+                  </tr>
+                </thead>
+                <tbody className="text-foreground">
+                  {g.rows.map((r) => {
+                    const share = (r.devices / g.total) * 100;
+                    return (
+                      <tr key={r.version ?? "none"} className="border-t border-border-subtle">
+                        <td className="px-3 py-2 text-left font-bold">
+                          {r.version ?? "Older builds (no version sent)"}
+                        </td>
+                        <td className={cell}>{r.devices}</td>
+                        <td className="px-3 py-2">
+                          <div className="flex items-center gap-2">
+                            <div className="h-2 w-24 rounded-full bg-accent-soft">
+                              <div className="h-2 rounded-full bg-accent" style={{ width: `${Math.min(100, share)}%` }} />
+                            </div>
+                            <span className="tabular-nums text-caption text-muted">{Math.round(share)}%</span>
+                          </div>
+                        </td>
+                        <td className={cell}>{r.pro + r.trial}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          ))}
+        </div>
+        <p className="mt-3 text-caption text-muted">
+          Counts are registered phones, including ones not opened recently.
+        </p>
       </Card>
     </div>
   );
@@ -455,6 +546,8 @@ export default function UsagePage() {
           </div>
 
           {data.bySensor ? <SensorTable bySensor={data.bySensor} /> : null}
+
+          {data.versions ? <VersionsCard versions={data.versions} /> : null}
 
           <div className="mt-6 grid gap-3 lg:grid-cols-2">
             <Card
