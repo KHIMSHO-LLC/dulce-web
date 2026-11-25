@@ -20,10 +20,8 @@ const COPY: Record<CoreLocale, Copy> = {
     previous: (until) => `Previous version (valid until ${until})`,
     items: {
       privacy: [
-        "Logbook: if you use saved chart history (Dulce Pro), your logbook, every entry with all its details including notes, is now saved on our relay as part of it, so it comes back after a reinstall or on a new phone (section 2.6).",
-        "If you accepted saved chart history before, your logbook is not saved until you agree in the app; you can change it with “Save my logbook” (section 2.6).",
-        "Family: “Share my logbook with family” only decides whether followers see it. Turning it on shows them your saved logbook of the last 90 days (sections 2.4 and 2.6).",
-        "Deleting: turning off “Save my logbook” deletes the saved logbook while sharing is off; the other ways to delete now cover the logbook too (sections 2.6 and 9).",
+        "Ad measurement (iOS): the app now uses Apple’s SKAdNetwork (aggregated, delayed, no advertising identifier, no health data) to measure installs and purchases (section 2.2.2).",
+        "Meta: there is no longer a consent question. Sharing install and purchase events with Meta only starts if you turn on “Share install and purchase events with Meta” in Settings; it is off by default (section 2.2.2).",
       ],
       terms: [
         "Saved chart history now includes your logbook, and sharing shows followers only the shared entries (sections 2 and 8.1).",
@@ -35,10 +33,8 @@ const COPY: Record<CoreLocale, Copy> = {
     previous: (until) => `Versión anterior (vigente hasta el ${until})`,
     items: {
       privacy: [
-        "Diario: si usas el historial guardado (Dulce Pro), tu diario, cada entrada con todos sus datos y las notas, se guarda ahora en nuestro relay como parte de él, para que vuelva tras reinstalar o en un móvil nuevo (apartado 2.6).",
-        "Si aceptaste el historial guardado antes, tu diario no se guarda hasta que lo aceptes en la app; puedes cambiarlo con «Guardar mi diario» (apartado 2.6).",
-        "Familia: «Compartir mi diario con la familia» solo decide si los seguidores lo ven. Al activarlo, ven tu diario guardado de los últimos 90 días (apartados 2.4 y 2.6).",
-        "Borrado: al desactivar «Guardar mi diario» se borra el diario guardado mientras no lo compartas; las demás formas de borrar ahora incluyen también el diario (apartados 2.6 y 9).",
+        "Medición de anuncios (iOS): la app usa ahora SKAdNetwork de Apple (agregado, con retraso, sin identificador publicitario ni datos de salud) para medir instalaciones y compras (apartado 2.2.2).",
+        "Meta: ya no hay una pregunta de consentimiento. Compartir eventos de instalación y compra con Meta solo empieza si activas «Compartir eventos de instalación y compra con Meta» en Ajustes; está desactivado por defecto (apartado 2.2.2).",
       ],
       terms: [
         "El historial guardado incluye ahora tu diario, y al compartir los seguidores solo ven las entradas compartidas (apartados 2 y 8.1).",
@@ -50,10 +46,8 @@ const COPY: Record<CoreLocale, Copy> = {
     previous: (until) => `Vorherige Fassung (gültig bis ${until})`,
     items: {
       privacy: [
-        "Logbuch: Wenn du den gespeicherten Kurvenverlauf nutzt (Dulce Pro), wird dein Logbuch, jeder Eintrag mit allen Angaben samt Notizen, jetzt als Teil davon auf unserem Relay gespeichert, damit es nach einer Neuinstallation oder auf einem neuen Handy zurückkommt (Abschnitt 2.6).",
-        "Hast du dem gespeicherten Kurvenverlauf früher zugestimmt, wird dein Logbuch erst gespeichert, wenn du in der App zustimmst; du kannst das mit „Mein Logbuch speichern“ ändern (Abschnitt 2.6).",
-        "Familie: „Mein Logbuch mit der Familie teilen“ entscheidet nur, ob Follower es sehen. Wenn du es einschaltest, sehen sie dein gespeichertes Logbuch der letzten 90 Tage (Abschnitte 2.4 und 2.6).",
-        "Löschen: Wenn du „Mein Logbuch speichern“ ausschaltest, wird das gespeicherte Logbuch gelöscht, solange du es nicht teilst; die anderen Wege zum Löschen umfassen jetzt auch das Logbuch (Abschnitte 2.6 und 9).",
+        "Werbemessung (iOS): Die App nutzt jetzt Apples SKAdNetwork (aggregiert, verzögert, ohne Werbe-ID, ohne Gesundheitsdaten), um Installationen und Käufe zu messen (Abschnitt 2.2.2).",
+        "Meta: Es gibt keine Einwilligungsfrage mehr. Das Teilen von Installations- und Kaufereignissen mit Meta beginnt nur, wenn du in den Einstellungen „Installations- und Kaufereignisse mit Meta teilen“ einschaltest; standardmäßig ist es aus (Abschnitt 2.2.2).",
       ],
       terms: [
         "Der gespeicherte Kurvenverlauf umfasst jetzt dein Logbuch; beim Teilen sehen Follower nur die geteilten Einträge (Abschnitte 2 und 8.1).",
@@ -65,10 +59,8 @@ const COPY: Record<CoreLocale, Copy> = {
     previous: (until) => `Version précédente (en vigueur jusqu'au ${until})`,
     items: {
       privacy: [
-        "Journal : si tu utilises l’historique enregistré (Dulce Pro), ton journal, chaque entrée avec tous ses détails, notes comprises, est maintenant enregistré sur notre relay dans ce cadre, pour qu’il revienne après une réinstallation ou sur un nouveau téléphone (section 2.6).",
-        "Si tu as accepté l’historique enregistré avant, ton journal n’est enregistré qu’une fois que tu l’acceptes dans l’app ; tu peux le changer avec « Enregistrer mon journal » (section 2.6).",
-        "Famille : « Partager mon journal avec ma famille » décide seulement si tes abonnés le voient. En l’activant, ils voient ton journal enregistré des 90 derniers jours (sections 2.4 et 2.6).",
-        "Suppression : désactiver « Enregistrer mon journal » supprime le journal enregistré tant que tu ne le partages pas ; les autres façons de supprimer couvrent maintenant aussi le journal (sections 2.6 et 9).",
+        "Mesure publicitaire (iOS) : l’app utilise maintenant SKAdNetwork d’Apple (agrégé, différé, sans identifiant publicitaire ni donnée de santé) pour mesurer les installations et les achats (section 2.2.2).",
+        "Meta : il n’y a plus de question de consentement. Le partage des événements d’installation et d’achat avec Meta ne démarre que si tu actives « Partager les événements d’installation et d’achat avec Meta » dans Réglages ; il est désactivé par défaut (section 2.2.2).",
       ],
       terms: [
         "L’historique enregistré inclut maintenant ton journal ; en partageant, tes abonnés ne voient que les entrées partagées (sections 2 et 8.1).",
@@ -80,10 +72,8 @@ const COPY: Record<CoreLocale, Copy> = {
     previous: (until) => `Versione precedente (valida fino al ${until})`,
     items: {
       privacy: [
-        "Diario: se usi la cronologia salvata (Dulce Pro), il tuo diario, ogni voce con tutti i dettagli, note comprese, viene ora salvato sul nostro relay come parte di essa, così torna dopo una reinstallazione o su un telefono nuovo (sezione 2.6).",
-        "Se hai accettato la cronologia salvata prima, il tuo diario non viene salvato finché non lo accetti nell’app; puoi cambiarlo con «Salva il mio diario» (sezione 2.6).",
-        "Famiglia: «Condividi il mio diario con la famiglia» decide solo se i follower lo vedono. Attivandolo, vedono il tuo diario salvato degli ultimi 90 giorni (sezioni 2.4 e 2.6).",
-        "Eliminazione: disattivare «Salva il mio diario» elimina il diario salvato finché non lo condividi; gli altri modi per eliminare ora coprono anche il diario (sezioni 2.6 e 9).",
+        "Misurazione degli annunci (iOS): l’app usa ora SKAdNetwork di Apple (aggregato, ritardato, senza identificativo pubblicitario né dati sanitari) per misurare installazioni e acquisti (sezione 2.2.2).",
+        "Meta: non c’è più una domanda di consenso. La condivisione di eventi di installazione e acquisto con Meta parte solo se attivi «Condividi eventi di installazione e acquisto con Meta» in Impostazioni; è disattivata per impostazione predefinita (sezione 2.2.2).",
       ],
       terms: [
         "La cronologia salvata include ora il tuo diario; condividendo, i follower vedono solo le voci condivise (sezioni 2 e 8.1).",

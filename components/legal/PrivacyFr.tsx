@@ -91,32 +91,38 @@ export function PrivacyFr() {
         </li>
       </ul>
 
-      <h3>2.2.2 Mesure publicitaire (facultative, iOS)</h3>
+      <h3>2.2.2 Mesure publicitaire (iOS)</h3>
       <p>
-        L&apos;app Dulce peut inclure le SDK Meta (Meta Platforms Ireland Ltd. pour les
-        utilisateurs en Europe) afin de mesurer si les publicités de Dulce sur Facebook et
-        Instagram mènent à des installations et à des abonnements. Elle est
-        <strong>désactivée</strong> tant que tu ne réponds pas oui à une question dans l&apos;app,
-        et tu peux la désactiver à tout moment dans Réglages (ligne « Mesure publicitaire »). Si
-        tu réponds non, rien n&apos;est envoyé à Meta.
+        Pour mesurer si les publicités de Dulce mènent à des installations et à des abonnements,
+        l&apos;app iOS utilise SKAdNetwork d&apos;Apple, son système d&apos;attribution
+        publicitaire respectueux de la vie privée. L&apos;app met seulement à jour sur ton
+        appareil une valeur de conversion approximative (installée, essai démarré, abonnement
+        mensuel, annuel ou à vie). Apple envoie au réseau publicitaire des rapports agrégés et
+        différés qui ne t&apos;identifient pas. Aucun identifiant publicitaire ni demande de
+        suivi n&apos;est utilisé, et ils ne contiennent aucune donnée de glycémie ou de santé.
       </p>
       <p>
-        Si tu l&apos;autorises, nous partageons le fait que l&apos;app a été installée ou ouverte
-        et qu&apos;un abonnement ou un essai a démarré (les événements d&apos;achat sont envoyés
-        par notre prestataire de paiement, RevenueCat), ainsi qu&apos;un identifiant anonyme créé
-        par le SDK Meta pour cette app et les données techniques envoyées avec toute requête
-        (adresse IP, modèle d&apos;appareil, version du système). Nous ne partageons jamais de
-        mesures de glycémie, de données de santé, de données du compte du capteur, ni ton nom ou
+        Séparément, Dulce peut partager avec Meta (Meta Platforms Ireland Ltd. pour les
+        utilisateurs en Europe) des événements d&apos;installation et d&apos;achat. C&apos;est
+        <strong>désactivé</strong> par défaut : cela ne démarre que si tu actives « Partager les
+        événements d&apos;installation et d&apos;achat avec Meta » dans Réglages, et tu peux le
+        désactiver à tout moment au même endroit. Tant que tu ne l&apos;actives pas, le SDK Meta
+        n&apos;est pas démarré et rien n&apos;est envoyé à Meta. Si tu l&apos;actives, nous
+        partageons le fait que l&apos;app a été installée ou ouverte et qu&apos;un abonnement ou
+        un essai a démarré (les événements d&apos;achat sont envoyés par notre prestataire de
+        paiement, RevenueCat), ainsi qu&apos;un identifiant anonyme créé par le SDK Meta pour
+        cette app et les données techniques envoyées avec toute requête (adresse IP, modèle
+        d&apos;appareil, version du système). Nous ne partageons jamais de mesures de glycémie,
+        de données ou d&apos;événements de santé, de données du compte du capteur, ni ton nom ou
         ton e-mail.
       </p>
       <p>
         Dulce n&apos;affiche pas la demande de suivi d&apos;Apple et ne collecte pas
         l&apos;identifiant publicitaire (IDFA). Tu n&apos;es pas suivi sur les apps et sites
-        d&apos;autres entreprises, et la mesure est agrégée. La base juridique est ton
-        consentement (art. 6, par. 1, point a) du RGPD), que tu peux retirer à tout moment dans
-        Réglages.
+        d&apos;autres entreprises. La base juridique du partage avec Meta est ton consentement
+        (art. 6, par. 1, point a) du RGPD), que tu peux retirer à tout moment en désactivant
+        l&apos;interrupteur.
       </p>
-
       <h3>2.3 Le relais Dulce (fonctions en temps réel)</h3>
       <p>
         Quand ton CGM est connecté, l&apos;app enregistre cette installation auprès de notre
@@ -554,7 +560,7 @@ export function PrivacyFr() {
         </li>
         <li>
           <strong>Consentement</strong> (art. 6, par. 1, point a) du RGPD) : aussi pour la mesure
-          publicitaire facultative décrite à la section 2.2.2 ; tu peux le retirer à tout moment
+          publicitaire facultative décrite à la section 2.2.2 (l&apos;interrupteur Meta) ; tu peux le retirer à tout moment
           dans Réglages.
         </li>
         <li>
@@ -719,8 +725,8 @@ export function PrivacyFr() {
           uniquement).
         </li>
         <li>
-          <strong>Meta (Meta Platforms Ireland Ltd.)</strong> : uniquement si tu autorises la
-          mesure publicitaire dans l&apos;app (section 2.2.2).
+          <strong>Meta (Meta Platforms Ireland Ltd.)</strong> : uniquement si tu actives le partage avec
+          Meta dans l&apos;app (section 2.2.2).
         </li>
         <li>
           <strong>Supabase</strong> (stockage de la liste d&apos;attente et de la bêta) : hébergé
@@ -751,7 +757,7 @@ export function PrivacyFr() {
       <p>
         Nous ne vendons, ne louons et ne cédons jamais tes données à des tiers à des fins
         publicitaires ou commerciales. Le seul partage lié à la publicité est la mesure
-        publicitaire facultative de la section 2.2.2, qui reste désactivée sauf si tu l&apos;autorises.
+        publicitaire de la section 2.2.2 (les valeurs agrégées de SKAdNetwork d&apos;Apple et le partage avec Meta, qui reste désactivé sauf si tu l&apos;actives).
       </p>
 
       <h2 id="transfers">8. Transferts internationaux</h2>

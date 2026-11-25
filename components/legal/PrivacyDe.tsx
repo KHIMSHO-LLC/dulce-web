@@ -89,29 +89,36 @@ Missbrauch.
         </li>
       </ul>
 
-      <h3>2.2.2 Werbemessung (optional, iOS)</h3>
+      <h3>2.2.2 Werbemessung (iOS)</h3>
       <p>
-        Die Dulce-App kann das Meta-SDK enthalten (Meta Platforms Ireland Ltd. für Nutzer in
-        Europa), um zu messen, ob Dulces eigene Anzeigen auf Facebook und Instagram zu
-        Installationen und Abonnements führen. Sie ist <strong>aus</strong>, bis du in der App
-        eine Frage mit Ja beantwortest, und du kannst sie jederzeit in den Einstellungen wieder
-        ausschalten (Zeile „Werbemessung“). Wenn du Nein sagst, wird nichts an Meta gesendet.
+        Um zu messen, ob Dulces eigene Anzeigen zu Installationen und Abonnements führen, nutzt
+        die iOS-App Apples SKAdNetwork, Apples datenschutzfreundliche Werbezuordnung. Die App
+        aktualisiert auf deinem Gerät nur einen groben Conversion-Wert (installiert, Testphase
+        gestartet, Monats-, Jahres- oder Lifetime-Abonnement). Apple sendet dem Werbenetzwerk
+        aggregierte, verzögerte Berichte, die dich nicht identifizieren. Dabei werden weder eine
+        Werbe-ID noch eine Tracking-Abfrage verwendet, und sie enthalten keine Glukose- oder
+        Gesundheitsdaten.
       </p>
       <p>
-        Wenn du zustimmst, teilen wir mit, dass die App installiert oder geöffnet wurde und dass
+        Davon getrennt kann Dulce Installations- und Kaufereignisse mit Meta teilen (Meta
+        Platforms Ireland Ltd. für Nutzer in Europa). Das ist standardmäßig <strong>aus</strong>:
+        Es beginnt nur, wenn du in den Einstellungen „Installations- und Kaufereignisse mit Meta
+        teilen“ einschaltest, und du kannst es dort jederzeit wieder ausschalten. Solange du es
+        nicht einschaltest, wird das Meta-SDK nicht gestartet und nichts an Meta gesendet. Wenn du
+        es einschaltest, teilen wir mit, dass die App installiert oder geöffnet wurde und dass
         ein Abonnement oder eine Testphase gestartet wurde (Kaufereignisse sendet unser
         Zahlungsdienstleister RevenueCat), zusammen mit einer anonymen Kennung, die das Meta-SDK
         für diese App erzeugt, und den technischen Daten, die mit jeder Anfrage gesendet werden
         (IP-Adresse, Gerätemodell, Betriebssystemversion). Wir teilen nie Glukosewerte,
-        Gesundheitsdaten, Zugangsdaten deines Sensorkontos, deinen Namen oder deine E-Mail-Adresse.
+        Gesundheitsdaten oder Gesundheitsereignisse, Zugangsdaten deines Sensorkontos, deinen
+        Namen oder deine E-Mail-Adresse.
       </p>
       <p>
         Dulce zeigt Apples Tracking-Abfrage nicht an und erhebt die Werbe-ID (IDFA) nicht. Du
-        wirst nicht über Apps und Websites anderer Unternehmen hinweg verfolgt, und die Messung
-        erfolgt aggregiert. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO),
-        die du jederzeit in den Einstellungen widerrufen kannst.
+        wirst nicht über Apps und Websites anderer Unternehmen hinweg verfolgt. Rechtsgrundlage
+        für die Weitergabe an Meta ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die du
+        jederzeit widerrufen kannst, indem du den Schalter ausschaltest.
       </p>
-
       <h3>2.3 Das Dulce-Relay (Echtzeitfunktionen)</h3>
       <p>
         Wenn dein CGM verbunden ist, registriert die App diese Installation bei unserem Relay,
@@ -539,7 +546,7 @@ Missbrauch.
         </li>
         <li>
           <strong>Einwilligung</strong> (Art. 6 Abs. 1 lit. a DSGVO): auch für die optionale
-          Werbemessung nach Abschnitt 2.2.2; du kannst sie jederzeit in den Einstellungen
+          Werbemessung nach Abschnitt 2.2.2 (der Meta-Schalter); du kannst sie jederzeit in den Einstellungen
           widerrufen.
         </li>
         <li>
@@ -699,8 +706,8 @@ Missbrauch.
           <strong>RevenueCat</strong>: Prüfung von Abonnements (nur pseudonyme Kennung).
         </li>
         <li>
-          <strong>Meta (Meta Platforms Ireland Ltd.)</strong>: nur wenn du die Werbemessung in
-          der App erlaubst (Abschnitt 2.2.2).
+          <strong>Meta (Meta Platforms Ireland Ltd.)</strong>: nur wenn du das Teilen mit Meta in
+          der App einschaltest (Abschnitt 2.2.2).
         </li>
         <li>
           <strong>Supabase</strong> (Speicher für Warteliste und Beta): gehostet in der EU
@@ -731,7 +738,7 @@ Missbrauch.
       <p>
         Wir verkaufen, vermieten oder überlassen deine Daten nie Dritten für Werbe- oder
         kommerzielle Zwecke. Die einzige werbebezogene Weitergabe ist die optionale
-        Werbemessung nach Abschnitt 2.2.2, die ausgeschaltet bleibt, solange du sie nicht erlaubst.
+        Werbemessung nach Abschnitt 2.2.2 (Apples aggregierte SKAdNetwork-Werte und das Teilen mit Meta, das ausgeschaltet bleibt, solange du es nicht einschaltest).
       </p>
 
       <h2 id="transfers">8. Internationale Übermittlungen</h2>
