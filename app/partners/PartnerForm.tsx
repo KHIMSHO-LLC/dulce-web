@@ -90,11 +90,11 @@ export function PartnerForm({ offerings, initial, onSubmit, onCancel }: Props) {
   const yearlyNum = Number(yearly);
 
   // A worked example so the deal is concrete before saving: one person on the
-  // €2.99 monthly plan in Spain (21% VAT, Apple 15%) → Dulce nets ≈ €2.10.
-  const exampleNet = (2.99 / 1.21) * 0.85;
+  // €3.99 monthly plan in Spain (21% VAT, Apple 15%) → Dulce nets ≈ €2.80.
+  const exampleNet = (3.99 / 1.21) * 0.85;
   const example =
     payoutType === "revshare" && amountNum > 0
-      ? `Example: a person in Spain paying €2.99/month earns the partner about ${eur((exampleNet * amountNum) / 100)} a month, for ${monthlyNum || 0} month${monthlyNum === 1 ? "" : "s"} (about ${eur(((exampleNet * amountNum) / 100) * (monthlyNum || 0))} in total).`
+      ? `Example: a person in Spain paying €3.99/month earns the partner about ${eur((exampleNet * amountNum) / 100)} a month, for ${monthlyNum || 0} month${monthlyNum === 1 ? "" : "s"} (about ${eur(((exampleNet * amountNum) / 100) * (monthlyNum || 0))} in total).`
       : null;
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
