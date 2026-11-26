@@ -32,7 +32,7 @@ Made by someone who lives with T1D, for people with T1D wherever they live. Neve
 - Live since 1.0.6 (2026-11-05): Medtronic Simplera, Guardian, Instinct and MiniMed 780G via CareLink, and your own Nightscout site (read only; https URL and token; free, like every sensor).
 - Not live: Android (waitlist only; in Google Play internal testing).
 - The app UI is available in Spanish, English, German, French, Italian, Dutch, Finnish, Swedish, Danish, Norwegian, Russian and Georgian (the last seven from 1.0.6), plus Japanese and Korean (from 1.0.7). The site is English at `/` and Spanish, German, French and Italian at `/es`, `/de`, `/fr`, `/it` (Spanish was at `/` until 2026-11-03). Finnish (`/fi`) and Dutch (`/nl`) since 2026-11-04: site text, calculators, setup and status pages, plus the guides translated so far; their legal pages show the English text (noindex). Norwegian (`/nb`), Swedish (`/sv`) and Russian (`/ru`) the same way since 2026-11-05 (no guides translated yet). First visits to pages without a per-language slug follow the browser language.
-- Pricing: free download; Dulce Pro (Apple Watch, family sharing and more) with a 14-day free trial. Do not state Pro prices on the site.
+- Pricing: free download; Dulce Pro (Apple Watch, family sharing and more) with a 14-day free trial. The site states the US prices only (US$3.99 a month, US$29.99 a year), always from `lib/pricing.ts`, always labelled as United States prices in US dollars and next to the note that the App Store shows the price in the visitor's currency. Never type a price into message files or components.
 - The app runs on iOS 17 or later, but widgets and the Live Activity live in an extension built for iOS 18 (dulce-app `targets/GlucoseWidget`, deploymentTarget 18.0), so on iOS 17 there are no widgets or Live Activity. Dynamic Island needs iPhone 14 Pro or later; the CarPlay / Smart Stack card needs iOS 26 (checked 2026-11-10).
 - Not a medical device. It does not diagnose, treat or replace the CGM's own alarms or the care team's judgment.
 - The site is one landing page plus the functional routes that must keep working: `/setup`, `/legal/*`, `/f/<code>`, `/.well-known/*`, `/partners`. Retired marketing routes redirect into sections of the landing page.
@@ -50,7 +50,13 @@ Made by someone who lives with T1D, for people with T1D wherever they live. Neve
 - App Store listing: https://apps.apple.com/app/id6770694596 (2 ratings as of 2026-10-12, v1.0.2).
 - Founder story (Giorgio, lives with T1D) from the previous About page copy.
 - Claims carried over from the previous site copy, written by the founder (keep unless the founder withdraws them): Dulce does not sell data and has no ads; GDPR compliance (see the privacy policy); stale data over 15 minutes is shown plainly on the Watch, never as a fresh number; contact replies within 48 working hours, from a person.
-- Not on hand and never to be fabricated: user counts, testimonials beyond the real App Store review, press, clinical or accuracy data, partnerships, prices.
+- Not on hand and never to be fabricated: user counts, testimonials beyond the real App Store review, press, clinical or accuracy data, partnerships, any price other than the Pro prices in `lib/pricing.ts`.
+
+### When the price changes
+
+1. Edit `lib/pricing.ts` (`PRO_PRICES`). It feeds the Pro page pricing block and FAQ, `app/llms.txt/route.ts` and the JSON-LD offers (`appOffers` in `lib/schema.ts`).
+2. Edit the Dulce cell of the "Price" row in the 9 comparison article files `content/articles/glucose-apps-compared/{en,de,es,fr,it,nl,sv,fi,nb}.mdx` (MDX cannot import the constant). Leave the competitor's numbers alone.
+3. Check that no other file has a hardcoded Dulce price (`grep -rn "3,99\|3\.99\|29,99\|29\.99" app components content lib messages`); the partner form example uses its own sample figure.
 
 ## Product Principles
 

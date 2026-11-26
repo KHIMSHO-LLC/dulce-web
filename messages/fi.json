@@ -578,6 +578,16 @@
       "Apple Terveys -tiedot päiväkirjassa ja trendeissä",
       "Hälytysten tarkistus minuutin välein"
     ],
+    "pricing": {
+      "title": "Hinnat",
+      "monthlyTitle": "Kuukausitilaus",
+      "monthlyLine": "{price} kuukaudessa",
+      "yearlyTitle": "Vuositilaus",
+      "yearlyLine": "{price} vuodessa",
+      "yearlyPerMonth": "Noin {perMonth} kuukaudessa",
+      "trialLine": "14 päivää ilmaiseksi uusille tilaajille. Peruminen onnistuu milloin tahansa.",
+      "note": "Näytetyt hinnat ovat Yhdysvaltojen hintoja Yhdysvaltain dollareina. Muissa maissa App Store näyttää hinnan omassa valuutassasi ennen vahvistusta."
+    },
     "trialTitle": "Näin kokeilu toimii",
     "trial": [
       "Uudet tilaajat saavat 14 päivää ilmaiseksi.",
@@ -587,7 +597,7 @@
     "faq": [
       {
         "q": "Onko Dulce ilmainen?",
-        "a": "On. Dulcen lataus on ilmainen, ja siinä on reaaliaikainen glukoosi, widgetit, hälytykset, päiväkirja ja trendit. Dulce Pro on valinnainen tilaus, jossa on 14 päivän ilmainen kokeilu."
+        "a": "On. Dulcen lataus on ilmainen, ja siinä on reaaliaikainen glukoosi, widgetit, hälytykset, päiväkirja ja trendit. Dulce Pro on valinnainen tilaus, jossa on 14 päivän ilmainen kokeilu. Yhdysvalloissa se maksaa {monthly} kuukaudessa tai {yearly} vuodessa; muissa maissa App Store näyttää hinnan omassa valuutassasi ennen vahvistusta."
       },
       {
         "q": "Mitä Dulce Pro tuo lisää?",

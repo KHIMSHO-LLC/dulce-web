@@ -8,6 +8,7 @@ import type { AppLocale } from "@/i18n/routing";
 import { AUTHORS, type AuthorId } from "@/content/authors";
 import { APP_STORE_ID } from "./appStore";
 import { authorPath } from "./articles";
+import { PRO_PRICES } from "./pricing";
 import { absoluteUrl } from "./seo";
 import { CONTACT_EMAIL, SITE_URL, SOCIAL } from "./site";
 
@@ -17,6 +18,27 @@ export const APP_ID = `${SITE_URL}/#app`;
 export const APP_STORE_URL = `https://apps.apple.com/app/id${APP_STORE_ID}`;
 
 const publisher = { "@id": ORG_ID };
+
+/**
+ * The free download plus the two Dulce Pro in-app subscriptions, as plain Offers on the
+ * app entity. Pro prices are the United States prices in USD (the App Store sets other
+ * countries' prices), from lib/pricing.ts. No region or availability claims are made.
+ */
+export function appOffers() {
+  const sub = (name: string, price: number, period: string) => ({
+    "@type": "Offer",
+    name,
+    category: "Subscription",
+    description: `In-app subscription, billed ${period}, with a 14-day free trial for new subscribers. United States price in US dollars; the App Store shows the price in your currency.`,
+    price: price.toFixed(2),
+    priceCurrency: PRO_PRICES.currency,
+  });
+  return [
+    { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+    sub("Dulce Pro monthly", PRO_PRICES.monthly, "monthly"),
+    sub("Dulce Pro yearly", PRO_PRICES.yearly, "yearly"),
+  ];
+}
 
 /**
  * Content dates are calendar days (YYYY-MM-DD). Google's Article check wants a

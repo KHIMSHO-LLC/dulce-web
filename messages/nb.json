@@ -578,6 +578,16 @@
       "Data fra Apple Helse i loggboken og trendene",
       "Alarmer som sjekkes hvert minutt"
     ],
+    "pricing": {
+      "title": "Priser",
+      "monthlyTitle": "Månedlig",
+      "monthlyLine": "{price} i måneden",
+      "yearlyTitle": "Årlig",
+      "yearlyLine": "{price} i året",
+      "yearlyPerMonth": "Omtrent {perMonth} i måneden",
+      "trialLine": "14 dager gratis for nye abonnenter. Si opp når som helst.",
+      "note": "Prisene som vises, gjelder USA, i amerikanske dollar. I andre land viser App Store prisen i din valuta før du bekrefter."
+    },
     "trialTitle": "Slik fungerer prøveperioden",
     "trial": [
       "Nye abonnenter får 14 dager gratis.",
@@ -587,7 +597,7 @@
     "faq": [
       {
         "q": "Er Dulce gratis?",
-        "a": "Ja. Dulce er gratis å laste ned, med live glukose, widgeter, alarmer, loggbok og trender. Dulce Pro er et valgfritt abonnement med 14 dagers gratis prøveperiode."
+        "a": "Ja. Dulce er gratis å laste ned, med live glukose, widgeter, alarmer, loggbok og trender. Dulce Pro er et valgfritt abonnement med 14 dagers gratis prøveperiode. I USA koster det {monthly} i måneden eller {yearly} i året; i andre land viser App Store prisen i din valuta før du bekrefter."
       },
       {
         "q": "Hva legger Dulce Pro til?",

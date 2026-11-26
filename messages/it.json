@@ -578,6 +578,16 @@
       "Dati di Salute di Apple nel Diario e in Andamento",
       "Avvisi controllati ogni minuto"
     ],
+    "pricing": {
+      "title": "Prezzi",
+      "monthlyTitle": "Mensile",
+      "monthlyLine": "{price} al mese",
+      "yearlyTitle": "Annuale",
+      "yearlyLine": "{price} all'anno",
+      "yearlyPerMonth": "Circa {perMonth} al mese",
+      "trialLine": "14 giorni gratis per i nuovi abbonati. Disdici quando vuoi.",
+      "note": "I prezzi indicati sono quelli degli Stati Uniti, in dollari statunitensi. Negli altri paesi l'App Store ti mostra il prezzo nella tua valuta prima di confermare."
+    },
     "trialTitle": "Come funziona la prova",
     "trial": [
       "I nuovi abbonati hanno 14 giorni gratis.",
@@ -587,7 +597,7 @@
     "faq": [
       {
         "q": "Dulce è gratis?",
-        "a": "Sì. Dulce si scarica gratis, con glicemia in tempo reale, widget, avvisi, Diario e Andamento. Dulce Pro è un abbonamento facoltativo con 14 giorni di prova gratuita."
+        "a": "Sì. Dulce si scarica gratis, con glicemia in tempo reale, widget, avvisi, Diario e Andamento. Dulce Pro è un abbonamento facoltativo con 14 giorni di prova gratuita. Negli Stati Uniti costa {monthly} al mese o {yearly} all'anno; negli altri paesi l'App Store ti mostra il prezzo nella tua valuta prima di confermare."
       },
       {
         "q": "Cosa aggiunge Dulce Pro?",

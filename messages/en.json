@@ -578,6 +578,16 @@
       "Apple Health data in your Logbook and Trends",
       "Alerts checked every minute"
     ],
+    "pricing": {
+      "title": "Pricing",
+      "monthlyTitle": "Monthly",
+      "monthlyLine": "{price} a month",
+      "yearlyTitle": "Yearly",
+      "yearlyLine": "{price} a year",
+      "yearlyPerMonth": "About {perMonth} a month",
+      "trialLine": "14 days free for new subscribers. Cancel any time.",
+      "note": "Prices shown are for the United States, in US dollars. In other countries the App Store shows the price in your currency before you confirm."
+    },
     "trialTitle": "How the trial works",
     "trial": [
       "New subscribers get 14 days free.",
@@ -587,7 +597,7 @@
     "faq": [
       {
         "q": "Is Dulce free?",
-        "a": "Yes. Dulce is free to download, with live glucose, widgets, alerts, the Logbook and Trends. Dulce Pro is an optional subscription with a 14-day free trial."
+        "a": "Yes. Dulce is free to download, with live glucose, widgets, alerts, the Logbook and Trends. Dulce Pro is an optional subscription with a 14-day free trial. In the United States it costs {monthly} a month or {yearly} a year; in other countries the App Store shows the price in your currency before you confirm."
       },
       {
         "q": "What does Dulce Pro add?",

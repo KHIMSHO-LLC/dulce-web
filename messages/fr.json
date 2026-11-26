@@ -578,6 +578,16 @@
       "Données Apple Santé dans ton Journal et tes Tendances",
       "Alertes vérifiées chaque minute"
     ],
+    "pricing": {
+      "title": "Tarifs",
+      "monthlyTitle": "Mensuel",
+      "monthlyLine": "{price} par mois",
+      "yearlyTitle": "Annuel",
+      "yearlyLine": "{price} par an",
+      "yearlyPerMonth": "Environ {perMonth} par mois",
+      "trialLine": "14 jours gratuits pour les nouveaux abonnés. Résiliation à tout moment.",
+      "note": "Les prix indiqués sont ceux des États-Unis, en dollars américains. Dans les autres pays, l'App Store t'affiche le prix dans ta devise avant de confirmer."
+    },
     "trialTitle": "Comment fonctionne l'essai",
     "trial": [
       "Les nouveaux abonnés ont 14 jours gratuits.",
@@ -587,7 +597,7 @@
     "faq": [
       {
         "q": "Dulce est-il gratuit ?",
-        "a": "Oui. Dulce se télécharge gratuitement, avec la glycémie en direct, les widgets, les alertes, le Journal et les Tendances. Dulce Pro est un abonnement facultatif avec 14 jours d'essai gratuit."
+        "a": "Oui. Dulce se télécharge gratuitement, avec la glycémie en direct, les widgets, les alertes, le Journal et les Tendances. Dulce Pro est un abonnement facultatif avec 14 jours d'essai gratuit. Aux États-Unis, il coûte {monthly} par mois ou {yearly} par an ; dans les autres pays, l'App Store t'affiche le prix dans ta devise avant de confirmer."
       },
       {
         "q": "Qu'ajoute Dulce Pro ?",

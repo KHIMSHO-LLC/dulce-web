@@ -578,6 +578,16 @@
       "Gegevens uit Apple Gezondheid in je logboek en trends",
       "Meldingen elke minuut gecontroleerd"
     ],
+    "pricing": {
+      "title": "Prijzen",
+      "monthlyTitle": "Maandelijks",
+      "monthlyLine": "{price} per maand",
+      "yearlyTitle": "Jaarlijks",
+      "yearlyLine": "{price} per jaar",
+      "yearlyPerMonth": "Ongeveer {perMonth} per maand",
+      "trialLine": "14 dagen gratis voor nieuwe abonnees. Altijd opzegbaar.",
+      "note": "De getoonde prijzen gelden voor de Verenigde Staten, in Amerikaanse dollars. In andere landen toont de App Store de prijs in je eigen valuta voordat je bevestigt."
+    },
     "trialTitle": "Hoe de proefperiode werkt",
     "trial": [
       "Nieuwe abonnees krijgen 14 dagen gratis.",
@@ -587,7 +597,7 @@
     "faq": [
       {
         "q": "Is Dulce gratis?",
-        "a": "Ja. Dulce downloaden is gratis, met live glucose, widgets, meldingen, het logboek en trends. Dulce Pro is een optioneel abonnement met 14 dagen gratis proberen."
+        "a": "Ja. Dulce downloaden is gratis, met live glucose, widgets, meldingen, het logboek en trends. Dulce Pro is een optioneel abonnement met 14 dagen gratis proberen. In de Verenigde Staten kost het {monthly} per maand of {yearly} per jaar; in andere landen toont de App Store de prijs in je eigen valuta voordat je bevestigt."
       },
       {
         "q": "Wat voegt Dulce Pro toe?",

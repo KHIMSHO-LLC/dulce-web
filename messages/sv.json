@@ -578,6 +578,16 @@
       "Data från Apple Hälsa i loggboken och trenderna",
       "Larm som kontrolleras varje minut"
     ],
+    "pricing": {
+      "title": "Priser",
+      "monthlyTitle": "Månadsvis",
+      "monthlyLine": "{price} i månaden",
+      "yearlyTitle": "Årsvis",
+      "yearlyLine": "{price} om året",
+      "yearlyPerMonth": "Ungefär {perMonth} i månaden",
+      "trialLine": "14 dagar gratis för nya prenumeranter. Säg upp när som helst.",
+      "note": "Priserna gäller USA, i amerikanska dollar. I andra länder visar App Store priset i din valuta innan du bekräftar."
+    },
     "trialTitle": "Så fungerar provperioden",
     "trial": [
       "Nya prenumeranter får 14 dagar gratis.",
@@ -587,7 +597,7 @@
     "faq": [
       {
         "q": "Är Dulce gratis?",
-        "a": "Ja. Dulce är gratis att hämta, med live-glukos, widgetar, larm, loggbok och trender. Dulce Pro är en valfri prenumeration med 14 dagars gratis provperiod."
+        "a": "Ja. Dulce är gratis att hämta, med live-glukos, widgetar, larm, loggbok och trender. Dulce Pro är en valfri prenumeration med 14 dagars gratis provperiod. I USA kostar den {monthly} i månaden eller {yearly} om året; i andra länder visar App Store priset i din valuta innan du bekräftar."
       },
       {
         "q": "Vad lägger Dulce Pro till?",

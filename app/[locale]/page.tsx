@@ -26,7 +26,7 @@ import { Reviews } from "@/components/landing/Reviews";
 import { Reveal } from "@/components/motion/Reveal";
 import { Split } from "@/components/motion/Split";
 import type { ScreenName } from "@/components/screens/draw";
-import { APP_ID, APP_STORE_URL, ORG_ID, faqSchema } from "@/lib/schema";
+import { APP_ID, APP_STORE_URL, ORG_ID, appOffers, faqSchema } from "@/lib/schema";
 import { seoFor } from "@/lib/seo";
 import { SECTION, SITE_URL, localeUrl } from "@/lib/site";
 
@@ -200,9 +200,8 @@ function appSchema(locale: AppLocale, description: string) {
     ],
     featureList: FEATURES[locale],
     audience: { "@type": "PeopleAudience", audienceType: AUDIENCE[locale] },
-    // Free download. Dulce Pro is not listed as an Offer: its price differs by App Store country and
-    // the site has no price to quote. TODO(Giorgi): add a second Offer if a single public price is decided.
-    offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+    // Free download plus the two Dulce Pro subscriptions (US prices in USD, from lib/pricing.ts).
+    offers: appOffers(),
     // TODO(Giorgi): no aggregateRating until there is a real rating source (App Store rating + count) to read.
     publisher: { "@id": ORG_ID },
   };

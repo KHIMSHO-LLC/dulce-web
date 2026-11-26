@@ -10,6 +10,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { seoFor, localizedPath, pageTitle } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
+import { fillPrices, proPriceStrings } from "@/lib/pricing";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/pro">): Promise<Metadata> {
   const { locale } = await params;
@@ -22,9 +23,9 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/pro">): 
 type Faq = { q: string; a: string };
 
 /**
- * Free vs Dulce Pro. Features only from the released app; no prices, which
- * differ by country (the App Store shows them in the visitor's currency).
- * TODO(Giorgi): no Product/Offer JSON-LD until there is a public price to quote.
+ * Free vs Dulce Pro. Features only from the released app. Prices are the US prices from
+ * lib/pricing.ts, always labelled as such with the local-currency note (they differ by country).
+ * The Offers for them live in the app's JSON-LD on the home page (`appOffers` in lib/schema.ts).
  */
 export default async function ProPage({ params }: PageProps<"/[locale]/pro">) {
   const { locale } = await params;
@@ -33,7 +34,8 @@ export default async function ProPage({ params }: PageProps<"/[locale]/pro">) {
   const loc = locale as AppLocale;
   const t = await getTranslations({ locale: loc, namespace: "pro" });
   const nav = await getTranslations({ locale: loc, namespace: "nav" });
-  const faqItems = t.raw("faq") as Faq[];
+  const faqItems = (t.raw("faq") as Faq[]).map((f) => ({ ...f, a: fillPrices(f.a, locale) }));
+  const prices = proPriceStrings(locale);
   const home = `${SITE_URL}${localizedPath(loc, "/") === "/" ? "" : localizedPath(loc, "/")}`;
 
   const plans = [
@@ -83,6 +85,29 @@ export default async function ProPage({ params }: PageProps<"/[locale]/pro">) {
               </ul>
             </article>
           ))}
+        </Reveal>
+
+        <Reveal className="container-page mt-16">
+          <h2 data-fade className="text-[1.75rem] font-light tracking-[-0.02em] text-ink">
+            {t("pricing.title")}
+          </h2>
+          <div data-fade className="mt-5 grid max-w-3xl gap-4 sm:grid-cols-2">
+            <div className="rounded-[28px] border border-white/8 bg-glass p-7">
+              <h3 className="text-[1.2rem] font-light text-ink">{t("pricing.monthlyTitle")}</h3>
+              <p className="mt-3 text-[1.5rem] font-light text-ink">{t("pricing.monthlyLine", { price: prices.monthly })}</p>
+            </div>
+            <div className="rounded-[28px] border border-white/8 bg-glass p-7">
+              <h3 className="text-[1.2rem] font-light text-ink">{t("pricing.yearlyTitle")}</h3>
+              <p className="mt-3 text-[1.5rem] font-light text-ink">{t("pricing.yearlyLine", { price: prices.yearly })}</p>
+              <p className="mt-1 text-body leading-relaxed text-soft">{t("pricing.yearlyPerMonth", { perMonth: prices.perMonth })}</p>
+            </div>
+          </div>
+          <p data-fade className="mt-5 max-w-[64ch] text-body leading-relaxed text-soft">
+            {t("pricing.trialLine")}
+          </p>
+          <p data-fade className="mt-2 max-w-[64ch] text-[0.9rem] leading-relaxed text-soft">
+            {t("pricing.note")}
+          </p>
         </Reveal>
 
         <Reveal className="container-page mt-16">
