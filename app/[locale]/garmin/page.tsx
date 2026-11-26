@@ -58,6 +58,9 @@ const SURFACE_SHOTS: Record<GarminSurface["id"], Array<{ shot: GarminShot; alt: 
   field: [{ shot: GARMIN_SHOTS.field, alt: "field" }],
 };
 
+/** Card order in "what you get": full-width cards first, the two single-screen cards side by side, the text-only one last. */
+const SURFACE_ORDER: GarminSurface["id"][] = ["app", "face", "glance", "field", "complication"];
+
 function Shot({ shot, alt, className, priority }: { shot: GarminShot; alt: string; className?: string; priority?: boolean }) {
   return (
     <Image
@@ -196,24 +199,35 @@ export default async function GarminPage({ params }: PageProps<"/[locale]/garmin
             {t("surfacesTitle")}
           </h2>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
-            {surfaces.map((s) => {
+            {SURFACE_ORDER.map((id) => surfaces.find((x) => x.id === id)).filter((x): x is GarminSurface => !!x).map((s) => {
               const shots = SURFACE_SHOTS[s.id] ?? [];
+              // Cards with two or more screens, and the text-only complication card, span the full row;
+              // single-screen cards sit two per row. Image beside the text on wide screens, stacked on mobile.
+              const wide = shots.length !== 1;
               return (
                 <section
                   key={s.id}
                   id={s.id}
                   aria-labelledby={`${s.id}-title`}
                   data-fade
-                  className={`${card} scroll-mt-28 ${shots.length > 1 ? "md:col-span-2" : ""}`}
+                  className={`${card} flex scroll-mt-28 flex-col gap-6 ${
+                    wide
+                      ? shots.length ? "md:col-span-2 md:flex-row md:items-center md:justify-center md:gap-14 xl:gap-24" : "md:col-span-2 md:justify-center"
+                      : "lg:flex-row lg:items-center lg:gap-8"
+                  }`}
                 >
-                  <h3 id={`${s.id}-title`} className="text-[1.4rem] font-light tracking-[-0.02em] text-ink">
-                    {s.title}
-                  </h3>
-                  <p className="mt-3 max-w-[64ch] text-body leading-relaxed text-soft">{s.body}</p>
+                  <div className={`min-w-0 flex-1 ${wide ? "md:max-w-[60ch]" : ""}`}>
+                    <h3 id={`${s.id}-title`} className="text-[1.4rem] font-light tracking-[-0.02em] text-ink">
+                      {s.title}
+                    </h3>
+                    <p className="mt-3 max-w-[64ch] text-body leading-relaxed text-soft">{s.body}</p>
+                  </div>
                   {shots.length ? (
-                    <div className={`mt-6 grid gap-4 ${shots.length > 1 ? "grid-cols-2 md:grid-cols-3" : "max-w-[220px]"}`}>
+                    <div className={`flex w-full justify-center gap-3 md:w-auto md:shrink-0 ${wide ? "md:gap-5" : ""}`}>
                       {shots.map(({ shot, alt }) => (
-                        <Shot key={shot.src} shot={shot} alt={t(`gallery.${alt}`)} />
+                        <div key={shot.src} className="min-w-0 max-w-[150px] flex-1 md:w-[120px] md:flex-none lg:w-[150px] xl:w-[190px]">
+                          <Shot shot={shot} alt={t(`gallery.${alt}`)} />
+                        </div>
                       ))}
                     </div>
                   ) : null}
