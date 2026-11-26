@@ -567,17 +567,57 @@
       "Widgets für Home-Bildschirm, Sperrbildschirm und StandBy",
       "Warnungen bei niedrigen, hohen und kritisch niedrigen Werten (alle 5 Minuten geprüft)",
       "Logbuch für Kohlenhydrate, Insulin und Glukose",
+      "Mahlzeiten-Scan per Foto, 3 Fotos am Tag",
       "Dosen aus NFC-Smart-Insulinpens übernehmen",
       "Trends: Zeit im Zielbereich, Durchschnitt und GMI",
       "Den Zucker einer anderen Person verfolgen"
     ],
-    "pro": [
-      "Live-Aktivität auf dem Sperrbildschirm und Dynamic Island, jede Minute aktualisiert",
-      "Apple Watch App und Komplikationen",
-      "Deine Glukose-Karte in CarPlay und im Smart Stack der Apple Watch",
-      "Teilen mit der Familie, beliebig viele Follower, die nichts zahlen",
-      "Apple Health Daten in Logbuch und Trends",
-      "Warnungen jede Minute geprüft"
+    "proItems": [
+      {
+        "id": "lockScreen",
+        "title": "Sperrbildschirm und Dynamic Island",
+        "body": "Deine Glukose live auf dem Sperrbildschirm, jede Minute aktualisiert. Wähle Design, Farben und Verlauf."
+      },
+      {
+        "id": "watch",
+        "title": "Apple Watch",
+        "body": "Dein Wert am Handgelenk, mit Komplikationen für dein Zifferblatt."
+      },
+      {
+        "id": "carPlay",
+        "title": "CarPlay und Smart Stack",
+        "body": "Eine Glukose-Karte auf dem Display im Auto und im Smart Stack der Apple Watch."
+      },
+      {
+        "id": "family",
+        "title": "Teilen mit der Familie",
+        "body": "Lade so viele Follower ein, wie du möchtest. Sie sehen deine Werte live, bekommen eigene Warnungen und zahlen nichts."
+      },
+      {
+        "id": "scan",
+        "title": "Mahlzeiten-Scan",
+        "body": "Mach ein Foto von deinem Teller und erhalte eine Schätzung für Kohlenhydrate, Eiweiß, Fett und Kalorien. Bis zu 20 Fotos am Tag."
+      },
+      {
+        "id": "history",
+        "title": "Ein Jahr Verlauf",
+        "body": "Deine Werte und dein Logbuch bis zu einem Jahr gespeichert, ohne Lücken, und auf einem neuen Handy wieder da. Du entscheidest, ob du es einschaltest."
+      },
+      {
+        "id": "health",
+        "title": "Apple Health",
+        "body": "Insulin und Kohlenhydrate aus Apple Health in deinem Logbuch und in den Trends, und deine Sensor-Glukose wird dort gespeichert."
+      },
+      {
+        "id": "report",
+        "title": "PDF-Bericht",
+        "body": "Deine Werte für beliebige Zeiträume in einer PDF, bereit für deinen nächsten Termin."
+      },
+      {
+        "id": "alerts",
+        "title": "Warnungen jede Minute",
+        "body": "Warnungen bei niedrigen und hohen Werten werden jede Minute geprüft, auch bei geschlossener App."
+      }
     ],
     "pricing": {
       "title": "Preise",
@@ -604,7 +644,7 @@
       },
       {
         "q": "Was bietet Dulce Pro zusätzlich?",
-        "a": "Die Live-Aktivität auf dem Sperrbildschirm und in der Dynamic Island, die Apple Watch App, die Glukose-Karte in CarPlay, Teilen mit beliebig vielen Followern, Apple Health Daten und Warnungen, die jede Minute statt alle 5 Minuten geprüft werden."
+        "a": "Die Live-Aktivität auf dem Sperrbildschirm und in der Dynamic Island, die Apple Watch App, die Glukose-Karte in CarPlay und im Smart Stack, Teilen mit der Familie, mehr Mahlzeiten-Scans am Tag, ein Jahr Verlauf, Apple Health, einen PDF-Bericht und Warnungen, die jede Minute statt alle 5 Minuten geprüft werden."
       },
       {
         "q": "Brauchen meine Follower Pro?",

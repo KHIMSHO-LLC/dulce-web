@@ -567,17 +567,57 @@
       "Widgeter for Hjem-skjermen, låseskjermen og StandBy",
       "Alarmer for lav, høy og kritisk lav (sjekkes hvert 5. minutt)",
       "Loggbok for karbohydrater, insulin og glukose",
+      "Måltidsskanning med bilde, 3 bilder om dagen",
       "Doser importert fra smarte NFC-insulinpenner",
       "Trender: tid i målområdet, snitt og GMI",
       "Følge glukosen til noen andre"
     ],
-    "pro": [
-      "Live-aktivitet på låseskjermen og Dynamic Island, oppdatert hvert minutt",
-      "App og komplikasjoner for Apple Watch",
-      "Glukosekortet ditt i CarPlay og i Apple Watch Smart Stack",
-      "Familiedeling med ubegrenset antall følgere, som ikke betaler noe",
-      "Data fra Apple Helse i loggboken og trendene",
-      "Alarmer som sjekkes hvert minutt"
+    "proItems": [
+      {
+        "id": "lockScreen",
+        "title": "Låseskjerm og Dynamic Island",
+        "body": "Glukosen din live på låseskjermen, oppdatert hvert minutt. Velg design, farger og graf."
+      },
+      {
+        "id": "watch",
+        "title": "Apple Watch",
+        "body": "Verdien din på håndleddet, med komplikasjoner for urskiven."
+      },
+      {
+        "id": "carPlay",
+        "title": "CarPlay og Smart Stack",
+        "body": "Et glukosekort på bilens skjerm og i Smart Stack på Apple Watch."
+      },
+      {
+        "id": "family",
+        "title": "Familiedeling",
+        "body": "Inviter så mange følgere du vil. De ser målingene dine live, får egne alarmer og betaler ingenting."
+      },
+      {
+        "id": "scan",
+        "title": "Måltidsskanning",
+        "body": "Ta et bilde av tallerkenen for et anslag på karbohydrater, protein, fett og kalorier. Opptil 20 bilder om dagen."
+      },
+      {
+        "id": "history",
+        "title": "Ett år med historikk",
+        "body": "Målingene og loggboken din lagret i opptil ett år, uten hull, og tilbake på en ny telefon. Du velger selv om du vil slå det på."
+      },
+      {
+        "id": "health",
+        "title": "Apple Helse",
+        "body": "Insulin og karbohydrater fra Apple Helse i loggboken og trendene, og sensorglukosen din lagret der."
+      },
+      {
+        "id": "report",
+        "title": "PDF-rapport",
+        "body": "Tallene dine for datoene du velger i én PDF, klar til neste time."
+      },
+      {
+        "id": "alerts",
+        "title": "Alarmer hvert minutt",
+        "body": "Alarmer for lav og høy glukose sjekkes hvert minutt, selv med appen lukket."
+      }
     ],
     "pricing": {
       "title": "Priser",
@@ -604,7 +644,7 @@
       },
       {
         "q": "Hva legger Dulce Pro til?",
-        "a": "Live-aktiviteten på låseskjermen og Dynamic Island, Apple Watch-appen, glukosekortet i CarPlay, familiedeling med ubegrenset antall følgere, data fra Apple Helse og alarmer som sjekkes hvert minutt i stedet for hvert 5. minutt."
+        "a": "Live-aktiviteten på låseskjermen og Dynamic Island, Apple Watch-appen, glukosekortet i CarPlay og Smart Stack, familiedeling, flere måltidsskanninger om dagen, ett år med historikk, Apple Helse, en PDF-rapport og alarmer som sjekkes hvert minutt i stedet for hvert 5. minutt."
       },
       {
         "q": "Trenger følgerne mine Pro?",

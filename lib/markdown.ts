@@ -185,7 +185,7 @@ export async function sitePagesMarkdown(locale: AppLocale): Promise<string> {
     `URL: ${absoluteUrl(localizedPath(locale, "/pro"))}`,
     p.lead,
     `### ${p.freeTitle}\n\n${p.free.map((x) => `- ${x}`).join("\n")}`,
-    `### ${p.proTitle}\n\n${p.pro.map((x) => `- ${x}`).join("\n")}`,
+    `### ${p.proTitle}\n\n${p.proItems.map((x) => `- ${x.title}: ${x.body}`).join("\n")}`,
     `### ${p.trialTitle}\n\n${p.trial.map((x) => `- ${x}`).join("\n")}`,
     qa(p.faq),
   ];

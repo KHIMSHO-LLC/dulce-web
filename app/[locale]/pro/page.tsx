@@ -7,6 +7,7 @@ import { Check } from "lucide-react";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { AppStoreBadge } from "@/components/ui/AppStoreBadge";
 import { JsonLd } from "@/components/JsonLd";
+import { ProFeatureList } from "@/components/landing/ProFeatureList";
 import { Reveal } from "@/components/motion/Reveal";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { seoFor, localizedPath, pageTitle } from "@/lib/seo";
@@ -44,10 +45,7 @@ export default async function ProPage({ params }: PageProps<"/[locale]/pro">) {
     <span className="type-display tabular text-[clamp(2.75rem,5vw,3.75rem)] text-ink">{chunks}</span>
   );
 
-  const plans = [
-    { title: t("freeTitle"), items: t.raw("free") as string[], highlight: false },
-    { title: t("proTitle"), items: t.raw("pro") as string[], highlight: true },
-  ];
+  const freeItems = t.raw("free") as string[];
 
   return (
     <>
@@ -68,29 +66,26 @@ export default async function ProPage({ params }: PageProps<"/[locale]/pro">) {
           </p>
         </Reveal>
 
-        <Reveal className="container-page mt-14 grid gap-4 md:grid-cols-2">
-          {plans.map((plan) => (
-            <article
-              key={plan.title}
-              data-fade
-              className={`rounded-[28px] border p-7 md:p-9 ${plan.highlight ? "border-ember/40" : "border-white/8 bg-glass"}`}
-              style={
-                plan.highlight
-                  ? { background: "radial-gradient(90% 90% at 100% 100%, rgba(243,102,56,0.25), rgba(243,102,56,0) 70%), #1a1310" }
-                  : undefined
-              }
-            >
-              <h2 className="text-[1.75rem] font-light text-ink">{plan.title}</h2>
-              <ul className="mt-5 space-y-3">
-                {plan.items.map((item) => (
-                  <li key={item} className="flex gap-3 text-body leading-relaxed text-soft">
-                    <Check className={`mt-1 h-4 w-4 shrink-0 ${plan.highlight ? "text-ember" : "text-range"}`} aria-hidden />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
+        <Reveal className="container-page mt-14 grid gap-4">
+          <article data-fade className="rounded-[28px] border border-white/8 bg-glass p-7 md:p-9">
+            <h2 className="text-[1.75rem] font-light text-ink">{t("freeTitle")}</h2>
+            <ul className="mt-5 grid gap-x-10 gap-y-3 md:grid-cols-2">
+              {freeItems.map((item) => (
+                <li key={item} className="flex gap-3 text-body leading-relaxed text-soft">
+                  <Check className="mt-1 h-4 w-4 shrink-0 text-range" aria-hidden />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </article>
+          <article
+            data-fade
+            className="rounded-[28px] border border-ember/40 p-7 md:p-9"
+            style={{ background: "radial-gradient(90% 90% at 100% 100%, rgba(243,102,56,0.25), rgba(243,102,56,0) 70%), #1a1310" }}
+          >
+            <h2 className="text-[1.75rem] font-light text-ink">{t("proTitle")}</h2>
+            <ProFeatureList wide />
+          </article>
         </Reveal>
 
         <Reveal className="container-page mt-16">

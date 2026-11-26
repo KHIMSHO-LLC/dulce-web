@@ -567,17 +567,57 @@
       "Widgets voor het beginscherm, het toegangsscherm en StandBy",
       "Meldingen bij laag, hoog en kritiek laag (elke 5 minuten gecontroleerd)",
       "Logboek voor koolhydraten, insuline en glucose",
+      "Maaltijdscan met foto, 3 foto's per dag",
       "Doses geïmporteerd uit slimme NFC-insulinepennen",
       "Trends: tijd binnen bereik, gemiddelde en GMI",
       "De glucose van iemand anders volgen"
     ],
-    "pro": [
-      "Live Activity op het toegangsscherm en in het Dynamic Island, elke minuut bijgewerkt",
-      "Apple Watch-app en complicaties",
-      "Je glucosekaart in CarPlay en in de Smart Stack van de Apple Watch",
-      "Delen met familie met onbeperkt volgers, die niets betalen",
-      "Gegevens uit Apple Gezondheid in je logboek en trends",
-      "Meldingen elke minuut gecontroleerd"
+    "proItems": [
+      {
+        "id": "lockScreen",
+        "title": "Toegangsscherm en Dynamic Island",
+        "body": "Je glucose live op het toegangsscherm, elke minuut bijgewerkt. Kies ontwerp, kleuren en grafiek."
+      },
+      {
+        "id": "watch",
+        "title": "Apple Watch",
+        "body": "Je waarde om je pols, met complicaties voor je wijzerplaat."
+      },
+      {
+        "id": "carPlay",
+        "title": "CarPlay en Smart Stack",
+        "body": "Een glucosekaart op het scherm van je auto en in de Smart Stack van de Apple Watch."
+      },
+      {
+        "id": "family",
+        "title": "Delen met familie",
+        "body": "Nodig zoveel volgers uit als je wilt. Ze zien je metingen live, krijgen hun eigen meldingen en betalen niets."
+      },
+      {
+        "id": "scan",
+        "title": "Maaltijdscan",
+        "body": "Maak een foto van je bord voor een schatting van koolhydraten, eiwit, vet en calorieën. Tot 20 foto's per dag."
+      },
+      {
+        "id": "history",
+        "title": "Een jaar geschiedenis",
+        "body": "Je metingen en logboek tot een jaar bewaard, zonder gaten, en terug op een nieuwe telefoon. Jij kiest of je het aanzet."
+      },
+      {
+        "id": "health",
+        "title": "Apple Gezondheid",
+        "body": "Insuline en koolhydraten uit Apple Gezondheid in je logboek en trends, en je sensorglucose wordt daar bewaard."
+      },
+      {
+        "id": "report",
+        "title": "PDF-rapport",
+        "body": "Je cijfers voor elke gewenste periode in één PDF, klaar voor je volgende afspraak."
+      },
+      {
+        "id": "alerts",
+        "title": "Meldingen elke minuut",
+        "body": "Meldingen bij lage en hoge glucose worden elke minuut gecontroleerd, ook met de app gesloten."
+      }
     ],
     "pricing": {
       "title": "Prijzen",
@@ -604,7 +644,7 @@
       },
       {
         "q": "Wat voegt Dulce Pro toe?",
-        "a": "De Live Activity op het toegangsscherm en in het Dynamic Island, de Apple Watch-app, de glucosekaart in CarPlay, delen met familie met onbeperkt volgers, gegevens uit Apple Gezondheid, en meldingen die elke minuut worden gecontroleerd in plaats van elke 5 minuten."
+        "a": "De Live Activity op het toegangsscherm en in het Dynamic Island, de Apple Watch-app, de glucosekaart in CarPlay en de Smart Stack, delen met familie, meer maaltijdscans per dag, een jaar geschiedenis, Apple Gezondheid, een PDF-rapport en meldingen die elke minuut worden gecontroleerd in plaats van elke 5 minuten."
       },
       {
         "q": "Hebben mijn volgers Pro nodig?",

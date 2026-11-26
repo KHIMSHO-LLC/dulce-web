@@ -567,17 +567,57 @@
       "Widgetit koti- ja lukitusnäytölle sekä StandByhin",
       "Matalan, korkean ja kriittisen matalan arvon hälytykset (tarkistus 5 minuutin välein)",
       "Päiväkirja hiilihydraateille, insuliinille ja glukoosille",
+      "Ateriaskannaus kuvalla, 3 kuvaa päivässä",
       "Annokset tuodaan älykkäistä NFC-insuliinikynistä",
       "Trendit: aika tavoitealueella, keskiarvo ja GMI",
       "Toisen ihmisen glukoosin seuraaminen"
     ],
-    "pro": [
-      "Live Activity lukitusnäytöllä ja Dynamic Islandissa, päivittyy minuutin välein",
-      "Apple Watch -sovellus ja komplikaatiot",
-      "Glukoosikorttisi CarPlayssa ja Apple Watchin Smart Stackissa",
-      "Perheen seuranta rajattomalle määrälle seuraajia, jotka eivät maksa mitään",
-      "Apple Terveys -tiedot päiväkirjassa ja trendeissä",
-      "Hälytysten tarkistus minuutin välein"
+    "proItems": [
+      {
+        "id": "lockScreen",
+        "title": "Lukitusnäyttö ja Dynamic Island",
+        "body": "Glukoosisi livenä lukitusnäytöllä, päivittyy minuutin välein. Valitse ulkoasu, värit ja käyrä."
+      },
+      {
+        "id": "watch",
+        "title": "Apple Watch",
+        "body": "Lukemasi ranteessa, komplikaatioineen kellotaululle."
+      },
+      {
+        "id": "carPlay",
+        "title": "CarPlay ja Smart Stack",
+        "body": "Glukoosikortti auton näytöllä ja Apple Watchin Smart Stackissa."
+      },
+      {
+        "id": "family",
+        "title": "Perheen seuranta",
+        "body": "Kutsu niin monta seuraajaa kuin haluat. He näkevät lukemasi livenä, saavat omat hälytyksensä eivätkä maksa mitään."
+      },
+      {
+        "id": "scan",
+        "title": "Ateriaskannaus",
+        "body": "Ota kuva lautasestasi, niin saat arvion hiilihydraateista, proteiinista, rasvasta ja kaloreista. Jopa 20 kuvaa päivässä."
+      },
+      {
+        "id": "history",
+        "title": "Vuosi käyrähistoriaa",
+        "body": "Lukemasi ja päiväkirjasi tallessa jopa vuoden, ilman aukkoja, ja takaisin uudessa puhelimessa. Päätät itse, otatko sen käyttöön."
+      },
+      {
+        "id": "health",
+        "title": "Apple Terveys",
+        "body": "Insuliini ja hiilihydraatit Apple Terveydestä päiväkirjassa ja trendeissä, ja sensorin glukoosi tallennetaan sinne."
+      },
+      {
+        "id": "report",
+        "title": "PDF-raportti",
+        "body": "Lukemasi haluamiltasi päiviltä yhdessä PDF:ssä, valmiina seuraavaa käyntiä varten."
+      },
+      {
+        "id": "alerts",
+        "title": "Hälytykset minuutin välein",
+        "body": "Matalan ja korkean glukoosin hälytykset tarkistetaan minuutin välein, vaikka sovellus olisi suljettu."
+      }
     ],
     "pricing": {
       "title": "Hinnat",
@@ -604,7 +644,7 @@
       },
       {
         "q": "Mitä Dulce Pro tuo lisää?",
-        "a": "Live Activityn lukitusnäytöllä ja Dynamic Islandissa, Apple Watch -sovelluksen, glukoosikortin CarPlayssa, perheen seurannan rajattomalle määrälle seuraajia, Apple Terveys -tiedot ja hälytysten tarkistuksen minuutin välein 5 minuutin sijaan."
+        "a": "Live Activityn lukitusnäytöllä ja Dynamic Islandissa, Apple Watch -sovelluksen, glukoosikortin CarPlayssa ja Smart Stackissa, perheen seurannan, enemmän ateriaskannauksia päivässä, vuoden käyrähistorian, Apple Terveyden, PDF-raportin ja hälytysten tarkistuksen minuutin välein 5 minuutin sijaan."
       },
       {
         "q": "Tarvitsevatko seuraajani Pron?",

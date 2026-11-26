@@ -567,17 +567,57 @@
       "Widgets for the Home Screen, Lock Screen and StandBy",
       "Low, high and critical-low alerts (checked every 5 minutes)",
       "Logbook for carbs, insulin and glucose",
+      "Meal photo scan, 3 photos a day",
       "Doses imported from NFC smart insulin pens",
       "Trends: time in range, average and GMI",
       "Following someone else's glucose"
     ],
-    "pro": [
-      "Lock Screen Live Activity and Dynamic Island, updated every minute",
-      "Apple Watch app and complications",
-      "Your glucose card on CarPlay and in the Apple Watch Smart Stack",
-      "Family sharing with unlimited followers, who pay nothing",
-      "Apple Health data in your Logbook and Trends",
-      "Alerts checked every minute"
+    "proItems": [
+      {
+        "id": "lockScreen",
+        "title": "Lock Screen and Dynamic Island",
+        "body": "Your glucose live on the Lock Screen, updated every minute. Choose the design, colours and chart."
+      },
+      {
+        "id": "watch",
+        "title": "Apple Watch",
+        "body": "Your number on your wrist, with complications for your watch face."
+      },
+      {
+        "id": "carPlay",
+        "title": "CarPlay and Smart Stack",
+        "body": "A glucose card on your car's screen and in the Apple Watch Smart Stack."
+      },
+      {
+        "id": "family",
+        "title": "Family sharing",
+        "body": "Invite as many followers as you like. They see your readings live, get their own alerts and pay nothing."
+      },
+      {
+        "id": "scan",
+        "title": "Meal photo scan",
+        "body": "Take a photo of your plate for an estimate of carbs, protein, fat and calories. Up to 20 photos a day."
+      },
+      {
+        "id": "history",
+        "title": "A year of chart history",
+        "body": "Your readings and logbook saved for up to a year, with no gaps, and back on a new phone. You choose whether to turn it on."
+      },
+      {
+        "id": "health",
+        "title": "Apple Health",
+        "body": "Insulin and carbs from Apple Health in your Logbook and Trends, and your sensor glucose saved there."
+      },
+      {
+        "id": "report",
+        "title": "PDF report",
+        "body": "Your numbers for any dates in one PDF, ready for your next appointment."
+      },
+      {
+        "id": "alerts",
+        "title": "Alerts every minute",
+        "body": "Low and high alerts are checked every minute, even with the app closed."
+      }
     ],
     "pricing": {
       "title": "Pricing",
@@ -604,7 +644,7 @@
       },
       {
         "q": "What does Dulce Pro add?",
-        "a": "The Lock Screen Live Activity and Dynamic Island, the Apple Watch app, the glucose card on CarPlay, family sharing with unlimited followers, Apple Health data, and alerts checked every minute instead of every 5 minutes."
+        "a": "The Lock Screen Live Activity and Dynamic Island, the Apple Watch app, the glucose card on CarPlay and in the Smart Stack, family sharing, more meal photo scans a day, a year of chart history, Apple Health, a PDF report, and alerts checked every minute instead of every 5 minutes."
       },
       {
         "q": "Do my followers need Pro?",

@@ -567,17 +567,57 @@
       "Widgets pour l'écran d'accueil, l'écran verrouillé et StandBy",
       "Alertes de glycémie basse, haute et d'hypo critique (vérifiées toutes les 5 minutes)",
       "Journal des glucides, de l'insuline et de la glycémie",
+      "Scan de repas par photo, 3 photos par jour",
       "Doses importées des stylos à insuline connectés NFC",
       "Tendances : temps dans la cible, moyenne et GMI",
       "Suivre la glycémie de quelqu'un d'autre"
     ],
-    "pro": [
-      "Activité en direct sur l'écran verrouillé et Dynamic Island, mise à jour chaque minute",
-      "App Apple Watch et complications",
-      "Ta carte de glycémie dans CarPlay et dans le Smart Stack de l'Apple Watch",
-      "Partage en famille avec des abonnés sans limite, qui ne paient rien",
-      "Données Apple Santé dans ton Journal et tes Tendances",
-      "Alertes vérifiées chaque minute"
+    "proItems": [
+      {
+        "id": "lockScreen",
+        "title": "Écran verrouillé et Dynamic Island",
+        "body": "Ta glycémie en direct sur l'écran verrouillé, mise à jour chaque minute. Choisis le design, les couleurs et la courbe."
+      },
+      {
+        "id": "watch",
+        "title": "Apple Watch",
+        "body": "Ton chiffre au poignet, avec des complications pour ton cadran."
+      },
+      {
+        "id": "carPlay",
+        "title": "CarPlay et Smart Stack",
+        "body": "Une carte de glycémie sur l'écran de ta voiture et dans le Smart Stack de l'Apple Watch."
+      },
+      {
+        "id": "family",
+        "title": "Partage en famille",
+        "body": "Invite autant d'abonnés que tu veux. Ils voient tes mesures en direct, reçoivent leurs propres alertes et ne paient rien."
+      },
+      {
+        "id": "scan",
+        "title": "Scan de repas",
+        "body": "Prends ton assiette en photo pour obtenir une estimation des glucides, protéines, lipides et calories. Jusqu'à 20 photos par jour."
+      },
+      {
+        "id": "history",
+        "title": "Un an d'historique",
+        "body": "Tes mesures et ton Journal conservés jusqu'à un an, sans trou, et retrouvés sur un nouveau téléphone. Tu choisis de l'activer ou non."
+      },
+      {
+        "id": "health",
+        "title": "Apple Santé",
+        "body": "L'insuline et les glucides d'Apple Santé dans ton Journal et tes Tendances, et la glycémie de ton capteur enregistrée là-bas."
+      },
+      {
+        "id": "report",
+        "title": "Rapport PDF",
+        "body": "Tes chiffres pour les dates de ton choix dans un seul PDF, prêt pour ton prochain rendez-vous."
+      },
+      {
+        "id": "alerts",
+        "title": "Alertes chaque minute",
+        "body": "Les alertes de glycémie basse et haute sont vérifiées chaque minute, même app fermée."
+      }
     ],
     "pricing": {
       "title": "Tarifs",
@@ -604,7 +644,7 @@
       },
       {
         "q": "Qu'ajoute Dulce Pro ?",
-        "a": "L'Activité en direct sur l'écran verrouillé et la Dynamic Island, l'app Apple Watch, la carte de glycémie dans CarPlay, le partage avec des abonnés sans limite, les données Apple Santé et des alertes vérifiées chaque minute au lieu de toutes les 5 minutes."
+        "a": "L'Activité en direct sur l'écran verrouillé et la Dynamic Island, l'app Apple Watch, la carte de glycémie dans CarPlay et le Smart Stack, le partage en famille, plus de scans de repas par jour, un an d'historique, Apple Santé, un rapport PDF et des alertes vérifiées chaque minute au lieu de toutes les 5 minutes."
       },
       {
         "q": "Mes abonnés ont-ils besoin de Pro ?",

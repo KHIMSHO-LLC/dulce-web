@@ -1,6 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowUpRight, Check } from "lucide-react";
 import { Link } from "@/i18n/navigation";
+import { ProFeatureList } from "@/components/landing/ProFeatureList";
 import { Reveal } from "@/components/motion/Reveal";
 import { Split } from "@/components/motion/Split";
 import { proPriceStrings } from "@/lib/pricing";
@@ -10,7 +11,6 @@ import { SECTION } from "@/lib/site";
 export async function PlanCompare() {
   const t = await getTranslations("pro");
   const free = t.raw("free") as string[];
-  const pro = t.raw("pro") as string[];
   const trial = t.raw("trial") as string[];
   const prices = proPriceStrings(await getLocale());
 
@@ -48,14 +48,7 @@ export async function PlanCompare() {
             <p className="mt-1 text-label text-soft">
               {t("pricing.homeLine", { monthly: prices.monthly, yearly: prices.yearly })}
             </p>
-            <ul className="mt-6 space-y-3">
-              {pro.map((item) => (
-                <li key={item} className="flex gap-3 text-body text-soft">
-                  <Check aria-hidden className="mt-1 h-5 w-5 shrink-0 text-ember-hi" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            <ProFeatureList />
           </article>
         </div>
 

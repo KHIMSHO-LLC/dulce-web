@@ -567,17 +567,57 @@
       "Widget per la Home, la schermata di blocco e StandBy",
       "Avvisi di glicemia bassa, alta e ipo critica (controllati ogni 5 minuti)",
       "Diario di carboidrati, insulina e glicemia",
+      "Scansione del pasto con foto, 3 foto al giorno",
       "Dosi importate dalle penne per insulina smart NFC",
       "Andamento: tempo nel range, media e GMI",
       "Seguire la glicemia di un'altra persona"
     ],
-    "pro": [
-      "Attività in tempo reale sulla schermata di blocco e Dynamic Island, aggiornata ogni minuto",
-      "App per Apple Watch e complicazioni",
-      "La tua scheda della glicemia in CarPlay e nello Smart Stack di Apple Watch",
-      "Condivisione in famiglia con follower senza limiti, che non pagano nulla",
-      "Dati di Salute di Apple nel Diario e in Andamento",
-      "Avvisi controllati ogni minuto"
+    "proItems": [
+      {
+        "id": "lockScreen",
+        "title": "Schermata di blocco e Dynamic Island",
+        "body": "La tua glicemia in tempo reale sulla schermata di blocco, aggiornata ogni minuto. Scegli design, colori e grafico."
+      },
+      {
+        "id": "watch",
+        "title": "Apple Watch",
+        "body": "Il tuo valore al polso, con complicazioni per il quadrante."
+      },
+      {
+        "id": "carPlay",
+        "title": "CarPlay e Smart Stack",
+        "body": "Una scheda della glicemia sullo schermo dell'auto e nello Smart Stack di Apple Watch."
+      },
+      {
+        "id": "family",
+        "title": "Condivisione in famiglia",
+        "body": "Invita tutti i follower che vuoi. Vedono i tuoi valori in tempo reale, ricevono i loro avvisi e non pagano nulla."
+      },
+      {
+        "id": "scan",
+        "title": "Scansione del pasto",
+        "body": "Scatta una foto al piatto per una stima di carboidrati, proteine, grassi e calorie. Fino a 20 foto al giorno."
+      },
+      {
+        "id": "history",
+        "title": "Un anno di storico",
+        "body": "Le tue letture e il tuo Diario salvati fino a un anno, senza buchi, e di nuovo su un telefono nuovo. Sei tu a decidere se attivarlo."
+      },
+      {
+        "id": "health",
+        "title": "Salute di Apple",
+        "body": "Insulina e carboidrati da Salute di Apple nel tuo Diario e in Andamento, e la glicemia del sensore salvata lì."
+      },
+      {
+        "id": "report",
+        "title": "Report PDF",
+        "body": "I tuoi valori per le date che vuoi in un unico PDF, pronto per la prossima visita."
+      },
+      {
+        "id": "alerts",
+        "title": "Avvisi ogni minuto",
+        "body": "Gli avvisi di glicemia bassa e alta vengono controllati ogni minuto, anche con l'app chiusa."
+      }
     ],
     "pricing": {
       "title": "Prezzi",
@@ -604,7 +644,7 @@
       },
       {
         "q": "Cosa aggiunge Dulce Pro?",
-        "a": "L'Attività in tempo reale sulla schermata di blocco e nella Dynamic Island, l'app per Apple Watch, la scheda della glicemia in CarPlay, la condivisione con follower senza limiti, i dati di Salute di Apple e avvisi controllati ogni minuto invece che ogni 5."
+        "a": "L'Attività in tempo reale sulla schermata di blocco e nella Dynamic Island, l'app per Apple Watch, la scheda della glicemia in CarPlay e nello Smart Stack, la condivisione in famiglia, più scansioni del pasto al giorno, un anno di storico, Salute di Apple, un report PDF e avvisi controllati ogni minuto invece che ogni 5."
       },
       {
         "q": "I miei follower hanno bisogno di Pro?",
