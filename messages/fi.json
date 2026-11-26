@@ -581,9 +581,9 @@
     "pricing": {
       "title": "Hinnat",
       "monthlyTitle": "Kuukausitilaus",
-      "monthlyLine": "{price} kuukaudessa",
+      "monthlyLine": "<b>{price}</b> kuukaudessa",
       "yearlyTitle": "Vuositilaus",
-      "yearlyLine": "{price} vuodessa",
+      "yearlyLine": "<b>{price}</b> vuodessa",
       "yearlyPerMonth": "Noin {perMonth} kuukaudessa",
       "trialLine": "14 päivää ilmaiseksi uusille tilaajille. Peruminen onnistuu milloin tahansa.",
       "note": "Näytetyt hinnat ovat Yhdysvaltojen hintoja Yhdysvaltain dollareina. Muissa maissa App Store näyttää hinnan omassa valuutassasi ennen vahvistusta."

@@ -581,9 +581,9 @@
     "pricing": {
       "title": "Precios",
       "monthlyTitle": "Mensual",
-      "monthlyLine": "{price} al mes",
+      "monthlyLine": "<b>{price}</b> al mes",
       "yearlyTitle": "Anual",
-      "yearlyLine": "{price} al año",
+      "yearlyLine": "<b>{price}</b> al año",
       "yearlyPerMonth": "Unos {perMonth} al mes",
       "trialLine": "14 días gratis para los nuevos suscriptores. Cancela cuando quieras.",
       "note": "Los precios son los de Estados Unidos, en dólares estadounidenses. En otros países, la App Store te muestra el precio en tu moneda antes de confirmar."

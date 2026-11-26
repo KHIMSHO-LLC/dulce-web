@@ -581,9 +581,9 @@
     "pricing": {
       "title": "Priser",
       "monthlyTitle": "Månedlig",
-      "monthlyLine": "{price} i måneden",
+      "monthlyLine": "<b>{price}</b> i måneden",
       "yearlyTitle": "Årlig",
-      "yearlyLine": "{price} i året",
+      "yearlyLine": "<b>{price}</b> i året",
       "yearlyPerMonth": "Omtrent {perMonth} i måneden",
       "trialLine": "14 dager gratis for nye abonnenter. Si opp når som helst.",
       "note": "Prisene som vises, gjelder USA, i amerikanske dollar. I andre land viser App Store prisen i din valuta før du bekrefter."

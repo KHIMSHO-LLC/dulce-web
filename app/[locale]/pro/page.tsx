@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
@@ -37,6 +38,11 @@ export default async function ProPage({ params }: PageProps<"/[locale]/pro">) {
   const faqItems = (t.raw("faq") as Faq[]).map((f) => ({ ...f, a: fillPrices(f.a, locale) }));
   const prices = proPriceStrings(locale);
   const home = `${SITE_URL}${localizedPath(loc, "/") === "/" ? "" : localizedPath(loc, "/")}`;
+
+  // The price number is the hero of each pricing card; the words around it stay small.
+  const bigPrice = (chunks: ReactNode) => (
+    <span className="type-display tabular text-[clamp(2.75rem,5vw,3.75rem)] text-ink">{chunks}</span>
+  );
 
   const plans = [
     { title: t("freeTitle"), items: t.raw("free") as string[], highlight: false },
@@ -91,23 +97,42 @@ export default async function ProPage({ params }: PageProps<"/[locale]/pro">) {
           <h2 data-fade className="text-[1.75rem] font-light tracking-[-0.02em] text-ink">
             {t("pricing.title")}
           </h2>
-          <div data-fade className="mt-5 grid max-w-3xl gap-4 sm:grid-cols-2">
-            <div className="rounded-[28px] border border-white/8 bg-glass p-7">
-              <h3 className="text-[1.2rem] font-light text-ink">{t("pricing.monthlyTitle")}</h3>
-              <p className="mt-3 text-[1.5rem] font-light text-ink">{t("pricing.monthlyLine", { price: prices.monthly })}</p>
+          <div data-fade className="mt-6 grid gap-4 md:grid-cols-2">
+            <article className="rounded-[28px] border border-white/8 bg-glass p-7 md:p-9">
+              <h3 className="text-[0.8rem] font-medium uppercase tracking-[0.16em] text-mute">
+                {t("pricing.monthlyTitle")}
+              </h3>
+              <p className="mt-5 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-[1.05rem] text-soft">
+                {t.rich("pricing.monthlyLine", { price: prices.monthly, b: bigPrice })}
+              </p>
+            </article>
+            <article
+              className="rounded-[28px] border border-ember/40 p-7 md:p-9"
+              style={{ background: "radial-gradient(90% 90% at 100% 100%, rgba(243,102,56,0.25), rgba(243,102,56,0) 70%), #1a1310" }}
+            >
+              <h3 className="text-[0.8rem] font-medium uppercase tracking-[0.16em] text-ember-hi">
+                {t("pricing.yearlyTitle")}
+              </h3>
+              <p className="mt-5 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-[1.05rem] text-soft">
+                {t.rich("pricing.yearlyLine", { price: prices.yearly, b: bigPrice })}
+              </p>
+              <p className="mt-5 inline-flex rounded-full border border-ember/30 bg-ember/10 px-3.5 py-1.5 text-[0.9rem] text-ink">
+                {t("pricing.yearlyPerMonth", { perMonth: prices.perMonth })}
+              </p>
+            </article>
+          </div>
+          <div data-fade className="mt-7 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="flex gap-3 text-body leading-relaxed text-ink">
+                <Check className="mt-1 h-4 w-4 shrink-0 text-range" aria-hidden />
+                {t("pricing.trialLine")}
+              </p>
+              <p className="mt-2 max-w-[60ch] text-[0.875rem] leading-relaxed text-mute">{t("pricing.note")}</p>
             </div>
-            <div className="rounded-[28px] border border-white/8 bg-glass p-7">
-              <h3 className="text-[1.2rem] font-light text-ink">{t("pricing.yearlyTitle")}</h3>
-              <p className="mt-3 text-[1.5rem] font-light text-ink">{t("pricing.yearlyLine", { price: prices.yearly })}</p>
-              <p className="mt-1 text-body leading-relaxed text-soft">{t("pricing.yearlyPerMonth", { perMonth: prices.perMonth })}</p>
+            <div className="shrink-0">
+              <AppStoreBadge campaign="web_page" locale={loc} />
             </div>
           </div>
-          <p data-fade className="mt-5 max-w-[64ch] text-body leading-relaxed text-soft">
-            {t("pricing.trialLine")}
-          </p>
-          <p data-fade className="mt-2 max-w-[64ch] text-[0.9rem] leading-relaxed text-soft">
-            {t("pricing.note")}
-          </p>
         </Reveal>
 
         <Reveal className="container-page mt-16">
