@@ -31,6 +31,7 @@
     "cookies": "Cookies",
     "language": "Taal",
     "guides": "Gidsen",
+    "pricing": "Prijzen",
     "tools": "Rekenhulpen"
   },
   "preloader": {
@@ -586,7 +587,9 @@
       "yearlyLine": "<b>{price}</b> per jaar",
       "yearlyPerMonth": "Ongeveer {perMonth} per maand",
       "trialLine": "14 dagen gratis voor nieuwe abonnees. Altijd opzegbaar.",
-      "note": "De getoonde prijzen gelden voor de Verenigde Staten, in Amerikaanse dollars. In andere landen toont de App Store de prijs in je eigen valuta voordat je bevestigt."
+      "note": "De getoonde prijzen gelden voor de Verenigde Staten, in Amerikaanse dollars. In andere landen toont de App Store de prijs in je eigen valuta voordat je bevestigt.",
+      "homeLine": "Daarna {monthly} per maand of {yearly} per jaar (prijzen in de VS).",
+      "seeLink": "Bekijk de prijzen"
     },
     "trialTitle": "Hoe de proefperiode werkt",
     "trial": [

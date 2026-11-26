@@ -31,6 +31,7 @@
     "cookies": "Informasjonskapsler",
     "language": "Språk",
     "guides": "Guider",
+    "pricing": "Priser",
     "tools": "Kalkulatorer"
   },
   "preloader": {
@@ -586,7 +587,9 @@
       "yearlyLine": "<b>{price}</b> i året",
       "yearlyPerMonth": "Omtrent {perMonth} i måneden",
       "trialLine": "14 dager gratis for nye abonnenter. Si opp når som helst.",
-      "note": "Prisene som vises, gjelder USA, i amerikanske dollar. I andre land viser App Store prisen i din valuta før du bekrefter."
+      "note": "Prisene som vises, gjelder USA, i amerikanske dollar. I andre land viser App Store prisen i din valuta før du bekrefter.",
+      "homeLine": "Deretter {monthly} i måneden eller {yearly} i året (priser i USA).",
+      "seeLink": "Se priser"
     },
     "trialTitle": "Slik fungerer prøveperioden",
     "trial": [

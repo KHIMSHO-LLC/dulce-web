@@ -238,6 +238,11 @@ export function PillNav() {
                       </a>
                     </li>
                   ))}
+                  <li data-item>
+                    <Link href="/pro" className={linkClass}>
+                      {t("pricing")}
+                    </Link>
+                  </li>
                 </ul>
               </nav>
               <span data-item className="pt-2">

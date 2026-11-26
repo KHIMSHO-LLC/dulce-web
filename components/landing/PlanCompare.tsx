@@ -1,8 +1,9 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowUpRight, Check } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { Reveal } from "@/components/motion/Reveal";
 import { Split } from "@/components/motion/Split";
+import { proPriceStrings } from "@/lib/pricing";
 import { SECTION } from "@/lib/site";
 
 /** Free next to Pro, from the same copy as the /pro page (messages `pro`), so the two never disagree. */
@@ -11,6 +12,7 @@ export async function PlanCompare() {
   const free = t.raw("free") as string[];
   const pro = t.raw("pro") as string[];
   const trial = t.raw("trial") as string[];
+  const prices = proPriceStrings(await getLocale());
 
   return (
     <section id={SECTION.plans} data-mood="ember" aria-labelledby="plans-title" className="relative z-10 py-16 md:py-24">
@@ -43,6 +45,9 @@ export async function PlanCompare() {
           >
             <h3 className="type-display text-[clamp(1.8rem,3vw,2.6rem)] text-ink">{t("proTitle")}</h3>
             <p className="mt-2 text-label font-semibold text-ember-hi">{trial[0]}</p>
+            <p className="mt-1 text-label text-soft">
+              {t("pricing.homeLine", { monthly: prices.monthly, yearly: prices.yearly })}
+            </p>
             <ul className="mt-6 space-y-3">
               {pro.map((item) => (
                 <li key={item} className="flex gap-3 text-body text-soft">
@@ -56,7 +61,7 @@ export async function PlanCompare() {
 
         <p data-fade className="mt-6 text-label">
           <Link href="/pro" className="inline-flex items-center gap-1.5 text-ember transition-colors hover:text-ember-hi">
-            {t("nav")}
+            {t("pricing.seeLink")}
             <ArrowUpRight aria-hidden className="h-4 w-4" />
           </Link>
         </p>

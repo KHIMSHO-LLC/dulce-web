@@ -31,6 +31,7 @@
     "cookies": "Cookie",
     "language": "Lingua",
     "guides": "Guide",
+    "pricing": "Prezzi",
     "tools": "Calcolatori"
   },
   "preloader": {
@@ -586,7 +587,9 @@
       "yearlyLine": "<b>{price}</b> all'anno",
       "yearlyPerMonth": "Circa {perMonth} al mese",
       "trialLine": "14 giorni gratis per i nuovi abbonati. Disdici quando vuoi.",
-      "note": "I prezzi indicati sono quelli degli Stati Uniti, in dollari statunitensi. Negli altri paesi l'App Store ti mostra il prezzo nella tua valuta prima di confermare."
+      "note": "I prezzi indicati sono quelli degli Stati Uniti, in dollari statunitensi. Negli altri paesi l'App Store ti mostra il prezzo nella tua valuta prima di confermare.",
+      "homeLine": "Poi {monthly} al mese o {yearly} all'anno (prezzi USA).",
+      "seeLink": "Vedi i prezzi"
     },
     "trialTitle": "Come funziona la prova",
     "trial": [

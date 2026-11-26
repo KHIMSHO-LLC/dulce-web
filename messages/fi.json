@@ -31,6 +31,7 @@
     "cookies": "Evästeet",
     "language": "Kieli",
     "guides": "Oppaat",
+    "pricing": "Hinnat",
     "tools": "Laskurit"
   },
   "preloader": {
@@ -586,7 +587,9 @@
       "yearlyLine": "<b>{price}</b> vuodessa",
       "yearlyPerMonth": "Noin {perMonth} kuukaudessa",
       "trialLine": "14 päivää ilmaiseksi uusille tilaajille. Peruminen onnistuu milloin tahansa.",
-      "note": "Näytetyt hinnat ovat Yhdysvaltojen hintoja Yhdysvaltain dollareina. Muissa maissa App Store näyttää hinnan omassa valuutassasi ennen vahvistusta."
+      "note": "Näytetyt hinnat ovat Yhdysvaltojen hintoja Yhdysvaltain dollareina. Muissa maissa App Store näyttää hinnan omassa valuutassasi ennen vahvistusta.",
+      "homeLine": "Sen jälkeen {monthly} kuukaudessa tai {yearly} vuodessa (Yhdysvaltojen hinnat).",
+      "seeLink": "Katso hinnat"
     },
     "trialTitle": "Näin kokeilu toimii",
     "trial": [
