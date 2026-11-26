@@ -1,0 +1,74 @@
+Le sport est l'un des moments où la glycémie bouge le plus, et l'un de ceux où il est le plus difficile de sortir son téléphone. Si tu t'entraînes avec une Garmin, le **champ de données Dulce** affiche ta glycémie sur l'écran d'activité, à côté de l'allure, de la puissance ou de la fréquence cardiaque. Il peut aussi **enregistrer ta glycémie dans l'activité** : après la séance, tu vois la courbe de glycémie dans Garmin Connect avec tout le reste.
+
+Ce guide présente ce que le champ de données affiche, comment l'ajouter, comment fonctionne l'enregistrement et ce qu'il faut garder en tête. L'app montre et le cadran sont sur la <PageLink to="/garmin">page Dulce pour Garmin</PageLink>.
+
+## Ce qu'affiche le champ de données
+
+Le champ s'adapte à la place que tu lui donnes sur l'écran d'activité :
+
+- **Grand** (un écran entier ou presque) : une étiquette, ton chiffre en grand avec la flèche de tendance, la variation, l'ancienneté de la mesure et un court graphique de la dernière heure.
+- **Moyen** : le chiffre avec la flèche, la variation et l'ancienneté.
+- **Petit** : le chiffre et la flèche.
+
+Les chiffres sont colorés selon la zone : rouge en dessous de 70 mg/dL (3,9 mmol/L), vert de 70 à 180 (3,9 à 10,0), orange au-dessus. Sur les compteurs vélo Edge en mode jour, le champ utilise des couleurs plus foncées pour rester lisible sur fond clair.
+
+<Figure src="/guides/garmin/field-large-fenix7.webp" alt="Champ de données Dulce sur une Garmin fēnix 7 pendant une activité : glycémie 142 avec une flèche, variation +4, vieille de 2 minutes et un court graphique" caption="Le champ de données en pleine taille sur une fēnix 7 (simulateur Garmin, données d'exemple)." width={385} height={537} bare />
+
+## Ce qu'il te faut
+
+- **Dulce Pro** (14 jours d'essai gratuit), ou suivre quelqu'un qui l'a. Voir <PageLink to="/pro">ce que comprend Pro</PageLink>.
+- **Dulce connecté à ton capteur** via LibreLinkUp, Dexcom Share, Medtronic CareLink ou Nightscout, avec **la dernière version de Dulce**.
+- **Garmin Connect** sur ton téléphone, qui tourne en arrière-plan, et le téléphone avec toi. En course à pied, cela veut dire l'emporter ; à vélo, il peut rester dans une poche ou un sac.
+- Une montre Garmin ou un **compteur vélo Edge** avec Connect IQ 3.1 ou plus récent. La liste complète est sur la <PageLink to="/garmin">page Garmin</PageLink>.
+
+## Ajouter le champ de données
+
+<Steps>
+<Step title="Installe le champ de données">
+Dans le Connect IQ Store, cherche **Dulce** et installe le champ de données. Garmin Connect le synchronise avec ta montre ou ton Edge.
+</Step>
+<Step title="Place-le sur un écran d'activité">
+Sur la montre, ouvre l'activité que tu utilises (Course, Vélo, Randonnée…), va dans ses réglages, puis **Écrans de données**, choisis un écran et un champ, et sélectionne le champ Dulce parmi les champs Connect IQ. Sur un Edge, tu fais pareil depuis le profil d'activité.
+</Step>
+<Step title="Associe-le">
+Lance l'activité. Le champ affiche un code de 6 caractères. Dans Dulce sur ton iPhone, va dans **Réglages › Montre Garmin**, saisis le code et touche **Associer la montre**. Si le code a disparu, relance l'activité pour en obtenir un nouveau.
+</Step>
+<Step title="Entraîne-toi">
+Le champ affiche maintenant ta glycémie pendant chaque activité où il est sur un écran.
+</Step>
+</Steps>
+
+Le guide d'association pas à pas, avec des captures d'écran, se trouve dans <ArticleLink to="garmin-watch">comment voir ta glycémie sur une montre Garmin</ArticleLink>.
+
+<AppCta title="Ta glycémie sur ta Garmin, pendant l'entraînement" />
+
+## La courbe de glycémie dans Garmin Connect
+
+Avec **Enregistrer la glycémie dans l'activité** activé (c'est le cas par défaut), le champ de données écrit ta glycémie dans le fichier de l'activité pendant l'enregistrement. Garmin appelle cela un champ de développeur : il voyage avec l'activité. Une fois la séance enregistrée, l'activité dans Garmin Connect affiche donc un **graphique de glycémie** pour l'entraînement et ta **glycémie moyenne** sur la séance.
+
+Quelques précisions :
+
+- L'unité enregistrée est celle que tu utilises dans Dulce au démarrage de l'activité, mg/dL ou mmol/L.
+- Seules les activités dont un écran comporte le champ Dulce enregistrent la glycémie.
+- Pour désactiver l'enregistrement, ouvre les réglages du champ de données dans la section Connect IQ de Garmin Connect et désactive **Enregistrer la glycémie dans l'activité**.
+
+Cette courbe est utile après coup : comment ta glycémie a évolué pendant une longue sortie à vélo, si elle a baissé au même moment lors des trois dernières courses, ce qu'elle a fait après une séance de fractionné. Parle des tendances avec ton équipe soignante ; le graphique décrit, il ne te dit pas quoi changer.
+
+## À quel point le chiffre est-il frais ?
+
+Un champ de données ne peut récupérer de nouvelles données qu'en arrière-plan, et Garmin l'autorise **toutes les 5 minutes**. Ton capteur produit peut-être une mesure par minute (FreeStyle Libre) ou toutes les 5 minutes (Dexcom, Medtronic), mais le champ se met à jour au plus toutes les 5 minutes. Le champ indique l'ancienneté de la mesure, et une mesure ancienne devient grise. Pendant l'effort, la glycémie peut changer vite : considère l'ancienneté comme faisant partie de la mesure.
+
+## Limites à connaître
+
+- **Pas d'alertes depuis le champ.** Les alertes de glycémie basse et haute de Dulce arrivent toujours sur ton téléphone sous forme de notifications, et Garmin peut les afficher sur la montre. Les alarmes de ton capteur continuent de fonctionner.
+- **Le téléphone doit suivre.** Sans lui, le champ ne peut pas récupérer de nouvelles mesures et l'ancienneté continue d'augmenter.
+- Tu veux aussi voir ta glycémie en dehors des séances ? Le <ArticleLink to="garmin-watch-face">cadran Dulce</ArticleLink> la garde à ton poignet toute la journée.
+
+<Callout type="warning">
+L'effort peut faire baisser ou monter la glycémie rapidement, et une mesure sur la montre peut dater de 5 minutes. Ne prends pas de décision de traitement à partir de la montre : si tu te sens en hypoglycémie ou si un chiffre te surprend, arrête-toi, vérifie avec ton capteur ou une piqûre au bout du doigt et suis le plan convenu avec ton équipe soignante pour le sport. Dulce n'est pas un dispositif médical.
+</Callout>
+
+## Sources
+
+- Garmin Developers. *Connect IQ: FIT developer fields* (champs de données qui enregistrent leurs propres valeurs dans le fichier d'activité affiché dans Garmin Connect). [developer.garmin.com](https://developer.garmin.com/connect-iq/core-topics/activity-recording/)
+- Garmin Developers. *Connect IQ: background services and temporal events* (mises à jour en arrière-plan au plus toutes les 5 minutes). [developer.garmin.com](https://developer.garmin.com/connect-iq/core-topics/backgrounding/)

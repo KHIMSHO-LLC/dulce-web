@@ -27,6 +27,7 @@ export async function SiteFooter() {
   const audience = await getTranslations("audience");
   const helpT = await getTranslations("help");
   const sensorsT = await getTranslations("sensors");
+  const garminT = await getTranslations("garmin");
   const year = new Date().getFullYear();
   const home = (id: string) => homeSection(locale as AppLocale, id);
 
@@ -77,6 +78,9 @@ export async function SiteFooter() {
                   {f.label}
                 </a>
               ))}
+              <Link href="/garmin" className={linkClass}>
+                {garminT("nav")}
+              </Link>
             </nav>
           </div>
 

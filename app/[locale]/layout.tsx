@@ -42,6 +42,7 @@ async function clientMessages() {
     contact: { form: all.contact.form },
     help: { nav: all.help.nav },
     sensors: { nav: all.sensors.nav },
+    garmin: { nav: all.garmin.nav },
     supportMail: all.supportMail,
   };
 }

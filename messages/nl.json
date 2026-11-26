@@ -79,7 +79,8 @@
       "title": "Een echte Apple Watch-app.",
       "body": "Complicaties voor je wijzerplaat en haptische meldingen. Zijn de gegevens ouder dan 15 minuten, dan zie je dat duidelijk, nooit een misleidend getal.",
       "alt": "Apple Watch met de glucose van Dulce op de wijzerplaat",
-      "pro": "Met Dulce Pro, 14 dagen gratis proberen."
+      "pro": "Met Dulce Pro, 14 dagen gratis proberen.",
+      "garmin": "Heb je een Garmin? Dulce werkt daar ook"
     },
     "counter": {
       "prefix": "Tot",
@@ -176,6 +177,12 @@
       "privacy": {
         "title": "Je gegevens zijn van jou",
         "body": "We verkopen je gegevens niet en Dulce heeft geen advertenties. AVG-conform."
+      },
+      "garmin": {
+        "title": "Garmin-horloges",
+        "body": "Een horloge-app, een glance, een wijzerplaat en een gegevensveld dat je glucose in de training kan opslaan.",
+        "link": "Dulce op Garmin",
+        "alt": "Dulce-horloge-app op een Garmin Venu 3 met glucose 120 en een pijl omhoog"
       }
     },
     "video": {
@@ -223,6 +230,10 @@
         {
           "q": "Wat kost Dulce?",
           "a": "Downloaden is gratis en de basis zit erin. Pro-functies (Apple Watch, delen met familie en meer) kun je 14 dagen gratis proberen."
+        },
+        {
+          "q": "Werkt Dulce met Garmin-horloges?",
+          "a": "Ja. Dulce heeft een horloge-app, een wijzerplaat en een gegevensveld voor trainingen voor Garmin-horloges met Connect IQ 3.1 of nieuwer, gekoppeld met een code in Instellingen › Garmin-horloge. Het hoort bij Dulce Pro en heeft je telefoon in de buurt nodig."
         },
         {
           "q": "Met welke sensoren werkt het?",
@@ -275,7 +286,7 @@
     "help": "Hulp",
     "legal": "Juridisch",
     "disclaimer": "Dulce is geen medisch hulpmiddel. Het vervangt de alarmen van je sensor en het oordeel van je zorgteam niet. De schermen op deze pagina tonen voorbeeldgegevens.",
-    "trademarks": "FreeStyle Libre en LibreLinkUp zijn handelsmerken van Abbott. Apple Watch en Apple Gezondheid zijn handelsmerken van Apple Inc. Dulce is een onafhankelijke app.",
+    "trademarks": "FreeStyle Libre en LibreLinkUp zijn handelsmerken van Abbott. Apple Watch en Apple Gezondheid zijn handelsmerken van Apple Inc. Garmin en Connect IQ zijn handelsmerken van Garmin Ltd. of haar dochterondernemingen. Dulce is een onafhankelijke app.",
     "copyright": "© {year} Dulce",
     "top": "Terug naar boven",
     "wordmark": "dulce",
@@ -582,6 +593,11 @@
         "id": "watch",
         "title": "Apple Watch",
         "body": "Je waarde om je pols, met complicaties voor je wijzerplaat."
+      },
+      {
+        "id": "garmin",
+        "title": "Garmin-horloges",
+        "body": "Je glucose op een Garmin-horloge: horloge-app, glance, wijzerplaat en een gegevensveld voor trainingen."
       },
       {
         "id": "carPlay",
@@ -968,5 +984,196 @@
     "device": "Telefoon en app-versie: ",
     "what": "Wat er gebeurde: ",
     "appHint": "Mailen vanuit de app is sneller: Instellingen › Hulp en privacy › Neem contact op met support voegt je support-ID automatisch toe."
+  },
+  "garmin": {
+    "nav": "Garmin",
+    "title": "Glucose op je Garmin-horloge met Dulce",
+    "description": "Bekijk je CGM-glucose op een Garmin-horloge: horloge-app, glance, complicatie, wijzerplaat en een gegevensveld voor trainingen. Hoe je koppelt, wat je nodig hebt en welke horloges werken.",
+    "kicker": "Dulce voor Garmin",
+    "headline": "Je glucose op je Garmin.",
+    "lead": "Dulce zet je glucose op Garmin-horloges en Edge-fietscomputers: een horloge-app, een glance, een complicatie voor de eigen wijzerplaten van Garmin, een Dulce-wijzerplaat en een gegevensveld voor trainingen. Je koppelt het horloge één keer met een korte code.",
+    "heroAlt": "Garmin Venu 3 met de Dulce-horloge-app: glucose 120 binnen bereik met een pijl omhoog, +2 verandering, 2 min geleden en een grafiek van 3 uur",
+    "storeTitle": "Haal het in de Connect IQ Store",
+    "storeNote": "Drie aparte downloads, allemaal gratis in de Connect IQ Store. Installeer degene die je wilt.",
+    "storeSoon": "Op dit moment in beoordeling bij Garmin. De links openen hier zodra Garmin de apps goedkeurt.",
+    "store": {
+      "app": "Horloge-app",
+      "appBody": "Met de glance en de complicatie.",
+      "face": "Wijzerplaat",
+      "faceBody": "Twee stijlen: meter en grafiek.",
+      "field": "Gegevensveld",
+      "fieldBody": "Voor trainingen en Edge-fietscomputers.",
+      "open": "Openen in de Connect IQ Store"
+    },
+    "surfacesTitle": "Wat je krijgt",
+    "surfaces": [
+      {
+        "id": "app",
+        "title": "Horloge-app",
+        "body": "Drie pagina's waar je doorheen scrolt. Nu: je waarde groot, in de kleur van de zone, met de trendpijl, de verandering, hoe oud de meting is, een meter langs de rand en een grafiek van 3 uur. Grafiek: 1, 3, 6 of 12 uur, met je streefbereik als band. Binnen bereik: je tijd binnen bereik over de laatste 12 uur, met het gemiddelde en de tijd die je laag en hoog zat."
+      },
+      {
+        "id": "glance",
+        "title": "Glance",
+        "body": "Veeg vanaf de wijzerplaat en de glance toont je waarde, pijl, verandering en een kleine grafiek van 3 uur, zonder iets te openen."
+      },
+      {
+        "id": "complication",
+        "title": "Complicatie",
+        "body": "Houd de Garmin-wijzerplaat die je mooi vindt. Op horloges waarvan de wijzerplaten Connect IQ-complicaties accepteren, kun je je Dulce-waarde in een van de vakjes zetten."
+      },
+      {
+        "id": "face",
+        "title": "Dulce-wijzerplaat",
+        "body": "Twee stijlen: eerst de tijd, of eerst de glucose. Een meter langs de rand, een grafiek van 3 uur en vakjes voor batterij, stappen of hartslag. Op AMOLED-horloges houdt de always-on-modus de tijd en je waarde zichtbaar op een donker scherm."
+      },
+      {
+        "id": "field",
+        "title": "Gegevensveld voor trainingen",
+        "body": "Voeg Dulce toe aan elk activiteitenscherm: waarde, pijl, verandering en een korte grafiek als het veld groot is. Het kan je glucose in de activiteit opslaan, zodat de glucoselijn achteraf in Garmin Connect staat, naast hartslag en tempo."
+      }
+    ],
+    "gallery": {
+      "graph": "Grafiekpagina op een Garmin vívoactive 5: de glucose van de laatste uren met het streefbereik als groene band",
+      "tir": "Pagina Binnen bereik op een Garmin vívoactive 5: een ring met het aandeel tijd laag, binnen bereik en hoog over 12 uur",
+      "glance": "Dulce-glance op een Garmin vívoactive 5: glucose, pijl, verandering en een kleine grafiek",
+      "faceA": "Dulce-wijzerplaat, tijdstijl, op een Garmin vívoactive 5: tijd, glucose met pijl, meter, grafiek, batterij en hartslag",
+      "faceB": "Dulce-wijzerplaat, glucosestijl, op een Garmin vívoactive 5: de glucosewaarde groot in het midden",
+      "aod": "Dulce-wijzerplaat in always-on-modus op een Garmin vívoactive 5: tijd en glucose op een donker scherm",
+      "field": "Dulce-gegevensveld op een Garmin fēnix 7 tijdens een activiteit: glucose 142 met een pijl en een korte grafiek",
+      "instinct": "Dulce-horloge-app op een Garmin Instinct 2 met een zwart-wit scherm"
+    },
+    "linkTitle": "Koppel je horloge",
+    "linkLead": "Dit doe je één keer per horloge. De horloge-app, de wijzerplaat en het gegevensveld tonen elk hun eigen code, dus koppel alles wat je installeert.",
+    "linkSteps": [
+      {
+        "title": "Installeer via de Connect IQ Store",
+        "body": "Open de Connect IQ Store op je telefoon of horloge en installeer de Dulce-horloge-app, wijzerplaat of het gegevensveld."
+      },
+      {
+        "title": "Open het op het horloge",
+        "body": "Het horloge toont een code van 6 tekens en, op kleurenschermen, een QR-code."
+      },
+      {
+        "title": "Open Dulce op je iPhone",
+        "body": "Ga naar Instellingen › Garmin-horloge."
+      },
+      {
+        "title": "Typ de code",
+        "body": "Voer de code van het horloge in en tik op Horloge koppelen, of scan de QR-code met de camera van je telefoon."
+      },
+      {
+        "title": "Klaar",
+        "body": "Je glucose verschijnt binnen een paar seconden op het horloge."
+      }
+    ],
+    "linkAlt": "Garmin vívoactive 5 met het Dulce-koppelscherm, met een QR-code en een code van 6 tekens",
+    "needTitle": "Wat je nodig hebt",
+    "need": [
+      "Dulce Pro, of iemand volgen die Dulce Pro heeft. Als je meerdere mensen volgt, kies je in het menu van het horloge wie je toont.",
+      "De Garmin Connect-app op je telefoon. Laat die op de iPhone op de achtergrond open (niet wegvegen), anders wordt het horloge niet meer bijgewerkt.",
+      "De nieuwste versie van Dulce, verbonden met je sensor via LibreLinkUp, Dexcom, CareLink of Nightscout. Metingen die alleen uit Apple Gezondheid komen, bereiken het horloge niet.",
+      "Een Garmin-horloge of Edge met Connect IQ 3.1 of nieuwer (zie de lijst hieronder). Je kunt tot 5 horloges koppelen."
+    ],
+    "updatesTitle": "Hoe vaak het wordt bijgewerkt",
+    "updates": "Zolang de Dulce-horloge-app op het horloge open is, wordt die ongeveer elke minuut vernieuwd. Op de achtergrond (glance, complicatie, wijzerplaat en gegevensveld) staat Garmin een vernieuwing per 5 minuten toe, dus de waarde daar kan tot 5 minuten achterlopen op je telefoon. Elk scherm toont hoe oud de meting is, en een oude meting wordt grijs.",
+    "watchesTitle": "Welke horloges werken",
+    "watchesLead": "Garmin-horloges met Connect IQ 3.1 of nieuwer. De horloge-app, de glance en de wijzerplaat werken op al deze horloges; voor de complicatie heb je een horloge nodig waarvan de wijzerplaten Connect IQ-complicaties accepteren.",
+    "watches": [
+      {
+        "family": "fēnix",
+        "models": "fēnix 5 en 5 Plus-serie, fēnix 6, 7, 8 en 9-serie (inclusief Pro en Solar), fēnix E, fēnix Chronos"
+      },
+      {
+        "family": "epix",
+        "models": "epix (Gen 2), epix Pro"
+      },
+      {
+        "family": "Forerunner",
+        "models": "55, 70, 165, 170, 245, 255, 265, 570, 645, 745, 935, 945, 955, 965, 970"
+      },
+      {
+        "family": "Venu",
+        "models": "Venu, Venu 2, 2S en 2 Plus, Venu 3 en 3S, Venu 4, Venu Sq en Sq 2, Venu X1"
+      },
+      {
+        "family": "vívoactive",
+        "models": "vívoactive 3, 4, 5 en 6"
+      },
+      {
+        "family": "Instinct",
+        "models": "Instinct 2, 2S en 2X, Instinct 3, Instinct Crossover, Instinct E"
+      },
+      {
+        "family": "Enduro",
+        "models": "Enduro, Enduro 3, Enduro 4"
+      },
+      {
+        "family": "MARQ",
+        "models": "MARQ (alle edities in Connect IQ)"
+      },
+      {
+        "family": "Descent",
+        "models": "Descent G1, G2, Mk1, Mk2 en Mk3"
+      },
+      {
+        "family": "Approach",
+        "models": "Approach S50 en S70"
+      },
+      {
+        "family": "D2",
+        "models": "D2 Air, Delta en Mach"
+      },
+      {
+        "family": "Edge",
+        "models": "Edge 130 en 130 Plus, 520 Plus, 530, 540, 550, 820, 830, 840, 850, 1030, 1040, 1050, 1060, Explore en MTB: het gegevensveld"
+      }
+    ],
+    "watchesNote": "De Connect IQ Store laat vóór het installeren zien of jouw model wordt ondersteund.",
+    "limitsTitle": "Goed om te weten",
+    "limits": [
+      "Alleen weergave. Het horloge toont je metingen, maar geeft geen alarmen. De alarmen van Dulce komen nog steeds als gewone meldingen op je telefoon aan, en Garmin kan telefoonmeldingen op het horloge spiegelen.",
+      "Het horloge heeft je telefoon in de buurt nodig. Garmin-horloges komen online via de Garmin Connect-app op je telefoon.",
+      "Het horloge toont wat Dulce bereikt. Als de eigen app van je sensor stopt met delen, ziet het horloge de leeftijd van de meting oplopen.",
+      "Dulce is geen medisch hulpmiddel. Neem geen behandelbeslissingen op basis van het horloge: controleer met je sensor."
+    ],
+    "faqTitle": "Vragen",
+    "faq": [
+      {
+        "q": "Werkt Dulce op Garmin-horloges?",
+        "a": "Ja. Dulce heeft een horloge-app met een glance en een complicatie, een wijzerplaat en een gegevensveld in de Garmin Connect IQ Store. Ze tonen de glucose die Dulce op je iPhone bereikt."
+      },
+      {
+        "q": "Heb ik Dulce Pro nodig voor Garmin?",
+        "a": "Ja. Glucose tonen op een Garmin-horloge hoort bij Dulce Pro, met 14 dagen gratis proberen. Als je iemand volgt die Dulce Pro heeft, heb je geen eigen abonnement nodig."
+      },
+      {
+        "q": "Welke sensoren werken?",
+        "a": "Elke sensor die Dulce leest via LibreLinkUp, Dexcom Share, Medtronic CareLink of Nightscout. Metingen die alleen uit Apple Gezondheid komen, bereiken het horloge niet."
+      },
+      {
+        "q": "Werkt het horloge zonder mijn telefoon?",
+        "a": "Nee. Garmin-horloges krijgen hun gegevens via de Garmin Connect-app op je telefoon, dus houd de telefoon in de buurt met Garmin Connect op de achtergrond actief."
+      },
+      {
+        "q": "Waarschuwt het horloge me als ik laag zit?",
+        "a": "De Dulce-horloge-app geeft geen alarmen. De lage en hoge alarmen van Dulce komen als meldingen op je telefoon aan, en Garmin kan telefoonmeldingen op het horloge tonen. De eigen alarmen van je sensor blijven werken zoals eerst."
+      },
+      {
+        "q": "Kan ik mijn glucose na een hardloop- of fietstocht zien?",
+        "a": "Ja. Met het Dulce-gegevensveld op het activiteitenscherm en Glucose opslaan in de activiteit aan, verschijnt de glucoselijn in de activiteit in Garmin Connect nadat je die hebt opgeslagen."
+      },
+      {
+        "q": "Kan ik mijn kind of partner volgen op mijn Garmin?",
+        "a": "Ja. Op een telefoon die iemand volgt, toont het horloge de glucose van die persoon. Als je meerdere mensen volgt, kies je in het menu van het horloge wie je toont."
+      }
+    ],
+    "guidesTitle": "Garmin-gidsen",
+    "cta": {
+      "title": "Dulce om je pols, ook op Garmin.",
+      "subtitle": "Dulce is gratis in de App Store. Garmin-horloges horen bij Dulce Pro, met 14 dagen gratis proberen."
+    },
+    "proLink": "Wat Dulce Pro bevat",
+    "disclaimer": "Garmin, Connect IQ, fēnix, epix, Forerunner, Venu, vívoactive, Instinct, Enduro, MARQ, Descent, Approach, D2 en Edge zijn handelsmerken van Garmin Ltd. of haar dochterondernemingen. Dulce is onafhankelijk en niet verbonden aan of goedgekeurd door Garmin. Dulce is geen medisch hulpmiddel en vervangt de alarmen van je sensor niet. Afbeeldingen van horloges komen uit de simulator van Garmin met voorbeeldgegevens."
   }
 }

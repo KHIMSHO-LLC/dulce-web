@@ -79,7 +79,8 @@
       "title": "A native Apple Watch app.",
       "body": "Complications for your watch face and haptic alerts. If data is more than 15 minutes old you'll see it plainly, never a misleading number.",
       "alt": "Apple Watch showing Dulce glucose on the watch face",
-      "pro": "With Dulce Pro, 14-day free trial."
+      "pro": "With Dulce Pro, 14-day free trial.",
+      "garmin": "Have a Garmin? Dulce works there too"
     },
     "counter": {
       "prefix": "Up to",
@@ -176,6 +177,12 @@
       "privacy": {
         "title": "Your data is yours",
         "body": "We don't sell your data and Dulce has no ads. GDPR compliant."
+      },
+      "garmin": {
+        "title": "Garmin watches",
+        "body": "A watch app, a glance, a watch face and a data field that can save your glucose into the workout.",
+        "link": "Dulce on Garmin",
+        "alt": "Dulce watch app on a Garmin Venu 3 showing glucose 120 with an up arrow"
       }
     },
     "video": {
@@ -223,6 +230,10 @@
         {
           "q": "How much does Dulce cost?",
           "a": "It's free to download and includes the essentials. Pro features (Apple Watch, family sharing and more) come with a 14-day free trial."
+        },
+        {
+          "q": "Does Dulce work with Garmin watches?",
+          "a": "Yes. Dulce has a watch app, a watch face and a workout data field for Garmin watches with Connect IQ 3.1 or later, linked with a code in Settings › Garmin watch. It's part of Dulce Pro and needs your phone nearby."
         },
         {
           "q": "Which sensors work with it?",
@@ -275,7 +286,7 @@
     "help": "Help",
     "legal": "Legal",
     "disclaimer": "Dulce is not a medical device. It doesn't replace your sensor's alarms or your care team's judgment. Screens on this page show sample data.",
-    "trademarks": "FreeStyle Libre and LibreLinkUp are trademarks of Abbott. Apple Watch and Apple Health are trademarks of Apple Inc. Dulce is an independent app.",
+    "trademarks": "FreeStyle Libre and LibreLinkUp are trademarks of Abbott. Apple Watch and Apple Health are trademarks of Apple Inc. Garmin and Connect IQ are trademarks of Garmin Ltd. or its subsidiaries. Dulce is an independent app.",
     "copyright": "© {year} Dulce: Glucose Tracker",
     "top": "Back to top",
     "wordmark": "dulce",
@@ -582,6 +593,11 @@
         "id": "watch",
         "title": "Apple Watch",
         "body": "Your number on your wrist, with complications for your watch face."
+      },
+      {
+        "id": "garmin",
+        "title": "Garmin watches",
+        "body": "Your glucose on a Garmin watch: watch app, glance, watch face and a data field for workouts."
       },
       {
         "id": "carPlay",
@@ -968,5 +984,196 @@
     "device": "Phone and app version: ",
     "what": "What happened: ",
     "appHint": "Writing from the app is faster: Settings › Help and privacy › Contact support adds your Support ID for you."
+  },
+  "garmin": {
+    "nav": "Garmin",
+    "title": "Glucose on your Garmin watch with Dulce",
+    "description": "See your CGM glucose on a Garmin watch: watch app, glance, complication, watch face and a data field for workouts. How to link it, what you need and which watches work.",
+    "kicker": "Dulce for Garmin",
+    "headline": "Your glucose on your Garmin.",
+    "lead": "Dulce puts your glucose on Garmin watches and Edge bike computers: a watch app, a glance, a complication for Garmin's own faces, a Dulce watch face and a data field for workouts. You link the watch once with a short code.",
+    "heroAlt": "Garmin Venu 3 showing the Dulce watch app: glucose 120 in range with an up arrow, +2 change, 2 min ago and a 3-hour graph",
+    "storeTitle": "Get it from the Connect IQ Store",
+    "storeNote": "Three separate downloads, all free in the Connect IQ Store. Install the ones you want.",
+    "storeSoon": "In Garmin's review right now. The links open here as soon as Garmin approves the apps.",
+    "store": {
+      "app": "Watch app",
+      "appBody": "With the glance and the complication.",
+      "face": "Watch face",
+      "faceBody": "Two styles, gauge and graph.",
+      "field": "Data field",
+      "fieldBody": "For workouts and Edge bike computers.",
+      "open": "Open in the Connect IQ Store"
+    },
+    "surfacesTitle": "What you get",
+    "surfaces": [
+      {
+        "id": "app",
+        "title": "Watch app",
+        "body": "Three pages you scroll through. Now: your number large, in the colour of its zone, with the trend arrow, the change, how old the reading is, a gauge around the edge and a 3-hour graph. Graph: 1, 3, 6 or 12 hours, with your target range as a band. In range: your time in range over the last 12 hours, with the average and the time spent low and high."
+      },
+      {
+        "id": "glance",
+        "title": "Glance",
+        "body": "Swipe from the watch face and the glance shows your number, arrow, change and a small 3-hour graph, without opening anything."
+      },
+      {
+        "id": "complication",
+        "title": "Complication",
+        "body": "Keep the Garmin face you like. On watches whose faces take Connect IQ complications, you can put your Dulce number in one of its slots."
+      },
+      {
+        "id": "face",
+        "title": "Dulce watch face",
+        "body": "Two styles: time first, or glucose first. A gauge around the edge, a 3-hour graph, and slots for battery, steps or heart rate. On AMOLED watches the always-on mode keeps the time and your number on a dark screen."
+      },
+      {
+        "id": "field",
+        "title": "Data field for workouts",
+        "body": "Add Dulce to any activity screen: number, arrow, change and a short graph when the field is large. It can save your glucose into the activity, so the glucose line shows in Garmin Connect afterwards, next to heart rate and pace."
+      }
+    ],
+    "gallery": {
+      "graph": "Graph page on a Garmin vívoactive 5: the last hours of glucose with the target range as a green band",
+      "tir": "In range page on a Garmin vívoactive 5: a ring with the share of time low, in range and high over 12 hours",
+      "glance": "Dulce glance on a Garmin vívoactive 5: glucose, arrow, change and a small graph",
+      "faceA": "Dulce watch face, time style, on a Garmin vívoactive 5: time, glucose with arrow, gauge, graph, battery and heart rate",
+      "faceB": "Dulce watch face, glucose style, on a Garmin vívoactive 5: the glucose value large in the centre",
+      "aod": "Dulce watch face in always-on mode on a Garmin vívoactive 5: time and glucose on a dark screen",
+      "field": "Dulce data field on a Garmin fēnix 7 during an activity: glucose 142 with an arrow and a short graph",
+      "instinct": "Dulce watch app on a Garmin Instinct 2 with a black and white screen"
+    },
+    "linkTitle": "Link your watch",
+    "linkLead": "You do this once per watch. The watch app, the watch face and the data field each show their own code, so link each one you install.",
+    "linkSteps": [
+      {
+        "title": "Install from the Connect IQ Store",
+        "body": "Open the Connect IQ Store on your phone or watch and install the Dulce watch app, watch face or data field."
+      },
+      {
+        "title": "Open it on the watch",
+        "body": "The watch shows a 6-character code and, on colour screens, a QR code."
+      },
+      {
+        "title": "Open Dulce on your iPhone",
+        "body": "Go to Settings › Garmin watch."
+      },
+      {
+        "title": "Type the code",
+        "body": "Enter the code from the watch and tap Link watch, or scan the QR code with your phone's camera."
+      },
+      {
+        "title": "Done",
+        "body": "Your glucose shows on the watch within a few seconds."
+      }
+    ],
+    "linkAlt": "Garmin vívoactive 5 showing the Dulce link screen with a QR code and a 6-character code",
+    "needTitle": "What you need",
+    "need": [
+      "Dulce Pro, or following someone who has Dulce Pro. If you follow several people, you pick who to show in the watch menu.",
+      "The Garmin Connect app on your phone. On iPhone, keep it open in the background (don't swipe it away), or the watch stops updating.",
+      "The latest version of Dulce, connected to your sensor through LibreLinkUp, Dexcom, CareLink or Nightscout. Readings that only come from Apple Health can't reach the watch.",
+      "A Garmin watch or Edge with Connect IQ 3.1 or later (see the list below). You can link up to 5 watches."
+    ],
+    "updatesTitle": "How often it updates",
+    "updates": "While the Dulce watch app is open on the watch, it refreshes about every minute. In the background (glance, complication, watch face and data field), Garmin allows a refresh every 5 minutes, so the number there can be up to 5 minutes behind your phone. Every screen shows how old the reading is, and an old reading turns grey.",
+    "watchesTitle": "Which watches work",
+    "watchesLead": "Garmin watches with Connect IQ 3.1 or later. The watch app, the glance and the watch face run on all of these; the complication needs a watch whose faces accept Connect IQ complications.",
+    "watches": [
+      {
+        "family": "fēnix",
+        "models": "fēnix 5 and 5 Plus series, fēnix 6, 7, 8 and 9 series (including Pro and Solar), fēnix E, fēnix Chronos"
+      },
+      {
+        "family": "epix",
+        "models": "epix (Gen 2), epix Pro"
+      },
+      {
+        "family": "Forerunner",
+        "models": "55, 70, 165, 170, 245, 255, 265, 570, 645, 745, 935, 945, 955, 965, 970"
+      },
+      {
+        "family": "Venu",
+        "models": "Venu, Venu 2, 2S and 2 Plus, Venu 3 and 3S, Venu 4, Venu Sq and Sq 2, Venu X1"
+      },
+      {
+        "family": "vívoactive",
+        "models": "vívoactive 3, 4, 5 and 6"
+      },
+      {
+        "family": "Instinct",
+        "models": "Instinct 2, 2S and 2X, Instinct 3, Instinct Crossover, Instinct E"
+      },
+      {
+        "family": "Enduro",
+        "models": "Enduro, Enduro 3, Enduro 4"
+      },
+      {
+        "family": "MARQ",
+        "models": "MARQ (all editions in Connect IQ)"
+      },
+      {
+        "family": "Descent",
+        "models": "Descent G1, G2, Mk1, Mk2 and Mk3"
+      },
+      {
+        "family": "Approach",
+        "models": "Approach S50 and S70"
+      },
+      {
+        "family": "D2",
+        "models": "D2 Air, Delta and Mach"
+      },
+      {
+        "family": "Edge",
+        "models": "Edge 130 and 130 Plus, 520 Plus, 530, 540, 550, 820, 830, 840, 850, 1030, 1040, 1050, 1060, Explore and MTB: the data field"
+      }
+    ],
+    "watchesNote": "The Connect IQ Store shows whether your exact model is supported before you install.",
+    "limitsTitle": "Good to know",
+    "limits": [
+      "Display only. The watch shows your readings; it doesn't sound alerts. Dulce's alerts still reach your phone as normal notifications, and Garmin can mirror phone notifications to the watch.",
+      "The watch needs your phone nearby. Garmin watches reach the internet through the Garmin Connect app on your phone.",
+      "The watch shows what reaches Dulce. If your sensor's own app stops sharing, the watch shows the reading's age going up.",
+      "Dulce is not a medical device. Don't make treatment decisions from the watch: confirm with your sensor."
+    ],
+    "faqTitle": "Questions",
+    "faq": [
+      {
+        "q": "Does Dulce work on Garmin watches?",
+        "a": "Yes. Dulce has a watch app with a glance and a complication, a watch face and a data field in the Garmin Connect IQ Store. They show the glucose that reaches Dulce on your iPhone."
+      },
+      {
+        "q": "Do I need Dulce Pro for Garmin?",
+        "a": "Yes. Showing glucose on a Garmin watch is part of Dulce Pro, which has a 14-day free trial. If you follow someone who has Dulce Pro, you don't need your own subscription."
+      },
+      {
+        "q": "Which sensors work?",
+        "a": "Any sensor Dulce reads through LibreLinkUp, Dexcom Share, Medtronic CareLink or Nightscout. Readings that only come from Apple Health can't reach the watch."
+      },
+      {
+        "q": "Does the watch work without my phone?",
+        "a": "No. Garmin watches get data through the Garmin Connect app on your phone, so keep the phone nearby with Garmin Connect running in the background."
+      },
+      {
+        "q": "Will the watch alert me when I'm low?",
+        "a": "The Dulce watch app doesn't sound alerts. Dulce's low and high alerts arrive on your phone as notifications, and Garmin can show phone notifications on the watch. Your sensor's own alarms keep working as before."
+      },
+      {
+        "q": "Can I see my glucose after a run or ride?",
+        "a": "Yes. With the Dulce data field on the activity screen and Save glucose in the activity turned on, the glucose line appears in the activity in Garmin Connect after you save it."
+      },
+      {
+        "q": "Can I follow my child or partner on my Garmin?",
+        "a": "Yes. On a phone that follows someone, the watch shows that person's glucose. If you follow several people, you choose who to show in the watch menu."
+      }
+    ],
+    "guidesTitle": "Garmin guides",
+    "cta": {
+      "title": "Dulce on your wrist, on Garmin too.",
+      "subtitle": "Dulce is free on the App Store. Garmin watches are part of Dulce Pro, with a 14-day free trial."
+    },
+    "proLink": "What Dulce Pro includes",
+    "disclaimer": "Garmin, Connect IQ, fēnix, epix, Forerunner, Venu, vívoactive, Instinct, Enduro, MARQ, Descent, Approach, D2 and Edge are trademarks of Garmin Ltd. or its subsidiaries. Dulce is independent and not affiliated with or endorsed by Garmin. Dulce is not a medical device and does not replace your sensor's alarms. Watch images are from Garmin's simulator with sample data."
   }
 }

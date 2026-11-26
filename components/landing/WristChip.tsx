@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { ArrowRight } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 import { FluidLayer } from "@/components/fx/FluidLayer";
 import { gsap, prefersReducedMotion } from "@/components/motion/gsap";
 import { DeviceFrame } from "@/components/screens/DeviceFrame";
@@ -25,6 +27,7 @@ export function WristChip({
   alt,
   guideHref,
   guideLabel,
+  garminLabel,
 }: {
   locale: ScreenLocale;
   before: string;
@@ -35,6 +38,8 @@ export function WristChip({
   alt: string;
   guideHref: string;
   guideLabel: string;
+  /** Link to /garmin under the guide link (href built from the locale here: client component). */
+  garminLabel?: string;
 }) {
   const sectionRef = useRef<HTMLElement>(null);
   const stickyRef = useRef<HTMLDivElement>(null);
@@ -188,6 +193,14 @@ export function WristChip({
               <p className="mt-4 max-w-[40ch] text-[1.0625rem] leading-relaxed text-ink/85">{body}</p>
               <p className="mt-3 text-label font-semibold text-ink">{pro}</p>
               <GuideLink href={guideHref} label={guideLabel} className="mt-3" />
+              {garminLabel ? (
+                <p className="mt-2">
+                  <Link href="/garmin" className="inline-flex items-center gap-2 text-label text-ink underline decoration-ember/60 underline-offset-4">
+                    {garminLabel}
+                    <ArrowRight className="h-4 w-4 text-ember" aria-hidden />
+                  </Link>
+                </p>
+              ) : null}
             </div>
           </div>
         </div>

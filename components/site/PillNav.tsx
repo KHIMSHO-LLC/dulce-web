@@ -30,6 +30,7 @@ export function PillNav() {
   const helpT = useTranslations("help");
   const mailT = useTranslations("supportMail");
   const sensorsT = useTranslations("sensors");
+  const garminT = useTranslations("garmin");
   const locale = useLocale();
   const pathname = usePathname();
   const onHome = pathname === "/";
@@ -259,6 +260,9 @@ export function PillNav() {
                 </Link>
                 <Link href="/sensors" className={smallClass}>
                   {sensorsT("nav")}
+                </Link>
+                <Link href="/garmin" className={smallClass}>
+                  {garminT("nav")}
                 </Link>
                 <Link href="/help" className={smallClass}>
                   {helpT("nav")}

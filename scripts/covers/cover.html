@@ -38,6 +38,7 @@ svg.line{position:absolute;left:0;bottom:120px;z-index:1}
 const v=new URLSearchParams(location.search).get('v')||'watch';
 const ph=(img,x,y,w,r=0,z=5)=>`<div class="ph" style="left:${x}px;top:${y}px;width:${w}px;height:${w*2760/1350}px;transform:rotate(${r}deg);z-index:${z}"><div class="sc"><img src="assets/${img}"></div><img src="frames/bz-iphone.png"></div>`;
 const wt=(img,x,y,w,r=0,z=20)=>`<div class="wt" style="left:${x}px;top:${y}px;width:${w}px;height:${w*940/620}px;transform:rotate(${r}deg);z-index:${z}"><div class="sc"><img src="assets/${img}"></div><img src="frames/bz-watch.png"></div>`;
+const im=(src,x,y,w,r=0,z=20)=>`<img src="../../public/guides/garmin/${src}" style="position:absolute;left:${x}px;top:${y}px;width:${w}px;transform:rotate(${r}deg);z-index:${z};filter:drop-shadow(0 50px 60px rgba(0,0,0,.6))">`;
 const crop=(src,W,[a,b,w,h,rad],x,y,s,rot=0,z=30)=>`<div class="crop" style="left:${x}px;top:${y}px;width:${w*s}px;height:${h*s}px;border-radius:${rad*s}px;background-image:url(${src});background-size:${W*s}px auto;background-position:${-a*s}px ${-b*s}px;transform:rotate(${rot}deg);z-index:${z}"></div>`;
 const line=`<svg class="line" width="1600" height="160" viewBox="0 0 1600 160"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#4CAF50" stop-opacity="0"/><stop offset=".25" stop-color="#4CAF50" stop-opacity=".55"/><stop offset=".55" stop-color="#4CAF50" stop-opacity=".35"/><stop offset="1" stop-color="#4CAF50" stop-opacity="0"/></linearGradient></defs><path d="M0 110 C80 105 120 70 190 78 S300 120 370 96 S470 40 540 62 S640 118 720 92 S800 70 860 84" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round"/><circle cx="860" cy="84" r="9" fill="#4CAF50"/><circle cx="860" cy="84" r="22" fill="#4CAF50" opacity=".22"/></svg>`;
 const T={
@@ -80,6 +81,13 @@ const T={
    <div class="row" style="opacity:.45"><div class="dot" style="background:rgba(255,255,255,.4)"></div><div>Me<small>My own sensor</small></div></div>
    <div class="row" style="opacity:.45"><div class="dot" style="background:rgba(255,255,255,.4)"></div><div>Someone I care for<small>A child, parent, partner or anyone you look after</small></div></div>
    <div class="row"><div class="n" style="background:#F2734E;font-size:26px"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><circle cx="6" cy="9" r="2.4"/><circle cx="10" cy="5" r="2.4"/><circle cx="14.5" cy="5" r="2.4"/><circle cx="18.5" cy="9" r="2.4"/><path d="M12 11c3 0 6 4.2 6 6.6 0 1.8-1.5 2.4-3 2.4-1.2 0-2-.6-3-.6s-1.8.6-3 .6c-1.5 0-3-.6-3-2.4C6 15.2 9 11 12 11z"/></svg></div><div>A pet<small>A dog, cat or other pet, with your vet's ranges</small></div><div class="v" style="color:#4CAF50">✓</div></div></div>`}
+,
+ garmin:{k:'Garmin guide',h:'Your glucose<br>on your <span>Garmin</span>',s:'Watch app, glance, complication, watch face and data field, linked with a code.',
+   dev:im('app-link-vivoactive5.webp',1120,170,330,7,10)+im('app-now-venu3.webp',800,150,420,-5,20)},
+ garminworkout:{k:'Garmin guide',h:'Glucose<br>during <span>workouts</span>',s:'A Dulce data field on your activity screen, and the glucose line in Garmin Connect afterwards.',
+   dev:im('field-large-light-edge1050.webp',1140,130,330,6,10)+im('field-large-fenix7.webp',830,250,400,-4,20)},
+ garminface:{k:'Garmin guide',h:'A Garmin<br>watch face with <span>glucose</span>',s:'Two styles, gauge and graph, battery, steps or heart rate, always-on on AMOLED.',
+   dev:im('face-B-vivoactive5.webp',1130,170,340,7,10)+im('face-A-vivoactive5.webp',800,140,400,-5,20)}
 }[v];
 if(v==='night')document.getElementById('c').style.background='radial-gradient(900px 700px at 1180px 520px,rgba(90,110,200,.28),transparent 70%),linear-gradient(160deg,#141826 0%,#0b0d14 60%)';
 document.getElementById('c').innerHTML=`<div class="brand"><img src="assets/dulce-drop.png">Dulce</div><div class="kick">${T.k}</div><h1>${T.h}</h1><div class="sub">${T.s}</div>${line}<div class="url">dulceglucosa.com</div>${T.dev}`;

@@ -1,0 +1,71 @@
+La forma más rápida de ver tu glucosa es tenerla donde ya miras: junto a la hora. Si llevas un Garmin, la **esfera Dulce** hace justo eso. Muestra tu glucosa con su flecha, cuánto ha cambiado y la antigüedad de la lectura, alrededor de la hora, con un indicador en el borde y una gráfica corta. Esta guía explica los dos estilos, los ajustes, el modo siempre activo y cómo instalarla.
+
+La app del reloj, el campo de datos y la lista completa de relojes están en la <PageLink to="/garmin">página de Dulce para Garmin</PageLink>.
+
+## Dos estilos
+
+**Hora** (el predeterminado) pone la hora primero: la fecha pequeña arriba, la hora grande y debajo tu glucosa del color de su zona con la flecha de tendencia, el cambio y la antigüedad de la lectura. Un indicador alrededor del borde muestra dónde estás entre bajo, en rango y alto, y abajo hay una gráfica de 3 horas con dos huecos de datos pequeños al lado.
+
+**Glucosa** le da la vuelta: tu número es lo más grande de la pantalla, en el centro, con la hora más pequeña encima.
+
+<Figure src="/guides/garmin/face-A-vivoactive5.webp" alt="Esfera Dulce, estilo Hora, en un Garmin vívoactive 5: hora 5:53, glucosa 142 con una flecha hacia arriba, cambio de +4, un indicador, una gráfica, batería y frecuencia cardiaca" caption="El estilo Hora en un vívoactive 5 (simulador de Garmin, datos de ejemplo)." width={518} height={819} bare />
+
+<Figure src="/guides/garmin/face-B-vivoactive5.webp" alt="Esfera Dulce, estilo Glucosa, en un Garmin vívoactive 5: el valor de glucosa en grande en el centro con la hora encima" caption="El estilo Glucosa." width={518} height={819} bare />
+
+## Ajustes
+
+Abre los ajustes de la esfera en la sección de Connect IQ de Garmin Connect (en muchos relojes también puedes cambiarlos en el propio reloj). Puedes elegir:
+
+- **Estilo**: Hora o Glucosa.
+- **Mostrar indicador** y **Mostrar gráfico**: activado o desactivado.
+- **Dato izquierdo** y **Dato derecho**: batería, pasos, frecuencia cardiaca o no.
+
+Los colores siguen las zonas que usan todas las pantallas de Dulce: rojo por debajo de 70 mg/dL (3,9 mmol/L), verde de 70 a 180 (3,9 a 10,0), naranja por encima. En las pantallas en blanco y negro de los relojes Instinct, la esfera se queda en blanco sobre negro, marcada y sencilla.
+
+## Siempre activa en relojes AMOLED
+
+En los relojes con pantalla AMOLED (Venu, vívoactive 5 y 6, epix, fēnix 8 AMOLED y otros), la esfera tiene un modo siempre activo de bajo consumo para cuando tienes la muñeca abajo: una pantalla oscura con la hora en gris y tu número del color de su zona, sin el indicador, la gráfica ni los huecos. Se desplaza un poco cada minuto para proteger la pantalla. Levanta la muñeca y vuelve la esfera completa.
+
+<Figure src="/guides/garmin/face-alwayson-vivoactive5.webp" alt="Esfera Dulce en modo siempre activo en un Garmin vívoactive 5: hora y glucosa en una pantalla oscura" caption="Modo siempre activo: solo la hora y tu número." width={518} height={819} bare />
+
+## Instálala y vincúlala
+
+<Steps>
+<Step title="Instala la esfera">
+En la Connect IQ Store, busca **Dulce** e instala la esfera. Garmin Connect la sincroniza con el reloj.
+</Step>
+<Step title="Selecciónala en el reloj">
+Elige la esfera Dulce como esfera del reloj. Mientras no esté vinculada, muestra un código de 6 caracteres bajo la hora.
+</Step>
+<Step title="Escribe el código en Dulce">
+En tu iPhone, abre Dulce, ve a **Ajustes › Reloj Garmin**, introduce el código y toca **Vincular reloj**.
+</Step>
+</Steps>
+
+La esfera se vincula por separado de la app del reloj y del campo de datos: cada uno muestra su propio código. Los pasos de la vinculación con capturas están en <ArticleLink to="garmin-watch">cómo ver tu glucosa en un reloj Garmin</ArticleLink>.
+
+<AppCta title="Tu glucosa junto a la hora, en tu Garmin" />
+
+## Qué necesitas
+
+- **Dulce Pro** (14 días de prueba gratis) o seguir a alguien que lo tenga. Mira <PageLink to="/pro">qué incluye Pro</PageLink>.
+- **La última versión de Dulce** en tu iPhone, conectada a tu sensor mediante LibreLinkUp, Dexcom Share, Medtronic CareLink o Nightscout.
+- **Garmin Connect** funcionando en segundo plano en el móvil, y el móvil cerca.
+- Un reloj Garmin con Connect IQ 3.1 o posterior. Los ciclocomputadores Edge no admiten esferas; para ellos existe el <ArticleLink to="garmin-workouts">campo de datos</ArticleLink>.
+
+## Cada cuánto se actualiza la esfera
+
+Las esferas solo pueden pedir datos en segundo plano, y Garmin lo permite **cada 5 minutos**. La esfera muestra la antigüedad de la lectura junto al número, y una lectura antigua se pone gris. Para tener una lectura casi cada minuto, abre la app Dulce del reloj: mientras está abierta, se actualiza con esa frecuencia.
+
+## ¿Prefieres una esfera de Garmin?
+
+Si prefieres quedarte con una de las esferas de Garmin, instala en su lugar la app Dulce del reloj: en los relojes cuyas esferas admiten complicaciones de Connect IQ, puedes poner tu número de Dulce en uno de los huecos de la esfera.
+
+<Callout type="warning">
+La esfera muestra las lecturas que llegan a Dulce, con hasta 5 minutos de retraso. No emite alertas y no sustituye las alarmas de tu sensor. Si un número te sorprende, confírmalo con tu sensor o con un pinchazo en el dedo y sigue el plan que hayas acordado con tu equipo sanitario. Dulce no es un producto sanitario.
+</Callout>
+
+## Sources
+
+- Garmin Developers. *Connect IQ: complications* (apps que publican un valor que las esferas pueden mostrar). [developer.garmin.com](https://developer.garmin.com/connect-iq/core-topics/complications/)
+- Garmin Developers. *Connect IQ: background services and temporal events* (actualizaciones en segundo plano como máximo cada 5 minutos). [developer.garmin.com](https://developer.garmin.com/connect-iq/core-topics/backgrounding/)

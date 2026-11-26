@@ -79,7 +79,8 @@
       "title": "Une vraie app Apple Watch.",
       "body": "Des complications pour ton cadran et des alertes haptiques. Si la donnée a plus de 15 minutes, tu le vois clairement, jamais un chiffre trompeur.",
       "alt": "Apple Watch affichant la glycémie de Dulce sur le cadran",
-      "pro": "Avec Dulce Pro, essai gratuit de 14 jours."
+      "pro": "Avec Dulce Pro, essai gratuit de 14 jours.",
+      "garmin": "Tu as une Garmin ? Dulce fonctionne aussi dessus"
     },
     "counter": {
       "prefix": "Jusqu'à",
@@ -176,6 +177,12 @@
       "privacy": {
         "title": "Tes données t'appartiennent",
         "body": "Nous ne vendons pas tes données et Dulce n'a pas de publicité. Conforme au RGPD."
+      },
+      "garmin": {
+        "title": "Montres Garmin",
+        "body": "Une app montre, un aperçu, un cadran et un champ de données qui peut enregistrer ta glycémie pendant l'entraînement.",
+        "link": "Dulce sur Garmin",
+        "alt": "App montre Dulce sur une Garmin Venu 3 affichant une glycémie de 120 avec une flèche vers le haut"
       }
     },
     "video": {
@@ -223,6 +230,10 @@
         {
           "q": "Combien coûte Dulce ?",
           "a": "Le téléchargement est gratuit et inclut l'essentiel. Les fonctions Pro (Apple Watch, partage en famille et plus) ont un essai gratuit de 14 jours."
+        },
+        {
+          "q": "Dulce fonctionne-t-il avec les montres Garmin ?",
+          "a": "Oui. Dulce propose une app montre, un cadran et un champ de données pour le sport sur les montres Garmin avec Connect IQ 3.1 ou plus récent, associés avec un code dans Réglages › Montre Garmin. Cela fait partie de Dulce Pro et demande ton téléphone à proximité."
         },
         {
           "q": "Quels capteurs sont compatibles ?",
@@ -275,7 +286,7 @@
     "help": "Aide",
     "legal": "Mentions légales",
     "disclaimer": "Dulce n'est pas un dispositif médical. Il ne remplace ni les alarmes de ton capteur ni l'avis de ton équipe soignante. Les écrans de cette page montrent des données d'exemple.",
-    "trademarks": "FreeStyle Libre et LibreLinkUp sont des marques d'Abbott. Apple Watch et Apple Santé sont des marques d'Apple Inc. Dulce est une app indépendante.",
+    "trademarks": "FreeStyle Libre et LibreLinkUp sont des marques d'Abbott. Apple Watch et Apple Santé sont des marques d'Apple Inc. Garmin et Connect IQ sont des marques de Garmin Ltd. ou de ses filiales. Dulce est une app indépendante.",
     "copyright": "© {year} Dulce",
     "top": "Retour en haut",
     "wordmark": "dulce",
@@ -582,6 +593,11 @@
         "id": "watch",
         "title": "Apple Watch",
         "body": "Ton chiffre au poignet, avec des complications pour ton cadran."
+      },
+      {
+        "id": "garmin",
+        "title": "Montres Garmin",
+        "body": "Ta glycémie sur une montre Garmin : app montre, aperçu, cadran et un champ de données pour le sport."
       },
       {
         "id": "carPlay",
@@ -968,5 +984,196 @@
     "device": "Téléphone et version de l’app : ",
     "what": "Ce qui s’est passé : ",
     "appHint": "Écrire depuis l’app est plus rapide : Réglages › Aide et confidentialité › Contacter le support ajoute ton ID de support pour toi."
+  },
+  "garmin": {
+    "nav": "Garmin",
+    "title": "Ta glycémie sur ta montre Garmin avec Dulce",
+    "description": "Affiche ta glycémie du capteur sur une montre Garmin : app montre, aperçu, complication, cadran et champ de données pour le sport. Comment l'associer, ce qu'il faut et quelles montres conviennent.",
+    "kicker": "Dulce pour Garmin",
+    "headline": "Ta glycémie sur ta Garmin.",
+    "lead": "Dulce affiche ta glycémie sur les montres Garmin et les compteurs vélo Edge : une app montre, un aperçu, une complication pour les cadrans Garmin, un cadran Dulce et un champ de données pour le sport. Tu associes la montre une seule fois avec un code court.",
+    "heroAlt": "Garmin Venu 3 avec l'app montre Dulce : glycémie 120 dans la cible avec une flèche vers le haut, variation +2, il y a 2 min et un graphique sur 3 heures",
+    "storeTitle": "Télécharge-la depuis le Connect IQ Store",
+    "storeNote": "Trois téléchargements distincts, tous gratuits sur le Connect IQ Store. Installe ceux que tu veux.",
+    "storeSoon": "En cours de validation chez Garmin. Les liens s'ouvriront ici dès que Garmin aura approuvé les apps.",
+    "store": {
+      "app": "App montre",
+      "appBody": "Avec l'aperçu et la complication.",
+      "face": "Cadran",
+      "faceBody": "Deux styles, jauge et graphique.",
+      "field": "Champ de données",
+      "fieldBody": "Pour le sport et les compteurs vélo Edge.",
+      "open": "Ouvrir dans le Connect IQ Store"
+    },
+    "surfacesTitle": "Ce que tu obtiens",
+    "surfaces": [
+      {
+        "id": "app",
+        "title": "App montre",
+        "body": "Trois pages que tu fais défiler. Maintenant : ton chiffre en grand, de la couleur de sa zone, avec la flèche de tendance, la variation, l'ancienneté de la mesure, une jauge sur le pourtour et un graphique sur 3 heures. Graphique : 1, 3, 6 ou 12 heures, avec ta cible en bande. Dans la cible : ton temps dans la cible sur les 12 dernières heures, avec la moyenne et le temps passé en dessous et au-dessus."
+      },
+      {
+        "id": "glance",
+        "title": "Aperçu",
+        "body": "Fais glisser depuis le cadran et l'aperçu affiche ton chiffre, la flèche, la variation et un petit graphique sur 3 heures, sans rien ouvrir."
+      },
+      {
+        "id": "complication",
+        "title": "Complication",
+        "body": "Garde le cadran Garmin que tu aimes. Sur les montres dont les cadrans acceptent les complications Connect IQ, tu peux mettre ton chiffre Dulce dans l'un de ses emplacements."
+      },
+      {
+        "id": "face",
+        "title": "Cadran Dulce",
+        "body": "Deux styles : l'heure d'abord, ou la glycémie d'abord. Une jauge sur le pourtour, un graphique sur 3 heures et des emplacements pour la batterie, les pas ou la fréquence cardiaque. Sur les montres AMOLED, le mode toujours actif garde l'heure et ton chiffre sur un écran sombre."
+      },
+      {
+        "id": "field",
+        "title": "Champ de données pour le sport",
+        "body": "Ajoute Dulce à n'importe quel écran d'activité : chiffre, flèche, variation et un court graphique quand le champ est grand. Il peut enregistrer ta glycémie dans l'activité, pour que la courbe de glycémie apparaisse ensuite dans Garmin Connect, à côté de la fréquence cardiaque et de l'allure."
+      }
+    ],
+    "gallery": {
+      "graph": "Page Graphique sur une Garmin vívoactive 5 : la glycémie des dernières heures avec la cible en bande verte",
+      "tir": "Page Dans la cible sur une Garmin vívoactive 5 : un anneau avec la part du temps en dessous, dans la cible et au-dessus sur 12 heures",
+      "glance": "Aperçu Dulce sur une Garmin vívoactive 5 : glycémie, flèche, variation et un petit graphique",
+      "faceA": "Cadran Dulce, style Heure, sur une Garmin vívoactive 5 : heure, glycémie avec flèche, jauge, graphique, batterie et fréquence cardiaque",
+      "faceB": "Cadran Dulce, style Glycémie, sur une Garmin vívoactive 5 : la valeur de glycémie en grand au centre",
+      "aod": "Cadran Dulce en mode toujours actif sur une Garmin vívoactive 5 : heure et glycémie sur un écran sombre",
+      "field": "Champ de données Dulce sur une Garmin fēnix 7 pendant une activité : glycémie 142 avec une flèche et un court graphique",
+      "instinct": "App montre Dulce sur une Garmin Instinct 2 avec un écran noir et blanc"
+    },
+    "linkTitle": "Associe ta montre",
+    "linkLead": "Tu le fais une fois par montre. L'app montre, le cadran et le champ de données affichent chacun leur propre code : associe donc chacun de ceux que tu installes.",
+    "linkSteps": [
+      {
+        "title": "Installe depuis le Connect IQ Store",
+        "body": "Ouvre le Connect IQ Store sur ton téléphone ou ta montre et installe l'app montre Dulce, le cadran ou le champ de données."
+      },
+      {
+        "title": "Ouvre-la sur la montre",
+        "body": "La montre affiche un code de 6 caractères et, sur les écrans couleur, un code QR."
+      },
+      {
+        "title": "Ouvre Dulce sur ton iPhone",
+        "body": "Va dans Réglages › Montre Garmin."
+      },
+      {
+        "title": "Saisis le code",
+        "body": "Saisis le code de la montre et touche Associer la montre, ou scanne le code QR avec l'appareil photo de ton téléphone."
+      },
+      {
+        "title": "C'est fait",
+        "body": "Ta glycémie s'affiche sur la montre en quelques secondes."
+      }
+    ],
+    "linkAlt": "Garmin vívoactive 5 affichant l'écran d'association Dulce avec un code QR et un code de 6 caractères",
+    "needTitle": "Ce qu'il te faut",
+    "need": [
+      "Dulce Pro, ou suivre quelqu'un qui a Dulce Pro. Si tu suis plusieurs personnes, tu choisis laquelle afficher dans le menu de la montre.",
+      "L'app Garmin Connect sur ton téléphone. Sur iPhone, laisse-la ouverte en arrière-plan (ne la ferme pas d'un glissement), sinon la montre ne se met plus à jour.",
+      "La dernière version de Dulce, connectée à ton capteur via LibreLinkUp, Dexcom, CareLink ou Nightscout. Les mesures qui ne viennent que d'Apple Santé n'arrivent pas sur la montre.",
+      "Une montre Garmin ou un Edge avec Connect IQ 3.1 ou plus récent (voir la liste ci-dessous). Tu peux associer jusqu'à 5 montres."
+    ],
+    "updatesTitle": "À quelle fréquence ça se met à jour",
+    "updates": "Tant que l'app montre Dulce est ouverte sur la montre, elle se rafraîchit environ toutes les minutes. En arrière-plan (aperçu, complication, cadran et champ de données), Garmin n'autorise une actualisation que toutes les 5 minutes : le chiffre affiché peut donc avoir jusqu'à 5 minutes de retard sur ton téléphone. Chaque écran indique l'ancienneté de la mesure, et une mesure ancienne devient grise.",
+    "watchesTitle": "Quelles montres conviennent",
+    "watchesLead": "Les montres Garmin avec Connect IQ 3.1 ou plus récent. L'app montre, l'aperçu et le cadran fonctionnent sur toutes celles-ci ; la complication demande une montre dont les cadrans acceptent les complications Connect IQ.",
+    "watches": [
+      {
+        "family": "fēnix",
+        "models": "séries fēnix 5 et 5 Plus, séries fēnix 6, 7, 8 et 9 (y compris Pro et Solar), fēnix E, fēnix Chronos"
+      },
+      {
+        "family": "epix",
+        "models": "epix (Gen 2), epix Pro"
+      },
+      {
+        "family": "Forerunner",
+        "models": "55, 70, 165, 170, 245, 255, 265, 570, 645, 745, 935, 945, 955, 965, 970"
+      },
+      {
+        "family": "Venu",
+        "models": "Venu, Venu 2, 2S et 2 Plus, Venu 3 et 3S, Venu 4, Venu Sq et Sq 2, Venu X1"
+      },
+      {
+        "family": "vívoactive",
+        "models": "vívoactive 3, 4, 5 et 6"
+      },
+      {
+        "family": "Instinct",
+        "models": "Instinct 2, 2S et 2X, Instinct 3, Instinct Crossover, Instinct E"
+      },
+      {
+        "family": "Enduro",
+        "models": "Enduro, Enduro 3, Enduro 4"
+      },
+      {
+        "family": "MARQ",
+        "models": "MARQ (toutes les éditions dans Connect IQ)"
+      },
+      {
+        "family": "Descent",
+        "models": "Descent G1, G2, Mk1, Mk2 et Mk3"
+      },
+      {
+        "family": "Approach",
+        "models": "Approach S50 et S70"
+      },
+      {
+        "family": "D2",
+        "models": "D2 Air, Delta et Mach"
+      },
+      {
+        "family": "Edge",
+        "models": "Edge 130 et 130 Plus, 520 Plus, 530, 540, 550, 820, 830, 840, 850, 1030, 1040, 1050, 1060, Explore et MTB : le champ de données"
+      }
+    ],
+    "watchesNote": "Le Connect IQ Store indique avant l'installation si ton modèle exact est compatible.",
+    "limitsTitle": "Bon à savoir",
+    "limits": [
+      "Affichage seulement. La montre montre tes mesures, elle ne sonne pas d'alertes. Les alertes de Dulce arrivent toujours sur ton téléphone comme des notifications normales, et Garmin peut les répercuter sur la montre.",
+      "La montre a besoin de ton téléphone à proximité. Les montres Garmin accèdent à internet via l'app Garmin Connect de ton téléphone.",
+      "La montre affiche ce qui arrive dans Dulce. Si l'app de ton capteur cesse de partager, tu verras l'ancienneté de la mesure augmenter sur la montre.",
+      "Dulce n'est pas un dispositif médical. Ne prends pas de décision de traitement à partir de la montre : vérifie avec ton capteur."
+    ],
+    "faqTitle": "Questions",
+    "faq": [
+      {
+        "q": "Dulce fonctionne-t-il sur les montres Garmin ?",
+        "a": "Oui. Dulce propose dans le Garmin Connect IQ Store une app montre avec aperçu et complication, un cadran et un champ de données. Ils affichent la glycémie qui arrive dans Dulce sur ton iPhone."
+      },
+      {
+        "q": "Faut-il Dulce Pro pour Garmin ?",
+        "a": "Oui. Afficher la glycémie sur une montre Garmin fait partie de Dulce Pro, avec 14 jours d'essai gratuit. Si tu suis quelqu'un qui a Dulce Pro, tu n'as pas besoin de ton propre abonnement."
+      },
+      {
+        "q": "Quels capteurs fonctionnent ?",
+        "a": "Tous les capteurs que Dulce lit via LibreLinkUp, Dexcom Share, Medtronic CareLink ou Nightscout. Les mesures qui ne viennent que d'Apple Santé n'arrivent pas sur la montre."
+      },
+      {
+        "q": "La montre fonctionne-t-elle sans mon téléphone ?",
+        "a": "Non. Les montres Garmin reçoivent leurs données via l'app Garmin Connect de ton téléphone : garde donc le téléphone à proximité, avec Garmin Connect en arrière-plan."
+      },
+      {
+        "q": "La montre m'alertera-t-elle si je suis en hypoglycémie ?",
+        "a": "L'app montre Dulce ne sonne pas d'alertes. Les alertes de glycémie basse et haute de Dulce arrivent sur ton téléphone sous forme de notifications, et Garmin peut les afficher sur la montre. Les alarmes de ton capteur continuent de fonctionner comme avant."
+      },
+      {
+        "q": "Puis-je voir ma glycémie après une course ou une sortie à vélo ?",
+        "a": "Oui. Avec le champ de données Dulce sur l'écran d'activité et l'option Enregistrer la glycémie dans l'activité activée, la courbe de glycémie apparaît dans l'activité dans Garmin Connect une fois celle-ci enregistrée."
+      },
+      {
+        "q": "Puis-je suivre mon enfant ou mon conjoint sur ma Garmin ?",
+        "a": "Oui. Sur un téléphone qui suit quelqu'un, la montre affiche la glycémie de cette personne. Si tu en suis plusieurs, tu choisis laquelle afficher dans le menu de la montre."
+      }
+    ],
+    "guidesTitle": "Guides Garmin",
+    "cta": {
+      "title": "Dulce à ton poignet, sur Garmin aussi.",
+      "subtitle": "Dulce est gratuit sur l'App Store. Les montres Garmin font partie de Dulce Pro, avec 14 jours d'essai gratuit."
+    },
+    "proLink": "Ce que comprend Dulce Pro",
+    "disclaimer": "Garmin, Connect IQ, fēnix, epix, Forerunner, Venu, vívoactive, Instinct, Enduro, MARQ, Descent, Approach, D2 et Edge sont des marques de Garmin Ltd. ou de ses filiales. Dulce est indépendant et n'est ni affilié à Garmin ni approuvé par Garmin. Dulce n'est pas un dispositif médical et ne remplace pas les alarmes de ton capteur. Les images de montres proviennent du simulateur de Garmin, avec des données d'exemple."
   }
 }

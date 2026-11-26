@@ -486,13 +486,13 @@ export const TOOLS: readonly Tool[] = [
     path: "/tools/sensor-end-date",
     name: "sensor-end-date",
     dateModified: "2026-10-23",
-    guides: ["librelinkup-not-working", "libre-signal-loss", "apple-watch", "apple-watch-glucose", "lock-screen", "widgets", "diabetes-at-work", "carplay"],
+    guides: ["librelinkup-not-working", "libre-signal-loss", "apple-watch", "apple-watch-glucose", "lock-screen", "widgets", "diabetes-at-work", "carplay", "garmin-watch", "garmin-watch-face"],
   },
   {
     path: "/tools/time-in-range-calculator",
     name: "time-in-range-calculator",
     dateModified: "2026-11-07",
-    guides: ["time-in-range", "trends", "blood-sugar-levels", "hba1c", "night-lows", "type-2-cgm", "newly-diagnosed"],
+    guides: ["time-in-range", "trends", "blood-sugar-levels", "hba1c", "night-lows", "type-2-cgm", "newly-diagnosed", "garmin-workouts"],
   },
   {
     path: "/tools/gmi-calculator",

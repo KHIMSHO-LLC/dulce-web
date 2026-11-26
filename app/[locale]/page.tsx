@@ -48,6 +48,7 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Live Activity en la pantalla de bloqueo y la Dynamic Island, actualizada cada minuto",
     "Widgets para la pantalla de inicio, la pantalla de bloqueo y StandBy",
     "App para Apple Watch con complicaciones",
+    "App del reloj Garmin, glance, complicación, esfera y campo de datos para entrenar (Connect IQ 3.1 o posterior)",
     "Avisos de glucosa baja y alta, aviso crítico de hipo grave y horas tranquilas",
     "Seguidores familiares por enlace de invitación, con sus propios avisos y mensajes de un toque",
     "Diario de hidratos, insulina y glucosa",
@@ -59,6 +60,7 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Lock Screen Live Activity and Dynamic Island, updated every minute",
     "Home Screen, Lock Screen and StandBy widgets",
     "Apple Watch app with complications",
+    "Garmin watch app, glance, complication, watch face and workout data field (Connect IQ 3.1 or later)",
     "Low and high alerts, a critical alert for severe lows, and quiet hours",
     "Family followers by invite link, with their own alerts and one-tap check-in messages",
     "Logbook for carbs, insulin and glucose",
@@ -70,6 +72,7 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Live-Aktivität auf dem Sperrbildschirm und in der Dynamic Island, jede Minute aktualisiert",
     "Widgets für Home-Bildschirm, Sperrbildschirm und StandBy",
     "Apple Watch App mit Komplikationen",
+    "Garmin-Uhr-App, Glance, Komplikation, Zifferblatt und Trainings-Datenfeld (Connect IQ 3.1 oder neuer)",
     "Warnungen bei niedrigen und hohen Werten, kritische Warnung bei schwerem Unterzucker und Ruhezeiten",
     "Familien-Follower per Einladungslink, mit eigenen Warnungen und Nachrichten per Tipp",
     "Logbuch für Kohlenhydrate, Insulin und Glukose",
@@ -81,6 +84,7 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Activité en direct sur l'écran verrouillé et la Dynamic Island, mise à jour chaque minute",
     "Widgets pour l'écran d'accueil, l'écran verrouillé et StandBy",
     "App Apple Watch avec complications",
+    "App montre Garmin, aperçu, complication, cadran et champ de données pour le sport (Connect IQ 3.1 ou plus récent)",
     "Alertes de glycémie basse et haute, alerte critique d'hypoglycémie sévère et heures calmes",
     "Abonnés de la famille par lien d'invitation, avec leurs propres alertes et des messages en un geste",
     "Journal des glucides, de l'insuline et de la glycémie",
@@ -92,6 +96,7 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Attività in tempo reale sulla schermata di blocco e nella Dynamic Island, aggiornata ogni minuto",
     "Widget per la schermata Home, la schermata di blocco e StandBy",
     "App per Apple Watch con complicazioni",
+    "App per orologio Garmin, glance, complicazione, quadrante e campo dati per gli allenamenti (Connect IQ 3.1 o successivo)",
     "Avvisi di glicemia bassa e alta, avviso critico per ipoglicemia grave e ore di silenzio",
     "Follower di famiglia tramite link di invito, con i propri avvisi e messaggi con un tocco",
     "Diario di carboidrati, insulina e glicemia",
@@ -103,6 +108,7 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Live Activity lukitusnäytöllä ja Dynamic Islandissa, päivittyy minuutin välein",
     "Widgetit koti- ja lukitusnäytölle sekä StandByhin",
     "Apple Watch -sovellus komplikaatioineen",
+    "Garmin-kellosovellus, pikanäkymä, komplikaatio, kellotaulu ja treenien datakenttä (Connect IQ 3.1 tai uudempi)",
     "Hälytykset matalista ja korkeista arvoista, kriittinen hälytys vakavasta hypoglykemiasta ja hiljaiset tunnit",
     "Perheenjäsenet seuraajiksi kutsulinkillä, omine hälytyksineen ja yhden napautuksen viesteineen",
     "Päiväkirja hiilihydraateille, insuliinille ja glukoosille",
@@ -114,6 +120,7 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Live Activity op het toegangsscherm en in het Dynamic Island, elke minuut bijgewerkt",
     "Widgets voor het beginscherm, het toegangsscherm en StandBy",
     "Apple Watch-app met complicaties",
+    "Garmin-horloge-app, glance, complicatie, wijzerplaat en gegevensveld voor trainingen (Connect IQ 3.1 of nieuwer)",
     "Meldingen bij lage en hoge waarden, een kritieke melding bij een ernstige hypo en stille uren",
     "Familieleden als volgers via een uitnodigingslink, met eigen meldingen en berichten met één tik",
     "Logboek voor koolhydraten, insuline en glucose",
@@ -125,6 +132,7 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Live-aktivitet på låseskjermen og i Dynamic Island, oppdatert hvert minutt",
     "Widgeter for Hjem-skjermen, låseskjermen og StandBy",
     "Apple Watch-app med komplikasjoner",
+    "Garmin-klokkeapp, glance, komplikasjon, urskive og treningsdatafelt (Connect IQ 3.1 eller nyere)",
     "Alarmer for lave og høye verdier, kritisk alarm ved alvorlig hypoglykemi og stilletimer",
     "Familiemedlemmer som følgere via invitasjonslenke, med egne alarmer og meldinger med ett trykk",
     "Loggbok for karbohydrater, insulin og glukose",
@@ -136,6 +144,7 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Live-aktivitet på låsskärmen och i Dynamic Island, uppdaterad varje minut",
     "Widgetar för hemskärmen, låsskärmen och Vänteläge",
     "Apple Watch-app med komplikationer",
+    "Garmin-klockapp, glance, komplikation, urtavla och datafält för träning (Connect IQ 3.1 eller senare)",
     "Larm vid låga och höga värden, kritiskt larm vid allvarlig hypoglykemi och tysta timmar",
     "Familjemedlemmar som följare via inbjudningslänk, med egna larm och meddelanden med ett tryck",
     "Loggbok för kolhydrater, insulin och glukos",
@@ -147,6 +156,7 @@ const FEATURES: Record<AppLocale, string[]> = {
     "Live Activity на экране блокировки и в Dynamic Island с обновлением каждую минуту",
     "Виджеты для экрана «Домой», экрана блокировки и режима ожидания",
     "Приложение для Apple Watch с расширениями",
+    "Приложение для часов Garmin, быстрый просмотр, расширение, циферблат и поле данных для тренировок (Connect IQ 3.1 или новее)",
     "Оповещения о низком и высоком уровне, критическое оповещение при тяжёлой гипогликемии и тихие часы",
     "Члены семьи как наблюдатели по ссылке-приглашению, со своими оповещениями и сообщениями в одно касание",
     "Дневник углеводов, инсулина и глюкозы",
@@ -184,7 +194,7 @@ function appSchema(locale: AppLocale, description: string) {
       "Dulce : Glycémie en direct",
       "Dulce: Glicemia sott'occhio",
     ],
-    // dulce-app app.json: ios.deploymentTarget 17.0. The watch app ships inside it.
+    // dulce-app app.json: ios.deploymentTarget 17.0. The watch app ships inside it; the Garmin apps are in the Connect IQ Store (/garmin).
     operatingSystem: "iOS 17 or later",
     applicationCategory: "HealthApplication",
     description,
@@ -290,6 +300,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         alt={t("watch.alt")}
         guideHref={guideHref("apple-watch", loc)}
         guideLabel={guideLabel}
+        garminLabel={t("watch.garmin")}
       />
 
       <ReadingsCounter />

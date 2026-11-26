@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowUpRight, ShieldCheck } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -7,13 +8,14 @@ import { Reveal } from "@/components/motion/Reveal";
 import { Split } from "@/components/motion/Split";
 import { DeviceFrame } from "@/components/screens/DeviceFrame";
 import { screenLocale } from "@/components/screens/strings";
+import { GARMIN_SHOTS } from "@/lib/garmin";
 import { SECTION } from "@/lib/site";
 import { NudgeDemo } from "./NudgeDemo";
 
 /**
- * Five things that did not get a chapter, each in its own tile and material:
+ * Six things that did not get a chapter, each in its own tile and material:
  * family (interactive), widgets (device), time in range (data), sensors
- * (setup path), privacy (a promise).
+ * (setup path), privacy (a promise), Garmin watches (a real watch screen).
  */
 export async function MoreBento() {
   const locale = screenLocale(await getLocale());
@@ -30,7 +32,7 @@ export async function MoreBento() {
       <Reveal className="container-page">
         <Split id="more-title" text={t("title")} className="type-display text-[clamp(2.5rem,6vw,6rem)] text-ink" />
 
-        <div className="mt-10 grid gap-4 md:mt-14 md:grid-cols-6 md:grid-rows-[auto_auto_auto]">
+        <div className="mt-10 grid gap-4 md:mt-14 md:grid-cols-6 md:grid-rows-[auto_auto_auto_auto]">
           {/* Family: the interactive tile, with the followers screen rising from the bottom edge */}
           <div data-fade className="md:col-span-4 md:row-span-2">
           <TiltCard as="article" max={4} className="h-full overflow-hidden rounded-[28px] border border-white/8">
@@ -139,6 +141,35 @@ export async function MoreBento() {
               {t("privacy.title")}
             </h3>
             <p className="mt-2 max-w-[40ch] text-body leading-relaxed text-[#4a413a]">{t("privacy.body")}</p>
+          </TiltCard>
+          </div>
+
+          {/* Garmin: the other wrist, a real watch-app screen */}
+          <div data-fade className="md:col-span-6">
+          <TiltCard as="article" max={3} className="h-full overflow-hidden rounded-[28px] border border-white/8 bg-[linear-gradient(160deg,#16181a,#0d0e0f)]">
+            <div className="relative grid items-center gap-6 p-7 md:grid-cols-[minmax(0,1fr)_200px] md:p-10">
+              <div>
+                <h3 className="type-display text-[clamp(1.9rem,3.4vw,3.2rem)] text-ink">{t("garmin.title")}</h3>
+                <p className="mt-4 max-w-[46ch] text-body leading-relaxed text-soft">{t("garmin.body")}</p>
+                <Link
+                  href="/garmin"
+                  className="mt-6 inline-flex items-center gap-2 text-label font-semibold text-ember transition-colors hover:text-ember-hi"
+                >
+                  {t("garmin.link")}
+                  <ArrowUpRight className="h-4 w-4" strokeWidth={2} aria-hidden />
+                </Link>
+              </div>
+              <div className="mx-auto w-[60%] max-w-[200px] transition-transform duration-700 ease-[var(--ease-out-expo)] group-data-[hover]/tilt:-translate-y-2 md:w-full">
+                <Image
+                  src={GARMIN_SHOTS.hero.src}
+                  alt={t("garmin.alt")}
+                  width={GARMIN_SHOTS.hero.width}
+                  height={GARMIN_SHOTS.hero.height}
+                  sizes="200px"
+                  className="h-auto w-full"
+                />
+              </div>
+            </div>
           </TiltCard>
           </div>
         </div>

@@ -8,6 +8,7 @@ type Icon = ComponentType<SVGProps<SVGSVGElement>>;
 const ICONS: Record<string, Icon> = {
   lockScreen: Smartphone,
   watch: Watch,
+  garmin: Watch,
   carPlay: Car,
   family: Users,
   scan: Camera,

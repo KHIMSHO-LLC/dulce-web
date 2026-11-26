@@ -1,0 +1,78 @@
+Plenty of people who wear a glucose sensor wear a Garmin too, for running, cycling, hiking or simply because the battery lasts a week. Until now, getting your glucose onto that watch meant a workaround. Dulce now has its own apps in the **Garmin Connect IQ Store**: a watch app with a glance and a complication, a watch face, and a data field for workouts. This guide shows how to link your watch step by step, what you need, and what to expect.
+
+Everything about Dulce on Garmin, including the full list of watches, is on the <PageLink to="/garmin">Dulce for Garmin page</PageLink>.
+
+## What shows on the watch
+
+- **Watch app**, with three pages: **Now** (your number large in its zone colour, the trend arrow, the change, the reading's age, a gauge around the edge and a 3-hour graph), **Graph** (1, 3, 6 or 12 hours, with your target range as a band) and **In range** (time in range over the last 12 hours, with the average and the time low and high).
+- **Glance**: swipe from the watch face to see the number, arrow, change and a small graph.
+- **Complication**: on watches whose faces accept Connect IQ complications, your number in a slot of a Garmin face.
+- **Watch face**: Dulce's own face, explained in the <ArticleLink to="garmin-watch-face">Garmin watch face guide</ArticleLink>.
+- **Data field**: your glucose on an activity screen, explained in the <ArticleLink to="garmin-workouts">guide to glucose during workouts</ArticleLink>.
+
+<Figure src="/guides/garmin/app-now-venu3.webp" alt="Garmin Venu 3 showing the Dulce watch app: glucose 120 in range with an up arrow, +2 change, 2 min ago and a 3-hour graph" caption="The Now page of the Dulce watch app on a Venu 3 (Garmin simulator, sample data)." width={560} height={791} bare />
+
+## What you need
+
+- **Dulce Pro**, which has a 14-day free trial, or following someone who has Dulce Pro. See <PageLink to="/pro">what Dulce Pro includes</PageLink>.
+- **Dulce connected to your sensor** through LibreLinkUp, Dexcom Share, Medtronic CareLink or Nightscout (the <PageLink to="/sensors">sensors page</PageLink> has the steps). Readings that only come from Apple Health can't reach the watch.
+- **The latest version of Dulce** on your iPhone.
+- **The Garmin Connect app** on your phone, paired with your watch. On iPhone, keep it open in the background: if you swipe it away, the watch stops updating.
+- **A Garmin watch with Connect IQ 3.1 or later**: most fēnix, epix, Forerunner, Venu, vívoactive, Instinct, Enduro, MARQ, Descent, Approach and D2 models from the last several years.
+
+## How to link your watch
+
+<Steps>
+<Step title="Install Dulce from the Connect IQ Store">
+On your phone, open the Connect IQ Store (inside Garmin Connect or its own app), search for Dulce and install the watch app. Wait for Garmin Connect to sync it to the watch.
+</Step>
+<Step title="Open Dulce on the watch">
+Find Dulce in the watch's apps or glances and open it. Because it isn't linked yet, it shows a **6-character code** and, on colour screens, a **QR code**.
+</Step>
+<Step title="Open Garmin watch in Dulce">
+On your iPhone, open Dulce and go to **Settings › Garmin watch**.
+</Step>
+<Step title="Type the code">
+Enter the code from the watch and tap **Link watch**. You can also scan the QR code on the watch with your iPhone's camera. Only link a watch you're holding.
+</Step>
+<Step title="Check the watch">
+Within a few seconds the watch shows your glucose. Under **Linked watches** in Dulce you'll see it listed, and you can unlink it from there at any time.
+</Step>
+</Steps>
+
+<Figure src="/guides/garmin/app-link-vivoactive5.webp" alt="Garmin vívoactive 5 showing the Dulce link screen with a QR code and a 6-character code" caption="Before it's linked, the watch app shows a QR code and a code to type in Dulce (sample code)." width={518} height={819} bare />
+
+The watch face and the data field are separate downloads with their own codes, so repeat the steps for each one you install. You can link up to 5 watches.
+
+<AppCta title="See your glucose on your Garmin" />
+
+## How often it updates
+
+While the Dulce watch app is open on the watch, it refreshes about **every minute**. The glance, complication, watch face and data field update in the background, and Garmin only allows that **every 5 minutes**. So the number on your watch face can be a few minutes behind your phone. Every screen shows how old the reading is, and an old reading turns grey so it can't pass for a fresh one.
+
+## If you follow someone
+
+On a phone that follows someone, the watch shows that person's glucose, using their Dulce Pro. If you follow several people, choose who to show in the watch app's menu. That works well for a parent who wants to see a teenager's glucose during their own run, or a partner who'd rather glance at a wrist than a phone. More about following in the <ArticleLink to="family-sharing">family sharing guide</ArticleLink>.
+
+## If the watch doesn't update
+
+1. **Is Garmin Connect running?** On iPhone, open it and leave it in the background. Check that the watch shows as connected.
+2. **Is the phone nearby?** The watch gets its data through your phone over Bluetooth.
+3. **Is Dulce getting readings?** If the number in Dulce on your phone is old, the watch will be too. Start there.
+4. **Code not accepted?** Codes expire. Open Dulce on the watch again to get a new one.
+5. **"Needs Dulce Pro" on the watch?** Start the trial in Dulce, or check that the person you follow still has Pro.
+
+## Limits worth knowing
+
+- The watch **shows** readings; it doesn't sound alerts. Dulce's alerts still arrive on your phone as normal notifications, and Garmin can show phone notifications on the watch.
+- It needs your **phone nearby**. Without it, the reading's age keeps counting up.
+- Dulce on Garmin is part of Dulce Pro. The Apple Watch app is too: compare them in the <ArticleLink to="apple-watch">Apple Watch guide</ArticleLink>.
+
+<Callout type="warning">
+The watch shows the same readings as your sensor's app, a few minutes later at most. It doesn't replace your sensor's alarms and is not a basis for treatment decisions. If a number surprises you, confirm with your sensor or a fingerstick and follow the plan you agreed with your care team. Dulce is not a medical device.
+</Callout>
+
+## Sources
+
+- Garmin. *Connect IQ Store* (installing apps, watch faces and data fields on Garmin devices). [apps.garmin.com](https://apps.garmin.com/)
+- Garmin Developers. *Connect IQ: background services and temporal events* (background updates at most every 5 minutes). [developer.garmin.com](https://developer.garmin.com/connect-iq/core-topics/backgrounding/)
