@@ -22,10 +22,10 @@ export async function PlanCompare() {
           {t("lead")}
         </p>
 
-        <div className="mt-10 grid gap-4 md:mt-14 md:grid-cols-2">
+        <div className="mt-10 grid gap-4 md:mt-14">
           <article data-fade className="rounded-[28px] border border-white/8 bg-glass p-7 md:p-10">
             <h3 className="type-display text-[clamp(1.8rem,3vw,2.6rem)] text-ink">{t("freeTitle")}</h3>
-            <ul className="mt-6 space-y-3">
+            <ul className="mt-6 grid gap-x-10 gap-y-3 md:grid-cols-2">
               {free.map((item) => (
                 <li key={item} className="flex gap-3 text-body text-soft">
                   <Check aria-hidden className="mt-1 h-5 w-5 shrink-0 text-range-text" />
@@ -48,7 +48,7 @@ export async function PlanCompare() {
             <p className="mt-1 text-label text-soft">
               {t("pricing.homeLine", { monthly: prices.monthly, yearly: prices.yearly })}
             </p>
-            <ProFeatureList />
+            <ProFeatureList wide />
           </article>
         </div>
 
