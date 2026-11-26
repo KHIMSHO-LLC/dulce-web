@@ -475,6 +475,28 @@ export function PrivacyEn() {
         using the feature. Anthropic processes the photo in the United States (section 8).
       </p>
 
+      <h3>2.9 Garmin watches (optional)</h3>
+      <p>
+        If you want, you can link a Garmin watch to Dulce: the Dulce watch app, watch face or data field from Garmin&apos;s Connect IQ store. Once linked, the watch asks our relay for your latest glucose value, trend and change, the recent graph (up to 12 hours), your target range and alert limits, your unit and, if you follow family members, the first name each person you follow has set, and shows them on the watch.
+      </p>
+      <ul>
+        <li>
+          <strong>How it travels.</strong> The request goes through the Garmin Connect app on your phone; Garmin carries it to the watch. How Garmin handles data in its own app and your Garmin account is covered by Garmin&apos;s privacy policy.
+        </li>
+        <li>
+          <strong>What the watch and the relay keep.</strong> The watch holds a random link token, never your sensor account or password. The relay stores only a hash of that token, together with your phone&apos;s random installation ID, the kind of watch app, the unit and the date of linking. Link codes expire after 15 minutes.
+        </li>
+        <li>
+          <strong>Unlinking.</strong> You can unlink a watch at any time in Dulce › Settings › Garmin watch. Delete account, or signing in with a different sensor account, also removes the links.
+        </li>
+        <li>
+          <strong>Data field: glucose in your activity.</strong> If you use the data field, its setting “Save glucose in the activity” (on by default; you can turn it off in the field&apos;s settings in Garmin Connect) writes your glucose values into that activity&apos;s file on the watch. Garmin then stores and syncs that file with the rest of the activity in your Garmin account, including to services you have connected to Garmin. Dulce does not receive or control that copy; you delete or manage it through Garmin.
+        </li>
+      </ul>
+      <p>
+        <strong>Legal basis:</strong> your explicit consent (Art. 9(2)(a) GDPR), as for the other features that show your glucose on your devices (section 4). <strong>How long:</strong> links are kept until you unlink the watch or your data is deleted with Delete account.
+      </p>
+
       <h2 id="purpose">3. Why we use your data</h2>
       <ul>
         <li>Show your glucose on your devices and, if you choose, your followers’ devices.</li>
@@ -606,6 +628,9 @@ export function PrivacyEn() {
           photo and the result within 30 days, except as described in section 2.8.
         </li>
         <li>
+          <strong>Garmin watches:</strong> links are kept until you unlink the watch, use Delete account or sign in with a different sensor account (section 2.9). Link codes expire after 15 minutes.
+        </li>
+        <li>
           <strong>Backups:</strong> data deleted from the relay can remain in our hosting
           provider&apos;s automatic database backups for up to 30 days, after which it is
           overwritten. We use these backups only to recover from a fault.
@@ -647,7 +672,7 @@ export function PrivacyEn() {
       <h2 id="recipients">7. Who we share your data with</h2>
       <p>
         We use the service providers listed below. Some process data for us under contract;
-        Abbott, Dexcom, Medtronic, Apple and Google also provide services under their own terms and
+        Abbott, Dexcom, Medtronic, Garmin, Apple and Google also provide services under their own terms and
         privacy policies:
       </p>
       <ul>
@@ -683,6 +708,9 @@ export function PrivacyEn() {
         <li>
           <strong>Meta (Meta Platforms Ireland Ltd.)</strong> — only if you turn on sharing with Meta
           in the app (section 2.2.2).
+        </li>
+        <li>
+          <strong>Garmin</strong> — only if you link a Garmin watch: the Garmin Connect app on your phone carries the data the watch requests, and Garmin stores the activities with glucose from the data field in your Garmin account (section 2.9). Garmin&apos;s privacy policy applies.
         </li>
         <li>
           <strong>Supabase</strong> (waitlist and beta storage) — hosted in the EU (eu-west-3).

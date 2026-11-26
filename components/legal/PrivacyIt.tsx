@@ -487,6 +487,28 @@ export function PrivacyIt() {
         Uniti (sezione 8).
       </p>
 
+      <h3>2.9 Orologi Garmin (facoltativo)</h3>
+      <p>
+        Se vuoi, puoi collegare un orologio Garmin a Dulce: l&apos;app Dulce per l&apos;orologio, il quadrante o il campo dati dallo store Connect IQ di Garmin. Una volta collegato, l&apos;orologio chiede al nostro relay il tuo ultimo valore di glicemia, l&apos;andamento e la variazione, il grafico recente (fino a 12 ore), il tuo intervallo target e le soglie dei tuoi avvisi, l&apos;unità di misura e, se segui dei familiari, il nome che ogni persona seguita ha impostato, e li mostra sull&apos;orologio.
+      </p>
+      <ul>
+        <li>
+          <strong>Come viaggiano i dati.</strong> La richiesta passa attraverso l&apos;app Garmin Connect sul tuo telefono; è Garmin a trasportarla fino all&apos;orologio. Il modo in cui Garmin tratta i dati nella propria app e nel tuo account Garmin è regolato dall&apos;informativa sulla privacy di Garmin.
+        </li>
+        <li>
+          <strong>Cosa conservano l&apos;orologio e il relay.</strong> L&apos;orologio conserva un token di collegamento casuale, mai il tuo account del sensore né la tua password. Il relay conserva solo un hash di quel token, insieme all&apos;ID casuale dell&apos;installazione del tuo telefono, al tipo di app dell&apos;orologio, all&apos;unità di misura e alla data del collegamento. I codici di collegamento scadono dopo 15 minuti.
+        </li>
+        <li>
+          <strong>Scollegare.</strong> Puoi scollegare un orologio in qualsiasi momento in Dulce › Impostazioni › Orologio Garmin. Anche «Elimina account», o l&apos;accesso con un altro account del sensore, rimuove i collegamenti.
+        </li>
+        <li>
+          <strong>Campo dati: la glicemia nella tua attività.</strong> Se usi il campo dati, la sua impostazione «Salva la glicemia nell&apos;attività» (attiva per impostazione predefinita; puoi disattivarla nelle impostazioni del campo in Garmin Connect) scrive i tuoi valori di glicemia nel file di quell&apos;attività sull&apos;orologio. Garmin poi conserva e sincronizza quel file con il resto dell&apos;attività nel tuo account Garmin, anche verso i servizi che hai collegato a Garmin. Dulce non riceve né controlla quella copia; la elimini o la gestisci tramite Garmin.
+        </li>
+      </ul>
+      <p>
+        <strong>Base giuridica:</strong> il tuo consenso esplicito (art. 9, par. 2, lett. a) GDPR), come per le altre funzioni che mostrano la tua glicemia sui tuoi dispositivi (sezione 4). <strong>Per quanto tempo:</strong> i collegamenti sono conservati finché non scolleghi l&apos;orologio o finché i tuoi dati non vengono eliminati con «Elimina account».
+      </p>
+
       <h2 id="purpose">3. Perché usiamo i tuoi dati</h2>
       <ul>
         <li>Mostrare la glicemia sui tuoi dispositivi e, se lo scegli, su quelli dei tuoi follower.</li>
@@ -657,6 +679,9 @@ export function PrivacyIt() {
           descritti nella sezione 2.8.
         </li>
         <li>
+          <strong>Orologi Garmin:</strong> i collegamenti sono conservati finché non scolleghi l&apos;orologio, usi «Elimina account» o accedi con un altro account del sensore (sezione 2.9). I codici di collegamento scadono dopo 15 minuti.
+        </li>
+        <li>
           <strong>Backup:</strong> i dati eliminati dal relay possono restare fino a 30 giorni nei
           backup automatici del database del nostro fornitore di hosting; poi vengono
           sovrascritti. Usiamo questi backup solo per riprenderci da un guasto.
@@ -671,7 +696,7 @@ export function PrivacyIt() {
       <h2 id="recipients">7. Con chi condividiamo i dati</h2>
       <p>
         Usiamo i fornitori elencati sotto. Alcuni trattano dati per nostro conto in base a un
-        contratto; Abbott, Dexcom, Medtronic, Apple e Google forniscono anche servizi propri soggetti alle
+        contratto; Abbott, Dexcom, Medtronic, Garmin, Apple e Google forniscono anche servizi propri soggetti alle
         loro condizioni e informative sulla privacy:
       </p>
       <ul>
@@ -705,6 +730,9 @@ export function PrivacyIt() {
         <li>
           <strong>Meta (Meta Platforms Ireland Ltd.)</strong>: solo se attivi la condivisione con
           Meta nell&apos;app (sezione 2.2.2).
+        </li>
+        <li>
+          <strong>Garmin</strong>: solo se colleghi un orologio Garmin. L&apos;app Garmin Connect sul tuo telefono trasporta i dati che l&apos;orologio richiede, e Garmin conserva nel tuo account Garmin le attività con la glicemia del campo dati (sezione 2.9). Si applica l&apos;informativa sulla privacy di Garmin.
         </li>
         <li>
           <strong>Supabase</strong> (archivio di lista d&apos;attesa e beta): ospitato nell&apos;UE

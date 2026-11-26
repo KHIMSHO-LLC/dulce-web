@@ -20,8 +20,7 @@ const COPY: Record<CoreLocale, Copy> = {
     previous: (until) => `Previous version (valid until ${until})`,
     items: {
       privacy: [
-        "Ad measurement (iOS): the app now uses Apple’s SKAdNetwork (aggregated, delayed, no advertising identifier, no health data) to measure installs and purchases (section 2.2.2).",
-        "Meta: there is no longer a consent question. Sharing install and purchase events with Meta only starts if you turn on “Share install and purchase events with Meta” in Settings; it is off by default (section 2.2.2).",
+        "Garmin watches (optional): if you link a Garmin watch, it shows your glucose through the Garmin Connect app; the data field can save glucose in your Garmin activities, and you can unlink at any time (section 2.9).",
       ],
       terms: [
         "Saved chart history now includes your logbook, and sharing shows followers only the shared entries (sections 2 and 8.1).",
@@ -33,8 +32,7 @@ const COPY: Record<CoreLocale, Copy> = {
     previous: (until) => `Versión anterior (vigente hasta el ${until})`,
     items: {
       privacy: [
-        "Medición de anuncios (iOS): la app usa ahora SKAdNetwork de Apple (agregado, con retraso, sin identificador publicitario ni datos de salud) para medir instalaciones y compras (apartado 2.2.2).",
-        "Meta: ya no hay una pregunta de consentimiento. Compartir eventos de instalación y compra con Meta solo empieza si activas «Compartir eventos de instalación y compra con Meta» en Ajustes; está desactivado por defecto (apartado 2.2.2).",
+        "Relojes Garmin (opcional): si vinculas un reloj Garmin, muestra tu glucosa a través de la app Garmin Connect; el campo de datos puede guardar la glucosa en tus actividades de Garmin, y puedes desvincularlo cuando quieras (apartado 2.9).",
       ],
       terms: [
         "El historial guardado incluye ahora tu diario, y al compartir los seguidores solo ven las entradas compartidas (apartados 2 y 8.1).",
@@ -46,8 +44,7 @@ const COPY: Record<CoreLocale, Copy> = {
     previous: (until) => `Vorherige Fassung (gültig bis ${until})`,
     items: {
       privacy: [
-        "Werbemessung (iOS): Die App nutzt jetzt Apples SKAdNetwork (aggregiert, verzögert, ohne Werbe-ID, ohne Gesundheitsdaten), um Installationen und Käufe zu messen (Abschnitt 2.2.2).",
-        "Meta: Es gibt keine Einwilligungsfrage mehr. Das Teilen von Installations- und Kaufereignissen mit Meta beginnt nur, wenn du in den Einstellungen „Installations- und Kaufereignisse mit Meta teilen“ einschaltest; standardmäßig ist es aus (Abschnitt 2.2.2).",
+        "Garmin-Uhren (optional): Wenn du eine Garmin-Uhr verbindest, zeigt sie deinen Glukosewert über die Garmin Connect App an; das Datenfeld kann Glukosewerte in deinen Garmin-Aktivitäten speichern, und du kannst die Uhr jederzeit trennen (Abschnitt 2.9).",
       ],
       terms: [
         "Der gespeicherte Kurvenverlauf umfasst jetzt dein Logbuch; beim Teilen sehen Follower nur die geteilten Einträge (Abschnitte 2 und 8.1).",
@@ -59,8 +56,7 @@ const COPY: Record<CoreLocale, Copy> = {
     previous: (until) => `Version précédente (en vigueur jusqu'au ${until})`,
     items: {
       privacy: [
-        "Mesure publicitaire (iOS) : l’app utilise maintenant SKAdNetwork d’Apple (agrégé, différé, sans identifiant publicitaire ni donnée de santé) pour mesurer les installations et les achats (section 2.2.2).",
-        "Meta : il n’y a plus de question de consentement. Le partage des événements d’installation et d’achat avec Meta ne démarre que si tu actives « Partager les événements d’installation et d’achat avec Meta » dans Réglages ; il est désactivé par défaut (section 2.2.2).",
+        "Montres Garmin (facultatif) : si tu associes une montre Garmin, elle affiche ta glycémie via l’app Garmin Connect ; le champ de données peut enregistrer la glycémie dans tes activités Garmin, et tu peux la dissocier à tout moment (section 2.9).",
       ],
       terms: [
         "L’historique enregistré inclut maintenant ton journal ; en partageant, tes abonnés ne voient que les entrées partagées (sections 2 et 8.1).",
@@ -72,8 +68,7 @@ const COPY: Record<CoreLocale, Copy> = {
     previous: (until) => `Versione precedente (valida fino al ${until})`,
     items: {
       privacy: [
-        "Misurazione degli annunci (iOS): l’app usa ora SKAdNetwork di Apple (aggregato, ritardato, senza identificativo pubblicitario né dati sanitari) per misurare installazioni e acquisti (sezione 2.2.2).",
-        "Meta: non c’è più una domanda di consenso. La condivisione di eventi di installazione e acquisto con Meta parte solo se attivi «Condividi eventi di installazione e acquisto con Meta» in Impostazioni; è disattivata per impostazione predefinita (sezione 2.2.2).",
+        "Orologi Garmin (facoltativo): se colleghi un orologio Garmin, mostra la tua glicemia tramite l’app Garmin Connect; il campo dati può salvare la glicemia nelle tue attività Garmin, e puoi scollegarlo in qualsiasi momento (sezione 2.9).",
       ],
       terms: [
         "La cronologia salvata include ora il tuo diario; condividendo, i follower vedono solo le voci condivise (sezioni 2 e 8.1).",

@@ -502,6 +502,28 @@ export function PrivacyEs() {
         (apartado 8).
       </p>
 
+      <h3>2.9 Relojes Garmin (opcional)</h3>
+      <p>
+        Si quieres, puedes vincular un reloj Garmin a Dulce: la app de Dulce para el reloj, la esfera o el campo de datos de la tienda Connect IQ de Garmin. Una vez vinculado, el reloj pide a nuestro relay tu último valor de glucosa, la tendencia y el cambio, la gráfica reciente (hasta 12 horas), tu rango objetivo y tus límites de alerta, la unidad y, si sigues a familiares, el nombre de pila que haya puesto cada persona a la que sigues, y lo muestra en el reloj.
+      </p>
+      <ul>
+        <li>
+          <strong>Por dónde pasa.</strong> La petición pasa por la app Garmin Connect de tu móvil; Garmin la transporta hasta el reloj. Cómo trata Garmin los datos de su propia app y de tu cuenta de Garmin se rige por la política de privacidad de Garmin.
+        </li>
+        <li>
+          <strong>Qué guardan el reloj y el relay.</strong> El reloj guarda un token de vinculación aleatorio, nunca tu cuenta del sensor ni tu contraseña. El relay guarda solo un hash de ese token, junto con el ID aleatorio de instalación de tu móvil, el tipo de app del reloj, la unidad y la fecha de vinculación. Los códigos de vinculación caducan a los 15 minutos.
+        </li>
+        <li>
+          <strong>Desvincular.</strong> Puedes desvincular un reloj cuando quieras en Dulce › Ajustes › Reloj Garmin. «Eliminar cuenta», o iniciar sesión con otra cuenta del sensor, también elimina las vinculaciones.
+        </li>
+        <li>
+          <strong>Campo de datos: la glucosa en tu actividad.</strong> Si usas el campo de datos, su ajuste «Guardar la glucosa en la actividad» (activado por defecto; puedes desactivarlo en los ajustes del campo en Garmin Connect) escribe tus valores de glucosa en el archivo de esa actividad en el reloj. Después, Garmin guarda y sincroniza ese archivo con el resto de la actividad en tu cuenta de Garmin, también con los servicios que hayas conectado a Garmin. Dulce no recibe ni controla esa copia; se borra o se gestiona a través de Garmin.
+        </li>
+      </ul>
+      <p>
+        <strong>Base jurídica:</strong> tu consentimiento explícito (art. 9.2.a RGPD), como para las demás funciones que muestran tu glucosa en tus dispositivos (apartado 4). <strong>Plazo:</strong> las vinculaciones se conservan hasta que desvinculas el reloj o hasta que se borran tus datos con «Eliminar cuenta».
+      </p>
+
       <h2 id="purpose">3. Para qué usamos tus datos</h2>
       <ul>
         <li>
@@ -643,6 +665,9 @@ export function PrivacyEs() {
           descritos en el apartado 2.8.
         </li>
         <li>
+          <strong>Relojes Garmin:</strong> las vinculaciones se conservan hasta que desvinculas el reloj, usas «Eliminar cuenta» o inicias sesión con otra cuenta del sensor (apartado 2.9). Los códigos de vinculación caducan a los 15 minutos.
+        </li>
+        <li>
           <strong>Copias de seguridad:</strong> los datos borrados del relay pueden permanecer
           hasta 30 días en las copias de seguridad automáticas de la base de datos de nuestro
           proveedor de alojamiento; después se sobrescriben. Solo usamos esas copias para
@@ -688,7 +713,7 @@ export function PrivacyEs() {
       <h2 id="recipients">7. Con quién compartimos tus datos</h2>
       <p>
         Usamos los proveedores que se indican a continuación. Algunos tratan datos por nuestra
-        cuenta bajo contrato; Abbott, Dexcom, Medtronic, Apple y Google también prestan servicios sujetos
+        cuenta bajo contrato; Abbott, Dexcom, Medtronic, Garmin, Apple y Google también prestan servicios sujetos
         a sus propias condiciones y políticas de privacidad:
       </p>
       <ul>
@@ -724,6 +749,9 @@ export function PrivacyEs() {
         <li>
           <strong>Meta (Meta Platforms Ireland Ltd.)</strong> — solo si activas compartir con Meta
           en la app (apartado 2.2.2).
+        </li>
+        <li>
+          <strong>Garmin</strong> — solo si vinculas un reloj Garmin: la app Garmin Connect de tu móvil transporta los datos que pide el reloj, y Garmin guarda en tu cuenta de Garmin las actividades con la glucosa del campo de datos (apartado 2.9). Se aplica la política de privacidad de Garmin.
         </li>
         <li>
           <strong>Supabase</strong> (almacenamiento de lista de espera y beta) — alojado en

@@ -504,6 +504,28 @@ export function PrivacyFr() {
         Anthropic traite la photo aux États-Unis (section 8).
       </p>
 
+      <h3>2.9 Montres Garmin (facultatif)</h3>
+      <p>
+        Si tu le souhaites, tu peux associer une montre Garmin à Dulce : l&apos;app Dulce pour montre, le cadran ou le champ de données de la boutique Connect IQ de Garmin. Une fois associée, la montre demande à notre relais ta dernière valeur de glycémie, la tendance et la variation, la courbe récente (jusqu&apos;à 12 heures), ta plage cible et tes seuils d&apos;alerte, l&apos;unité et, si tu suis des membres de ta famille, le prénom que chaque personne suivie a indiqué, et les affiche sur la montre.
+      </p>
+      <ul>
+        <li>
+          <strong>Par où passent les données.</strong> La requête passe par l&apos;app Garmin Connect de ton téléphone ; Garmin la transporte jusqu&apos;à la montre. La façon dont Garmin traite les données dans sa propre app et dans ton compte Garmin relève de la politique de confidentialité de Garmin.
+        </li>
+        <li>
+          <strong>Ce que gardent la montre et le relais.</strong> La montre garde un jeton d&apos;association aléatoire, jamais ton compte capteur ni ton mot de passe. Le relais ne garde qu&apos;un hachage de ce jeton, avec l&apos;identifiant d&apos;installation aléatoire de ton téléphone, le type d&apos;app de montre, l&apos;unité et la date d&apos;association. Les codes d&apos;association expirent au bout de 15 minutes.
+        </li>
+        <li>
+          <strong>Dissocier.</strong> Tu peux dissocier une montre à tout moment dans Dulce › Réglages › Montre Garmin. « Supprimer le compte », ou te connecter avec un autre compte capteur, supprime aussi les associations.
+        </li>
+        <li>
+          <strong>Champ de données : la glycémie dans ton activité.</strong> Si tu utilises le champ de données, son réglage « Enregistrer la glycémie dans l&apos;activité » (activé par défaut ; tu peux le désactiver dans les réglages du champ dans Garmin Connect) écrit tes valeurs de glycémie dans le fichier de cette activité sur la montre. Garmin enregistre et synchronise ensuite ce fichier avec le reste de l&apos;activité dans ton compte Garmin, y compris vers les services que tu as connectés à Garmin. Dulce ne reçoit pas cette copie et ne la contrôle pas ; tu la supprimes ou la gères via Garmin.
+        </li>
+      </ul>
+      <p>
+        <strong>Base juridique :</strong> ton consentement explicite (art. 9, par. 2, point a) du RGPD), comme pour les autres fonctions qui affichent ta glycémie sur tes appareils (section 4). <strong>Durée :</strong> les associations sont conservées jusqu&apos;à ce que tu dissocies la montre ou que tes données soient supprimées avec « Supprimer le compte ».
+      </p>
+
       <h2 id="purpose">3. Pourquoi nous utilisons tes données</h2>
       <ul>
         <li>Afficher ta glycémie sur tes appareils et, si tu le choisis, sur ceux de tes abonnés.</li>
@@ -678,6 +700,9 @@ export function PrivacyFr() {
           jours, sauf dans les cas décrits à la section 2.8.
         </li>
         <li>
+          <strong>Montres Garmin :</strong> les associations sont conservées jusqu&apos;à ce que tu dissocies la montre, que tu utilises « Supprimer le compte » ou que tu te connectes avec un autre compte capteur (section 2.9). Les codes d&apos;association expirent au bout de 15 minutes.
+        </li>
+        <li>
           <strong>Sauvegardes :</strong> les données supprimées du relais peuvent rester jusqu&apos;à
           30 jours dans les sauvegardes automatiques de la base de données de notre hébergeur,
           puis sont écrasées. Nous n&apos;utilisons ces sauvegardes que pour nous remettre
@@ -693,7 +718,7 @@ export function PrivacyFr() {
       <h2 id="recipients">7. Avec qui nous partageons tes données</h2>
       <p>
         Nous utilisons les prestataires ci-dessous. Certains traitent des données pour notre
-        compte en vertu d&apos;un contrat ; Abbott, Dexcom, Medtronic, Apple et Google fournissent aussi leurs
+        compte en vertu d&apos;un contrat ; Abbott, Dexcom, Medtronic, Garmin, Apple et Google fournissent aussi leurs
         propres services selon leurs conditions et politiques de confidentialité :
       </p>
       <ul>
@@ -727,6 +752,9 @@ export function PrivacyFr() {
         <li>
           <strong>Meta (Meta Platforms Ireland Ltd.)</strong> : uniquement si tu actives le partage avec
           Meta dans l&apos;app (section 2.2.2).
+        </li>
+        <li>
+          <strong>Garmin</strong> : uniquement si tu associes une montre Garmin. L&apos;app Garmin Connect de ton téléphone transporte les données que demande la montre, et Garmin enregistre dans ton compte Garmin les activités contenant la glycémie du champ de données (section 2.9). La politique de confidentialité de Garmin s&apos;applique.
         </li>
         <li>
           <strong>Supabase</strong> (stockage de la liste d&apos;attente et de la bêta) : hébergé

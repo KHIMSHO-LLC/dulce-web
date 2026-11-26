@@ -490,6 +490,28 @@ Missbrauch.
         Anthropic verarbeitet das Foto in den USA (Abschnitt 8).
       </p>
 
+      <h3>2.9 Garmin-Uhren (optional)</h3>
+      <p>
+        Wenn du möchtest, kannst du eine Garmin-Uhr mit Dulce verbinden: die Dulce-Uhr-App, das Zifferblatt oder das Datenfeld aus Garmins Connect IQ Store. Nach dem Verbinden fragt die Uhr bei unserem Relay deinen aktuellen Glukosewert, den Trend und die Veränderung, die Kurve der letzten Stunden (bis zu 12 Stunden), deinen Zielbereich und deine Alarmgrenzen, die Einheit und, wenn du Familienmitgliedern folgst, den Vornamen ab, den jede Person, der du folgst, eingetragen hat, und zeigt sie auf der Uhr an.
+      </p>
+      <ul>
+        <li>
+          <strong>Wie die Daten übertragen werden.</strong> Die Anfrage läuft über die Garmin Connect App auf deinem Telefon; Garmin überträgt sie zur Uhr. Wie Garmin Daten in seiner eigenen App und in deinem Garmin-Konto behandelt, regelt Garmins Datenschutzerklärung.
+        </li>
+        <li>
+          <strong>Was Uhr und Relay speichern.</strong> Die Uhr speichert ein zufälliges Verbindungs-Token, nie dein Sensorkonto oder dein Passwort. Das Relay speichert nur einen Hash dieses Tokens, zusammen mit der zufälligen Installations-ID deines Telefons, der Art der Uhr-App, der Einheit und dem Datum der Verbindung. Verbindungscodes laufen nach 15 Minuten ab.
+        </li>
+        <li>
+          <strong>Trennen.</strong> Du kannst eine Uhr jederzeit unter Dulce › Einstellungen › Garmin-Uhr trennen. Auch „Konto löschen“ oder die Anmeldung mit einem anderen Sensorkonto entfernt die Verbindungen.
+        </li>
+        <li>
+          <strong>Datenfeld: Glukose in deiner Aktivität.</strong> Wenn du das Datenfeld nutzt, schreibt seine Einstellung „Glukose in der Aktivität speichern“ (standardmäßig an; du kannst sie in den Einstellungen des Datenfelds in Garmin Connect ausschalten) deine Glukosewerte in die Datei dieser Aktivität auf der Uhr. Garmin speichert und synchronisiert diese Datei dann mit dem Rest der Aktivität in deinem Garmin-Konto, auch zu Diensten, die du mit Garmin verbunden hast. Dulce erhält diese Kopie nicht und hat keinen Einfluss darauf; du löschst oder verwaltest sie über Garmin.
+        </li>
+      </ul>
+      <p>
+        <strong>Rechtsgrundlage:</strong> deine ausdrückliche Einwilligung (Art. 9 Abs. 2 lit. a DSGVO), wie bei den anderen Funktionen, die deinen Glukosewert auf deinen Geräten anzeigen (Abschnitt 4). <strong>Wie lange:</strong> Die Verbindungen bleiben gespeichert, bis du die Uhr trennst oder deine Daten mit „Konto löschen“ gelöscht werden.
+      </p>
+
       <h2 id="purpose">3. Wofür wir deine Daten verwenden</h2>
       <ul>
         <li>Deine Glukose auf deinen Geräten und, wenn du willst, auf denen deiner Follower anzeigen.</li>
@@ -662,6 +684,9 @@ Missbrauch.
           Abschnitt 2.8 beschriebenen Fällen.
         </li>
         <li>
+          <strong>Garmin-Uhren:</strong> Die Verbindungen bleiben gespeichert, bis du die Uhr trennst, „Konto löschen“ nutzt oder dich mit einem anderen Sensorkonto anmeldest (Abschnitt 2.9). Verbindungscodes laufen nach 15 Minuten ab.
+        </li>
+        <li>
           <strong>Backups:</strong> Vom Relay gelöschte Daten können bis zu 30 Tage in den
           automatischen Datenbank-Backups unseres Hosting-Anbieters bleiben und werden danach
           überschrieben. Wir nutzen diese Backups nur, um uns von einer Störung zu erholen.
@@ -676,7 +701,7 @@ Missbrauch.
       <h2 id="recipients">7. An wen wir deine Daten weitergeben</h2>
       <p>
         Wir nutzen die folgenden Dienstleister. Einige verarbeiten Daten für uns im Auftrag;
-        Abbott, Dexcom, Medtronic, Apple und Google erbringen außerdem eigene Dienste nach ihren eigenen
+        Abbott, Dexcom, Medtronic, Garmin, Apple und Google erbringen außerdem eigene Dienste nach ihren eigenen
         Bedingungen und Datenschutzhinweisen:
       </p>
       <ul>
@@ -708,6 +733,9 @@ Missbrauch.
         <li>
           <strong>Meta (Meta Platforms Ireland Ltd.)</strong>: nur wenn du das Teilen mit Meta in
           der App einschaltest (Abschnitt 2.2.2).
+        </li>
+        <li>
+          <strong>Garmin</strong>: nur wenn du eine Garmin-Uhr verbindest. Die Garmin Connect App auf deinem Telefon überträgt die Daten, die die Uhr abfragt, und Garmin speichert die Aktivitäten mit Glukosewerten aus dem Datenfeld in deinem Garmin-Konto (Abschnitt 2.9). Es gilt Garmins Datenschutzerklärung.
         </li>
         <li>
           <strong>Supabase</strong> (Speicher für Warteliste und Beta): gehostet in der EU

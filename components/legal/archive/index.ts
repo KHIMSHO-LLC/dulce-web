@@ -1,5 +1,10 @@
 import type { AppLocale } from "@/i18n/routing";
 import type { LegalDoc } from "@/lib/legalVersions";
+import { PrivacyDe20261125 } from "./PrivacyDe20261125";
+import { PrivacyEn20261125 } from "./PrivacyEn20261125";
+import { PrivacyEs20261125 } from "./PrivacyEs20261125";
+import { PrivacyFr20261125 } from "./PrivacyFr20261125";
+import { PrivacyIt20261125 } from "./PrivacyIt20261125";
 import { PrivacyDe20261124 } from "./PrivacyDe20261124";
 import { PrivacyEn20261124 } from "./PrivacyEn20261124";
 import { PrivacyEs20261124 } from "./PrivacyEs20261124";
@@ -36,6 +41,13 @@ type ByLocale = Partial<Record<AppLocale, Doc>> & { en: Doc };
 
 export const ARCHIVED: Record<LegalDoc, Record<string, ByLocale>> = {
   privacy: {
+    "2026-11-25": {
+      es: PrivacyEs20261125,
+      en: PrivacyEn20261125,
+      de: PrivacyDe20261125,
+      fr: PrivacyFr20261125,
+      it: PrivacyIt20261125,
+    },
     "2026-11-24": {
       es: PrivacyEs20261124,
       en: PrivacyEn20261124,
