@@ -643,6 +643,7 @@
       "yearlyLine": "<b>{price}</b> a year",
       "yearlyPerMonth": "About {perMonth} a month",
       "trialLine": "14 days free for new subscribers. Cancel any time.",
+      "familyLine": "Works with Apple Family Sharing: up to 5 family members get Pro on their iPhones too.",
       "note": "Prices shown are for the United States, in US dollars. In other countries the App Store shows the price in your currency before you confirm.",
       "homeLine": "Then {monthly} a month or {yearly} a year (US prices).",
       "seeLink": "See pricing"
@@ -665,6 +666,10 @@
       {
         "q": "Do my followers need Pro?",
         "a": "No. Family sharing is part of Pro for the person wearing the sensor; followers install Dulce for free."
+      },
+      {
+        "q": "Can my family use one Dulce Pro subscription?",
+        "a": "Yes, on iPhone. Dulce Pro works with Apple Family Sharing: one person subscribes, and up to 5 other people in their Apple family group get Pro on their own iPhones at no extra cost. If Pro does not show up, the family member taps Restore purchases on the Pro screen, and the buyer checks that sharing is on for Dulce under Subscriptions in iPhone Settings. Purchases on Google Play are not shared this way. Following someone's glucose in Dulce is a separate thing and is always free for the follower."
       },
       {
         "q": "How do I cancel?",

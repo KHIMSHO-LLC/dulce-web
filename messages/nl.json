@@ -643,6 +643,7 @@
       "yearlyLine": "<b>{price}</b> per jaar",
       "yearlyPerMonth": "Ongeveer {perMonth} per maand",
       "trialLine": "14 dagen gratis voor nieuwe abonnees. Altijd opzegbaar.",
+      "familyLine": "Werkt met Delen met gezin van Apple: tot 5 gezinsleden krijgen Pro ook op hun iPhone.",
       "note": "De getoonde prijzen gelden voor de Verenigde Staten, in Amerikaanse dollars. In andere landen toont de App Store de prijs in je eigen valuta voordat je bevestigt.",
       "homeLine": "Daarna {monthly} per maand of {yearly} per jaar (prijzen in de VS).",
       "seeLink": "Bekijk de prijzen"
@@ -665,6 +666,10 @@
       {
         "q": "Hebben mijn volgers Pro nodig?",
         "a": "Nee. Delen met familie hoort bij Pro van degene met de sensor; volgers installeren Dulce gratis."
+      },
+      {
+        "q": "Kan mijn gezin één Dulce Pro-abonnement gebruiken?",
+        "a": "Ja, op de iPhone. Dulce Pro werkt met Delen met gezin van Apple: één persoon neemt het abonnement, en maximaal 5 andere personen in zijn of haar Apple-gezinsgroep krijgen Pro op hun eigen iPhone zonder extra kosten. Als Pro niet verschijnt, tikt het gezinslid op het Pro-scherm op Herstel aankopen, en controleert de koper of delen aanstaat voor Dulce onder Abonnementen in de iPhone-instellingen. Aankopen via Google Play worden zo niet gedeeld. Iemands glucose volgen in Dulce is iets anders en is voor de volger altijd gratis."
       },
       {
         "q": "Hoe zeg ik op?",

@@ -122,6 +122,10 @@ export default async function ProPage({ params }: PageProps<"/[locale]/pro">) {
                 <Check className="mt-1 h-4 w-4 shrink-0 text-range" aria-hidden />
                 {t("pricing.trialLine")}
               </p>
+              <p className="mt-2 flex gap-3 text-body leading-relaxed text-ink">
+                <Check className="mt-1 h-4 w-4 shrink-0 text-range" aria-hidden />
+                {t("pricing.familyLine")}
+              </p>
               <p className="mt-2 max-w-[60ch] text-[0.875rem] leading-relaxed text-mute">{t("pricing.note")}</p>
             </div>
             <div className="shrink-0">

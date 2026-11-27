@@ -643,6 +643,7 @@
       "yearlyLine": "<b>{price}</b> i året",
       "yearlyPerMonth": "Omtrent {perMonth} i måneden",
       "trialLine": "14 dager gratis for nye abonnenter. Si opp når som helst.",
+      "familyLine": "Fungerer med Apples Familiedeling: opptil 5 familiemedlemmer får Pro på sine iPhoner også.",
       "note": "Prisene som vises, gjelder USA, i amerikanske dollar. I andre land viser App Store prisen i din valuta før du bekrefter.",
       "homeLine": "Deretter {monthly} i måneden eller {yearly} i året (priser i USA).",
       "seeLink": "Se priser"
@@ -665,6 +666,10 @@
       {
         "q": "Trenger følgerne mine Pro?",
         "a": "Nei. Familiedeling er en del av Pro for den som har sensoren; følgerne installerer Dulce gratis."
+      },
+      {
+        "q": "Kan familien min bruke ett Dulce Pro-abonnement?",
+        "a": "Ja, på iPhone. Dulce Pro fungerer med Apples Familiedeling: én person abonnerer, og opptil 5 andre i Apple-familiegruppen får Pro på sin egen iPhone uten ekstra kostnad. Hvis Pro ikke dukker opp, trykker familiemedlemmet på Gjenopprett kjøp på Pro-skjermen, og kjøperen sjekker at deling er slått på for Dulce under Abonnementer i Innstillinger på iPhone. Kjøp på Google Play deles ikke på denne måten. Å følge noens glukose i Dulce er noe annet og alltid gratis for følgeren."
       },
       {
         "q": "Hvordan sier jeg opp?",

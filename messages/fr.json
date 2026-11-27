@@ -643,6 +643,7 @@
       "yearlyLine": "<b>{price}</b> par an",
       "yearlyPerMonth": "Environ {perMonth} par mois",
       "trialLine": "14 jours gratuits pour les nouveaux abonnés. Résiliation à tout moment.",
+      "familyLine": "Compatible avec le Partage familial d'Apple : jusqu'à 5 membres de la famille ont aussi Pro sur leur iPhone.",
       "note": "Les prix indiqués sont ceux des États-Unis, en dollars américains. Dans les autres pays, l'App Store t'affiche le prix dans ta devise avant de confirmer.",
       "homeLine": "Ensuite, {monthly} par mois ou {yearly} par an (prix aux États-Unis).",
       "seeLink": "Voir les tarifs"
@@ -665,6 +666,10 @@
       {
         "q": "Mes abonnés ont-ils besoin de Pro ?",
         "a": "Non. Le partage en famille fait partie de Pro pour la personne qui porte le capteur ; les abonnés installent Dulce gratuitement."
+      },
+      {
+        "q": "Ma famille peut-elle utiliser un seul abonnement Dulce Pro ?",
+        "a": "Oui, sur iPhone. Dulce Pro fonctionne avec le Partage familial d'Apple : une personne s'abonne, et jusqu'à 5 autres personnes de son groupe familial Apple ont Pro sur leur propre iPhone sans frais supplémentaires. Si Pro n'apparaît pas, le membre de la famille touche Restaurer les achats sur l'écran Pro, et la personne qui a acheté vérifie que le partage est activé pour Dulce dans Réglages › Abonnements de l'iPhone. Les achats faits sur Google Play ne sont pas partagés ainsi. Suivre la glycémie de quelqu'un dans Dulce est une autre chose et reste toujours gratuit pour l'abonné."
       },
       {
         "q": "Comment résilier ?",

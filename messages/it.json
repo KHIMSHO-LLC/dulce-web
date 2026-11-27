@@ -643,6 +643,7 @@
       "yearlyLine": "<b>{price}</b> all'anno",
       "yearlyPerMonth": "Circa {perMonth} al mese",
       "trialLine": "14 giorni gratis per i nuovi abbonati. Disdici quando vuoi.",
+      "familyLine": "Compatibile con In famiglia di Apple: fino a 5 familiari hanno Pro anche sul proprio iPhone.",
       "note": "I prezzi indicati sono quelli degli Stati Uniti, in dollari statunitensi. Negli altri paesi l'App Store ti mostra il prezzo nella tua valuta prima di confermare.",
       "homeLine": "Poi {monthly} al mese o {yearly} all'anno (prezzi USA).",
       "seeLink": "Vedi i prezzi"
@@ -665,6 +666,10 @@
       {
         "q": "I miei follower hanno bisogno di Pro?",
         "a": "No. La condivisione in famiglia fa parte di Pro per chi porta il sensore; i follower installano Dulce gratis."
+      },
+      {
+        "q": "La mia famiglia può usare un solo abbonamento a Dulce Pro?",
+        "a": "Sì, su iPhone. Dulce Pro funziona con In famiglia di Apple: una persona si abbona e fino a 5 altre persone del suo gruppo famiglia Apple hanno Pro sul proprio iPhone senza costi aggiuntivi. Se Pro non compare, il familiare tocca Ripristina acquisti nella schermata Pro, e chi ha acquistato controlla che la condivisione sia attiva per Dulce in Impostazioni › Abbonamenti dell'iPhone. Gli acquisti su Google Play non vengono condivisi così. Seguire la glicemia di qualcuno in Dulce è un'altra cosa ed è sempre gratis per il follower."
       },
       {
         "q": "Come disdico?",

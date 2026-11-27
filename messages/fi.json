@@ -643,6 +643,7 @@
       "yearlyLine": "<b>{price}</b> vuodessa",
       "yearlyPerMonth": "Noin {perMonth} kuukaudessa",
       "trialLine": "14 päivää ilmaiseksi uusille tilaajille. Peruminen onnistuu milloin tahansa.",
+      "familyLine": "Toimii Applen Perhejaon kanssa: jopa 5 perheenjäsentä saa Pron myös omaan iPhoneensa.",
       "note": "Näytetyt hinnat ovat Yhdysvaltojen hintoja Yhdysvaltain dollareina. Muissa maissa App Store näyttää hinnan omassa valuutassasi ennen vahvistusta.",
       "homeLine": "Sen jälkeen {monthly} kuukaudessa tai {yearly} vuodessa (Yhdysvaltojen hinnat).",
       "seeLink": "Katso hinnat"
@@ -665,6 +666,10 @@
       {
         "q": "Tarvitsevatko seuraajani Pron?",
         "a": "Eivät. Perheen seuranta kuuluu sensoria käyttävän ihmisen Pro-tilaukseen; seuraajat asentavat Dulcen ilmaiseksi."
+      },
+      {
+        "q": "Voiko perheeni käyttää yhtä Dulce Pro -tilausta?",
+        "a": "Kyllä, iPhonella. Dulce Pro toimii Applen Perhejaon kanssa: yksi henkilö tekee tilauksen, ja jopa 5 muuta hänen Apple-perheryhmänsä jäsentä saa Pron omaan iPhoneensa ilman lisämaksua. Jos Pro ei tule näkyviin, perheenjäsen napauttaa Pro-näytöllä Palauta ostokset, ja ostaja tarkistaa iPhonen Asetukset › Tilaukset -kohdasta, että jako on päällä Dulcelle. Google Playssa tehtyjä ostoksia ei jaeta näin. Jonkun glukoosin seuraaminen Dulcessa on eri asia ja aina ilmaista seuraajalle."
       },
       {
         "q": "Miten peruutan?",
