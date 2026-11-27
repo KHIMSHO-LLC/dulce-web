@@ -49,6 +49,28 @@ This makes `dulce-chrome-<version>.zip` (production relay, minified). Raise `ver
 - **Certifications (all yes):** not sold to third parties; not used or transferred for purposes unrelated to the single purpose; not used to determine creditworthiness or for lending.
 - **Privacy policy URL:** https://dulceglucosa.com/legal/privacy (section 2.10).
 
+## Test instructions tab
+
+Leave username and password empty (the extension has no login). Paste this in **Additional instructions**:
+
+> Dulce for Chrome is a companion to the Dulce phone app ("Dulce" on the App Store and Google Play). It shows the glucose reading from the user's own Dulce app. It has no account or login of its own.
+>
+> 1. Click the Dulce icon on the toolbar. The popup shows a 6-character code and a QR code. This first screen works without a phone.
+> 2. On a phone with Dulce Pro connected to a glucose sensor: Settings › Chrome on a computer → scan the QR code or type the code → Link computer.
+> 3. Within a minute the toolbar icon shows the current reading (coloured by range, grey when old). Click it for the trend arrow, how old the reading is and a chart of the last 3, 6 or 12 hours.
+> 4. To unlink: "Unlink this computer" in the popup, or Remove on the phone. The popup then shows a new code.
+>
+> Linking needs a phone with Dulce Pro and a real glucose sensor, so we can't give test credentials. The extension only talks to the Dulce server (dulce-relay.giorgikhimshiashvili.workers.dev) and only displays readings; alerts stay in the phone app. Questions: hola@dulceglucosa.com
+
+## Submit for review
+
+1. Check that every tab has no red warnings (Package, Store listing, Privacy, Distribution, Test instructions).
+2. Click **Submit for review** (top right).
+3. In the dialog, untick **Publish automatically after review** so we choose the launch day, then confirm. The status becomes "Pending review".
+4. When it is approved, click **Publish**. Then set `CHROME_STORE_URL` and `CHROME_STORE_LIVE` in `lib/chrome.ts` so the `/chrome` page shows the store button.
+
+The phone app with Settings › Chrome on a computer must be out (store build or OTA) before review, or a reviewer who installs Dulce can't find the screen.
+
 ## Distribution
 
 - Visibility: Public. Regions: all.
