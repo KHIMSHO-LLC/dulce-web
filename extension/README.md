@@ -47,6 +47,10 @@ Other builds:
 - `npm run build:staging` builds against the staging relay. Its name says "(staging)".
 - `npm run build:local` builds against `scripts/sim-relay.mjs`.
 
+### With the real app on the Android emulator
+
+Step-by-step: [TESTING.md](TESTING.md) (`scripts/sim-relay.mjs --app`: local relay, fake sensor, the app in test mode, the extension in your Chrome).
+
 ### End-to-end check (local, nothing real touched)
 
 ```bash
