@@ -12,6 +12,6 @@ export const CHROME_STORE_LIVE = false;
 export type ChromeShot = { src: string; width: number; height: number };
 
 export const CHROME_SHOTS = {
-  reading: { src: "/guides/chrome/popup-reading.webp", width: 960, height: 1029 },
+  reading: { src: "/guides/chrome/popup-reading.webp", width: 960, height: 1113 },
   link: { src: "/guides/chrome/popup-link.webp", width: 960, height: 1296 },
 } satisfies Record<string, ChromeShot>;

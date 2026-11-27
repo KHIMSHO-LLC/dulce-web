@@ -108,7 +108,7 @@ function renderReading(v: Extract<View, { kind: 'reading' }>): void {
       zoneLow: body.zoneLow,
       zoneHigh: body.zoneHigh,
       width: 292,
-      height: 120,
+      height: 148,
     });
     chart.style.opacity = '1';
   } else {
