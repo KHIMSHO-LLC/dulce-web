@@ -643,7 +643,7 @@
       "yearlyLine": "<b>{price}</b> im Jahr",
       "yearlyPerMonth": "Etwa {perMonth} im Monat",
       "trialLine": "14 Tage gratis für neue Abonnenten. Jederzeit kündbar.",
-      "familyLine": "Funktioniert mit Apple Familienfreigabe: Bis zu 5 Familienmitglieder bekommen Pro auch auf ihrem iPhone.",
+      "familyLine": "Funktioniert mit der Apple-Familienfreigabe: Bis zu 5 Familienmitglieder bekommen Pro auch auf ihrem iPhone.",
       "note": "Die Preise gelten für die USA, in US-Dollar. In anderen Ländern zeigt dir der App Store den Preis in deiner Währung, bevor du bestätigst.",
       "homeLine": "Danach {monthly} im Monat oder {yearly} im Jahr (US-Preise).",
       "seeLink": "Preise ansehen"
@@ -669,7 +669,7 @@
       },
       {
         "q": "Kann meine Familie ein Dulce-Pro-Abo gemeinsam nutzen?",
-        "a": "Ja, auf dem iPhone. Dulce Pro funktioniert mit Apple Familienfreigabe: Eine Person schließt das Abo ab, und bis zu 5 weitere Personen aus ihrer Apple-Familiengruppe bekommen Pro ohne Aufpreis auf ihrem eigenen iPhone. Wenn Pro nicht erscheint, tippt das Familienmitglied auf dem Pro-Bildschirm auf „Käufe wiederherstellen“, und die kaufende Person prüft in den iPhone-Einstellungen unter „Abonnements“, ob die Freigabe für Dulce aktiviert ist. Käufe über Google Play werden so nicht geteilt. Jemandem in Dulce zu folgen ist etwas anderes und für Follower immer kostenlos."
+        "a": "Ja, auf dem iPhone. Dulce Pro funktioniert mit der Apple-Familienfreigabe: Eine Person schließt das Abo ab, und bis zu 5 weitere Personen aus ihrer Apple-Familiengruppe bekommen Pro ohne Aufpreis auf ihrem eigenen iPhone. Wenn Pro nicht erscheint, tippt das Familienmitglied auf dem Pro-Bildschirm auf „Käufe wiederherstellen“, und die kaufende Person prüft in den iPhone-Einstellungen unter „Abonnements“, ob die Freigabe für Dulce aktiviert ist. Käufe über Google Play werden so nicht geteilt. Jemandem in Dulce zu folgen ist etwas anderes und für Follower immer kostenlos."
       },
       {
         "q": "Wie kündige ich?",
