@@ -14,6 +14,7 @@
  * rate is visible next to the reasons.
  */
 
+import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   UnauthorizedError,
@@ -68,6 +69,125 @@ function Stat({ label, value, hint }: { label: string; value: string; hint?: str
       <p className="text-caption uppercase tracking-wide text-muted">{label}</p>
       <p className="mt-1 text-display font-bold tabular-nums text-foreground">{value}</p>
       {hint ? <p className="mt-0.5 text-caption text-muted">{hint}</p> : null}
+    </div>
+  );
+}
+
+function CopyButton({ text }: { text: string }) {
+  const [done, setDone] = useState(false);
+  return (
+    <button
+      type="button"
+      onClick={() => {
+        void navigator.clipboard.writeText(text).then(
+          () => {
+            setDone(true);
+            setTimeout(() => setDone(false), 1500);
+          },
+          () => {},
+        );
+      }}
+      className="text-caption font-semibold text-accent hover:underline"
+    >
+      {done ? "Copied" : "Copy"}
+    </button>
+  );
+}
+
+/** One answer up close: the note, the facts, and how to reach the person. */
+function AnswerDialog({ a, onClose }: { a: CancelAnswer; onClose: () => void }) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+  const reason = LABEL.get(normalizeReason(a.reason)) ?? a.reason;
+  const facts = [
+    periodLabel(a),
+    planLabel(a.product),
+    sensorLabel(a),
+    `${speedLabel(speedMs(a))} after install`,
+    a.locale ?? "—",
+  ].join(" · ");
+  const subject = "Dulce";
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/40 p-4 sm:p-16"
+      onClick={onClose}
+    >
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="answer-title"
+        onClick={(e) => e.stopPropagation()}
+        className="w-full max-w-md rounded-[var(--radius-card)] border border-border-subtle bg-card p-5 text-label text-foreground shadow-xl"
+      >
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <h2 id="answer-title" className="font-bold">
+              {reason}
+            </h2>
+            <p className="mt-0.5 text-caption text-muted">{dateTime(a.at)}</p>
+          </div>
+          <button type="button" onClick={onClose} className="text-caption text-muted underline">
+            close
+          </button>
+        </div>
+
+        {a.note ? (
+          <p className="mt-4 rounded-[var(--radius-button-sm)] bg-accent-soft/50 p-3 whitespace-pre-wrap">
+            &ldquo;{a.note}&rdquo;
+          </p>
+        ) : (
+          <p className="mt-4 text-muted">No note.</p>
+        )}
+
+        <p className="mt-3 text-caption text-muted">{facts}</p>
+
+        <div className="mt-4 space-y-2 border-t border-border-subtle pt-4">
+          <div className="flex items-center justify-between gap-3">
+            <span className="text-muted">Email</span>
+            {a.email ? (
+              <span className="flex min-w-0 items-center gap-3">
+                <span className="truncate select-all">{a.email}</span>
+                <CopyButton text={a.email} />
+              </span>
+            ) : (
+              <span className="text-muted">none saved</span>
+            )}
+          </div>
+          {a.supportId ? (
+            <div className="flex items-center justify-between gap-3">
+              <span className="text-muted">Support ID</span>
+              <span className="flex min-w-0 items-center gap-3">
+                <span className="truncate font-mono text-caption select-all">{a.supportId}</span>
+                <CopyButton text={a.supportId} />
+              </span>
+            </div>
+          ) : null}
+        </div>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          {a.email ? (
+            <a
+              href={`mailto:${a.email}?subject=${encodeURIComponent(subject)}`}
+              className="h-9 inline-flex items-center px-3 rounded-[var(--radius-button-sm)] bg-accent text-white font-semibold hover:opacity-90"
+            >
+              Write an email
+            </a>
+          ) : null}
+          {a.supportId ? (
+            <Link
+              href={`/partners/users?q=${encodeURIComponent(a.supportId)}`}
+              className="h-9 inline-flex items-center px-3 rounded-[var(--radius-button-sm)] border border-border-subtle font-semibold hover:bg-accent-soft"
+            >
+              Open in Users
+            </Link>
+          ) : null}
+        </div>
+      </div>
     </div>
   );
 }
@@ -251,6 +371,8 @@ export default function CancellationsPage() {
   const last30 = now ? all.filter((a) => now - a.at <= 30 * 24 * 60 * 60 * 1000).length : 0;
   const trials = all.filter(isTrial).length;
   const notes = filtered.filter((a) => a.note);
+  const [open, setOpen] = useState<CancelAnswer | null>(null);
+  const closeDialog = useCallback(() => setOpen(null), []);
 
   return (
     <div className="container-page py-10">
@@ -426,7 +548,7 @@ export default function CancellationsPage() {
           </div>
 
           <div className="mt-6">
-            <Card title="Every answer" subtitle="Newest first">
+            <Card title="Every answer" subtitle="Newest first · click a row for the note and email">
               {filtered.length === 0 ? (
                 <p className="py-6 text-center text-label text-muted">Nothing to show.</p>
               ) : (
@@ -448,11 +570,31 @@ export default function CancellationsPage() {
                     </thead>
                     <tbody>
                       {filtered.map((a) => (
-                        <tr key={`${a.device}-${a.at}`} className="border-t border-border-subtle">
+                        <tr
+                          key={`${a.device}-${a.at}`}
+                          onClick={() => setOpen(a)}
+                          className="cursor-pointer border-t border-border-subtle hover:bg-accent-soft/40"
+                        >
                           <td className="py-2 pr-4 whitespace-nowrap tabular-nums">{dateTime(a.at)}</td>
                           <td className="py-2 pr-4">
                             {LABEL.get(normalizeReason(a.reason)) ?? a.reason}
-                            {a.note ? <span className="ml-1 text-muted">· note</span> : null}
+                            {a.note ? (
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setOpen(a);
+                                }}
+                                className="ml-2 whitespace-nowrap rounded-full bg-accent-soft px-2 py-0.5 text-caption font-semibold text-accent hover:underline"
+                              >
+                                note
+                              </button>
+                            ) : null}
+                            {a.email ? (
+                              <span title="Left a contact email" className="ml-1.5 text-caption text-muted">
+                                email
+                              </span>
+                            ) : null}
                           </td>
                           <td className="py-2 pr-4">{periodLabel(a)}</td>
                           <td className="py-2 pr-4">{planLabel(a.product)}</td>
@@ -476,6 +618,7 @@ export default function CancellationsPage() {
           </div>
         </>
       )}
+      {open ? <AnswerDialog a={open} onClose={closeDialog} /> : null}
     </div>
   );
 }

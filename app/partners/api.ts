@@ -352,6 +352,10 @@ export interface CancelAnswer {
   installedAt?: number | null;
   /** First 8 chars of the device id. */
   device: string;
+  /** Full device id (= Support ID) for the Users lookup; absent on older relays. */
+  supportId?: string;
+  /** Contact email the person saved in the app, if any; absent on older relays. */
+  email?: string | null;
 }
 
 /** A relay-proxied RevenueCat answer: the RC body as-is, or why it failed. */
