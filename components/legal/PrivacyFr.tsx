@@ -526,6 +526,28 @@ export function PrivacyFr() {
         <strong>Base juridique :</strong> ton consentement explicite (art. 9, par. 2, point a) du RGPD), comme pour les autres fonctions qui affichent ta glycémie sur tes appareils (section 4). <strong>Durée :</strong> les associations sont conservées jusqu&apos;à ce que tu dissocies la montre ou que tes données soient supprimées avec « Supprimer le compte ».
       </p>
 
+      <h3>2.10 Extension pour Chrome (facultatif)</h3>
+      <p>
+        Si tu le souhaites, tu peux associer l&apos;extension Dulce pour Chrome (elle fonctionne aussi dans Edge et Brave) à Dulce. Une fois associée, l&apos;extension demande à notre relais, environ une fois par minute, les mêmes données qu&apos;une montre associée : ta dernière valeur de glycémie, la tendance et la variation, la courbe récente (jusqu&apos;à 12 heures), ta plage cible et tes seuils d&apos;alerte, l&apos;unité et, si tu suis des membres de ta famille, le prénom que chaque personne suivie a indiqué, et les affiche dans ton navigateur.
+      </p>
+      <ul>
+        <li>
+          <strong>Par où passent les données.</strong> L&apos;extension communique directement avec notre relais par une connexion chiffrée. Google ne fait que distribuer l&apos;extension via le Chrome Web Store ; ta glycémie ne passe pas par Google.
+        </li>
+        <li>
+          <strong>Ce que gardent l&apos;extension et le relais.</strong> L&apos;extension garde un jeton d&apos;association aléatoire et sa dernière réponse (pour l&apos;afficher hors ligne) dans le stockage local des extensions du navigateur, uniquement sur cet ordinateur ; il n&apos;est pas synchronisé avec tes autres appareils et ne contient jamais ton compte capteur ni ton mot de passe. Le relais ne garde qu&apos;un hachage du jeton, avec l&apos;identifiant d&apos;installation aléatoire de ton téléphone, le type d&apos;association, l&apos;unité et la date d&apos;association. Les codes d&apos;association expirent après 15 minutes.
+        </li>
+        <li>
+          <strong>Qui peut la voir.</strong> Toute personne qui utilise ce profil de navigateur peut voir la glycémie affichée par l&apos;extension.
+        </li>
+        <li>
+          <strong>Dissocier.</strong> Tu peux retirer un ordinateur à tout moment dans Dulce › Réglages › Chrome sur un ordinateur ; l&apos;extension s&apos;arrête en moins d&apos;une minute. « Dissocier cet ordinateur » dans l&apos;extension, ou retirer l&apos;extension du navigateur, efface ses données enregistrées sur cet ordinateur. « Supprimer le compte », ou te connecter avec un autre compte capteur, supprime aussi les associations.
+        </li>
+      </ul>
+      <p>
+        <strong>Base juridique :</strong> ton consentement explicite (art. 9, par. 2, point a) du RGPD), comme pour les autres fonctions qui affichent ta glycémie sur tes appareils (section 4). <strong>Durée :</strong> les associations sont conservées jusqu&apos;à ce que tu retires l&apos;ordinateur ou que tes données soient supprimées avec « Supprimer le compte ».
+      </p>
+
       <h2 id="purpose">3. Pourquoi nous utilisons tes données</h2>
       <ul>
         <li>Afficher ta glycémie sur tes appareils et, si tu le choisis, sur ceux de tes abonnés.</li>
@@ -701,6 +723,9 @@ export function PrivacyFr() {
         </li>
         <li>
           <strong>Montres Garmin :</strong> les associations sont conservées jusqu&apos;à ce que tu dissocies la montre, que tu utilises « Supprimer le compte » ou que tu te connectes avec un autre compte capteur (section 2.9). Les codes d&apos;association expirent au bout de 15 minutes.
+        </li>
+        <li>
+          <strong>Extension pour Chrome :</strong> les associations sont conservées jusqu&apos;à ce que tu retires l&apos;ordinateur, utilises « Supprimer le compte » ou te connectes avec un autre compte capteur (section 2.10). Les codes d&apos;association expirent après 15 minutes.
         </li>
         <li>
           <strong>Sauvegardes :</strong> les données supprimées du relais peuvent rester jusqu&apos;à

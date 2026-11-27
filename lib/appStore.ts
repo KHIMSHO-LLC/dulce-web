@@ -28,6 +28,8 @@ export type StoreCampaign =
   | "web_sensors"
   /** /garmin page. */
   | "web_garmin"
+  /** /chrome page. */
+  | "web_chrome"
   /** Markdown copies for AI assistants (/llms-full.txt, /md/...). */
   | "web_llms"
   /** One campaign per article (`blog_<article id>`), so installs can be traced to the page. */

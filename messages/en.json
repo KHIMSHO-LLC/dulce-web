@@ -1180,5 +1180,94 @@
     },
     "proLink": "What Dulce Pro includes",
     "disclaimer": "Garmin, Connect IQ, fēnix, epix, Forerunner, Venu, vívoactive, Instinct, Enduro, MARQ, Descent, Approach, D2 and Edge are trademarks of Garmin Ltd. or its subsidiaries. Dulce is independent and not affiliated with or endorsed by Garmin. Dulce is not a medical device and does not replace your sensor's alarms. Watch images are from Garmin's simulator with sample data."
+  },
+  "chrome": {
+    "nav": "Chrome",
+    "title": "Dulce for Chrome: your glucose on the toolbar",
+    "description": "See the glucose from your Dulce app on the Chrome toolbar, in Edge and Brave too. Link it once with a code from your phone.",
+    "kicker": "Dulce for Chrome",
+    "headline": "Your glucose on your computer.",
+    "lead": "The Dulce extension puts your glucose on the Chrome toolbar, in Edge and Brave too. Click it for the trend, how old the reading is and the last 12 hours. You link it once with a short code from Dulce on your phone.",
+    "heroAlt": "The Dulce extension in Chrome: 118 mg/dL, rising slowly, with a 12-hour chart",
+    "store": "Add to Chrome",
+    "storeSoon": "Coming to the Chrome Web Store soon.",
+    "featuresTitle": "What you get",
+    "features": [
+      {
+        "title": "On the toolbar",
+        "body": "The number sits on the Dulce icon, coloured by range: red below 70, green from 70 to 180, orange above 180. It turns grey when the reading is old."
+      },
+      {
+        "title": "One click for more",
+        "body": "The trend arrow, the change, how old the reading is and a chart of the last 3, 6 or 12 hours with your target range."
+      },
+      {
+        "title": "Family too",
+        "body": "If you follow family members in Dulce, pick who to show in the extension."
+      }
+    ],
+    "linkTitle": "Link it in a minute",
+    "linkLead": "No account and no sensor password on the computer. Your phone links it.",
+    "linkSteps": [
+      {
+        "title": "Add Dulce to Chrome",
+        "body": "Install the extension and click its icon. It shows a 6-character code and a QR code."
+      },
+      {
+        "title": "Open Dulce on your phone",
+        "body": "Go to Settings › Chrome on a computer. Scan the QR code with your camera, or type the code."
+      },
+      {
+        "title": "Confirm",
+        "body": "Tap Link computer. The number shows on the toolbar within a minute and updates every minute."
+      }
+    ],
+    "linkAlt": "The Dulce extension showing a link code and a QR code",
+    "needTitle": "What you need",
+    "need": [
+      "Dulce on your iPhone or Android phone, with a sensor connected through LibreLinkUp, Dexcom, CareLink or Nightscout.",
+      "Dulce Pro, or following someone who has Dulce Pro.",
+      "Chrome, Edge or Brave on a computer."
+    ],
+    "proLink": "What Dulce Pro includes",
+    "limitsTitle": "Good to know",
+    "limits": [
+      "It only shows your glucose. Alerts stay on your phone, because a browser can sleep.",
+      "Anyone using that browser profile can see your glucose.",
+      "You can link up to 5 watches and computers in total.",
+      "Remove a computer at any time in Dulce › Settings › Chrome on a computer, even when it is off. The extension stops within a minute."
+    ],
+    "faqTitle": "Questions",
+    "faq": [
+      {
+        "q": "Does it work in Edge or Brave?",
+        "a": "Yes. Edge and Brave install Chrome extensions, and Brave uses the Chrome Web Store directly."
+      },
+      {
+        "q": "Does it work on a Mac or on Windows?",
+        "a": "Yes, on any computer that runs Chrome, Edge or Brave."
+      },
+      {
+        "q": "How often does it update?",
+        "a": "Every minute, the same as Dulce Pro on your phone."
+      },
+      {
+        "q": "Will it alert me?",
+        "a": "No. It only shows the value. Keep alerts on in the Dulce app on your phone."
+      },
+      {
+        "q": "What does the extension store?",
+        "a": "A random link token and the last reading, only in that browser. Never your sensor account or password. Details in the privacy policy, section 2.10."
+      },
+      {
+        "q": "How do I unlink it?",
+        "a": "Remove the computer in Dulce › Settings › Chrome on a computer, or click Unlink this computer in the extension."
+      }
+    ],
+    "cta": {
+      "title": "Your glucose, where you work.",
+      "subtitle": "Dulce is free on the App Store. Chrome on a computer is part of Dulce Pro, with a 14-day free trial."
+    },
+    "disclaimer": "Chrome and Chrome Web Store are trademarks of Google LLC. Microsoft Edge is a trademark of Microsoft Corporation. Brave is a trademark of Brave Software, Inc. Dulce is independent and not affiliated with or endorsed by them. Dulce is not a medical device and does not replace your sensor's alarms. Screenshots show sample data."
   }
 }

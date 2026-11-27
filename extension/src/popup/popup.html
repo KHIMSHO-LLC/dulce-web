@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand"><img src="icons/icon-32.png" width="18" height="18" alt="" /> Dulce</div>
+      <select id="person" hidden></select>
+    </header>
+
+    <main>
+      <section id="loading" class="center"><p class="muted" data-i18n="gettingCode"></p></section>
+
+      <section id="link" hidden>
+        <h1 data-i18n="linkTitle"></h1>
+        <ol class="steps">
+          <li data-i18n="linkStep1"></li>
+          <li data-i18n="linkStep2"></li>
+        </ol>
+        <div id="qr" class="qr"></div>
+        <div id="code" class="code" aria-live="polite"></div>
+        <p id="code-expiry" class="muted small center"></p>
+        <div class="center"><button id="new-code" class="button" data-i18n="newCode" hidden></button></div>
+        <p class="muted small center" data-i18n="linkNeedsPro"></p>
+        <p id="forgot-hint" class="muted small center" data-i18n="unlinkHint" hidden></p>
+      </section>
+
+      <section id="error" class="center" hidden>
+        <p data-i18n="cantReach"></p>
+        <button id="retry" class="button" data-i18n="tryAgain"></button>
+      </section>
+
+      <section id="reading" hidden>
+        <div class="value-row">
+          <span id="value" class="value"></span>
+          <span id="arrow" class="arrow"></span>
+          <span class="value-side">
+            <span id="unit" class="muted small"></span>
+            <span id="delta" class="small"></span>
+          </span>
+        </div>
+        <p id="age" class="small"></p>
+        <p id="offline" class="warn small" data-i18n="offline" hidden></p>
+        <div id="chart" class="chart"></div>
+        <div id="hours" class="segmented" role="group">
+          <button data-hours="3"></button>
+          <button data-hours="6"></button>
+          <button data-hours="12"></button>
+        </div>
+      </section>
+
+      <section id="message" hidden>
+        <h1 id="message-title"></h1>
+        <p id="message-text" class="muted"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p class="muted small" data-i18n="disclaimer"></p>
+      <button id="unlink" class="link-button small" data-i18n="unlink" hidden></button>
+    </footer>
+
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>

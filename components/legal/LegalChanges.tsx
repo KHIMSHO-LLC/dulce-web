@@ -20,7 +20,7 @@ const COPY: Record<CoreLocale, Copy> = {
     previous: (until) => `Previous version (valid until ${until})`,
     items: {
       privacy: [
-        "Garmin watches (optional): if you link a Garmin watch, it shows your glucose through the Garmin Connect app; the data field can save glucose in your Garmin activities, and you can unlink at any time (section 2.9).",
+        "Chrome extension (optional): if you link the Dulce extension for Chrome, Edge or Brave, it shows your glucose in that browser; anyone using that browser profile can see it, and you can remove the computer at any time (section 2.10).",
       ],
       terms: [
         "Saved chart history now includes your logbook, and sharing shows followers only the shared entries (sections 2 and 8.1).",
@@ -32,7 +32,7 @@ const COPY: Record<CoreLocale, Copy> = {
     previous: (until) => `Versión anterior (vigente hasta el ${until})`,
     items: {
       privacy: [
-        "Relojes Garmin (opcional): si vinculas un reloj Garmin, muestra tu glucosa a través de la app Garmin Connect; el campo de datos puede guardar la glucosa en tus actividades de Garmin, y puedes desvincularlo cuando quieras (apartado 2.9).",
+        "Extensión para Chrome (opcional): si vinculas la extensión de Dulce para Chrome, Edge o Brave, muestra tu glucosa en ese navegador; cualquiera que use ese perfil del navegador puede verla, y puedes quitar el ordenador cuando quieras (apartado 2.10).",
       ],
       terms: [
         "El historial guardado incluye ahora tu diario, y al compartir los seguidores solo ven las entradas compartidas (apartados 2 y 8.1).",
@@ -44,7 +44,7 @@ const COPY: Record<CoreLocale, Copy> = {
     previous: (until) => `Vorherige Fassung (gültig bis ${until})`,
     items: {
       privacy: [
-        "Garmin-Uhren (optional): Wenn du eine Garmin-Uhr verbindest, zeigt sie deinen Glukosewert über die Garmin Connect App an; das Datenfeld kann Glukosewerte in deinen Garmin-Aktivitäten speichern, und du kannst die Uhr jederzeit trennen (Abschnitt 2.9).",
+        "Chrome-Erweiterung (optional): Wenn du die Dulce-Erweiterung für Chrome, Edge oder Brave verbindest, zeigt sie deinen Glukosewert in diesem Browser; jeder, der dieses Browserprofil nutzt, kann ihn sehen, und du kannst den Computer jederzeit entfernen (Abschnitt 2.10).",
       ],
       terms: [
         "Der gespeicherte Kurvenverlauf umfasst jetzt dein Logbuch; beim Teilen sehen Follower nur die geteilten Einträge (Abschnitte 2 und 8.1).",
@@ -56,7 +56,7 @@ const COPY: Record<CoreLocale, Copy> = {
     previous: (until) => `Version précédente (en vigueur jusqu'au ${until})`,
     items: {
       privacy: [
-        "Montres Garmin (facultatif) : si tu associes une montre Garmin, elle affiche ta glycémie via l’app Garmin Connect ; le champ de données peut enregistrer la glycémie dans tes activités Garmin, et tu peux la dissocier à tout moment (section 2.9).",
+        "Extension pour Chrome (facultatif) : si tu associes l’extension Dulce pour Chrome, Edge ou Brave, elle affiche ta glycémie dans ce navigateur ; toute personne qui utilise ce profil de navigateur peut la voir, et tu peux retirer l’ordinateur à tout moment (section 2.10).",
       ],
       terms: [
         "L’historique enregistré inclut maintenant ton journal ; en partageant, tes abonnés ne voient que les entrées partagées (sections 2 et 8.1).",
@@ -68,7 +68,7 @@ const COPY: Record<CoreLocale, Copy> = {
     previous: (until) => `Versione precedente (valida fino al ${until})`,
     items: {
       privacy: [
-        "Orologi Garmin (facoltativo): se colleghi un orologio Garmin, mostra la tua glicemia tramite l’app Garmin Connect; il campo dati può salvare la glicemia nelle tue attività Garmin, e puoi scollegarlo in qualsiasi momento (sezione 2.9).",
+        "Estensione per Chrome (facoltativa): se colleghi l’estensione Dulce per Chrome, Edge o Brave, mostra la tua glicemia in quel browser; chiunque usi quel profilo del browser può vederla, e puoi rimuovere il computer in qualsiasi momento (sezione 2.10).",
       ],
       terms: [
         "La cronologia salvata include ora il tuo diario; condividendo, i follower vedono solo le voci condivise (sezioni 2 e 8.1).",

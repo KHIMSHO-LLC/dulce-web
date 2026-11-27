@@ -1180,5 +1180,94 @@
     },
     "proLink": "Wat Dulce Pro bevat",
     "disclaimer": "Garmin, Connect IQ, fēnix, epix, Forerunner, Venu, vívoactive, Instinct, Enduro, MARQ, Descent, Approach, D2 en Edge zijn handelsmerken van Garmin Ltd. of haar dochterondernemingen. Dulce is onafhankelijk en niet verbonden aan of goedgekeurd door Garmin. Dulce is geen medisch hulpmiddel en vervangt de alarmen van je sensor niet. Afbeeldingen van horloges komen uit de simulator van Garmin met voorbeeldgegevens."
+  },
+  "chrome": {
+    "nav": "Chrome",
+    "title": "Dulce voor Chrome: je glucose in de werkbalk",
+    "description": "Zie de glucose uit je Dulce-app in de Chrome-werkbalk, ook in Edge en Brave. Eén keer koppelen met een code vanaf je telefoon.",
+    "kicker": "Dulce voor Chrome",
+    "headline": "Je glucose op je computer.",
+    "lead": "De Dulce-extensie zet je glucose in de werkbalk van Chrome, ook in Edge en Brave. Klik voor de trend, hoe oud de waarde is en de laatste 12 uur. Je koppelt hem één keer met een korte code uit Dulce op je telefoon.",
+    "heroAlt": "De Dulce-extensie in Chrome: 118 mg/dL, langzaam stijgend, met een grafiek van 12 uur",
+    "store": "Toevoegen aan Chrome",
+    "storeSoon": "Binnenkort in de Chrome Web Store.",
+    "featuresTitle": "Wat je krijgt",
+    "features": [
+      {
+        "title": "In de werkbalk",
+        "body": "Het getal staat op het Dulce-pictogram, gekleurd per bereik: rood onder 70, groen van 70 tot 180, oranje boven 180. Het wordt grijs als de waarde oud is."
+      },
+      {
+        "title": "Eén klik voor meer",
+        "body": "De trendpijl, de verandering, hoe oud de waarde is en een grafiek van de laatste 3, 6 of 12 uur met je streefbereik."
+      },
+      {
+        "title": "Ook voor familie",
+        "body": "Volg je familieleden in Dulce, kies dan in de extensie wie je ziet."
+      }
+    ],
+    "linkTitle": "Gekoppeld in een minuut",
+    "linkLead": "Geen account en geen sensorwachtwoord op de computer. Je telefoon koppelt hem.",
+    "linkSteps": [
+      {
+        "title": "Voeg Dulce toe aan Chrome",
+        "body": "Installeer de extensie en klik op het pictogram. Hij toont een code van 6 tekens en een QR-code."
+      },
+      {
+        "title": "Open Dulce op je telefoon",
+        "body": "Ga naar Instellingen › Chrome op een computer. Scan de QR-code met je camera of typ de code."
+      },
+      {
+        "title": "Bevestig",
+        "body": "Tik op Computer koppelen. Het getal verschijnt binnen een minuut in de werkbalk en wordt elke minuut bijgewerkt."
+      }
+    ],
+    "linkAlt": "De Dulce-extensie met een koppelcode en een QR-code",
+    "needTitle": "Wat je nodig hebt",
+    "need": [
+      "Dulce op je iPhone of Android-telefoon, met een sensor verbonden via LibreLinkUp, Dexcom, CareLink of Nightscout.",
+      "Dulce Pro, of iemand volgen die Dulce Pro heeft.",
+      "Chrome, Edge of Brave op een computer."
+    ],
+    "proLink": "Wat Dulce Pro bevat",
+    "limitsTitle": "Goed om te weten",
+    "limits": [
+      "Hij toont alleen je glucose. Meldingen blijven op je telefoon, omdat een browser kan slapen.",
+      "Iedereen die dat browserprofiel gebruikt, kan je glucose zien.",
+      "Je kunt in totaal tot 5 horloges en computers koppelen.",
+      "Verwijder een computer altijd via Dulce › Instellingen › Chrome op een computer, ook als hij uit staat. De extensie stopt binnen een minuut."
+    ],
+    "faqTitle": "Vragen",
+    "faq": [
+      {
+        "q": "Werkt hij in Edge of Brave?",
+        "a": "Ja. Edge en Brave installeren Chrome-extensies, en Brave gebruikt de Chrome Web Store direct."
+      },
+      {
+        "q": "Werkt hij op een Mac of Windows?",
+        "a": "Ja, op elke computer met Chrome, Edge of Brave."
+      },
+      {
+        "q": "Hoe vaak wordt hij bijgewerkt?",
+        "a": "Elke minuut, net als Dulce Pro op je telefoon."
+      },
+      {
+        "q": "Waarschuwt hij me?",
+        "a": "Nee. Hij toont alleen de waarde. Laat de meldingen aan in de Dulce-app op je telefoon."
+      },
+      {
+        "q": "Wat bewaart de extensie?",
+        "a": "Een willekeurig koppeltoken en de laatste waarde, alleen in die browser. Nooit je sensoraccount of wachtwoord. Details in het privacybeleid, sectie 2.10."
+      },
+      {
+        "q": "Hoe ontkoppel ik hem?",
+        "a": "Verwijder de computer via Dulce › Instellingen › Chrome op een computer, of klik in de extensie op Deze computer ontkoppelen."
+      }
+    ],
+    "cta": {
+      "title": "Je glucose, waar je werkt.",
+      "subtitle": "Dulce is gratis in de App Store. Chrome op een computer hoort bij Dulce Pro, met 14 dagen gratis proberen."
+    },
+    "disclaimer": "Chrome en Chrome Web Store zijn handelsmerken van Google LLC. Microsoft Edge is een handelsmerk van Microsoft Corporation. Brave is een handelsmerk van Brave Software, Inc. Dulce is onafhankelijk en niet verbonden aan of goedgekeurd door hen. Dulce is geen medisch hulpmiddel en vervangt de alarmen van je sensor niet. De afbeeldingen tonen voorbeeldgegevens."
   }
 }

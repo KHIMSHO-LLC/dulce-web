@@ -32,6 +32,7 @@ const SOURCES: Partial<Record<AppPathname, string[]>> = {
   "/pro": ["app/[locale]/pro", MESSAGES],
   "/sensors": ["app/[locale]/sensors", "lib/sensors.ts", MESSAGES],
   "/garmin": ["app/[locale]/garmin", "lib/garmin.ts", "public/guides/garmin", MESSAGES],
+  "/chrome": ["app/[locale]/chrome", "lib/chrome.ts", "public/guides/chrome", MESSAGES],
   "/who-is-dulce-for": ["app/[locale]/who-is-dulce-for", MESSAGES],
   "/help": ["app/[locale]/help/page.tsx", "content/help.ts", MESSAGES],
   "/legal/privacy": ["app/[locale]/legal/privacy", "components/legal/PrivacyEs.tsx", "components/legal/PrivacyEn.tsx"],
