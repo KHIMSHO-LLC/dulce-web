@@ -524,6 +524,28 @@ export function PrivacyEs() {
         <strong>Base jurídica:</strong> tu consentimiento explícito (art. 9.2.a RGPD), como para las demás funciones que muestran tu glucosa en tus dispositivos (apartado 4). <strong>Plazo:</strong> las vinculaciones se conservan hasta que desvinculas el reloj o hasta que se borran tus datos con «Eliminar cuenta».
       </p>
 
+      <h3>2.10 Extensión para Chrome (opcional)</h3>
+      <p>
+        Si quieres, puedes vincular la extensión de Dulce para Chrome (también funciona en Edge y Brave) a Dulce. Una vez vinculada, la extensión pide a nuestro relay, más o menos una vez por minuto, los mismos datos que recibe un reloj vinculado: tu último valor de glucosa, la tendencia y el cambio, la gráfica reciente (hasta 12 horas), tu rango objetivo y tus límites de alerta, la unidad y, si sigues a familiares, el nombre de pila que ha puesto cada persona que sigues, y los muestra en tu navegador.
+      </p>
+      <ul>
+        <li>
+          <strong>Por dónde pasa.</strong> La extensión se comunica directamente con nuestro relay mediante una conexión cifrada. Google solo distribuye la extensión a través de Chrome Web Store; tu glucosa no pasa por Google.
+        </li>
+        <li>
+          <strong>Qué guardan la extensión y el relay.</strong> La extensión guarda un token de vinculación aleatorio y su última respuesta (para mostrarla sin conexión) en el almacenamiento local de extensiones del navegador, solo en ese ordenador; no se sincroniza con tus otros dispositivos y nunca contiene tu cuenta del sensor ni tu contraseña. El relay guarda solo un hash del token, junto con el ID aleatorio de instalación de tu móvil, el tipo de vinculación, la unidad y la fecha de vinculación. Los códigos de vinculación caducan a los 15 minutos.
+        </li>
+        <li>
+          <strong>Quién puede verlo.</strong> Cualquier persona que use ese perfil del navegador puede ver la glucosa que muestra la extensión.
+        </li>
+        <li>
+          <strong>Desvincular.</strong> Puedes quitar un ordenador cuando quieras en Dulce › Ajustes › Chrome en un ordenador; la extensión deja de mostrar datos en menos de un minuto. «Desvincular este ordenador» en la extensión, o quitar la extensión del navegador, borra sus datos guardados en ese ordenador. «Eliminar cuenta», o iniciar sesión con otra cuenta del sensor, también elimina las vinculaciones.
+        </li>
+      </ul>
+      <p>
+        <strong>Base jurídica:</strong> tu consentimiento explícito (art. 9.2.a RGPD), como para las demás funciones que muestran tu glucosa en tus dispositivos (apartado 4). <strong>Plazo:</strong> las vinculaciones se conservan hasta que quitas el ordenador o hasta que se borran tus datos con «Eliminar cuenta».
+      </p>
+
       <h2 id="purpose">3. Para qué usamos tus datos</h2>
       <ul>
         <li>
@@ -666,6 +688,9 @@ export function PrivacyEs() {
         </li>
         <li>
           <strong>Relojes Garmin:</strong> las vinculaciones se conservan hasta que desvinculas el reloj, usas «Eliminar cuenta» o inicias sesión con otra cuenta del sensor (apartado 2.9). Los códigos de vinculación caducan a los 15 minutos.
+        </li>
+        <li>
+          <strong>Extensión para Chrome:</strong> las vinculaciones se conservan hasta que quitas el ordenador, usas «Eliminar cuenta» o inicias sesión con otra cuenta del sensor (apartado 2.10). Los códigos de vinculación caducan a los 15 minutos.
         </li>
         <li>
           <strong>Copias de seguridad:</strong> los datos borrados del relay pueden permanecer

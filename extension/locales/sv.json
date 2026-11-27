@@ -3,7 +3,7 @@
   "extDescription": "Se glukosvärdet från din Dulce-app i Chromes verktygsfält. Länka det med en kod från telefonen. Kräver Dulce Pro.",
   "linkTitle": "Länka den här datorn",
   "linkStep1": "Öppna Dulce på telefonen.",
-  "linkStep2": "Gå till Inställningar › Länkade skärmar och skanna den här koden, eller skriv in den.",
+  "linkStep2": "Gå till Inställningar › Chrome på en dator och skanna den här koden, eller skriv in den.",
   "linkNeedsPro": "Kräver Dulce Pro på telefonen.",
   "codeExpiresIn": "Koden går ut om $1 min",
   "codeExpired": "Den här koden har gått ut.",
@@ -27,5 +27,5 @@
   "disclaimer": "Inte en medicinteknisk produkt. Larm stannar på telefonen.",
   "unlink": "Avlänka den här datorn",
   "unlinkConfirm": "Klicka igen för att avlänka",
-  "unlinkHint": "Ta bort den på telefonen också: Inställningar › Länkade skärmar."
+  "unlinkHint": "Ta bort den på telefonen också: Inställningar › Chrome på en dator."
 }

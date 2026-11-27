@@ -3,7 +3,7 @@
   "extDescription": "Ve la lectura de glucosa de tu app Dulce en la barra de Chrome. Vincúlala con un código desde tu móvil. Requiere Dulce Pro.",
   "linkTitle": "Vincular este ordenador",
   "linkStep1": "Abre Dulce en tu móvil.",
-  "linkStep2": "Ve a Ajustes › Pantallas vinculadas y escanea este código, o escríbelo.",
+  "linkStep2": "Ve a Ajustes › Chrome en un ordenador y escanea este código, o escríbelo.",
   "linkNeedsPro": "Requiere Dulce Pro en el móvil.",
   "codeExpiresIn": "El código caduca en $1 min",
   "codeExpired": "Este código ha caducado.",
@@ -27,5 +27,5 @@
   "disclaimer": "No es un dispositivo médico. Las alertas siguen en tu móvil.",
   "unlink": "Desvincular este ordenador",
   "unlinkConfirm": "Haz clic otra vez para desvincular",
-  "unlinkHint": "Quítalo también en el móvil: Ajustes › Pantallas vinculadas."
+  "unlinkHint": "Quítalo también en el móvil: Ajustes › Chrome en un ordenador."
 }

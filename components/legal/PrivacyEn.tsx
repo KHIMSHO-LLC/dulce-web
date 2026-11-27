@@ -497,6 +497,28 @@ export function PrivacyEn() {
         <strong>Legal basis:</strong> your explicit consent (Art. 9(2)(a) GDPR), as for the other features that show your glucose on your devices (section 4). <strong>How long:</strong> links are kept until you unlink the watch or your data is deleted with Delete account.
       </p>
 
+      <h3>2.10 Chrome extension (optional)</h3>
+      <p>
+        If you want, you can link the Dulce extension for Chrome (it also works in Edge and Brave) to Dulce. Once linked, the extension asks our relay about once a minute for the same data a linked watch gets: your latest glucose value, trend and change, the recent graph (up to 12 hours), your target range and alert limits, your unit and, if you follow family members, the first name each person you follow has set, and shows them in your browser.
+      </p>
+      <ul>
+        <li>
+          <strong>How it travels.</strong> The extension talks to our relay directly over an encrypted connection. Google only distributes the extension through the Chrome Web Store; your glucose does not pass through Google.
+        </li>
+        <li>
+          <strong>What the extension and the relay store.</strong> The extension stores a random link token and its last answer (to show it while offline) in the browser&apos;s local extension storage on that computer only; it is not synced to your other devices, and it never holds your sensor account or password. The relay stores only a hash of the token, with your phone&apos;s random installation ID, the link type, the unit and the date it was linked. Link codes expire after 15 minutes.
+        </li>
+        <li>
+          <strong>Who can see it.</strong> Anyone who uses that browser profile can see the glucose the extension shows.
+        </li>
+        <li>
+          <strong>Unlinking.</strong> You can remove a computer at any time in Dulce › Settings › Chrome on a computer; the extension stops within a minute. “Unlink this computer” in the extension, or removing the extension from the browser, deletes its stored data on that computer. Delete account, or signing in with a different sensor account, also removes the links.
+        </li>
+      </ul>
+      <p>
+        <strong>Legal basis:</strong> your explicit consent (Art. 9(2)(a) GDPR), as for the other features that show your glucose on your devices (section 4). <strong>How long:</strong> links are kept until you remove the computer or your data is deleted with Delete account.
+      </p>
+
       <h2 id="purpose">3. Why we use your data</h2>
       <ul>
         <li>Show your glucose on your devices and, if you choose, your followers’ devices.</li>
@@ -629,6 +651,9 @@ export function PrivacyEn() {
         </li>
         <li>
           <strong>Garmin watches:</strong> links are kept until you unlink the watch, use Delete account or sign in with a different sensor account (section 2.9). Link codes expire after 15 minutes.
+        </li>
+        <li>
+          <strong>Chrome extension:</strong> links are kept until you remove the computer, use Delete account or sign in with a different sensor account (section 2.10). Link codes expire after 15 minutes.
         </li>
         <li>
           <strong>Backups:</strong> data deleted from the relay can remain in our hosting

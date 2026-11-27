@@ -3,7 +3,7 @@
   "extDescription": "Vedi la glicemia della tua app Dulce nella barra di Chrome. Collegala con un codice dal telefono. Richiede Dulce Pro.",
   "linkTitle": "Collega questo computer",
   "linkStep1": "Apri Dulce sul telefono.",
-  "linkStep2": "Vai su Impostazioni › Schermi collegati e scansiona questo codice, oppure digitalo.",
+  "linkStep2": "Vai su Impostazioni › Chrome su un computer e scansiona questo codice, oppure digitalo.",
   "linkNeedsPro": "Richiede Dulce Pro sul telefono.",
   "codeExpiresIn": "Il codice scade tra $1 min",
   "codeExpired": "Questo codice è scaduto.",
@@ -27,5 +27,5 @@
   "disclaimer": "Non è un dispositivo medico. Gli avvisi restano sul telefono.",
   "unlink": "Scollega questo computer",
   "unlinkConfirm": "Clicca di nuovo per scollegare",
-  "unlinkHint": "Rimuovilo anche sul telefono: Impostazioni › Schermi collegati."
+  "unlinkHint": "Rimuovilo anche sul telefono: Impostazioni › Chrome su un computer."
 }

@@ -3,7 +3,7 @@
   "extDescription": "Sieh den Glukosewert aus deiner Dulce-App in der Chrome-Leiste. Verknüpfe ihn mit einem Code vom Handy. Erfordert Dulce Pro.",
   "linkTitle": "Diesen Computer verknüpfen",
   "linkStep1": "Öffne Dulce auf deinem Handy.",
-  "linkStep2": "Gehe zu Einstellungen › Verknüpfte Bildschirme und scanne diesen Code oder tippe ihn ein.",
+  "linkStep2": "Gehe zu Einstellungen › Chrome auf einem Computer und scanne diesen Code oder tippe ihn ein.",
   "linkNeedsPro": "Erfordert Dulce Pro auf dem Handy.",
   "codeExpiresIn": "Der Code läuft in $1 Min. ab",
   "codeExpired": "Dieser Code ist abgelaufen.",
@@ -27,5 +27,5 @@
   "disclaimer": "Kein Medizinprodukt. Alarme bleiben auf deinem Handy.",
   "unlink": "Verknüpfung dieses Computers lösen",
   "unlinkConfirm": "Zum Lösen erneut klicken",
-  "unlinkHint": "Entferne ihn auch auf dem Handy: Einstellungen › Verknüpfte Bildschirme."
+  "unlinkHint": "Entferne ihn auch auf dem Handy: Einstellungen › Chrome auf einem Computer."
 }

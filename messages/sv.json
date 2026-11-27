@@ -1180,5 +1180,94 @@
     },
     "proLink": "Vad Dulce Pro innehåller",
     "disclaimer": "Garmin, Connect IQ, fēnix, epix, Forerunner, Venu, vívoactive, Instinct, Enduro, MARQ, Descent, Approach, D2 och Edge är varumärken som tillhör Garmin Ltd. eller dess dotterbolag. Dulce är oberoende och inte anslutet till eller godkänt av Garmin. Dulce är inte en medicinteknisk produkt och ersätter inte sensorns larm. Klockbilderna kommer från Garmins simulator med exempeldata."
+  },
+  "chrome": {
+    "nav": "Chrome",
+    "title": "Dulce för Chrome: din glukos i verktygsfältet",
+    "description": "Se glukosen från Dulce-appen i Chromes verktygsfält, även i Edge och Brave. Länka en gång med en kod från telefonen.",
+    "kicker": "Dulce för Chrome",
+    "headline": "Din glukos på datorn.",
+    "lead": "Dulce-tillägget visar din glukos i Chromes verktygsfält, även i Edge och Brave. Klicka för trenden, hur gammalt värdet är och de senaste 12 timmarna. Du länkar det en gång med en kort kod från Dulce på telefonen.",
+    "heroAlt": "Dulce-tillägget i Chrome: 118 mg/dL, långsamt stigande, med en 12-timmarsgraf",
+    "store": "Lägg till i Chrome",
+    "storeSoon": "Snart i Chrome Web Store.",
+    "featuresTitle": "Det här får du",
+    "features": [
+      {
+        "title": "I verktygsfältet",
+        "body": "Värdet visas på Dulce-ikonen, färgat efter intervall: rött under 70, grönt från 70 till 180, orange över 180. Det blir grått när värdet är gammalt."
+      },
+      {
+        "title": "Ett klick för mer",
+        "body": "Trendpilen, förändringen, hur gammalt värdet är och en graf över de senaste 3, 6 eller 12 timmarna med ditt målintervall."
+      },
+      {
+        "title": "Även för familjen",
+        "body": "Följer du familjemedlemmar i Dulce väljer du i tillägget vem som visas."
+      }
+    ],
+    "linkTitle": "Länkat på en minut",
+    "linkLead": "Inget konto och inget sensorlösenord på datorn. Telefonen länkar det.",
+    "linkSteps": [
+      {
+        "title": "Lägg till Dulce i Chrome",
+        "body": "Installera tillägget och klicka på ikonen. Det visar en kod på 6 tecken och en QR-kod."
+      },
+      {
+        "title": "Öppna Dulce på telefonen",
+        "body": "Gå till Inställningar › Chrome på en dator. Skanna QR-koden med kameran eller skriv in koden."
+      },
+      {
+        "title": "Bekräfta",
+        "body": "Tryck på Koppla dator. Värdet visas i verktygsfältet inom en minut och uppdateras varje minut."
+      }
+    ],
+    "linkAlt": "Dulce-tillägget med en länkkod och en QR-kod",
+    "needTitle": "Det här behöver du",
+    "need": [
+      "Dulce på din iPhone eller Android-telefon, med en sensor kopplad via LibreLinkUp, Dexcom, CareLink eller Nightscout.",
+      "Dulce Pro, eller att du följer någon som har Dulce Pro.",
+      "Chrome, Edge eller Brave på en dator."
+    ],
+    "proLink": "Det här ingår i Dulce Pro",
+    "limitsTitle": "Bra att veta",
+    "limits": [
+      "Det visar bara din glukos. Larm stannar på telefonen, eftersom en webbläsare kan somna.",
+      "Alla som använder den webbläsarprofilen kan se din glukos.",
+      "Du kan koppla upp till 5 klockor och datorer totalt.",
+      "Ta bort en dator när som helst i Dulce › Inställningar › Chrome på en dator, även när den är avstängd. Tillägget slutar inom en minut."
+    ],
+    "faqTitle": "Frågor",
+    "faq": [
+      {
+        "q": "Fungerar det i Edge eller Brave?",
+        "a": "Ja. Edge och Brave installerar Chrome-tillägg, och Brave använder Chrome Web Store direkt."
+      },
+      {
+        "q": "Fungerar det på Mac eller Windows?",
+        "a": "Ja, på alla datorer med Chrome, Edge eller Brave."
+      },
+      {
+        "q": "Hur ofta uppdateras det?",
+        "a": "Varje minut, precis som Dulce Pro på telefonen."
+      },
+      {
+        "q": "Larmar det mig?",
+        "a": "Nej. Det visar bara värdet. Ha larmen på i Dulce-appen på telefonen."
+      },
+      {
+        "q": "Vad sparar tillägget?",
+        "a": "En slumpmässig länktoken och det senaste värdet, bara i den webbläsaren. Aldrig ditt sensorkonto eller lösenord. Detaljer i integritetspolicyn, avsnitt 2.10."
+      },
+      {
+        "q": "Hur avlänkar jag det?",
+        "a": "Ta bort datorn i Dulce › Inställningar › Chrome på en dator, eller klicka på Avlänka den här datorn i tillägget."
+      }
+    ],
+    "cta": {
+      "title": "Din glukos, där du jobbar.",
+      "subtitle": "Dulce är gratis i App Store. Chrome på en dator ingår i Dulce Pro, med 14 dagars gratis provperiod."
+    },
+    "disclaimer": "Chrome och Chrome Web Store är varumärken som tillhör Google LLC. Microsoft Edge är ett varumärke som tillhör Microsoft Corporation. Brave är ett varumärke som tillhör Brave Software, Inc. Dulce är oberoende och inte anslutet till eller godkänt av dem. Dulce är inte en medicinteknisk produkt och ersätter inte sensorns larm. Bilderna visar exempeldata."
   }
 }

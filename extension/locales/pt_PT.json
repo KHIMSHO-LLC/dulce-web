@@ -3,7 +3,7 @@
   "extDescription": "Veja a leitura de glicose da sua app Dulce na barra do Chrome. Associe-a com um código do telemóvel. Requer Dulce Pro.",
   "linkTitle": "Associar este computador",
   "linkStep1": "Abra a Dulce no telemóvel.",
-  "linkStep2": "Vá a Definições › Ecrãs associados e leia este código, ou escreva-o.",
+  "linkStep2": "Vá a Definições › Chrome num computador e leia este código, ou escreva-o.",
   "linkNeedsPro": "Requer Dulce Pro no telemóvel.",
   "codeExpiresIn": "O código expira em $1 min",
   "codeExpired": "Este código expirou.",
@@ -27,5 +27,5 @@
   "disclaimer": "Não é um dispositivo médico. Os alertas continuam no telemóvel.",
   "unlink": "Desassociar este computador",
   "unlinkConfirm": "Clique novamente para desassociar",
-  "unlinkHint": "Remova-o também no telemóvel: Definições › Ecrãs associados."
+  "unlinkHint": "Remova-o também no telemóvel: Definições › Chrome num computador."
 }

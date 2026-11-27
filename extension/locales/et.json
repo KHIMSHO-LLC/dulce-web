@@ -3,7 +3,7 @@
   "extDescription": "Vaata oma Dulce'i rakenduse glükoosinäitu Chrome'i tööriistaribal. Seo see telefoni koodiga. Vajab Dulce Pro't.",
   "linkTitle": "Seo see arvuti",
   "linkStep1": "Ava telefonis Dulce.",
-  "linkStep2": "Mine Seaded › Seotud ekraanid ja skanni see kood või sisesta see.",
+  "linkStep2": "Mine Seaded › Chrome arvutis ja skanni see kood või sisesta see.",
   "linkNeedsPro": "Vajab telefonis Dulce Pro't.",
   "codeExpiresIn": "Kood aegub $1 min pärast",
   "codeExpired": "See kood on aegunud.",
@@ -27,5 +27,5 @@
   "disclaimer": "Ei ole meditsiiniseade. Hoiatused jäävad telefoni.",
   "unlink": "Eemalda selle arvuti seos",
   "unlinkConfirm": "Eemaldamiseks klõpsa uuesti",
-  "unlinkHint": "Eemalda see ka telefonis: Seaded › Seotud ekraanid."
+  "unlinkHint": "Eemalda see ka telefonis: Seaded › Chrome arvutis."
 }

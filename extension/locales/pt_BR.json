@@ -3,7 +3,7 @@
   "extDescription": "Veja a leitura de glicose do seu app Dulce na barra do Chrome. Vincule com um código do seu celular. Requer Dulce Pro.",
   "linkTitle": "Vincular este computador",
   "linkStep1": "Abra o Dulce no celular.",
-  "linkStep2": "Vá em Configurações › Telas vinculadas e escaneie este código, ou digite-o.",
+  "linkStep2": "Vá em Configurações › Chrome no computador e escaneie este código, ou digite-o.",
   "linkNeedsPro": "Requer Dulce Pro no celular.",
   "codeExpiresIn": "O código expira em $1 min",
   "codeExpired": "Este código expirou.",
@@ -27,5 +27,5 @@
   "disclaimer": "Não é um dispositivo médico. Os alertas continuam no celular.",
   "unlink": "Desvincular este computador",
   "unlinkConfirm": "Clique de novo para desvincular",
-  "unlinkHint": "Remova também no celular: Configurações › Telas vinculadas."
+  "unlinkHint": "Remova também no celular: Configurações › Chrome no computador."
 }

@@ -1180,5 +1180,94 @@
     },
     "proLink": "Hva Dulce Pro inneholder",
     "disclaimer": "Garmin, Connect IQ, fēnix, epix, Forerunner, Venu, vívoactive, Instinct, Enduro, MARQ, Descent, Approach, D2 og Edge er varemerker som tilhører Garmin Ltd. eller datterselskaper. Dulce er uavhengig og ikke tilknyttet eller godkjent av Garmin. Dulce er ikke medisinsk utstyr og erstatter ikke sensorens alarmer. Klokkebildene er fra Garmins simulator med eksempeldata."
+  },
+  "chrome": {
+    "nav": "Chrome",
+    "title": "Dulce for Chrome: glukosen din i verktøylinjen",
+    "description": "Se glukosen fra Dulce-appen i Chromes verktøylinje, også i Edge og Brave. Koble til én gang med en kode fra telefonen.",
+    "kicker": "Dulce for Chrome",
+    "headline": "Glukosen din på datamaskinen.",
+    "lead": "Dulce-utvidelsen viser glukosen din i verktøylinjen i Chrome, også i Edge og Brave. Klikk for trenden, hvor gammel verdien er og de siste 12 timene. Du kobler den til én gang med en kort kode fra Dulce på telefonen.",
+    "heroAlt": "Dulce-utvidelsen i Chrome: 118 mg/dL, svakt stigende, med en 12-timersgraf",
+    "store": "Legg til i Chrome",
+    "storeSoon": "Snart i Chrome Nettmarked.",
+    "featuresTitle": "Dette får du",
+    "features": [
+      {
+        "title": "I verktøylinjen",
+        "body": "Tallet står på Dulce-ikonet, farget etter område: rødt under 70, grønt fra 70 til 180, oransje over 180. Det blir grått når verdien er gammel."
+      },
+      {
+        "title": "Ett klikk for mer",
+        "body": "Trendpilen, endringen, hvor gammel verdien er og en graf over de siste 3, 6 eller 12 timene med målområdet ditt."
+      },
+      {
+        "title": "Også for familien",
+        "body": "Følger du familiemedlemmer i Dulce, velger du i utvidelsen hvem som vises."
+      }
+    ],
+    "linkTitle": "Koblet til på et minutt",
+    "linkLead": "Ingen konto og ikke noe sensorpassord på datamaskinen. Telefonen kobler den til.",
+    "linkSteps": [
+      {
+        "title": "Legg til Dulce i Chrome",
+        "body": "Installer utvidelsen og klikk på ikonet. Den viser en kode på 6 tegn og en QR-kode."
+      },
+      {
+        "title": "Åpne Dulce på telefonen",
+        "body": "Gå til Innstillinger › Chrome på en datamaskin. Skann QR-koden med kameraet, eller skriv inn koden."
+      },
+      {
+        "title": "Bekreft",
+        "body": "Trykk på Koble til datamaskin. Tallet vises i verktøylinjen innen ett minutt og oppdateres hvert minutt."
+      }
+    ],
+    "linkAlt": "Dulce-utvidelsen med en tilkoblingskode og en QR-kode",
+    "needTitle": "Dette trenger du",
+    "need": [
+      "Dulce på iPhone eller Android-telefon, med en sensor koblet til via LibreLinkUp, Dexcom, CareLink eller Nightscout.",
+      "Dulce Pro, eller at du følger noen som har Dulce Pro.",
+      "Chrome, Edge eller Brave på en datamaskin."
+    ],
+    "proLink": "Dette inngår i Dulce Pro",
+    "limitsTitle": "Greit å vite",
+    "limits": [
+      "Den viser bare glukosen din. Varsler blir på telefonen, fordi en nettleser kan sovne.",
+      "Alle som bruker den nettleserprofilen, kan se glukosen din.",
+      "Du kan koble til opptil 5 klokker og datamaskiner til sammen.",
+      "Fjern en datamaskin når som helst i Dulce › Innstillinger › Chrome på en datamaskin, også når den er av. Utvidelsen stopper innen ett minutt."
+    ],
+    "faqTitle": "Spørsmål",
+    "faq": [
+      {
+        "q": "Fungerer den i Edge eller Brave?",
+        "a": "Ja. Edge og Brave installerer Chrome-utvidelser, og Brave bruker Chrome Nettmarked direkte."
+      },
+      {
+        "q": "Fungerer den på Mac eller Windows?",
+        "a": "Ja, på alle datamaskiner med Chrome, Edge eller Brave."
+      },
+      {
+        "q": "Hvor ofte oppdateres den?",
+        "a": "Hvert minutt, akkurat som Dulce Pro på telefonen."
+      },
+      {
+        "q": "Varsler den meg?",
+        "a": "Nei. Den viser bare verdien. Ha varslene på i Dulce-appen på telefonen."
+      },
+      {
+        "q": "Hva lagrer utvidelsen?",
+        "a": "En tilfeldig tilkoblingstoken og den siste verdien, bare i den nettleseren. Aldri sensorkontoen eller passordet ditt. Detaljer i personvernerklæringen, del 2.10."
+      },
+      {
+        "q": "Hvordan kobler jeg den fra?",
+        "a": "Fjern datamaskinen i Dulce › Innstillinger › Chrome på en datamaskin, eller klikk på Koble fra denne datamaskinen i utvidelsen."
+      }
+    ],
+    "cta": {
+      "title": "Glukosen din, der du jobber.",
+      "subtitle": "Dulce er gratis i App Store. Chrome på en datamaskin er en del av Dulce Pro, med 14 dagers gratis prøveperiode."
+    },
+    "disclaimer": "Chrome og Chrome Nettmarked er varemerker for Google LLC. Microsoft Edge er et varemerke for Microsoft Corporation. Brave er et varemerke for Brave Software, Inc. Dulce er uavhengig og ikke tilknyttet eller godkjent av dem. Dulce er ikke medisinsk utstyr og erstatter ikke sensorens alarmer. Bildene viser eksempeldata."
   }
 }

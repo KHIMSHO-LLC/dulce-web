@@ -3,7 +3,7 @@
   "extDescription": "Zie de glucosewaarde uit je Dulce-app in de Chrome-werkbalk. Koppel hem met een code vanaf je telefoon. Vereist Dulce Pro.",
   "linkTitle": "Deze computer koppelen",
   "linkStep1": "Open Dulce op je telefoon.",
-  "linkStep2": "Ga naar Instellingen › Gekoppelde schermen en scan deze code, of typ hem in.",
+  "linkStep2": "Ga naar Instellingen › Chrome op een computer en scan deze code, of typ hem in.",
   "linkNeedsPro": "Vereist Dulce Pro op de telefoon.",
   "codeExpiresIn": "De code verloopt over $1 min",
   "codeExpired": "Deze code is verlopen.",
@@ -27,5 +27,5 @@
   "disclaimer": "Geen medisch hulpmiddel. Meldingen blijven op je telefoon.",
   "unlink": "Deze computer ontkoppelen",
   "unlinkConfirm": "Klik nogmaals om te ontkoppelen",
-  "unlinkHint": "Verwijder hem ook op de telefoon: Instellingen › Gekoppelde schermen."
+  "unlinkHint": "Verwijder hem ook op de telefoon: Instellingen › Chrome op een computer."
 }

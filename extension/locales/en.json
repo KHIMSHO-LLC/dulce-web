@@ -3,7 +3,7 @@
   "extDescription": "See the glucose reading from your Dulce app on the Chrome toolbar. Link it with a code from your phone. Needs Dulce Pro.",
   "linkTitle": "Link this computer",
   "linkStep1": "Open Dulce on your phone.",
-  "linkStep2": "Go to Settings › Linked screens and scan this code, or type it.",
+  "linkStep2": "Go to Settings › Chrome on a computer and scan this code, or type it.",
   "linkNeedsPro": "Needs Dulce Pro on the phone.",
   "codeExpiresIn": "The code expires in $1 min",
   "codeExpired": "This code has expired.",
@@ -27,5 +27,5 @@
   "disclaimer": "Not a medical device. Alerts stay on your phone.",
   "unlink": "Unlink this computer",
   "unlinkConfirm": "Click again to unlink",
-  "unlinkHint": "Also remove it on the phone: Settings › Linked screens."
+  "unlinkHint": "Also remove it on the phone: Settings › Chrome on a computer."
 }

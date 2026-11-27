@@ -1180,5 +1180,94 @@
     },
     "proLink": "Mitä Dulce Pro sisältää",
     "disclaimer": "Garmin, Connect IQ, fēnix, epix, Forerunner, Venu, vívoactive, Instinct, Enduro, MARQ, Descent, Approach, D2 ja Edge ovat Garmin Ltd:n tai sen tytäryhtiöiden tavaramerkkejä. Dulce on riippumaton eikä ole Garminin kumppani tai sen hyväksymä. Dulce ei ole lääkinnällinen laite eikä korvaa sensorisi hälytyksiä. Kellokuvat ovat Garminin simulaattorista esimerkkidatalla."
+  },
+  "chrome": {
+    "nav": "Chrome",
+    "title": "Dulce Chromelle: glukoosisi työkalupalkissa",
+    "description": "Näe Dulce-sovelluksesi glukoosi Chromen työkalupalkissa, myös Edgessä ja Bravessa. Yhdistä kerran puhelimen koodilla.",
+    "kicker": "Dulce Chromelle",
+    "headline": "Glukoosisi tietokoneella.",
+    "lead": "Dulce-laajennus näyttää glukoosisi Chromen työkalupalkissa, myös Edgessä ja Bravessa. Napsauta nähdäksesi trendin, lukeman iän ja viimeiset 12 tuntia. Yhdistät sen kerran lyhyellä koodilla puhelimesi Dulcesta.",
+    "heroAlt": "Dulce-laajennus Chromessa: 118 mg/dL, hitaasti nouseva, 12 tunnin käyrä",
+    "store": "Lisää Chromeen",
+    "storeSoon": "Pian Chrome Web Storessa.",
+    "featuresTitle": "Mitä saat",
+    "features": [
+      {
+        "title": "Työkalupalkissa",
+        "body": "Lukema näkyy Dulce-kuvakkeessa alueen mukaan värjättynä: punainen alle 70, vihreä 70–180, oranssi yli 180. Se muuttuu harmaaksi, kun lukema on vanha."
+      },
+      {
+        "title": "Yksi napsautus lisää",
+        "body": "Trendinuoli, muutos, lukeman ikä ja käyrä viimeisiltä 3, 6 tai 12 tunnilta tavoitealueineen."
+      },
+      {
+        "title": "Myös perheelle",
+        "body": "Jos seuraat perheenjäseniä Dulcessa, valitse laajennuksessa, kenet näytetään."
+      }
+    ],
+    "linkTitle": "Yhdistetty minuutissa",
+    "linkLead": "Ei tiliä eikä sensorin salasanaa tietokoneella. Puhelin yhdistää sen.",
+    "linkSteps": [
+      {
+        "title": "Lisää Dulce Chromeen",
+        "body": "Asenna laajennus ja napsauta sen kuvaketta. Se näyttää 6 merkin koodin ja QR-koodin."
+      },
+      {
+        "title": "Avaa Dulce puhelimessa",
+        "body": "Siirry kohtaan Asetukset › Chrome tietokoneella. Skannaa QR-koodi kameralla tai kirjoita koodi."
+      },
+      {
+        "title": "Vahvista",
+        "body": "Napauta Yhdistä tietokone. Lukema näkyy työkalupalkissa minuutin kuluessa ja päivittyy minuutin välein."
+      }
+    ],
+    "linkAlt": "Dulce-laajennus, jossa näkyy yhdistämiskoodi ja QR-koodi",
+    "needTitle": "Mitä tarvitset",
+    "need": [
+      "Dulce iPhonessa tai Android-puhelimessa ja sensori yhdistettynä LibreLinkUpin, Dexcomin, CareLinkin tai Nightscoutin kautta.",
+      "Dulce Pro, tai seuraat jotakuta, jolla on Dulce Pro.",
+      "Chrome, Edge tai Brave tietokoneella."
+    ],
+    "proLink": "Mitä Dulce Pro sisältää",
+    "limitsTitle": "Hyvä tietää",
+    "limits": [
+      "Se vain näyttää glukoosisi. Hälytykset pysyvät puhelimessa, koska selain voi mennä lepotilaan.",
+      "Kuka tahansa tätä selainprofiilia käyttävä näkee glukoosisi.",
+      "Voit yhdistää yhteensä enintään 5 kelloa ja tietokonetta.",
+      "Poista tietokone milloin tahansa kohdassa Dulce › Asetukset › Chrome tietokoneella, myös kun se on pois päältä. Laajennus lakkaa toimimasta minuutin kuluessa."
+    ],
+    "faqTitle": "Kysymyksiä",
+    "faq": [
+      {
+        "q": "Toimiiko se Edgessä tai Bravessa?",
+        "a": "Kyllä. Edge ja Brave asentavat Chrome-laajennuksia, ja Brave käyttää Chrome Web Storea suoraan."
+      },
+      {
+        "q": "Toimiiko se Macilla tai Windowsissa?",
+        "a": "Kyllä, millä tahansa tietokoneella, jossa on Chrome, Edge tai Brave."
+      },
+      {
+        "q": "Kuinka usein se päivittyy?",
+        "a": "Minuutin välein, kuten Dulce Pro puhelimessa."
+      },
+      {
+        "q": "Hälyttääkö se?",
+        "a": "Ei. Se vain näyttää lukeman. Pidä hälytykset päällä puhelimen Dulce-sovelluksessa."
+      },
+      {
+        "q": "Mitä laajennus tallentaa?",
+        "a": "Satunnaisen yhdistämistunnuksen ja viimeisimmän lukeman, vain siihen selaimeen. Ei koskaan sensoritiliäsi tai salasanaasi. Lisätietoja tietosuojakäytännön kohdassa 2.10."
+      },
+      {
+        "q": "Miten poistan yhteyden?",
+        "a": "Poista tietokone kohdassa Dulce › Asetukset › Chrome tietokoneella, tai napsauta laajennuksessa Poista tämän tietokoneen yhteys."
+      }
+    ],
+    "cta": {
+      "title": "Glukoosisi siellä, missä teet töitä.",
+      "subtitle": "Dulce on ilmainen App Storessa. Chrome tietokoneella kuuluu Dulce Prohon, ja sitä voi kokeilla ilmaiseksi 14 päivää."
+    },
+    "disclaimer": "Chrome ja Chrome Web Store ovat Google LLC:n tavaramerkkejä. Microsoft Edge on Microsoft Corporationin tavaramerkki. Brave on Brave Software, Inc:n tavaramerkki. Dulce on itsenäinen eikä ole niihin sidoksissa tai niiden hyväksymä. Dulce ei ole lääkinnällinen laite eikä korvaa sensorisi hälytyksiä. Kuvissa on esimerkkitietoja."
   }
 }

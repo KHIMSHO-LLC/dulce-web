@@ -3,7 +3,7 @@
   "extDescription": "Se glukoseværdien fra din Dulce-app i Chromes værktøjslinje. Forbind den med en kode fra din telefon. Kræver Dulce Pro.",
   "linkTitle": "Forbind denne computer",
   "linkStep1": "Åbn Dulce på din telefon.",
-  "linkStep2": "Gå til Indstillinger › Forbundne skærme, og scan denne kode, eller skriv den.",
+  "linkStep2": "Gå til Indstillinger › Chrome på en computer, og scan denne kode, eller skriv den.",
   "linkNeedsPro": "Kræver Dulce Pro på telefonen.",
   "codeExpiresIn": "Koden udløber om $1 min",
   "codeExpired": "Denne kode er udløbet.",
@@ -27,5 +27,5 @@
   "disclaimer": "Ikke medicinsk udstyr. Alarmer forbliver på din telefon.",
   "unlink": "Afbryd forbindelsen til denne computer",
   "unlinkConfirm": "Klik igen for at afbryde",
-  "unlinkHint": "Fjern den også på telefonen: Indstillinger › Forbundne skærme."
+  "unlinkHint": "Fjern den også på telefonen: Indstillinger › Chrome på en computer."
 }

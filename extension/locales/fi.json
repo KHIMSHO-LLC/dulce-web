@@ -3,7 +3,7 @@
   "extDescription": "Näe Dulce-sovelluksesi glukoosilukema Chromen työkalupalkissa. Yhdistä se puhelimesi koodilla. Vaatii Dulce Pron.",
   "linkTitle": "Yhdistä tämä tietokone",
   "linkStep1": "Avaa Dulce puhelimessasi.",
-  "linkStep2": "Siirry kohtaan Asetukset › Yhdistetyt näytöt ja skannaa tämä koodi tai kirjoita se.",
+  "linkStep2": "Siirry kohtaan Asetukset › Chrome tietokoneella ja skannaa tämä koodi tai kirjoita se.",
   "linkNeedsPro": "Vaatii Dulce Pron puhelimessa.",
   "codeExpiresIn": "Koodi vanhenee $1 min kuluttua",
   "codeExpired": "Tämä koodi on vanhentunut.",
@@ -27,5 +27,5 @@
   "disclaimer": "Ei lääkinnällinen laite. Hälytykset pysyvät puhelimessasi.",
   "unlink": "Poista tämän tietokoneen yhteys",
   "unlinkConfirm": "Poista yhteys napsauttamalla uudelleen",
-  "unlinkHint": "Poista se myös puhelimesta: Asetukset › Yhdistetyt näytöt."
+  "unlinkHint": "Poista se myös puhelimesta: Asetukset › Chrome tietokoneella."
 }

@@ -1,6 +1,6 @@
 {
   "name": "dulce-chrome-extension",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "description": "Dulce for Chrome: the glucose value from the Dulce app on the browser toolbar.",
   "type": "module",

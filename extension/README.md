@@ -7,11 +7,11 @@ It only shows readings. Alerts stay in the phone app.
 ## How it works
 
 1. The popup asks the relay for a link code (`POST /garmin/pair/start`, `kind: "browser"`). It gets back a 6-letter code, a QR and a secret token. The token is kept in `chrome.storage.local` on this computer only.
-2. The user claims the code in the Dulce app (Settings › Linked screens), by scanning the QR (`dulce://g/<code>`) or typing it. This is Pro only, and the relay checks it.
+2. The user claims the code in the Dulce app (Settings › Chrome on a computer), by scanning the QR (`dulce://b/<code>`, from the relay) or typing it. This is Pro only, and the relay checks it.
 3. Once a minute, the background worker calls `POST /garmin/latest` with the token and sets the badge: the value, coloured by zone. The badge turns grey when the reading is old: after 2 × the sensor interval + 4 min, the same rule as the app.
 4. "Remove" on the phone makes the relay answer 401, and the extension forgets the token within a minute.
 
-These are the same link routes as the Garmin watch (dulce-relay `src/routes/garmin.ts`).
+These are the same link routes as the Garmin watch (dulce-relay `src/routes/garmin.ts`), with link type `browser`: the relay keeps the chart fresh for it and shows it in its own phone screen.
 
 - **No accounts:** there is no sensor login and no account in the extension.
 - **Permissions:** only `alarms` and `storage`, plus host access to the relay. It has no content scripts and no tab access.
@@ -66,4 +66,4 @@ Screenshots go to `e2e-out/`. Set `CHROME_LANG=de` to run it in another language
 
 ## Publishing
 
-`npm run zip` writes `dulce-chrome-<version>.zip` (production relay, minified) for the Chrome Web Store. Raise `version` in `package.json` for each upload. Store text and the privacy form follow dulce-app `docs/product-and-wording-rules.md`. The plan is in dulce-app `docs/chrome-extension-plan.md`.
+`npm run zip` writes `dulce-chrome-<version>.zip` (production relay, minified) for the Chrome Web Store. Raise `version` in `package.json` for each upload. The listing text, images (`store/`) and privacy-form answers are in [STORE.md](STORE.md). The website page is `/chrome` (`app/[locale]/chrome`, `lib/chrome.ts`: set `CHROME_STORE_URL` and `CHROME_STORE_LIVE` when the listing is live). The privacy policy covers it in section 2.10.

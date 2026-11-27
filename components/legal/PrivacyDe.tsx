@@ -512,6 +512,28 @@ Missbrauch.
         <strong>Rechtsgrundlage:</strong> deine ausdrückliche Einwilligung (Art. 9 Abs. 2 lit. a DSGVO), wie bei den anderen Funktionen, die deinen Glukosewert auf deinen Geräten anzeigen (Abschnitt 4). <strong>Wie lange:</strong> Die Verbindungen bleiben gespeichert, bis du die Uhr trennst oder deine Daten mit „Konto löschen“ gelöscht werden.
       </p>
 
+      <h3>2.10 Chrome-Erweiterung (optional)</h3>
+      <p>
+        Wenn du möchtest, kannst du die Dulce-Erweiterung für Chrome (sie funktioniert auch in Edge und Brave) mit Dulce verbinden. Nach dem Verbinden fragt die Erweiterung etwa einmal pro Minute bei unserem Relay dieselben Daten ab, die eine verbundene Uhr bekommt: deinen aktuellen Glukosewert, den Trend und die Veränderung, die Kurve der letzten Stunden (bis zu 12 Stunden), deinen Zielbereich und deine Alarmgrenzen, die Einheit und, wenn du Familienmitgliedern folgst, den Vornamen, den jede Person, der du folgst, eingetragen hat, und zeigt sie in deinem Browser an.
+      </p>
+      <ul>
+        <li>
+          <strong>Wie die Daten übertragen werden.</strong> Die Erweiterung spricht über eine verschlüsselte Verbindung direkt mit unserem Relay. Google verteilt die Erweiterung nur über den Chrome Web Store; dein Glukosewert läuft nicht über Google.
+        </li>
+        <li>
+          <strong>Was Erweiterung und Relay speichern.</strong> Die Erweiterung speichert ein zufälliges Verbindungs-Token und ihre letzte Antwort (um sie offline anzuzeigen) im lokalen Erweiterungsspeicher des Browsers, nur auf diesem Computer; er wird nicht mit deinen anderen Geräten synchronisiert und enthält nie dein Sensorkonto oder dein Passwort. Das Relay speichert nur einen Hash des Tokens, zusammen mit der zufälligen Installations-ID deines Telefons, der Art der Verbindung, der Einheit und dem Datum der Verbindung. Verbindungscodes laufen nach 15 Minuten ab.
+        </li>
+        <li>
+          <strong>Wer es sehen kann.</strong> Jeder, der dieses Browserprofil nutzt, kann den Glukosewert sehen, den die Erweiterung anzeigt.
+        </li>
+        <li>
+          <strong>Trennen.</strong> Du kannst einen Computer jederzeit unter Dulce › Einstellungen › Chrome auf einem Computer entfernen; die Erweiterung hört innerhalb einer Minute auf. „Verknüpfung dieses Computers lösen“ in der Erweiterung oder das Entfernen der Erweiterung aus dem Browser löscht ihre gespeicherten Daten auf diesem Computer. Auch „Konto löschen“ oder die Anmeldung mit einem anderen Sensorkonto entfernt die Verbindungen.
+        </li>
+      </ul>
+      <p>
+        <strong>Rechtsgrundlage:</strong> deine ausdrückliche Einwilligung (Art. 9 Abs. 2 lit. a DSGVO), wie bei den anderen Funktionen, die deinen Glukosewert auf deinen Geräten anzeigen (Abschnitt 4). <strong>Wie lange:</strong> Die Verbindungen bleiben gespeichert, bis du den Computer entfernst oder deine Daten mit „Konto löschen“ gelöscht werden.
+      </p>
+
       <h2 id="purpose">3. Wofür wir deine Daten verwenden</h2>
       <ul>
         <li>Deine Glukose auf deinen Geräten und, wenn du willst, auf denen deiner Follower anzeigen.</li>
@@ -685,6 +707,9 @@ Missbrauch.
         </li>
         <li>
           <strong>Garmin-Uhren:</strong> Die Verbindungen bleiben gespeichert, bis du die Uhr trennst, „Konto löschen“ nutzt oder dich mit einem anderen Sensorkonto anmeldest (Abschnitt 2.9). Verbindungscodes laufen nach 15 Minuten ab.
+        </li>
+        <li>
+          <strong>Chrome-Erweiterung:</strong> Die Verbindungen bleiben gespeichert, bis du den Computer entfernst, „Konto löschen“ nutzt oder dich mit einem anderen Sensorkonto anmeldest (Abschnitt 2.10). Verbindungscodes laufen nach 15 Minuten ab.
         </li>
         <li>
           <strong>Backups:</strong> Vom Relay gelöschte Daten können bis zu 30 Tage in den

@@ -509,6 +509,28 @@ export function PrivacyIt() {
         <strong>Base giuridica:</strong> il tuo consenso esplicito (art. 9, par. 2, lett. a) GDPR), come per le altre funzioni che mostrano la tua glicemia sui tuoi dispositivi (sezione 4). <strong>Per quanto tempo:</strong> i collegamenti sono conservati finché non scolleghi l&apos;orologio o finché i tuoi dati non vengono eliminati con «Elimina account».
       </p>
 
+      <h3>2.10 Estensione per Chrome (facoltativa)</h3>
+      <p>
+        Se vuoi, puoi collegare a Dulce l&apos;estensione Dulce per Chrome (funziona anche in Edge e Brave). Una volta collegata, l&apos;estensione chiede al nostro relay, circa una volta al minuto, gli stessi dati che riceve un orologio collegato: il tuo ultimo valore di glicemia, l&apos;andamento e la variazione, il grafico recente (fino a 12 ore), il tuo intervallo target e le soglie dei tuoi avvisi, l&apos;unità di misura e, se segui dei familiari, il nome che ogni persona che segui ha impostato, e li mostra nel tuo browser.
+      </p>
+      <ul>
+        <li>
+          <strong>Come viaggiano i dati.</strong> L&apos;estensione comunica direttamente con il nostro relay tramite una connessione cifrata. Google si limita a distribuire l&apos;estensione tramite il Chrome Web Store; la tua glicemia non passa da Google.
+        </li>
+        <li>
+          <strong>Cosa conservano l&apos;estensione e il relay.</strong> L&apos;estensione conserva un token di collegamento casuale e la sua ultima risposta (per mostrarla offline) nello spazio di archiviazione locale delle estensioni del browser, solo su quel computer; non viene sincronizzato con gli altri tuoi dispositivi e non contiene mai il tuo account del sensore né la tua password. Il relay conserva solo un hash del token, insieme all&apos;ID casuale dell&apos;installazione del tuo telefono, al tipo di collegamento, all&apos;unità di misura e alla data del collegamento. I codici di collegamento scadono dopo 15 minuti.
+        </li>
+        <li>
+          <strong>Chi può vederla.</strong> Chiunque usi quel profilo del browser può vedere la glicemia mostrata dall&apos;estensione.
+        </li>
+        <li>
+          <strong>Scollegare.</strong> Puoi rimuovere un computer in qualsiasi momento in Dulce › Impostazioni › Chrome su un computer; l&apos;estensione si ferma entro un minuto. «Scollega questo computer» nell&apos;estensione, o la rimozione dell&apos;estensione dal browser, cancella i suoi dati salvati su quel computer. Anche «Elimina account», o l&apos;accesso con un altro account del sensore, rimuove i collegamenti.
+        </li>
+      </ul>
+      <p>
+        <strong>Base giuridica:</strong> il tuo consenso esplicito (art. 9, par. 2, lett. a) GDPR), come per le altre funzioni che mostrano la tua glicemia sui tuoi dispositivi (sezione 4). <strong>Per quanto tempo:</strong> i collegamenti sono conservati finché non rimuovi il computer o finché i tuoi dati non vengono eliminati con «Elimina account».
+      </p>
+
       <h2 id="purpose">3. Perché usiamo i tuoi dati</h2>
       <ul>
         <li>Mostrare la glicemia sui tuoi dispositivi e, se lo scegli, su quelli dei tuoi follower.</li>
@@ -680,6 +702,9 @@ export function PrivacyIt() {
         </li>
         <li>
           <strong>Orologi Garmin:</strong> i collegamenti sono conservati finché non scolleghi l&apos;orologio, usi «Elimina account» o accedi con un altro account del sensore (sezione 2.9). I codici di collegamento scadono dopo 15 minuti.
+        </li>
+        <li>
+          <strong>Estensione per Chrome:</strong> i collegamenti sono conservati finché non rimuovi il computer, usi «Elimina account» o accedi con un altro account del sensore (sezione 2.10). I codici di collegamento scadono dopo 15 minuti.
         </li>
         <li>
           <strong>Backup:</strong> i dati eliminati dal relay possono restare fino a 30 giorni nei

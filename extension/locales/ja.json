@@ -3,7 +3,7 @@
   "extDescription": "DulceアプリのグルコースをChromeのツールバーに表示。スマホのコードで連携します。Dulce Proが必要です。",
   "linkTitle": "このパソコンを連携",
   "linkStep1": "スマホでDulceを開きます。",
-  "linkStep2": "設定 › 連携した画面 でこのコードをスキャンするか、入力します。",
+  "linkStep2": "設定 › パソコンのChrome でこのコードをスキャンするか、入力します。",
   "linkNeedsPro": "スマホでDulce Proが必要です。",
   "codeExpiresIn": "コードの有効期限：あと$1分",
   "codeExpired": "このコードは期限切れです。",
@@ -27,5 +27,5 @@
   "disclaimer": "医療機器ではありません。アラートはスマホに届きます。",
   "unlink": "このパソコンの連携を解除",
   "unlinkConfirm": "もう一度クリックで解除",
-  "unlinkHint": "スマホでも削除してください：設定 › 連携した画面。"
+  "unlinkHint": "スマホでも削除してください：設定 › パソコンのChrome。"
 }
