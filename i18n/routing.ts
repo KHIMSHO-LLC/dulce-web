@@ -80,6 +80,8 @@ export const routing = defineRouting({
     // Every supported sensor, how it connects and its set-up steps. Section ids (#dexcom, ...) are fixed:
     // the homepage "Works with" strip links to them (lib/sensors.ts).
     "/sensors": "/sensors",
+    // Dulce on Garmin watches (watch app, glance, complication, watch face, data field). Same path in every language.
+    "/garmin": "/garmin",
     // Help centre: short how-to pages, opened from the app too (dulce-app `constants/links.ts`
     // builds `/<locale>/help/<id>`), so the slugs are fixed, not localized (content/help.ts).
     "/help": "/help",

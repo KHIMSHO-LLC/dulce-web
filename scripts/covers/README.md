@@ -12,7 +12,8 @@ Rules (what a cover may show, the two styles, what the owner rejected): `content
 3. Convert to webp into `public/guides/covers/<article id>.webp` (quality ~84), then set `image` and `imageAlt`
    (every language the article has) in `content/articles.ts`.
 
-Variants so far: watch, lock, widgets, llu, libreview, bsl, health, night, pet.
+Variants so far: watch, lock, widgets, llu, libreview, bsl, health, night, pet, garmin, garminworkout, garminface
+(the Garmin ones use `im()` with the cut-out simulator shots in `public/guides/garmin/`).
 
 ## Photo cover
 

@@ -79,7 +79,8 @@
       "title": "Natiivi Apple Watch -sovellus.",
       "body": "Komplikaatiot kellotauluun ja haptiset hälytykset. Jos tieto on yli 15 minuuttia vanhaa, näet sen selvästi, et koskaan harhaanjohtavaa lukua.",
       "alt": "Apple Watch, jonka kellotaululla näkyy Dulcen glukoosi",
-      "pro": "Dulce Prolla, 14 päivän ilmainen kokeilu."
+      "pro": "Dulce Prolla, 14 päivän ilmainen kokeilu.",
+      "garmin": "Onko sinulla Garmin? Dulce toimii siinäkin"
     },
     "counter": {
       "prefix": "Jopa",
@@ -176,6 +177,12 @@
       "privacy": {
         "title": "Tietosi ovat sinun",
         "body": "Emme myy tietojasi, eikä Dulcessa ole mainoksia. GDPR:n mukainen."
+      },
+      "garmin": {
+        "title": "Garmin-kellot",
+        "body": "Kellosovellus, pikanäkymä, kellotaulu ja datakenttä, joka voi tallentaa glukoosisi treeniin.",
+        "link": "Dulce Garminilla",
+        "alt": "Dulce-kellosovellus Garmin Venu 3:ssa näyttää glukoosin 120 ja nuolen ylöspäin"
       }
     },
     "video": {
@@ -223,6 +230,10 @@
         {
           "q": "Paljonko Dulce maksaa?",
           "a": "Lataus on ilmainen ja sisältää olennaisen. Pro-ominaisuuksissa (Apple Watch, perheen seuranta ja muuta) on 14 päivän ilmainen kokeilu."
+        },
+        {
+          "q": "Toimiiko Dulce Garmin-kellojen kanssa?",
+          "a": "Kyllä. Dulcella on kellosovellus, kellotaulu ja treenien datakenttä Garmin-kelloille, joissa on Connect IQ 3.1 tai uudempi, yhdistetään koodilla kohdassa Asetukset › Garmin-kello. Se kuuluu Dulce Prohon ja vaatii puhelimen lähelle."
         },
         {
           "q": "Mitkä sensorit toimivat?",
@@ -275,7 +286,7 @@
     "help": "Ohjeet",
     "legal": "Juridiset tiedot",
     "disclaimer": "Dulce ei ole lääkinnällinen laite. Se ei korvaa sensorisi hälytyksiä tai hoitotiimisi arviota. Tämän sivun näkymissä on esimerkkitietoja.",
-    "trademarks": "FreeStyle Libre ja LibreLinkUp ovat Abbottin tavaramerkkejä. Apple Watch ja Apple Terveys ovat Apple Inc:n tavaramerkkejä. Dulce on itsenäinen sovellus.",
+    "trademarks": "FreeStyle Libre ja LibreLinkUp ovat Abbottin tavaramerkkejä. Apple Watch ja Apple Terveys ovat Apple Inc:n tavaramerkkejä. Garmin ja Connect IQ ovat Garmin Ltd:n tai sen tytäryhtiöiden tavaramerkkejä. Dulce on itsenäinen sovellus.",
     "copyright": "© {year} Dulce",
     "top": "Takaisin ylös",
     "wordmark": "dulce",
@@ -584,6 +595,11 @@
         "body": "Lukemasi ranteessa, komplikaatioineen kellotaululle."
       },
       {
+        "id": "garmin",
+        "title": "Garmin-kellot",
+        "body": "Glukoosisi Garmin-kellossa: kellosovellus, pikanäkymä, kellotaulu ja datakenttä treeneihin."
+      },
+      {
         "id": "carPlay",
         "title": "CarPlay ja Smart Stack",
         "body": "Glukoosikortti auton näytöllä ja Apple Watchin Smart Stackissa."
@@ -627,6 +643,7 @@
       "yearlyLine": "<b>{price}</b> vuodessa",
       "yearlyPerMonth": "Noin {perMonth} kuukaudessa",
       "trialLine": "14 päivää ilmaiseksi uusille tilaajille. Peruminen onnistuu milloin tahansa.",
+      "familyLine": "Toimii Applen Perhejaon kanssa: jopa 5 perheenjäsentä saa Pron myös omaan iPhoneensa.",
       "note": "Näytetyt hinnat ovat Yhdysvaltojen hintoja Yhdysvaltain dollareina. Muissa maissa App Store näyttää hinnan omassa valuutassasi ennen vahvistusta.",
       "homeLine": "Sen jälkeen {monthly} kuukaudessa tai {yearly} vuodessa (Yhdysvaltojen hinnat).",
       "seeLink": "Katso hinnat"
@@ -649,6 +666,10 @@
       {
         "q": "Tarvitsevatko seuraajani Pron?",
         "a": "Eivät. Perheen seuranta kuuluu sensoria käyttävän ihmisen Pro-tilaukseen; seuraajat asentavat Dulcen ilmaiseksi."
+      },
+      {
+        "q": "Voiko perheeni käyttää yhtä Dulce Pro -tilausta?",
+        "a": "Kyllä, iPhonella. Dulce Pro toimii Applen Perhejaon kanssa: yksi henkilö tekee tilauksen, ja jopa 5 muuta hänen Apple-perheryhmänsä jäsentä saa Pron omaan iPhoneensa ilman lisämaksua. Jos Pro ei tule näkyviin, perheenjäsen napauttaa Pro-näytöllä Palauta ostot, ja ostaja tarkistaa iPhonen Asetukset › Tilaukset -kohdasta, että jako on päällä Dulcelle. Google Playssa tehtyjä ostoksia ei jaeta näin. Jonkun glukoosin seuraaminen Dulcessa on eri asia ja aina ilmaista seuraajalle."
       },
       {
         "q": "Miten peruutan?",
@@ -968,5 +989,196 @@
     "device": "Puhelin ja sovelluksen versio: ",
     "what": "Mitä tapahtui: ",
     "appHint": "Kirjoittaminen sovelluksesta on nopeampaa: Asetukset › Ohje ja tietosuoja › Ota yhteyttä tukeen lisää tuen tunnisteesi puolestasi."
+  },
+  "garmin": {
+    "nav": "Garmin",
+    "title": "Glukoosi Garmin-kellossa Dulcen avulla",
+    "description": "Näe CGM-glukoosisi Garmin-kellossa: kellosovellus, pikanäkymä, komplikaatio, kellotaulu ja datakenttä treeneihin. Miten yhdistät, mitä tarvitset ja mitkä kellot toimivat.",
+    "kicker": "Dulce Garminille",
+    "headline": "Glukoosisi Garminissa.",
+    "lead": "Dulce tuo glukoosisi Garmin-kelloihin ja Edge-pyörätietokoneisiin: kellosovellus, pikanäkymä, komplikaatio Garminin omille kellotauluille, Dulce-kellotaulu ja datakenttä treeneihin. Yhdistät kellon kerran lyhyellä koodilla.",
+    "heroAlt": "Garmin Venu 3 näyttää Dulce-kellosovelluksen: glukoosi 120 tavoitealueella, nuoli ylöspäin, muutos +2, 2 min sitten ja 3 tunnin käyrä",
+    "storeTitle": "Lataa Connect IQ Storesta",
+    "storeNote": "Kolme erillistä latausta, kaikki ilmaisia Connect IQ Storessa. Asenna ne, jotka haluat.",
+    "storeSoon": "Garminin tarkistettavana juuri nyt. Linkit avautuvat tässä heti, kun Garmin hyväksyy sovellukset.",
+    "store": {
+      "app": "Kellosovellus",
+      "appBody": "Pikanäkymän ja komplikaation kanssa.",
+      "face": "Kellotaulu",
+      "faceBody": "Kaksi tyyliä: mittari ja käyrä.",
+      "field": "Datakenttä",
+      "fieldBody": "Treeneihin ja Edge-pyörätietokoneisiin.",
+      "open": "Avaa Connect IQ Storessa"
+    },
+    "surfacesTitle": "Mitä saat",
+    "surfaces": [
+      {
+        "id": "app",
+        "title": "Kellosovellus",
+        "body": "Kolme sivua, joiden välillä selaat. Nyt: lukemasi isolla, vyöhykkeen värisenä, trendinuoli, muutos, lukeman ikä, mittari reunalla ja 3 tunnin käyrä. Käyrä: 1, 3, 6 tai 12 tuntia, tavoitealue kaistaleena. Tavoitealueella: aikasi tavoitealueella viimeisen 12 tunnin ajalta sekä keskiarvo ja matalalla ja korkealla vietetty aika."
+      },
+      {
+        "id": "glance",
+        "title": "Pikanäkymä",
+        "body": "Pyyhkäise kellotaulusta, niin pikanäkymä näyttää lukemasi, nuolen, muutoksen ja pienen 3 tunnin käyrän avaamatta mitään."
+      },
+      {
+        "id": "complication",
+        "title": "Komplikaatio",
+        "body": "Pidä Garmin-kellotaulu, josta pidät. Kelloissa, joiden kellotaulut tukevat Connect IQ -komplikaatioita, Dulce-lukemasi voi olla yhdessä niiden paikoista."
+      },
+      {
+        "id": "face",
+        "title": "Dulce-kellotaulu",
+        "body": "Kaksi tyyliä: aika ensin tai glukoosi ensin. Mittari reunalla, 3 tunnin käyrä ja paikat akulle, askelille tai sykkeelle. AMOLED-kelloissa aina päällä -tila pitää ajan ja lukemasi tummalla näytöllä."
+      },
+      {
+        "id": "field",
+        "title": "Datakenttä treeneihin",
+        "body": "Lisää Dulce mille tahansa suoritusnäytölle: lukema, nuoli, muutos ja lyhyt käyrä, kun kenttä on iso. Se voi tallentaa glukoosisi suoritukseen, jolloin glukoosikäyrä näkyy jälkeenpäin Garmin Connectissa sykkeen ja vauhdin vieressä."
+      }
+    ],
+    "gallery": {
+      "graph": "Käyrä-sivu Garmin vívoactive 5:ssä: viimeisten tuntien glukoosi, tavoitealue vihreänä kaistaleena",
+      "tir": "Tavoitealueella-sivu Garmin vívoactive 5:ssä: rengas, jossa matalan, tavoitealueella olevan ja korkean ajan osuus 12 tunnin ajalta",
+      "glance": "Dulce-pikanäkymä Garmin vívoactive 5:ssä: glukoosi, nuoli, muutos ja pieni käyrä",
+      "faceA": "Dulce-kellotaulu, aikatyyli, Garmin vívoactive 5:ssä: aika, glukoosi nuolella, mittari, käyrä, akku ja syke",
+      "faceB": "Dulce-kellotaulu, glukoosityyli, Garmin vívoactive 5:ssä: glukoosiarvo isona keskellä",
+      "aod": "Dulce-kellotaulu aina päällä -tilassa Garmin vívoactive 5:ssä: aika ja glukoosi tummalla näytöllä",
+      "field": "Dulce-datakenttä Garmin fēnix 7:ssä suorituksen aikana: glukoosi 142, nuoli ja lyhyt käyrä",
+      "instinct": "Dulce-kellosovellus Garmin Instinct 2:ssa mustavalkoisella näytöllä"
+    },
+    "linkTitle": "Yhdistä kellosi",
+    "linkLead": "Teet tämän kerran kelloa kohden. Kellosovellus, kellotaulu ja datakenttä näyttävät kukin oman koodinsa, joten yhdistä jokainen asentamasi.",
+    "linkSteps": [
+      {
+        "title": "Asenna Connect IQ Storesta",
+        "body": "Avaa Connect IQ Store puhelimessa tai kellossa ja asenna Dulce-kellosovellus, kellotaulu tai datakenttä."
+      },
+      {
+        "title": "Avaa se kellossa",
+        "body": "Kello näyttää 6 merkin koodin ja värinäytöillä myös QR-koodin."
+      },
+      {
+        "title": "Avaa Dulce iPhonessa",
+        "body": "Siirry kohtaan Asetukset › Garmin-kello."
+      },
+      {
+        "title": "Kirjoita koodi",
+        "body": "Kirjoita kellon koodi ja napauta Yhdistä kello tai skannaa QR-koodi puhelimen kameralla."
+      },
+      {
+        "title": "Valmis",
+        "body": "Glukoosisi näkyy kellossa muutamassa sekunnissa."
+      }
+    ],
+    "linkAlt": "Garmin vívoactive 5 näyttää Dulce-yhdistysnäytön, jossa on QR-koodi ja 6 merkin koodi",
+    "needTitle": "Mitä tarvitset",
+    "need": [
+      "Dulce Pro tai jonkun seuraaminen, jolla on Dulce Pro. Jos seuraat useampaa, valitset kellon valikosta, kenet näytetään.",
+      "Garmin Connect -sovellus puhelimessa. iPhonessa pidä se auki taustalla (älä pyyhkäise sitä pois), muuten kello lakkaa päivittymästä.",
+      "Dulcen uusin versio, yhdistettynä sensoriisi LibreLinkUpin, Dexcomin, CareLinkin tai Nightscoutin kautta. Pelkästään Apple Terveydestä tulevat lukemat eivät pääse kelloon.",
+      "Garmin-kello tai Edge, jossa on Connect IQ 3.1 tai uudempi (katso lista alla). Voit yhdistää enintään 5 kelloa."
+    ],
+    "updatesTitle": "Kuinka usein päivittyy",
+    "updates": "Kun Dulce-kellosovellus on auki kellossa, se päivittyy noin minuutin välein. Taustalla (pikanäkymä, komplikaatio, kellotaulu ja datakenttä) Garmin sallii päivityksen 5 minuutin välein, joten luku voi olla jopa 5 minuuttia puhelintasi jäljessä. Jokainen näyttö kertoo lukeman iän, ja vanha lukema muuttuu harmaaksi.",
+    "watchesTitle": "Mitkä kellot toimivat",
+    "watchesLead": "Garmin-kellot, joissa on Connect IQ 3.1 tai uudempi. Kellosovellus, pikanäkymä ja kellotaulu toimivat kaikissa näissä; komplikaatio vaatii kellon, jonka kellotaulut hyväksyvät Connect IQ -komplikaatiot.",
+    "watches": [
+      {
+        "family": "fēnix",
+        "models": "fēnix 5 ja 5 Plus -sarjat, fēnix 6, 7, 8 ja 9 -sarjat (myös Pro ja Solar), fēnix E, fēnix Chronos"
+      },
+      {
+        "family": "epix",
+        "models": "epix (Gen 2), epix Pro"
+      },
+      {
+        "family": "Forerunner",
+        "models": "55, 70, 165, 170, 245, 255, 265, 570, 645, 745, 935, 945, 955, 965, 970"
+      },
+      {
+        "family": "Venu",
+        "models": "Venu, Venu 2, 2S ja 2 Plus, Venu 3 ja 3S, Venu 4, Venu Sq ja Sq 2, Venu X1"
+      },
+      {
+        "family": "vívoactive",
+        "models": "vívoactive 3, 4, 5 ja 6"
+      },
+      {
+        "family": "Instinct",
+        "models": "Instinct 2, 2S ja 2X, Instinct 3, Instinct Crossover, Instinct E"
+      },
+      {
+        "family": "Enduro",
+        "models": "Enduro, Enduro 3, Enduro 4"
+      },
+      {
+        "family": "MARQ",
+        "models": "MARQ (kaikki Connect IQ:n mallit)"
+      },
+      {
+        "family": "Descent",
+        "models": "Descent G1, G2, Mk1, Mk2 ja Mk3"
+      },
+      {
+        "family": "Approach",
+        "models": "Approach S50 ja S70"
+      },
+      {
+        "family": "D2",
+        "models": "D2 Air, Delta ja Mach"
+      },
+      {
+        "family": "Edge",
+        "models": "Edge 130 ja 130 Plus, 520 Plus, 530, 540, 550, 820, 830, 840, 850, 1030, 1040, 1050, 1060, Explore ja MTB: datakenttä"
+      }
+    ],
+    "watchesNote": "Connect IQ Store näyttää ennen asennusta, tuetaanko juuri sinun malliasi.",
+    "limitsTitle": "Hyvä tietää",
+    "limits": [
+      "Vain näyttö. Kello näyttää lukemasi, mutta ei anna hälytyksiä. Dulcen hälytykset tulevat edelleen puhelimeen tavallisina ilmoituksina, ja Garmin voi peilata puhelimen ilmoitukset kelloon.",
+      "Kello tarvitsee puhelimen lähelle. Garmin-kellot pääsevät verkkoon puhelimen Garmin Connect -sovelluksen kautta.",
+      "Kello näyttää sen, mikä tavoittaa Dulcen. Jos sensorisi oma sovellus lopettaa jakamisen, kello näyttää lukeman iän kasvavan.",
+      "Dulce ei ole lääkinnällinen laite. Älä tee hoitopäätöksiä kellon perusteella: varmista sensorilla."
+    ],
+    "faqTitle": "Kysymyksiä",
+    "faq": [
+      {
+        "q": "Toimiiko Dulce Garmin-kelloissa?",
+        "a": "Kyllä. Dulcella on kellosovellus pikanäkymällä ja komplikaatiolla, kellotaulu ja datakenttä Garmin Connect IQ Storessa. Ne näyttävät glukoosin, joka tavoittaa Dulcen iPhonessasi."
+      },
+      {
+        "q": "Tarvitsenko Dulce Pron Garminia varten?",
+        "a": "Kyllä. Glukoosin näyttäminen Garmin-kellossa kuuluu Dulce Prohon, jossa on 14 päivän ilmainen kokeilu. Jos seuraat jotakuta, jolla on Dulce Pro, et tarvitse omaa tilausta."
+      },
+      {
+        "q": "Mitkä sensorit toimivat?",
+        "a": "Kaikki sensorit, jotka Dulce lukee LibreLinkUpin, Dexcom Sharen, Medtronic CareLinkin tai Nightscoutin kautta. Pelkästään Apple Terveydestä tulevat lukemat eivät pääse kelloon."
+      },
+      {
+        "q": "Toimiiko kello ilman puhelinta?",
+        "a": "Ei. Garmin-kellot saavat tiedot puhelimen Garmin Connect -sovelluksen kautta, joten pidä puhelin lähellä ja Garmin Connect käynnissä taustalla."
+      },
+      {
+        "q": "Hälyttääkö kello, kun glukoosini on matala?",
+        "a": "Dulce-kellosovellus ei anna hälytyksiä. Dulcen matalan ja korkean glukoosin hälytykset tulevat puhelimeen ilmoituksina, ja Garmin voi näyttää puhelimen ilmoitukset kellossa. Sensorisi omat hälytykset toimivat kuten ennenkin."
+      },
+      {
+        "q": "Näenkö glukoosini juoksun tai pyöräilyn jälkeen?",
+        "a": "Kyllä. Kun suoritusnäytöllä on Dulce-datakenttä ja Tallenna glukoosi suoritukseen on päällä, glukoosikäyrä näkyy suorituksessa Garmin Connectissa tallennuksen jälkeen."
+      },
+      {
+        "q": "Voinko seurata lastani tai kumppaniani Garminillani?",
+        "a": "Kyllä. Puhelimessa, joka seuraa jotakuta, kello näyttää hänen glukoosinsa. Jos seuraat useampaa, valitset kellon valikosta, kenet näytetään."
+      }
+    ],
+    "guidesTitle": "Garmin-oppaat",
+    "cta": {
+      "title": "Dulce ranteessasi, myös Garminissa.",
+      "subtitle": "Dulce on ilmainen App Storessa. Garmin-kellot kuuluvat Dulce Prohon, jossa on 14 päivän ilmainen kokeilu."
+    },
+    "proLink": "Mitä Dulce Pro sisältää",
+    "disclaimer": "Garmin, Connect IQ, fēnix, epix, Forerunner, Venu, vívoactive, Instinct, Enduro, MARQ, Descent, Approach, D2 ja Edge ovat Garmin Ltd:n tai sen tytäryhtiöiden tavaramerkkejä. Dulce on riippumaton eikä ole Garminin kumppani tai sen hyväksymä. Dulce ei ole lääkinnällinen laite eikä korvaa sensorisi hälytyksiä. Kellokuvat ovat Garminin simulaattorista esimerkkidatalla."
   }
 }

@@ -1,0 +1,74 @@
+L'attività fisica è uno dei momenti in cui la glicemia si muove di più, e uno dei momenti in cui è più scomodo tirare fuori il telefono. Se ti alleni con un Garmin, il **campo dati di Dulce** mette la tua glicemia nella schermata dell'attività, accanto a ritmo, potenza o frequenza cardiaca. Può anche **salvare la tua glicemia nell'attività**, così dopo l'allenamento vedi la linea della glicemia in Garmin Connect insieme a tutto il resto.
+
+Questa guida spiega cosa mostra il campo dati, come aggiungerlo, come funziona il salvataggio e cosa tenere presente. L'app per l'orologio e il quadrante sono nella <PageLink to="/garmin">pagina Dulce per Garmin</PageLink>.
+
+## Cosa mostra il campo dati
+
+Il campo si adatta allo spazio che gli dai nella schermata dell'attività:
+
+- **Grande** (una schermata intera o quasi): un'etichetta, il tuo numero grande con la freccia di tendenza, la variazione, l'età della lettura e un breve grafico dell'ultima ora.
+- **Medio**: il numero con la freccia, la variazione e l'età.
+- **Piccolo**: il numero e la freccia.
+
+I numeri sono colorati per zona: rosso sotto 70 mg/dL (3,9 mmol/L), verde da 70 a 180 (da 3,9 a 10,0), arancione sopra. Sui ciclocomputer Edge in modalità giorno il campo usa colori più scuri, così si legge bene su sfondo chiaro.
+
+<Figure src="/guides/garmin/field-large-fenix7.webp" alt="Campo dati di Dulce su un Garmin fēnix 7 durante un'attività: glicemia 142 con una freccia, variazione di +4, di 2 minuti fa e un breve grafico" caption="Il campo dati a dimensione piena su un fēnix 7 (simulatore Garmin, dati di esempio)." width={385} height={537} bare />
+
+## Cosa ti serve
+
+- **Dulce Pro** (14 giorni di prova gratuita), oppure seguire qualcuno che ce l'ha. Vedi <PageLink to="/pro">cosa include Pro</PageLink>.
+- **Dulce collegato al tuo sensore** tramite LibreLinkUp, Dexcom Share, Medtronic CareLink o Nightscout, con **l'ultima versione di Dulce**.
+- **Garmin Connect** sul telefono, attiva in background, e il telefono con te. Se corri significa portarlo con te; in bici può stare in una tasca o in una borsa.
+- Un orologio Garmin o un **ciclocomputer Edge** con Connect IQ 3.1 o successivo. L'elenco completo è nella <PageLink to="/garmin">pagina Garmin</PageLink>.
+
+## Aggiungi il campo dati
+
+<Steps>
+<Step title="Installa il campo dati">
+Nel Connect IQ Store cerca **Dulce** e installa il campo dati. Garmin Connect lo sincronizza con il tuo orologio o con il tuo Edge.
+</Step>
+<Step title="Mettilo in una schermata di attività">
+Sull'orologio apri l'attività che usi (Corsa, Bici, Escursione…), vai nelle sue impostazioni, poi in **Schermate dati**, scegli una schermata e un campo, e seleziona il campo Dulce tra i campi Connect IQ. Su un Edge puoi fare lo stesso dal profilo attività.
+</Step>
+<Step title="Collegalo">
+Avvia l'attività. Il campo mostra un codice di 6 caratteri. In Dulce sul tuo iPhone vai in **Impostazioni › Orologio Garmin**, digita il codice e tocca **Collega orologio**. Se il codice è sparito, riavvia l'attività per averne uno nuovo.
+</Step>
+<Step title="Allenati">
+Ora il campo mostra la tua glicemia in ogni attività che lo ha sullo schermo.
+</Step>
+</Steps>
+
+La guida passo per passo al collegamento, con gli screenshot, è in <ArticleLink to="garmin-watch">come vedere la glicemia su un orologio Garmin</ArticleLink>.
+
+<AppCta title="La tua glicemia sul tuo Garmin, durante l'allenamento" />
+
+## La linea della glicemia in Garmin Connect
+
+Con **Salva la glicemia nell'attività** attivo (lo è per impostazione predefinita), il campo dati scrive la tua glicemia nel file dell'attività mentre registri. Garmin lo chiama campo sviluppatore: viaggia con l'attività, quindi dopo che l'hai salvata, l'attività in Garmin Connect mostra un **grafico della glicemia** dell'allenamento e la tua **glicemia media** della sessione.
+
+Alcuni dettagli:
+
+- L'unità salvata è quella che usi in Dulce quando l'attività inizia, mg/dL o mmol/L.
+- Registrano la glicemia solo le attività che hanno il campo Dulce in una delle loro schermate.
+- Per disattivare il salvataggio, apri le impostazioni del campo dati nella sezione Connect IQ di Garmin Connect e disattiva **Salva la glicemia nell'attività**.
+
+Quella linea è utile dopo: come si è mossa la tua glicemia in un lungo giro in bici, se è scesa nello stesso punto nelle ultime tre corse, cosa ha fatto dopo una sessione di ripetute. Parla degli andamenti con il tuo team diabetologico; il grafico descrive, non ti dice cosa cambiare.
+
+## Quanto è recente il numero?
+
+Un campo dati può recuperare nuovi dati solo in background, e Garmin lo consente **ogni 5 minuti**. Il tuo sensore può produrre una lettura ogni minuto (FreeStyle Libre) o ogni 5 minuti (Dexcom, Medtronic), ma il campo si aggiorna al massimo ogni 5 minuti. Il campo mostra l'età della lettura, e una lettura vecchia diventa grigia. Durante l'attività fisica la glicemia può cambiare in fretta, quindi considera l'età parte della lettura.
+
+## Limiti da conoscere
+
+- **Nessun avviso dal campo.** Gli avvisi di bassa e alta di Dulce arrivano comunque sul telefono come notifiche, e Garmin può mostrare sull'orologio le notifiche del telefono. Gli allarmi del tuo sensore continuano a funzionare.
+- **Il telefono deve venire con te.** Senza, il campo non può ottenere nuove letture e l'età continua a contare.
+- Vuoi vedere la glicemia anche fuori dagli allenamenti? Il <ArticleLink to="garmin-watch-face">quadrante Dulce</ArticleLink> la tiene sul polso tutto il giorno.
+
+<Callout type="warning">
+L'attività fisica può abbassare o alzare la glicemia rapidamente, e una lettura sull'orologio può avere fino a 5 minuti. Non basare le decisioni terapeutiche sull'orologio: se ti senti in ipoglicemia o il numero ti sorprende, fermati, controlla con il tuo sensore o con una puntura al dito e segui il piano concordato con il tuo team diabetologico per l'attività fisica. Dulce non è un dispositivo medico.
+</Callout>
+
+## Sources
+
+- Garmin Developers. *Connect IQ: FIT developer fields* (campi dati che registrano i propri valori nel file dell'attività mostrato in Garmin Connect). [developer.garmin.com](https://developer.garmin.com/connect-iq/core-topics/activity-recording/)
+- Garmin Developers. *Connect IQ: background services and temporal events* (aggiornamenti in background al massimo ogni 5 minuti). [developer.garmin.com](https://developer.garmin.com/connect-iq/core-topics/backgrounding/)

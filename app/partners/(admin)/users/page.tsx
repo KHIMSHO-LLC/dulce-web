@@ -9,7 +9,7 @@
  * promotional entitlement that runs alongside any paid plan).
  */
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ApiError,
   GRANT_MONTHS,
@@ -344,13 +344,12 @@ export default function UsersPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  async function search(e: React.FormEvent): Promise<void> {
-    e.preventDefault();
-    if (!query.trim()) return;
+  async function run(q: string): Promise<void> {
+    if (!q.trim()) return;
     setLoading(true);
     setError(null);
     try {
-      setDevices(await fetchContact(adminKey, query));
+      setDevices(await fetchContact(adminKey, q));
     } catch (err) {
       setDevices(null);
       if (err instanceof UnauthorizedError) {
@@ -362,6 +361,23 @@ export default function UsersPage() {
       setLoading(false);
     }
   }
+
+  function search(e: React.FormEvent): Promise<void> {
+    e.preventDefault();
+    return run(query);
+  }
+
+  // Opened from another tab with ?q=<email or Support ID> (Cancellations): search at once.
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search).get("q");
+    if (!q) return;
+    // After mount, not in the effect body (react-hooks/set-state-in-effect).
+    void Promise.resolve().then(() => {
+      setQuery(q);
+      return run(q);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="container-page py-10">

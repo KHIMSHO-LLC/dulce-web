@@ -71,6 +71,7 @@ questions around them. Being the best answer means the product actually does it 
 
 ## Done
 
+- [x] 2026-11-26: Garmin (owner request, NOT committed yet). Page `/garmin` (10 languages, FAQ + HowTo JSON-LD, nav/footer/home bento + watch chapter + home FAQ + Pro list), 3 guides in 5 languages (`garmin-watch`, `garmin-workouts`, `garmin-watch-face`, covers `garmin*` in scripts/covers), llms.txt, Garmin trademark line. Store listings were in Garmin review on that date.
 - [x] 2026-11-11: speed + titles. Lighthouse mobile (live): home perf 54, guide 84, a11y 96/100, SEO 100. Every page
   shipped the whole locale file to the browser (NextIntlClientProvider without `messages`): now only the client
   namespaces (`clientMessages()` in the locale layout), pages 36–57 KB smaller (/de/setup −30 %). `pageTitle()` in

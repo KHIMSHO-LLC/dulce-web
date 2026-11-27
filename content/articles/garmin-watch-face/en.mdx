@@ -1,0 +1,71 @@
+The fastest way to see your glucose is to have it where you already look: next to the time. If you wear a Garmin, the **Dulce watch face** does exactly that. It shows your glucose with its arrow, how much it changed and how old the reading is, around the time, with a gauge on the edge and a short graph. This guide explains the two styles, the settings, the always-on mode and how to install it.
+
+The watch app, the data field and the full list of watches are on the <PageLink to="/garmin">Dulce for Garmin page</PageLink>.
+
+## Two styles
+
+**Time** (the default) puts the time first: the date small on top, the time large, and under it your glucose in its zone colour with the trend arrow, the change and the reading's age. A gauge around the edge shows where you are between low, in range and high, and a 3-hour graph sits at the bottom with two small data slots beside it.
+
+**Glucose** turns it around: your number is the largest thing on the screen, in the centre, with the time smaller above it.
+
+<Figure src="/guides/garmin/face-A-vivoactive5.webp" alt="Dulce watch face, time style, on a Garmin vívoactive 5: time 5:53, glucose 142 with an up arrow, +4 change, a gauge, a graph, battery and heart rate" caption="The Time style on a vívoactive 5 (Garmin simulator, sample data)." width={518} height={819} bare />
+
+<Figure src="/guides/garmin/face-B-vivoactive5.webp" alt="Dulce watch face, glucose style, on a Garmin vívoactive 5: the glucose value large in the centre with the time above" caption="The Glucose style." width={518} height={819} bare />
+
+## Settings
+
+Open the watch face's settings in the Connect IQ section of Garmin Connect (on many watches you can also change them on the watch). You can choose:
+
+- **Style**: Time or Glucose.
+- **Show gauge** and **Show graph**: on or off.
+- **Left data** and **Right data**: battery, steps, heart rate, or off.
+
+Colours follow the zones every Dulce screen uses: red below 70 mg/dL (3.9 mmol/L), green from 70 to 180 (3.9 to 10.0), orange above. On the black and white screens of Instinct watches the face stays white on black, bold and simple.
+
+## Always-on on AMOLED watches
+
+On watches with an AMOLED screen (Venu, vívoactive 5 and 6, epix, fēnix 8 AMOLED and others), the face has a low-power always-on mode for when your wrist is down: a dark screen with the time in grey and your number in its zone colour, without the gauge, graph or slots. It moves slightly every minute to protect the screen. Raise your wrist and the full face comes back.
+
+<Figure src="/guides/garmin/face-alwayson-vivoactive5.webp" alt="Dulce watch face in always-on mode on a Garmin vívoactive 5: time and glucose on a dark screen" caption="Always-on mode: just the time and your number." width={518} height={819} bare />
+
+## Install and link it
+
+<Steps>
+<Step title="Install the watch face">
+In the Connect IQ Store, find **Dulce** and install the watch face. Garmin Connect syncs it to the watch.
+</Step>
+<Step title="Select it on the watch">
+Choose the Dulce face as your watch face. Until it's linked, it shows a 6-character code under the time.
+</Step>
+<Step title="Type the code in Dulce">
+On your iPhone, open Dulce, go to **Settings › Garmin watch**, enter the code and tap **Link watch**.
+</Step>
+</Steps>
+
+The face is linked separately from the watch app and the data field: each shows its own code. The linking steps with screenshots are in <ArticleLink to="garmin-watch">how to see your glucose on a Garmin watch</ArticleLink>.
+
+<AppCta title="Your glucose next to the time, on your Garmin" />
+
+## What you need
+
+- **Dulce Pro** (14-day free trial) or following someone who has it. See <PageLink to="/pro">what Pro includes</PageLink>.
+- **The latest version of Dulce** on your iPhone, connected to your sensor through LibreLinkUp, Dexcom Share, Medtronic CareLink or Nightscout.
+- **Garmin Connect** running in the background on your phone, and the phone nearby.
+- A Garmin watch with Connect IQ 3.1 or later. Edge bike computers don't take watch faces; for them there's the <ArticleLink to="garmin-workouts">data field</ArticleLink>.
+
+## How often the face updates
+
+Watch faces can only fetch data in the background, and Garmin allows that **every 5 minutes**. The face shows the reading's age next to the number, and an old reading turns grey. For a reading about every minute, open the Dulce watch app: while it's open it refreshes about every minute.
+
+## Prefer a Garmin face?
+
+If you'd rather keep one of Garmin's own faces, install the Dulce watch app instead: on watches whose faces accept Connect IQ complications, you can put your Dulce number in one of the face's slots.
+
+<Callout type="warning">
+The face shows the readings that reach Dulce, up to 5 minutes later. It doesn't sound alerts and doesn't replace your sensor's alarms. If a number surprises you, confirm with your sensor or a fingerstick and follow the plan you agreed with your care team. Dulce is not a medical device.
+</Callout>
+
+## Sources
+
+- Garmin Developers. *Connect IQ: complications* (apps publishing a value that watch faces can show). [developer.garmin.com](https://developer.garmin.com/connect-iq/core-topics/complications/)
+- Garmin Developers. *Connect IQ: background services and temporal events* (background updates at most every 5 minutes). [developer.garmin.com](https://developer.garmin.com/connect-iq/core-topics/backgrounding/)

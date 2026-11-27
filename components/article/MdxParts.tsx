@@ -161,6 +161,7 @@ export function PageLink({
     | "/tools/gmi-calculator"
     | "/tools/cgm-glossary"
     | "/sensors"
+    | "/garmin"
     | "/pro";
   children: ReactNode;
 }) {

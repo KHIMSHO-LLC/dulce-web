@@ -203,7 +203,21 @@ export async function sitePagesMarkdown(locale: AppLocale): Promise<string> {
     qa(z.faq),
     z.disclaimer,
   ];
-  return [setup, sensors, faq, pro].map((part) => part.join("\n\n")).join("\n\n");
+  const g = m.garmin;
+  const garmin = [
+    `## ${g.title}`,
+    `URL: ${absoluteUrl(localizedPath(locale, "/garmin"))}`,
+    g.lead,
+    `### ${g.surfacesTitle}\n\n${g.surfaces.map((x) => `- **${x.title}:** ${x.body}`).join("\n")}`,
+    `### ${g.linkTitle}\n\n${g.linkLead}\n\n${g.linkSteps.map((st, n) => `${n + 1}. **${st.title}.** ${st.body}`).join("\n")}`,
+    `### ${g.needTitle}\n\n${g.need.map((x) => `- ${x}`).join("\n")}`,
+    `### ${g.updatesTitle}\n\n${g.updates}`,
+    `### ${g.watchesTitle}\n\n${g.watchesLead}\n\n${g.watches.map((w) => `- **${w.family}:** ${w.models}`).join("\n")}`,
+    `### ${g.limitsTitle}\n\n${g.limits.map((x) => `- ${x}`).join("\n")}`,
+    qa(g.faq),
+    g.disclaimer,
+  ];
+  return [setup, sensors, garmin, faq, pro].map((part) => part.join("\n\n")).join("\n\n");
 }
 
 /** One calculator page (title, description, explanation) as Markdown. */
